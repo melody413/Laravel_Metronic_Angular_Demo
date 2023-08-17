@@ -1,5 +1,11 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { ModalConfig, ModalComponent } from '../../_metronic/partials';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+
+
+const API_USERS_URL = `${environment.apiUrl}/api`;
+
 
 @Component({
   selector: 'app-dashboard',
@@ -27,9 +33,16 @@ export class DashboardComponent {
     closeButtonLabel: 'Cancel'
   };
   @ViewChild('modal') private modalComponent: ModalComponent;
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   async openModal() {
     return await this.modalComponent.open();
+  }
+  ngOnInit(): void {
+    this.http.get<any>(`${API_USERS_URL}/dashboard`);
+    this.getData();
+  }
+
+  getData(): void {
   }
 }
