@@ -1,0 +1,204 @@
+// BP Widgets
+// @version 3.0.0
+
+.widget_bp_core_recently_active_widget,
+.widget_bp_groups_widget,
+.widget_bp_core_members_widget,
+.widget_bp_core_friends_widget{
+	.widget-title-icon:before {
+		content: "\f0c0";
+	}
+}
+
+.widget_bp_core_whos_online_widget {
+	.widget-title-icon:before {
+		content: "\f1eb";
+	}
+}
+
+.widget.buddypress{
+	#groups-list,
+	#members-list,
+	#friends-list{
+		border-top: 0;
+		margin-left: 0;
+		padding-left: 0;
+
+		li{
+			width: 100%;
+			// padding: 0 0 24px;
+			padding: 0;
+			clear: both;
+			list-style-type: none;
+
+			&:last-child{
+				padding: 0;
+			}
+
+			.item{
+				margin-left: 60px;
+			}
+		}
+	}
+}
+
+.widget.buddypress .item-avatar img.avatar {
+	float: left;
+	margin: 0 10px 15px 0;
+}
+
+.widget.buddypress{
+	span.activity {
+		display: inline-block;
+		font-size: small;
+		opacity: 0.8;
+		padding: 0;
+	}
+
+	.item-options {
+		font-size: 90%;
+		padding: 5px 0;
+    position: relative;
+    z-index: 1;
+    float: none;
+    margin-top: -10px;
+  	margin-bottom: 5px;
+  	color: transparent;
+
+	    a{
+	    	border: $primary-border;
+	    	border-radius: $base-border-radius;
+	    	padding: 0 6px;
+	    	margin-right: 5px;
+	    	margin-bottom: 10px;
+	    	display: inline-block;
+
+	    	&.selected:not(.loading){
+	    		background: $brand-color;
+	    		border-color: $brand-color;
+	    		color: $bright !important;
+	    	}
+	    }
+
+	    span{
+	    	display: none;
+	    }
+	}
+}
+
+#buddypress .widget ul.item-list{
+	margin-bottom: 0;
+}
+
+.widget.widget_bp_core_friends_widget{
+	.item-options {
+	    a{
+	    	margin-left: 0;
+	    	margin-right: 5px;
+	    }
+	}
+}
+
+.widget.buddypress .item{
+	margin-left: 60px;
+}
+
+.widget.buddypress li:not(:last-child) .item{
+	padding-bottom: 15px;
+}
+
+.widget.buddypress .item-meta,
+.widget.buddypress .item-content {
+	font-size: 11px;
+	line-height: 12px;
+}
+
+.widget.buddypress ul.item-list img.avatar {
+	height: 40px;
+	margin-right: 10px;
+	width: 40px;
+}
+.widget.buddypress .item-avatar img {
+	height: 40px;
+	margin: 1px;
+	width: 40px;
+}
+
+.widget.buddypress .avatar-block{
+	overflow: hidden;
+}
+
+.widget.buddypress #bp-login-widget-form {
+	overflow: hidden;
+
+	label {
+		display: block;
+		margin: 0 0 10px;
+	}
+
+	input[type="text"],
+	input[type="password"]{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	#bp-login-widget-submit {
+		float: right;
+		margin-top: 10px;
+		width: 100%;
+		padding: 10px;
+	}
+
+	.forgetmenot{
+		float: left;
+	}
+
+	.bp-login-widget-register-link{
+		width: 100%;
+		float: left;
+		text-align: center;
+		margin-top: 10px;
+	}
+}
+
+.bp-login-widget-user-avatar + .bp-login-widget-user-links{
+	margin-top: -50px;
+}
+
+.bp-login-widget-user-avatar{
+	width: 40px;
+
+	img.avatar {
+		height: 40px;
+		width: 40px;
+	}
+}
+
+.widget.buddypress .bp-login-widget-user-links > div {
+	padding-left: 60px;
+}
+
+.widget.buddypress .bp-login-widget-user-links > div {
+	margin-bottom: .5rem;
+}
+
+.widget.buddypress .bp-login-widget-user-links > .bp-login-widget-user-link a {
+	font-weight: bold;
+}
+
+.widget_bp_core_sitewide_messages{
+	.bp-site-wide-message{
+		#message{
+			margin-bottom: 0;
+
+			#buddypress &{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+// bp home widget area -----------------------------------------
+.bp-widget-area .widget .widget-title{
+	color: $base-color;
+}

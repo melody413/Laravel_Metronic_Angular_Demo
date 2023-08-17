@@ -1,0 +1,285 @@
+// Block/section head styles
+
+// Default blocks title style #1
+.block-head-1{
+	.the-global-title,
+	.comment-reply-title,
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		&:after {
+			right: 0;
+			left: auto;
+		}
+
+		&:before {
+			right: 0;
+			left: auto;
+			border-left: 5px solid transparent;
+			border-right: 0;
+		}
+	}
+}
+
+// blocks title style #2
+.block-head-2{
+	.site-footer .widget-title:after {
+		right: 0;
+		left: auto;
+	}
+}
+
+// blocks title style #3
+.block-head-3{
+	.comment-reply-title,
+	.the-global-title,
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		&:after {
+			right: 0;
+			left: auto;
+		}
+	}
+}
+
+// blocks title style #4
+.block-head-4{
+	.has-block-head-4,
+	.mag-box-title h3,
+	.comment-reply-title, // WooCommerce
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		&:before{
+			right: 0;
+			left: auto;
+		}
+	}
+
+
+	#check-also-box .widget-title{
+		padding-right: 30px;
+		padding-left: 10px;
+	}
+
+	#check-also-close{
+		right: 5px;
+		left: auto;
+	}
+}
+
+.block-head-4,
+.block-head-7{
+	span.widget-title-icon{
+		float: right;
+  	margin-left: 10px;
+  	margin-right: 0;
+	}
+}
+
+// blocks title style #5
+.block-head-5{
+	.has-block-head-4,
+	.mag-box-title h3,
+	.comment-reply-title,
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		padding: 5px 25px 5px 15px;
+
+		&:before{
+			transform: skew(20deg) translateX(-6px);
+		}
+	}
+
+	.section-title-default{
+		padding: 5px 35px 5px 20px;
+
+		&:before{
+			transform: skew(20deg) translateX(-13px);
+		}
+	}
+
+	.widget-title{
+		padding: 0 20px 0 10px;
+	}
+
+	#check-also-box .widget-title{
+		padding-right: 37px;
+	}
+
+	#check-also-close{
+		right: 12px;
+		left: auto;
+	}
+}
+
+// blocks title style #6
+.block-head-6{
+	.has-block-head-4,
+	.mag-box-title h3,
+	.comment-reply-title,
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		&:after{
+			left: 0;
+			right: auto;
+			transform: skew(40deg) translateX(-14px);
+		}
+	}
+
+	.section-title-default{
+		&:after{
+			transform: skew(40deg) translateX(-32px);
+		}
+	}
+}
+
+// blocks title style #7
+.block-head-7{
+	.slider-arrow-nav {
+		margin-left: -3px;
+		margin-right: 5px;
+	}
+}
+
+// blocks title style #8
+.block-head-8{
+	.the-global-title,
+	.comment-reply-title,
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		padding-right: 20px;
+		padding-left: 0;
+
+		&:before {
+			right: 0;
+			left: auto;
+		}
+	}
+
+	.section-title-default{
+		padding-right: 25px;
+		padding-left: 0;
+	}
+}
+
+
+// blocks title style #9
+.block-head-9{
+	.the-subtitle{
+		.widget-title-icon{
+  		padding-right: 0;
+  		padding-left: 5px;
+  	}
+  }
+}
+
+// blocks title style 11
+.block-head-10{
+	.has-block-head-4,
+	.mag-box-title h3,
+	.comment-reply-title, // WooCommerce
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		&:after{
+			right: auto;
+			left: 0;
+			transform: skew(30deg) translateX(-10px);
+		}
+	}
+
+	.widget-title-icon{
+		float: right;
+  	margin-right: 0;
+  	margin-left: 10px;
+	}
+
+	.section-title-default{
+		padding-left: 10px;
+		padding-right: 0;
+
+		&:after{
+			border-left-width: 0;
+			border-right-width: 40px;
+		}
+	}
+
+	#check-also-box .widget-title{
+		padding-right: 30px;
+		padding-left: 0;
+	}
+
+	#check-also-close{
+		left: auto;
+		right: 5px;
+	}
+}
+
+
+// blocks title style 11
+.block-head-11{
+	.has-block-head-4,
+	.mag-box-title h3,
+	.comment-reply-title, // WooCommerce
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		padding-right: 0;
+		padding-left: 21px;
+
+		&:after{
+			right: auto;
+			left: 0;
+			border-left-width: 0;
+			border-right-width: 13px;
+			border-right-color: $brand-color;
+		}
+	}
+
+	.widget-title-icon{
+		float: right;
+  	margin-right: 0;
+  	margin-left: 10px;
+	}
+
+	.section-title-default{
+		padding-left: 50px;
+		padding-right: 0;
+
+		&:after{
+			border-left-width: 0;
+			border-right-width: 40px;
+		}
+	}
+
+	#check-also-box .widget-title{
+		padding-right: 30px;
+		padding-left: 0;
+	}
+
+	#check-also-close{
+		left: auto;
+		right: 5px;
+	}
+}

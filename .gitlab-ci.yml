@@ -1,0 +1,81 @@
+.base_build:
+  stage: build
+  image: docker:latest
+  before_script:
+  # cleanup the environment
+  - docker container prune -f
+  - docker image prune -a -f
+  script:
+    # build the image
+    - docker build
+      -t "${APP_NAME}"
+      --build-arg="APP_NAME=${APP_NAME}"
+      --build-arg="APP_ENV=${APP_ENV}"
+      --build-arg="DB_HOST=${DB_HOST}"
+      --build-arg="DB_PORT=${DB_PORT}"
+      --build-arg="DB_NAME=${DB_NAME}"
+      --build-arg="DB_USER=${DB_USER}"
+      --build-arg="DB_PASSWORD=${DB_PASSWORD}"
+      --build-arg="APP_BASE_URL=${APP_BASE_URL}"
+      --rm .
+  # attach specific tags
+    - docker tag "${APP_NAME}" "registry.gitlab.com/doctorak/${APP_NAME}:latest"
+    - docker login registry.gitlab.com/doctorak/${APP_NAME} --username $DOCKER_USER --password $DOCKER_PASSWORD
+    - docker push "registry.gitlab.com/doctorak/${APP_NAME}:latest"
+
+.base_deploy:
+  stage: deploy
+  image: docker/compose:latest
+  before_script:
+  - mkdir -p "${DOCKER_CERT_PATH}"
+  - cp "${DOCKER_CA}" "${DOCKER_CERT_PATH}/ca.pem"
+  - cp "${DOCKER_CERT}" "${DOCKER_CERT_PATH}/cert.pem"
+  - cp "${DOCKER_KEY}" "${DOCKER_CERT_PATH}/key.pem"
+  script:
+  # fetch new images
+  - docker-compose -f docker-compose.yml pull
+  # restart the containers
+  - docker-compose -f docker-compose.yml up -d
+  # cleanup like adults do
+  - docker system prune -f
+  - docker image prune -a -f
+  - rm -rf "${DOCKER_CERT_PATH}"
+  variables:
+    DOCKER_HOST: "tcp://${SERVER_IP}:2376"
+    DOCKER_TLS_VERIFY: 1
+    # certificates are placed based on their envs to avoid potential conflicts
+    # when the same runner is used for different deployments at the same time
+    DOCKER_CERT_PATH: "/tmp/.docker-${CI_ENVIRONMENT_NAME}"
+
+
+services:
+- docker:dind
+
+
+stages:
+- build
+- deploy
+
+
+##### Build Enviroment #####
+
+build_stage:
+  extends: .base_build
+  tags:
+  - default_runner_doctorak
+  environment:
+    name: stage
+  only:
+  - stage
+
+##### Deploy Enviroment ####
+
+deploy_stage:
+  extends: .base_deploy
+  tags:
+  - default_runner_doctorak
+  environment:
+    name: stage
+  only:
+  - stage
+

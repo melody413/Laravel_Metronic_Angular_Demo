@@ -1,0 +1,132 @@
+<div class="row">
+<div class="col-md-8">
+    <div class="unit_content">
+        <div class="identity">
+            <img src="{{ f_assets('/images/general/pharma_img.jpg') }}" alt="">
+        </div>
+        <div class="data_set">
+            <h1>BUPA GLOBAL</h1>
+            <p>
+                Bupa Egypt is a world-class international health insurance provider offering flexible options for individuals, families and companies. With our International Private Medical Insurance (IPMI) you are not limited to treatment in just one country, but have quick access to medical care from all over the world when it matters most, wherever you may be.
+            </p>
+            <p>
+                We have a comprehensive range of health plans available to suit your specific needs and budget, with annual cover limits ranging from £1.5m to Unlimited. With access to multilingual advisers 24/7 and the ability to manage your claims online with Members World, you are never far from our support and guidance.
+            </p>
+            <p>
+                Bupa Global benefits include access to specialists and hospitals around the globe, including 387 medical providers across Egypt. Our worldwide evacuation service, 24/7 multilingual helpline, full cover for eligible cancer treatment and access to a second medical opinion at no extra cost, all help ensure our customers are satisfied and well looked after no matter where they are.
+            </p>
+            <p>
+                Our flexible international health insurance plans are designed to give choice and reassurance, whether in Egypt or abroad. They can work alongside your domestic health insurance, helping to give you peace of mind.
+            </p>
+        </div>
+        <div class="topping">
+            <div class="head">
+                <h2>Covering with the followings</h2>
+            </div>
+            <div class="content">
+                <div class="topping_tabs">
+                    <ul class="nav nav-tabs" id="topping_tabs_ul" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="doctors-tab" data-toggle="tab" href="#doctors" role="tab" aria-controls="home" aria-selected="true">Doctors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="hospitals-tab" data-toggle="tab" href="#hospitals" role="tab" aria-controls="profile" aria-selected="false">Hospitals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="labs-tab" data-toggle="tab" href="#labs" role="tab" aria-controls="contact" aria-selected="false">Labs</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="doctors" role="tabpanel" aria-labelledby="doctors-tab">
+                            <div class="row justify-content-between tab_panel_head">
+                                <div class="col-md-8 flexer flexer_ai_center flexer_jc_center">
+                                    <h3>List of doctors that BUPA GLOBAL coverage deal with</h3>
+                                </div>
+                                <div class="col-md-4 flexer flexer_ai_center flexer_jc_end">
+                                    <i class="icon-doctor"></i>
+                                </div>
+                            </div>
+                            <div class="row tab_panel_content doctors">
+                                @for ($i = 0; $i < 4; $i++)
+                                    <div class="col-md-12 item doctor">
+                                        <a href="#">
+                                            <div class="flexer flexer_jc_start flexer_ai_center">
+                                                <div class="img_frame">
+                                                    <img src="https://picsum.photos/70/70/?random" alt="">
+                                                </div>
+                                                <div class="data">
+                                                    <h4>Dr. Amir Elboghdady</h4>
+                                                    <span>Specialist of Obs & gynae</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                @endfor
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="hospitals" role="tabpanel" aria-labelledby="hospitals-tab">
+                            <div class="row justify-content-between tab_panel_head">
+                                <div class="col-md-8 flexer flexer_ai_center flexer_jc_center">
+                                    <h3>List of hospitals that BUPA GLOBAL coverage deal with</h3>
+                                </div>
+                                <div class="col-md-4 flexer flexer_ai_center flexer_jc_end">
+                                    <i class="icon-hospital"></i>
+                                </div>
+                            </div>
+                            <div class="row tab_panel_content doctors">
+                                @for ($i = 0; $i < 4; $i++)
+                                    <div class="col-md-12 item doctor">
+                                        <a href="#">
+                                            <div class="flexer flexer_jc_start flexer_ai_center">
+                                                <div class="img_frame">
+                                                    <img src="https://picsum.photos/70/70/?random" alt="">
+                                                </div>
+                                                <div class="data">
+                                                    <h4>Dr. Amir Elboghdady</h4>
+                                                    <span>Specialist of Obs & gynae</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                @endfor
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="labs" role="tabpanel" aria-labelledby="labs-tab">
+                            <div class="row justify-content-between tab_panel_head">
+                                <div class="col-md-8 flexer flexer_ai_center flexer_jc_center">
+                                    <h3>List of Labs that BUPA GLOBAL coverage deal with</h3>
+                                </div>
+                                <div class="col-md-4 flexer flexer_ai_center flexer_jc_end">
+                                    <i class="icon-lab"></i>
+                                </div>
+                            </div>
+                            <div class="row tab_panel_content doctors">
+                                @for ($i = 0; $i < 4; $i++)
+                                    <div class="col-md-12 item doctor">
+                                        <a href="#">
+                                            <div class="flexer flexer_jc_start flexer_ai_center">
+                                                <div class="img_frame">
+                                                    <img src="https://picsum.photos/70/70/?random" alt="">
+                                                </div>
+                                                <div class="data">
+                                                    <h4>Dr. Amir Elboghdady</h4>
+                                                    <span>Specialist of Obs & gynae</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                @endfor
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="unit_showcase">
+
+    </div>
+</div>
+</div>

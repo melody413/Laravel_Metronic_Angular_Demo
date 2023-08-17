@@ -1,0 +1,100 @@
+$skins-list:             blue     coffee   ectoplasm  midnight  ocean     sunrise   bbp-evergreen   bbp-mint;
+$bg-dark-color:          #52accc  #59524c  #523f6d    #363b3f   #738e96   #cf4944   #446950         #5fb37c;
+$bg-dark-color-secondry: #4796b3  #46403c  #413256    #26292c   #627c83   #be3631   #36533f         #4ca26a;
+$brand-color:            #096484  #c7a589  #a3b745    #e14d43   #9ebaa0   #dd823b   #56b274         #4f6d59;
+$brand-color-secondry:   #74b6ce  #b18e70  #bfd84a    #d64137   #8da78f   #f57e21   #43935c         #3abf64;
+$buttons-color:          #e1a948  #9ea476  #d46f15    #69a8bb   #aa9d88   #ccaf0b   #36b360         #33834e;
+
+
+@for $i from 1 through length($skins-list) {
+	/* .#{nth($skins-list, $i)} */
+  .admin-color-#{nth($skins-list, $i)} {
+
+		.tie-panel,
+		.tie-option-pre-label {
+		  background: nth($bg-dark-color, $i);
+		}
+
+		.tie-block-head {
+		  background: nth($bg-dark-color-secondry, $i);
+		}
+
+		#theme-search-list a:hover{
+		  color: nth($brand-color, $i);
+		}
+
+		.tie-builder-container .tie-builder-section-title{
+		  background-color: nth($brand-color-secondry, $i);
+
+		  .tie-block-options {
+		    li a{
+		      background-color: nth($brand-color, $i);
+
+		      &:hover{
+		        background-color: nth($brand-color-secondry, $i);
+		      }
+		    }
+		  }
+		}
+
+		.blocks-settings-tabs.tie-section-tabs {
+		  background: nth($brand-color-secondry, $i);
+
+		  a.active {
+		    background: nth($brand-color, $i);
+		  }
+		}
+
+		.tie-panel-tabs {
+		  li{
+				.tie-theme-update {
+			    background: nth($buttons-color, $i);
+			  }
+
+		  	&.active {
+		    	a {
+		      	background: nth($brand-color, $i);
+		    	}
+				}
+		  }
+		}
+
+		.font-select .fs-results li.active,
+		.tie-label-primary-bg{
+    	background: nth($brand-color, $i) !important;
+		}
+
+		.checkmark {
+		  box-shadow: inset 0 0 0 nth($brand-color, $i);
+		}
+
+		.checkmark__circle {
+		  stroke: nth($brand-color, $i);
+		}
+
+		.tie-options {
+		  //li:after {
+		    //background: nth($brand-color, $i);
+		  //}
+
+		  .selected {
+		    label {
+		      &,
+		      span {
+		        background: nth($brand-color, $i);
+		      }
+		    }
+		  }
+		}
+
+		.tie-builder-item-top-container{
+			background: nth($bg-dark-color, $i);
+		}
+
+
+		.tie-styles-list-widget input[type="radio"]:checked + img{
+			border-color: nth($brand-color, $i);
+		}
+
+  }
+}

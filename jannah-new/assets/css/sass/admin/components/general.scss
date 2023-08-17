@@ -1,0 +1,89 @@
+.tie-message-hint{
+	background-color: #FFF8DC;
+	border: 0 solid #ffeb8e;
+	border-left-width: 5px;
+	margin: 0 !important;
+	padding: 10px;
+	line-height: 1.9;
+	color: #444;
+
+	.widget-content &{
+		margin: 15px 0 !important;
+	}
+
+	&.tie-message-error{
+		background-color: #FBEAEA;
+		border-color: #DC3232;
+	}
+
+	&.tie-message-success{
+		background-color: #e9f9dd;
+		border-color: #67d218;
+	}
+
+	.tie-builder-content-area &{
+		margin-top: 15px !important;
+	}
+
+	ul{
+		list-style: disc;
+		list-style-position: inside;
+	}
+}
+
+#tie-import-data-notes{
+	max-width: 800px;
+	margin: 0 auto;
+
+	#theme_not_authorized{
+		margin-top: 60px;
+	}
+
+	.tie-notice-content{
+		background: #fffbe8;
+	}
+}
+
+.clear {
+	clear: both;
+}
+
+.tie-primary-button.button{
+	text-align: center;
+}
+
+
+/* ---------------------------------------------
+ Switch button
+------------------------------------------------ */
+.switchery {
+	background-color: #fff;
+	border: 1px solid #dfdfdf;
+	border-radius: 20px;
+	cursor: pointer;
+	display: inline-block;
+	height: 25px;
+	position: relative;
+	vertical-align: middle;
+	width: 50px;
+	box-sizing: content-box;
+	user-select: none;
+}
+
+.switchery > small {
+	background: #fff;
+	border-radius: 100%;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+	height: 25px;
+	position: absolute;
+	top: 0;
+	width: 25px;
+}
+
+
+/* Code Mirror */
+// There is a bug in the code section in the post edit page.
+// Temp Fix add extra padding
+body.post-php .CodeMirror-code{
+	padding-left: 20px;
+}

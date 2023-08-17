@@ -1,0 +1,18 @@
+// Magazine Block Style #2
+
+.magazine2{
+ 	&.full-width .masonry-with-spaces:not(.media-page-layout){
+		#masonry-grid:not(.masonry-loaded){
+			// Fix the pre-js load issue
+			.post-element{
+				margin-left: 4%;
+				margin-right: 0;
+
+				&:nth-child(3n+3){
+					margin-right: 0;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}

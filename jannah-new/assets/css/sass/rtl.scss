@@ -1,0 +1,60 @@
+@import "utils/variables";
+@import "utils/mixins";
+
+
+html{
+	direction: rtl;
+}
+
+
+// RTL Bootstrap grid system
+@import "rtl-components/grid";
+
+
+// General Components
+@import "rtl-components/general";
+
+
+// Headers - Main nav - Top nav - Header Components - Mobile menu
+@import "rtl-components/header";
+
+
+// Sliders
+@import "rtl-components/sliders";
+
+
+// Magazine Boxes
+@import "rtl-components/magazine-boxes";
+
+
+// Magazine Block Style #2
+@import "rtl-components/magazine2";
+
+
+// Single Post Elements : post-content.scss
+@import "rtl-components/post-content";
+
+
+// Page templates : masonary
+@import "rtl-components/page-templates";
+
+
+// Block/section head styles
+@import "rtl-components/block-head";
+
+
+// Widgets
+@import "rtl-components/widgets";
+
+
+// Side Aside
+@import "rtl-components/side-aside";
+
+
+// Theme Tabs
+@import "rtl-components/tabs";
+
+
+// Theme Tabs
+@import "rtl-components/footer";
+

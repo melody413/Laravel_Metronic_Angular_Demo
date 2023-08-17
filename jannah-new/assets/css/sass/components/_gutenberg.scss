@@ -1,0 +1,139 @@
+
+// Gutenberg blocks fixes in normal page layout (page with sidebar)
+.entry{
+	// gallery
+	.blocks-gallery-grid{
+		padding: 0 !important;
+		margin: 0 0 17px !important;
+	}
+
+	// Blockquotes
+	.wp-block-quote,
+	.wp-block-pullquote {
+		background: transparent;
+		color: $base-color;
+		font-size: 13px;
+
+		cite{
+			display: inline;
+		}
+
+		&:before{
+			display: none;
+		}
+
+		&.alignfull{
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+
+	.wp-block-pullquote{
+		margin-bottom: 25px;
+	}
+
+	.wp-block-quote{
+		padding: 0 1em;
+
+		&.is-large{
+			cite{
+				display: block;
+			}
+		}
+	}
+
+	// Separator
+	.wp-block-separator{
+		margin: 1.65em auto;
+	}
+
+	.alignfull,
+	.alignwide{
+		margin: 1em 0;
+	}
+
+	.wp-block-columns{
+		margin: 0 -10px;
+
+		> div{
+			padding: 0 10px;
+		}
+	}
+
+	// Cover Image fix
+	.wp-block-cover-image{
+		display: flex !important;
+	}
+}
+
+// Full size image
+.tie-full-width-img img,
+.entry .alignwide, // Gutenberg Wide
+.entry .alignfull{ // Gutenberg fullwide
+	height: auto;
+	margin-right: -30px;
+	margin-left: -30px;
+	width: calc(100% + 60px);
+	left: 0;
+	max-width: none;
+	margin-bottom: 20px;
+	border-radius: 0;
+
+	@include breakpoint(max_min_sm){
+		margin-right: -15px;
+		margin-left: -15px;
+		width: calc(100% + 30px);
+	}
+
+	.magazine2.post-layout-8 &{
+		margin-right: -15px;
+		margin-left: -15px;
+		width: calc(100% + 30px);
+	}
+}
+
+// alignWide and alignfull in one-column or fullwidth page layout.
+@include breakpoint(sm){
+	.full-width.magazine2,
+	.one-column-no-sidebar.magazine2{
+		.entry{
+			.alignfull {
+				margin-left: calc(50% - 50vw);
+				margin-right: calc(50% - 50vw);
+				width: auto;
+				max-width: 1000%;
+			}
+
+			.alignwide {
+				margin-left: calc(25% - 22vw);
+				margin-right: calc(25% - 22vw);
+				width: auto;
+				max-width: 1000%;
+			}
+
+			.alignwide img,
+			.alignfull img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+.wp-block-embed__wrapper .twitter-tweet-rendered{
+	margin-right: auto !important;
+	margin-left: auto !important;
+}
+
+// Gutenberg elements in dark skin
+.dark-skin{
+	.entry .wp-block-quote,
+	.entry .wp-block-pullquote{
+		color: #fff;
+	}
+
+	.wp-block-pullquote cite,
+	.wp-block-pullquote footer{
+		color: #6c7781;
+	}
+}

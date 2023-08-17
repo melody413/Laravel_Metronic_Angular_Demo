@@ -1,0 +1,144 @@
+.foxpush-intro {
+	text-align: center;
+	max-width: 950px;
+	margin: 0 auto;
+	padding: 25px 0;
+
+	h3 {
+		line-height: 1.8;
+	}
+}
+
+.web-notifications-stats {
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	width: 25%;
+	float: left;
+
+	.box-desc {
+		font-size: 12px;
+		line-height: 26px;
+		color: #A5AEB1;
+		text-transform: uppercase;
+	}
+
+	.box-num {
+		font-size: 42px;
+		line-height: 80px;
+		font-weight: 300;
+		margin: 5px 0;
+	}
+}
+
+.web-notifications-stats-box {
+	overflow: hidden;
+}
+
+
+#foxpush-instructions {
+	h5 {
+		padding: 0 20px;
+		font-size: 14px;
+		margin: 0;
+	}
+}
+
+
+/* Send Campaign */
+#foxpush-create-campaign {
+	overflow: hidden;
+
+	.option-item {
+		padding: 0 0 5px;
+		border: none;
+		clear: none;
+	}
+
+	input[type=text],
+	.image-preview-wrapper .button,
+	.img-preview img{
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.image-preview-wrapper {
+		width: 100%;
+		float: none;
+		border: none;
+
+		.extra-text {
+    	padding: 3px 0 0;
+    	font-style: italic;
+    	font-size: 85%;
+		}
+	}
+
+	#tie_foxpush_icon-preview {
+  	margin: 5px 0;
+	}
+
+	.tie-message-hint{
+		border: none;
+	}
+
+	.inside{
+		margin-top: 12px;
+	}
+}
+
+.foxpush-spinner{
+  margin: 20px auto 14px;
+	float: none;
+	display: none;
+
+	&.is-active{
+		display: block;
+	}
+}
+
+#tie_foxpush_icon{
+	display: none;
+}
+
+#send-notification-actions {
+  margin: 0 -12px -12px;
+  padding: 10px;
+  clear: both;
+  border-top: 1px solid #ddd;
+  background: #f5f5f5;
+}
+
+
+#foxpush-get-campaigns .inside{
+	max-height: 395px;
+	overflow: auto;
+
+	td{
+		width: 33%;
+		text-align: center;
+	}
+}
+
+.campaign-status{
+  float: right;
+  display: inline-block;
+  border-radius: 3px;
+  background: orange;
+  padding: 0px 8px;
+  font-size: 75%;
+  text-transform: capitalize;
+  color: #fff;
+
+  &.status-done{
+  	background: green;
+  }
+}
+
+.campaigns-statistics{
+	line-height: 2.2;
+}
+
+#update-campaign-status{
+	float: right;
+}

@@ -1,0 +1,109 @@
+textarea,
+input,
+select {
+  line-height: 16px;
+}
+
+input[type=text]::-ms-clear {
+  display: none;
+}
+
+#top-nav.has-breaking-news .tie-alignleft {
+  width: 100%;
+}
+
+#top-nav.has-date-breaking-components .tie-alignleft, #top-nav.has-date-breaking-menu .tie-alignleft, #top-nav.has-breaking-menu .tie-alignleft, #top-nav.has-breaking-components .tie-alignleft {
+  width: 50%;
+}
+
+#top-nav .ticker-wrapper.has-js {
+  width: auto;
+}
+
+#logo {
+  display: flex;
+  max-width: 100%;
+}
+
+#logo a {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+@media (min-width: 992px) {
+  .header-layout-3 #logo {
+    float: none;
+  }
+  .header-layout-3 #logo a {
+    max-width: 100%;
+  }
+}
+
+.menu-tiny-label {
+  vertical-align: baseline;
+  line-height: 20px;
+}
+
+@media (min-width: 992px) {
+  .full-width div.big-posts-box ul.posts-items li {
+    width: calc(100% /3.001);
+  }
+}
+
+.rtl .mag-box-filter-links {
+  float: right;
+}
+
+.flex-tabs .flexMenu-viewMore a {
+  border-width: 0 1px 1px 0 !important;
+}
+
+.rtl .flex-tabs .flexMenu-viewMore a {
+  border-width: 0 0 1px 1px !important;
+}
+
+.flex-tabs .flexMenu-popup li:last-child a {
+  border-bottom-width: 0 !important;
+}
+
+.rtl .widget-title:before,
+.rtl .mag-box-title:before,
+.rtl #comments-title:before,
+.rtl .comment-reply-title:before,
+.rtl .woocommerce-tabs .panel h2:before,
+.rtl .related.products h2:before,
+.rtl #bbpress-forums #new-post > fieldset.bbp-form > legend:before,
+.rtl .review-box-header:before,
+.rtl #theme-header .menu li.menu-item-has-children .menu-item-has-children > a:before,
+.rtl #theme-header .main-menu .mega-menu .menu-item-has-children > a:before {
+  direction: ltr;
+}
+
+input[type="text"],
+input[type="search"],
+input[type="password"],
+.search-submit,
+.search-field,
+.subscribe-widget .subscribe-input {
+  line-height: 35px;
+  height: 35px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.subscribe-widget .subscribe-input {
+  height: 44px;
+}
+
+.review-box .review-summary,
+.review-box .review-short-summary {
+  display: block;
+}
+
+.main-content .tabs-box .tabs-widget .tabs-wrapper .tabs {
+  display: block;
+}
+
+div.miscellaneous-box .posts-items li {
+  width: calc(99.99% / 3.001);
+}

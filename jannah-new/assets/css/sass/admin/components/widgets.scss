@@ -1,0 +1,111 @@
+ul.tab-sortable {
+	margin-top: -10px;
+
+	li {
+		list-style: none;
+		background: #fafafa;
+		padding: 10px;
+		border: 1px solid #eee;
+		cursor: move;
+	}
+
+	.tie-state-highlight {
+		background-color: #fffdea;
+		border: 1px dashed #ffd38c;
+		padding: 10px;
+		height: 20px;
+		position: relative;
+	}
+}
+
+.tie-non-custom-posts-order-option,
+.tie-jetpack-posts-order-option,
+.tie-related-posts-order-option{
+	display: none;
+}
+
+.tie-widget-sub-title {
+	display: block;
+	background: #fafafa;
+	padding: 10px;
+	border: 1px solid #eee;
+	margin-top: 30px;
+}
+
+.tie-styles-list-widget {
+	margin-bottom: 25px;
+	overflow: hidden;
+
+	.tie-widget-options {
+		display: block;
+		float: left;
+		width: 40%;
+		padding: 5px 4%;
+		line-height: 1;
+
+		&:nth-child(2n+3) {
+			clear: left;
+		}
+
+		img{
+			width: 100%;
+		}
+	}
+
+	input[type="radio"] {
+	  display: none;
+	}
+
+	input[type="radio"] + img{
+	  border: 4px solid rgba(0, 0, 0, 0.05);
+	  display: inline-block;
+	  cursor: pointer;
+	  transition: 0.2s;
+	}
+
+	input[type="radio"] + img:hover{
+	  border-color: rgba(0, 0, 0, 0.15);
+	}
+
+	input[type="radio"]:checked + img{
+	  border-color: $brand_color;
+	}
+}
+
+.weather-color {
+	display: block;
+	position: relative;
+	font-size: 13px;
+	line-height: 1.5;
+	margin: 1em 0;
+}
+
+.ajax-added label + .wp-picker-container > a {
+	display: none; /* Fix duplicated color pickers bugs added via ajax */
+}
+
+body.widgets-php{
+	div[id*="tiepost-"]{
+		display: none;
+
+		h2 {
+	    font-size: 95%;
+		}
+	}
+
+	.tie-sidebar-section{
+		display: none;
+
+		div[id*="tiepost-"]{
+			display: block;
+		}
+	}
+
+	#tie-show-sections-sidebars-wrap{
+		display: none;
+
+		h2{
+			margin: 30px 0 8px;
+		}
+	}
+}

@@ -1,0 +1,184 @@
+.prices-table ~ a,
+#btc_calc ~ a {
+  display: none;
+}
+
+.prices-table {
+  border: 0;
+  background: #f5f5f7;
+  padding: 5px 10px;
+  transition: box-shadow 0.3s;
+  border-radius: 2px;
+}
+
+.prices-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.38);
+}
+
+.prices-table td {
+  border-right: 0;
+  padding: 10px;
+  border-color: #ebebeb;
+}
+
+.prices-table td img {
+  vertical-align: sub;
+  margin-right: 3px;
+}
+
+.prices-table td + td {
+  text-align: right;
+  font-weight: bold;
+  color: #000;
+}
+
+#btc_calc {
+  font-size: 20px;
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#btc_calc input {
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 35px;
+  width: 45%;
+  padding: 5px 85px 5px 10px;
+  border: 0;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+#btc_calc input:focus {
+  box-shadow: 0 0 0 3px #27292d;
+}
+
+.dark-skin #btc_calc input:focus {
+  box-shadow: 0 0 0 3px #555;
+}
+
+.dark-skin #btc_calc input {
+  color: #000;
+}
+
+#btc_calc .bct-currency-1,
+#btc_calc .bct-equal-sign {
+  display: inline-block;
+  text-align: center;
+}
+
+#btc_calc .bct-equal-sign {
+  width: 10%;
+  font-size: 50px;
+  line-height: 40px;
+  height: 47px;
+  color: #27292d;
+  vertical-align: top;
+}
+
+.dark-skin #btc_calc .bct-equal-sign {
+  color: #fff;
+}
+
+#btc_calc .bct-currency-1,
+#btc_calc select {
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 0 5px 5px 0;
+  line-height: 37px;
+  height: 47px;
+  width: 75px;
+  background: #27292d;
+  color: #ffffff;
+  margin-left: -75px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.dark-skin #btc_calc .bct-currency-1, .dark-skin
+#btc_calc select {
+  background: #555;
+}
+
+#btc_calc select {
+  border: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+#btc_calc:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  line-height: 37px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: #ffffff transparent transparent transparent;
+  top: 21px;
+  right: 8px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px), screen and (max-width: 650px) {
+  #btc_calc {
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    -webkit-flex-flow: wrap;
+        -ms-flex-flow: wrap;
+            flex-flow: wrap;
+  }
+  #btc_calc input,
+  #btc_calc .bct-equal-sign {
+    width: 100%;
+  }
+  #btc_calc:after {
+    bottom: 21px;
+    top: auto;
+  }
+}
+
+.rtl #btc_calc {
+  padding: 0 3px 0 0;
+}
+
+.rtl #btc_calc input {
+  padding: 5px 10px 5px 85px;
+}
+
+.rtl #btc_calc .bct-currency-1,
+.rtl #btc_calc select {
+  border-radius: 5px 0 0 5px;
+  margin-left: 0;
+  margin-right: -75px;
+}
+
+.rtl #btc_calc select {
+  margin-left: 0;
+  margin-right: -79px;
+}
+
+.rtl #btc_calc:after {
+  right: auto;
+  left: 14px;
+}
+
+.dark-skin .wpuc-coin-list-row {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body:not(.rtl) #tie-wrapper .wpuc-coin-grid {
+  margin: 0 -3% -3% 0;
+}
+
+.widget.text-html .wpuc-coin-list {
+  max-height: 500px;
+  overflow: auto;
+}

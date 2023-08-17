@@ -1,0 +1,22 @@
+// Side Aside
+
+//.side-aside{
+
+	//&,
+	//.side-aside-wrapper{
+		//direction: ltr;
+	//}
+
+	//@include breakpoint(md){
+		//transform: translate(-350px, 0) !important;
+		//left: 0;
+		//right: auto;
+	//}
+//}
+
+.tie-parallax [id^="jarallax-container-"] > div,
+.tie-parallax [id^="jarallax-container-"] > iframe{
+	right: auto !important;
+}
+
+

@@ -1,0 +1,10 @@
+// _animation.scss
+// Custom WooCommerce Animations.
+
+@import "../utils/mixins";
+
+@keyframes( spin ){
+	100% {
+		transform: rotate(360deg);
+	}
+}

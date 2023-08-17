@@ -1,0 +1,220 @@
+// Global Variable in all over the site
+//== Colors
+@import "mixins";
+
+$brand-color:            #0088ff; //#ff573d;
+$bright:								 color-contrast($brand-color);
+$font-color:             #333333;
+$base-color:             #2c2f34; // #555555;
+$dark-base-color:        #cccccc; // #999999;
+$base-light-color:       #f8f8f8;
+$base-light-light-color: #fafafa;
+$post-meta-color:        #767676;
+
+$dark-gray:  darken( $base-color, 10% );
+$light-gray: lighten( $base-color, 10% );
+
+$bg-color:        #F7F7F7;
+$bg-color-light:  lighten($bg-color, 40%);
+$bg-color-darken: darken($bg-color, 3%);
+
+$dark-color:         #2c2f34;
+$darker-color:       #23262a;
+$dark-brand-color:   darken( $brand-color, 10% );
+$darker-brand-color: darken( $brand-color, 15% );
+
+
+$white-menu-color:        #848484;
+$dark-bold-border-color:  #4a4a4a;
+$dark-light-border-color: #444444;
+
+$dark-bg:         #27292d;
+$dark-bg-less:    lighten($dark-bg, 5%);
+$darker-bg:       #1f2024;
+$darker-bg-more:  darken($darker-bg, 4%);
+$top-nav-dark-bg: #2c2e32;
+
+// Notifications Messages Colors
+// $success_color:       #4F8A10;
+$success_color:       #89ba16;
+$dark_success_color:  darken($success_color, 10%);
+$danger_color:        #e74c3c;
+$dark-danger-color:   darken($danger_color, 5%);
+$info_color:          #3498db;
+$warning_color:       #f39c12;
+
+
+//==social media Colors--------------
+$facebook-color:    #4080FF;
+$twitter-color:     #40bff5;
+$google-color:      #eb5e4c;
+$pinterest-color:   #e13138;
+$linkedin-color:    #238cc8;
+$instagram-color:   #c13584;
+$vimeo-color:       #35c6ea;
+$dribbble-color:    #f7659c;
+$youtube-color:     #ef4e41;
+$soundcloud-color:  #ff7e30;
+$flickr-color:      #ff48a3;
+$github-color:      #3f91cb;
+$behance-color:     #1879fd;
+$rss-color:         #faa33d;
+$skype-color:       #00aff0;
+$reddit-color:      #ff4500;
+$tumblr-color:      #35465c;
+$wordpress-color:   #21759b;
+$yelp-color:        #af0606;
+$lastfm-color:      #d51007;
+$xing-color:        #026466;
+$deviantart-color:  #05cc47;
+$apple-color:       #333333;
+$foursquare-color:  #f94877;
+$paypal-color:      #003087;
+$spotify-color:     #2ebd59;
+$googleplay-color:  #689F38;
+$px500-color:       #0099e5;
+$vk-color:          #45668e;
+$pocket-color:      #ef4056;
+$bitbucket-color:   #205081;
+$mixcloud-color:    #589fC3;
+$medium-color:      #4bad31;
+$twitch-color:      #6441a5;
+$viadeo-color:      #f07355;
+$envato-color:      #82b641;
+$steam-color:       #111111;
+$goodreads-color:   #A06E0A;
+$snapchat-color:    #e8e600;
+$whatsapp-color:    #43d854;
+$line-color:        #00c300;
+$messenger-color:   #0078ff;
+$telegram-color:    #0088cc;
+$viber-color:       #773ead;
+$tiktok-color:      #EE1D52;
+$tripadvisor-color: #448040;
+$odnoklassniki-color: #ee8208;
+
+//== Sizes
+$site-width:        1200px;
+$container-padding: 30px;
+$big-big-spacing:   60px;
+
+
+//==borders
+$base-border-opic-color:     #e6e6e6;
+$base-border-color:          rgba(0,0,0,0.1);
+$base-border-color-in-white: rgba(255,255,255,0.1);
+$dark-border-color:          #2d2e32;
+$top-bar-dark-border-color:  #45484d;
+$base-border:                1px solid $base-border-color;
+$base-border-opic:           1px solid $base-border-opic-color;
+$base-border-in-white:       1px solid $base-border-color-in-white;
+$primary-border:             1px solid $base-border-color;
+$dark-border:                1px solid #464646; //#474a50;
+$title-border-bottom:        2px solid $base-border-color;
+$title-dark-border-bottom:   2px solid $dark-bold-border-color;
+$base-border-radius:         2px !default;
+
+
+//== Tooltips:: bootstrap
+$tooltip-max-width:   200px !default;
+$tooltip-color:       #fff !default;
+$tooltip-bg:          #000 !default;
+$tooltip-opacity:     .9 !default;
+$tooltip-arrow-width: 5px !default;
+$tooltip-arrow-color: $tooltip-bg !default;
+$zindex-tooltip:      1070 !default;
+
+
+//== Typography:: bootstrap
+$font-family-sans-serif:    "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:         Georgia, "Times New Roman", Times, serif !default;
+
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:     Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:          $font-family-sans-serif !default;
+
+$font-size-base:            13px !default;
+$font-size-large:           ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:           ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:              floor(($font-size-base * 3.2)) !default; // ~45px
+$font-size-h2:              floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:              ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4:              ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:              $font-size-base !default;
+$font-size-h6:              ceil(($font-size-base * 0.85)) !default; // ~12px
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-min-1:            ($screen-xs-min - 1) !default;
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+$grid-columns:              12 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         30px !default;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-sm-min !default;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+$container-tablet:             100% !default;
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet !default;
+
+// Medium screen / desktop
+$container-desktop:            100% !default;
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop !default;
+
+// Large screen / wide desktop
+$container-large-desktop:      (1170px + $grid-gutter-width) !default;
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop !default;

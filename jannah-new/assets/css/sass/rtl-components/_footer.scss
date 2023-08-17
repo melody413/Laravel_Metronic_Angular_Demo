@@ -1,0 +1,27 @@
+
+// - Footer
+#go-to-top{
+	right: auto;
+	left: 15px;
+
+	@include breakpoint_max($screen-sm){
+		right: auto;
+		left: 5px;
+	}
+}
+
+@include breakpoint(sm){
+	.site-info-layout-2{
+		.copyright-text-first{
+			float: right;
+		}
+
+		.copyright-text-second,
+		ul.social-icons,
+		.footer-menu{
+			float: left;
+			margin-right: 10px;
+			margin-left: 0;
+		}
+	}
+}

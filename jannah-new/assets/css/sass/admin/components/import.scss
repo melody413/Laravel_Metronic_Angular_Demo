@@ -1,0 +1,174 @@
+#uninstall-demos-hint-item{
+	min-height: 31px;
+	padding-top: 15px;
+	padding-bottom: 5px;
+}
+
+#tie-uninstall-demo{
+	float: right;
+	margin-top: -5px;
+}
+
+.tie-demo-importer {
+	margin-top: 50px;
+
+	.theme {
+		cursor: default !important;
+
+		.more-details {
+			top: 44%;
+		}
+	}
+
+	.theme-screenshot {
+		cursor: pointer !important;
+
+		&:after {
+			padding-top: 84% !important
+		}
+	}
+
+	.demo-desc{
+		display: none;
+	}
+
+	img{
+		border: 0 none;
+	}
+}
+
+#tie-import-data-notes {
+	display: none;
+
+	.tie-message-hint{
+		font-size: 13px;
+		margin-top: 30px !important;
+	}
+
+	.imported-buttons{
+		display: none;
+	}
+
+	.theme-overlay{
+		@media only screen and (min-width: 750px) {
+			.theme-screenshots {
+				width: 40%;
+			}
+
+			.theme-info{
+				width: 52%;
+			}
+		}
+	}
+
+	img{
+		border: 0 none;
+	}
+}
+
+#theme-description{
+	margin-top: 5px;
+
+	ul{
+		list-style-position: outside;
+		list-style-type: square;
+		padding: 0 20px;
+	}
+
+	h3{
+		margin: 1.5em 0 0;
+
+		&:first-child{
+			margin-top: 0;
+		}
+	}
+
+	p{
+		margin: 1em 0;
+	}
+}
+
+.tie-loading-container.js-tie-ajax-loader {
+	height: 100px;
+	display: block;
+
+	#tie-saving-settings{
+		display: block !important;
+	}
+}
+
+.js-tie-ajax-response {
+	display: none;
+	margin: 25px auto;
+	max-width: 600px;
+	padding: 25px;
+	width: 90%;
+	font-weight: normal;
+	text-align: center;
+
+	.tie-message-hint {
+		margin-top: 50px !important;
+		margin-bottom: 0 !important;
+	}
+
+	h3 {
+		font-size: 26px;
+		line-height: 32px;
+		margin-bottom: 10px;
+		padding-top: 20px;
+	}
+
+	h3.is-done {
+		color: $success_color;
+	}
+
+	h4 {
+		font-size: 14px;
+		line-height: 25px;
+	}
+}
+
+.new-demo {
+	background: $success_color;
+	color: #FFF;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 7px 15px;
+}
+
+body[class*="click-demo-import"]{
+	#tie-saving-settings{
+		position: absolute;
+		left: 50%;
+	}
+
+	.notice,
+	.woocommerce-message{
+		display: none !important;
+	}
+
+	@media only screen and (min-width: 1640px) {
+		#wpwrap .theme-browser .theme {
+			width: 30.6%;
+			margin: 0 4% 4% 0 !important;
+
+			&:nth-child(3n) {
+				margin-right: 0 !important;
+			}
+		}
+
+		&.rtl{
+			#wpwrap .theme-browser .theme {
+				margin: 0 0 4% 4% !important;
+
+				&:nth-child(3n) {
+					margin-left: 0 !important;
+				}
+			}
+		}
+	}
+
+
+}

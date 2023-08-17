@@ -1,0 +1,132 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+// IE11 and Less
+
+textarea,
+input,
+select{
+  line-height: 16px;
+}
+
+input[type=text]::-ms-clear {
+  display: none;
+}
+
+// Top Nav
+#top-nav{
+  &.has-breaking-news{
+    .tie-alignleft{
+      width: 100%;
+    }
+  }
+
+  &.has-date-breaking-components,
+  &.has-date-breaking-menu,
+  &.has-breaking-menu,
+  &.has-breaking-components{
+    .tie-alignleft{
+      width: 50%;
+    }
+  }
+
+  .ticker-wrapper.has-js{
+    width: auto;
+  }
+}
+
+// logo
+#logo{
+  display: flex;
+  max-width: 100%;
+
+  a{
+    overflow: hidden;
+    max-width: 100%;
+  }
+}
+
+@include breakpoint(md) {
+  .header-layout-3 #logo{
+    float: none;
+  }
+
+  .header-layout-3 #logo a{
+    max-width: 100%;
+  }
+}
+
+// Main Nav
+.menu-tiny-label{
+  vertical-align: baseline;
+  line-height: 20px;
+}
+
+@include breakpoint(md){
+  .full-width div.big-posts-box ul.posts-items li{
+    width: calc(100% /3.001);
+  }
+}
+
+.rtl .mag-box-filter-links{
+  float: right;
+}
+
+.flex-tabs .flexMenu-viewMore a{
+  border-width: 0 1px 1px 0 !important;
+
+  .rtl &{
+    border-width: 0 0 1px 1px !important;
+  }
+}
+
+.flex-tabs .flexMenu-popup li:last-child a{
+    border-bottom-width: 0 !important;
+}
+
+// css arrow with border in rtl
+.rtl {
+  .widget-title:before,
+  .mag-box-title:before,
+  #comments-title:before,
+  .comment-reply-title:before,
+  .woocommerce-tabs .panel h2:before,
+  .related.products h2:before,
+  #bbpress-forums #new-post > fieldset.bbp-form > legend:before,
+  .review-box-header:before,
+  #theme-header .menu li.menu-item-has-children .menu-item-has-children > a:before,
+  #theme-header .main-menu .mega-menu .menu-item-has-children > a:before {
+      direction: ltr;
+  }
+}
+
+// Widgets
+input[type="text"],
+input[type="search"],
+input[type="password"],
+.search-submit,
+.search-field,
+.subscribe-widget .subscribe-input{
+  line-height: 35px;
+  height: 35px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.subscribe-widget .subscribe-input{
+  height: 44px;
+}
+
+.review-box .review-summary,
+.review-box .review-short-summary{
+  display: block;
+}
+
+// flexmenu fix
+.main-content .tabs-box .tabs-widget .tabs-wrapper .tabs{
+  display: block;
+}
+
+div.miscellaneous-box .posts-items li{
+  width: calc(99.99% / 3.001);
+}

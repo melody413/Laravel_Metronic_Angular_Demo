@@ -1,0 +1,1895 @@
+//  (Improvements stage #1 - 28 Feb 2018)
+//  Using !importnat keyword Guidlines:
+//  - Sometimes we use !important keyword instead of repeat the whole rules in rtl againe,
+//  if the components is a kind of default component, it will inherit the deafutl
+//  style from the default.
+//  - In RTL we change the default component style (left => right).
+//  But there are some components want to be in the same style in both LTR & RTL,
+//  and the RTL default component style will affect it.
+//  - We fix this by using high specificity keyword (!importnat) in the default style
+//  to override the default RTL style of this component.
+//  - EXamples:
+// 	The title area padding in block #16 (Block #16 is a kind of block #12).
+// 	.post-thumb float in Block #11.
+
+
+// Section Wrapper---------------------------------------------
+.is-stretch-section{
+	.container{
+		max-width: 100%
+	}
+}
+
+.section-item{
+	position: relative;
+	padding: 30px 0 0;
+	clear: both;
+
+	@include breakpoint(max_min_md){
+		padding-top: 15px;
+	}
+
+	.has-title &{
+		padding-top: 85px;
+		padding-bottom: 55px;
+
+		@include breakpoint(max_min_md){
+			padding-top: 20px;
+			padding-bottom: 10px;
+		}
+	}
+
+	.without-background:not(.has-title) + .without-background.has-title & {
+		padding-top: 55px;
+	}
+
+	.has-background &{
+		overflow: hidden;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+		.archive &{
+			padding-bottom: 30px;
+		}
+	}
+
+	.normal-width.has-background &{
+		padding-right: 30px;
+		padding-left: 30px;
+
+		@include breakpoint(max_min_md){
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+	}
+
+	@include breakpoint(max_min_md){
+		@at-root .container.has-background{
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+
+	&.first-block-is-full-width,
+	.without-background + .without-background & {
+		padding-top: 0;
+	}
+
+	.has-background & > section{
+		&{
+			margin-bottom: 0;
+		}
+
+		// this can't happen unless we have a fullwidth slider {section beside .container}
+		+ .container{
+			margin-top: 30px;
+
+			@include breakpoint(max_min_md){
+				margin-top: 15px;
+			}
+		}
+	}
+}
+
+// General Blocks Style----------------------------------------
+
+// - Block Title
+.mag-box-title{
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 20px;
+
+	h3{
+		font-size: 18px;
+		margin-right: 20px;
+		flex: 0 0 auto;
+		max-width: calc(100% - 145px);
+		float: left;
+
+		@include breakpoint(max_min_xs){
+			max-width: calc(100% - 105px);
+		}
+
+		&:only-child{
+			max-width: 100%;
+		}
+	}
+
+	.tie-alignright{
+		flex-grow: 1;
+		-ms-flex-positive: 1; // IE fix
+		width: 100%;
+	}
+}
+
+// - Block Filters and FlexMenu
+.mag-box-options{
+	font-size: 12px;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+
+	.slider-arrow-nav{
+		flex: 0 0 55px;
+	}
+}
+
+.block-more-button{
+	margin-left: 10px;
+	line-height: 22px;
+}
+
+.mag-box-filter-links {
+	opacity: 0;
+	transition: opacity 0.5s;
+	overflow: hidden;
+	height: 22px;
+
+	padding-left: 15px;
+
+	li{
+		float: left;
+	}
+
+	a{
+		padding: 0 6px;
+		margin: 0 2px;
+		line-height: 22px;
+		border-radius: 2px;
+		color: $base-color;
+		display: inline-block;
+		transition: 0.2s;
+		white-space: nowrap;
+		word-wrap: normal; // IE fix
+
+		&:hover{
+			border-color: $brand-color;
+			background-color: $brand-color;
+			color: $bright;
+		}
+
+		div.mag-box .mag-box-options &.active{ // override dark-skin
+			color: $brand-color;
+			background-color: transparent;
+			cursor: default;
+		}
+	}
+}
+
+
+.flexMenu-viewMore {
+	> a{
+		position: relative;
+		z-index: 5;
+
+		> span{
+			display: inline-block;
+			line-height: 22px;
+			font-size: 16px;
+		}
+	}
+
+	.mag-box-filter-links &{
+		&:hover > a{
+			background-color: transparent !important;
+			color: $brand-color;
+		}
+	}
+}
+
+.flexMenu-popup{
+	z-index: 4;
+	transform: translateX(-100%) translateX(34px);
+	min-width: 100px;
+	text-align: right;
+	white-space: nowrap;
+	word-wrap: normal; // IE fix
+	border-radius: $base-border-radius;
+	background: #ffffff;
+
+	li{
+		width: 100%;
+		display: block;
+	}
+
+	.mag-box-filter-links &{
+		top: 0;
+		padding-top: 22px;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+		li:first-child{
+			border-top: 1px solid rgba(0,0,0,0.05);
+		}
+	}
+
+	a{
+		border-radius: 0;
+		display: block;
+		padding: 3px 10px;
+		transition: none;
+		margin: 0;
+	}
+}
+
+
+//	- News Ticker Magazine Block --------------------------------
+.breaking-news-outer{
+	height: 40px;
+  overflow: hidden;
+	border-radius: $base-border-radius;
+}
+
+.mag-box{
+	.breaking-title{
+		line-height: 40px;
+		margin-top: -1px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.breaking{
+		height: 40px;
+		background-color: #ffffff;
+		border: $base-border;
+		border-left-width: 0;
+	}
+
+	.controls-is-active .ticker-wrapper.has-js{
+		padding-right: 90px;
+	}
+
+	.ticker-wrapper.has-js,
+	.ticker,
+	.ticker-content,
+	.ticker-swipe,
+	.breaking-news-nav,
+	.breaking-news-nav li{
+		line-height: 38px;
+		height: 38px;
+	}
+
+	.breaking-news-nav{
+		padding-right: 0;
+
+		li{
+			margin: 0;
+			width: 38px;
+			border-width: 0 0 0 1px;
+			border-radius: 0;
+			font-size: 16px;
+
+			&:hover{
+				border-color: transparent !important;
+			}
+		}
+	}
+
+	.pages-nav{
+		padding-top: 20px;
+	}
+}
+
+.dark-skin .mag-box,
+.box-dark-skin{
+	.breaking,
+	.breaking-news-nav li{
+		border-color: $base-border-color-in-white;
+	}
+
+	.breaking,
+	.ticker-content,
+	.ticker-swipe{
+		background-color: $dark-bg;
+	}
+}
+
+
+
+// Default Block post list style -----------------------------
+.mag-box-container{
+	position: relative;
+}
+
+.mag-box .posts-items li:nth-child(1),
+.mini-posts-box .posts-items li:nth-child(2),
+.big-post-left-box .posts-items li:nth-child(2),
+.big-posts-box .posts-items li:nth-child(2){
+	margin-top: 0;
+}
+
+.mag-box{
+	margin-bottom: 30px;
+	clear: both;
+
+	@include breakpoint(max_min_md){
+		margin-bottom: 15px;
+	}
+
+	.is-loading{
+		opacity: 0.5;
+		transition: opacity 0.3s;
+	}
+
+	.posts-items{
+		clear: both;
+		margin: 0 -2%;
+
+		li{
+			float: left;
+			width: 50%;
+			margin-top: 24px;
+			padding: 0 2%;
+
+			@include breakpoint_max(670px){
+				width: 100%;
+
+				&:not(:first-child){
+					margin-top: 14px;
+				}
+			}
+		}
+	}
+
+	.posts-items-loaded-ajax{
+		margin-top: 24px !important;
+	}
+
+	.post-title{
+		font-size: 20px;
+		line-height: 1.4;
+	}
+
+	.post-meta{
+		margin: 0 0 3px;
+	}
+
+	.post-excerpt{
+		margin-top: 5px;
+		color: #666666;
+		word-break: break-word;
+	}
+
+	li:not(:first-child){
+		.post-thumb{
+			float: left;
+			margin-right: 15px;
+		}
+
+		.post-details{
+			padding-left: 125px;
+		}
+
+		.post-title{
+			font-size: 14px;
+		}
+	}
+
+	// .pages-nav{
+	// 	padding: 30px 0 0;
+	// }
+}
+
+// - Posts Without Thumbs
+.no-small-thumbs{
+	&.post-item .post-details,
+	&.post-widget-body,
+	&.comment-body{
+		padding-left: 0 !important;
+	}
+}
+
+// - Block Content Only
+.content-only{
+	&:not(.tabs-box){
+		&,
+		> .container-wrapper{
+			background-color: transparent;
+			border: 0;
+			padding: 0;
+		}
+	}
+
+	@include breakpoint(max_min_md){
+		margin: 30px 0;
+	}
+}
+
+// - Show More Button
+.show-more-button{
+	border: $primary-border;
+	height: 50px;
+	line-height: 50px;
+	position: relative;
+	text-align: center;
+	display: block;
+	font-weight: 600;
+	cursor: pointer;
+	clear: both;
+
+	.mag-box &{
+		margin: 25px (-$container-padding) (-$container-padding);
+		border-width: 1px 0 0;
+
+		@include breakpoint(max_min_sm){
+			margin: 20px -15px -20px;
+		}
+	}
+
+	.pages-nav &{
+		padding: 0 20px;
+		min-height: 50px;
+		line-height: 50px;
+	}
+
+	.magazine1 .content-only &,
+	.magazine2 &{
+		border-width: 1px;
+		margin: 35px auto 0;
+		max-width: 350px;
+
+		@include breakpoint(max_min_md){
+			margin-top: 20px;
+		}
+	}
+
+	@include spinner-width(26px);
+}
+
+.pagination-disabled{
+	opacity: 0.5;
+	cursor: default !important;
+
+	&,
+	&:hover{
+		color: #888 !important; // override the custom block color
+	}
+}
+
+
+// Block #2 :: Big Post Left & Right posts list---------------
+.big-post-left-box{
+	.posts-items{
+		font-size: 0; // remove space between unfloated inline elements
+
+		.post-excerpt{
+			font-size: 13px;
+		}
+
+		li{
+			&:nth-child(n + 2){
+				float: none;
+				display: inline-block !important; // to override display:list-item [added by vilocity js]
+				vertical-align: top;
+
+				.post-thumb img{
+					max-width: 110px;
+				}
+			}
+		}
+	}
+
+	li:first-child{
+		.post-thumb{
+			margin-bottom: 10px;
+		}
+	}
+}
+
+// Fullwidth
+@include breakpoint(md){
+	.full-width .big-post-left-box{
+		.posts-items li{
+			width: calc(100% / 3);
+
+			&:nth-child(3){
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+
+// Block #3 :: Big Box Top - bottom posts list----------------
+.big-post-top-box{
+	.posts-items{
+		li{
+			&:first-child{
+				// override the default layout to fix the First Post border-bottom issue.
+				width: 96%;
+				padding-left: 0;
+				padding-right: 0;
+				margin-left: 2%;
+				margin-bottom: 24px;
+
+				.post-thumb{
+					float: left;
+					width: 48%;
+					margin-right: 4%;
+					margin-bottom: 0;
+				}
+
+				.post-details{
+					padding-left: 52%;
+				}
+			}
+
+			&:nth-child(2n){
+				clear: left;
+			}
+
+			&:nth-child(-n + 3){
+				margin-top: 0;
+			}
+
+			&:nth-child(n + 2){
+				.post-thumb img{
+					max-width: 110px;
+				}
+			}
+		}
+	}
+}
+
+// Responsive
+@include breakpoint_max(670px){
+	.big-post-top-box .posts-items{
+		li:first-child{
+			margin-bottom: 14px;
+
+			.post-thumb{
+				width: 100%;
+				margin: 0 0 10px;
+			}
+
+			.post-meta{
+				width: 100%;
+			}
+
+			.post-details{
+				padding: 0;
+			}
+		}
+
+		li:nth-child(3),
+		li:nth-child(4){
+			margin-top: 14px;
+		}
+	}
+}
+
+// Fullwidth
+@include breakpoint(md){
+	.full-width{
+		.big-post-top-box .posts-items{
+			li{
+				width: calc(100% / 3);
+			}
+
+			li:nth-child(-n + 4){
+				margin-top: 0;
+			}
+
+			li:first-child{
+				width: 96%;
+
+				.post-thumb{
+					width: 30.6%;
+				}
+
+				.post-details {
+				  padding-left: 34.767%;
+				}
+			}
+
+			li:nth-child(2n){
+				clear: none;
+			}
+
+			li:nth-child(3n + 2){
+				clear: left;
+			}
+		}
+	}
+}
+
+
+// Block #4 :: Half Box with Top Big Post---------------------
+//	Scallable in Fullwidth Layout & Responsive
+.half-box.mag-box{
+	padding-left: 0;
+	clear: right;
+}
+
+.half-box{
+	&.second-half-box{
+		padding-left: 15px;
+		padding-right: 0;
+	}
+
+	@include breakpoint(max_min_sm){
+		padding: 0 !important; // important to aplay on RTL also
+	}
+
+	.posts-items{
+		margin: 0;
+
+		li{
+			width: 100%;
+			padding: 0;
+
+			&:first-child{
+				margin-bottom: 24px;
+
+				@include breakpoint_max(670px){
+					margin-bottom: 14px;
+				}
+
+				.post-thumb{
+					margin-bottom: 10px;
+				}
+			}
+
+			&:nth-child(2){
+				margin-top: 0;
+			}
+
+			&:nth-child(n + 2){
+				.post-thumb img{
+					max-width: 110px;
+				}
+			}
+		}
+	}
+}
+
+@include breakpoint(sm){
+	.content-only.first-half-box{
+		padding-right: 15px;
+	}
+}
+
+
+// News Gallery Posts - News in Pictures Blocks #6 & #7--------
+.news-gallery{
+	.mag-box-container{
+		overflow: hidden;
+		margin-bottom: -10px;
+	}
+}
+
+// - Block #7 [Default for Both News Gallery Blocks]
+.news-gallery-items{
+	width: calc(100% + 10px);
+	margin: 0 -5px;
+
+	li{
+		float: left;
+		height: 75px;
+		width: 16.66667%;
+		padding: 0 5px 10px;
+
+		.post-thumb{
+			background-color: rgba(0,0,0,0.2);
+			background-size: cover;
+			background-position: center top;
+			background-repeat: no-repeat;
+			float: none !important; // override the default mag-box style
+			margin: 0 !important; // override the default mag-box style
+		}
+	}
+
+	.media-overlay &{
+		.post-thumb-overlay{
+			transition: 0.3s;
+		}
+
+		li:hover .post-thumb-overlay{
+			background: rgba(255,255,255,0.2);
+		}
+	}
+}
+
+// - Block #6 : First big thumb
+.big-first-gallery{
+	.news-gallery-items{
+		height: 280px;
+
+		li{
+			height: 25%;
+		}
+
+		li:first-child{
+			width: 50%;
+			height: 100%;
+		}
+	}
+}
+
+// Fullwidth
+@include breakpoint(md){
+	.full-width{
+		.big-first-gallery .news-gallery-items{
+			height: 400px;
+		}
+
+		.news-grid .news-gallery-items li{
+			height: 100px;
+		}
+	}
+}
+
+// Respoinsive
+@include breakpoint(max_min_sm){
+	.news-gallery-items li,
+	.big-first-gallery .news-gallery-items li{
+		width: 33.3334%;
+		height: 95px;
+	}
+
+	.big-first-gallery .news-gallery-items{
+		height: 620px;
+
+		li{
+			&:first-child{
+				width: 100%;
+				height: 250px;
+			}
+		}
+	}
+}
+
+
+// Scrolling Box #1: Default Scrolling slider - three posts at Once
+// Included In:
+// 1-Latest Products Slider
+// 2-Scrolling Box #1
+// 3-Scrolling Box #2
+
+.scrolling-box{
+	.mag-box-container{
+		min-height: 150px;
+	}
+}
+
+.scrolling-slider{
+  overflow: hidden;
+  display: none;
+
+  &.slick-dotted{
+	  padding-bottom: 40px;
+	}
+
+  .slick-list{
+    width: 100%;
+    width: calc(100% + 24px);
+    margin-right: calc(-12px);
+    margin-left: calc(-12px);
+    overflow: inherit;
+    transition: height 0.3s;
+  }
+
+  .tie-slick-dots{
+    bottom: 0;
+    text-align: center;
+  }
+
+  .slide {
+    margin: 0 12px;
+    position: relative;
+  }
+
+  .post-title {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+
+  .post-meta {
+    margin: 8px 0 0;
+  }
+}
+
+
+//   Scrolling Box #2 (Title bottom)-----------------------------
+.scroll-2-box{
+  .slick-track{
+  	display: flex;
+  }
+
+	.slide{
+    display: flex;
+    align-items: center;
+    height: auto;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .post-overlay {
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		height: 100%;
+		width: 100%;
+		padding: 10px;
+	}
+
+	.post-content {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 10px;
+		width: 100%;
+	}
+
+	.post-title a{
+		color: #ffffff;
+		white-space: normal;
+    display: block;
+		display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+		overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 4.2em;
+
+    @include breakpoint_min_max(400px, 570px){
+    	-webkit-line-clamp: 2;
+    	max-height: 2.8em;
+    }
+	}
+
+	.post-thumb:after{
+		opacity: 0.5;
+	}
+
+	.slide:hover{
+		.post-thumb:after{
+			opacity: 0.9;
+		}
+	}
+}
+
+
+// - Block #1 :: Wide Big Posts -------------------------------
+.wide-post-box{
+	.posts-items{
+		margin: 0;
+
+		li{
+			width: 100%;
+			padding: 0;
+			display: flex !important;
+
+			.post-title{
+				font-size: 20px;
+			}
+
+			.post-thumb{
+				margin-right: 25px;
+				float: none;
+				flex: 0 0 50%;
+				width: 50%;
+				max-width: 420px;
+
+				@include breakpoint(max_min_sm){
+					flex: 1 0 40%;
+					width: 40%;
+					max-width: 40%;
+					margin-right: 3.55%;
+				}
+			}
+
+			.post-details{
+				flex: 1 1 auto;
+				padding: 0 !important;
+			}
+
+			@include breakpoint_max(580px){
+				flex-direction: column;
+
+				.post-thumb{
+					width: 100%;
+					flex: 1 0 100%;
+					max-width: 100%;
+					margin: 0 0 10px 0;
+				}
+
+				.post-meta{
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+// - Block #17 :: Wide Big Posts -------------------------------
+.small-wide-post-box .posts-items li .post-thumb{
+	flex: 0 0 30%;
+	// width: 30%;
+}
+
+// - Block #14 :: Timeline ------------------------------------
+.timeline-box{
+	.posts-items{
+		position: relative;
+		overflow: hidden;
+
+		&::before,
+		&:last-of-type:after{
+			content: "";
+			width: 2px;
+			height: 100%;
+			background: $base-border-color;
+			position: absolute;
+			left: 29px;
+			z-index: 0;
+		}
+
+		&:last-of-type:after{
+			background-image: linear-gradient(to bottom, #e5e5e5 0%, #ffffff 80%);
+			height: 150px;
+			bottom: 0;
+		}
+
+		li{
+			display: block !important;
+
+			// .post-thumb{
+			// 	flex: 0 0 30%;
+			// 	// width: 30%;
+			// }
+
+			@include breakpoint_max(580px){
+				.post-thumb{
+					float: none;
+				}
+			}
+		}
+	}
+
+	.posts-items-loaded-ajax{
+		margin-top: 0 !important;
+
+		li:first-child{
+			padding-top: 30px;
+		}
+	}
+
+	.year-month{
+		background: $base-border-opic-color;
+		color: $dark-color;
+		text-align: center;
+		width: 60px;
+		height: 60px;
+		line-height: 18px;
+		float: left;
+		margin: 0 10px 10px 0;
+		position: relative;
+		overflow: hidden;
+		z-index: 1;
+		padding-top: 12px;
+		border-radius: 100%;
+
+		span{
+			font-weight: 600;
+			font-size: 14px;
+		}
+
+		em{
+			display: block;
+			font-size: 80%;
+			padding-top: 1px;
+			opacity: 0.7;
+		}
+	}
+
+	.day-month{
+		margin-bottom: 10px;
+		padding-left: 50px;
+		position: relative;
+		z-index: 2;
+
+		&::before{
+			position: absolute;
+			left: 23px;
+			top: 3px;
+			content: "";
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			background: $base-border-opic-color;
+			border: 3px solid #ffffff;
+			z-index: 1;
+		}
+	}
+
+	.post-item-inner{
+		margin-left: 50px;
+		display: flex;
+
+		@include breakpoint_max(580px){
+			flex-direction: column;
+		}
+	}
+}
+
+
+// - Block #10 :: Big Posts Box--------------------------------
+.big-posts-box{
+	.posts-items li{
+		@include breakpoint_max(670px){
+			width: 100%;
+		}
+
+		.post-thumb{
+			margin-right: 0;
+			float: none !important; // to applay in RTL also
+			margin-bottom: 10px;
+		}
+
+		.post-details{
+			padding-left: 0;
+		}
+
+		.post-title{
+			font-size: 20px;
+			padding-left: 0;
+		}
+
+		&:nth-child(2n + 1){
+			clear: left;
+		}
+	}
+}
+
+@media (min-width: 670px) {
+	.full-width .big-posts-box{
+		.posts-items {
+			margin: 0 -1.35%;
+
+			li{
+				width: calc(100% / 3);
+				padding: 0 1.35%;
+
+				&:nth-child(-n + 3){
+					margin-top: 0;
+				}
+
+				&:nth-child(2n + 1){
+					clear: none;
+				}
+
+				&:nth-child(3n + 1){
+					clear: left;
+				}
+			}
+		}
+	}
+}
+
+// - Block #17 :: inherit form Big Posts Box-------------------
+.narrow-big-posts-box{
+	.posts-items {
+		margin: 0 -1px;
+
+		li{
+			padding: 0 1px;
+
+			.post-details{
+				padding: 5px 15px 0;
+			}
+		}
+
+		.post-meta{
+			display: flex;
+			justify-content: start;
+			padding-top: 5px;
+		}
+
+		.post-cat-wrap{
+			left: 0;
+			bottom: 0;
+
+			.post-cat{
+				border-radius: 0;
+				background: #fff;
+				padding: 10px 25px;
+				color: #00bf80;
+			}
+		}
+	}
+}
+
+
+// - Block #11 :: Full Width Thumb Box ------------------------
+.full-width-img-news-box{
+	.posts-items {
+		li{
+			width: 100%;
+			float: none;
+
+			@include breakpoint(md){
+				&:not(:first-child){
+					margin-top: 40px;
+				}
+			}
+
+			.post-title{
+				font-size: 30px;
+				line-height: 1.2;
+
+				@include breakpoint(max_min_sm){
+					font-size: 25px;
+				}
+
+				@include breakpoint_max(670px){
+					font-size: 20px;
+				}
+			}
+
+			.post-thumb{
+				width: 100%;
+				margin-bottom: 10px;
+				float: none !important; // to aplay in rtl
+			}
+		}
+
+		.post-meta{
+			clear: both;
+		}
+
+		.post-excerpt,
+		.entry{
+			margin-top: 10px;
+		}
+	}
+}
+
+
+// - Block #12 :: Overlay title Box ---------------------------
+@include breakpoint(sm){
+	.full-overlay-title{
+		li:not(.no-post-thumb){
+			.block-post-overlay{
+				position: relative;
+				margin-bottom: 20px;
+			}
+
+			.block-title-overlay{
+				position: absolute;
+				bottom: -1px;
+				padding: 25px 25px 0 0;
+				background: #ffffff;
+				z-index: 4;
+				width: 70%;
+			}
+
+			img{
+				min-height: 250px;
+				background-color: #f6f7f8;
+			}
+		}
+
+		&.dark-skin li:not(.no-post-thumb) img,
+		.dark-skin & li:not(.no-post-thumb) img{
+			background-color: #161619;
+		}
+
+		&.media-overlay{
+			.tie-media-icon{
+				left: 15px;
+	    	top: 15px;
+	    	transform: none;
+			}
+
+			.is-trending{
+				.trending-post{
+					top: 16px;
+			    left: 15px;
+			    width: 38px;
+			    height: 38px;
+			    line-height: 38px;
+				}
+
+				.tie-media-icon{
+					left: 63px;
+				}
+			}
+		}
+
+		.digital-rating{
+			top: 15px;
+			right: 15px;
+		}
+	}
+
+// - Block #16 :: center overlay title ------------------------
+	.center-overlay-title{
+		li:not(.no-post-thumb){
+			.block-title-overlay{
+				padding: 25px 25px 15px 25px !important; // to aplay in rtl
+				width: 86%;
+				left: 7%;
+				text-align: center;
+			}
+
+			// right meta (comments & views)
+			.tie-alignright{
+				float: none;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+
+// - Block #9 :: Mini Posts Box--------------------------------
+.mini-posts-box{
+	.posts-items li{
+		.post-title{
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+
+		.post-thumb{
+			float: left;
+			margin-right: 15px;
+
+			img{
+				max-width: 110px;
+			}
+		}
+
+		&:nth-child(2n + 1){
+			clear: left;
+		}
+
+		@media only screen and (min-width: $screen-md) and (max-width: 1100px),
+		only screen and (max-width: 767px){
+			width: 100%;
+
+			&:nth-child(n + 2){
+				margin-top: 24px;
+			}
+		}
+	}
+}
+
+// Fullwidth
+@include breakpoint(md){
+	.full-width{
+		.mini-posts-box .posts-items li{
+			&:nth-child(-n + 3){
+				margin-top: 0;
+			}
+
+			&:nth-child(n){
+				width: calc(100% / 3);
+				clear: none;
+			}
+
+			&:nth-child(3n + 1){
+				clear: left;
+			}
+		}
+	}
+}
+
+
+// - Block #5 && Block #15 ------------------------------------
+// - Big Thumb Left Box & Miscellaneous box -------------------
+.first-post-gradient{
+	li:first-child{
+		.post-title{
+			font-size: 25px;
+			line-height: 1.2;
+			margin: 5px 0;
+		}
+
+		.post-overlay{
+			pointer-events: none;
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			border-radius: $base-border-radius;
+			z-index: 2;
+		}
+
+		.post-content{
+			width: 100%;
+			padding: 22px 30px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+
+		.post-cat-wrap{
+			pointer-events: none;
+		}
+
+		.post-cat-wrap a,
+		.meta-author a{
+			pointer-events: auto;
+		}
+	}
+
+	.posts-items li:first-child a:not(:hover),
+	li:first-child .post-meta{
+		color: #ffffff;
+	}
+}
+
+//   - Block #5 :: Big Box Top - bottom posts list---------------
+.big-thumb-left-box-inner{
+	height: 470px;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	background-color: rgba(0,0,0,0.2);
+
+	@include breakpoint_max(670px){
+		height: 325px;
+	}
+}
+
+.big-thumb-left-box{
+	li:first-child {
+		.post-content{
+			padding: 12px 20px;
+		}
+
+		.post-thumb{
+			margin-bottom: 0;
+		}
+	}
+}
+
+//   - Block #15 :: miscellaneous box ---------------------------
+.miscellaneous-box{
+	li:first-child{
+		@include breakpoint_min(671px){
+			.post-title{
+				font-size: 36px;
+				line-height: 1.2;
+			}
+		}
+	}
+
+	li:not(:first-child) .post-thumb{
+		margin: 0 0 5px !important;
+	}
+
+	.posts-items li{
+		width: calc(100% / 3);
+		margin-top: 30px;
+
+		&:first-child{
+			width: 96%;
+			padding: 0;
+			margin: 0 2%;
+			position: relative;
+
+			@include breakpoint(xs){
+				min-height: 180px;
+				background-color: rgba(0,0,0,0.2);
+			}
+		}
+
+		&:nth-child(3n + 2){
+			clear: both;
+		}
+	}
+
+	@include breakpoint_max(670px){
+		.posts-items li{
+			width: 50%;
+
+			&:nth-child(3n + 2){
+				clear: none;
+			}
+
+			&:nth-child(2n + 2){
+				clear: both;
+			}
+		}
+
+		li:first-child {
+			.post-content{
+				padding: 10px 15px;
+			}
+
+			.tie-media-icon{
+				left: 10px;
+				top: 10px;
+				transform: none;
+
+				&:before{
+					width: 35px;
+					height: 35px;
+					line-height: 30px;
+				}
+			}
+
+			&.is-trending{
+				.tie-media-icon{
+					left: 50px;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(max_min_xs){
+		li:first-child{
+			.post-title{
+				font-size: 18px;
+				max-height: 2.4em;
+				overflow: hidden;
+			}
+
+			.post-meta{
+				max-height: 2em;
+			}
+
+			.trending-post,
+			.post-cat,
+			.post-rating,
+			.digital-rating,
+			.tie-media-icon{
+				display: none;
+			}
+		}
+	}
+
+	@include breakpoint_max(380px){
+		.posts-items li{
+			width: 100%;
+		}
+	}
+}
+
+// Fullwidth
+@include breakpoint(md){
+	.full-width{
+		.miscellaneous-box .posts-items{
+			margin: 0 -1.33%;
+
+			li{
+				&:first-child{
+					margin: 0 1.33%;
+					width: 97.34%;
+				}
+
+				&:not(:first-child){
+					width: 25%;
+					padding: 0 1.33%;
+				}
+
+				&:nth-child(3n + 2){
+					clear: none;
+				}
+
+				&:nth-child(4n + 2){
+					clear: left;
+				}
+			}
+		}
+	}
+}
+
+// - Video PlayList Box----------------------------------------
+// Left Section (The Video Frame)
+.video-playlist-wrapper{
+	background-color: $dark-bg;
+	position: relative;
+	width: 66%;
+	height: 434px;
+	float: left;
+
+	.loader-overlay{
+		z-index: 1;
+	}
+
+	iframe{
+		height: 434px;
+		width: 100%;
+	}
+}
+
+.video-player-wrapper{
+	position: relative;
+	z-index: 2;
+}
+
+.video-frame{
+	visibility: hidden;
+}
+
+// Right Section
+.video-playlist-nav-wrapper{
+	width: 34%;
+	float: right;
+	height: 434px;
+	overflow: hidden;
+	background: #ffffff;
+	position: relative;
+	border-width: 0 1px 1px 0;
+
+	&:after{
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 1px;
+		background: rgba(0,0,0,0.05);
+	}
+
+	&:before{
+		content: "";
+		position: absolute;
+		right: 0;
+		background: rgba(0,0,0,0.05);
+		width: 100%;
+		height: 1px;
+		bottom: 0;
+		top: auto;
+	}
+
+	.mCustomScrollBox > .mCSB_scrollTools{
+		right: 0;
+		left: auto;
+	}
+}
+
+// - PlayList Title
+.playlist-title{
+	background: $brand-color;
+	color: $bright;
+	height: 70px;
+	width: 100%;
+	padding: 0 15px;
+	line-height: 17px;
+	z-index: 9;
+
+	h2{
+		padding-top: 14px;
+		font-size: 18px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+
+.videos-number{
+	font-size: 11px;
+	display: block;
+	float: left;
+}
+
+.playlist-title-icon{
+	font-size: 27px;
+	float: left;
+	margin-right: 10px;
+	height: 70px;
+	line-height: 70px;
+	width: 40px;
+	text-align: center;
+	font-weight: normal;
+}
+
+// - Videos Items
+.video-playlist-nav{
+	position: relative;
+	height: 434px;
+	clear: both;
+
+	.is-mobile &{
+		overflow-y: auto;
+	}
+
+	&:not(.playlist-has-title){
+		border-top: 1px solid rgba(0,0,0,0.05);
+	}
+}
+
+.playlist-has-title{
+	height: 364px;
+}
+
+.video-playlist-item{
+	padding: 12px 15px;
+	display: block;
+	overflow: hidden;
+	cursor: pointer;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+	transition: 0.3s;
+
+	&:last-of-type{
+		border-bottom: 0;
+	}
+
+	h2{
+		font-size: 12px;
+		font-weight: normal;
+  	line-height: 17px;
+	}
+}
+
+.video-playlist-item:hover,
+.is-playing{
+	background: $bg-color;
+}
+
+.video-paused-icon,
+.video-play-icon,
+.video-number{
+	float: left;
+	width: 20px;
+	text-align: left;
+	line-height: 46px;
+	font-size: 11px;
+	color: $font-color;
+}
+
+.video-play-icon{
+	display: none;
+	color: $brand-color;
+}
+
+.is-playing .video-number,
+.is-paused .video-number,
+.video-paused-icon{
+	display: none;
+}
+
+.is-playing .video-play-icon,
+.is-paused .video-paused-icon{
+	display: block;
+}
+
+.video-thumbnail{
+	width: 75px;
+	height: 42px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	@include background-size(cover);
+	float: left;
+}
+
+.video-info{
+	padding-left: 105px;
+}
+
+.video-duration{
+	float: left;
+	@include font-size(11px);
+	color: $post-meta-color;
+	margin-top: 3px;
+	line-height: 1;
+}
+
+// Video playlist in responsive
+@include breakpoint_min_max($screen-sm, $screen-sm-max){
+	.video-playlist-nav-wrapper,
+	.video-playlist-wrapper,
+	.video-playlist-wrapper iframe{
+	    height: 383px;
+	}
+
+	.video-playlist-nav{
+    height: 383px !important; // override the inline height on resize
+	}
+
+	.playlist-has-title{
+    height: 313px !important; // override the inline height on resize
+  }
+}
+
+@include breakpoint(max_min_sm){
+	.video-playlist-wrapper{
+		width: 100%;
+		height: auto;
+
+		iframe{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.video-player-wrapper{
+		position: relative;
+		padding-bottom: 56.25%; //  16:9
+		height: 0;
+	}
+
+	.video-playlist-nav-wrapper{
+		height: auto !important;
+		width: 100%;
+	}
+
+	.video-playlist-nav{
+		height: 270px !important;
+	}
+
+	.playlist-has-title{
+		height: 244px !important;
+	}
+}
+
+// Video playlist in Two-col Layout
+@include breakpoint(md){
+	.has-builder .has-sidebar{
+		.video-playlist-nav-wrapper,
+		.video-playlist-nav,
+		.video-playlist-wrapper,
+		.video-playlist-wrapper iframe{
+			height: 323px !important;
+		}
+
+		.playlist-has-title {
+	    height: 263px !important;
+		}
+
+		.playlist-title{
+			height: 60px;
+
+			h2{
+				padding-top: 11px;
+			}
+		}
+
+		.playlist-title-icon{
+			height: 60px;
+			line-height: 60px;
+		}
+	}
+}
+
+
+// - Ads Boxes ---------------------------------------------
+.stream-item-mag{
+	.container-wrapper{
+		@include breakpoint(max_min_sm){
+			padding: 5px 0 !important;
+			border-radius: 0;
+			border: 0;
+		}
+	}
+
+	&.stream-item.half-box{
+
+		.stream-item{
+			margin: 0;
+		}
+
+		.adsbygoogle{
+			width: 300px !important;
+			min-height: 250px !important;
+			margin: 0 auto;
+		}
+	}
+
+	@include breakpoint(max_min_md){
+		&.content-only{
+			margin: 15px 0;
+		}
+	}
+}
+
+
+// - Box Dark Skin---------------------------------------------
+.dark-skin .mag-box,
+.box-dark-skin{
+	&:not(.tabs-box){
+		background-color: transparent;
+	}
+
+	// Dark base color
+	.mag-box-filter-links a:not(:hover){
+		color: $dark-base-color;
+	}
+
+	.mag-box-filter-links .flexMenu-popup{
+		background-color: $darker-bg;
+		box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	}
+
+	// border-color
+	.slider-arrow-nav a{
+		border-color: $base-border-color-in-white;
+	}
+
+	// TimeLine box
+	&.timeline-box .posts-items{
+		&:before{
+			background: #404146;
+		}
+
+		&:last-of-type:after{
+			background-image: linear-gradient(to bottom, #404146 0%, $darker-bg 80%);
+		}
+	}
+
+	.year-month{
+		background: #404146;
+		color: #ffffff;
+	}
+
+	.day-month:before{
+		background: #404146;
+		border-color: $darker-bg;
+	}
+
+	// Overlay fullwidth mag box
+	@include breakpoint(sm){
+		&.full-overlay-title li:not(.no-post-thumb) .block-title-overlay{
+	    background: $darker-bg;
+		}
+	}
+
+	// Video Playlist box
+	.videos-block {
+		background: $dark-bg;
+	}
+
+	.video-playlist-nav-wrapper {
+		background: darken($darker-bg, 2%);
+	}
+
+	.playlist-title {
+		background: darken($darker-bg, 5%);
+		color: #ffffff;
+	}
+
+	.video-playlist-item,
+	.mag-box-filter-links .flexMenu-popup li:first-child{
+		border-color: rgba(255,255,255,0.05);
+	}
+
+	.video-playlist-item h2{
+		color: #ffffff;
+	}
+
+	.video-playlist-item:hover,
+	.is-playing {
+		background: darken($dark-bg, 2%);
+	}
+
+	.video-paused-icon,
+	.video-number,
+	.video-duration{
+		color: $dark-base-color;
+	}
+
+	// Slider Dots
+	.tie-slick-dots li:not(.slick-active) button{
+		background: rgba(255,255,255,0.2);
+	}
+}

@@ -1,0 +1,223 @@
+body[class*="tie-install-plugins"],
+body[class*="tie-theme-welcome"],
+body[class*="tie-system-status"],
+body[class*="tie-posts-switcher"],
+body[class*="tie-one-click-demo-import"]{
+
+	#theme_not_authorized{
+		max-width: 100%;
+
+		h3{
+			display: none;
+		}
+
+		.tie-notice-content{
+			padding-top: 15px;
+		}
+	}
+
+	#screen-meta-links{
+		display: none;
+	}
+}
+
+body[class*="tie-install-plugins"]{
+	.column-source,
+	.plugin-update.colspanchange,
+	.actions.bulkactions + p strong small{
+		display: none;
+	}
+
+	.plugin-required{
+		padding: 2px 5px;
+	  text-transform: uppercase;
+	  font-size: 80%;
+	  background: #ff574a;
+	  border-radius: 3px;
+	  color: #fff;
+	}
+}
+
+.tie-about-wrap{
+	max-width: 1250px;
+}
+
+#revoke-tie-token{
+  float: right;
+	font-weight: normal;
+	margin-top: -5px;
+}
+
+
+body[class*="tie-theme-welcome"]{
+
+	#theme-validation-info{
+
+		.tie-notice{
+			max-width: 1000px;
+		}
+	}
+
+	.under-the-hood{
+		margin-bottom: 1.33em;
+		padding: 2px;
+	}
+
+	.under-the-hood.three-col .col{
+		margin-bottom: 10px;
+
+		@include breakpoint_max(500px){
+			padding-bottom: 20px;
+		}
+	}
+
+	.button-primary.button-hero{
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 100%;
+	}
+}
+
+
+/* ---------------------------------------------
+ Head Section
+------------------------------------------------ */
+.wrap h2.tie-nav-tab-wrapper{
+	margin-top: 50px;
+	margin-bottom: 40px;
+}
+
+.tie-nav-tab-wrapper .nav-tab{
+	margin-top: 10px;
+}
+
+.tie-badge {
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	font-weight: 600;
+	margin: 0;
+	padding: 20px 0;
+	display: inline-block;
+	width: 140px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-rendering: optimizeLegibility;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.2);
+	box-shadow: 0 1px 3px rgba(0,0,0,.2);
+
+	background: linear-gradient(135deg, #6d2df3, #9836e6 );
+
+	img{
+		width: 90px;
+	  display: block;
+	  margin: 0 auto 10px;
+	  border: none;
+	}
+}
+
+@include breakpoint_max(500px){
+	.wrap h2.tie-nav-tab-wrapper{
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+
+	.tie-badge {
+		position: relative;
+		margin-top: 20px;
+	}
+}
+
+
+/* ---------------------------------------------
+ System Status
+------------------------------------------------ */
+table.tie-status-table {
+	margin-bottom: 30px;
+
+	tr {
+		&:nth-child( 2n ) {
+			th,
+			td {
+				background: #fcfcfc;
+			}
+		}
+	}
+
+	th {
+		font-weight: 700;
+		padding: 9px;
+	}
+
+	td:first-child {
+		width: 25%;
+	}
+
+
+	td {
+		padding: 9px;
+
+		mark {
+			background: transparent none;
+		}
+
+		mark.yes {
+			color: $success_color;
+		}
+
+		mark.no {
+			color: #999;
+		}
+
+		mark.error {
+			color: $danger_color;
+		}
+
+		ul {
+			margin: 0;
+		}
+	}
+}
+
+
+#tie-debug-report {
+	display: none;
+	margin: 10px 0;
+	padding: 0;
+	position: relative;
+
+	textarea {
+		font-family: monospace;
+		width: 100%;
+		margin: 0;
+		height: 300px;
+		padding: 20px;
+		resize: none;
+		font-size: 12px;
+		line-height: 20px;
+		outline: 0;
+	}
+}
+
+
+#follow-tielabs{
+	line-height: 0.9;
+
+	li{
+		display: inline-block;
+		padding: 0 2px;
+
+	}
+}
+
+
+#recommended-plugins{
+	td{
+		padding: 15px;
+	}
+
+	.plugin-name{
+		width: 220px;
+	}
+}

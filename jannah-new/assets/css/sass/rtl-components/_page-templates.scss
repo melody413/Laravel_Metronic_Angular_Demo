@@ -1,0 +1,56 @@
+// Page templates : masonary
+
+// Categories Layouts
+.has-sidebar .masonry-with-spaces #masonry-grid:not(.masonry-loaded) .post-element {
+  margin-left: 4%;
+  margin-right: 0;
+  float: right;
+}
+
+// Page Templates
+.masonry-with-spaces #masonry-grid{
+	// Fix the pre-js load issue
+	&:not(.masonry-loaded){
+		.has-sidebar &{
+			.post-element{
+				margin-left: 4%;
+				margin-right: 0;
+				float: right;
+
+				&:nth-child(2n+2){
+					margin-right: 0;
+					margin-left: 0;
+				}
+			}
+		}
+
+		.full-width &{
+			.post-element{
+				margin-left: 2%;
+				margin-right: 0;
+				float: right;
+			}
+
+			@include breakpoint(lg){
+				.is-percent-width &{
+					.post-element{
+						&:nth-child(3n+3){
+							margin-left: 2%;
+							margin-right: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@include breakpoint(xs){
+	.full-width,
+	.one-column-no-sidebar{
+		.entry-header-outer .author-info{
+			text-align: right;
+		}
+	}
+}

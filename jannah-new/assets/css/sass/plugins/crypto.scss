@@ -1,0 +1,193 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+
+// Cryptocurrency All-in-One Plugin
+$brand-color:  $dark-bg;
+$bright: color-contrast($brand-color);
+
+// remove the cridet link below of items.
+.prices-table ~ a,
+#btc_calc ~ a{
+  display: none;
+}
+
+// Prices Table
+.prices-table{
+  border: 0;
+  background: #f5f5f7;
+  padding: 5px 10px;
+  transition: box-shadow 0.3s;
+  border-radius: 2px;
+
+  tr:nth-child(even){
+    background: rgba(255,255,255,0.38);
+  }
+
+  td{
+    border-right: 0;
+    padding: 10px;
+    border-color: #ebebeb;
+
+    img{
+      vertical-align: sub;
+      margin-right: 3px;
+    }
+  }
+
+  td + td {
+    text-align: right;
+    font-weight: bold;
+    color: #000;
+  }
+}
+
+
+// Caclulator
+#btc_calc {
+  font-size: 20px;
+  position: relative;
+  display: flex;
+
+  input {
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 35px;
+    width: 45%;
+    padding: 5px 85px 5px 10px;
+    border: 0;
+    box-shadow: 0 0 0 1px $base-border-color;
+    transition: box-shadow 0.3s;
+
+    &:focus{
+      box-shadow: 0 0 0 3px $brand-color;
+
+      .dark-skin &{
+        box-shadow: 0 0 0 3px #555;
+      }
+    }
+
+    .dark-skin &{
+      color: #000;
+    }
+  }
+
+  .bct-currency-1,
+  .bct-equal-sign{
+    display: inline-block;
+    text-align: center;
+  }
+
+  .bct-equal-sign{
+    width: 10%;
+    font-size: 50px;
+    line-height: 40px;
+    height: 47px;
+    color: $brand-color;
+    vertical-align: top;
+
+    .dark-skin &{
+      color: #fff;
+    }
+  }
+
+  .bct-currency-1,
+  select{
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 0 5px 5px 0;
+    line-height: 37px;
+    height: 47px;
+    width: 75px;
+    background: $brand-color;
+    color: $bright;
+    margin-left: -75px;
+    text-transform: uppercase;
+    position: relative;
+
+    .dark-skin &{
+      background: #555;
+    }
+  }
+
+  select {
+    border: 0;
+    appearance: none;
+  }
+
+  &:after{
+    content:"";
+    position: absolute;
+    box-sizing: border-box;
+    line-height: 37px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    border-color: $bright transparent transparent transparent;
+    top: 21px;
+    right: 8px;
+  }
+
+  @media screen and (min-width: $screen-sm) and (max-width: $screen-md),
+  screen and (max-width: 650px) {
+    flex-shrink: 0;
+    flex-flow: wrap;
+
+    input,
+    .bct-equal-sign{
+      width: 100%;
+    }
+
+    &:after{
+      bottom: 21px;
+      top: auto;
+    }
+  }
+
+
+  // in RTL -----------------------
+  .rtl &{
+    padding: 0 3px 0 0;
+
+    input {
+      padding: 5px 10px 5px 85px;
+    }
+
+    .bct-currency-1,
+    select{
+      border-radius: 5px 0 0 5px;
+      margin-left: 0;
+      margin-right: -75px;
+    }
+
+    select {
+      margin-left: 0;
+      margin-right: -79px;
+    }
+
+    &:after{
+      right: auto;
+      left: 14px;
+    }
+  }
+}
+
+
+//  Ultimate Crypto Plugin
+.dark-skin .wpuc-coin-list-row{
+ 	border-color: $base-border-color-in-white;
+}
+
+body:not(.rtl) #tie-wrapper .wpuc-coin-grid{
+ 	margin: 0 -3% -3% 0;
+}
+
+.widget.text-html .wpuc-coin-list {
+  max-height: 500px;
+  overflow: auto;
+}
+

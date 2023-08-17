@@ -1,0 +1,59 @@
+//  * Third Party Components :: FontAwesome - TieFont - Custom Scroll
+//  * Why Loading third-party-components in IE less than 10?
+//  * The reason is: Stylesheet Limits in Internet Explorer
+//  * Description: outlines the maximum number of stylesheets and rules supported by
+//    Internet Explorer 6 to 9. A sheet may contain up to 4095 rules.
+//  * So that some of stylesheet content included here again, or you can
+//    say we divide the stylesheet into two files.
+
+@import "../utils/mixins";
+@import "../utils/variables";
+
+@import "../components/footer";
+@import "../components/dark-skin";
+
+// IE Style
+.mag-box-filter-links {
+  max-width: 400px;
+}
+
+@media (max-width: 768px) {
+  .mag-box-filter-links {
+    max-width: 250px;
+  }
+}
+
+.half-box .mag-box-filter-links {
+  max-width: 100px;
+}
+
+@media (max-width: 480px) {
+  .mag-box-filter-links {
+    max-width: 100px;
+  }
+}
+
+.thumb-overlay:after,
+.first-post-gradient li:first-child .post-thumb:after,
+.scroll-2-box .post-thumb:after{
+  background: transparent;
+  background: rgba(35, 38, 42, 0.2);
+  background-image: linear-gradient(to bottom, transparent, #131517); // IE fix
+  height: 100%;
+}
+
+.post-rating,
+.post-large-rate,
+.post-small-rate {
+  word-wrap: normal;
+}
+
+textarea,
+input,
+select {
+  line-height: normal !important;
+}
+
+.pages-numbers .first-last-pages {
+  min-width: 100px;
+}

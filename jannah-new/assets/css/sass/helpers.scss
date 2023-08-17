@@ -1,0 +1,124 @@
+// MIXINS & GLOBAL VARIALS ALL OVER THE THEME & CSS3 MIXINS
+@import "utils/mixins";
+@import "utils/variables";
+
+
+//Remove/Close buttons -----------------------------------------
+// Element Story :)
+// as the Woocommerce uses .remove class for remove buttons, we will use the same class
+// all over the theme for remove/close buttons
+
+a.remove{
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	speak: never;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	width: 20px;
+	height: 20px;
+	display: block;
+	line-height: 20px;
+	text-align: center;
+	font-size: 15px;
+
+	&:before{
+		content: "\e117";
+		font-family: 'tiefonticon';
+		color: $danger_color;
+		transition: color 0.15s;
+	}
+
+	&:hover:before{
+		color: darken($danger_color, 15%);
+	}
+
+	&.big-btn{
+		width: 25px;
+		height: 25px;
+		line-height: 25px;
+		font-size: 22px;
+	}
+
+	&.light-btn:not(:hover){
+		&:before{
+			color: #ffffff;
+		}
+	}
+
+	// side aside
+	.side-aside &{
+		z-index: 1;
+		top: 15px;
+		@include center(x);
+
+		.admin-bar &{
+			top: 47px;
+		}
+
+		.admin-bar.is-mobile &{
+			top: 61px;
+		}
+	}
+
+	// popup module [login & search]
+	.tie-popup &{
+		transition: 0.3s;
+		transform: scale(0.2);
+		opacity: 0;
+		top: 15px;
+		right: 15px;
+		z-index: 1;
+
+		.tie-popup-is-opend &{
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+}
+
+// Sticky Sidebars
+.theiaStickySidebar:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.side-aside,
+.has-custom-scroll{
+	overflow-x: hidden;
+	scrollbar-width: thin;
+
+	&::-webkit-scrollbar {
+		width: 5px;
+	}
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 20px;
+		background:rgba( 0,0,0, 0.2);
+
+		.dark-skin &{
+			background:rgba( 0,0,0, 1);
+		}
+	}
+}
+
+#tie-body #foxpush_blocked_box{
+	display: none !important;
+}
+
+// PopUps ------------------------------------------------
+@import "components/_popup";
+
+// TieFontIcon -------------------------------------------------
+@import "vendors/tiefonticon";
+
+// Woocommerce - buddypress - bbpress notices ------------------
+@import "vendors/wp-bp-bb-notices";
+
+// TirpAdvisor -------------------------------------------------
+@import "vendors/tripadvisor";

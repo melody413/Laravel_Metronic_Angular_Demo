@@ -1,0 +1,3 @@
+div#responsive_nav_search_block ul.the_search li > .bootstrap-select > button {
+    display: none;
+}

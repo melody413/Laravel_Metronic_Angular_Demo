@@ -1,0 +1,78 @@
+
+/// Mixin to manage responsive breakpoints ( Max ).
+$breakpoints: (
+        's': 320px,
+        'm': 1024px,
+        'l': 1170px
+) !default;
+
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+    // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+// Medium Screens That Below 15 Inchs
+$md_screen: "(min-width: 1024px) and (max-width: 1366px)";
+
+// Vendor Prefix
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
+
+// Margin and padding
+@mixin margin($values) {
+  @each $var in $values {
+    margin: #{$var};
+  }
+}
+@mixin padding($values) {
+  @each $var in $values {
+    padding: #{$var};
+  }
+}
+
+// flex basis
+@mixin flex_basis($values) {
+  @each $var in $values {
+    flex-basis: #{$var};
+  }
+}
+
+// Fancy anchor tag
+@mixin anchor($color, $position, $size, $border) {
+  background-image: linear-gradient(to right, $color 0%, $color 100%);
+  background-position: 0 $position; // change the second value to adjust how far from the top the underline should be
+  background-size: $size $border; // change the second value to the desired height of the underline
+  @include prefix(transition, all .2s, webkit moz o ms);
+}
+@mixin anchor_hover($color, $position, $border) {
+  background-image: linear-gradient(to right, $color 0%, $color 100%);
+  background-repeat: repeat-x; // make it horizontal
+  background-position: 0 $position; // change the second value to adjust how far from the top the underline should be
+  background-size: 100% $border; // change the second value to the desired height of the underline
+}
+
+// Malisos
+
+// Transistion
+%transition {
+  transition: all 0.2s ease-in-out;
+}

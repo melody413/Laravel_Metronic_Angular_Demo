@@ -1,0 +1,5485 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VERSION\n"
+"POT-Creation-Date: 2020-09-02 06:26+0000\n"
+"PO-Revision-Date: 2020-09-02 09:31+0300\n"
+"Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.3\n"
+
+msgid "- Select a Taxonomy -"
+msgstr "- انتخاب طبقه بندی -"
+
+msgid "- Select a Term -"
+msgstr "- انتخاب واژه -"
+
+msgid "Alphabetically"
+msgstr "براساس حروف الفبا"
+
+msgid "Classic Small"
+msgstr "کلاسیک کوچک"
+
+msgid "Custom Read More Button text"
+msgstr "متن دلخواه برای کلید \"مطالعۀ بیشتر\""
+
+msgid "Leave it empty to use the default text."
+msgstr "برای استفاده از متن پیش‌فرض، این فیلد را خالی بگذارید."
+
+msgid "Note: This option doesn't work with the AJAX pagination."
+msgstr "توجه: این گزینه با صفحه‌بندی AJAX کار نمی‌کند."
+
+msgid "Footer Description"
+msgstr "توضیحات فوتر"
+
+msgid "Footer Description Title"
+msgstr "عنوان توضیحات فوتر"
+
+msgid "This Description will appear at the end of the category page below the posts list."
+msgstr "این توضیحات در انتهای صفحۀ دسته‌بندی زیر لیست پست‌ها نمایش داده می‌شود."
+
+msgid "Disable Gradient Overlay"
+msgstr "غیرفعال سازی روکش گرادیانت"
+
+msgid "Logo Inverted Image"
+msgstr "تصویر معکوس شده لوگو"
+
+msgid "Used if users are allowed to switch between Light and Dark skins."
+msgstr "اگر کاربران مجاز به تغییر بین پوسته های روشن و تاریک باشند ، استفاده می شود."
+
+msgid "Logo Inverted Image (Retina Version @2x)"
+msgstr "تصویر معکوس لوگو (Retina Version @2x)"
+
+msgid "Logo width"
+msgstr "عرض لوگو"
+
+msgid "Logo height"
+msgstr "ارتفاع لوگو"
+
+msgid "In the Logo Image type this will be used as the ALT text."
+msgstr "در قسمت نوع تصویر لوگو، از این به عنوان متن ALT استفاده می‌شود."
+
+msgid "Subtitle"
+msgstr "زیرعنوان"
+
+msgid "Hide page elemnts"
+msgstr "مخفی کردن المنت‌های صفحه"
+
+msgid "Hide the featured image"
+msgstr "مخفی کردن تصویر ویژه"
+
+msgid "Display Breadcrumbs"
+msgstr "نمایش نقشۀ راه"
+
+msgid "You need to set the Google Map API Key in the theme options page > Integrations."
+msgstr "شما باید کلید API نقشۀ گوگل را در تنظیمات قالب در قسمت یکپارچه‌سازی‌ تنظیم کنید."
+
+msgid "Disable All Ads"
+msgstr "غیر فعال سازی همه ی تبلیغات"
+
+msgid "Above Post Ad"
+msgstr "تبلیغات بالای پست"
+
+msgid "Below Post Ad"
+msgstr "تبلیغات پایین پست"
+
+msgid "Above Content Ad"
+msgstr "تبلیغات بخش بالایی محتوا"
+
+msgid "Below Content Ad"
+msgstr "تبلیغات بخش زیرین محتوا"
+
+msgid "Select Image"
+msgstr "انتخاب عکس"
+
+msgid "Select another image"
+msgstr "تصویر دیگری انتخاب نمایید"
+
+msgid "Letter Spacing"
+msgstr "فاصلۀ بین حروف"
+
+msgid "View affected templates"
+msgstr "مشاهدۀ الگوهایی که تحت تاثیر قرار گرفته‌‎اند"
+
+msgid "Your child theme contains outdated copies of some template files. These files may need updating to ensure they are compatible with the current version of the theme."
+msgstr "پوستۀ کودک شما حاوی کپی‌های منسوخ شدۀ برخی از پرونده‌های قالب است. این فایل‌ها برای اطمینان از سازگاری با نسخۀ فعلی پوسته، ممکن است  نیاز به بروزرسانی داشته باشند."
+
+msgid "Child Theme Templates"
+msgstr "الگوهای پوسته کودک"
+
+msgid "Overrides"
+msgstr "منع کردن"
+
+#, php-format
+msgid "%1$s version %2$s is out of date. The core version is %3$s"
+msgstr "%1$s نسخه  %2$s منسوخ شده است  نسخه اصلی%3$s است"
+
+msgid "Renew"
+msgstr "تجدید"
+
+msgid "404 Page"
+msgstr "صفحه 404"
+
+msgid "Integrations"
+msgstr "یکپارچه‌سازی‌ها"
+
+msgid "Images"
+msgstr "تصاویر"
+
+msgid "White Label"
+msgstr "برچسب سفید"
+
+#, php-format
+msgid "Proudly Hosted by %s"
+msgstr "با افتخار توسط %s میزبانی شده"
+
+msgid "Section Layout"
+msgstr "طرح بندی بخش"
+
+msgid "Stretch Section"
+msgstr "بخش را بکشید"
+
+msgid "Stretch the section to the full width of the page, supported if the site layout is Full-Width."
+msgstr "با کشیدن بخش را تمام عرض  کنید اگر طرح سایت تمام صفحه است پشتیبانی میشود"
+
+msgid "Full Width Background Section"
+msgstr "بخش پس زمینه تمام عرض"
+
+msgid "Posts Source"
+msgstr "منبع پست ها"
+
+msgid "AJAX"
+msgstr "ای جکس"
+
+msgid "Next/Previous Buttons"
+msgstr "دکمه های بعدی / قبلی"
+
+msgid "Next/Previous Arrows Beside Title"
+msgstr "فلش های بعدی / قبلی  در کنار عنوان"
+
+msgid "You need to set the YouTube API Key in the theme options page > Integrations."
+msgstr "شما باید کلید API یوتیوب را در صفحۀ تنظیمات قالب > یکپارچه‌سازی تنظیم نمایید"
+
+msgid "Secondary Color"
+msgstr "رنگ ثانویه"
+
+msgid "Featured Image Position"
+msgstr "موقعیت تصویر ویژه"
+
+msgid "Left Top"
+msgstr "سمت چپ بالا"
+
+msgid "Left Center"
+msgstr "چپ مرکز"
+
+msgid "Left Bottom"
+msgstr " چپ پایین"
+
+msgid "Right Top"
+msgstr "راست بالا"
+
+msgid "Right Center"
+msgstr "راست مرکز"
+
+msgid "Right Bottom"
+msgstr "راست پایین"
+
+msgid "Center Top"
+msgstr "مرکز بالا"
+
+msgid "Center Center"
+msgstr "مرکز مرکز"
+
+msgid "Center Bottom"
+msgstr "مرکز پایین"
+
+msgid "The content in the editor above will be ignored."
+msgstr "محتوای موجود در ویرایشگر فوق نادیده گرفته می شود."
+
+msgid "Enable the TieLabs Builder"
+msgstr "فعال کردن صفحه ساز TieLabs"
+
+msgid "Disable the TieLabs Builder"
+msgstr "غیر فعال کردن صفحه ساز TieLabs"
+
+msgid "Beta"
+msgstr "بتا"
+
+msgid "Skype"
+msgstr "اسکایپ"
+
+msgid "Messenger"
+msgstr "پیام رسان"
+
+msgid "Line"
+msgstr "لاین"
+
+msgid "AMP Menu"
+msgstr "منوی AMP"
+
+msgid "Menu Position"
+msgstr "موقعیت منو"
+
+msgid "Author name"
+msgstr "نام نویسنده"
+
+msgid "Published date"
+msgstr "تاریخ انتشار"
+
+msgid "Below Header"
+msgstr "پایین سربرگ"
+
+msgid "Above Footer"
+msgstr "بالای پاورقی"
+
+msgid "Rounded"
+msgstr "گرد"
+
+msgid "Sliders Settings"
+msgstr "تنظیمات اسلایدر"
+
+msgid "Default Featured Image Position"
+msgstr "موقعیت پیش فرض تصویر شاخص"
+
+msgid "Welcome back!"
+msgstr "مجددا خوش آمدید!"
+
+msgid "News"
+msgstr "اخبار"
+
+msgid "Below Comments Ad"
+msgstr "تبلیغات زیر نظرات"
+
+msgid "Category Pages: Below the slider"
+msgstr "صفحات دسته: زیر اسلایدر"
+
+msgid "Category Pages: Above the title"
+msgstr "صفحات دسته: بالای عنوان"
+
+msgid "Category Pages: Below the title"
+msgstr "صفحات دسته بندی: زیر عنوان"
+
+msgid "Category Pages: Below Posts"
+msgstr "صفحات دسته: زیر پست ها"
+
+msgid "Category Pages: Below Pagination"
+msgstr "صفحات دسته بندی: زیر صفحه بندی"
+
+msgid "Ad Image Width"
+msgstr "عرض تصویر تبلیغات"
+
+msgid "Recommended to reduce Cumulative Layout Shift (CLS)"
+msgstr "توصیه میشود برای کاهش (CLS)"
+
+msgid "Ad Image Height"
+msgstr "ارتفاع تصویر تبلیغ"
+
+#, php-format
+msgid "You need to install the %s plugin to use this feature."
+msgstr "برای استفاده از این ویژگی باید افزونه %sرا نصب کنید "
+
+msgid "Follow Us Button style"
+msgstr "استایل دکمه ما را دنبال کنید"
+
+msgid "Body Code"
+msgstr "کد بدنه"
+
+msgid "Will add after opening the &lt;body&gt; tag."
+msgstr "بعد از باز کردن تگ &lt;body&gt; اضافه خواهد شد."
+
+msgid "Stretch Header"
+msgstr "کشیدن سربرگ"
+
+msgid "Full-Width Logo"
+msgstr "لوگو تمام عرض"
+
+msgid "​Secondary Nav Settings"
+msgstr "تنظیمات ناوبری ثانویه"
+
+msgid "​Secondary Nav Components"
+msgstr "اجزای ناوبری ثانوبه"
+
+msgid "Log In text"
+msgstr "متن ورود"
+
+msgid "Text beside the icon, Leave this empty to disable."
+msgstr "نوشته کنار آیکون , این را خالی بگذارید تا غیرفعال شود."
+
+msgid "Light/Dark Skin Switcher"
+msgstr "سوییچر پوسته روشن / تیره"
+
+msgid "You need to set the Weather API Key in the theme options page > Integrations."
+msgstr "شما باید کلید API سایت Weather را در صفحۀ تنظیمات قالب > یکپارچه‌سازی تنظیم نمایید."
+
+msgid "Images Settings"
+msgstr "تنظیمات تصاویر"
+
+msgid "GIF Featured Image"
+msgstr "تصویر شاخصGIF"
+
+msgid "Default Featured Image"
+msgstr "تصویر شاخص پیش فرض"
+
+msgid "This featured image will show up if no featured image is set."
+msgstr "اگر تصویر شاخصی  تنظیم نشده باشد  این تصویر شاخص نمایش داده خواهد شد"
+
+msgid "The Default Image"
+msgstr "تصویر پیش فرض"
+
+msgid "Verify your license to unlock this section."
+msgstr "برای بازکردن قفل این بخش  لایسنس خود را  تایید نمایید"
+
+msgid "The Access Token is expired, click the button below to refresh it."
+msgstr "Access Token منقضی شده است , روی  دکمه زیر کلیک نمایید تا رفرش شود"
+
+msgid "Instagram Account"
+msgstr "حساب کاربری اینستاگرام"
+
+msgid "Connect your Instagram account"
+msgstr "حساب کاربری اینستاگرام خود را متصل نمایید"
+
+msgid "Connect another account"
+msgstr "حساب کاربری دیگری را متصل نمایید"
+
+msgid "Refresh Access Token"
+msgstr "رفرش Access Token"
+
+msgid "Google Maps"
+msgstr "نقشه های گوگل"
+
+msgid "Google Maps API Key"
+msgstr "کلید API نقشۀ گوگل"
+
+msgid "Used for the Map post format."
+msgstr "برای پست هایی با فرمت نقشه استفاده میشود"
+
+msgid "YouTube API Key"
+msgstr "کلید API یوتیوب"
+
+msgid "Used for the Videos Playlist Block."
+msgstr "برای بلاک لیست پخش ویدیوها استفاده می شود."
+
+msgid "OpenWeather API Key"
+msgstr "کلید API سایت OpenWeather"
+
+msgid "Required for Facebook share button in the AMP pages and Select and Share module."
+msgstr "برای دکمه اشتراک فیسبوک در صفحات AMP  و ماژول انتخاب و اشتراک گذاری ضروریست"
+
+msgid "Sidebar Column Width"
+msgstr "عرض ستون سایدبار"
+
+msgid "Controls the sidebar column width in %."
+msgstr "عرض ستون سایدبار را تنظیم کنید%."
+
+msgid "Logo Position"
+msgstr "موقعیت لوگو"
+
+msgid "Logo Width"
+msgstr "عرض لوگو"
+
+msgid "Sticky Header behavior"
+msgstr "رفتار سربرگ چسبان"
+
+msgid "Mobile Header Buttons"
+msgstr "دکمه های سربرگ موبایل"
+
+msgid "Display the buttons below the logo"
+msgstr "نمایش کلیدهای زیر لوگو"
+
+msgid "Menu Button"
+msgstr "کلیدهای منو"
+
+#, php-format
+msgid "Icon %s"
+msgstr "آیکون %s"
+
+msgid "Search Position"
+msgstr "موقعیت جستجو"
+
+msgid "Sidebars on Mobile"
+msgstr "سایدبارها در تلفن همراه"
+
+msgid "Display sidebars before the content"
+msgstr "سایدبارها را قبل از محتوا نمایش دهید"
+
+msgid "Hide Read More Buttons"
+msgstr "دکمه های بیشتر بخوانید  را مخفی کنید"
+
+msgid "Hide Inline Related posts"
+msgstr "پنهان کردن پست های مرتبط درون خطی"
+
+msgid "404 Page Settings"
+msgstr "تنظیمات صفحه 404"
+
+msgid "Image above the main title"
+msgstr "تصویر بالای عنوان اصلی"
+
+msgid "Enable Search"
+msgstr "فعال کردن جستجو"
+
+msgid "Enable Menu"
+msgstr "فعال کردن منو"
+
+msgid "You can set the menu in the Menus page."
+msgstr "شما می‌توانید منو را در صفحۀ منوها تنظیم کنید."
+
+msgid "Texts"
+msgstr "متن‌ها"
+
+msgid "You can change the texts from the Translations section."
+msgstr "شما می توانید متن ها را از بخش ترجمه ها تغییر دهید."
+
+msgid "This feature can not be used while the Auto Load Posts option is active."
+msgstr "در حالی که گزینه Auto Load Posts فعال است نمی توان از این ویژگی استفاده کرد."
+
+msgid "Meta Description Tag"
+msgstr "برچسب توضیحات متا"
+
+msgid "Compact Comments Area"
+msgstr "فشرده سازی قسمت دیدگاه ها"
+
+msgid "Compact Comments Custom Title"
+msgstr "عنوان سفارشی دیدگاه های فشرده شده"
+
+msgid "Tags List Layout"
+msgstr "طرح بندی لیست برچسب ها"
+
+msgid "Modern"
+msgstr "مدرن"
+
+msgid "Post meta area Layout"
+msgstr "طرح بخش متای پست"
+
+msgid "Column"
+msgstr "ستون"
+
+msgid "Last Updated"
+msgstr "اخرین به روز رسانی"
+
+msgid "Inline Related Posts"
+msgstr "پست های مرتبط درون خطی"
+
+msgid "Number of paragraphs before"
+msgstr "تعداد پاراگراف های قبل"
+
+msgid "Auto Load Posts"
+msgstr "بارگیری خودکار پست ها"
+
+msgid "Buttons Position"
+msgstr "موقعیت دکمه ها"
+
+msgid "Inverted"
+msgstr "معکوس"
+
+msgid "Sticky Share Buttons"
+msgstr "دکمه های اشتراک گذاری چسبان"
+
+msgid "Breakpoint (in px)"
+msgstr "نقطه وقفه (in px)"
+
+#, php-format
+msgid "Hide the buttons if the device/window width size is lower than this, default %s"
+msgstr "اگر اندازه عرض دستگاه /پنجره از این کمتر است ، دکمه ها را پنهان کنید ، به طور پیش فرض %s"
+
+msgid "Image Icon"
+msgstr "آیکون تصویر"
+
+msgid "Widgets head color"
+msgstr "رنگ سر ابزارک ها"
+
+msgid "Widgets Title text color"
+msgstr "رنگ عنوان نوشته ابزارک ها"
+
+msgid "Mobile Header Background Color"
+msgstr "رنگ پس زمینه سربرگ تلفن همراه"
+
+msgid "Mobile Header Background Color 2"
+msgstr "رنگ  پس زمینه سربرگ تلفن همراه2"
+
+msgid "Mobile Header Background Image"
+msgstr "تصویر پس زمینه سربرگ موبایل"
+
+msgid "Mobile Header Icons color"
+msgstr "رنگ آیکون های سربرگ موبایل"
+
+msgid "Numbers"
+msgstr "اعداد"
+
+msgid "General Secondary Texts"
+msgstr "متون ثانویه عمومی"
+
+msgid "Post title in widgets"
+msgstr "ارسال عنوان در ابزارک ها"
+
+msgid "Page Builder"
+msgstr "صفحه ساز"
+
+msgid "Sections Titles: Default & Centered Styles"
+msgstr "بخش عناوین :سبک های  وسط چین  و پیش فرض"
+
+msgid "Sections Titles: Big Style"
+msgstr "عناوین بخش ها: سبک بزرگ"
+
+msgid "Archive page"
+msgstr "صفحه بایگانی"
+
+msgid "Main Title"
+msgstr "عنوان اصلی"
+
+msgid "Secondary Title"
+msgstr "عنوان ثانویه"
+
+msgid "Comment content"
+msgstr "محتوای  دیدگاه"
+
+msgid "For further customization on theme name, slug, thumbnail and description that appears in Appearance > Themes, please use the child theme."
+msgstr "برای سفارشی سازی بیشتر در مورد نام پوسته  ، اسلاگ ، تصویر بند انگشتی و توضیحاتی که در ظاهر قالب نمایان میشوند >لطفاً از پوسته کودک استفاده کنید."
+
+msgid "Theme Name"
+msgstr "نام پوسته"
+
+#, php-format
+msgid "Replace %s text in the entire admin pages."
+msgstr "جایگزن کردن %s متن در تمام قسمت‌های ادمین."
+
+msgid "Theme Options Page Logo"
+msgstr "لوگوی صفحۀ تنظیمات قالب"
+
+msgid "Choose an icon and paste the class name."
+msgstr "یک آیکون انتخاب کرده و نام کلاس را وارد کنید"
+
+msgid "Disable Help Links"
+msgstr "غیرفعال کردن لینک‌های راهنما"
+
+msgid "Enable help links from control panel and meta options."
+msgstr "لینک‌های راهنما را از قسمت پنل تنظیمات و تنظیمات متا فعال کنید."
+
+msgid "Disable the Knowledge Base Beacon"
+msgstr "غیرفعال کردن نمایش مقاله‌های آموزشی"
+
+msgid "Only admins can manage the advanced settings in the post edit page"
+msgstr "تنها ادمین‌ها توانایی مدیریت تنظیمات پیشرفته در صفحۀ ویرایش پست را دارند"
+
+msgid "WordPress Login page"
+msgstr "صفحه ورود به وردپرس"
+
+msgid "Previous"
+msgstr "قبل"
+
+msgid "Next"
+msgstr "بعد"
+
+msgid "Failed to fetch your current loction! try again later!"
+msgstr "خطایی در دریافت موقعیت مکانی فعلی شما به وقوع پیوست! لطفا مجدد تلاش کنید!"
+
+msgid "Verify your license to use this feature."
+msgstr "لایسنس خود را برای استفاده از این ویژگی تایید کنید."
+
+msgid "Edit menu item"
+msgstr "ویرایش آیتم منو"
+
+msgid "Edit"
+msgstr "ویرایش"
+
+msgid "Open link in a new tab"
+msgstr "باز شدن لینک در پنجرۀ جدید"
+
+msgid "You need to set the Location."
+msgstr "باید موقعیت مکانی را تنظیم کنید."
+
+#, php-format
+msgid "Photo of %s"
+msgstr "تصویر %s"
+
+msgid "Steam"
+msgstr "استیم"
+
+msgid "and"
+msgstr "و"
+
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr "و"
+
+msgid "Last Updated:"
+msgstr "آخرین به روز رسانی:"
+
+msgid "Blocks and Archives"
+msgstr "بلوک‌ها و آرشیوها"
+
+msgid "Login Section"
+msgstr "بخش ورود به حساب کاربری"
+
+msgid "Widgets"
+msgstr "ویجت‌ها"
+
+msgid "Checkout"
+msgstr "تسویه حساب"
+
+msgid "Switch skin"
+msgstr "تغییر پوسته"
+
+#, php-format
+msgid "Show %s comments"
+msgstr "نمایش %s دیدگاه"
+
+msgid "Show one comment"
+msgstr "نمایش دیدگاه"
+
+msgid "Leave a Reply"
+msgstr "نظر خود را ارسال کنید"
+
+msgid "Follow on Twitter"
+msgstr "مارا در Twitter دنبال کنید"
+
+msgid "Send an email"
+msgstr "ارسال ایمیل"
+
+#, php-format
+msgid "%1$s x %2$s."
+msgstr "%1$s در %2$s."
+
+msgid "Subtotal:"
+msgstr "جمع سبد خرید:"
+
+msgid "Verify your license to unlock bundeled plugins"
+msgstr "لایسنس خود را برای استفاده از پلاگین‌های باندل به همراه قالب، تایید کنید."
+
+#, php-format
+msgid "TIE_TGMPA v%s"
+msgstr "TIE_TGMPA v%s"
+
+msgid "Error: Check the widget settings!"
+msgstr "خطا: تنظیمات ویجت را بررسی کنید!"
+
+msgid "Account Name"
+msgstr "نام حساب کاربری"
+
+msgid "Avatar Image"
+msgstr "تصویر آواتار"
+
+msgid "Bio"
+msgstr "بیوگرافی"
+
+msgid "Next/Previous Arrows"
+msgstr "فلش‌های قبل/بعد"
+
+msgid "Pagination:"
+msgstr "صفحه بندی"
+
+msgid "Enter the required account info."
+msgstr "لطفا اطلاعات مورد نیاز برای حساب کاربری را وارد کنید."
+
+msgid "Follow me"
+msgstr "من را دنبال کنید"
+
+msgid "Avatar size (px)"
+msgstr "اندازه آواتار (به پیکسل)"
+
+msgid "Circle"
+msgstr "دایره"
+
+msgid "Show the total followers number?"
+msgstr "تعداد دنبال کنندگان نمایش داده شود؟"
+
+msgid "Text before the total number"
+msgstr "متن نمایش داده شده پیش از عدد دنبال کننده‌ها"
+
+msgid "Text after the total number"
+msgstr "متن نمایش داده شده پس از عدد دنبال کننده‌ها"
+
+msgid "Position"
+msgstr "موقعیت"
+
+msgid "Before the counters."
+msgstr "پیش از شمارنده‌ها"
+
+msgid "After the counters."
+msgstr "پس از شمارنده‌ها"
+
+msgid "Use icons"
+msgstr "استفاده از آیکون‌ها"
+
+msgid "Visitor's Location?"
+msgstr "موقعیت مکانی بازدیدکننده نمایش داده شود؟"
+
+msgid "Allow visitors to view the weather in their location"
+msgstr "اجازه دادن به بازدیدکننده‌ها برای دیدن آب و هوا براساس موقعیت مکانی خودشان"
+
+msgid "Style and Layout"
+msgstr "چیدمان و طرح بندی"
+
+msgid "​Secondary Nav Menu"
+msgstr "منوی ناوبری ثانویه"
+
+msgid "Error: Check the Instagarm section settings."
+msgstr "خطا: تنظیمات بخش اینستاگرام را بررسی کنید."
+
+msgid "Follow us"
+msgstr "ما را دنبال کنید"
+
+msgid "YouTube API ERROR, Go to the Youtube API Console on Google Cloud and remove any restrictions on the API key, Then edit the current page and click on the Update/Save button to re-connect to the YouTube servers to load the videos."
+msgstr "خطای کلید API یوتیوب، به کنسول API یوتیوب در کلاود گوگل بروید و تمامی محدودیت‌های کلید API را حذف کنید، سپس صفحۀ فعلی را ویرایش کرده و کلید بروزرسانی/ذخیره را بزنید تا مجدد به سرورهای یوتیوب وصل شوید و ویدیوها بارگزاری شوند."
+
+msgid "404 :("
+msgstr "خطای 404، صفحه مورد نظر یافت نشد:("
+
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "متاسفیم! صفحه&rsquo;یافت نشد."
+
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "به نظر می رسه&rsquo; موضوعی که شما به دنبال آن هستید&rsquo; پیدا نمی شود. شاید جستجو کمک کند."
+
+#, php-format
+msgid "%s Comments"
+msgstr "‫%s دیدگاه ها"
+
+msgid "One Comment"
+msgstr "یک دیدگاه"
+
+msgid "- Select a Slider -"
+msgstr "- یک اسلایدر انتخاب کنید-"
+
+msgid "- Select a Category -"
+msgstr "-دسته بندی را انتخاب کنید-"
+
+msgid "- Select a Menu -"
+msgstr "-فهرست انتخاب کنید-"
+
+msgid "Default"
+msgstr "پیش فرض"
+
+msgid "An error has occured. Please reload the page and try again."
+msgstr "خطایی رخ داده است. لطفاً صفحه را مجددا بارگذاری کنید و دوباره تلاش کنید."
+
+msgid "TieLabs Page Builder widgets areas"
+msgstr "ناحیه ابزارک های صفحه ساز تای لبز"
+
+msgid "Manage Widgets"
+msgstr "مدیریت ابزارک ها"
+
+msgid "Done"
+msgstr "انجام شد"
+
+msgid "Available Widgets"
+msgstr "ابزارک های در دسترس"
+
+msgid "Deactivate"
+msgstr "غیرفعال کن"
+
+msgid "Drag widgets from here to a sidebar on the right to activate them. Drag widgets back here to deactivate them and delete their settings."
+msgstr "ابزارک ها را از اینجا به سمت نوار کناری سمت راست برای فعال کردن آنها بکشید. ابزارک ها را به اینجا برگردانید و آنها را غیرفعال کنید و تنظیمات آنها را حذف کنید."
+
+msgid "Section Widgets Area"
+msgstr "بخش ابزارک ها"
+
+msgid "Cancel"
+msgstr "لغو کن"
+
+msgid "Add Widget"
+msgstr "افزودن ابزارک"
+
+msgid "All Demos Support RTL."
+msgstr "تمام دمو ها از راست چین پشتیبانی می کنند."
+
+msgid "Tip:"
+msgstr "نکته:"
+
+msgid "You need to uninstall the imported demo before importing another one."
+msgstr "قبل از بارگذاری دموی جدید دموی قدیمی را باید حذف کنید"
+
+msgid "Uninstall the Demo Data"
+msgstr "اطلاعات دمو را حذف کنید"
+
+msgid "Choose the demo which you want to import"
+msgstr "دموی مورد نظر خود رو برای وارد کردن انتخاب کنید"
+
+msgid "Install Demos"
+msgstr "نصب دموها"
+
+msgid "First Footer"
+msgstr "اولین ابزارک فوتر"
+
+msgid "Second Footer"
+msgstr "دومین ابزارک فوتر"
+
+msgid "1st Column"
+msgstr "ستون اول"
+
+msgid "2d Column"
+msgstr "ستون دوم"
+
+msgid "3rd Column"
+msgstr "ستون سوم"
+
+msgid "4th Column"
+msgstr "ستون چهارم"
+
+msgid "Settings import file could not be found."
+msgstr "فایل تنظیمات درون ریزی یافت نشد."
+
+msgid "Home"
+msgstr "خانه"
+
+msgid "More"
+msgstr "بیشتر"
+
+msgid "Menu Title"
+msgstr "عنوان منو"
+
+msgid "Sub Menu"
+msgstr "زیرمنو"
+
+msgid "Buy now!"
+msgstr "خرید کن!"
+
+msgid "About"
+msgstr "درباره"
+
+msgid "Team"
+msgstr "تیم"
+
+msgid "WordPress is a favorite blogging tool of mine and I share tips and tricks for using WordPress here."
+msgstr "وردپرس  ابزار وبلاگ نویسی مورد علاقه من است و من راهنمایی ها و ترفندهایی را برای استفاده از وردپرس در اینجا به اشتراک می گذارم."
+
+msgid "World"
+msgstr "جهان"
+
+msgid "After all is said and done, more is said than done"
+msgstr "بعد از همه این حرف‌ها،بیشتر حرف زده می شود"
+
+msgid "Knowledge is power"
+msgstr "دانش قدرت است"
+
+msgid "The Future Of Possible"
+msgstr "در آینده ممکن است"
+
+msgid "Xbox boss talks Project Scorpio price"
+msgstr "رئیس ایکس باکس بر سر قیمت پروژه Scorpio حرف میزند"
+
+msgid "Hibs and Ross County fans on final"
+msgstr "طرفداران تیم های هیبز و رز کانتی در فینال"
+
+msgid "Tip of the day: That man again"
+msgstr "نکته روز : دوباره همان مرد"
+
+msgid "Spieth in danger of missing cut"
+msgstr "اسپیث در خطر از دست رفتن"
+
+msgid "Persuasion is often more effectual than force"
+msgstr "ترغیب کردن معمولاً موثرتر از تحمیل کردن است"
+
+msgid "One swallow does not make the spring"
+msgstr "با یک گل بهار نمیشه"
+
+msgid "Travel"
+msgstr "مسافرت رفتن"
+
+msgid "Getting There is Half the FUN!"
+msgstr "به آنجا رسیدن نیمی از تمام لذت است!"
+
+msgid "Goa Tourism Appealing Visitors From Across the Globe"
+msgstr "صنعت گردشگری گوآ برای بازدیدکننده‌ها از سراسر جهان جذاب است"
+
+msgid "Fontainebleau A Forgotten Treasure"
+msgstr "هتل Fontainebleau گنجینه‌ی فراموش شده"
+
+msgid "I know it hurts to say goodbye, but it is time for me to fly"
+msgstr "میدونم که خداحافظی سخته، اما برای من وقتش رسیده که پرواز کنم"
+
+msgid "What We See When We Look at Travel Photography"
+msgstr "چیزی که با نگاه به عکاسی سفرنامه‌ای می‌بینیم"
+
+msgid "How to make perfect vanilla cupcakes"
+msgstr "چطور یک کیک وانیلی عالی درست کنیم"
+
+msgid "The ultimate guide to herbal teas"
+msgstr "آموزش ویژه‌ی دمنوش گیاهی"
+
+msgid "Making fruit and veg fun for kids"
+msgstr "میوه و سبزیجات را برای کودکان جذاب کنیم"
+
+msgid "Games"
+msgstr "بازی ها"
+
+msgid "New Heroes of the Storm Characters Bring Portals"
+msgstr "قهرمانان جدید از شخصیت های طوفان دروازه ها را به ارمغان می آورند"
+
+msgid "There May Be No Consoles in the Future, EA Exec Says"
+msgstr "به گفته‌ی یکی از مدیران EA، ممکن است در آینده کنسولی وجود نداشته باشد"
+
+msgid "Play This Game for Free on Steam This Weekend"
+msgstr "این بازی را در این هفته رایگان در استیم بازی کنید"
+
+msgid "The Game Officially Announced, Watch the Trailer Here"
+msgstr "بازی رسما معرفی شد، تریلر بازی را از اینجا ببینید"
+
+msgid "Here What is in the game $80 Deluxe Edition"
+msgstr "در این بازی نسخه لوکس $80 وجود دارد"
+
+msgid "Nintendo Details Next Miitomo Update"
+msgstr "نینتندو جزئیات آپدیت بعدی Miitomo را مشخص می‌کند"
+
+msgid "Killing Floor 2 New Sharpshooter Class Detailed"
+msgstr "کشته شدن در طبقه 2 یک تیرانداز جدید و دقیق وجود دارد"
+
+msgid "Foods"
+msgstr "غذاها"
+
+msgid "Quinoa new recipes, feta & broad bean salad"
+msgstr "دستور العمل های جدید کوینو، سالاد فتا و لوبیا"
+
+msgid "Cooking with kids - how to get them involved"
+msgstr "آشپزی با بچه ها - چگونه آنها را درگیر کنید"
+
+msgid "6 Ways Drinking Warm Water Can Heal Your Body"
+msgstr "6 راهی که  نوشیدن آب گرم می تواند بدن شما را بهبود بخشد"
+
+msgid "Ice Cream Maker Free Chocolate"
+msgstr "بستنی ساز شکلات رایگان"
+
+msgid "Growing vegetables at home, six of the best"
+msgstr "پرورش سبزیجات در خانه, 6 تا از بهترین راه ها!"
+
+msgid "At Value-Focused Hotels, the Free Breakfast Gets Bigger"
+msgstr "در هتلهایی که بر روی ارزش تمرکز دارند, صبحانه های رایگان بزرگتر میشوند"
+
+msgid "A Refined Seattle Restaurant, Hold the Table Linens"
+msgstr "یک رستوران لطیف در شهر سیاتل, رومیزی را نگه دارید!"
+
+msgid "Business"
+msgstr "کسب و کار"
+
+msgid "December home sales rebound? Here is the secret"
+msgstr "بازگشت فروش خانه در ماه دسامبر؟ این راز آن است"
+
+msgid "Why people are flocking to Oregon"
+msgstr "چرا مردم به به ایالت اوریگان هجوم می‌برند"
+
+msgid "Weekly mortgage applications pop on stock sell-off"
+msgstr "برنامه های وام مسکن هفتگی در فروش بورس سهام"
+
+msgid "Apartment vacancies rise for first time in 6 years"
+msgstr "جای خالی آپارتمان برای اولین بار در 6 سال افزایش می یابد"
+
+msgid "China stock swoon could boost US real estate"
+msgstr "ضعف چین می تواند املاک و مستغلات آمریکا را افزایش دهد\n"
+
+msgid "Why homeowners are leaving billions on the table"
+msgstr "چرا صاحبخانه ها بیلیونها دلار ضرر میکنند"
+
+msgid "Lock in now! Stock sell-off sinks mortgage rates"
+msgstr "تازه درگیر شده اید! فروش یکجا سهام بورس باعث نزول نرخ وام مسکن شد"
+
+msgid "Tech"
+msgstr "فناوری"
+
+msgid "Former Microsoft CEO Ballmer does about-face on Linux technology"
+msgstr "عقب گرد آقای بالمر مدیر عامل سابق مایکروسافت بر تکنولوژی لینوکس"
+
+msgid "Bosch looking to smart devices to get ahead in the cloud"
+msgstr "شرکت بوش برای پیشرفت به دستگاههای هوشمند می اندیشد"
+
+msgid "Signs of life for Apple stock as Wall St"
+msgstr "نشانه‌های حیات سهام اپل در وال استریت"
+
+msgid "YNAP sees slightly slower sales growth after strong 2015"
+msgstr "شرکت YNAP بعد از فروش قوی در سال 2015 رشد فروش کمتری را مشاهده می کند"
+
+msgid "Senators close to finishing encryption penalties"
+msgstr "سناتورها به اتمام مجازات های رمزگذاری نزدیکتر میشوند"
+
+msgid "NASA plans to fix Mars spacecraft leak then launch in 2018"
+msgstr "ناسا قصد دارد نشت فضاپیمای مریخ را تعمیر کند و سپس فضاپیما را در سال 2018 به فضا پرتاب کند"
+
+msgid "Apple sets March 21 event, Wall Street sees new, smaller iPhone"
+msgstr "اپل کنفرانس 21 مارس را برگزار می‌کند، منتظر یک آیفون کوچکتر جدید باشید"
+
+msgid "Samsung Elec says preorders for Galaxy S7 phones stronger"
+msgstr "به گفته‌ سامسونگ الکترونیک، سفارش‌ های پیش‌ خرید گلکسی S7 بیشتر بوده‌اند"
+
+msgid "Life Style"
+msgstr "سبک زندگی"
+
+msgid "Timeline"
+msgstr "تایم لاین"
+
+msgid "Content"
+msgstr "محتوا"
+
+msgid "Classic"
+msgstr "کلاسیک"
+
+msgid "Color"
+msgstr "رنگ"
+
+msgid "Your server is running Suhosin, and your current maxvars settings may limit the number of menu items you can save."
+msgstr "سرور شما Suhosin را اجرا می کند، و تنظیمات فعلی Maxvars شما می تواند تعداد موارد منو را که می توانید ذخیره کنید را محدود کند."
+
+#, php-format
+msgid "You are approaching the post variable limit imposed by your server configuration. Exceeding this limit may automatically delete menu items settings when you save. Please increase your %1$s directive in php.ini. See: %2$s Increasing max input vars limit.%3$s"
+msgstr "شما با محدودیت پست متغیری که توسط پیکربندی سرور شما اعمال می شود، نزدیک می شوید. بیش از این حد ممکن است به صورت خودکار تنظیمات آیتم های منو شما حذف و ذخیره شود. لطفا دستورالعمل %1$s خود را در php.ini افزایش دهید. مشاهده کنید%2$s چگونه حداکثر ورودی max input vars ممکن است محدود شود.%3$s"
+
+msgid "Menu Item Limit Warning"
+msgstr "هشدار محدودیت آیتم منو"
+
+msgid "Need Help?"
+msgstr "به کمک نیاز دارید؟"
+
+#, php-format
+msgid "Click on the help icon %s if you need help."
+msgstr "اگر به کمک نیاز دارید، روی نماد کمک %s کلیک کنید."
+
+msgid "Happy New Year!"
+msgstr "سال نو مبارک!"
+
+msgid "To our client who have made our progress possible, All of us at TieLabs join in wishing you a Happy New Year with the best of everything in your life for you and your family and we look forward to serving you in the new year :)"
+msgstr "به مشتری ما که پیشرفت ما را ممکن ساخت، همه اعضا تیم ما در TieLabs برای شما آرزوی سالی شاد به همراه بهترینها در همه زمینه ها در زندگی خودتان و خانواده شما را داریم و منتظر خدمت و کمک رسانی به شما در سال جدید هستیم :)"
+
+#, php-format
+msgid "Follow us on %1$sTwitter%3$s or %2$sFacebook%3$s."
+msgstr "ما را در%1$sTwitter%3$s یا %2$sFacebook%3$s دنبال کنید."
+
+#, php-format
+msgid "Like %s?"
+msgstr "%s پسندیدین؟"
+
+#, php-format
+msgid "We've noticed you've been using %1$s for some time now; we hope you love it! We'd be thrilled if you could %2$sgive us a 5* rating on themeforest.net!%4$s If you are experiencing issues, please %3$sopen a support ticket%4$s and we'll do our best to help you out."
+msgstr "ما متوجه شدیم که شما مدتی است در حال استفاده از %1$s هستید. امیدواریم که آن را دوست داشته باشید! اگربه ما %2$s در themeforest.net امتیاز 5 ستاره بدهید خیلی خوشحال خواهیم شد, %4$s و اگر شما مشکلی در کار کردن با قالب دارید لطفا %3$s یک تیکت پشتیبانی %4$s ارسال کنید و مطمئن باشید که ما تمام تلاش خودمون رو برای رفع مشکل شما انجام خواهیم داد."
+
+#, php-format
+msgid "%1s comes localization-ready out of the box. All that’s needed is a translation file for your language, Contribute in our translation portal to complete the %2s translation, In exchange, we offer %3sExtra 6 Months FREE TieLabs Support*%4s to the most 3 contributors for each completed translation. Thank you very much for your contribution."
+msgstr "%1s دارای قابلیت بومی سازی است. فقط نیاز به ترجمه برای زبان مورد نظر شما دارد، می‌توانید در پرتال ترجمۀ ما، ترجمۀ %2s را کامل کنید، در عوض ما %3s 6 ماه پشتیبانی رایگان TieLabs *%4s به 3 مشارکت کنندۀ برتر ارائه می‌کنیم. از مشارکت شما سپاسگزاریم."
+
+#, php-format
+msgid "%1s comes localization-ready out of the box. All that’s needed is a translation file for your language, Contribute in our translation portal to complete the %2s translation, In exchange, we offer %3sExtra 6 Months FREE Support%4s to the most 3 contributors for each completed translation. Thank you very much for your contribution."
+msgstr "%1s بومی سازی شده است. فقط به فایل ترجمه به زبان مورد نظر شما نیاز است، در ترجمه %2s با ما مشارکت کنید و در عوض ما %3s جایزه 6 ماه پشتیبانی رایگان را %4s به 3 نفر ارائه میدهیم. از مشارکت شما سپاسگزاریم."
+
+#, php-format
+msgid "If you have translated the theme then many of our users would be delighted if you could share your translation files with the community and get %1s6 Months FREE Support%2s Just get in contact with us via our %3sSupport Center%4s and we will include the translation files in the next theme update if possible. Thank you very much for your contribution."
+msgstr "اگر شما قالب را ترجمه کرده‌اید با اشتراک گذاشتن ترجمه‌ی خودتان با جامعه‌ی کاربران، باعث خوشحالی بسیاری از کاربران خواهید شد و %1s شش ماه پشتیبانی رایگان %2s دریافت خواهید کرد، کافیت با ما از طریق %3s مرکز پشتیبانی %4s تماس بگیرید تا ما ترجمه‌ها را در بروزرسانی بعدی قالب بگنجانیم. از تلاش‌های شما بسیار سپاسگزاریم."
+
+#, php-format
+msgid "%1s Translation Status: %2s Done"
+msgstr "وضعیت ترجمه‌ی %1s : %2s انجام شده است"
+
+msgid "* The extra support will appear in your profile on our website, support center and in the theme dashboared only. it will not appear on ThemeForest."
+msgstr "*دورۀ پشتیبانی اضافه شده فقط در پروفایل شما در سایت TieLabs، بخش پشتیبانی TieLabs و در قسمت داشبورد قالب نمایش داده خواهد شد. چیزی در این خصوص در سایت ThemeForest نمایش داده نمی‌شود."
+
+msgid "Get Extra FREE 6 Months Support period"
+msgstr "6 ماه پشتیبانی رایگان اضافه دریافت کنید"
+
+msgid "Go to the Translation Portal"
+msgstr "وارد پرتال ترجمه شوید"
+
+#, php-format
+msgid "If you have translated the theme then many of our users would be delighted if you could share your translation files with the community. Just get in contact with us via our %1sSupport Center%2s and we will include the translation files in the next theme update if possible. Thank you very much for your contribution."
+msgstr "اگر قالب را ترجمه کرده اید، اگر بتوانید ترجمه خود را با انجمن به اشتراک بگذارید بسیار از کاربران ما خوشحال خواهند شد. فقط با ما از طریق بخش %1s مرکز پشتیبانی %2s تماس بگیرید و در صورتی که امکان پذیر باشد ما فایلهای ترجمه شما را در به روز رسانی بعدی قالب قرار خواهیم داد. از مشارکت شما بسیار سپاسگزاریم"
+
+msgid "Share your Language files with others"
+msgstr "فایل های ترجمه خود را با دیگران به اشتراک بگذارید"
+
+msgid "YAY, New Features"
+msgstr "یوهو ویژگی های جدید"
+
+msgid "Awesome, isn't it? Give us some love :)"
+msgstr "عالی است، مگه نه؟ علاقه خودتان را به ما نشان بده :)"
+
+#, php-format
+msgid "Rate %s"
+msgstr "امتیاز  %s"
+
+msgid "Followers"
+msgstr "دنبال کننده‌ها"
+
+#, php-format
+msgid "%s Followers"
+msgstr "%s دنبال کننده"
+
+msgid "Total Articles' Views!"
+msgstr "مجموع بازدید مقاله‌ها!"
+
+#, php-format
+msgid "%s articles views"
+msgstr "%s بازدید مقاله‌ها"
+
+#, php-format
+msgid "We just reached the %s milestone! We are taking this moment to give YOU a big THANK YOU for all the support and confidence you gave us."
+msgstr "ما الان به هدف %s رسیدیم! از این فرصت استفاده کرده و از شما به خاطر تمام حمایت و آرامشی که با ما دادید بسیار سپاسگزاریم."
+
+msgid "New Milestone"
+msgstr "نقطه عطف جدید"
+
+msgid "Spread The Word"
+msgstr "گسترش کلمه"
+
+#, php-format
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] "%d سال"
+
+msgid "Happy Anniversary with TieLabs!"
+msgstr "سالگرد همراه بودنت با TieLabs مبارک !"
+
+#, php-format
+msgid "Woohoo! We are so happy You have been with us for %s We are looking forward to providing an awesome WordPress theme and plugins for you for many more. Thanks for being an awesome customer!"
+msgstr "Woohoo ! ما خیلی خوشحال هستیم که شما به مدت %s همراه ما بودید، ما همواره به دنبال ایجاد قالب و پلاگین‌های عالی برای شما هستیم . ممنون برای اینکه یک مشتری عالی هستید !"
+
+msgid "Your friends at TieLabs"
+msgstr "دوستان شما در TieLabs"
+
+msgid "Howdy"
+msgstr "چطوری"
+
+msgid "Posts Switcher"
+msgstr "سوئیچر مطالب"
+
+#, php-format
+msgid "Are You Megrating from %s?"
+msgstr "میخواهید از %s مهاجرت کنید؟"
+
+#, php-format
+msgid "It seems you are megrating from %1s%2s%3s theme, click on the button below to complete the switching process."
+msgstr "بنظر میرسد شما میخواهید به قالب جنة سوئیچ کنید. توجه کنید سوئیچر از%1s%2s%3s قالب پشتبانی می کند,روی دکمه زیر کلیک کنید تا فرایند سوئیچینگ کامل شود."
+
+msgid "Are You Megrating from another theme?"
+msgstr "آیا شما از یک قالب دیگر مهاجرت می کنید؟"
+
+#, php-format
+msgid "It seems you are megrating from another theme, it is recommended to check our Switcher it supports %1s%2s%3s themes, click on the button below to check them."
+msgstr "به نظر می رسد شما از قالب دیگری استفاده می کنید،توصیه می شود قالب های پشتیبانی شده را در %1s%2s%3s مشاهده کنید,روی دکمه زیر کلیک کنید تا آنها را بررسی کنید."
+
+msgid "Run the Switcher"
+msgstr "اجرای سوئیچ"
+
+#, php-format
+msgid "Switch to %s Theme"
+msgstr "سوئیچ به قالب %s"
+
+#, php-format
+msgid "%s Plugin is required"
+msgstr "پلاگین %s مورد نیاز است"
+
+#, php-format
+msgid "%s Plugin is required, click on the button below to go to the plugins page to install it."
+msgstr "پلاگین %s مورد نیاز است، بر روی دکمه زیر کلیک کنید تا به صفحه نصب افزونه ها بروید تا آن را نصب کنید."
+
+msgid "Go to the Plugins Page"
+msgstr "رفتن به صفحه افزونه ها"
+
+msgid "Install Plugins"
+msgstr "نصب پلاگین ها"
+
+msgid "Install Bundled Plugins"
+msgstr "نصب پلاگین های همراه"
+
+msgid "Share your Language files and Get Extra FREE 6 Months Support period"
+msgstr "فایل های زبان خود را به اشتراک بگذارید و دوره پشتیبانی 6 ماه رایگان دریافت کنید"
+
+msgid "How to translate the theme"
+msgstr "نحوه ترجمه قالب"
+
+msgid "Category Layout"
+msgstr "ساختار دسته بندی"
+
+msgid "Posts Settings"
+msgstr "تنظیمات نوشته ها"
+
+msgid "Posts Layout"
+msgstr "ساختار مطالب"
+
+msgid "Slider"
+msgstr "اسلایدر"
+
+msgid "Logo"
+msgstr "لوگو"
+
+msgid "Sidebar"
+msgstr "سایدبار"
+
+msgid "Styling"
+msgstr "استایل"
+
+msgid "Main Menu"
+msgstr "منو اصلی"
+
+msgid "Category Options"
+msgstr "تنظیمات دسته بندی"
+
+msgid "Large Thumbnail"
+msgstr "تصویر شاخص بزرگ"
+
+msgid "Masonry"
+msgstr "شبکه ای"
+
+msgid "Large Post Above"
+msgstr "بزرگ بالای پست"
+
+msgid "Overlay Title"
+msgstr "روکش عنوان"
+
+msgid "Overlay Title Centered"
+msgstr "روکش عنوان مرکزی"
+
+msgid "Excerpt Length"
+msgstr "طول چکیده"
+
+msgid "Pagination"
+msgstr "صفحه بندی"
+
+msgid "Next and Previous"
+msgstr "قبل و بعد"
+
+msgid "Numeric"
+msgstr "عددی"
+
+msgid "Load More"
+msgstr "بارگذاری بیشتر"
+
+msgid "Infinite Scroll"
+msgstr "اسکرول بی نهایت"
+
+msgid "Media Icon"
+msgstr "آیکون رسانه ها"
+
+msgid "Media Icon Overlay"
+msgstr "آیکون متفرقه رسانه"
+
+msgid "Category Page Layout"
+msgstr "ساختار دسته بندی"
+
+msgid "Full-Width"
+msgstr "تمام صفحه"
+
+msgid "Boxed"
+msgstr "جعبه ای"
+
+msgid "Framed"
+msgstr "فریم"
+
+msgid "Bordered"
+msgstr "حاشیه دار"
+
+msgid "Post Layout"
+msgstr "چیدمان پست"
+
+msgid "Layout"
+msgstr "طرح بندی"
+
+msgid "Featured area background"
+msgstr "پس زمینه ویژه"
+
+msgid "Use the featured image"
+msgstr "استفاده از تصویر ویژه"
+
+msgid "Yes"
+msgstr "بله"
+
+msgid "No"
+msgstr "نه"
+
+msgid "Upload Custom Image"
+msgstr "آپلود عکس دلخواه"
+
+msgid "- OR -"
+msgstr "- یا -"
+
+msgid "Background Color"
+msgstr "رنگ بک گراند"
+
+msgid "Post Format Settings"
+msgstr "تنظیمات فرمت نوشته"
+
+msgid "Standard Post Format:"
+msgstr "فرمت استاندارد مطالب:"
+
+msgid "Show the featured image"
+msgstr "نمایش تصاویر ویژه"
+
+msgid "Image Post Format:"
+msgstr "فرمت تصویر پست:"
+
+msgid "Uncropped featured image"
+msgstr "تصویر ویژه  برش نخورده"
+
+msgid "Featured image lightbox"
+msgstr "تصویر ویژه  لایت باکس"
+
+msgid "Structure Data"
+msgstr "ساختار داده"
+
+msgid "Schema type"
+msgstr "الگو"
+
+msgid "Article"
+msgstr "مقاله"
+
+msgid "NewsArticle"
+msgstr "مقاله خبری"
+
+msgid "BlogPosting"
+msgstr "پست کردن در وبلاگ"
+
+#, php-format
+msgid "Slider #%s"
+msgstr "اسلایدر #%s"
+
+msgid "Videos Playlist"
+msgstr "لیست پخش ویدیوها"
+
+msgid "TieLabs Slider"
+msgstr "اسلایدر TieLabs"
+
+msgid "Enable"
+msgstr "فعال کردن"
+
+msgid "Number of posts to show"
+msgstr "تعداد نوشته های قابل نمایش"
+
+msgid "Query Type"
+msgstr "نوع دستور"
+
+msgid "Recent Posts"
+msgstr "نوشته های تازه"
+
+msgid "Random Posts"
+msgstr "نوشته های تصادفی"
+
+msgid "Custom Slider"
+msgstr "اسلایدر دلخواه"
+
+msgid "Colored Mask"
+msgstr "ماسک رنگی"
+
+msgid "Disable Gradiant Overlay"
+msgstr "غیر فعال کردن پوشش شعاعی"
+
+msgid "Animate Automatically"
+msgstr "انیمیشن خودکار"
+
+msgid "Title Length"
+msgstr "طول عنوان"
+
+msgid "Posts Excerpt"
+msgstr "طول مطلب"
+
+msgid "Posts Excerpt Length"
+msgstr "طول چکیده مطلب"
+
+msgid "Post Primary Category"
+msgstr "دسته بندی مطلب اصلی"
+
+msgid "Review Rating"
+msgstr "مقدار امتیاز همون ستاره"
+
+msgid "Post Meta"
+msgstr "اطلاعات نوشته"
+
+msgid "Playlist title"
+msgstr "عنوان لیست پخش"
+
+msgid "Videos List"
+msgstr "لیست ویدیوها"
+
+msgid "Enter each video url in a seprated line."
+msgstr "هر URL ویدیو را در یک خط جداگانه وارد کنید."
+
+msgid "Supports: YouTube and Vimeo videos only."
+msgstr "پشتیبانی: فقط از ویدیو های یوتوب وVimeo پشتیبانی میکند."
+
+msgid "Dark Skin"
+msgstr "پوسته تیره"
+
+msgid "Background Image"
+msgstr "تصویر بک گراند"
+
+msgid "Background Video"
+msgstr "ویدیو بک گراند"
+
+msgid "Parallax"
+msgstr "پارالاکس"
+
+msgid "Parallax Effect"
+msgstr "افکت پارالاکس"
+
+msgid "Scroll"
+msgstr "اسکرول"
+
+msgid "Scale"
+msgstr "مقیاس"
+
+msgid "Opacity"
+msgstr "شفافیت"
+
+msgid "Scroll + Opacity"
+msgstr "اسکرول + شفافیت"
+
+msgid "Scale + Opacity"
+msgstr "مقیاس + شفافیت"
+
+msgid "Revolution Slider"
+msgstr "رزولیشن اسلایدر"
+
+msgid "Disable"
+msgstr "غیر فعال"
+
+msgid "Unnamed"
+msgstr "بدون نام"
+
+msgid "Will override the sliders above."
+msgstr "اسلایدر های بالا را لغو می کند."
+
+msgid "Choose Slider"
+msgstr "انتخاب اسلایدر"
+
+msgid "No sliders found, Please create a slider."
+msgstr "اسلایدر یافت نشد, لطفا یک اسلایدر ایجاد کنید."
+
+msgid "LayerSlider"
+msgstr "پلاگین لایر اسلایدر"
+
+msgid "Custom Logo"
+msgstr "لوگوی دلخواه"
+
+msgid "Logo Settings"
+msgstr "تنظیمات لوگو"
+
+msgid "Image"
+msgstr "عکس"
+
+msgid "Site Title"
+msgstr "عنوان سایت"
+
+msgid "Logo Text"
+msgstr "متن لوگو"
+
+msgid "Logo Image"
+msgstr "تصویر لوگو"
+
+msgid "Logo Image (Retina Version @2x)"
+msgstr "تصویر لوگو(ورژن ریتنا@2برابر)"
+
+msgid "Please choose an image file for the retina version of the logo. It should be 2x the size of main logo."
+msgstr "لطفا یک فایل تصویری برای نسخه retina انتخاب کنید. باید اندازه آن دو برابر لوگو اصلی باشد."
+
+msgid "Standard Logo Width for Retina Logo"
+msgstr "عرض لوگوی استاندارد برای رتینا"
+
+msgid "If retina logo is uploaded, please enter the standard logo (1x) version width, do not enter the retina logo width."
+msgstr "اگر لوگو رتینا را آپلود کرده اید، لطفا اندازه عرض لوگو استاندارد را وارد کنید، عرض لوگو رتینا را وارد نکنید."
+
+msgid "Standard Logo Height for Retina Logo"
+msgstr "ارتفاع استاندارد لوگو برای رتینا"
+
+msgid "If retina logo is uploaded, please enter the standard logo (1x) version height, do not enter the retina logo height."
+msgstr "اگر لوگو رتینا را آپلود کرده اید، لطفا اندازه ارتفاع لوگو استاندارد را وارد کنید، ارتفاع لوگو رتینا را وارد نکنید."
+
+msgid "Logo Margin Top"
+msgstr "فاصله بالای لوگو"
+
+msgid "Leave it empty to use the default value."
+msgstr "این فیلد را خالی بگذارید برای مقدار پیش فرض."
+
+msgid "Logo Margin Bottom"
+msgstr "فاصله پایینی لوگو"
+
+msgid "Custom Logo URL"
+msgstr "آرم سفارشی URL"
+
+msgid "Leave it empty to use the Site URL."
+msgstr "برای استفاده ازurl سایت آن را خالی بگذارید"
+
+msgid "Custom Menu"
+msgstr "منو دلخواه"
+
+msgid "Category Sidebar"
+msgstr "سایدبار دسته بندی"
+
+msgid "Sidebar Right"
+msgstr "سایدبار راست"
+
+msgid "Sidebar Left"
+msgstr "سایدبار چپ"
+
+msgid "Without Sidebar"
+msgstr "بدون سایدبار"
+
+msgid "One Column"
+msgstr "یک ستون"
+
+msgid "Sticky Sidebar"
+msgstr "سایدبار چسبان"
+
+msgid "Custom Sidebar"
+msgstr "اسلایدر دلخواه"
+
+msgid "Global Sidebar Settings for Posts in this Category"
+msgstr "تنظیمات نوار سراسری برای نوشته های این گروه"
+
+msgid "Category Style"
+msgstr "استایل دسته"
+
+msgid "Primary Color"
+msgstr "رنگ اصلی"
+
+msgid "Background"
+msgstr "بک گراند"
+
+msgid "Bordered Layout supports plain background color only."
+msgstr "طرح حاشیه ای فقط رنگ پس زمینه ساده را پشتیبانی می کند."
+
+msgid "Background Color 2"
+msgstr "رنگ پس زمینه 2"
+
+msgid "Background Image type"
+msgstr "نوع تصویر پس زمینه"
+
+msgid "None"
+msgstr "هیچ"
+
+msgid "Pattern"
+msgstr "الگو"
+
+msgid "Background Pattern"
+msgstr "الگوی بک گراند"
+
+msgid "Background Settings"
+msgstr "تنظیمات بک گراند"
+
+msgid "Dots overlay layer"
+msgstr "نقاط لایه لایه"
+
+msgid "Background dimmer"
+msgstr "سایز بک گراند"
+
+msgid "Value between 0 and 100 to dim background image. 0 - no dim, 100 - maximum dim."
+msgstr "مقدار تاریکی تصویر بک گراند رو بیبن 0 تا 100 تنظیم کنید. 0 کم نور نیست ,100 حداکثر تاریکی."
+
+msgid "Background dimmer color"
+msgstr "رنگ کم نور بک گراند"
+
+msgid "Black"
+msgstr "سیاه"
+
+msgid "White"
+msgstr "سفید"
+
+msgid "Custom CSS"
+msgstr "CSS دلخواه"
+
+msgid "Paste your CSS code, do not include any tags or HTML in the field. Any custom CSS entered here will override the theme CSS. In some cases, the !important tag may be needed."
+msgstr "کد CSS خود را وارد کنید، هیچ tags یا HTML در این فیلد وارد نکنید. هر CSS سفارشی که در اینجا وارد می کنید بر روی CSS کل تم اعمال می شود. در بعضی موارد، بهتر است از برچسب !important استفاده کنید."
+
+#, php-format
+msgid "Use %s and it will be replaced with the primary color."
+msgstr "با استفاده از %s ، رنگ اصلی جایگزین خواهد شد"
+
+msgid "Settings"
+msgstr "تنظیمات"
+
+msgid "Front Page"
+msgstr "صفحه اول"
+
+msgid "TieLabs Builder"
+msgstr "صفحه ساز TieLabs"
+
+msgid "Enter sub title here"
+msgstr "زیر عنوان را اینجا وارد کنید"
+
+#, php-format
+msgid "Current Front Page: %s"
+msgstr "صفحه جاری فعلی: %s"
+
+msgid "Set as the site Front Page?"
+msgstr "صفحه اصلی سایت را تنظیم کنید؟"
+
+msgid "Use the TieLabs Builder"
+msgstr "استفاده از صفحه ساز TieLabs"
+
+msgid "General"
+msgstr "اصلی"
+
+msgid "Styles"
+msgstr "استایل‌ها"
+
+msgid "Advertisement"
+msgstr "تبلیغات"
+
+msgid "Components"
+msgstr "قطعات"
+
+msgid "Story Highlights"
+msgstr "نکات برگزیده مطلب"
+
+msgid "Source and Via"
+msgstr "منبع و از طریق"
+
+msgid "Masonry Page"
+msgstr "صفحه شبکه ای"
+
+msgid "Categories Meta"
+msgstr "دسته بندی"
+
+msgid "Categories"
+msgstr "دسته بندی ها"
+
+msgid "User Roles"
+msgstr "نقش کاربری"
+
+msgid "Header and Footer Settings"
+msgstr "تنظیمات هدر و فوتر"
+
+msgid "Hide the Header"
+msgstr "عدم نمایش هدر"
+
+msgid "Hide the Footer"
+msgstr "پنهان سازی فوتر"
+
+msgid "Hide the page title"
+msgstr "عدم نمایش عنوان صفحه"
+
+msgid "Don't duplicate posts"
+msgstr "از پست ها دو نسخه تکراری ایجاد نکن"
+
+msgid "Note: This option doesn't work with the AJAX pagination option in the blocks."
+msgstr "توجه: این گزینه با صفحه بندی AJAX در بلوک ها کار نمی کند."
+
+msgid "Primary Category"
+msgstr "دسته بندی اصلی"
+
+msgid "If the post has multiple categories, the one selected here will be used for settings and it appears in the category labels."
+msgstr "اگر پست در چند دسته بندی متعدد قرار دارد، آن دسته بندی که اینجا انتخاب شده برای تنظیمات و نمایش در بخش دسته بندیها استفاده میشود."
+
+msgid "Trending Post"
+msgstr "مطلب داغ"
+
+msgid "Post Views"
+msgstr "مقدار بازدید پست"
+
+msgid "Post format"
+msgstr "قالب مطلب"
+
+msgid "Standard"
+msgstr "استاندارد"
+
+msgid "Video"
+msgstr "ویدئو"
+
+msgid "Audio"
+msgstr "صوت"
+
+msgid "Map"
+msgstr "نقشه"
+
+msgid "Embed Code"
+msgstr "کد امبد"
+
+msgid "Self Hosted Video"
+msgstr "ویدیو آپلود شده بر روی هاست"
+
+msgid "Video URL"
+msgstr "آدرس ویدیو"
+
+msgid "supports : YouTube, Vimeo, Viddler, Qik, Hulu, FunnyOrDie, DailyMotion, WordPress.tv and blip.tv"
+msgstr "پشتیبانی از: YouTube, Vimeo, Viddler, Qik, Hulu, FunnyOrDie, DailyMotion, WordPress.tv وblip.tv"
+
+msgid "MP3 file URL"
+msgstr "آدرس فایل MP3"
+
+msgid "M4A file URL"
+msgstr "آدرس فایل M4A"
+
+msgid "OGA file URL"
+msgstr "آدرس فایل OGA"
+
+msgid "SoundCloud URL"
+msgstr "آدرس SoundCloud"
+
+msgid "Google Maps URL"
+msgstr "آدرس نقشه گوگل"
+
+msgid "Page Layout"
+msgstr "طرح صفحه"
+
+msgid "Sidebar Position"
+msgstr "موقعیت سایدبار"
+
+msgid "Choose Sidebar"
+msgstr "انتخاب ستون کناری"
+
+msgid "Header Background"
+msgstr "پس زمینه‌ی هدر"
+
+msgid "Extend the background of the first section to cover the Header"
+msgstr "گسترش پس‌زمینه‌ی بخش اول برای پوشش هدر"
+
+msgid "Post Components"
+msgstr "قطعات پست"
+
+msgid "Above Post share Buttons"
+msgstr "دکمه اشتراک گذاری بالای پست"
+
+msgid "Hide"
+msgstr "پنهان سازی"
+
+msgid "Show"
+msgstr "نمایش"
+
+msgid "Below Post Share Buttons"
+msgstr "دکمه اشتراک گذاری زیر پست"
+
+msgid "Tags"
+msgstr "برچسب ها"
+
+msgid "Post Author box"
+msgstr "باکس نویسنده نوشته"
+
+msgid "Next/Prev posts"
+msgstr "نمایش دکمه های قبلی / بعدی مطالب"
+
+msgid "Newsletter"
+msgstr "خبرنامه"
+
+msgid "Related Posts"
+msgstr "مطالب مرتبط"
+
+msgid "Fly Check Also Box"
+msgstr "باکس مطلب شناور"
+
+msgid "Hide Above Post Ad"
+msgstr "مخفی کردن تبلیغ بالای پست"
+
+msgid "Custom Above Post Ad"
+msgstr "سفارشی سازی تبلیغ بالای پست"
+
+msgid "Hide Below Post Ad"
+msgstr "مخفی کردن تبلیغ پایین پست"
+
+msgid "Custom Below Post Ad"
+msgstr "سفارشی سازی تبلیغ پایین پست"
+
+msgid "Hide Above Content Ad"
+msgstr "مخفی کردن تبلیغ بالای مطلب"
+
+msgid "Custom Above Content Ad"
+msgstr "سفارشی کردن تبلیغ بالای مطلب"
+
+msgid "Hide Below Content Ad"
+msgstr "مخفی کردن تبلیغ پایین مطلب"
+
+msgid "Custom Below Content Ad"
+msgstr "سفارشی کردن تبلیغ پایین مطلب"
+
+msgid "Source"
+msgstr "منبع"
+
+msgid "These links will appear at the end of the article in the Source section."
+msgstr "این پیوندها در انتهای مقاله در بخش منبع نمایش داده می شوند."
+
+msgid "Link"
+msgstr "لینک"
+
+msgid "Add"
+msgstr "افزودن"
+
+msgid "Source name is required."
+msgstr "نام منبع مورد نیاز است."
+
+msgid "Via"
+msgstr "از طريق"
+
+msgid "These links will appear at the end of the article in the Via section."
+msgstr "این پیوندها در انتهای مقاله در قسمت Via ظاهر می شود."
+
+msgid "Via name is required."
+msgstr "نام Via مورد نیاز است."
+
+msgid "Add Custom Text"
+msgstr "اضافه کردن متن دلخواه"
+
+msgid "Custom Text"
+msgstr "متن دلخواه"
+
+msgid "Text is required."
+msgstr "متن ضروری است."
+
+msgid "Upload"
+msgstr "آپلود"
+
+msgid "Add Image"
+msgstr "افزودن تصویر"
+
+msgid "Select"
+msgstr "انتخاب"
+
+msgid "no-repeat"
+msgstr "بدون تکرار"
+
+msgid "Tile"
+msgstr "کاشی وار"
+
+msgid "Tile Horizontally"
+msgstr "کاشی به صورت افقی"
+
+msgid "Tile Vertically"
+msgstr "کاشی به صورت عمودی"
+
+msgid "Fixed"
+msgstr "ثابت"
+
+msgid "Cover"
+msgstr "کاور"
+
+msgid "Left"
+msgstr "چپ"
+
+msgid "Right"
+msgstr "راست"
+
+msgid "Center"
+msgstr "وسط"
+
+msgid "Top"
+msgstr "بالا"
+
+msgid "Bottom"
+msgstr "پایین"
+
+msgid "Remove"
+msgstr "حذف"
+
+msgid "Font Size in Pixels"
+msgstr "اندازه فونت به پیکسل"
+
+msgid "Line Height"
+msgstr "ارتفاع خط"
+
+msgid "Font Weight"
+msgstr "ضخامت فونت"
+
+msgid "Thin 100"
+msgstr "نازک 100"
+
+msgid "Extra 200 Light"
+msgstr "بسیار نازک 200"
+
+msgid "Light 300"
+msgstr "نازک 300"
+
+msgid "Regular 400"
+msgstr "عادی 400"
+
+msgid "Medium 500"
+msgstr "متوسط 500"
+
+msgid "Semi 600 Bold"
+msgstr "نیمه ضخیم 600"
+
+msgid "Bold 700"
+msgstr "ضخیم 700"
+
+msgid "Extra 800 Bold"
+msgstr "بسیار ضخیم 800"
+
+msgid "Black 900"
+msgstr "مشکی 900"
+
+msgid "Capitalization"
+msgstr "نوشتن با حروف بزرگ"
+
+msgid "UPPERCASE"
+msgstr "حروف بزرگ"
+
+msgid "Capitalize"
+msgstr "نوشتن با حروف بزرگ"
+
+msgid "lowercase"
+msgstr "حروف کوچک"
+
+msgid "System Status"
+msgstr "وضعیت سیستم"
+
+msgid "WordPress environment"
+msgstr "محیط وردپرس"
+
+msgid "Home URL"
+msgstr "لینک برگه خانه"
+
+msgid "Site URL"
+msgstr "آدرس سایت"
+
+msgid "WP version"
+msgstr "نسخه WP"
+
+msgid "WP multisite"
+msgstr "وردپرس شبکه ای"
+
+msgid "WP memory limit"
+msgstr "محدودیت حافظه WP"
+
+#, php-format
+msgid "%1$s - We recommend setting memory to at least %2$s. To import the demo data %3$s of memory limit is required. See: %4$s"
+msgstr "‫%1$s - توصیه می کنیم که حافظه حداقل %2$s باشد. برای وارد کردن داده نسخه های دمو %3$s محدودیت حافظه مورد نیاز است. ببینید: %4$s"
+
+msgid "Increasing memory allocated to PHP"
+msgstr "افزایش حافظه اختصاص داده شده به PHP"
+
+msgid "WP debug mode"
+msgstr "حالت اشکال زدایی WP"
+
+msgid "Language"
+msgstr "زبان"
+
+msgid "Hide errors from visitors"
+msgstr "پنهان کردن خطاها از بازدیدکنندگان"
+
+msgid "Error messages can contain sensitive information about your website environment. These should be hidden from untrusted visitors."
+msgstr "متن خطاها می تواند شامل اطلاعات حساس درباره فضای نگهداری شما باشد. حتما باید از دیدکاربران شما مخفی بماند."
+
+msgid "Server environment"
+msgstr "محیط سرور"
+
+msgid "Server info"
+msgstr "مشخصات سرور"
+
+msgid "PHP version"
+msgstr "ورژن PHP"
+
+#, php-format
+msgid "%1$s - We recommend a minimum PHP version of %2$s."
+msgstr "%1$s - توصیه ما حداقل یک نسخه PHP %2$s."
+
+msgid "PHP post max size"
+msgstr "حداکثر اندازه پست PHP"
+
+msgid "PHP time limit"
+msgstr "محدودیت زمانی PHP"
+
+#, php-format
+msgid "%1$s - We recommend setting max execution time to at least %2$s."
+msgstr "%1$s - ما توصیه می کنیم حداقل حداکثر زمان اجرای را تنظیم کنید %2$s."
+
+msgid "PHP max input vars"
+msgstr "حداکثر ورودی متغیرهای PHP"
+
+#, php-format
+msgid "%1$s - Recommended Value: %2$s. Max input vars limitation will truncate POST data such as menus. See: %3$sIncreasing max input vars limit.%4$s"
+msgstr "%1$s - مقدار توصیه شده: %2$s. محدودیت حداکثر متغیرهای ورودی سبب تکه تکه شدن داده‌های پست شده مانند منوها می‌شود. این آموزش %3$s را ببینید تا حداکثر محدودیت را افزایش دهید.%4$s"
+
+msgid "cURL version"
+msgstr "نسخه cURL"
+
+msgid "SUHOSIN installed"
+msgstr "SUHOSIN نصب شده است"
+
+msgid "You have to increase the suhosin.post.max_vars and suhosin.request.max_vars parameters to 2000 or more."
+msgstr "شما باید suhosin.post.max_vars و suhosin.request.max_vars را به 2000 یا بیشتر افزایش دهید."
+
+msgid "MySQL version"
+msgstr "نسخه MySQL"
+
+#, php-format
+msgid "%1$s - WordPress recommends a minimum MySQL version of %2$s. See: %3$sWordPress requirements%4$s"
+msgstr ""
+"%1$s - وردپرس حداقل نسخه MySQL را توصیه می کند\n"
+" %2$s. دیدن: %3$sوردپرس مورد نیاز است\n"
+"%4$s"
+
+msgid "Max upload size"
+msgstr "حداکثر اندازه آپلود"
+
+msgid "fsockopen/cURL"
+msgstr "fsockopen/cURL"
+
+msgid "Your server does not have fsockopen or cURL enabled. Contact your hosting provider."
+msgstr "سرور شما fsockopen یا cURL را فعال نکرده است. با ارائهدهنده خدمات میزبانی خود تماس بگیرید."
+
+msgid "Multibyte string"
+msgstr "رشته چند بایت"
+
+msgid "Your server does not support the mbstring functions - this is required for better character encoding. Some fallbacks will be used instead for it."
+msgstr "سرور شما از توابع mbstring پشتیبانی نمی کند - این برای رمزگذاری بهتر شخصیت لازم است. برای کاهش هزینه ها، بعضی از آنها به جای آن استفاده می شود."
+
+msgid "XMLReader"
+msgstr "XMLReader"
+
+msgid "The XMLReader PHP module/extension is missing. Please contact your hosting company and ask them to install that for you."
+msgstr "XMLReader ماژولPHP/ نصب نشده است. لطفا با شرکت میزبانی خود تماس بگیرید و از آنها بخواهید که برای شما نصب کنند."
+
+msgid "Remote post"
+msgstr "نوشته از راه دور"
+
+msgid "wp_remote_post() failed. Contact your hosting provider."
+msgstr "wp_remote_post () شکست خورده است با ارائهدهنده خدمات میزبانی خود تماس بگیرید."
+
+msgid "Remote get"
+msgstr "گرفتن از راه دور"
+
+msgid "wp_remote_get() failed. Contact your hosting provider."
+msgstr "wp_remote_get () شکست خورد با ارائهدهنده خدمات میزبانی خود تماس بگیرید."
+
+msgid "Theme"
+msgstr "قالب"
+
+msgid "Name"
+msgstr "نام"
+
+msgid "License"
+msgstr "لایسنس"
+
+msgid "Your Site is Validated"
+msgstr "سایت شما تایید شده است"
+
+msgid "Your Site is not Validated"
+msgstr "سایت شما معتبر نیست"
+
+msgid "Support"
+msgstr "پشتیبانی"
+
+msgid "Version"
+msgstr "نسخه"
+
+#, php-format
+msgid "%s is available"
+msgstr "%s در دسترس است"
+
+msgid "Author URL"
+msgstr "لینک نویسنده"
+
+msgid "Child theme"
+msgstr "پوسته فرزند"
+
+msgid "Parent theme name"
+msgstr "نام پوسته والد"
+
+msgid "Parent theme version"
+msgstr "نسخه پوسته والد"
+
+msgid "Parent theme author URL"
+msgstr "آدرس پوسته والد"
+
+msgid "Latest Demo Installed"
+msgstr "آخرین دمو نصب شده"
+
+msgid "Switched From"
+msgstr "سوئیچ از"
+
+msgid "Active plugins"
+msgstr "افزونه های فعال"
+
+msgid "Network enabled"
+msgstr "شبکه فعال شد"
+
+#, php-format
+msgid "by %s"
+msgstr "توسط %s"
+
+msgid "Please copy and paste this information in your ticket when contacting support:"
+msgstr "خواهشمندیم در صورت درخواست پشتیبانی این اطلاعات را لحاظ کنید:"
+
+msgid "Get system report"
+msgstr "دریافت گزارش سیستم"
+
+#, php-format
+msgid "Looking for a good web hosting company? %1$sCheck our recommendations!%2$s"
+msgstr "به دنبال یک شرکت میزبانی وب خوب هستید؟ %1$sتوصیه ما را بررسی کنید!%2$s"
+
+msgid "Theme Updates"
+msgstr "بروزرسانی‌های قالب"
+
+msgid "New Update"
+msgstr "آپدیت جدید"
+
+msgid "New"
+msgstr "جدید"
+
+msgid "New Theme Update"
+msgstr "نسخه جدید پوسته در دسترس است"
+
+#, php-format
+msgid "There is a new version of the %s available."
+msgstr "نسخه جدید پوسته %s در دسترس است."
+
+#, php-format
+msgid "View version %1$s details."
+msgstr "مشاهده جزئیات نسخه %1$s."
+
+#, php-format
+msgid "The theme folder name does not match the original theme folder name %1$s%3$s%2$s, you need to chnage the theme folder name back to be able to update the theme automatically, or you can update the theme manually via FTP."
+msgstr "نام پوشه‌ی قالب با نام پوشه‌ی قالب اصلی %1$s%3$s%2$s, همخوانی ندارد، باید نام پوشه را به حالت قبل آن برگردانید تا امکان بروزرسانی خودکار قالب را داشته باشید، و یا می‌توانید قالب را بصورت دستی از طریق FTP آپدیت کنید."
+
+msgid "How to update the theme manually?"
+msgstr "چگونه قالب را به صورت دستی بروزرسانی کنیم؟"
+
+msgid "Update Automatically"
+msgstr "به روز رسانی به صورت خودکار"
+
+#, php-format
+msgid "Your Support Period has expired, %1$sAutomatic Theme Updates%2$s and %1$sSupport System Access%2$s have been disabled. %3$sRenew your Support Period%5$s. Once the support is renewed please go to the %4$stheme registration section%5$s and click on the %1$sRefresh expiration date%2$s button."
+msgstr "دوره پشتیبانی شما منقضی شده است،%1$s به روز رسانی اتوماتیک پوسته%2$s و %1$s دسترسی به سیستم پشتیبانی %2$s برای شما غیر فعال شده اند.%3$s دوره پشتیبانی خود رو تمدید کنید %5$s. برای تمدید پشتیبانی پوسته %4$s به بخش بخش ثبت نام پوسته رفته %5$s و بر روی دکمه %1$s تمدید تاریخ انقضا%2$s کلیک کنید."
+
+msgid "Please Note: Any customizations you have made to theme files will be lost. Please consider using child themes for modifications."
+msgstr "لطفا توجه داشته باشید: هر گونه تغیراتی که بر روی تم انجام داده‌اید از بین خواهد رفت. لطفا از تم کودک برای تغییرات استفاده کنید."
+
+msgid "Congratulations"
+msgstr "تبریک"
+
+msgid "Your site is now validated!, Demo import and bundeled plugins are now unlocked."
+msgstr "سایت شما اکنون تأیید شده است، هم اکنون نصب دموها و دسته افزونه‌های همراه قالب امکان پذیر است."
+
+msgid "Your license is not validated. Click on the link below to unlock demo import, bundeled plugins and access to premium support."
+msgstr "لایسنس شما معتبر نیست.روی لینک زیر کلیک کنید تا به پلاگین, دمو ها و پشتیبانی سایت دسترسی داشته باشید."
+
+msgid "NOTE: A separate license is required for each site using the theme."
+msgstr "توجه: برای هر سایت به یک لایسنس جداگانه از قالب نیاز دارید."
+
+msgid "Have a question about the license? Check this article."
+msgstr "اگر درباره لایسنس سوالی دارید این مقاله را مطالعه کنید."
+
+msgid "You're almost finished!"
+msgstr "تقریبا به پایان رسید!"
+
+msgid "Verify Now!"
+msgstr "اکنون تأیید کنید!"
+
+msgid "Buy a License"
+msgstr "خرید لایسنس محصول"
+
+msgid "Authorization Failed"
+msgstr "خطا در تایید لایسنس"
+
+msgid "ERROR"
+msgstr "خطا"
+
+msgid "Try again"
+msgstr "تلاش مجدد"
+
+msgid "Theme Registration"
+msgstr "ثبت قالب"
+
+msgid "Are you sure?"
+msgstr "آیا مطمئن هستید؟"
+
+msgid "Revoke"
+msgstr "لغو"
+
+msgid "Your Support Period Expiring Soon"
+msgstr "دوره پشتیبانی شما به زودی منقضی می شود"
+
+#, php-format
+msgid "Your Support Period expires on %1$s, active Support Period is requried for %2$sAutomatic Theme Updates%3$s and %2$sSupport System Access%3$s. %4$sGet an extra 6 months of support now%5$s. Once the support is renewed please click on the button bellow."
+msgstr "دوره پشتیبانی شما در%1$s منقضی می شود, برای %2$sبه روز رسانیهای خودکار قالب%3$s و %2$sدسترسی به سیستم پشتیبانی%3$s نیاز به دوره پشتیبانی فعال دارید. %4$sهمین حالا 6 ماه پشتیبانی بیشتر دریافت کنید%5$s. بعد از تمدید دوره پشتیبانی، لطفا روی دکمه زیر کلیک کنید."
+
+msgid "Your Support Period is Active"
+msgstr "دوره پشتیبانی شما فعال است"
+
+msgid "Your Support Period Has Expired"
+msgstr "دوره پشتیبانی شما منقضی شده است"
+
+#, php-format
+msgid "Your Support Period has expired, %1$sAutomatic Theme Updates%2$s and %1$sSupport System Access%2$s have been disabled. %3$sRenew your Support Period%4$s. Once the support is renewed please click on the button bellow."
+msgstr "دوره پشتیبانی شما منقضی شده است،%1$s بروز رسانی اتوماتیک تم%2$s و%1$s سیستم دسترسی پشتیبانی شما%2$s غیر فعال شده است. %3$s دوره پشتیبانی خود%4$s را دوباره به روز کنید. لطفا هنگامی که پشتیبانی تمدید شد، روی دکمه زیر کلیک کنید."
+
+msgid "Refresh Expiration Date"
+msgstr "تمدید تاریخ انقضا"
+
+msgid "More info"
+msgstr "اطلاعات بیشتر"
+
+msgid "Have you changed your mind? :)"
+msgstr "آیا نظر شما تغییر کرده است؟ :)"
+
+#, php-format
+msgid "We noticed that you rated the theme %1$s stars. We are looking to improve our theme so if you need help, please %2$ssubmit a ticket through our support system%5$s or %3$ssubmit your feature requests%5$s, otherwise we highly appreciate your valuable five stars. %4$sClick here to change your rating%5$s."
+msgstr "متوجه شدیم که %1$sستاره را در رتبه بندی وارد کرده اید. هدف ما ارتقا و پیشرفت قالب میباشد پس اگر به کمک نیاز دارید، لطفا%2$s یک تیکت پشتیبانی یا %3$sدرخواستهای ویژه خود را از طریق سیستم پشتیبانی ما%5$s ارسال کنید%5$s، در هر صورت، امتیاز 5 ستاره شما برای ما بسیار ارزشمند است. %4$sبرای تغییر امتیاز اینجا را کلیک کنید%5$s"
+
+msgid "Getting Started"
+msgstr "شروع کنید"
+
+#, php-format
+msgid "Welcome to %s"
+msgstr "به %s خوش آمدید"
+
+#, php-format
+msgid "I just installed the amazing %s #WordPress theme #tielabs"
+msgstr "من تازه %s قالب #وردپرس شگفت انگیز tielabs# را نصب کردم"
+
+#, php-format
+msgid "Version %s"
+msgstr "نسخه %s"
+
+msgid "Header"
+msgstr "هدر"
+
+msgid "Footer"
+msgstr "فوتر"
+
+msgid "Blocks"
+msgstr "بلاک‌ها"
+
+msgid "Archives"
+msgstr "بایگانی"
+
+msgid "Single Post Page"
+msgstr "برگه تک نوشته"
+
+msgid "Share Buttons"
+msgstr "دکمه‌های اشتراک‌گذاری"
+
+msgid "Sidebars"
+msgstr "سایدبار"
+
+msgid "LightBox"
+msgstr "لایت باکس"
+
+msgid "Typography"
+msgstr "تایپوگرافی"
+
+msgid "Translations"
+msgstr "ترجمه‌ها"
+
+msgid "Social Networks"
+msgstr "شبکه‌های اجتماعی"
+
+msgid "Mobile"
+msgstr "موبایل"
+
+msgid "AMP"
+msgstr "AMP"
+
+msgid "Web Notifications"
+msgstr "اعلانات وب"
+
+msgid "Advanced"
+msgstr "پیشرفته"
+
+msgid "WooCommerce"
+msgstr "ووکامرس"
+
+msgid "bbPress"
+msgstr "بی بی پرس"
+
+msgid "BuddyPress"
+msgstr "بادی پرس"
+
+msgid "Export/Import"
+msgstr "خروجی/ورودی"
+
+msgid "Theme Options"
+msgstr "تنظیمات قالب"
+
+msgid "Knowledge Base"
+msgstr "دانش محور"
+
+#, php-format
+msgid "Activate %s"
+msgstr "%s را فعال کنید"
+
+msgid "Update"
+msgstr "بروز رسانی"
+
+msgid "Search"
+msgstr "جستجو"
+
+#, php-format
+msgid "%1$s Copyright %2$s, All Rights Reserved &nbsp;|&nbsp; %3$s Theme by %4$s"
+msgstr "%1$s کپی‌رایت %2$s, تمامی حقوق متعلق است به &nbsp;|&nbsp; %3$s طراح قالب %4$s"
+
+msgid "Custom Author widget"
+msgstr "ابزارک دلخواه نویسنده"
+
+msgid "Custom Author widget content"
+msgstr "محتوای ابزارک دلخواه نویسنده"
+
+msgid "Supports: Text, HTML and Shortcodes."
+msgstr "پشتیبانی از نوشته ها و HTML و کد های کوتاه."
+
+msgid "- Select a menu -"
+msgstr "- یک منو را انتخاب کنید -"
+
+#, php-format
+msgid "You are awesome! Thanks for using our theme, %s is now installed and ready to use! Get ready to build something beautiful :)"
+msgstr "شما عالی هستند! از اینکه از قالب ما استفاده میکنید متشکریم، %s در حال حاضر نصب شد و آماده استفاده است! آماده باشید تا یک چیز زیبا بسازید :)"
+
+#, php-format
+msgid "Need help? We're here %s"
+msgstr "کمک نیاز دارید؟ ما اینجا %s هستیم"
+
+msgid "Submit a Ticket"
+msgstr "ارسال یک تیکت پشتیبانی"
+
+msgid "Need one-to-one assistance? Get in touch with our Support team."
+msgstr "به کمک و راهنمایی یک-به-یک نیاز دارید؟ با تیم پشتیبانی ما تماس بگیرید."
+
+msgid "You need to validated your license to access the support system."
+msgstr "شما باید لایسنس خود را برای دسترسی به سیستم پشتیبانی تایید نمایید."
+
+msgid "This is the place to go to reference different aspects of the theme."
+msgstr "این مکان برای اشاره به جنبه های مختلف پوسته است."
+
+msgid "Browse the Knowledge Base"
+msgstr "نمایش بخش مقالات آموزشی"
+
+msgid "Troubleshooting"
+msgstr "عیب یابی"
+
+msgid "If something is not working as expected, Please try these common solutions."
+msgstr "اگر چیزی مطابق انتظار کار نمی کند، لطفا این راه حل های رایج را امتحان کنید."
+
+msgid "Visit The Page"
+msgstr "مشاهده برگه"
+
+msgid "Section"
+msgstr "بخش"
+
+msgid "Edit Section"
+msgstr "ویرایش بخش"
+
+msgid "Section Title"
+msgstr "عنوان بخش"
+
+msgid "(optional)"
+msgstr "(اختیاری)"
+
+msgid "Title URL"
+msgstr "عنوان URL"
+
+msgid "Title Style"
+msgstr "استایل عنوان"
+
+msgid "Centered"
+msgstr "مرکز"
+
+msgid "Big"
+msgstr "بزرگ"
+
+msgid "Title Color"
+msgstr "رنگ عنوان"
+
+msgid "Section Width"
+msgstr "عرض بخش"
+
+msgid "100% Interior Content Width"
+msgstr "100% عرض متن داخلی"
+
+msgid "Select if the interior content is contained to site width or 100% width."
+msgstr "انتخاب کنید که اندازه محتوا داخلی هماهنگ با عرض سایت باشه یا عرض 100٪ باشد."
+
+msgid "Sidebar Settings"
+msgstr "تنظیمات سایدبار"
+
+msgid "Styling Settings"
+msgstr "تنظیمات استایل"
+
+msgid "Custom Classes"
+msgstr "کلاس‌های دلخواه"
+
+msgid "Margin Top"
+msgstr "فاصله خارجی بالا"
+
+msgid "Margin Bottom"
+msgstr "فاصله خارجی پایین"
+
+msgid "Add Block"
+msgstr "افزودن بلوک"
+
+msgid "Predefined Sidebar"
+msgstr "نوار کناری از پیش تعریف شده"
+
+msgid "Block Title"
+msgstr "عنوان بلوک"
+
+msgid "Ad"
+msgstr "تبلیغ"
+
+msgid "Tabs block"
+msgstr "بلوک تب بندی ها"
+
+msgid "Edit Block"
+msgstr "ویرایش بلوک"
+
+msgid "Advanced Settings"
+msgstr "تنظیمات پیشرفته"
+
+msgid "Custom Title"
+msgstr "عنوان دلخواه"
+
+msgid "Products Categories"
+msgstr "دسته بندی محصولات"
+
+msgid "Will overide the Categories option."
+msgstr "گزینه های دسته بندی را لغو می کند."
+
+msgid "Exclude Posts"
+msgstr "حذف پست‌ها"
+
+msgid "Enter a post ID, or IDs separated by comma."
+msgstr "یک ID پست و یا چندین ID را که با استفاده از کاما از هم جدا شده‌اند، وارد کنید."
+
+msgid "Last Modified Posts"
+msgstr "آخرین مطالب ویرایش شده"
+
+msgid "Most Commented posts"
+msgstr "ارسال‌های دارای بیشترین دیدگاه"
+
+msgid "Most Viewed posts"
+msgstr "پربازدیدترین مطالب"
+
+msgid "Sort Order"
+msgstr "ترتیب مرتب سازی"
+
+msgid "Offset - number of posts to pass over"
+msgstr "Offset - تعداد پست ها برای گذراندن"
+
+msgid "Next and Previous Arrows"
+msgstr "فلش های قبل و بعد"
+
+msgid "Show More"
+msgstr "نمایش بیشتر"
+
+msgid "Ad Image"
+msgstr "تصویر تبلیغاتی"
+
+msgid "Ad URL"
+msgstr "آدرس URL تبلیغات"
+
+msgid "Alternative Text For The image"
+msgstr "متن جایگزین عکس"
+
+msgid "Open The Link In a new Tab"
+msgstr "بازشدن لینک در تب جدید"
+
+msgid "Nofollow?"
+msgstr "دنبال نکردن؟"
+
+msgid "Custom Ad Code"
+msgstr "کد تبلیغات دلخواه"
+
+msgid "Slider Revolution"
+msgstr "رزولیشن اسلایدر"
+
+msgid "No sliders found, add a slider first!"
+msgstr "اسلایدر یافت نشد, لطفا یک اسلایدر ایجاد کنید!"
+
+msgid "Show the content only?"
+msgstr "فقط محتویات را نمایش دهید ؟"
+
+msgid "Without background, padding nor borders."
+msgstr "بدون پس زمینه, لایه و حاشیه‌ها"
+
+msgid "Ajax Filters"
+msgstr "فیلترهای آجکس"
+
+msgid "Will not appear if the numeric pagination is active."
+msgstr "اگر صفحات عددی فعال باشد، صفحه ظاهر نمی شود."
+
+msgid "More Button"
+msgstr "دکمه بارگذاری بیشتر"
+
+msgid "Will not appear if the Block URL is empty."
+msgstr "اگر آدرس بلوک خالی باشد، ظاهر نمی شود."
+
+msgid "Posts Title Length"
+msgstr "طول عنوان مطالب"
+
+msgid "Read More Button"
+msgstr "دکمه بیشتر بخوانید"
+
+msgid "Hide thumbnail for the First post"
+msgstr "پنهان کردن تصویر شاخص برای مطلب اول"
+
+msgid "Hide small thumbnails"
+msgstr "پنهان کردن تصاویر شاخص کوچک"
+
+msgid "Hide thumbnails"
+msgstr "پنهان کردن تصاویر شاخص"
+
+msgid "Slider Speed in ms"
+msgstr "سرعت اسلایدر به میلی ثانیه"
+
+#, php-format
+msgid "Default is: %s"
+msgstr "پیش فرض : %s"
+
+msgid "Animation Effect"
+msgstr "افکت انیمیشن"
+
+msgid "Typing"
+msgstr "ماشین تایپ"
+
+msgid "Fading"
+msgstr "محو شدن"
+
+msgid "Sliding Left"
+msgstr "کشیدن به چپ"
+
+msgid "Sliding Right"
+msgstr "کشیدن به راست"
+
+msgid "Sliding Up"
+msgstr "کشیدن به بالا"
+
+msgid "Sliding Down"
+msgstr "کشیدن به پایین"
+
+msgid "Show the scrolling arrows?"
+msgstr "نمایش جهت های اسکرول؟"
+
+#, php-format
+msgid "Block #%s"
+msgstr "بلوک #%s"
+
+#, php-format
+msgid "Scrolling #%s"
+msgstr "اسکرول #%s"
+
+msgid "News Ticker"
+msgstr "تیتر خبرها"
+
+msgid "Ad Block"
+msgstr "بلوک تبلیغ"
+
+msgid "Custom Content"
+msgstr "محتوای دلخواه"
+
+#, php-format
+msgid "WooCommerce #%s"
+msgstr "ووکامرس #%s"
+
+msgid "Use the Default Editor"
+msgstr "استفاده از ویرایشگر پیش فرض"
+
+msgid "Add Section"
+msgstr "افزودن بخش"
+
+msgid "Save Changes"
+msgstr "ذخیره تغییرات"
+
+msgid "TieLabs"
+msgstr "TieLabs"
+
+msgid "More Themes"
+msgstr "قالبهای بیشتر"
+
+msgid "Need Help? Search the knowledge base"
+msgstr "کمک نیاز دارید؟ در پایگاه دانش ( knowledge base) جستجو کنید"
+
+msgid "Twitter"
+msgstr "توییتر"
+
+msgid "Facebook"
+msgstr "فیس بوک"
+
+msgid "Google+"
+msgstr "گوگل پلاس"
+
+msgid "LinkedIn"
+msgstr "لینکدین"
+
+msgid "StumbleUpon"
+msgstr "‫StumbleUpon"
+
+msgid "Pinterest"
+msgstr "‫پین‌ترست"
+
+msgid "Reddit"
+msgstr "‫رددیت"
+
+msgid "Tumblr"
+msgstr "‫تامبلر"
+
+msgid "VKontakte"
+msgstr "‫VKontakte"
+
+msgid "Odnoklassniki"
+msgstr "‫Odnoklassniki"
+
+msgid "Pocket"
+msgstr "پاکت"
+
+msgid "WhatsApp"
+msgstr "واتس آپ"
+
+msgid "For Mobiles Only"
+msgstr "فقط برای موبایل"
+
+msgid "Telegram"
+msgstr "تلگرام"
+
+msgid "Viber"
+msgstr "وایبر"
+
+msgid "Email"
+msgstr "ایمیل"
+
+msgid "Print"
+msgstr "چاپ"
+
+msgid "Cache"
+msgstr "کش"
+
+msgid "If enabled, some static parts like widgets, main menu and breaking news will be cached to reduce MySQL queries. Saving the theme settings, adding/editing/removing posts, adding comments, updating menus, activating/deactivating plugins, adding/editing/removing terms or updating WordPress, will flush the cache."
+msgstr "اگر فعال باشد، برخی از قطعات استاتیک مانند ویجتها، منوی اصلی و اخبار به منظور کاهش درخواستهای MySQL بصورت کش ذخیره خواهند شد. ذخیره‌ی تنظیمات قالب، اضافه کردن / ویرایش / حذف پست ها، اضافه کردن نظرات، به روز رسانی منوها، فعال کردن / غیرفعال کردن پلاگین ها، اضافه کردن / ویرایش / حذف کلمات و یا به روز رسانی وردپرس، سبب خالی شدن کش ذخیره شده می‌شود."
+
+msgid "Minified CSS and JS files"
+msgstr "کوچک کردن فایل CSS"
+
+msgid "Add a link to the theme options page to the Toolbar"
+msgstr "اضافه کردن لینک تنظیمات قالب به نوار ابزار مدیریت بالای سایت"
+
+msgid "Disable GIF Featured Images"
+msgstr "غیرفعالسازی تصاویر ویژه GIF"
+
+msgid "Disable the custom styles in the editor"
+msgstr "استایل های سفارشی را در ویرایشگر غیرفعال کنید"
+
+msgid "Disable the Posts Switcher"
+msgstr "غیرفعال کردن Posts Switcher"
+
+msgid "This will disable the Switcher page, all notifications and hide the plugin from the Bundeled plugins installing page."
+msgstr "این مورد صفحه Switcher و تمام اعلان ها را غیرفعال می کند و پلاگین را از صفحه نصب پلاگین های همراه پنهان می کند."
+
+msgid "Disable the Built-in Mega Menus"
+msgstr "غیر فعال کردن built in مگا منو"
+
+msgid "Use this option to disable the built-in mega menus feature if you want to use a third party mega menus plugin."
+msgstr "اگر می خواهید ازقسمت سوم افزونه mega mega استفاده کنید ، ازاین گزینه برای غیرفعال کردن ویژگی مگا منو استفاده کنید.\n"
+
+msgid "WordPress Login page Logo"
+msgstr "لوگوی صفحه ورود وردپرس"
+
+msgid "WordPress Login page Logo URL"
+msgstr "آدرس لوگوی صفحه ورود وردپرس"
+
+msgid "Reset All Settings"
+msgstr "بازنشانی همه تنظیمات"
+
+msgid "This action can not be Undo. Clicking \"OK\" will reset your theme options to the default installation. Click \"Cancel\" to stop this operation."
+msgstr "این عمل قابل بازگردانی به قبل نیست با کلیک بر روی «OK» تنظیمات قالب به حالت پیش فرض بازگردانده می شود. برای توقف این عملیات روی لغو کلیک کنید."
+
+msgid "Accelerated Mobile Pages"
+msgstr "صفحات موبایل سریع"
+
+msgid "AMP is a Google-backed project with the aim of speeding up the delivery of content through the use of stripped down code known as AMP HTML, it is a way to build web pages for static content (pages that don't change based on user behaviour), that allows the pages to load (and pre-render in Google search) much faster than regular HTML."
+msgstr "AMP یک پروژه پشتیبانی شده توسط گوگل است که هدف آن سرعت بخشیدن به تحویل محتوا از طریق استفاده از کد تخفیف شناخته شده به عنوان AMP HTML است، این راه برای ساختن صفحات وب برای محتوای استاتیک است (صفحاتی که بر اساس رفتار کاربر تغییر نمی کنند)، که اجازه بارگزاری (و پیش نمایش در جستجوی گوگل) سریعتر صفحات را نسبت به صفحات HTML معمول و قدیمی می دهد."
+
+msgid "You may need to enable pretty permalinks if it isn't working."
+msgstr "اگر کار نمیکند ممکن است به فعالسازی بخش permalinks نیاز داشته باشید"
+
+#, php-format
+msgid "To access the AMP version go to any blog post and add %s to the end of the URL."
+msgstr "برای دسترسی به نسخه AMP، به هر پست وبلاگ بروید و %s را به انتهای URL اضافه کنید."
+
+msgid "Enable AMP"
+msgstr "فعال کردن AMP"
+
+msgid "Post Settings"
+msgstr "تنظیمات مطالب"
+
+msgid "Categories and Tags"
+msgstr "دسته‌بندی‌ها و تگ‌ها"
+
+msgid "Facebook APP ID"
+msgstr "Facebook APP ID"
+
+msgid "(Required)"
+msgstr "(ضروری)"
+
+msgid "Footer Settings"
+msgstr "تنظیمات فوتر"
+
+msgid "Back to top button"
+msgstr "دکمه بازگشت به بالا"
+
+msgid "Footer Logo Image"
+msgstr "تصویر لوگوی فوتر"
+
+msgid "Footer Menu"
+msgstr "منو فوتر"
+
+msgid "Variables"
+msgstr "متغیرها"
+
+msgid "These tags can be included in the textarea above and will be replaced when a page is displayed."
+msgstr "این تگ ها می توانند در قسمت متن در بالا قرار بگیرند و هنگامی که یک صفحه نمایش داده می شود جایگزین می شوند."
+
+msgid "Replaced with the current year."
+msgstr "با سال فعلی جایگزین شد."
+
+msgid "Replaced with The site's name."
+msgstr "با نام سایت جایگزین شد."
+
+msgid "Replaced with The site's URL."
+msgstr "با آدرس سایت جایگزین شد."
+
+msgid "Copyright Text"
+msgstr "متن بخش کپی رایت"
+
+msgid "Above Content"
+msgstr "محتوای بالا"
+
+#, php-format
+msgid "Enter your Ad code, AMP pages support %1$s tag only, %2$sClick Here%3$s For More info."
+msgstr "کد تبلیغ خود را وارد کنید، صفحات AMP فقط از %1$s برچسب پشتیبانی می کنند، %2$s کلیک کنید%3$s برای کسب اطلاعات بیشتر."
+
+msgid "Below Content"
+msgstr "زیر محتویات"
+
+msgid "Header Background Color"
+msgstr "رنگ پس زمینه هدر"
+
+msgid "Post meta Color"
+msgstr "رنگ اطلاعات نوشته"
+
+msgid "Links color"
+msgstr "رنگ لینک ها"
+
+msgid "Footer color"
+msgstr "رنگ فوتر"
+
+msgid "Underline text links on hover"
+msgstr "رنگ متن لینک ها با عبور ماوس"
+
+#, php-format
+msgid "You need to install the %s Plugin first."
+msgstr "نیاز به نصب افزونه %s."
+
+msgid "Archives Settings"
+msgstr "تنظیمات آرشیو"
+
+msgid "Global Archives Settings"
+msgstr "تنظیمات آرشیو کلی"
+
+msgid "Disable Author name meta"
+msgstr "غیر فعال کردن نام نویسنده از متا"
+
+msgid "Disable Comments number meta"
+msgstr "غیر فعال کردن تعداد نظرات در متا"
+
+msgid "Disable Views Number meta"
+msgstr "غیر فعال کردن تعداد بازدید در متا"
+
+msgid "Default Layout Settings"
+msgstr "تنظیمات لایه بندی پیشفرض"
+
+msgid "Category Page Settings"
+msgstr "تنظیمات صفحه موضوعات"
+
+msgid "Category Description"
+msgstr "توضیحات دسته"
+
+msgid "Tag Page Settings"
+msgstr "تنظیمات صفحه برچسب"
+
+msgid "Tag Description"
+msgstr "توضیحات برچسب"
+
+msgid "Author Page Settings"
+msgstr "تنظیمات صفحه نویسنده"
+
+msgid "Author Bio"
+msgstr "بیوگرافی نویسنده"
+
+msgid "Search Page Settings"
+msgstr "تنظیمات صفحه جستجو"
+
+msgid "Search in Category IDs"
+msgstr "جستجو در شناسه های دسته بندی"
+
+msgid "Use minus sign (-) to exclude categories. Example: (1,4,-7) = search only in Category 1 & 4, and exclude Category 7."
+msgstr "از علامت منها (-) برای مستثنی کردن دسته بندیها استفاده کنید. به عنوان مثال : (1,4, 7-) = فقط در دسته بندیهای 1 و 4 جستجو انجام میشود و دسته بندی 7 جستجو نمیشود."
+
+msgid "Exclude post types from search"
+msgstr "نوع ارسالها را از جستجو مستثنی کن"
+
+msgid "Background (in case Boxed / Framed / Bordered layout is enabled)"
+msgstr "پس زمینه (در صورت جعبه ای / فریم / و یا طرح مرزی فعال باشد)"
+
+msgid "Export/Import Theme Options"
+msgstr "برون/درون ریزی تنظیمات قالب"
+
+msgid "The theme options have been imported successfully."
+msgstr "تنظیمات قالب با موفقیت درون ریزی شد."
+
+msgid "Export"
+msgstr "برون‌ ریزی (اکسپورت)"
+
+msgid "When you click the button below the theme will create a .dat file for you to save to your computer."
+msgstr "وقتی روی کلید زیر کلیک کنید قالب یک فایل با پسوند dat. برای ذخیره کردن در کامپیوتر شما ایجاد میکند."
+
+msgid "Once you’ve saved the download file, you can use the Import function in another WordPress installation to import the theme options from this site."
+msgstr "هنگامی که فایل دانلود شده را ذخیره کردید میتوانید از گزینه import (درون ریزی) در یک نصب وردپرس دیگر برای درون ریزی تنظیمات قالب از این سایت به سایت جدید بعدی استفاده کنید."
+
+msgid "Download Export File"
+msgstr "دانلود فایل برون ریزی"
+
+msgid "Import"
+msgstr "درون‌ریزی (ایمپورت)"
+
+msgid "Upload your .dat theme options file and we will import the options into this site."
+msgstr "فایل با پسوند dat. که شامل تنظیمات قالب است را آپلود کنید و ما تنظیمات قالب را در این سایت وارد میکنیم."
+
+msgid "Choose a (.dat) file to upload, then click Upload file and import."
+msgstr "فایل با پسوند dat. را برای آپلود انتخاب کنید, سپس روی کلید آپلود فایل و درون ریزی کلیک کنید."
+
+msgid "Choose a file from your computer:"
+msgstr "فایل را از کامپیوتر خود انتخاب کنید:"
+
+msgid "Upload file and import"
+msgstr "بارگذاری فایل و درون‌ ریزی"
+
+msgid "bbPress Sidebar"
+msgstr "سایدبار بی بی پرس"
+
+msgid "Blocks Settings"
+msgstr "تنظیمات بلوک ها"
+
+msgid "Block Style"
+msgstr "استایل بلوک"
+
+msgid "Clean"
+msgstr "شفاف"
+
+msgid "Block Head Style"
+msgstr "استایل بلوک Head"
+
+msgid "Style"
+msgstr "استایل"
+
+msgid "Blocks Meta Settings"
+msgstr "تنظیمات متای بلوک ها"
+
+msgid "Use the BuddyPress Member Profile link"
+msgstr "از لینک حساب کاربری در بادی-پرس استفاده کن"
+
+msgid "Use the BuddyPress Member Profile link instead of the default author page link in the post meta, author box and the login sections."
+msgstr "از لینک حساب کاربری بادی-پرس به جای صفحه نویسنده مقالات و جعبه نویسنده و بخش ورود استفاده کن"
+
+msgid "Advertisement Settings"
+msgstr "تنظیمات تبلیغات"
+
+msgid "It is recommended to avoid using words like ad, ads, adv, advert, advertisement, banner, banners, sponsor, 300x250, 728x90, etc. in the image names or image path to avoid AdBlocks from blocking your Ad."
+msgstr "توصیه می شود برای جلوگیری از مسدود شدن آگهی خود از نامهای تبلیغاتی مانند آگهی، تبلیغ، تبلیغات، بنر، حامیان، 300x250، 728x90 و غیره استفاده نکنید."
+
+msgid "Ad Blocker Detector"
+msgstr "تشخیص دهنده مسدود کننده تبلیغات"
+
+msgid "Block the adblockers from browsing the site, till they turnoff the Ad Blocker"
+msgstr "تا زمانی که آنها مسدود کننده تبلیغات را غیرفعال کنند, مسدود کننده تبلیغات را از نمایش این وبسایت متوقف کن."
+
+msgid "Background Image Ad"
+msgstr "تبلیغات بصورت تصویر پس زمینه"
+
+msgid "Full Page Takeover"
+msgstr "گرفتن کامل صفحه"
+
+msgid "Site margin top"
+msgstr "حاشیه سایت بالا"
+
+msgid "Above Header Ad"
+msgstr "تیلیغ بالای هدر"
+
+msgid "Header Ad"
+msgstr "تبلیغ هدر"
+
+msgid "Above Footer Ad"
+msgstr "تبلیغ بالای فوتر"
+
+msgid "Below the Header Ad"
+msgstr "تبلیغ زیر فوتر"
+
+msgid "Above Article Ad"
+msgstr "تبلیغ بالای مطلب"
+
+msgid "Above Article Content Ad"
+msgstr "تبلیغ بالای محتوای مطلب"
+
+msgid "Below Article Content Ad"
+msgstr "تبلیغ پایین محتوای مطلب"
+
+msgid "Below Article Ad"
+msgstr "تبلیغ پایین مطلب"
+
+#, php-format
+msgid "Between Posts in Archives #%s"
+msgstr "بین نوشته در بایگانی #%s"
+
+#, php-format
+msgid "Article inline ad #%s"
+msgstr "مقاله تبلیغاتی درون خطی #%s"
+
+msgid "Number of posts before the Ad"
+msgstr "تعداد پست ها قبل از تبلیغ"
+
+msgid "Number of paragraphs before the Ad"
+msgstr "تعداد پاراگراف های قبل از تبلیغ"
+
+msgid "Ad Alignment"
+msgstr "تنظیم تبلیغ"
+
+msgid "Ad Title"
+msgstr "عنوان تبلیغ"
+
+msgid "A title for the Ad, like Advertisement - leave this empty to disable."
+msgstr "عنوانی برای تبلیغ، این را خالی بگذارید تا غیرفعال شود."
+
+msgid "Ad Title Link"
+msgstr "لینک عنوان تبلیغ"
+
+msgid "AdRotate"
+msgstr "چرخش تبلیغ"
+
+msgid "Type"
+msgstr "نوع"
+
+msgid "Advert - Use Advert ID"
+msgstr "آگهی - استفاده از آی دی آگهی تبلیغاتی"
+
+msgid "Group - Use group ID"
+msgstr "گروه - استفاده از شناسه گروه"
+
+msgid "ID"
+msgstr "شناسه"
+
+msgid "Shortcodes Ads"
+msgstr "شورت کد های تبلیغات"
+
+msgid "Ad Shortcode"
+msgstr "شرت کد تبلیغات"
+
+msgid "Instagram Footer Area"
+msgstr "اینستاگرام فوتر"
+
+msgid "Username"
+msgstr "اسم کاربری"
+
+msgid "Media Source"
+msgstr "منبع رسانه"
+
+msgid "User Account"
+msgstr "حساب کاربری"
+
+msgid "Hash Tag"
+msgstr "هشتگ"
+
+msgid "Enter the Username or the Hash Tag"
+msgstr "نام‌کاربری یا هشتگ را وارد کنید"
+
+msgid "Number of Rows"
+msgstr "تعداد سطر ها"
+
+msgid "One Row"
+msgstr "1 سطر"
+
+msgid "Two Rows"
+msgstr "2 سطر"
+
+msgid "Link Images to"
+msgstr "پیوند تصاویر به"
+
+msgid "Videos always linked to the Media Page on Instagram."
+msgstr "ویدیوها همیشه به صفحۀ مدیا در پیج اینستاگرام لینک می‌شوند."
+
+msgid "Link Media to"
+msgstr "لینک رسانه به"
+
+msgid "Media File"
+msgstr "فایل رسانه"
+
+msgid "Media Page on Instagram"
+msgstr "صفحه رسانه در اینستاگرام"
+
+msgid "Follow Us Button"
+msgstr "دکمه ما را دنبال کنید"
+
+msgid "Follow Us Button Text"
+msgstr "متن دکمه ما را دنبال کنید"
+
+msgid "Follow Us Button URL"
+msgstr "لینک دکمه ما را دنبال کنید"
+
+msgid "Footer Widgets layout"
+msgstr "لایه بندی ابزارک فوتر"
+
+msgid "First Footer Widgets Area"
+msgstr "اولین ابزارک فوتر"
+
+msgid "Add border around the widgets area"
+msgstr "حاشیه در اطراف منطقه ابزارک را اضافه کنید"
+
+msgid "Second Footer Widgets Area"
+msgstr "دومین ابزارک فوتر"
+
+msgid "Copyright Area"
+msgstr "بخش کپی رایت"
+
+msgid "Centered Layout"
+msgstr "طرح مرکز"
+
+msgid "Social Icons"
+msgstr "آیکون های اجتماعی"
+
+msgid "Footer Text One"
+msgstr "متن فوتر اول"
+
+msgid "Footer Text Two"
+msgstr "متن فوتر دوم"
+
+msgid "General Settings"
+msgstr "تنظیمات عمومی"
+
+msgid "Date Settings"
+msgstr "تنظیمات تاریخ"
+
+msgid "Date format for blog posts"
+msgstr "قالب تاریخ برای پست های وبلاگ"
+
+msgid "Traditional"
+msgstr "سنتی"
+
+msgid "Time Ago Format"
+msgstr "قالب و شکل زمان سپری شده"
+
+msgid "Disable all"
+msgstr "غیرفعال کردن همه"
+
+msgid "Show the date depending on"
+msgstr "نمایش تاریخ بسته به"
+
+msgid "Post Published Date"
+msgstr "تاریخ انتشار پست"
+
+msgid "Post Modified Date"
+msgstr "تاریخ ویرایش پست"
+
+msgid "Breadcrumbs Settings"
+msgstr "تنظیمات نقشه راه"
+
+msgid "Breadcrumbs"
+msgstr "نقشه راه"
+
+msgid "Breadcrumbs Delimiter"
+msgstr "جدا کننده نقشه راه"
+
+msgid "Trim Text Settings"
+msgstr "تنظیمات برش متن"
+
+msgid "Trim text by"
+msgstr "برش متن براساس"
+
+msgid "Words"
+msgstr "کلمات"
+
+msgid "Characters"
+msgstr "کاراکترها"
+
+msgid "Post format icon on hover"
+msgstr "آیکن فرمت مطلب با عبور ماوس"
+
+msgid "Show the post format icon on hover?"
+msgstr "نمایش آیکن فرمت مطلب با عبور ماوس؟"
+
+msgid "Custom Codes"
+msgstr "کدهای دلخواه"
+
+msgid "Header Code"
+msgstr "کد هدر"
+
+msgid "Will add to the &lt;head&gt; tag. Useful if you need to add additional codes such as CSS or JS."
+msgstr "کد زیر در بالای سایت قبل از تگ &lt;head&gt; نمایش داده خواهد شد. اگر شما نیاز به اضافه کردن کدهای اضافی مانند CSS یا JS دارید مفید خواهد بود."
+
+msgid "Footer Code"
+msgstr "کد فوتر"
+
+msgid "Will add to the footer before the closing  &lt;/body&gt; tag. Useful if you need to add Javascript."
+msgstr "کد زیر در پایین سایت قبل از بسته شدن تگ   &lt;/body&gt; نمایش داده خواهد شد. می توانید کدهای جاوا اسکریپت را اضافه کنید."
+
+msgid "Header Settings"
+msgstr "تنظیمات هدر"
+
+msgid "Header Layout"
+msgstr "طرح هدر"
+
+msgid "Main Nav Settings"
+msgstr "تنظیمات منوی اصلی"
+
+msgid "Secondry Nav Settings"
+msgstr "تنظیمات منو ثانویه"
+
+msgid "Boxed Layout"
+msgstr "طرح جعبه ای"
+
+msgid "Below The Header"
+msgstr "زیر هدر"
+
+msgid "Today's date"
+msgstr "تاریخ امروز"
+
+msgid "Today's date format"
+msgstr "فرمت تاریخ امروز"
+
+msgid "Documentation on date and time formatting"
+msgstr "مستندات مربوط به قالب بندی تاریخ و زمان"
+
+msgid "Left Area"
+msgstr "ناحیه چپ"
+
+msgid "Menu"
+msgstr "منو"
+
+msgid "Breaking News"
+msgstr "خبر فوری"
+
+msgid "Right Area"
+msgstr "ناحیه راست"
+
+msgid "Secondry Nav Components"
+msgstr "قطعات منو ثانویه"
+
+msgid "Title"
+msgstr "عنوان"
+
+msgid "Trending"
+msgstr "موضوعات داغ"
+
+msgid "Enter a tag name, or names separated by comma."
+msgstr "نام یک برچسب را وارد کنید. برای وارد کردن چند برچسب همزمان از کاما (,) برای جدا کردن آنها استفاده کنید."
+
+msgid "Text and Link are required."
+msgstr "متن و لینک ضروری است."
+
+msgid "Above The Header"
+msgstr "بالای هدر"
+
+msgid "Main Nav Components"
+msgstr "قطعات منو اصلی"
+
+msgid "Sticky Menu"
+msgstr "منو چسبیده"
+
+msgid "Sticky Menu behavior"
+msgstr "رفتار منو چسبیده"
+
+msgid "When scrolling upwards"
+msgstr "هنگام اسکرول کردن به سمت بالا"
+
+msgid "Sticky Menu Logo"
+msgstr "لوگو منو چسبیده"
+
+msgid "Custom Sticky Menu Logo"
+msgstr "لوگو دلخواه در منو چسبیده"
+
+msgid "Use this option to set a custom logo in the sticky menu or Disable it to use the main logo."
+msgstr "از این گزینه برای تنظیم لوگوی سفارشی در منوی چسبنده استفاده کنید یا آن را غیرفعال کنید تا از لوگوی اصلی استفاده شود."
+
+msgid "Live Search"
+msgstr "جستجوی زنده"
+
+msgid "Search Layout"
+msgstr "طرح صفحه جستجو"
+
+msgid "Compact"
+msgstr "فشرده"
+
+msgid "Type To Search"
+msgstr "برای شروع جستجو تایپ کنید"
+
+msgid "Slide Sidebar"
+msgstr "سایدبار اسلاید شونده"
+
+msgid "Log In"
+msgstr "ورود"
+
+msgid "Random Article Button"
+msgstr "دکمه نوشته تصادفی"
+
+msgid "Shopping Cart"
+msgstr "سبد خرید"
+
+msgid "BuddyPress Notifications"
+msgstr "اعلانات بادی پرس"
+
+msgid "Social icons layout"
+msgstr "طرح آیکون‌های شبکه‌های اجتماعی"
+
+msgid "Menu with names"
+msgstr "منو با نامها"
+
+msgid "Grid Menu"
+msgstr "منو شبکه ای"
+
+msgid "Weather"
+msgstr "آب و هوا"
+
+msgid "Location"
+msgstr "موقعیت جغرافیایی"
+
+msgid "(i.e: London,UK or New York City)"
+msgstr "(مثلا: Tehran)"
+
+msgid "Custom City Name"
+msgstr "نام شهر دلخواه"
+
+msgid "API Key"
+msgstr "کلید API"
+
+msgid "How to get your API Key?"
+msgstr "چگونه کلید API خود را دریافت کنم؟"
+
+msgid "Units"
+msgstr "واحد ها"
+
+msgid "Animated Icons?"
+msgstr "آیکون های متحرک؟"
+
+msgid "Site Width"
+msgstr "عرض سایت"
+
+msgid "Controls the overall site width. In px or %, ex: 100% or 1170px."
+msgstr "عرض کلی سایت را تعیین می‌کند. به پیکسل (px) یا درصد (%) . برای مثال : 100% یا 1170px"
+
+msgid "Theme Layout"
+msgstr "قالب لایه بندی"
+
+msgid "Loader Icon"
+msgstr "آیکن بارگزاری"
+
+msgid "Lightbox Settings"
+msgstr "تنظیمات لایت باکس"
+
+msgid "Enable Lightbox Automatically"
+msgstr "فعال سازی خودکار لایت باکس"
+
+msgid "Enable Lightbox automatically for all images linked to an image file in the post content area"
+msgstr "لایت باکس را به صورت خودکار برای تمامی تصاویری که به یک عکس در بخش محتوا پستها متصل است را فعال کن"
+
+msgid "Lightbox for Galleries"
+msgstr "لایت باکس برای گالری ها"
+
+msgid "Enable Lightbox automatically for all images added via [gallery] shortcode in the content area"
+msgstr "لایت باکس را به صورت خودکار برای تمامی عکسها که با کد [gallery] در بخش محتوا اضافه شده است را فعال کن"
+
+msgid "Lightbox Skin"
+msgstr "پوسته لایت باکس"
+
+msgid "Lightbox Thumbnail Position"
+msgstr "مکان تصویر شاخص لایت باکس"
+
+msgid "Vertical"
+msgstr "عمودی"
+
+msgid "Horizontal"
+msgstr "افقی"
+
+msgid "Show Lightbox Arrows"
+msgstr "نمایش دکمه های جهت لایت باکس"
+
+msgid "Favicon"
+msgstr "آیکون FAV"
+
+msgid "Click here to set a Site Icon (favicon)"
+msgstr "برای قرار دادن  favicon سایت اینجا  کلیک کنید"
+
+msgid "Mobile Settings"
+msgstr "تنظیمات موبایل"
+
+msgid "Disable the Responsiveness"
+msgstr "غیرفعال کردن واکنشگرایی"
+
+msgid "This option works only on Tablets and Phones."
+msgstr "این گزینه فقط بر روی تبلت وموبایل کار می‌کند."
+
+msgid "Mobile Header"
+msgstr "هدر در حالت موبایل"
+
+msgid "Sticky Header"
+msgstr "هدر چسپان"
+
+msgid "Mobile Menu"
+msgstr "منو موبایل"
+
+msgid "Mobile Menu Layout"
+msgstr "چیدمان منوی موبایل"
+
+msgid "Show menu text beside the icon"
+msgstr "نمایش متن منو در کنار آیکن"
+
+msgid "Parent items as links"
+msgstr "آیتم های والد به عنوان لینک"
+
+msgid "If disabled, parent menu items will only toggle child items."
+msgstr "اگر غیرفعال باشد، آیتم های منوی والد لینک نخواهند داشت و با کلیک فقط زیرمنوها را نمایش خواهند داد."
+
+msgid "Include the Top Menu items"
+msgstr "شامل آیتم های منو بالایی"
+
+msgid "Show the icons"
+msgstr "نمایش آیکن ها"
+
+msgid "Main Nav Menu"
+msgstr "منو اصلی"
+
+msgid "Main Nav and Secondary Nav Menus"
+msgstr "منو های ناوبری اصلی و ثانویه"
+
+msgid "Compact the post content and show more button"
+msgstr "محتوای مطلب را فشرده  می‌کند و دکمه \"نمایش بیشتر\" را نشان میدهد"
+
+msgid "Mobile Elements"
+msgstr "المان های موبایل"
+
+msgid "Hide Above header Ad"
+msgstr "مخفی کردن تبلیغ بالای هدر"
+
+msgid "Hide header Ad"
+msgstr "عدم نمایش  تبلیغ هدر"
+
+msgid "Hide Below the header Ad"
+msgstr "عدم نمایش تبلیغ زیر هدر"
+
+msgid "Hide above the footer Ad"
+msgstr "عدم نمایش تبلیغ بالای فوتر"
+
+msgid "Hide Header Breaking News"
+msgstr "عدم نمایش اخبار جدید هدر"
+
+msgid "Hide all sidebars"
+msgstr "مخفی کردن تمام سایدبارها"
+
+msgid "Hide Instagram Media Above Footer"
+msgstr "عدم نمایش محتوای اینستاگرام در فوتر"
+
+msgid "Hide copyright area"
+msgstr "عدم نمایش بخش کپی رایت"
+
+msgid "Hide Breadcrumbs"
+msgstr "عدم نمایش نوار موقعیت یاب"
+
+msgid "Hide Above Post share Buttons"
+msgstr "عدم نمایش دکمه اشتراک گذاری بالای پست"
+
+msgid "Hide Below Post share Buttons"
+msgstr "عدم نمایش دکمه اشتراک گذاری پایین پست"
+
+msgid "Hide Below Post Newsletter"
+msgstr "عدم نمایش خبرنامه پایین پست"
+
+msgid "Hide Below Post Read Next"
+msgstr "پنهان سازی  بعدی را بخوانید پایین  مطلب"
+
+msgid "Hide Below Post Related posts"
+msgstr "پنهان سازی مطالب مرتبط پایین پست"
+
+msgid "Hide Below Post Author Box"
+msgstr "عدم نمایش باکس نویسنده پایین پست"
+
+msgid "Hide Below Post Next/Prev posts"
+msgstr "عدم نمایش پست های قبلی / بعدی در پایین پست ها"
+
+msgid "Hide Back to top button"
+msgstr "عدم نمایش دکمه بازگشت به بالا"
+
+msgid "Sticky Mobile Share Buttons"
+msgstr "دکمه های اشتراک گذاری چسبیده موبایل"
+
+msgid "Post Views Settings"
+msgstr "تنظیمات تعداد بازدید پست‌ها"
+
+msgid "Post Views Source"
+msgstr "منبع بازدید پست‌ها"
+
+msgid "Theme's module"
+msgstr "ماژول قالب"
+
+msgid "Jetpack plugin by Automattic"
+msgstr "بصورت خودکار بر روی پلاگین Jetpack"
+
+msgid "Third party post views plugin"
+msgstr "پلاگین نمایش تعداد بازدید های پست"
+
+msgid "Post meta field"
+msgstr "فیلد اطلاعات نوشته"
+
+msgid "Chnage this if you have used a post views plugin before."
+msgstr "اگر قبلا از پلاگین بازدیدهای پست استفاده کرده اید این را تغییر دهید."
+
+msgid "Starter Post Views number"
+msgstr "عدد شروع کننده شمارش تعداد بازدیدهای پستها"
+
+msgid "This will applied on the new Posts only."
+msgstr "این فقط در پست های جدید اعمال خواهد شد."
+
+msgid "Colored Post Views Numbers"
+msgstr "اعداد رنگی برای بازدید پست"
+
+#, php-format
+msgid "%s Min. Views Number"
+msgstr "%s حداقل تعداد بازدید ها"
+
+msgid "WARM"
+msgstr "گرم"
+
+msgid "HOT"
+msgstr "داغ"
+
+msgid "VERY HOT"
+msgstr "خیلی داغ"
+
+msgid "Single Post Page Settings"
+msgstr "تنظیمات محتویات برگه تک نوشته"
+
+msgid "Default Posts Layout"
+msgstr "طرح مطالب پیش فرض"
+
+msgid "Default Schema type"
+msgstr "نوع شمای پیش فرض"
+
+msgid "Video Post Format:"
+msgstr "قالب پست ویدیویی:"
+
+msgid "Sticky the Featured Video"
+msgstr "ویدئو ویژه را به صورت چسبیده نمایش دهید"
+
+msgid "Open Graph meta"
+msgstr "متا Open Graph"
+
+msgid "Default Open Graph Image"
+msgstr "عکس پیش فرض Open Graph"
+
+msgid "Reading Position Indicator"
+msgstr "شاخص موقعیت مطالعه"
+
+msgid "Post Author Box"
+msgstr "باکس نویسنده نوشته"
+
+msgid "In Post Responsive Tables"
+msgstr "جداول واکنشگرا در مطلب"
+
+msgid "Disable this option if you use a custom responsive tables plugin."
+msgstr "این گزینه را غیرفعال کنید اگر از یک افزونه سفارشی جداول استفاده می کنید."
+
+msgid "Post info Settings"
+msgstr "تنظیمات اطلاعات مطالب"
+
+msgid "Post meta area"
+msgstr "ناحیه اطلاعات نوشته"
+
+msgid "Author"
+msgstr "نویسنده"
+
+msgid "Author's Avatar"
+msgstr "عکس نویسنده"
+
+msgid "Twitter Icon"
+msgstr "آیکون توئیتر"
+
+msgid "Email Icon"
+msgstr "آیکون ایمیل"
+
+msgid "Date"
+msgstr "تاریخ"
+
+msgid "Comments"
+msgstr "نظرها"
+
+msgid "Views"
+msgstr "بازدیدها"
+
+msgid "Estimated reading time"
+msgstr "زمان تخمینی مطالعه"
+
+msgid "Text above the Email input field"
+msgstr "متن بالای فیلد ورود ایمیل"
+
+msgid "MailChimp Form Action URL"
+msgstr "نشانی اینترنتی فعال سازی MailChimp"
+
+msgid "Feedburner ID"
+msgstr "آیدی فیدبرنر"
+
+msgid "Related Posts Position"
+msgstr "موقعیت پست های مرتبط"
+
+msgid "Below The Post"
+msgstr "در زیر پست"
+
+msgid "Below The Comments"
+msgstr "در زیر نظرات"
+
+msgid "Above The Footer"
+msgstr "بالای فوتر"
+
+msgid "Number of posts to show in Full width pages"
+msgstr "تعداد نوشته های نمایش داده شده در صفحه تمام عرض"
+
+msgid "Posts in the same Categories"
+msgstr "نوشته‌های با دسته‌بندی یکسان"
+
+msgid "Posts in the same Tags"
+msgstr "نوشته های با برچسب یکسان"
+
+msgid "Posts by the same Author"
+msgstr "نوشته‌های با نویسنده‌ی یکسان"
+
+msgid "Read Next Slider"
+msgstr "اسلایدر بعدی را بخوانید"
+
+msgid "Read Next Style"
+msgstr "سبک بعدی را بخوانید"
+
+#, php-format
+msgid "Read Next #%s"
+msgstr "بعدی را بخوانید #%s"
+
+msgid "Check Also"
+msgstr "همچنین ببینید"
+
+msgid "Check Also Box Position"
+msgstr "موقعیت جعبه \"همچنین ببینید\""
+
+msgid "Share Settings"
+msgstr "تنظیمات اشتراک گذاری"
+
+msgid "Share Buttons for Pages"
+msgstr "دکمه‌های اشتراک گذاری در برگه‌ها"
+
+msgid "Use the post's Short Link"
+msgstr "استفاده از لینک کوتاه برای نوشته"
+
+msgid "Twitter Username"
+msgstr "نام کاربری توئیتر"
+
+msgid "Center the buttons"
+msgstr "دکمه ها را در وسط قرار دهید"
+
+msgid "Show the share title"
+msgstr "نمایش عنوان اشتراک گذاری"
+
+#, php-format
+msgid "You can change the \"%s\" text from the Translation tab."
+msgstr "شما می توانید متن \"%s\"را از برگه ترجمه تغییر دهید."
+
+msgid "Share"
+msgstr "اشتراک گذاری"
+
+msgid "Share Buttons Style"
+msgstr "حالت دکمه های اشتراک گذاری"
+
+msgid "Select and Share"
+msgstr "انتخاب و اشتراک گذاری"
+
+msgid "When you double-click a word or highlight a few words, a small share icons are displayed. When you click an icon, a share modal will automatically launch, containing the text you selected along with a link to the post."
+msgstr "زمانی که شما بر روی یک کلمه دوباره کلیک میکنید یا بخشی از یک متن را انتخاب می نمایید، یک آیکون کوچک اشتراک گذاری نمایش داده می شود. وقتی شما بر روی یک آیکون کلیک کنید، بصورت اتوماتیک متنی که  انتخاب کرده اید به همراه لینک مطلب آماده‌ی اشتراک گذاری  در شبکه‌ی انتخاب شده خواهد شد."
+
+msgid "Sidebars Settings"
+msgstr "تنظیمات سایدبارها"
+
+msgid "Widgets icon"
+msgstr "آیکن ویجت‌ها"
+
+msgid "Default Sidebar Position"
+msgstr "مکان پیشفرض سایدبار"
+
+msgid "Add Custom Sidebar"
+msgstr "افزودن سایدبار دلخواه"
+
+msgid "Sidebar Name"
+msgstr "نام سایدبار"
+
+msgid "Please add a name for the sidebar."
+msgstr "لطفا نام سایدبار را اضافه کنید."
+
+msgid "Custom Sidebars"
+msgstr "سایدبارهای دلخواه"
+
+msgid "Home Sidebar"
+msgstr "سایدبار صفحه اصلی"
+
+msgid "Single Page Sidebar"
+msgstr "سایدبار تک صفحه"
+
+msgid "Single Article Sidebar"
+msgstr "سایدبار تک مقاله"
+
+msgid "Archives Sidebar"
+msgstr "سایدبار آرشیو"
+
+msgid "RSS"
+msgstr "خوراک"
+
+msgid "Custom Social Network"
+msgstr "شبکه‌های اجتماعی دلخواه"
+
+msgid "Icon"
+msgstr "آیکون"
+
+msgid "Use the full Font Awesome icon name"
+msgstr "از نام کامل آیکون Font Awesome  استفاده کنید"
+
+msgid "URL"
+msgstr "آدرس URL"
+
+msgid "Lazy Load For Images"
+msgstr "لود مرحله ای برای تصاویر"
+
+msgid "Apply custom styling by inline code"
+msgstr "ظاهر سفارشی رو برای کد های inline اعمال کنید"
+
+msgid "check this option if you have problems with styling because of styling file rewrite permissions."
+msgstr "اگر بخاطر سطح دسترسی برای ویرایش(نوشتن) فایل استایل در عملیات استایل دچار مشکل هستید این گزینه را علامت بزنید"
+
+msgid "Custom Body Classes"
+msgstr "کلاس‌های دلخواه بدنه"
+
+msgid "Predefined skins"
+msgstr "پوسته های از پیش تعریف شده"
+
+msgid "Choose a Skin"
+msgstr "انتخاب پوسته"
+
+msgid "Blue"
+msgstr "آبی"
+
+msgid "Yellow"
+msgstr "زرد"
+
+msgid "Alizarin"
+msgstr "رنگ روناسی"
+
+msgid "Sand"
+msgstr "شن . ماسه"
+
+msgid "Royal"
+msgstr "سلطنتی"
+
+msgid "Mint"
+msgstr "نعنا"
+
+msgid "Stylish Red"
+msgstr "قرمز شیک"
+
+msgid "Twilight"
+msgstr "تاریک و روشن"
+
+msgid "Coffee"
+msgstr "کافه ای"
+
+msgid "Ocean"
+msgstr "اقیانوس"
+
+msgid "Cyan"
+msgstr "رنگ آبی متمایل به سبز, یشمی"
+
+msgid "Sahifa"
+msgstr "صحیفه"
+
+msgid "Mist"
+msgstr "غبار .مه . تاریکی"
+
+msgid "Serene"
+msgstr "آرام"
+
+msgid "Fall"
+msgstr "پاییزی"
+
+msgid "Custom Primary Color"
+msgstr "رنگ اصلی دلخواه"
+
+msgid "Body"
+msgstr "بدنه"
+
+msgid "Disable Boxed/Framed Layout Shadows"
+msgstr "غیرفعال کردن سایه‌های طرح‌بندی جعبه‌ای / قابی"
+
+msgid "Highlighted Text Color"
+msgstr "رنگ متن هایلایت شده(انتخاب شده)"
+
+msgid "Links Text Color"
+msgstr "رنگ متن لینک‌ها"
+
+msgid "Links text HOVER color"
+msgstr "رنگ متن لینک‌ها حین قرارگیری موس"
+
+msgid "Borders Color"
+msgstr "رنگ حاشیه ها"
+
+msgid "Secondary Nav"
+msgstr "منوی ثانویه"
+
+msgid "Text Color"
+msgstr "رنگ متن"
+
+msgid "Links Color"
+msgstr "رنگ لینک‌ها"
+
+msgid "Links Color on mouse over"
+msgstr "رنگ لینک وقتی موس روی آن می‌رود"
+
+msgid "Breaking news label background"
+msgstr "پس زمینه برچسب خبر فوری"
+
+msgid "Rainbow Line Above Header"
+msgstr "خط رنگین کمان بالای سربرگ"
+
+msgid "Disable Header Shadows"
+msgstr "غیر فعال سازی سایه های هدر"
+
+msgid "Main Navigation Styling"
+msgstr "استایل منوی اصلی"
+
+msgid "Main Nav Border Top Color"
+msgstr "رنگ بالای حاشیه منوی اصلی"
+
+msgid "Main Nav Border Top Width"
+msgstr "عرض بالای حاشیه منوی اصلی"
+
+msgid "Main Nav Border Bottom Color"
+msgstr "رنگ پایین حاشیه منوی اصلی"
+
+msgid "Main Nav Border Bottom Width"
+msgstr "عرض پایین حاشیه منوی اصلی"
+
+msgid "Main Content Styling"
+msgstr "استایل محتوای اصلی"
+
+msgid "In Post Links Color"
+msgstr "رنگ لینک‌های درون مطالب"
+
+msgid "In Post Links Color on mouse over"
+msgstr "رنگ لینک‌های درون مطالب وقتی که موس روی آن‌ می‌رود"
+
+msgid "Footer Border Top"
+msgstr "حاشیه‌ی بالایی فوتر"
+
+msgid "Widgets Title color"
+msgstr "رنگ عنوان ویجت‌ها"
+
+msgid "Footer Margin Top"
+msgstr "فاصله خارجی بالا فوتر"
+
+msgid "Footer Padding Top"
+msgstr "فاصله داخلی بالای فوتر"
+
+msgid "Footer Padding Bottom"
+msgstr "فاصله داخلی پایین فوتر"
+
+msgid "Back to top button Background Color"
+msgstr "رنگ پس زمینه‌ی دکمه بازگشت به بالا"
+
+msgid "Back to top button Arrow Color"
+msgstr "رنگ فلش دکمه بازگشت به بالا"
+
+msgid "Mobile Menu Icon"
+msgstr "آیکون منو موبایل"
+
+msgid "links color"
+msgstr "رنگ لینک ها"
+
+msgid "Social Icons color"
+msgstr "رنگ آیکون‌های شبکه‌های اجتماعی"
+
+msgid "Search Button color"
+msgstr "رنگ دکمه جستجو"
+
+msgid "Mobile Menu Background"
+msgstr "پس زمینه منو موبایل"
+
+msgid "Gradient"
+msgstr "ترکیبی از 2 رنگ"
+
+msgid "Background Gradient Color 1"
+msgstr "رنگ اول ترکیبی پس زمینه"
+
+msgid "Background Gradient Color 2"
+msgstr "رنگ دوم ترکیبی پس زمینه"
+
+msgid "Tablets"
+msgstr "تبلت ها"
+
+msgid "768px - 1024px"
+msgstr "‫768px - 1024px"
+
+msgid "Phones"
+msgstr "گوشی ها"
+
+msgid "0 - 768px"
+msgstr "‫0 - 768px"
+
+msgid "Translations Settings"
+msgstr "تنظیمات ترجمه"
+
+msgid "Typography Settings"
+msgstr "تنظیمات تایپوگرافی"
+
+msgid "Body Font Family"
+msgstr "خانواده فونت بدنه"
+
+msgid "Headings Font Family"
+msgstr "نوع فونت سربرگ ها"
+
+msgid "Primary menu Font Family"
+msgstr "خانواده فونت منو اصلی"
+
+msgid "Blockquote Font Family"
+msgstr "فونت نقل قول"
+
+msgid "Theme Defaults"
+msgstr "پیش فرض قالب"
+
+msgid "Standard Fonts"
+msgstr "فونت های استاندارد"
+
+msgid "Google Fonts"
+msgstr "فونت های Google"
+
+msgid "FontFace.me Fonts"
+msgstr "فونت های FontFace.me"
+
+msgid "Upload Custom Font"
+msgstr "آپلود فونت دلخواه"
+
+msgid "Any external fonts (e.g. Typekit)"
+msgstr "هر فونت خارجی (به عنوان مثال Typekit)"
+
+msgid "Font Family"
+msgstr "نوع فونت"
+
+msgid "Choosing a lot of Variants may make your pages slow to load."
+msgstr "انتخاب گزینه‌های زیاد ممکن است بارگیری صفحات شما را کند کند."
+
+msgid "Font Variants"
+msgstr "انواع فونت"
+
+msgid "Please, make sure that chosen font supports chosen weight."
+msgstr "لطفا مطمئن شوید که فونت انتخاب شده از وزن انتخاب شده پشتیبانی می کند."
+
+msgid "Thin 100 Italic"
+msgstr "نازک 100 Italic"
+
+msgid "Extra 200 Light Italic"
+msgstr "بسیار نازک 200 Italic"
+
+msgid "Light 300 Italic"
+msgstr "نازک 300 Italic"
+
+msgid "Regular 400 Italic"
+msgstr "عادی 400 Italic"
+
+msgid "Medium 500 Italic"
+msgstr "500 Italic معمولی"
+
+msgid "Semi 600 Bold Italic"
+msgstr "نیمه ضخیم 600 Italic"
+
+msgid "Bold 700 Italic"
+msgstr "ضخیم 700 Italic"
+
+msgid "Extra 800 Bold Italic"
+msgstr "بسیار ضخیم 800 Italic"
+
+msgid "Black 900 Italic"
+msgstr " مشکی 900 Italic"
+
+msgid "Embed code for the &lt;head&gt; section"
+msgstr "قراردادن کد امبد برای بخش &lt;head&gt;"
+
+msgid "Enter the value for 'font-family' attribute, also you can specify the stack of the fonts."
+msgstr "مقدار مربوط به ویژگی font-family را وارد کنید، همچنین می توانید ستون فونت را مشخص کنید."
+
+#, php-format
+msgid "%s Font File"
+msgstr "%sفایل فونت"
+
+msgid "Google Web Font Character sets"
+msgstr "تنظیم کاراکترهای فونت های گوگل"
+
+msgid "Choosing a lot of Character sets may make your pages slow to load."
+msgstr "انتخاب کاراکترهای زیاد باعث می شود صفحات دیر تر بارگذاری شوند."
+
+msgid "Latin charset by default. Include additional character sets for fonts (make sure at http://www.google.com/fonts/ before that charset is available for chosen font)"
+msgstr "مجموعه کاراکترهای لاتین به طور پیش فرض شامل  کاراکترهای اضافی برای فونت هستند (با بررسی http://www.google.com/fonts/ قبل از استفاده از کاراکتر مورد نظر، مطمئن شوید که فونت انتخابی شما از کاراکتر مربوطه پشتیبانی کند)"
+
+msgid "Font Sizes, Weights and Line Heights"
+msgstr "اندازه فونت و ضخامت و فاصله بین خطوط"
+
+msgid "Font Weight Tips:"
+msgstr "نکات مربوط به ضخامت فونت:"
+
+msgid "- If you use a google font, make sure to load the font weight in 'Google Font Variants' field that corresponds to the one in parenthesis here."
+msgstr "- اگر از یک فونت گوگل استفاده می کنید، مطمئن شوید که وزن فونت را که با مقدار داخل پرانتز برابر است را در قسمت  'Google Font Variants' بارگزاری کنید"
+
+msgid "- Browser standard fonts in general support only 'Normal (400)' and 'Bold (700)' font weights."
+msgstr "- فونت های استاندارد مرورگر به طور کلی تنها از وزن های فونت عادی (400) و  ضخیم (700) پشتیبانی می کند."
+
+msgid "Header Site name"
+msgstr "نام هدر سایت"
+
+msgid "Secondary Menu"
+msgstr "منو ثانویه"
+
+msgid "Secondary sub menus"
+msgstr "زیرمنوهای منو ثانویه"
+
+msgid "Main Navigation"
+msgstr "منوی اصلی"
+
+msgid "Main Navigation sub menus"
+msgstr "زیر منوی های منو اصلی"
+
+msgid "Breaking News Label"
+msgstr "برچسب خبر فوری"
+
+msgid "Breaking News post titles"
+msgstr "عنوان مطلب اخبار فوری"
+
+msgid "Buttons"
+msgstr "دکمه ها"
+
+msgid "Post Categories Label"
+msgstr "برچسب دسته بندی های مطلب"
+
+msgid "Single Post Title"
+msgstr "عنوان تک نوشته"
+
+msgid "Archive Page Title"
+msgstr "عنوان برگه آرشیو"
+
+msgid "Post Titles in Homepage Sliders"
+msgstr "عنوان مطلب در اسلایدرهای های صفحه اصلی"
+
+msgid "Medium Post Titles in Homepage Sliders"
+msgstr "عنوان متوسط مطلب در اسلایدرهای های صفحه اصلی"
+
+msgid "Small Post Titles in Homepage Sliders"
+msgstr "عنوان کوچک مطلب در بلاک های صفحه اصلی"
+
+msgid "Post Titles in Homepage Blocks"
+msgstr "عنوان نوشته در بلاک های صفحه اصلی"
+
+msgid "Medium Post Titles in Homepage Blocks"
+msgstr "عنوان متوسط مطلب در بلاک های صفحه اصلی"
+
+msgid "Small Post Titles in Homepage Blocks"
+msgstr "عنوان کوچک نوشته در بلاک های صفحه اصلی"
+
+msgid "Single Post Page Content"
+msgstr "محتویات برگه تک نوشته"
+
+msgid "Blockquotes"
+msgstr "نقل قول"
+
+msgid "Blocks Titles"
+msgstr "عنوان بلاک‌ها"
+
+msgid "Widgets Titles"
+msgstr "عنوان‌های ویجت‌ها"
+
+msgid "Footer Widgets Titles"
+msgstr "عنوان‌های ویجت‌های فوتر"
+
+msgid "Post Heading:"
+msgstr "پست هدینگ :"
+
+msgid "Web Push notifications allow your users to opt-in to timely updates from your website. and allow you to effectively re-engage them with customized, engaging content whenever they are online, wherever they may be - even on their phones! It's easy to set up, and no technical skills are required."
+msgstr "اعلانهای اجباری وبسایت به کاربران شما اجازه میدهند تا به روزرسانیهای زمانبندی شده وبسایت شما را انتخاب کنند و به شما فرصت میدهد تا به طور موثر کاربران خود را هر زمان که آنلاین هستند-هر زمان که از گوشی موبایل خود استفاده میکنند با محتوای سفارشی و جذاب دوباره وارد وبسایت خود کنید! تنظیمات و راه‌اندازی این بخش راحت است و نیازی به هیچ توانایی و تخصصی ندارد."
+
+msgid "Sign up for FREE"
+msgstr "رایگان عضو شوید"
+
+msgid "FoxPush Setup"
+msgstr "نصب FoxPush"
+
+msgid "One more step!"
+msgstr "یک مرحله دیگر باقی مانده!"
+
+msgid "Make sure you are logged into FoxPush."
+msgstr "اطمینان حاصل کنید که به حساب FoxPush وارد شده اید."
+
+msgid "From the navigation panel on the admin dashboard, click on Settings and then on API Keys."
+msgstr "در منو پنل در صفحه داشبورد , روی تنظیمات و سپس کلیدهای API کلیک کنید."
+
+msgid "Click on Generate New Key."
+msgstr "روی ایجاد کلید جدید کلیک کنید."
+
+msgid "Choose your Domain Name. then click the Generate button."
+msgstr "نام دامنه خود را انتخاب کنید. سپس روی دکمه Generate کلیک کنید."
+
+msgid "Copy the Domain and the key and add them in the fields below."
+msgstr "دامنه و کلید را کپی کرده و آنها را در فیلدهای زیر اضافه کنید."
+
+msgid "FoxPush Domain"
+msgstr "دامین FoxPush"
+
+msgid "Statistics (Updated Hourly)"
+msgstr "آمار (به روز شده در ساعت)"
+
+msgid "Subscribers"
+msgstr "مشترک ها"
+
+msgid "Campaigns"
+msgstr "کمپین ها"
+
+msgid "Total Views"
+msgstr "مجموع بازدیدها"
+
+msgid "Total Clicks"
+msgstr "مجموع کلیک ها"
+
+msgid "WooCommerce Settings"
+msgstr "تنظیمات ووکامرس"
+
+msgid "Number of products per page"
+msgstr "تعداد محصولات در هر صفحه"
+
+msgid "Number of the related products"
+msgstr "تعداد محصولات مرتبط"
+
+msgid "WooCommerce Sidebar Position"
+msgstr "موقعیت سایدبار ووکامرس"
+
+msgid "WooCommerce Product Page Sidebar Position"
+msgstr "موقعیت سایدبار در صفحه تک محصول را انتخاب کنید"
+
+msgid "No products found"
+msgstr "محصولی یافت نشد"
+
+msgid "This Block requires the WooCoomerce plugin."
+msgstr "این بلاک به افزونه ووکامرس نیاز دارد."
+
+msgid "Primary Sidebar"
+msgstr "سایدبار اصلی"
+
+msgid "Adblock Detected"
+msgstr "Adblock رو غیر فعال کنید"
+
+msgid "Please consider supporting us by disabling your ad blocker"
+msgstr "بخشی از درآمد سایت با تبلیغات تامین می شود لطفا با غیر فعال کردن ad blocker از ما حمایت کنید"
+
+msgid "No More Posts"
+msgstr "مطالب بیشتری وجود ندارد"
+
+msgid "Nothing Found"
+msgstr "چیزی پیدا نشد"
+
+msgid "View all results"
+msgstr "نمایش همه نتایج"
+
+#, php-format
+msgid "This section contains some shortcodes that requries the %2$s%1$s%3$s Plugin."
+msgstr "این بخش شامل برخی از کد کوتاه است که به پلاگین %2$s%1$s%3$s نیاز دارد."
+
+msgid "Read More &raquo;"
+msgstr "بیشتر بخوانید &raquo;"
+
+msgid "Web Notification Campaigns"
+msgstr "کمپین (Web Notification) اعلانات وب"
+
+msgid "Send a Web Notification"
+msgstr "ارسال (Web Notification) اعلانات وب"
+
+msgid "Sent"
+msgstr "ارسال"
+
+msgid "Clicks"
+msgstr "کلیک ها"
+
+msgid "You need to validated your license to use this feature."
+msgstr "شما باید لایسنس خودتون رو برای استفاده از این ویژگی تأیید کنید."
+
+msgid "You need to publish the post first."
+msgstr "شما اول باید پست را منتشر کنید."
+
+msgid "Message"
+msgstr "پیام"
+
+msgid "Upload Icon"
+msgstr "آپلود آیکون"
+
+#, php-format
+msgid "Recommended size is %1spx x %2spx"
+msgstr "اندازه توصیه شده %1spx x %2spx است"
+
+msgid "Send"
+msgstr "ارسال"
+
+msgid "Requried data Missing"
+msgstr "اطلاعات ضروری گمشده"
+
+msgid "Can not access the image from your server, send the Campaign from your account on FoxPush.com"
+msgstr "نمی توانید به تصویر از سرور خود دسترسی پیدا کنید، کمپین را از حساب خود در FoxPush.com ارسال کنید"
+
+msgid "Campaign has been sent"
+msgstr "کمپین فرستاده شده است"
+
+msgid "Can not find the user!"
+msgstr "کاربر مورد نظر پیدا نشد"
+
+msgid "Can not connect to Instagram!"
+msgstr "نمیتواند به اینستاگرام متصل شود"
+
+msgid "Can not fetch the images!"
+msgstr "نمیتواند تصاویر را فراخوانی کند"
+
+msgid "Can not decoding the instagram json"
+msgstr "نمیتواند اینستاگرام json را رمز گشایی کند"
+
+msgid "Something went wrong!"
+msgstr " چیزی اشتباه رفت"
+
+msgid "All"
+msgstr "همه"
+
+msgid "Custom Settings:"
+msgstr "تنظیمات دلخواه:"
+
+msgid "(Only for Main Nav)"
+msgstr "(فقط برای منو اصلی)"
+
+msgid "Label Text"
+msgstr "متن برچسب"
+
+msgid "Label Background"
+msgstr "پس زمینه لیبل"
+
+msgid "Menu Icon"
+msgstr "آیکون منو"
+
+msgid "Show the icon only?"
+msgstr "فقط آیکن را نمایش بده؟"
+
+msgid "Enable The Mega Menu?"
+msgstr "فعال سازی مگامنو؟"
+
+msgid "Posts - Vertical Sub-Categories Filter"
+msgstr "پست ها - فیلتر زیر دسته های عمودی"
+
+msgid "Posts - Horizontal Sub-Categories Filter"
+msgstr "پست ها - فیلتر زیر دسته های افقی"
+
+msgid "Posts - 1st Post Highlighted"
+msgstr "پست ها - اولین پست ویژه"
+
+msgid "Mega Menu Columns"
+msgstr "ستون های مگامنو"
+
+msgid "Number of Mega Menu Columns"
+msgstr "تعداد ستون های مگامنو"
+
+msgid "Hide Mega Menu headings?"
+msgstr "مخفی کردن سربرگ های مگامنو؟"
+
+msgid "Mega Menu Background Image"
+msgstr "تصویر بک گراند مگامنو"
+
+msgid "repeat"
+msgstr "تکرار"
+
+msgid "repeat-x"
+msgstr "تکرار-x"
+
+msgid "repeat-y"
+msgstr "تکرار-y"
+
+msgid "Padding Right"
+msgstr "فاصله داخلی راست"
+
+msgid "Padding left"
+msgstr "فاصله داخلی چپ"
+
+msgid "Min Height"
+msgstr "حداقل ارتفاع"
+
+#, php-format
+msgid "%s (Invalid)"
+msgstr "%s (اشتباه)"
+
+#, php-format
+msgid "%s (Pending)"
+msgstr "%s (فاصله داخلی)"
+
+msgid "sub item"
+msgstr "زیر آیتم"
+
+msgid "Move up"
+msgstr "انتقال به بالا"
+
+msgid "Move down"
+msgstr "انتقال به پایین"
+
+msgid "Edit Menu Item"
+msgstr "ویرایش منو"
+
+msgid "Navigation Label"
+msgstr "برچسب راهنما"
+
+msgid "Title Attribute"
+msgstr "عنوان نشان"
+
+msgid "Open link in a new window/tab"
+msgstr "بازشدن در صفحه/تب جدید"
+
+msgid "CSS Classes (optional)"
+msgstr "کلاسهای CSS (اختیاری)"
+
+msgid "Link Relationship (XFN)"
+msgstr "لینک مرتبط (XFN)"
+
+msgid "Description"
+msgstr "توضیحات"
+
+msgid "The description will be displayed in the menu if the current theme supports it."
+msgstr "در صورت پشتیبانی قالب این توضیحات در منو نمایش داده خواهد شد."
+
+msgid "Move"
+msgstr "جابجایی"
+
+msgid "Up one"
+msgstr "یکی بالا"
+
+msgid "Down one"
+msgstr "یکی پایین"
+
+msgid "To the top"
+msgstr "به بالا"
+
+#, php-format
+msgid "Original: %s"
+msgstr "اصل: %s"
+
+msgid "Previous page"
+msgstr "صفحه قبلی"
+
+msgid "Next page"
+msgstr "صفحه بعدی"
+
+msgid "First"
+msgstr "ابتدا"
+
+msgid "Last"
+msgstr "انتها"
+
+msgid "&raquo;"
+msgstr "&raquo;"
+
+msgid "&laquo;"
+msgstr "&laquo;"
+
+msgid "You need to set the API key and Location."
+msgstr "ابزارک آب و هوا: شما نیاز به مکان و کلید API دارید."
+
+msgid "km/h"
+msgstr "کیلومتر/ساعت"
+
+msgid "mph"
+msgstr "مایل/ساعت"
+
+msgid "humidity:"
+msgstr "رطوبت:"
+
+msgid "wind:"
+msgstr "باد:"
+
+msgid "Thunderstorm"
+msgstr "رعد و برق"
+
+msgid "Drizzle"
+msgstr "باران ریز"
+
+msgid "Light Rain"
+msgstr "باران سبک"
+
+msgid "Heavy Rain"
+msgstr "باران شدید"
+
+msgid "Rain"
+msgstr "باران"
+
+msgid "Snow"
+msgstr "برف"
+
+msgid "Clear Sky"
+msgstr "آسمان صاف"
+
+msgid "Scattered Clouds"
+msgstr "ابرهای پراکنده"
+
+#, php-format
+msgid "Search Results for: %s"
+msgstr "نتیجه جستجو برای :%s"
+
+msgid "Website"
+msgstr "وبسایت"
+
+msgid "Dashboard"
+msgstr "پیشخوان"
+
+msgid "Your Profile"
+msgstr "پروفایل شما"
+
+msgid "Log Out"
+msgstr "خروج"
+
+msgid "Welcome"
+msgstr "خوش آمدید"
+
+msgid "Password"
+msgstr "رمز عبور"
+
+msgid "Forget?"
+msgstr "رمز عبور را فراموش کرده اید؟"
+
+msgid "Remember me"
+msgstr "مرا به خاطر بسپار"
+
+msgid "Don't have an account?"
+msgstr "آیا حساب کاربری ندارید؟"
+
+msgid "Optional Custom Feed URL, Leave it empty to use the default WordPress feed URL."
+msgstr "آدرس فید سفارشی دلخواه ، برای استفاده از آدرس  پیش فرض وردپرس، این فیلد را خالی بگذارید."
+
+msgid "Dribbble"
+msgstr "دریبببل"
+
+msgid "Flickr"
+msgstr "تصاویر فلیکر"
+
+msgid "YouTube"
+msgstr "یوتیوب"
+
+msgid "Digg"
+msgstr "Digg"
+
+msgid "Vimeo"
+msgstr "ویمیو"
+
+msgid "WordPress"
+msgstr "وردپرس"
+
+msgid "Yelp"
+msgstr "Yelp"
+
+msgid "Last.FM"
+msgstr "Last.FM"
+
+msgid "Dropbox"
+msgstr "دراپ باکس"
+
+msgid "Xing"
+msgstr "Xing"
+
+msgid "DeviantArt"
+msgstr "دِویان آرت"
+
+msgid "Apple"
+msgstr "اپل"
+
+msgid "Foursquare"
+msgstr "فوراسکوئر"
+
+msgid "GitHub"
+msgstr "گیت ‌هاب"
+
+msgid "SoundCloud"
+msgstr "ساند کلود"
+
+msgid "Behance"
+msgstr "بیهنس"
+
+msgid "Instagram"
+msgstr "اینستاگرام"
+
+msgid "Paypal"
+msgstr "پی‌پال"
+
+msgid "Spotify"
+msgstr "اسپاتیفای"
+
+msgid "Google Play"
+msgstr "گوگل پلی"
+
+msgid "500px"
+msgstr "‫500px"
+
+msgid "vk.com"
+msgstr "‫vk.com"
+
+msgid "Bitbucket"
+msgstr "‫بیت باکت"
+
+msgid "Mixcloud"
+msgstr "‫میکس کلاود"
+
+msgid "Medium"
+msgstr "متوسط"
+
+msgid "Twitch"
+msgstr "‫توئیچ"
+
+msgid "Vine"
+msgstr "‫واین"
+
+msgid "Viadeo"
+msgstr "‫Viadeo"
+
+msgid "Snapchat"
+msgstr "‫اسنپ چت"
+
+msgid "TripAdvisor"
+msgstr "‫TripAdvisor"
+
+msgid "Type and hit Enter"
+msgstr "تایپ کنید و کلید اینتر را بزنید"
+
+msgid "page"
+msgstr "صفحه"
+
+#, php-format
+msgid "%s ago"
+msgstr "%s پیش"
+
+msgid "Pages"
+msgstr "صفحات"
+
+msgid "Authors"
+msgstr "نویسندگان"
+
+msgid "Share via Email"
+msgstr "اشتراک گذاری از طریق ایمیل"
+
+#, php-format
+msgid "About %s"
+msgstr "درباره‌ی %s"
+
+#, php-format
+msgid "By %s"
+msgstr "توسط %s"
+
+msgid "Popular"
+msgstr "پرخواننده"
+
+msgid "Recent"
+msgstr "تازه"
+
+msgid "Search for"
+msgstr "جستجو برای"
+
+msgid "Price:"
+msgstr "قيمت:"
+
+msgid "Quantity:"
+msgstr "تعداد:"
+
+msgid "Cart Subtotal:"
+msgstr "مجموع سبد خرید:"
+
+msgid "View Cart"
+msgstr "نمایش سبد خرید"
+
+msgid "Proceed to Checkout"
+msgstr "تسویه حساب"
+
+msgid "Go to the shop"
+msgstr "رفتن به فروشگاه"
+
+msgid "Random Article"
+msgstr "نوشته تصادفی"
+
+msgid "Follow"
+msgstr "دنبال کردن"
+
+msgid "Subscribe"
+msgstr "مشترک شوید"
+
+msgid "Related Articles"
+msgstr "نوشته های مشابه"
+
+msgid "Read Next"
+msgstr "بعدی را بخوانید"
+
+msgid "Videos"
+msgstr "ویدیوها"
+
+msgid "Follow us on Flickr"
+msgstr "مارا در Flickr دنبال کنید"
+
+msgid "Follow Us"
+msgstr "ما را دنبال کنید"
+
+msgid "Follow us on Twitter"
+msgstr "مارا در Twitter دنبال کنید"
+
+msgid "Less than a minute"
+msgstr "کمتر از یک دقیقه"
+
+#, php-format
+msgid "%s hours read"
+msgstr "خواندن این مطلب %s ساعت زمان میبرد"
+
+msgid "1 minute read"
+msgstr "خواندن این مطلب 1 دقیقه زمان میبرد"
+
+#, php-format
+msgid "%s minutes read"
+msgstr "خواندن این مطلب %s دقیقه زمان میبرد"
+
+msgid "No new notifications"
+msgstr "اعلان جدیدی نیست"
+
+msgid "Notifications"
+msgstr "اعلانات"
+
+msgid "Show Less"
+msgstr "نمایش کمتر"
+
+msgid "View your shopping cart"
+msgstr "دیدن سبد خرید"
+
+msgid "Enter your Email address"
+msgstr "آدرس ایمیل خود را وارد کنید"
+
+msgid "Your cart is currently empty."
+msgstr "سبد خرید شما در حال حاضر خالی است."
+
+msgid "Type your search words then press enter"
+msgstr "عبارتی که میخواهید سرچ کنید وارد کنید سپس اینتر را بزنید"
+
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "به نظر میرسد نمیتوانیم آنچه را که به دنبال آن هستید را پیدا کنیم. شاید جستجو کمکتان کند."
+
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "متاسفیم,مطلبی مرتبط با عبارت شما پیدا نشد. لطفا عبارت خود را تغییر داده و مجددا تلاش نمایید."
+
+#, php-format
+msgid "This theme requires at least PHP version 5.3. You are running version %s. Please upgrade and try again."
+msgstr "این قالب نیاز به حداقل PHP نسخه 5.3 دارد. شما در حال اجرای نسخه %s هستید لطفا ارتقا دهید و دوباره امتحان کنید."
+
+msgid "Edit Post"
+msgstr "ویرایش پست"
+
+msgid "(no title)"
+msgstr "(بدون عنوان)"
+
+#, php-format
+msgid "This section contains some shortcodes that requries the %s Plugin. Install it from the Theme Menu &gt; Install Plugins."
+msgstr "این بخش شامل برخی از کد کوتاه است که به %s نیاز دارد. شما می توانید آن را از منوی تنظیمات تم &lt; نصب پلاگین نصب کنید."
+
+msgid "Best Reviews"
+msgstr "بهترین بررسی ها"
+
+msgid "- Select a slider -"
+msgstr "- یک اسلایدر را انتخاب کنید-"
+
+msgid "- Select a category -"
+msgstr "- یک دسته بندی رو انتخاب کنید -"
+
+#, php-format
+msgid "Control WooCommerce sidebar settings from the theme options page &gt; %1$sWooCommerce settings%2$s."
+msgstr "تنظیمات نوار کناری WooCommerce را از صفحه گزینه های قالب کنترل کنید &lt; %1$sتنظیمات ووکامرس%2$s."
+
+#, php-format
+msgid "The customizer import file is missing! File path: %s"
+msgstr "فایل شخصی ساز جهت درون ریزی پیدا نشد! مسیر فایل: %s"
+
+msgid "The customizer import file is not in a correct format. Please make sure to use the correct customizer import file."
+msgstr "فرمت فایل درون ریزی شخصی ساز صحیح نیست. لطفا مطمئن شوید که فرمت فایل صحیح است."
+
+msgid "The customizer import file is not suitable for current theme. You can only import customizer settings for the same theme or a child theme."
+msgstr "فایل درون‌ ریز کاستومایزر(شخصی ساز) برای قالب فعلی مناسب نیست. شما فقط می‌توانید فایل کاستومایزر را برای قالب خودش یا قالب کودک خودش استفاده کنید."
+
+#, php-format
+msgid "URL for %s%s%s file is not defined!"
+msgstr "URL برای فایل %s%s%s مشخص نشده است!"
+
+#, php-format
+msgid "An error occurred while fetching %s%s%s file from the server!%sReason: %s - %s."
+msgstr "هنگام دریافت فایل %s%s%s از سرور، خطایی رخ داد!%s دلیل : %s - %s."
+
+#, php-format
+msgid "An error occurred while writing file to your server! Tried to write a file to: %s%s."
+msgstr "هنگام نوشتن فایل در سرور شما خطایی رخ داد! تلاش برای نوشتن یک فایل به: %s%s."
+
+#, php-format
+msgid "An error occurred while reading a file from your server! Tried reading file from path: %s%s."
+msgstr "هنگام نوشتن فایل در سرور شما خطایی رخ داد! تلاش کردیم فایل را ازاین مسیر بخوانیم : %s%s."
+
+#, php-format
+msgid "This WordPress page does not have %sdirect%s write file access. This plugin needs it in order to save the demo import xml file to the upload directory of your site. You can change this setting with these instructions: %s."
+msgstr "این صفحه وردپرس اجازه نوشتن در فایل %sdirect%s را ندارد. این افزونه برای ذخیره فایل xml دموها در شاخه وبسایت شما به اجازه نوشتن در این فایل نیاز دارد. شما می توانید این تنظیمات را با این دستورالعمل تغییر دهید: %s."
+
+msgid "One Click Demo Import"
+msgstr "نصب دمو با یک کلیک"
+
+msgid "Import Demo Data"
+msgstr "درون ریزی و نصب اطلاعات دمو"
+
+msgid "An error occurred while retrieving reading/writing permissions to your server (could not retrieve WP filesystem credentials)!"
+msgstr "خطایی در حین دریافت سطوح دسترسی خواندن/نوشتن از سرور شما به وقوع پیوست (نتوانستیم اطلاعات حساب سیستم فایل وردپرس را دریافت کنیم)!"
+
+msgid "Your WordPress login credentials don't allow to use WP_Filesystem!"
+msgstr "اعتبار ورود وردپرس شما اجازه استفاده از WP_Filesystem را نمیدهد!"
+
+#, php-format
+msgid "%sYour user role isn't high enough. You don't have permission to import demo data.%s"
+msgstr "%s سطح دسترسی حساب کاربری شما به اندازه‌ی کافی بالا نیست. شما اجازه‌ی درون‌ریزی اطلاعات دمو را ندارید. %s"
+
+msgid "Please upload XML file for content import. If you want to import widgets or customizer settings only, please use Widget Importer & Exporter or the Customizer Export/Import plugin."
+msgstr "لطفا فایل XML را برای درون‌ریزی محتوا آپلود کنید. اگر می‌خواهید فقط ویجت‌ها یا تنظیمات کاستومایزر(شخصی ساز) را ایمپورت کنید، لطفا از پلاگین درون‌ریز و برون‌بر ویجت یا پلاگین درون‌ریز/برون‌بر کاستومایزر استفاده کنید."
+
+msgid "Upload files"
+msgstr "بارگذاری فایلها"
+
+#, php-format
+msgid "Widget file was not uploaded. Error: %s"
+msgstr "فایل ویجت آپلود نشده است. خطا: %s"
+
+#, php-format
+msgid "Customizer file was not uploaded. Error: %s"
+msgstr "فایل شخصی ساز بارگذاری نشد. خطای %s"
+
+msgid "The import files were successfully uploaded!"
+msgstr "فایل‌های درون ریزی شده با موفقیت آپلود شدند!"
+
+#, php-format
+msgid "MAX EXECUTION TIME = %s"
+msgstr "حداکثر زمان اجرا = %s"
+
+#, php-format
+msgid "Files info:%1$sSite URL = %2$s%1$sData file = %3$s%1$sWidget file = %4$s%1$sCustomizer file = %5$s"
+msgstr "اطلاعات فایل:%1$s URL سایت = %2$s%1$s اطلاعات فایل = %3$s%1$s فایل ویجت = %4$s%1$s فایل شخصی سازی = %5$s"
+
+msgid "not defined!"
+msgstr "تعریف نشده!"
+
+msgid "Widget import file could not be found."
+msgstr "فایل درون ریزی ویجت یافت نشد."
+
+msgid "Widget import data could not be read. Please try a different file."
+msgstr "امکان خواندن اطلاعات درون ریزی ویجت وجود ندارد. لطفا فایل دیگری را امتحان کنید."
+
+msgid "Sidebar does not exist in theme (moving widget to Inactive)"
+msgstr "سایدبار در قالب وجود ندارد(در حال انتقال ویجت به بخش غیرفعال‌ها)"
+
+msgid "Site does not support widget"
+msgstr "سایت از ویجت پشتیبانی نمی‌کند"
+
+msgid "Widget already exists"
+msgstr "ابزارک از قبل موجود است"
+
+msgid "Imported"
+msgstr "درون ریزی با موفقیت انجام شد"
+
+msgid "Imported to Inactive"
+msgstr "به بخش غیرفعال‌ها درون‌ریزی شد"
+
+msgid "No Title"
+msgstr "بدون عنوان"
+
+msgid "No results for widget import!"
+msgstr "درون‌ریزی ویجت نتیجه‌ای در پی نداشت!"
+
+msgid "Demo Import"
+msgstr "نصب دمو"
+
+msgid "Demo data has been successfully uninstalled"
+msgstr "دمو با موفقیت حذف شد"
+
+msgid "Importing demo data (post, pages, images, theme settings, ...) is the easiest way to setup your theme. It will allow you to quickly edit everything instead of creating content from scratch. When you import the data, the following things might happen:"
+msgstr "درون‌ریزی اطلاعات دمو(پست، صفحات، تصاویر، تنظیمات قالب، ...) راحت‌ترین راه برای تنظیم سریع قالب است. از این طریق می‌توانید اطلاعات را ویرایش کنید و سریعتر به نتیجه برسید تا اینکه همه چیز را از پایه بسازید. با درون‌ریزی اطلاعات، این موارد ممکن است اتفاق بیافتند:"
+
+msgid "No existing posts, pages, categories, images, custom post types or any other data will be deleted or modified."
+msgstr "هیچ پستی، صفحات، دسته ها، تصاویر، انواع پست های موجود یا سایر اطلاعات موجود، حذف یا اصلاح نخواهند شد."
+
+msgid "Posts, pages, images, widgets and menus will get imported."
+msgstr "پست ها، صفحات، تصاویر، ویدجت ها و منوها درون ریزی می شوند."
+
+msgid "Please click \"Import Demo Data\" button only once and wait, it can take a couple of minutes."
+msgstr "لطفا فقط یکبار روی درون ریزی کلیک کنید \"وارد کردن داده نسخه ی دمو\" صبر کنید، ممکن است چند دقیقه طول بکشد."
+
+msgid "Before you begin, make sure all the required plugins are activated."
+msgstr "قبل از شروع، مطمئن شوید تمام پلاگین های مورد نیاز فعال شده اند."
+
+msgid "Live Demo"
+msgstr "پیشنمایش زنده"
+
+msgid "Important Notes:"
+msgstr "نکات مهم:"
+
+msgid "We recommend to run Demo Import on a clean WordPress installation."
+msgstr "توصیه می‌کنیم که از درون‌ریز دمو بر روی یک نسخه‌ی تازه نصب شده‌ی وردپرس استفاده کنید."
+
+msgid "The Demo Import will not import the images we have used in our live demos, due to copyright / license reasons."
+msgstr "درون‌ریز دمو، تصاویری که ما در دموهای پیش نمایش استفاده کرده‌ایم، به دلیل قوانین کپی‌رایت، ایمپورت نخواهد کرد."
+
+msgid "Do not run the Demo Import multiple times one after another, it will result in double content."
+msgstr "درون‌ریز اطلاعات دمو را چند بار پشت سر هم اجرا کنید، چون باعث تولید مطالب و محتوای تکراری می‌شود."
+
+msgid "Visit Site"
+msgstr "مشاهده سایت"
+
+msgid "Importing Demo Content..."
+msgstr "در حال درون‌ریزی محتوای دمو ..."
+
+msgid "Please be patient and do not navigate away from this page while the import is in progress. This can take a while if your server is slow."
+msgstr "لطفا صبور باشید و این صفحه را تا زمانی که درون‌ریزی محتوای دمو در حال انجام است، ترک نکنید. این فرآیند ممکن است کمی به طول بیانجامد."
+
+msgid "Please be patient and do not navigate away from this page while the import is in progress.\tThis can take a while if your server is slow."
+msgstr "لطفا صبور باشید و در حالی که درون ریزی در حال انجام است، از این صفحه حرکت نکنید. اگر سرور شما کند باشد، ممکن است کمی طول بکشد."
+
+msgid "You will be notified via this page when the import is completed."
+msgstr "پیش از اتمام درون‌ریزی از طریق همین صفحه به شما اطلاع داده می‌شود."
+
+msgid "No preview image defined for this import."
+msgstr "تصویر پیش‌نمایشی برای این درون‌ریزی تعیین نشده است."
+
+msgid "Manually uploaded files"
+msgstr "فایل‌های آپلودشده‌ی دستی"
+
+msgid "Downloaded files"
+msgstr "فایل‌های دانلود شده"
+
+msgid "No import files specified!"
+msgstr "هیچ فایلی برای درون‌ریزی تعیین نشده است!"
+
+msgid "Completed"
+msgstr "تکمیل شد"
+
+msgid "That's it, all done!"
+msgstr "بدرستی انجام و تکمیل شد."
+
+#, php-format
+msgid "The demo import has finished. Now you can see the result at %1$syour site%2$s or start customize via %3$sTheme Options%2$s."
+msgstr "درون‌ ریزی دمو به پایان رسید. شما می‌توانید نتیجه را در %1$s سایت خودتان %2$s ببینید یا از بخش %3$s تنظیمات قالب %2$s را شخصی سازی کنید."
+
+#, php-format
+msgid "%1$sThe demo import has finished, but there were some import errors.%2$sMore details about the errors can be found in this %3$s%5$slog file%6$s%4$s%7$s"
+msgstr "%1$s درون ریزی نسخه ی دمو به پایان رسید، اما چند خطا در هنگام درون ریزی وجود داشت.%2$s جزئیات بیشتر در مورد خطاها %3$s%5$s در این فایل یافت می شود %6$s%4$s%7$s"
+
+msgid "Importing content"
+msgstr "درون ریزی محتوا"
+
+msgid "Importing widgets"
+msgstr "درون ریزی ویجتها"
+
+msgid "Importing customizer settings"
+msgstr "درون ریزی تنظیمات شخصی سازی"
+
+msgid "Could not open the file for parsing"
+msgstr "نتوانستیم فایل را برای پردازش باز کنیم"
+
+#, php-format
+msgid "This WXR file (version %s) is newer than the importer (version %s) and may not be supported. Please consider updating."
+msgstr "این فایل WXR (با نسخه%s) از نسخه درون ریزی شده (با نسخه%s) جدیدتر است و ممکن است پشتیبانی نشود. لطفا به روزرسانی کنید."
+
+msgid "The file does not exist, please try again."
+msgstr "فایل وجود ندارد، لطفا دوباره امتحان کنید."
+
+msgid "Invalid author mapping"
+msgstr "نگاشت نویسنده نامعتبر است"
+
+msgid "Cannot import auto-draft posts"
+msgstr "پست‌های پیش‌نویس شده‌ی خودکار را نمی‌توان درون‌ریزی (ایمپورت) کرد"
+
+#, php-format
+msgid "Failed to import \"%s\": Invalid post type %s"
+msgstr "درون ریزی: \"%s\" موفق نبود نوع پست %s نامعتبر است"
+
+#, php-format
+msgid "%s \"%s\" already exists."
+msgstr "%s \"%s\" از قبل موجود است"
+
+#, php-format
+msgid "Skipping attachment \"%s\", fetching attachments disabled"
+msgstr "در حال رد کردن پیوست ضمیمه \"%s\"، دریافت فایلهای ضمیمه غیرفعال است"
+
+#, php-format
+msgid "Failed to import \"%s\" (%s)"
+msgstr "درون ریزی \"%s\" (%s) انجام نشد"
+
+#, php-format
+msgid "Imported \"%s\" (%s)"
+msgstr "درون ریزی \"%s\" (%s) انجام شد"
+
+#, php-format
+msgid "Post %d remapped to %d"
+msgstr "پست %d دوباره به %d"
+
+msgid "Invalid file type"
+msgstr "این نوع از فایل پشتیبانی نمی شود"
+
+#, php-format
+msgid "Failed to import user \"%s\""
+msgstr "درون‌ریزی کاربر \"\"%s\" ناموفق بود"
+
+#, php-format
+msgid "Imported user \"%s\""
+msgstr "کاربر درون ریزی شده \"%s\""
+
+#, php-format
+msgid "User %d remapped to %d"
+msgstr "کاربر %d به کاربر %d اختصاص داده شد"
+
+#, php-format
+msgid "Failed to import %s %s"
+msgstr "درون ریزی %s %s با مشکل مواجه شد"
+
+#, php-format
+msgid "Term %d remapped to %d"
+msgstr "دوره %d دوباره به %d منتقل شد"
+
+#, php-format
+msgid "Remote server returned %1$d %2$s for %3$s"
+msgstr "بازگشت از ریموت سرور %1$d %2$s برای %3$s"
+
+msgid "Remote file is incorrect size"
+msgstr "اندازه فایل از راه دور اشتباه است"
+
+msgid "Zero size file downloaded"
+msgstr "فایل به اندازه صفر دانلود شده است"
+
+#, php-format
+msgid "Remote file is too large, limit is %s"
+msgstr "فایل از راه دور خیلی بزرگ است،اندازه فایل محدود به %s است"
+
+#, php-format
+msgid "Running post-processing for post %d"
+msgstr "فرآیند پردازش-پست برای پست %d انجام شد"
+
+#, php-format
+msgid "Could not find the post parent for \"%s\" (post #%d)"
+msgstr "والد پست برای \"%s\" (post #%d) یافت نشد"
+
+#, php-format
+msgid "Post %d was imported with parent %d, but could not be found"
+msgstr "پست %d با والد درون ریزی شد %d، اما نمی توان پیداش کرد"
+
+#, php-format
+msgid "Could not find the author for \"%s\" (post #%d)"
+msgstr "نویسنده برای \"%s\" (post #%d) یافت نشد"
+
+#, php-format
+msgid "Post %d was imported with author \"%s\", but could not be found"
+msgstr "پست %d با نویسنده \"%s\" درون ریزی شد اما پست وجود ندارد"
+
+#, php-format
+msgid "Post %d was marked for post-processing, but none was required."
+msgstr "پست %d برای پردازش post-processing مشخص شد، اما هیچ موردی مورد نیاز نبود."
+
+#, php-format
+msgid "Could not update \"%s\" (post #%d) with mapped data"
+msgstr "نتوانستیم\"%s\" (پست#%d) را با داده های نگاشت شده به روزرسانی کنیم"
+
+#, php-format
+msgid "Could not find the menu object for \"%s\" (post #%d)"
+msgstr "آبجکت منو برای \"%s\" (پست#%d) یافت نشد"
+
+#, php-format
+msgid "Post %d was imported with object \"%d\" of type \"%s\", but could not be found"
+msgstr "پست %d با آبجکت \"%d\" از نوع \"%s\", وارد شد است اما نمی توان پیدایش کرد"
+
+#, php-format
+msgid "Could not find the comment parent for comment #%d"
+msgstr "امکان پیدا کردن نظر والد برای نظر #%d وجود ندارد"
+
+#, php-format
+msgid "Comment %d was imported with parent %d, but could not be found"
+msgstr "نظر %d به همراه نظر والد %d درون ریزی شد اما امکان یافتن آن وجود ندارد"
+
+#, php-format
+msgid "Could not find the author for comment #%d"
+msgstr "نویسنده‌ی کامنت #%d یافت نشد"
+
+#, php-format
+msgid "Comment %d was imported with author %d, but could not be found"
+msgstr "نظر%d با نویسنده %d درون ریزی شد، اما نمیتوان پیدایش کرد"
+
+#, php-format
+msgid "Could not update comment #%d with mapped data"
+msgstr "نمیتوانید نظر#%d را با داده های نگاشت شده به روزرسانی کنید"
+
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "نصب پلاگین: %s"
+
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr "آپدیت پلاگین: %s"
+
+msgid "Something went wrong with the plugin API."
+msgstr "اشکالی در API پلاگین رخ داد."
+
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "این قالب به پلاگین زیر نیاز دارد: %1$s."
+
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] "برای استفاده از این قالب افزونه %1$s توصیه می شود."
+
+#, php-format
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+msgstr[0] "این پلاگین برای حداکثر کردن تطابق با قالب شما نیاز به بروزرسانی به آخرین نسخه دارد: %1$s"
+
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] "بروزرسانی برای %1$s وجود دارد."
+
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] "این پلاگین ضروری در حال حاضر غیر فعال است: %1$s"
+
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] "این پلاگین پیشنهادی در حال حاضر غیر فعال است: %1$s"
+
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "شروع نصب پلاگین"
+
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] "شروع آپدیت پلاگین"
+
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] "شروع فعال‌ سازی پلاگین"
+
+msgid "Return to Required Plugins Installer"
+msgstr "برگشت به نصب کننده‌ پلاگین‌ های ضروری"
+
+msgid "Return to the Dashboard"
+msgstr "بازگشت به پنل مدیریتی"
+
+msgid "Plugin activated successfully."
+msgstr "افزونه با موفقیت فعال شد"
+
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] "این پلاگین با موفقیت فعال شد:"
+
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "هیچ اتفاقی نیافتاد، پلاگین %1$s قبلا فعال شده بود."
+
+#, php-format
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr "پلاگین فعال نشد. نسخه‌ی بالاتری از %s برای این قالب مورد نیاز است. لطفا پلاگین را بروز نمایید."
+
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "تمامی پلاگین‌ها با موفقیت نصب و فعال شدند. %1$s"
+
+msgid "Dismiss this notice"
+msgstr "این اعلان را نادیده بگیر"
+
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr "یک یا چند پلاگین ضروری یا پیشنهادی برای نصب، بروزرسانی یا فعال‌سازی وجود دارد."
+
+msgid "Please contact the administrator of this site for help."
+msgstr "لطفا با ادمین این سایت جهت دریافت کمک، ارتباط برقرار کنید."
+
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr "این پلاگین جهت قابل استفاده بودن با قالب شما، نیاز به بروزرسانی دارد."
+
+msgid "Update Required"
+msgstr "آپدیت ضروری است"
+
+msgid "Tested and Recommended Plugins"
+msgstr "پلاگین‌های تست شده و پیشنهادی"
+
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr "بسته پلاگین از راه دور حاوی پوشه ای با لوج دلخواه نیست و تغییر نام کار نمی کند."
+
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr "لطفا با توسعه‌ دهنده‌ی پلاگین تماس گرفته و درخواست کنید که پلاگین را طبق راهنمایی وردپرس پکیج نمایند."
+
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr "پکیج فایل ریموت شامل بیش از یک فایل است اما فایل‌ها در داخل پوشه پکیج نشده‌اند."
+
+#, php-format
+msgid "TGMPA v%s"
+msgstr "نسخه‌ی کتابخانه‌ی پی‌اچ‌پی TGM %s"
+
+msgid "Required"
+msgstr "ضروری"
+
+msgid "WordPress Repository"
+msgstr "مخزن وردپرس"
+
+msgid "External Source"
+msgstr "منبع خارجی"
+
+msgid "Pre-Packaged"
+msgstr "پیش بسته بندی شده"
+
+msgid "Not Installed"
+msgstr "نصب نشده است"
+
+msgid "Installed But Not Activated"
+msgstr "نصب شده اما فعال نشده است"
+
+msgid "Active"
+msgstr "فعال"
+
+msgid "Required Update not Available"
+msgstr "آپدیت مورد نیازی در دسترس نیست."
+
+msgid "Requires Update"
+msgstr "آپدیت نیاز است"
+
+msgid "Update recommended"
+msgstr "آپدیت توصیه می شود"
+
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+#, php-format
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "همه <span class=\"count\">(%s)</span>"
+
+#, php-format
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "همه <span class=\"count\">(%s)</span>"
+
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] "برای نصب <span class=\"count\">(%s)</span>"
+
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] "به روزرسانی وجود دارد <span class=\"count\">(%s)</span>"
+
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] "برای فعال‌سازی <span class=\"count\">(%s)</span>"
+
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr "ناشناخته"
+
+msgid "unknown"
+msgstr "ناشناخته"
+
+msgid "Installed version:"
+msgstr "نسخه نصب شده:"
+
+msgid "Minimum required version:"
+msgstr "حداقل نسخه مورد نیاز:"
+
+msgid "Available version:"
+msgstr "نسخه موجود:"
+
+msgid "No plugins to install, update or activate."
+msgstr "پلاگینی برای نصب، به روزرسانی یا فعال‌ سازی باقی نمانده است."
+
+msgid "Plugin"
+msgstr "افزونه"
+
+msgid "Status"
+msgstr "وضعیت"
+
+#, php-format
+msgid "Install %2$s"
+msgstr "%2$s را نصب کنید"
+
+#, php-format
+msgid "Update %2$s"
+msgstr "%2$s را به روز رسانی کنید"
+
+#, php-format
+msgid "Activate %2$s"
+msgstr "%2$s را فعال کنید"
+
+msgid "Upgrade message from the plugin author:"
+msgstr "پیغام به روزرسانی از توسعه‌دهنده‌ی پلاگین:"
+
+msgid "Install"
+msgstr "نصب کردن"
+
+msgid "Activate"
+msgstr "فعال سازی"
+
+msgid "No plugins were selected to be installed. No action taken."
+msgstr "پلاگینی جهت نصب انتخاب نشده است. کاری انجام نشد."
+
+msgid "No plugins were selected to be updated. No action taken."
+msgstr "پلاگینی جهت به روزرسانی انتخاب نشده بود. کاری انجام نشد."
+
+msgid "No plugins are available to be installed at this time."
+msgstr "پلاگینی جهت نصب در این لحظه وجود ندارد."
+
+msgid "No plugins are available to be updated at this time."
+msgstr "پلاگینی جهت به روزرسانی در این لحظه وجود ندارد."
+
+msgid "No plugins were selected to be activated. No action taken."
+msgstr "افزونه ای  جهت فعال‌سازی انتخاب نشده است. اقدامی انجام نشد."
+
+msgid "No plugins are available to be activated at this time."
+msgstr "پلاگینی جهت فعال‌ سازی در این لحظه وجود ندارد."
+
+msgid "Plugin activation failed."
+msgstr "فعال‌سازی پلاگین ناموفق بود."
+
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "آپدیت پلاگین  %1$s (%2$d/%3$d)"
+
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "خطایی در هنگام نصب  %1$s: <strong>%2$s</strong> رخ داد."
+
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "نصب %1$s failed ناموفق بود."
+
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "فرآیند نصب و فعال‌سازی در حال آغاز است. این فرآیند ممکن است بر روی برخی هاست‌ها کمی به طول بیانجامد، پس لطفا صبور باشید."
+
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s با موفقیت نصب و فعال شد."
+
+msgid "All installations and activations have been completed."
+msgstr "تمامی فرآیندهای نصب و فعال‌سازی به پایان رسیدند."
+
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "در حال نصب و فعال‌سازی پلاگین %1$s (%2$d/%3$d)"
+
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "فرآیند نصب در حال آغاز است. این فرآیند ممکن است بر روی برخی هاست‌ها کمی به طول بیانجامد، پس لطفا صبور باشید."
+
+#, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s با موفقیت نصب شد"
+
+msgid "All installations have been completed."
+msgstr "تمامی فرآیندهای نصب به پایان رسیدند."
+
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "در حال نصب پلاگین %1$s (%2$d/%3$d)"
+
+msgid "Show Details"
+msgstr "مشاهده جزییات"
+
+msgid "Hide Details"
+msgstr "پنهان کردن جزییات"
+
+msgid "Image URL"
+msgstr "آدرس تصویر"
+
+msgid "Image Width"
+msgstr "عرض عکس"
+
+msgid "Image Height"
+msgstr "ارتفاع عکس"
+
+msgid "Image Margin Top"
+msgstr "فاصله بالای عکس"
+
+msgid "Image Margin Bottom"
+msgstr "فاصله پایین عکس"
+
+msgid "Circle Shape?"
+msgstr "شکل دایره؟"
+
+msgid "Text"
+msgstr "متن"
+
+msgid "Center the content?"
+msgstr "وسط چین کردن محتوا؟"
+
+msgid "Show Social Icons?"
+msgstr "نمایش آیکون شبکه‌های اجتماعی؟"
+
+msgid "Ads 125 x 125"
+msgstr "تبلیغات سایز 125 در 125 پیکسل"
+
+msgid "Show the ads only?"
+msgstr "فقط تبلیغات را نمایش داده شود؟"
+
+msgid "Open links in a new window?"
+msgstr "بازشدن لینک‌ها در صفحه جدید؟"
+
+#, php-format
+msgid "Ad #%s"
+msgstr "تبلیغ #%s"
+
+msgid "Image path:"
+msgstr "مسیر عکس :"
+
+msgid "Code:"
+msgstr "کد:"
+
+msgid "About the post&rsquo;s author"
+msgstr "درباره ی نویسنده مطلب &rsquo;s"
+
+msgid "This Widget appears in the single post page only."
+msgstr "این ابزارک فقط در صفحه نوشته نمایش داده میشود."
+
+msgid "Posts By Post's Author"
+msgstr "سایر پست‌های نویسندۀ مطلب"
+
+msgid "Display (All) link:"
+msgstr "نمایش همه لینک ها:"
+
+msgid "Custom Author Content"
+msgstr "محتوای دلخواه نویسنده"
+
+msgid "Center content:"
+msgstr "وسط چین کردن محتوا:"
+
+msgid "Show child categories?"
+msgstr "نمایش زیر دسته بندی ها؟"
+
+msgid "Recent Comments with avatar"
+msgstr "دیدگاه های اخیر با تصویر"
+
+msgid "Recent Comments"
+msgstr "دیدگاه های تازه"
+
+msgid "Number of comments to show:"
+msgstr "تعداد دیدگاه های قابل نمایش:"
+
+msgid "Find us on Facebook"
+msgstr "در فیس بوک به ما بپیوندید"
+
+msgid "Page URL:"
+msgstr "آدرس برگه:"
+
+msgid "Hide cover Photo?"
+msgstr "مخفی کردن تصویر کاور؟"
+
+msgid "Show Faces?"
+msgstr "نمایش صورت ها؟"
+
+msgid "Show Stream?"
+msgstr "نمایش جریان؟"
+
+msgid "Flickr ID:"
+msgstr "آیدی فلیکر:"
+
+msgid "Find your ID at idGettr"
+msgstr "پیدا کردن ID در idGettr"
+
+msgid "Photos Order:"
+msgstr "چینش تصاویر:"
+
+msgid "Most recent"
+msgstr "جدیدترین"
+
+msgid "Random"
+msgstr "تصادفی"
+
+msgid "Number of photos to show:"
+msgstr "تعداد تصاویر قابل نمایش:"
+
+msgid "Google+ page"
+msgstr "صفحۀ گوگل پلاس"
+
+msgid "Follow us on Google+"
+msgstr "ما را در گوگل پلاس دنبال کنید"
+
+msgid "Show the Bio and counters?"
+msgstr "بیوگرافی و شمارنده‌ها نمایش داده شوند؟"
+
+msgid "Go to the InstaNow Settings page to connect your account to the Instagram API."
+msgstr "به تنظیمات InstaNow بروید تا حساب کاربری خود را به API اینستاگرام متصل کنید."
+
+msgid "Number of Media Items"
+msgstr "تعداد آیتم های رسانه"
+
+msgid "Show the icon?"
+msgstr "نمایش آیکون؟"
+
+msgid "Posts list"
+msgstr "لیست پست‌ها"
+
+msgid "Jetpack - Most Viewed for 7 days"
+msgstr "Jetpack - بیشترین بازدید 7 روزه"
+
+msgid "Jetpack - Most Viewed for 30 days"
+msgstr "Jetpack - بیشترین بازدید 30 روزه"
+
+msgid "Related Posts by Categories"
+msgstr "پست‌های مرتبط براساس دسته‌بندی"
+
+msgid "Related Posts by Tags"
+msgstr "پست‌های مرتبط براساس تگ‌ها"
+
+msgid "Related Posts by Author"
+msgstr "پست‌های مرتبط براساس نویسنده"
+
+msgid "Posts order:"
+msgstr "چینش پست‌ها:"
+
+msgid "You need to install the Jetpack plugin. in order to use the show the most viewed for 7 or 30 days."
+msgstr "برای استفاده از نمایش بیشترین بازدید 7 یا 30 روزه نیاز به نصب پلاگین Jetpack دارید"
+
+msgid "Please Note that for Jetpack - Most Viewed posts it may take a few hours before views are counted. It will fallback to comments sorting type until then."
+msgstr "لطفا توجه داشته باشید که برای شمارش تعداد بازدیدها از پستهای دارای بیشترین بازدید در پلاگین Jetpack ممکن است چندین ساعت زمان ببرد. تا زمان شمارش تعداد بازدیدها بر روی چیدمان دیدگاه ها مراجعه میکند."
+
+msgid "Exclude Current Post in the single post page."
+msgstr "پست فعلی را در صفحه پست تکی حذف کنید ."
+
+msgid "Featured Posts"
+msgstr "پست‌های ویژه"
+
+msgid "Show the Slider only?"
+msgstr "فقط اسلایدر را نمایش داده شود؟"
+
+msgid "Social Counters"
+msgstr "شمارندۀ شبکه‌های اجتماعی"
+
+msgid "This widget requries the Arqam Lite Plugin, You can install it from the Theme settings menu > Install Plugins."
+msgstr "این ویجت به پلاگین Arqam Lite نیاز دارد، شما می‌توانید آن را از منوی تنظیمات قالب > نصب پلاگین نصب کنید."
+
+msgid "Go to the Arqam options page to set your social accounts."
+msgstr "به صفحۀ تنظیمات Arqam در پیشخوان بروید و حساب کاربری شبکه‌های اجتماعی را تنظیم کنید."
+
+msgid "Show the social icons only?"
+msgstr "نمایش آیکون شبکه های اجتماعی فقط؟"
+
+msgid "Autoplay?"
+msgstr "پخش خودکار؟"
+
+msgid "Tabs"
+msgstr "تب ها"
+
+msgid "Number of items to show:"
+msgstr "تعداد آیتم‌های نمایش داده شده:"
+
+msgid "Order of tabs:"
+msgstr "ترتیب چیدمان تب‌ها:"
+
+msgid "Popular tab order"
+msgstr "چینش زبانه محبوب"
+
+msgid "Most Commented"
+msgstr "دارای بیشترین دیدگاه"
+
+msgid "Most Viewed"
+msgstr "پربازدیدترین"
+
+msgid "Disable the Popular tab?"
+msgstr "غیر فعال سازی تب پرخواننده"
+
+msgid "Disable the Recent tab?"
+msgstr "غیر فعال سازی تب تازه"
+
+msgid "Disable the Comments tab?"
+msgstr "بخش نظرات غیر فعال شود؟"
+
+msgid "Text or HTML"
+msgstr "متن یا کد HTML"
+
+msgid "Text, Shortcodes or HTML code"
+msgstr "متن یا کد کوتاه یا کد HTML"
+
+msgid "Error Can not Get Tweets, Incorrect account info."
+msgstr "خطا! توئیتها دریافت نشد، اطلاعات حساب کاربری نادرست است."
+
+msgid "Consumer key:"
+msgstr "کلید مصرف کننده:"
+
+msgid "Consumer secret:"
+msgstr "کد امنیتی مصرف کننده:"
+
+msgid "Number of Tweets to show:"
+msgstr "تعداد توئیت‌های قابل نمایش:"
+
+msgid "Slider Layout?"
+msgstr "لایه بندی اسلایدر؟"
+
+msgid "Find Your Location"
+msgstr "موقعیت جغرافیایی خود را بیابید"
+
+msgid "F"
+msgstr "فارنهایت"
+
+msgid "C"
+msgstr "سانتی‌گراد"
+
+msgid "Forecast"
+msgstr "پیش بینی"
+
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d روز"
+
+msgid "Subscribe to our channel"
+msgstr "عضویت در کانال ما"
+
+msgid "Channel Name or ID:"
+msgstr "نام کانال یا ID:"
+
+msgid "Get it from your account advanced page."
+msgstr "از صفحۀ تنظیمات پیشرفتۀ حساب کاربری خود آن را دریافت کنید."
+
+msgid "Jannah"
+msgstr "جنّاح"
+
+msgid "Secondry Nav Menu"
+msgstr "منو ناوبری ثانویه"
+
+msgid "404 Page menu"
+msgstr "منو صفحه 404"
+
+msgid "Footer Navigation"
+msgstr "ناوبری فوتر"
+
+msgid "Primary Widget Area"
+msgstr "ناحیه ابزارک اصلی"
+
+msgid "Slide Widget Area"
+msgstr "ناحیه ابزارک حاشیه"
+
+msgid "Shop - For WooCommerce Pages"
+msgstr "فروشگاه - برای صفحه‌های ووکامرسی"
+
+msgid "This widget area uses in the WooCommerce pages."
+msgstr "این ابزارک برای صفحه‌های ووکامرسی استفاده می‌شود."
+
+#, php-format
+msgid "Section #%s"
+msgstr "بخش #%s"
+
+msgid "Secondary Sidebar"
+msgstr "موقعیت سایدبار دوم"
+
+msgid "Close"
+msgstr "بستن"
+
+msgid "Primary Navigation"
+msgstr "منوی اصلی"
+
+msgid "Secondary Navigation"
+msgstr "ناوبری ثانویه"
+
+#, php-format
+msgid "Ready to publish your first post? %1$sGet started here%2$s."
+msgstr "برای انتشار  اولین پست خود  آماده هستید؟ %1$sاز اینجا شروع کنید%2$s."

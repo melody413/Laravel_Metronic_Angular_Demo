@@ -1,0 +1,216 @@
+<!-- <p>create-disease works!</p> -->
+<div class="card">
+  <div class="card-body">
+    <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
+      create-disease
+    </h1>
+    <hr />
+    <div class="card-body">
+      <form
+        novalidate
+        class="form"
+        method="post"
+        action="http://localhost:8000/admin/body_part/store"
+      >
+        <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+          Language Data
+        </h1>
+        <div class="card-body border-top">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-6 fv-col">
+                <h2 class="fs-2">Name Arabic :</h2>
+                <input
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  name=""
+                />
+              </div>
+              <div class="col-lg-6">
+                <h2 class="fs-2">Name English :</h2>
+                <input
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  name=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 form-group p-y-30">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 fv-row">
+                <h2 class="fs-2">Excerpt Ar :</h2>
+                <textarea
+                  cols="50"
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  name=""
+                  placeholder="Arabic[expert]"
+                ></textarea>
+                <small>display in list not show in unit</small>
+              </div>
+              <div class="col-lg-6 col-sm-12 fv-row">
+                <h2 class="fs-2">Excerpt En :</h2>
+                <textarea
+                  cols="50"
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  name=""
+                  placeholder="English[expert]"
+                ></textarea>
+                <small>display in list not show in unit</small>
+              </div>
+            </div>
+          </div>
+
+          <div
+            *ngFor="let desItem of desItems; let i = index"
+            class="col-lg-12 p-y-30"
+          >
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <label for="{{ desItem.title }}"
+                  >{{ desItem.title }} Ar :</label
+                >
+                <!-- <textarea class="form-control tinymce" placeholder="Description" [(ngModel)]="enDescription" name="en[description]" cols="50" rows="10"></textarea> -->
+                <editor
+                  id="{{ desItem.title }}"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                ></editor>
+              </div>
+              <div class="col-lg-6 fv-row">
+                <label for="descriptionar">{{ desItem.title }} En :</label>
+                <editor
+                  placeholder="Description"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                  toolbar="
+                                        undo redo | formatselect | bold italic backcolor | \
+                                        alignleft aligncenter alignright alignjustify | \
+                                        bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                ></editor>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+          Other Data
+        </h1>
+        <div class="card-body border-top p-9">
+          <h2 class="card-title fw-bolder text-hover-primary fs-2">
+            Parent Disease:
+          </h2>
+          <div class="fv-row">
+            <input
+              id="parent-disease"
+              class="filled-in chk-col-brown form-check-input subcp"
+              onchange="return OptionsSelectedSubs(this)"
+              name="parent[]"
+              type="checkbox"
+              value="parent-disease"
+            />
+            <label for="parent-disease" class="fs-2" style="padding-left: 8px"
+              >الدوالي</label
+            >
+          </div>
+        </div>
+
+        <div class="card-body border-top p-9">
+          <h2 class="card-title fw-bolder text-hover-primary fs-2">
+            Parent Body Part:
+          </h2>
+          <div class="col-lg-12 row">
+            <div
+              *ngFor="let item of items; let i = index"
+              class="col-lg-3 fv-row"
+            >
+              <input
+                id="{{ i + 1 }}"
+                class="filled-in chk-col-brown form-check-input subcp"
+                onchange="return OptionsSelectedSubs(this)"
+                name="parent[]"
+                type="checkbox"
+                value="{{ i + 1 }}"
+              />
+              <label for="subcp_1" class="fs-2" style="padding-left: 8px">{{
+                item.name
+              }}</label>
+            </div>
+          </div>
+
+          <br />
+          <div
+            class="input-group input-group-lg col-lg-15 d-flex gap-5 align-items-center"
+          >
+            <h1
+              class="card-title fw-bolder text-muted fs-4"
+              style="display: block; text-align: center; padding: 10px"
+            >
+              Logo :
+            </h1>
+            <!-- <div class="p-5 border rounded-lg">Choose File</div> -->
+            <input
+              type="file"
+              class="form-control-lg form-control-solid mb-3 mb-lg-0"
+              name="image"
+            />
+            <!-- <div>No Choose File</div> -->
+          </div>
+
+          <br />
+          <div
+            class="input-group input-group-lg col-lg-15 d-flex gap-5 align-items-center"
+          >
+            <h1
+              class="card-title fw-bolder text-muted fs-4"
+              style="display: block; text-align: center; padding: 10px"
+            >
+              Is Active :
+            </h1>
+            <span>OFF</span>
+            <div
+              class="form-check form-check-custom form-check-solid form-check-success form-switch"
+            >
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="model.app.sidebar.default.minimize.desktop.enabled"
+              />
+            </div>
+            <span>ON</span>
+          </div>
+        </div>
+      </form>
+      <div class="col d-flex gap-2 align-items-center">
+        <button class="btn btn-md btn-secondary">Reset</button>
+        <button class="btn btn-md btn-success">Save</button>
+        <button class="btn btn-md btn-primary">Save & create new</button>
+      </div>
+    </div>
+  </div>
+
+  <script
+    src="https://cdn.tiny.cloud/1/your-api-key/tinymce/6/tinymce.min.js"
+    referrerpolicy="origin"
+  ></script>
+
+  <script>
+    tinymce.init({
+      selector: "#editor",
+      plugins:
+        "a11ychecker advcode advlist advtable anchor autocorrect autolink autoresize autosave casechange charmap checklist code codesample directionality editimage emoticons export footnotes formatpainter fullscreen help image importcss inlinecss insertdatetime link linkchecker lists media mediaembed mentions mergetags nonbreaking pagebreak pageembed permanentpen powerpaste preview quickbars save searchreplace table tableofcontents template tinycomments tinydrive tinymcespellchecker typography visualblocks visualchars wordcount",
+    });
+  </script>
+</div>

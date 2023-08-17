@@ -1,0 +1,12 @@
+<!-- Use label tag here to surround input because the click event on label will be handled by input widget. This saves us from doing logic in Javascript -->
+<label class="toggle-switch">
+    <input type="checkbox" [(ngModel)]="selected">
+    <div class="slider"></div>
+  </label>
+  
+  <div>
+      Selected: {{selected}}
+  </div>
+  <div>
+      Use label tag here to surround input because the click event on label will be handled by input widget. This saves us from doing logic in Javascript
+  </div>

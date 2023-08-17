@@ -1,0 +1,633 @@
+
+// General Style -----------------------------------------------
+.tabs {
+	transition: opacity 0.3s;
+	max-height: 75px;
+	width: 100%;
+	padding: 0;
+	border: $base-border;
+	border-width: 0 0 1px;
+	display: flex;
+	flex-flow: row wrap;
+
+	li {
+		display: inline-block;
+		position: relative;
+		padding: 0 !important; // To Avoid .widget li padding
+	}
+
+	a {
+		background: rgba(0,0,0,0.02);
+		display: block;
+		text-align: center;
+		border: $base-border;
+		border-width: 0 1px 1px 0;
+		@include font-size(15px);
+	}
+
+	a:not(:hover){
+		color: $base-color;
+
+		.dark-skin &{
+			color: $dark-base-color;
+		}
+	}
+
+	> li > a {
+		line-height: 65px;
+		padding: 0 15px;
+		border-bottom-color: transparent;
+	}
+
+	body &.tabs .active > a {  // use body .tabs.tabs to override the .dark-skin a:not(:hover) selector
+		background: #ffffff;
+		color: $brand-color;
+	}
+}
+
+.tab-content,
+.woocommerce-tabs .panel{
+	padding: 30px;
+	display: none;
+}
+
+.tab-content {
+	position: relative;
+	transition: 0.3s;
+
+	@include breakpoint(max_min_sm){
+		padding: 20px;
+	}
+
+	@at-root .tab-content-elements li {
+		opacity: 0;
+	}
+
+	&:not(.is-not-active):first-of-type {
+		display: block;
+
+		.tab-content-elements li {
+			opacity: 1;
+		}
+	}
+}
+
+.tabs-container-wrapper {
+	padding: 0 !important; // override [#footer .container-wrapper]
+}
+
+
+// Tabs Widget -------------------------------------------------
+.normal-side .tabs{
+	display: flex;
+
+	li{
+		flex-grow: 1;
+	}
+
+	a{
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		padding: 0 10px !important; // override magazine2 && blocks titles style #4
+
+		span{
+			font-size: 20px;
+			vertical-align: sub;
+		}
+	}
+
+	li:last-child a {
+		border-right-width: 0;
+	}
+
+	// Dark skin
+	.dark-skin &{
+		border-color: #2c3033;
+
+		a{
+			background: rgba(0,0,0,0.1);
+			border-color: transparent rgba(255,255,255,0.1);
+		}
+
+		.active a{
+			background-color: $darker-bg;
+		}
+	}
+
+	// Responsive
+	@include breakpoint_max(320px){
+		max-height: none;
+		border-bottom: 0;
+
+		li{
+			display: block;
+			width: 100%;
+			float: none;
+		}
+
+		a{
+			border-bottom-color: $base-border-color;
+			border-width: 0 0 1px;
+
+			.dark-skin &{
+				border-bottom-color: rgba(255,255,255,0.1);
+			}
+		}
+	}
+}
+
+// Tabs In Footer & Side-aside area //
+.magazine2:not(.block-head-4),
+.magazine1{
+	.dark-widgetized-area{
+		.tabs-container-wrapper{
+			border-width: 0;
+		}
+
+		.tab-content{
+			padding: 0;
+		}
+
+		ul.tabs{
+			margin-bottom: 20px;
+			border-width: 0;
+			max-height: 55px;
+
+			a{
+				border: 0;
+				color: #ffffff;
+				line-height: 55px;
+				background-color: $dark-bg;
+
+				&:before{
+					display: none;
+				}
+			}
+
+			a:hover,
+			.active a{
+				background: $brand-color;
+				color: $bright;
+			}
+		}
+	}
+}
+
+
+// - Flex Tabs (Tabs Box - Shortcode Horizontal Tabs)----------
+.flex-tabs{
+	.tabs{
+		position: relative;
+		z-index: 4;
+		opacity: 0;
+
+		a{
+			padding-left: 30px;
+			padding-right: 30px;
+			white-space: nowrap;
+			word-wrap: normal; // IE fix
+		}
+	}
+
+	.flexMenu-viewMore{
+		flex-grow: 1;
+
+		a{
+			padding-left: 10px;
+			padding-right: 10px;
+			border-width: 0 0 1px 0;
+		}
+
+		&.active > a{
+			background: rgba(0,0,0,0.02);
+		}
+	}
+
+	.flexMenu-popup{
+		margin: 0;
+		padding: 0;
+		right: 0;
+		padding-top: 0;
+		box-shadow: none;
+		min-width: calc(100% + 1px);
+		border: $base-border;
+		border-radius: 0;
+		transform: translateY(-1px) translateX(1px);
+
+		li{
+			float: none;
+			display: block;
+		}
+
+		a{
+			padding: 10px 20px 10px 40px;
+	    text-align: right;
+	    font-size: 13px;
+		}
+
+		li:last-child a{
+			border-width: 0;
+		}
+	}
+}
+
+// - Block #8 : Tabs Box---------------------------------------
+.tabs-box{
+	.mag-box{
+		margin-bottom: 0;
+	}
+
+	.container-wrapper{
+		border-width: 0;
+		padding: 0;
+	}
+
+	.tabs-wrapper{
+		overflow: initial;
+	}
+
+	.tab-content{
+		position: relative;
+	}
+}
+
+// Box Dark Skin
+.box-dark-skin.tabs-box{
+	background: $darker-bg;
+}
+
+.dark-skin .mag-box,
+.box-dark-skin{
+	.tabs {
+		border-color: #2c3033;
+
+		a{
+			border-color: transparent rgba(255,255,255,0.1);
+		}
+	}
+
+	.flexMenu-popup{
+		background-color: $darker-bg;
+		border-color: #2c3033;
+
+		li a{
+			border-bottom-color: #2c3033;
+		}
+	}
+}
+
+.dark-skin .mag-box .tabs.tabs .active a,
+.box-dark-skin .tabs.tabs .active a{
+	background-color: $darker-bg;
+}
+
+
+.dark-skin .magazine2 .tabs.tabs .active > a{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+// - Tabs Shortcodes (Horizontal & Vertical) ------------------
+.entry{
+	.tabs-wrapper{
+		margin-bottom: 15px;
+		padding: 0;
+	}
+
+	.tabs,
+	.tabs li {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+// Vertical Tabs
+.tabs-vertical {
+	border: 0;
+	position: relative;
+	border: $base-border;
+
+	&:after{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -1px;
+		width: 28%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.02);
+		border: $base-border;
+		border-width: 0 1px 0 0;
+	}
+
+	.tabs {
+		position: relative;
+		overflow: auto;
+		z-index: 1;
+		left: 0;
+		float: left;
+		width: 28%;
+		max-height: none !important; // override [.magazine2 .tabs]
+		border-bottom: 0;
+
+		li{
+			display: block;
+			width: calc(100% - 1px);
+			transition: border 0.3s;
+
+			a{
+				border: $base-border;
+				border-width: 0 0 1px 0;
+				background-color: transparent;
+			}
+		}
+	}
+
+	.tab-content {
+		float: left;
+		width: 72%;
+	}
+
+	.magazine2 &{
+		&:after{
+			display: none;
+		}
+
+		.tab-content{
+			padding: 0 0 0 30px;
+
+			@include breakpoint_max(670px){
+				padding: 20px 0 0 !important;
+			}
+		}
+
+		.tabs {
+			li{
+				width: 100%;
+			}
+
+			a{
+				line-height: 50px;
+			}
+		}
+	}
+
+	.block-head-5.magazine2 &,
+	.block-head-6.magazine2 &{
+		.tabs .active a:before{
+			width: 100%;
+			transform: skew(0);
+		}
+	}
+
+	.block-head-6.magazine2 &{
+		.tabs .active a:after{
+			display: none;
+		}
+	}
+
+	@include breakpoint_max(670px){
+		&:after{
+			display: none;
+		}
+
+		.tabs{
+			overflow: hidden;
+		}
+
+		.tabs,
+		.tabs li,
+		.tab-content {
+			width: 100%;
+			float: none;
+		}
+
+		.tabs li{
+			display: block;
+			list-style-type: none;
+
+			a{
+				border-left-width: 0;
+				border-right-width: 0;
+				background: rgba(0,0,0,0.02);
+			}
+
+			&.active{
+				a{
+					background-color: transparent;
+					border-bottom-color: $base-border-color;
+
+					.dark-skin &{
+						border-bottom-color: $base-border-color-in-white;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// - Magazine 2 -----------------------------------------------
+.magazine2{
+	.tab-content{
+		padding: 30px 0 0;
+
+		@include breakpoint(max_min_sm){
+			padding: 20px 0 0;
+		}
+	}
+
+	html:not(.dark-skin) & .section-item:not(.dark-skin) .box-dark-skin.tabs-box .tab-content{
+		padding: 30px;
+	}
+
+	.tabs{
+		border-width: 1px;
+	}
+
+	.dark-skin &{
+		.tabs{
+			border-color: rgba(255,255,255,0.05);
+		}
+
+		.flexMenu-popup{
+			background-color: $dark-bg;
+		}
+	}
+
+	// tabs active border-bottom with the color of the active link
+	.tabs > .active > a{
+		border-bottom-color: inherit;
+	}
+}
+
+
+// - Tabs:: if (Style #4 || #5 || 6  && magazine2) -----------
+.block-head-4.magazine2 {
+  .tabs{
+    border: 1px solid $brand-color;
+    border-radius: $base-border-radius;
+    max-height: 40px;
+
+     > li > a{
+      line-height: 38px;
+      border-width: 0;
+      padding: 0 20px;
+    }
+
+    li a{
+      color: $brand-color;
+      background-color: transparent;
+
+      &:hover{
+    		color: darken($brand-color, 10%);
+      }
+    }
+  }
+
+  .tabs.tabs li.active a{
+    color: $bright;
+    background-color: $brand-color;
+  }
+
+  .tabs .flexMenu-popup{
+    border-color: $brand-color;
+    transform: translateY(0px) translateX(1px);
+
+    a{
+      padding-top: 6px;
+      padding-bottom: 6px;
+      border-bottom-width: 0;
+    }
+  }
+
+  html:not(.dark-skin) & .section-item:not(.dark-skin) .box-dark-skin.tabs-box .tabs{
+    border-width: 0 0 1px;
+    max-height: 50px;
+    border-radius: 0;
+
+    > li > a{
+      line-height: 48px;
+    }
+
+    .flexMenu-popup {
+      transform: none;
+    }
+  }
+}
+
+
+// - Tabs:: if (Style #5  &&  magazine2) ----------------------
+.block-head-5.magazine2{
+  .tabs > .active{
+    a{
+      background-color: transparent !important;
+      position: relative;
+
+      &:before{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $brand-color;
+        transform: skew(-20deg);
+      }
+    }
+
+    &:first-child a{
+      &:before{
+        width: 70%;
+        right: 0;
+        left: auto;
+      }
+
+      &:after{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $brand-color;
+      }
+    }
+  }
+
+  .widget{
+    .tabs .active{
+      a{
+        position: static;
+      }
+
+      &:last-child{
+        a:before{
+          width: 70%;
+          left: 0;
+          right: auto;
+        }
+
+        a:after{
+          content: '';
+          position: absolute;
+          z-index: -1;
+          width: 50%;
+          height: 100%;
+          top: 0;
+          right: 0;
+          left: auto;
+          background-color: $brand-color;
+        }
+      }
+    }
+  }
+}
+
+
+// - Tabs:: if (Style #6  &&  magazine2) ----------------------
+.block-head-6.magazine2{
+  .tabs > .active{
+    a{
+      background-color: transparent !important;
+      position: relative;
+
+      &:before{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $brand-color;
+      }
+
+      &:after{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 70%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-color: $brand-color;
+        transform: skew(-35deg);
+      }
+    }
+  }
+
+  .widget{
+    .tabs .active{
+      a{
+        position: static;
+      }
+
+      &:last-child a:after{
+        transform: skew(0);
+      }
+    }
+  }
+}

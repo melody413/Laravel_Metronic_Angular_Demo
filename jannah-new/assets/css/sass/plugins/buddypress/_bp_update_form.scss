@@ -1,0 +1,192 @@
+// BP Whats new form handles user updates to groups or profiles
+// @version 3.0.0
+.item-body {
+
+	.activity-update-form {
+
+		.activity-form {
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+.activity-update-form {
+	overflow: hidden;
+	margin: $marg-med 0;
+
+	#whats-new-avatar {
+		margin: $marg-sml 0;
+		text-align: center;
+
+		img {
+			box-shadow: none;
+			display: inline-block;
+		}
+	}
+
+	// these ID's need replacing with this!
+	//.content-wrap { // #whats-new-content
+
+	#whats-new-content {
+		padding: 0 0 $marg-sml 0;
+	}
+
+	// these ID's need replacing with this!
+	//.textarea-wrap { // #whats-new-textarea
+
+	#whats-new-textarea {
+
+		textarea {
+			@include box-model();
+			color: #333;
+			font-family: inherit;
+			font-size: medium;
+			height: 2.2em;
+			line-height: 1.4;
+			padding: 6px;
+			width: 100%;
+
+			&:focus {
+
+				@include box-shadow(0 0 6px 0 $med-light-grey);
+			}
+		}
+	}
+
+	#whats-new-post-in-box {
+		overflow: hidden;
+
+		select {
+			border: $base-border;
+			-webkit-appearance: none;
+			padding: 0 10px;
+			margin-bottom: 10px;
+			height: 30px;
+			line-height: 30px;
+			width: 100%;
+		}
+	}
+
+	#whats-new-post-in-box-items {
+		list-style: none;
+		margin: 0 0 $marg-sml 0;
+		overflow: hidden;
+		width: 100%;
+
+		#activity-autocomplete {
+			padding: $pad-xsml $pad-med;
+			width: 100%;
+			height: 30px;
+			line-height: 30px;
+		}
+
+		li{
+			height: 30px;
+			line-height: 30px;
+		}
+
+		.bp-activity-object {
+			border: $base-border;
+			margin-top: $marg-xsml;
+
+			@include center-vert();
+			padding: 0.3em;
+
+			.avatar {
+				width: 20px;
+			}
+
+			span {
+				padding-left: $marg-sml;
+				vertical-align: middle;
+				flex-grow: 1;
+				white-space: nowrap;
+			}
+
+			&:focus,
+			&:hover {
+				background: $light-grey;
+				cursor: pointer;
+			}
+
+			&.selected {
+				border: 1px solid $med-light-grey;
+				margin-top: 0;
+			}
+
+			.bp-remove-item{
+				padding: 0;
+				border-radius: 50%;
+		    width: 20px;
+		    height: 20px;
+		    line-height: 20px;
+		    text-align: center;
+		    display: inline-block;
+		    margin-left: $marg-sml;
+			}
+		}
+	}
+
+	#whats-new-submit {
+		margin: 0 0 $marg-sml;
+
+		input {
+			@include font-size(14);
+			line-height: inherit;
+			margin-bottom: $marg-sml;
+			padding: 0.3em 10px;
+			text-align: center;
+			width: 100%;
+		}
+	}
+
+	@include medium-up() {
+		#whats-new-post-in-box {
+			float: left;
+			width: 55%;
+
+			select {
+				width: auto;
+				float: left;
+				margin-right: 4%;
+			}
+		}
+
+		#whats-new-post-in-box-items {
+			float: left;
+			width: 54%;
+		}
+
+		#whats-new-submit {
+			float: right;
+		}
+
+		#whats-new-avatar {
+			display: block;
+			float: left;
+			margin: 0;
+		}
+
+		#whats-new-content,
+		#whats-new-post-in-box{
+			margin-left: 70px;
+		}
+
+		#whats-new-submit {
+
+			input {
+				margin-bottom: 0;
+				margin-left: $marg-sml;
+				width: auto;
+				float: right;
+			}
+		}
+	} // close @media
+
+
+	#message{
+		float: left;
+		width: 100%;
+	}
+}

@@ -1,0 +1,101 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+// IE 10 only
+body:not(.block-head-4){
+	.the-global-title,
+	.comment-reply-title,
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		height: 40px !important;
+	}
+}
+
+.block-head-8{
+	.the-global-title,
+	.comment-reply-title,
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		&:before {
+			top: 10px !important;
+		}
+	}
+}
+
+.mag-box-title{
+	-ms-flex-pack: justify;
+
+	.mag-box-options{
+		display: -ms-flexbox;
+	}
+}
+
+div.mag-box-title div.tie-alignright{
+	width: auto;
+	-ms-flex-positive: 1;
+
+ 	@include breakpoint_max(480px){
+	  .mag-box-filter-links{
+	    max-width: 50px;
+	  }
+	}
+}
+
+@include breakpoint_min(321px){
+  .normal-side {
+		.tabs-container-wrapper .tabs li{
+			width: calc((100% /3) - 0.5px);
+		}
+
+		.tabs-container-2 .tabs li{
+			width: calc(50% - 0.5px);
+		}
+
+		.tabs-container-1 .tabs li{
+			width: 100%;
+		}
+	}
+}
+
+
+.mag-box-filter-links {
+  max-width: 400px;
+}
+
+@media (max-width: 768px) {
+  .mag-box-filter-links {
+    max-width: 250px;
+  }
+}
+
+.half-box .mag-box-filter-links {
+  max-width: 100px;
+}
+
+@media (max-width: 480px) {
+  .mag-box-filter-links {
+    max-width: 100px;
+  }
+}
+
+.post-rating,
+.post-large-rate,
+.post-small-rate {
+  word-wrap: normal;
+}
+
+textarea,
+input,
+select {
+  line-height: normal !important;
+}
+
+.pages-numbers .first-last-pages {
+  min-width: 100px;
+}

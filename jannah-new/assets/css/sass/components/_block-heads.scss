@@ -1,0 +1,785 @@
+
+// blocks title style #1 -----------------------------------
+.block-head-1{
+	.the-global-title,
+	.comment-reply-title,
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		position: relative;
+		font-size: 17px;
+		padding: 0 0 15px;
+		border-bottom: $title-border-bottom;
+		margin-bottom: 20px;
+
+		&:after {
+			content: "";
+			background: $dark-color;
+			width: 40px;
+			height: 2px;
+			position: absolute;
+			bottom: -2px;
+			left: 0;
+
+			.dark-skin & {
+				background: #ffffff;
+			}
+		}
+
+		&:before {
+			content: "";
+			width: 0;
+			height: 0;
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+			border-left: 0;
+			border-right: 5px solid transparent;
+			border-top: 5px solid $dark-color;
+
+			.dark-skin & {
+				border-top-color: #ffffff;
+			}
+		}
+	}
+
+	.mag-box div.mag-box-title{ // using [.mag-box div] to override the white color in dark-skin
+		&:before{
+	    border-top-color: $brand-color;
+		}
+	}
+
+	.dark-skin .section-title-default{ // section dark-skin
+		&:after {
+			background: #ffffff;
+		}
+
+		&:before {
+			border-top-color: #ffffff;
+		}
+	}
+
+	.dark-skin {
+		.widget-title{
+			&:after {
+				background: #ffffff;
+			}
+
+			&:before{
+		    border-top-color: #ffffff;
+			}
+		}
+	}
+
+	#footer .widget-title:before{
+		display: none;
+	}
+}
+
+
+// blocks title style #2 -----------------------------------
+.block-head-2{
+	.the-global-title,
+	.comment-reply-title,
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		position: relative;
+		font-size: 17px;
+		padding: 0 0 15px;
+		margin-bottom: 20px;
+		border-bottom: 3px solid $dark-bg;
+		color: $dark-bg;
+	}
+
+	.section-title-default{
+		border-bottom-width: 5px;
+	}
+
+	#footer .widget-title:after {
+		content: "";
+		background: #ffffff;
+		width: 40px;
+		height: 2px;
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+	}
+}
+
+
+// blocks title style #3 -----------------------------------
+.block-head-3{
+	.the-global-title,
+	.comment-reply-title,
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		position: relative;
+		font-size: 17px;
+		margin-bottom: 20px;
+		border-bottom: $base-border;
+		padding: 0 0 14px;
+
+		&:after {
+			content: "";
+			background: $dark-bg;
+			width: 80px;
+			height: 3px;
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+		}
+	}
+
+	.dark-skin .the-global-title:after{
+		background: #ffffff;
+	}
+
+	#footer .widget-title:after{
+		width: 50px;
+	}
+}
+
+
+// Commone on style-1 & style-2 && style-3
+.dark-skin .block-head-1 .the-global-title,
+.dark-skin .block-head-1 .related.products>h2,
+.dark-skin .block-head-1 .up-sells>h2,
+.dark-skin .block-head-1 .cross-sells>h2,
+.dark-skin .block-head-1 .cart_totals>h2,
+.dark-skin .block-head-1 .bbp-form legend,
+
+.dark-skin .block-head-2 .the-global-title,
+.dark-skin .block-head-2 .related.products>h2,
+.dark-skin .block-head-2 .up-sells>h2,
+.dark-skin .block-head-2 .cross-sells>h2,
+.dark-skin .block-head-2 .cart_totals>h2,
+.dark-skin .block-head-2 .bbp-form legend,
+
+.dark-skin .block-head-3 .the-global-title,
+.dark-skin .block-head-3 .related.products>h2,
+.dark-skin .block-head-3 .up-sells>h2,
+.dark-skin .block-head-3 .cross-sells>h2,
+.dark-skin .block-head-3 .cart_totals>h2,
+.dark-skin .block-head-3 .bbp-form legend,
+
+.block-head-1 .dark-skin .the-global-title,
+.block-head-2 .dark-skin .the-global-title,
+.block-head-3 .dark-skin .the-global-title{
+  color: #ffffff;
+  border-bottom-color: $base-border-color-in-white;
+}
+
+.block-head-1,
+.block-head-2,
+.block-head-3{
+  #footer .widget-title {
+		border-bottom: 0;
+	}
+}
+
+.block-head-1,
+.block-head-3{
+	.dark-skin &{
+		.the-global-title,
+		.related.products > h2,
+		.up-sells > h2,
+		.cross-sells > h2,
+		.cart_totals > h2,
+		.bbp-form legend{
+			&:after{
+				background: #ffffff;
+			}
+		}
+	}
+
+	.mag-box div.mag-box-title,
+	.mag-box-title h3 a,
+	.block-more-button{
+		color: $brand-color;
+	}
+
+	.mag-box-title h3 a:hover,
+	.block-more-button:hover{
+		color: $dark-brand-color;
+	}
+
+	.mag-box div.mag-box-title:after{
+		background: $brand-color;
+	}
+}
+
+
+// blocks title style #4 -----------------------------------
+.block-head-4{
+	.has-block-head-4,
+	.mag-box-title h3,
+	.comment-reply-title, // WooCommerce
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		position: relative;
+		opacity: 0.99;
+		display: inline-block !important;
+		width: auto;
+		font-size: 15px;
+		line-height: 1.3;
+		font-weight: 500;
+		margin-bottom: 20px;
+		padding: 5px 10px;
+		color: $bright;
+
+		&:before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: $brand-color;
+			z-index: -1;
+		}
+	}
+
+	.section-title-default{
+		padding: 5px 20px;
+	}
+
+	.mag-box-title h3 a,
+	.section-title-default a,
+	#cancel-comment-reply-link{
+		color: $bright;
+
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+
+	.mag-box-title{
+		position: relative;
+		margin-bottom: 0;
+
+		h3{
+			font-size: 18px;
+		}
+
+		.tie-alignright{
+			margin-top: 6px;
+		}
+	}
+
+	.widget-title{
+		padding: 0 10px;
+
+		.the-subtitle{
+			line-height: 27px;
+		}
+	}
+
+	&#tie-body .widget-title,
+	&#tie-body .widget-title a:not(:hover){
+		color: #ffffff;
+	}
+
+
+	&#tie-body .widget-title:before{ // override [#tie-body .has-block-head-4:before] in custom color
+		background: #111;
+	}
+
+	#check-also-box .widget-title{
+		padding-left: 30px;
+	}
+
+	#check-also-close{
+		top: 4px;
+		left: 5px;
+	}
+
+	.widget-title a:not(:hover){
+		color: #ffffff
+	}
+
+	.mag-box-filter-links .flexMenu-popup{
+		top: 5px;
+	}
+}
+
+.block-head-4,
+.block-head-7{
+	span.widget-title-icon{
+		float: left;
+  	margin-right: 10px;
+		line-height: 27px;
+		position: static;
+		color: #ffffff;
+	}
+
+	.mag-box > .container-wrapper,
+	.widget-title,
+	#footer .widget,
+	.side-aside .widget{
+		opacity: 0.99; // create a new stacking context to fix the negative z-index issue of :before
+	}
+}
+
+
+// blocks title style #5 -----------------------------------
+// used with block-head-4
+.block-head-5{
+	.has-block-head-4,
+	.mag-box-title h3,
+	.comment-reply-title,
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		padding: 5px 15px 5px 25px;
+
+		&:before{
+			transform: skew(-20deg) translateX(6px);
+		}
+	}
+
+	.section-title-default{
+		padding: 5px 20px 5px 35px;
+
+		&:before{
+			transform: skew(-20deg) translateX(13px);
+		}
+	}
+
+	.widget-title{
+		padding: 0 10px 0 20px;
+	}
+
+	#check-also-box .widget-title{
+		padding-left: 37px;
+	}
+
+	#check-also-close{
+		left: 12px;
+	}
+}
+
+
+// blocks title style #6
+// used with block-head-4
+.block-head-6{
+	.has-block-head-4,
+	.mag-box-title h3,
+	.comment-reply-title,
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		&:after{
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 70%;
+			height: 100%;
+			background-color: $brand-color;
+			transform: skew(-40deg) translateX(14px);
+			z-index: -1;
+		}
+	}
+
+	.section-title-default{
+		padding: 5px 25px;
+
+		&:after{
+			transform: skew(-40deg) translateX(32px);
+		}
+	}
+
+	&#tie-body .widget-title:after{ // override [#tie-body .has-block-head-4:after] in custom color
+		background: #111;
+	}
+}
+
+
+// blocks title style #7
+.block-head-7{
+	.the-global-title,
+	.comment-reply-title,
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		position: relative;
+		font-size: 15px;
+		line-height: 1.3;
+		font-weight: 500;
+		margin-bottom: 20px;
+		padding: 7px 10px;
+		color: #ffffff;
+		background-color: #111;
+	}
+
+	.section-title-default{
+		padding: 5px 15px;
+	}
+
+	.mag-box-title h3{
+		font-size: 15px;
+		line-height: 22px;
+	}
+
+	.the-global-title a{
+		color: #ffffff;
+	}
+
+	.mag-box .mag-box-title .mag-box-filter-links a.active{
+		color: $brand-color;
+	}
+
+	.mag-box-title h3 a,
+	.block-more-button,
+	.section-title-default a,
+	.widget-title a{
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+
+	.mag-box-filter-links .flexMenu-popup{
+		top: 6px;
+
+		a:not(:hover):not(.active){
+			color: $base-color;
+		}
+	}
+
+	.dark-skin &,
+	.dark-skin{
+		.mag-box-filter-links .flexMenu-popup a:not(:hover):not(.active){
+			color: $dark-base-color;
+		}
+	}
+
+	.slider-arrow-nav {
+		margin-right: -3px;
+
+		a{
+			border-color: rgba(255,255,255,0.2);
+		}
+	}
+
+	#footer .widget-title{
+		display: inline-block;
+	}
+
+	span.widget-title-icon{
+		line-height: 19px;
+	}
+}
+
+
+// blocks title style #8 -----------------------------------
+.block-head-8{
+	.the-global-title,
+	.comment-reply-title,
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		position: relative;
+		font-size: 15px;
+		margin-bottom: 20px;
+		padding-left: 20px;
+		min-height: 0;
+
+		.dark-skin &{
+			color: #ffffff;
+		}
+
+		&:before {
+			content: "";
+			background: $brand-color;
+			height: 1em;
+			width: 10px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+		}
+	}
+
+	.section-title-default{
+		padding-left: 25px;
+
+		&:before{
+			height: 0.8em;
+			width: 15px;
+		}
+	}
+
+	.mag-box-title h3{
+		line-height: 22px;
+	}
+
+	.dark-skin .the-global-title{
+		color: #ffffff;
+	}
+}
+
+
+// blocks title style #9 -----------------------------------
+.block-head-9{
+	.the-global-title,
+	.comment-reply-title,
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		margin-bottom: 25px;
+
+		.dark-skin &{
+			color: #ffffff;
+		}
+	}
+
+	.the-subtitle{
+		text-align: center;
+		justify-content: center;
+		display: flex;
+		flex-direction: row-reverse;
+
+		.widget-title-icon{
+			position: relative;
+			padding-right: 5px;
+			color: inherit;
+		}
+	}
+
+	.mag-box-title h3{
+		line-height: 22px;
+	}
+}
+
+
+// blocks title style 10
+.block-head-10{
+	.has-block-head-4,
+	.mag-box-title h3,
+	.comment-reply-title, // WooCommerce
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		position: relative;
+		opacity: 0.99;
+		display: inline-block !important;
+		width: auto;
+		font-size: 15px;
+		line-height: 1;
+		font-weight: 500;
+		margin-bottom: 20px;
+
+		&:after{
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 2px;
+			height: 100%;
+			z-index: -1;
+			background-color: $brand-color;
+			transform: skew(-30deg) translateX(10px);
+		}
+	}
+
+	.widget-title-icon{
+		float: left;
+  	margin-right: 10px;
+		position: static;
+		color: inherit;
+	}
+
+	.mag-box-title{
+		position: relative;
+		margin-bottom: 0;
+
+		h3{
+			font-size: 18px;
+		}
+	}
+
+	.section-title-default{
+		padding-right: 10px;
+	}
+
+	#check-also-box .widget-title{
+		padding-left: 30px;
+	}
+
+	#check-also-close{
+		left: 5px;
+	}
+}
+
+// blocks title style 11
+.block-head-11{
+	.has-block-head-4,
+	.mag-box-title h3,
+	.comment-reply-title, // WooCommerce
+	.related.products > h2,
+	.up-sells > h2,
+	.cross-sells > h2,
+	.cart_totals > h2,
+	.bbp-form legend{
+		position: relative;
+		opacity: 0.99;
+		display: inline-block !important;
+		width: auto;
+		font-size: 15px;
+		line-height: 1;
+		font-weight: 500;
+		margin-bottom: 20px;
+		padding: 0;
+		padding-right: 21px;
+
+		&:after{
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 0;
+			height: 0;
+			z-index: -1;
+			opacity: .5;
+			border-color: transparent transparent transparent $brand-color;
+			border-style: solid;
+			border-width: 16px 0 0 13px;
+		}
+	}
+
+	.widget-title-icon{
+		float: left;
+  	margin-right: 10px;
+		position: static;
+		color: inherit;
+	}
+
+	.mag-box-title{
+		position: relative;
+		margin-bottom: 0;
+
+		h3{
+			font-size: 18px;
+		}
+	}
+
+	.section-title-default{
+		padding-right: 50px;
+
+		&:after{
+			border-width: 45px 0 0 40px;
+		}
+	}
+
+	#check-also-box .widget-title{
+		padding-left: 30px;
+	}
+
+	#check-also-close{
+		left: 5px;
+	}
+
+	#footer.dark-skin .the-global-title::after{
+		background: transparent !important;
+	}
+}
+
+
+// Section Titles----------------------------------------------
+.section-title{
+	font-weight: 700;
+
+	&.section-title-default{ // separate the default style to fix the override of blocks head style
+		font-size: 50px;
+		margin-bottom: 40px;
+
+		@include breakpoint(max_min_sm){
+			font-size: 35px;
+			margin-top: 10px;
+			margin-bottom: 20px;
+		}
+	}
+
+	span.the-section-title .the-section-icon{
+		font-size: 85%;
+	}
+}
+
+.section-title-centered{
+	font-size: 50px;
+	margin-bottom: 50px;
+  display: flex;
+	justify-content: center;
+	align-content: center;
+
+	@include breakpoint(max_min_sm){
+		font-size: 35px;
+		margin-top: 10px;
+		margin-bottom: 30px;
+	}
+
+	span.the-section-title{
+		padding: 0 2%;
+		text-align: center;
+		line-height: 1;
+	}
+
+	.dark-skin & {
+		color: #ffffff;
+	}
+
+	&:before,
+	&:after{
+		height: 2px;
+		content: '';
+		flex-basis: 15%;
+		position: relative;
+		background-color: $base-color;
+		align-self: center;
+
+		.dark-skin & {
+			background-color: #ffffff;
+		}
+	}
+}
+
+.section-title-big{
+	padding: 0 15px;
+	font-size: 80px;
+	margin-bottom: -15px;
+	line-height: 1;
+	color: rgba(0,0,0,0.3);
+
+   @include breakpoint(max_min_sm){
+		font-size: 35px;
+		margin-top: 10px;
+		margin-bottom: 5px;
+	}
+
+	.dark-skin & {
+		color: rgba(255,255,255,0.3);
+	}
+}

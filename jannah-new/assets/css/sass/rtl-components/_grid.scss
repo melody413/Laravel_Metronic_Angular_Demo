@@ -1,0 +1,66 @@
+// RTL Bootstrap grid system
+
+.tie-col-xs-1,
+.tie-col-xs-10,
+.tie-col-xs-11,
+.tie-col-xs-12,
+.tie-col-xs-2,
+.tie-col-xs-3,
+.tie-col-xs-4,
+.tie-col-xs-5,
+.tie-col-xs-6,
+.tie-col-xs-7,
+.tie-col-xs-8,
+.tie-col-xs-9 {
+	float: right
+}
+
+@include breakpoint(sm){
+	.tie-col-sm-1,
+	.tie-col-sm-10,
+	.tie-col-sm-11,
+	.tie-col-sm-12,
+	.tie-col-sm-2,
+	.tie-col-sm-3,
+	.tie-col-sm-4,
+	.tie-col-sm-5,
+	.tie-col-sm-6,
+	.tie-col-sm-7,
+	.tie-col-sm-8,
+	.tie-col-sm-9 {
+		float: right
+	}
+}
+
+@include breakpoint(md){
+	.tie-col-md-1,
+	.tie-col-md-10,
+	.tie-col-md-11,
+	.tie-col-md-12,
+	.tie-col-md-2,
+	.tie-col-md-3,
+	.tie-col-md-4,
+	.tie-col-md-5,
+	.tie-col-md-6,
+	.tie-col-md-7,
+	.tie-col-md-8,
+	.tie-col-md-9 {
+		float: right
+	}
+}
+
+.pull-right {
+	float: right!important
+}
+
+.pull-left {
+	float: left!important
+}
+
+.tie-alignleft {
+	float: right
+}
+
+.tie-alignright {
+	float: left
+}

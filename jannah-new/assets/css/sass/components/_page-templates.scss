@@ -1,0 +1,617 @@
+// Page Without header/footer-----------------------------------
+// Blank page
+.without-header{
+	#content{
+		margin-top: 0;
+		padding-top: 30px;
+	}
+
+	&.without-footer{
+		height: 100%;
+		position: absolute;
+		width: 100% ;
+		margin: 0;
+		display: table;
+		vertical-align: middle;
+		float: none;
+		top: 0;
+		left: 0;
+		table-layout: fixed;
+
+		.background-overlay {
+			display: table-cell;
+			float: none;
+			vertical-align: middle;
+			width: 100%;
+			position: static;
+			z-index: 2;
+			overflow: hidden;
+		}
+
+		.tie-container, #tie-wrapper {
+			height: auto;
+			min-height: 0;
+		}
+	}
+}
+
+.without-footer{
+	#content{
+		margin-bottom: 0;
+		padding-bottom: 30px;
+	}
+}
+
+.page {
+	.entry-header-outer{
+		padding-bottom: 0;
+	}
+
+	.entry-content{
+		padding-top: 30px;
+	}
+}
+
+.archive:not(.bbpress),
+.search{
+	.entry-header-outer{
+		border-radius: $base-border-radius;
+		border-bottom-right-radius: 0;
+  	border-bottom-left-radius: 0;
+
+		#breadcrumb{
+			margin-bottom: 20px;
+			padding: 0;
+		}
+
+		.taxonomy-description{
+			margin-top: 10px;
+		}
+	}
+
+	.main-content > div:last-child{
+		margin-bottom: 0;
+	}
+
+	.mag-box{
+		.container-wrapper{
+			border-top-width: 0;
+			border-radius: $base-border-radius;
+			border-top-left-radius: 0;
+  		border-top-right-radius: 0;
+		}
+	}
+}
+
+.archive:not(.bbpress),
+.search,
+.home:not(.page){
+	.mag-box{
+		margin-bottom: 0;
+	}
+}
+
+.entry-header-outer .about-author{
+	background: transparent;
+	border: none;
+	padding: 0;
+	margin-top: 25px;
+}
+
+
+// Authors  ----------------------------------------------------
+.entry .authors-wrap{
+	padding: 0;
+	margin: 0;
+
+	> li{
+		list-style: none;
+		margin-bottom: 30px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
+// Not-found ---------------------------------------------------
+.not-found{
+	h5{
+		margin-bottom: 20px;
+		font-weight: normal;
+	}
+}
+
+
+//Sitemap Templates---------------------------------------------
+#sitemap{
+	ul{
+		padding: 0;
+
+		li{
+			list-style-position: outside;
+			list-style-type: disc;
+		}
+	}
+}
+
+
+//404 Page Templates--------------------------------------------
+.error404 {
+	.main-content{
+		width: 100%;
+	}
+}
+
+.container-404 {
+	text-align: center;
+	margin: 30px 0;
+
+	.img-404{
+		margin: 20px auto;
+	}
+
+	h2 {
+		@include font-size(150px);
+		color: $font-color;
+
+		@include breakpoint(max_min_sm){
+			@include font-size(60px);
+		}
+	}
+
+	h3 {
+		@include font-size(28px);
+		color: $dark-color;
+	}
+
+	h4 {
+		margin: 50px auto 20px;
+		font-weight: normal;
+	}
+}
+
+#content-404 {
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+#menu-404 {
+	margin: 40px auto;
+	text-align: center;
+
+	li {
+		display: inline-block;
+		margin: 0 10px;
+
+		a {
+			display: block;
+			min-width: 20px;
+
+			&:before{
+				display: none;
+			}
+		}
+	}
+}
+
+.dark-skin{
+	.container-404 {
+		h2{
+			color: #ffffff;
+		}
+
+		h3{
+			color: $dark-base-color;
+		}
+	}
+}
+
+
+//Masonry Page--------------------------------------------------
+.page-template-template-masonry{
+	.post-content{
+		margin-bottom: 30px;
+	}
+
+	.entry-header-inner{
+		.post-cat{
+			margin-bottom: 10px;
+		}
+	}
+
+	.entry-content.entry{
+		padding: 30px;
+	}
+
+	&.has-not-post-content{
+		#the-post .entry-content{
+			display: none;
+		}
+
+		&.has-not-post-title #the-post{
+			display: none;
+		}
+	}
+}
+
+div.post-element{
+	padding: 0;
+	position: relative;
+	margin-bottom: 50px;
+	overflow: hidden;
+
+	.featured-area{
+		margin-bottom: 0;
+	}
+
+	div.entry-content {
+		padding: 30px;
+
+		@include breakpoint(max_min_md){
+			padding: 20px;
+		}
+
+		img {
+			min-width: 100%;
+		}
+	}
+}
+
+.masonry-grid-wrapper{
+	position: relative;
+
+	img {
+		aspect-ratio: attr(width) / attr(height);
+	}
+}
+
+.masonry-with-spaces{
+	.post-element{
+		width: 48%;
+		margin-bottom: 4%;
+	}
+
+	@include breakpoint(max_min_md){
+		.has-sidebar & .post-element{
+			margin-bottom: 30px;
+		}
+	}
+
+	@include breakpoint(max_min_sm){
+		.magazine1 &.masonry-with-spaces{
+			padding: 0 2%;
+		}
+
+		.post-element.post-element{
+			margin-bottom: 30px;
+		}
+	}
+
+	.grid-sizer {
+		width: 48%;
+	}
+
+	.gutter-sizer {
+		width: 4%;
+	}
+
+	.full-width &{
+		@include breakpoint(sm){
+			.post-element{
+				width: 32%;
+				margin-bottom: 2%;
+			}
+
+			.grid-sizer {
+				width: 32%;
+			}
+
+			.gutter-sizer {
+				width: 2%;
+			}
+		}
+
+		@include breakpoint(lg){
+			.is-percent-width &{
+				.post-element{
+					width: 23.5%;
+					margin-bottom: 2%;
+				}
+
+				.grid-sizer {
+					width: 23.5%;
+				}
+
+				.gutter-sizer {
+					width: 2%;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(max_min_md){
+		.post-element{
+			width: 32%;
+			margin-bottom: 2%;
+		}
+
+		.grid-sizer {
+			width: 32%;
+		}
+
+		.gutter-sizer {
+			width: 2%;
+		}
+	}
+
+	@include breakpoint(max_min_sm){
+		.post-element,
+		.grid-sizer {
+			width: 48%;
+		}
+
+		.gutter-sizer {
+			width: 4%;
+		}
+	}
+
+	@include breakpoint_max(560px){
+		.post-element,
+		.grid-sizer {
+			width: 100%;
+		}
+
+		.gutter-sizer {
+			width: 0;
+		}
+	}
+
+	#masonry-grid{
+		width: 100%;
+		position: relative;
+
+		// Fix the pre-js load issue
+		&:not(.masonry-loaded){
+			.has-sidebar &{
+				.post-element{
+					margin-right: 4%;
+					margin-left: 0;
+					float: left;
+
+					&:nth-child(2n+2){
+						margin-right: 0;
+						margin-left: 0;
+					}
+				}
+			}
+
+			.full-width &{
+				.post-element{
+					margin-right: 2%;
+					margin-left: 0;
+					float: left;
+
+					&:nth-child(3n+3){
+						margin-right: 0;
+						margin-left: 0;
+					}
+				}
+
+				@include breakpoint(lg){
+					.is-percent-width &{
+						.post-element{
+							&:nth-child(3n+3){
+								margin-right: 2%;
+							}
+
+							&:nth-child(4n+4){
+								margin-right: 0;
+								margin-left: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.mag-box + .masonry-page-content,
+.mag-box + script + .masonry-page-content{
+	margin-top: 40px;
+}
+
+
+//Category Layout3 : Media page*/
+.media-page-layout{
+	margin-top: 0;
+
+	.post-element {
+		border: 0!important;
+
+		.slide{
+			height: 300px;
+			background-size: cover;
+			background-position: center top;
+			position: relative;
+
+			&:hover{
+				.thumb-overlay:after{
+					opacity: 0.9;
+				}
+			}
+		}
+
+		&:nth-child( 4n + 2 ),
+		&:nth-child( 4n + 3 ){
+			.slide{
+				height: 450px;
+			}
+		}
+	}
+
+	.loader-overlay {
+		top: 200px;
+	}
+
+	.full-width &{
+		.post-element{
+			.slide,
+			&:nth-child( 4n + 2 ) .slide,
+			&:nth-child( 4n + 3 ) .slide{
+				height: 300px;
+			}
+
+			&:nth-child( 2n + 2 ){
+				.slide{
+					height: 450px;
+				}
+			}
+		}
+	}
+
+	.thumb-overlay {
+		overflow: hidden;
+		pointer-events: none;
+
+		.thumb-title{
+			@include font-size(24px);
+			line-height: 30px;
+		}
+	}
+}
+
+.full-width,
+.one-column-no-sidebar{
+	.entry-header-outer{
+		text-align: center;
+
+		@include breakpoint(xs){
+			.author-info{
+				text-align: left;
+			}
+		}
+	}
+
+	.media-page-layout:not(.masonry-with-spaces){
+		padding-top: 0;
+	}
+}
+
+.masonry-without-spaces{
+	.grid-sizer {
+		width: 50%;
+	}
+
+	.gutter-sizer {
+		width: 0;
+	}
+
+	.post-element {
+		width: 50%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.full-width &{
+		@include breakpoint(sm){
+			.grid-sizer {
+				width: 33.334%;
+			}
+
+			.post-element{
+				width: 33.334%;
+
+				.slide,
+				&:nth-child( 2n + 2) .slide{
+					height: 300px;
+				}
+
+				&:nth-child( 3n + 2){
+					.slide{
+						height: 450px;
+					}
+				}
+			}
+		}
+
+		@include breakpoint(lg){
+			.is-percent-width &{
+				.grid-sizer {
+					width: 25%;
+				}
+
+				.post-element{
+					width: 25%;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(max_min_md){
+		.grid-sizer {
+			width: 33.334%;
+		}
+
+		.post-element{
+			width: 33.334%;
+		}
+	}
+
+	@include breakpoint(max_min_sm){
+		.post-element,
+		.grid-sizer {
+			width: 50%;
+		}
+
+		.slide{
+			height: 400px;
+		}
+	}
+
+	@include breakpoint_max(560px){
+		.post-element,
+		.grid-sizer {
+			width: 100%;
+		}
+	}
+}
+
+#masonry-grid {
+	// Fix the pre-js load issue
+	&:not(.masonry-loaded){
+		.post-element{
+			float: left;
+			opacity: 0;
+		}
+	}
+}
+
+//Category Page: Blog Layout-------------------------------------
+.archive{
+	.entry-header-outer + #media-page-layout,
+	.entry-header-outer + .masonry-with-spaces{
+		margin-top: 30px;
+	}
+
+	.wide-post-box .container-wrapper {
+		padding-top: 40px;
+	}
+
+	.one-column-no-sidebar .wide-post-box .container-wrapper{
+		padding-top: 15px;
+	}
+}
+
+#category-footer-description{
+	margin-top: 30px;
+
+	.review_wrap{
+		display: none !important;
+	}
+
+	.entry *:last-child{
+		margin-bottom: 0;
+	}
+}

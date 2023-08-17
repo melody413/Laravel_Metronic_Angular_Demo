@@ -1,0 +1,444 @@
+// BP Activity Entries - activity loop
+// @version 3.0.0
+
+.activity-list {
+
+	.activity-item { // li element - (entries)
+		list-style: none;
+		padding: $pad-med 0;
+
+		&:first-child{
+			padding-top: 0;
+		}
+
+		&:not(.load-more):before {
+	    content: "";
+	    width: 1px;
+	    height: 100%;
+	    position: absolute;
+	    z-index: 1;
+	    left: 15px;
+	    top: 0;
+	    background-color: rgba(0,0,0,0.1);
+		}
+
+		&.has-comments {
+			padding-bottom: $pad-med;
+		}
+
+
+		div.item-avatar { // 'div' for weight
+			float: left;
+			position: relative;
+			margin-right: $marg-sml;
+	    z-index: 2;
+	    width: 30px;
+	    height: 30px;
+	    color: #ffff;
+	    box-shadow: 0 0 0 3px;
+		}
+
+		@include medium-up() {
+			&:not(.load-more):before {
+		    left: 25px;
+			}
+
+			div.item-avatar { // 'div' for weight
+				margin: 0 $marg-med 0 0;
+				box-shadow: 0 0 0 13px;
+				width: 50px;
+				height: 50px;
+			}
+		}
+
+		&.mini {
+
+			font-size: 85%;
+			position: relative;
+
+			.activity-avatar {
+				width: 25px;
+	    	height: 25px;
+			  margin-left: 40px;
+			  box-shadow: none;
+
+				img.avatar,
+				img.FB_profile_pic { /* stylelint-disable-line selector-class-pattern */
+					height: 25px;
+				  width: 25px;
+				}
+			}
+		} // close .mini
+
+		&.new_forum_post,
+		&.new_forum_topic {
+
+			.activity-inner {
+				border-left: 2px solid $light-grey;
+				margin-left: $marg-sml;
+				padding-left: $pad-med;
+			}
+		} // close li forum elements
+
+
+		&.newest_mentions_activity,
+		&.newest_friends_activity,
+		&.newest_groups_activity,
+		&.newest_blogs_activity {
+			// why?
+			background: rgba(31, 179, 221, 0.1);
+		}
+
+		.activity-inreplyto {
+			color: $light-text;
+
+			@include font-size(13);
+
+			> p {
+				display: inline;
+				margin: 0;
+			}
+
+			blockquote,
+			.activity-inner {
+				background: none;
+				border: 0;
+				display: inline;
+				margin: 0;
+				overflow: hidden;
+				padding: 0;
+			}
+		}
+
+		// The header elements: date stamp, author etc;
+		.activity-header {
+			margin: 0 auto;
+
+			// ensure elements are display inline, some themes setting avatars as block
+			a,
+			img {
+				display: inline;
+			}
+
+			.avatar {
+				display: inline-block;
+				margin: 0 $marg-xsml;
+				vertical-align: bottom;
+			}
+
+			.time-since {
+
+				@include font-size(12);
+				color: lighten($light-text, 15%);
+				text-decoration: none;
+				display: block;
+
+				&:hover {
+					color: $light-text;
+					cursor: pointer;
+					text-decoration: underline;
+				}
+			}
+
+		} // close .activity-header
+
+		.activity-content {
+			margin-left: 40px;
+			padding-bottom: $pad-sml;
+
+			.activity-header,
+			.comment-header {
+				color: $light-text;
+				// margin-bottom: $marg-sml;
+			}
+
+			.activity-inner,
+			blockquote {
+				margin: $marg-med 0 $marg-sml;
+				overflow: hidden;
+			}
+
+			p {
+				margin: 0;
+			}
+
+			.activity-inner img{
+				margin-top: $marg-sml;
+			}
+
+		} // close .activity-content
+
+		.activity-inner {
+
+			p {
+				word-wrap: break-word;
+			}
+		}
+
+		.activity-read-more {
+			margin-left: 1em; // proportional to the text size please!
+			white-space: nowrap;
+			display: block;
+			margin: 10px 0 1px;
+
+			a{
+				border-radius: $base-border-radius;
+			}
+		}
+
+		// The footer elements, buttons etc
+
+		// if this is a ul then...
+		// else we'll skip this for the rules below.
+		ul.activity-meta {
+			margin: 0;
+			padding-left: 0;
+
+			li {
+				// if a list is being used keep it inline
+				border: 0;
+				display: inline-block;
+			}
+		}
+
+		.activity-meta.action {
+			border: 1px solid transparent;
+			padding: 2px;
+			position: relative;
+			text-align: left;
+
+			// this wrapper has generic margins in _bp_lists.scss
+			// remove for act stream actions.
+			div.generic-button {
+				margin: 0;
+			}
+
+			.button {
+				background: transparent;
+			}
+
+			a {
+				padding: 1px 8px;
+			}
+
+			// we don't want a background hover if icons used
+			.button:focus,
+			.button:hover {
+				background: none;
+			}
+
+			// Uncomment .acomment-reply class for icon us
+			.button:before,
+			.icons:before {
+				font-family: dashicons;
+				font-size: 14px;
+				vertical-align: middle;
+			}
+
+			.acomment-reply.button:before {
+				content: "\f101";
+			}
+
+			.view:before {
+				content: "\f125";
+			}
+
+			.fav:before {
+				content: "\f154";
+			}
+
+			.unfav:before {
+				content: "\f155";
+				color: $brand-color;
+			}
+
+			.delete-activity:before {
+				content: "\f153";
+			}
+
+			.delete-activity:hover {
+				color: #800;
+			}
+
+			.button {
+				border: 0;
+				box-shadow: none;
+
+				span {
+					background: none;
+					color: #555;
+					font-weight: 700;
+				}
+			}
+
+		} // close .activity-meta
+
+		// Main Activity items
+		@include medium-up(){
+			> .activity-content > .activity-meta.action {
+				position: absolute;
+				top: -5px;
+				right: 0;
+			}
+		}
+
+	} // close .activity-item
+
+} // close .activity-list
+
+@include medium-up() {
+
+	.activity-list {
+
+		.activity-item {
+
+			.activity-content {
+				margin: 0 0 0 70px;
+				position: relative;
+
+				&:after {
+					clear: both;
+					content: "";
+					display: table;
+				}
+			}
+
+			.activity-header {
+				margin: 0 110px 0 0;
+				width: auto;
+			}
+
+		} // li entry item
+	}
+}
+
+.buddypress-wrap {
+
+	// load more link
+	.activity-list {
+
+		.load-more,
+		.load-newest {
+			margin: $marg-med 0 0;
+			padding: 0;
+
+			a {
+				text-align: center;
+				background: $brand-color;
+				color: color-contrast($brand-color);
+				font-size: 110%;
+				display: block;
+				height: 40px;
+				line-height: 40px;
+				transition: background-color 0.3s;
+
+				&:hover{
+					background: $dark-brand-color;
+					color: color-contrast($brand-color);
+				}
+			}
+
+			// spinner circle width
+			@include spinner-width(20px);
+
+			.spinner {
+		    width: 3.101em;
+
+		    > div {
+			    width: 0.7em;
+			    height: 0.7em;
+				}
+			}
+
+		}
+
+		.load-newest{
+			margin-bottom: $marg-med;
+		}
+
+	}
+}
+
+// Single Activity Entry View
+body.activity-permalink {
+
+	.activity-list {
+
+		li {
+			border-width: 1px;
+			padding: $pad-med 0 0 0;
+
+			&:first-child {
+				padding-top: 0;
+			}
+
+			&.has-comments {
+				padding-bottom: 0;
+			}
+
+		} // close li
+
+		.activity-avatar {
+			width: auto;
+
+			a {
+				display: block;
+			}
+
+			img {
+				max-width: 100%;
+			}
+		}
+
+		.activity-content {
+			border: 0;
+			font-size: 100%;
+			line-height: 1.5;
+			padding-bottom: 0;
+
+			.activity-header {
+				margin: 0;
+				padding: $pad-sml 0 0 0;
+				text-align: center;
+				width: 100%;
+			}
+
+			.activity-inner,
+			blockquote {
+				margin-left: 0;
+				margin-top: $marg-sml;
+			}
+		}
+
+		.activity-meta {
+			margin: $marg-sml 0 $marg-sml;
+		}
+
+		.activity-comments {
+			margin-bottom: $marg-sml;
+		}
+
+		@include medium-up() {
+
+			.activity-avatar {
+				left: -20px;
+				margin-right: 0;
+				position: relative;
+				top: -20px;
+			}
+
+			.activity-content {
+				margin-right: $marg-sml;
+
+				.activity-header {
+
+					p {
+						text-align: left;
+					}
+				}
+			}
+
+		} // close @media
+
+	}
+}

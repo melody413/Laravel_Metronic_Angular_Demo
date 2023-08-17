@@ -1,0 +1,351 @@
+// Magazine Boxes
+
+.mag-box-title h3{
+	float: right;
+ 	margin-right: 0;
+ 	margin-left: 20px;
+}
+
+.block-more-button{
+	margin-right: 10px;
+	margin-left: 0;
+}
+
+.mag-box-filter-links li{
+	float: right;
+}
+
+.flexMenu-popup {
+  transform: translateX(100%) translateX(-34px);
+  text-align: left;
+}
+
+.mag-box{
+	.posts-items{
+		li{
+			float: right;
+		}
+	}
+
+	li:not(:first-child){
+		.post-thumb{
+			float: right;
+			margin-left: 15px;
+			margin-right: 0;
+		}
+
+		.post-details{
+			padding-right: 125px;
+			padding-left: 0;
+		}
+	}
+}
+
+.post-thumb{
+	.post-cat-wrap {
+		left: 10px;
+		right: auto;
+	}
+}
+
+.no-small-thumbs{
+	&.post-item .post-details,
+	&.post-widget-body,
+	&.comment-body{
+		padding-right: 0 !important;
+	}
+}
+
+//Block #3
+.big-post-top-box{
+	.posts-items{
+		li{
+			&:first-child{
+				margin-left: 0;
+				margin-right: 2%;
+
+				.post-thumb{
+					float: right;
+					margin-left: 4%;
+					margin-right: 0;
+				}
+
+				@include breakpoint_min(671px){
+					.post-details{
+						padding-right: 52%;
+						padding-left: 0;
+					}
+				}
+			}
+
+			&:nth-child(2n){
+				clear: right;
+			}
+		}
+	}
+}
+
+@include breakpoint(md){
+	.full-width{
+		.big-post-top-box .posts-items{
+			li:first-child{
+				.post-details {
+				  padding-right: 34.767%;
+				  padding-left: 0;
+				}
+			}
+
+			li:nth-child(3n + 2){
+				clear: right;
+			}
+		}
+	}
+}
+
+//Block #4
+.half-box{
+	&.mag-box{
+		padding-left: 15px;
+		padding-right: 0;
+		clear: left;
+	}
+
+	&.second-half-box {
+    padding-right: 15px;
+    padding-left: 0;
+	}
+}
+
+@include breakpoint(sm){
+	.content-only.first-half-box{
+		padding-right: 0;
+	}
+}
+
+//News Gallery Posts
+.news-gallery-items{
+	li{
+		float: right;
+	}
+}
+
+//Block #1
+.wide-post-box{
+	.posts-items{
+		li{
+			.post-thumb{
+				margin-left: 25px;
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+//Block #14
+.timeline-box {
+	.posts-items:before,
+	.posts-items:last-of-type:after {
+    right: 29px;
+    left: 0;
+	}
+
+	.year-month {
+    float: right;
+    margin-right: 0;
+    margin-left: 10px;
+	}
+
+	.day-month {
+    padding-right: 50px;
+    padding-left: 0;
+
+		&:before {
+	    left: auto;
+	    right: 23px;
+		}
+	}
+
+	.post-item-inner{
+		margin-left: 0;
+		margin-right: 50px;
+	}
+}
+
+//Block #10
+.big-posts-box{
+	.posts-items li{
+		.post-thumb{
+			margin-left: 0;
+		}
+
+		.post-details{
+			padding-right: 0;
+		}
+
+		.post-title{
+			padding-right: 0;
+		}
+
+		&:nth-child(2n + 1){
+			clear: right;
+		}
+	}
+}
+
+@media (min-width: 670px) {
+	.full-width .big-posts-box{
+		.posts-items {
+			li{
+				&:nth-child(2n + 1){
+					clear: none;
+				}
+
+				&:nth-child(3n + 1){
+					clear: right;
+				}
+			}
+		}
+	}
+}
+
+//Block #12
+@include breakpoint(sm){
+	.full-overlay-title{
+		li:not(.no-post-thumb){
+			.block-title-overlay{
+				padding: 25px 0 0 25px;
+			}
+		}
+
+		&.media-overlay{
+			.tie-media-icon{
+				right: 15px;
+				left: auto;
+			}
+
+			.is-trending{
+				.trending-post{
+			    right: 15px;
+			    left: auto;
+				}
+
+				.tie-media-icon{
+					right: 63px;
+					left: auto;
+				}
+			}
+		}
+
+		.digital-rating{
+			left: 15px;
+			right: auto;
+		}
+	}
+}
+
+//Block #9
+.mini-posts-box{
+	.posts-items li{
+		.post-thumb{
+			float: right;
+			margin-left: 15px;
+			margin-right: 0;
+		}
+
+		&:nth-child(2n + 1){
+			clear: right;
+		}
+	}
+}
+
+@include breakpoint(md){
+	.full-width{
+		.mini-posts-box .posts-items li{
+			&:nth-child(n){
+				clear: none;
+			}
+
+			&:nth-child(3n + 1){
+				clear: right;
+			}
+		}
+	}
+}
+
+//Block #15
+.miscellaneous-box{
+	@include breakpoint_max(670px){
+		li:first-child {
+			.tie-media-icon{
+				right: 10px;
+				left: auto;
+			}
+
+			&.is-trending{
+				.tie-media-icon{
+					right: 50px;
+					left: auto;
+				}
+			}
+		}
+	}
+}
+
+@include breakpoint(md){
+	.full-width{
+		.miscellaneous-box .posts-items{
+			li{
+				&:nth-child(4n + 2){
+					clear: right;
+				}
+			}
+		}
+	}
+}
+
+
+//Video Playlist
+.playlist-title-icon{
+	float: right;
+	margin-right: 0;
+	margin-left: 10px;
+}
+
+.videos-number,
+.video-play-icon,
+.video-paused-icon,
+.video-number,
+.video-thumbnail{
+	float: right;
+	text-align: right;
+}
+
+.video-info{
+	padding-left: 0;
+	padding-right: 105px;
+}
+
+.video-playlist-nav-wrapper{
+	.mCS-dir-rtl > .mCSB_inside > .mCSB_scrollTools,
+	.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{
+		left: 0;
+		right: auto;
+	}
+}
+
+// - New Ticker Magazine box
+.mag-box{
+	.breaking{
+		border-left-width: 1px;
+		border-right-width: 0;
+	}
+
+	.controls-is-active .ticker-wrapper.has-js{
+		padding-right: 0;
+		padding-left: 90px;
+	}
+
+	.breaking-news-nav{
+		padding-left: 0;
+	}
+}

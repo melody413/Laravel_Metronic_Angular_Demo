@@ -1,0 +1,243 @@
+/* Pop Up */
+
+// blur element
+.tie-popup-is-opend #tie-wrapper{
+	transition: filter 0.2s;
+	filter: blur(4px);
+}
+
+//Pop up modal
+.tie-popup {
+	position: fixed;
+	z-index: 99999;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(#000, 0.9);
+	display: none;
+	perspective: 600px;
+}
+
+.tie-popup-container {
+	position: relative;
+	z-index: 100;
+	width: 90%;
+	max-width: 420px;
+	margin: 10em auto 0;
+	border-radius: $base-border-radius;
+	box-shadow: 0 0 20px rgba(#000, .2);
+	transition: 0.3s;
+	will-change: transform, opacity;
+	//transform: scale(0.9) rotateX(12deg) translateY(-50px);
+	transform: scale(0.5);
+	opacity: 0;
+
+	.login-submit{
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	.container-wrapper{
+		padding: 60px;
+		background-color: #ffffff ! important;
+		border-radius: 5px; //$base-border-radius ! important;
+
+		@include breakpoint(max_min_xs){
+			padding: 30px;
+		}
+	}
+}
+
+#tie-popup-adblock{
+	.tie-popup-container{
+		max-width: 500px;
+	}
+
+	.container-wrapper{
+		background: $danger_color !important;
+		text-align: center;
+		color: #fff;
+	}
+
+	.tie-adblock-icon{
+		font-size: 120px;
+		margin-bottom: 10px;
+	}
+
+	.adblock-message{
+		font-size: 12px;
+	}
+}
+
+.pop-up-live-search{
+	will-change: transform, opacity;
+	transition: 0.3s;
+	//transform: scale(0.97) rotateX(10deg) translateY(-10px);
+	transform: scale(0.7);
+	opacity: 0;
+}
+
+.tie-popup-is-opend .pop-up-live-search,
+.tie-popup-is-opend .tie-popup-container{
+	opacity: 1;
+	//transform: scale(1) rotateX(0) translateY(0);
+	transform: scale(1);
+}
+
+
+// Fullwidth overlay search
+.tie-popup-search-wrap {
+	.container {
+		padding: 0;
+	}
+
+	@include placeholder(){
+		color: #ffffff;
+	}
+
+	form {
+		position: relative;
+		height: 80px;
+		margin-bottom: 20px;
+	}
+}
+
+.popup-search-wrap-inner {
+	position: relative;
+	padding: 80px 15px 0;
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+input.tie-popup-search-input {
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	background: rgba( #000, 0.7) !important;
+	font-weight: 500;
+	font-size: 22px;
+	border: 0;
+	padding-right: 80px;
+	padding-left: 30px;
+	color: #ffffff;
+}
+
+button.tie-popup-search-submit {
+	font-size: 28px;
+	color: #666;
+	position: absolute;
+	right: 10px;
+	top: 20px;
+	background: transparent !important;
+	transition: 0.15s;
+
+	.tie-icon-spinner{
+		color: #666;
+		cursor: default;
+		animation: tie-spin 3s infinite linear;
+	}
+}
+
+
+#tie-popup-search-mobile{
+	.popup-search-wrap-inner{
+		padding-top: 50px;
+	}
+
+	input.tie-popup-search-input{
+		height: 50px;
+		line-height: 1;
+		padding-left: 20px;
+		padding-right: 50px;
+	}
+
+	button.tie-popup-search-submit{
+		font-size: 16px;
+		top: 9px;
+		right: 0;
+	}
+}
+
+
+// Live Search -------------------------------------------------
+#autocomplete-suggestions { // wrapper
+	overflow: auto;
+	padding: 20px;
+	color: #eee;
+	position: absolute;
+	display: none;
+	width: 370px;
+	z-index: 9999;
+
+	.post-meta{
+		margin: 3px 0 0;
+	}
+}
+
+.autocomplete-suggestion { // item
+	padding-bottom: 20px;
+	clear: both;
+	overflow: hidden;
+
+	&:last-child {
+		padding-bottom: 0 !important;
+	}
+}
+
+.autocomplete-no-suggestion{
+	text-align: center;
+	font-weight: 600;
+}
+
+.live-search-dark{
+	color: $dark-base-color;
+	background: $darker-bg;
+	border: 1px solid rgba(255,255,255,0.07);
+	margin: 0 -1px;
+
+	&.search-in-top-nav{
+		background-color: $top-nav-dark-bg;
+	}
+}
+
+.live-search-dark,
+.live-search-popup{
+	.post-title a:not(:hover){
+		color: #ffffff;
+	}
+}
+
+.live-search-light{
+	border: $base-border;
+	background: #ffffff;
+}
+
+
+// PopUP Search
+.live-search-popup{
+	position: fixed !important;
+	width: 100% !important;
+	z-index: 999999 !important;
+	background: rgba(#000, 0.7);
+	padding: 35px;
+	border-top: 1px solid #222;
+
+	@include breakpoint(max_min_md){
+		padding: 20px;
+		max-height: calc(100vmax - 150px);
+	}
+
+	.post-widget-body .post-title{
+		@include breakpoint(md){
+			line-height: 23px;
+			@include font-size(16px);
+		}
+	}
+
+	.button{
+		@include font-size(14px);
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+}

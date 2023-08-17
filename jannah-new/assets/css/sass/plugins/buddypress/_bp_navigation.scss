@@ -1,0 +1,669 @@
+// BP primary & secondary navigation - directory and single screens
+// @version 3.0.0
+
+// all devices & generic styles sitewide
+.bp-navs {
+	background: transparent;
+	clear: both;
+	overflow: hidden;
+
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			list-style: none;
+			margin: 0;
+		}
+
+		li {
+
+			a,
+			span {
+				display: block;
+				padding: 0 10px;
+				text-decoration: none;
+				line-height: 35px;
+				position: relative;
+			}
+
+			.count {
+				background: $brand-color;
+				color: $bright;
+				border-radius: 10px;
+				display: inline-block;
+				line-height: 17px;
+				margin-left: 4px;
+				padding: 0 6px;
+				text-align: center;
+				font-size: 11px;
+				position: absolute;
+				left: 50%;
+				top: 20px;
+				box-shadow: 0 0 0 0 #fff;
+				transition: 0.3s;
+
+				@include medium-max(){
+					position: static;
+				}
+			}
+		}
+
+		// these selected/current should apply to all navs
+		// if not pull out & move to end.
+		li.selected,
+		li.current {
+
+			a {
+				color: $brand-color;
+				opacity: 1;
+			}
+		}
+
+	} // close ul
+
+	&.bp-invites-filters,
+	&.bp-messages-filters {
+
+		ul {
+
+			li {
+
+				a {
+					border: 1px solid $bp-border-dark;
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+} // close .bp-navs
+
+
+
+// User Subnav
+.buddypress-wrap.bp-dir-hori-nav:not(.bp-vertical-navs) nav:not(.tabbed-links).user-subnav{
+	border-top: 0;
+}
+
+.user-subnav ul li a{
+	line-height: 35px;
+}
+
+
+
+
+
+
+// Main Nav
+// @include medium-up() {
+
+	.bp-dir-hori-nav:not(.bp-vertical-navs){
+		.bp-navs.main-navs{
+			border-bottom: $primary-border;
+
+			ul {
+				margin: 0;
+				padding: 0;
+				text-align: center;
+				border: 0;
+
+				li {
+					margin: 2px;
+					list-style: none;
+					float: none;
+					border: 0;
+					display: inline-block;
+					min-width: 80px;
+
+					.count{
+						position: absolute;
+					}
+
+					a{
+						opacity: 0.9;
+					}
+
+					a:hover,
+					&.selected a,
+					&.current a {
+						background: transparent;
+						color: $brand-color;
+						opacity: 1;
+					}
+				}
+			}
+		} // .bp-navs.main-navs
+
+		.bp-navs.single-screen-navs ul{
+			margin: $marg-med 0 0;
+		}
+
+		.main-navs.dir-navs:not(.tabbed-links){
+			border-top: 0;
+
+			ul li{
+				float: left;
+			}
+		}
+
+		.main-navs:not(.dir-navs){
+			a:before{
+				font-family: "tiefonticon";
+				content: "\e69e";
+				display: block;
+				font-size: 30px;
+			}
+
+			#groups-all a:before,
+			#members-all a:before,
+			#groups-personal a:before,
+			#members-personal a:before,
+			#groups-create a:before,
+			.activity-type-tabs a:before{
+				font-family: "tiefonticon";
+				content: "\e69b";
+				display: block;
+				font-size: 30px;
+			}
+
+			#groups-create {
+				a:hover{
+					text-decoration: none;
+				}
+
+				a:before{
+					content: "\e6bd";
+				}
+			}
+
+			#activity-favorites a:before{
+				content: "\e66b";
+			}
+
+			#activity-mentions a:before{
+				content: "\e64a";
+			}
+
+
+			#user-xprofile:before{
+				content: "\e69c";
+			}
+
+			#user-notifications:before{
+				content: "\e6a7";
+			}
+
+			#user-messages:before{
+				content: "\e6bb";
+			}
+
+			#user-friends:before,
+			#members:before,
+			#user-groups:before{
+				content: "\e69b";
+			}
+
+			#user-forums:before,
+			#nav-forum:before{
+				content: "\e6b3";
+			}
+
+			#user-settings:before,
+			#admin:before{
+				content: "\e6a3";
+			}
+
+			#home:before,
+			#user-front:before{
+				content: "\e67d";
+			}
+
+			#invite:before{
+				content: "\e671";
+			}
+
+			// object-nav list [Main Buddypress list]
+			#object-nav{
+				margin-top: 0;
+
+				li{
+					body.groups &{
+						display: inline-block;
+						float: none;
+					}
+				}
+
+				.loading a {
+					background-position: 88% 50%;
+				}
+			}
+		} // .main-navs:not(.dir-navs)
+	} // .bp-dir-hori-nav:not(.bp-vertical-navs)
+
+// }
+
+
+
+
+
+// Group Creat Nav :not(tabbed style)
+@include medium-up() {
+	#group-create-tabs ol{
+		margin-top: $marg-med;
+	}
+
+	#group-create-tabs:not(.tabbed-links){
+		ol{
+			text-align: center;
+		}
+
+		li{
+			display: inline-block;
+			float: none;
+			font-size: 15px;
+
+			&:not(:last-child):after{
+				font-family: tiefonticon;
+				content: '\f178';
+				margin: 0 10px;
+				color: $med-light-grey;
+			}
+		}
+
+		a,
+		span{
+			display: inline-block;
+			color: $light-text;
+
+			&:first-letter{
+				display: inline-block;
+				font-size: 20px;
+			}
+		}
+
+		li.current{
+			a{
+				color: $brand-color;
+
+				&:hover{
+					color: $dark-brand-color;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+.main-navs.dir-navs {
+	margin-bottom: $marg-lrg;
+
+	.count{
+		position: static !important;
+		margin-left: 1px;
+	}
+}
+
+// Primary, default current/selected states
+.buddypress-wrap {
+	@include medium-up() {
+
+		.main-navs.vertical { // single screen navs
+
+			li.selected,
+			li.current {
+
+				a {
+					background: $dark-grey;
+					color: $off-white;
+					text-decoration: none;
+				}
+			}
+		}
+
+		&.bp-dir-hori-nav:not(.bp-vertical-navs) {
+
+			nav:not(.tabbed-links) {
+				border-bottom: 1px solid $bp-border-color;
+				border-top: 1px solid $bp-border-color;
+
+				@include box-shadow( 0 2px 12px 0 $off-white);
+			}
+		}
+	} // close @media
+
+	.bp-subnavs {
+
+		li.selected,
+		li.current {
+
+			a {
+				color: $brand-color;
+				font-weight: 600;
+			}
+		}
+	}
+} // close .buddypress-wrap - current & selected states.
+
+// visual styling of default single navs - adds background/padding to
+// the parent elements if vertical nav not selected
+.buddypress-wrap:not(.bp-single-vert-nav) {
+
+	@include medium-max {
+
+		.bp-navs {
+
+			li {
+				border-bottom: $base-border;
+			}
+		}
+	}
+
+	.main-navs {
+
+		> ul > li {
+
+			> a {
+				padding: $pad-sml calc(0.5em + 2px);
+			}
+		}
+	}
+
+	.user-subnav#subsubnav,
+	.group-subnav#subsubnav {
+		background: none;
+	}
+}
+
+// Specifically default subnav elements
+.buddypress-wrap {
+
+	.bp-subnavs,
+	ul.subnav {
+		width: 100%;
+	}
+
+	.bp-subnavs {
+
+		margin: $marg-sml 0;
+		overflow: hidden;
+
+		ul {
+
+			li {
+				margin-top: 0;
+			}
+		}
+	}
+
+	ul.subnav {
+		width: auto;
+	}
+
+
+	// messages nav
+	.buddypress.messages & .bp-subnavs ul.subnav{
+		width: 100%;
+	}
+
+	#compose-personal-li{
+		a{
+			background: $brand-color;
+			color: color-contrast($brand-color);
+	    border-radius: $base-border-radius;
+	    text-decoration: none !important;
+
+	    &:hover{
+	    	background: $dark-brand-color;
+	    }
+		}
+
+		@include medium-up(){
+			float: right;
+
+			a{
+				margin-bottom: $marg-xsml;
+			}
+		}
+	}
+
+	// end of messages nav
+
+	.bp-navs.bp-invites-nav#subnav,
+	.bp-navs.bp-invites-filters#subsubnav,
+	.bp-navs.bp-messages-filters#subsubnav {
+
+		ul {
+
+			li.last {
+				margin-top: 0;
+			}
+		}
+	}
+
+} // close .buddypress-wrap
+
+// Single screens object navs
+// Adjusts visual styling for small screens only
+
+@include medium-max {
+
+	.buddypress-wrap {
+
+		.single-screen-navs {
+			border: 1px solid $bp-border-color;
+
+			li {
+				border-bottom: 1px solid $bp-border-color;
+
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+		}
+
+		.bp-subnavs {
+
+			li {
+
+				a {
+					@include font-size(14);
+				}
+			}
+		}
+	}
+}
+
+.buddypress_object_nav,
+.buddypress-wrap {
+
+	.bp-navs {
+
+		li {
+
+			a {
+
+				.count:empty {
+					display: none;
+				}
+			}
+		}
+	} // bp-navs
+
+	// Create steps current position tabs highlight
+	.bp-navs.group-create-links {
+
+		ul {
+
+			li:not(.current) {
+				color: $light-text;
+
+				a {
+					color: $light-text;
+
+					&:focus,
+					&:hover {
+						background: none;
+						color: $black;
+					}
+				}
+
+				a[disabled] {
+
+					&:focus,
+					&:hover {
+						color: $light-text;
+					}
+				}
+			}
+
+			li.current {
+
+				a {
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+.buddypress-wrap {
+
+	// position our nav elements at larger screen widths
+
+	@include medium-up() {
+
+		.bp-navs {
+
+			li { // set the list links of all navs to shrinkwrap/width auto
+				float: left;
+			}
+		}
+
+		.subnav {
+			float: left;
+		}
+
+		ul.subnav {
+			width: auto;
+		}
+
+		// user screen last filter
+		#subsubnav {
+
+			.activity-search {
+				float: left;
+			}
+
+			.filter {
+				float: right;
+			}
+		}
+
+	} // close @media
+
+} // close .buddypress-wrap
+
+
+// Just buddypress_object_nav rules
+.buddypress_object_nav {
+
+	.bp-navs {
+
+		li {
+
+			a {
+
+				// .count {
+				// 	display: inline-block;
+				// 	float: right;
+				// }
+			}
+		}
+
+	}
+}
+
+// Directory screens vertical nav rules
+
+@include medium-up() {
+
+	// the top level class activating vert layout
+	.bp-dir-vert-nav {
+
+		.bp-navs.dir-navs {
+			background: none;
+
+			a {
+
+				.count {
+					float: right;
+				}
+			}
+		}
+	}
+}
+
+// Tabbed links
+
+// Our tabbed links are pulled in via a mixin
+// UL parent element must have 'tabbed-links' added and the ul 'button-tabs'
+// medium screens up
+
+.buddypress-wrap {
+
+	@include medium-up {
+
+		// Profile group labels links
+		// Button navigation as tabbed effect for wide screen
+
+		@include tabbed-links();
+
+		.bp-navs.tabbed-links {
+			background: none;
+			margin-top: 2px;
+
+			&.main-navs {
+
+			}
+
+			// For tabbed nav we remove any default button nav styles.
+			ul {
+
+				li {
+
+					a {
+						border-right: 0;
+						font-size: inherit;
+					}
+				}
+
+				li.last {
+					float: right;
+					margin: 0;
+
+					a {
+						margin-top: -0.5em;
+					}
+				}
+
+				li,
+				li.current {
+
+					a,
+					a:focus,
+					a:hover {
+						background: none;
+						border: 0;
+					}
+
+					a:active {
+						outline: none;
+					}
+				}
+			}
+		} // close .bp-navs.tabbed-links
+	} // @media
+}

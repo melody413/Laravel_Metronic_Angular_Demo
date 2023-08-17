@@ -1,0 +1,517 @@
+@include breakpoint(md){
+
+	.theme-header .top-menu li{
+		> a:before{
+			border-top-color: $base-color;
+		}
+
+		&.tie-current-menu > a:before,
+		&:hover > a[href]:before{
+			border-top-color: $brand-color;
+		}
+
+		.menu-item-has-children > a:before{
+			border-left-color: $base-color;
+			border-top-color: transparent !important;
+		}
+
+		.current-menu-item > a:before,
+		li:hover > a[href]:before{
+			border-left-color: $brand-color;
+		}
+	}
+
+	// Mega Menu -------------------------------------------------
+	.mega-menu .mega-menu-block{
+		left: 0;
+		width: 100%;
+		padding: 30px;
+
+		a{
+			width: auto;
+		}
+	}
+
+	// Mega Links (Columns)
+	.sub-menu-columns{
+		margin: 0 -15px;
+	}
+
+	.mega-links .mega-menu-block{
+		padding-bottom: 15px;
+	}
+
+	.main-menu .mega-links-head{
+		width: 100%;
+		font-weight: 600;
+		background: transparent!important;
+		border-bottom: 2px solid rgba(0,0,0,0.08);
+		border-top: 0;
+		line-height: 40px;
+		font-size: 14px;
+		margin-bottom: 10px;
+
+		&:before{
+			display: none;
+		}
+
+		&:after{
+			display: block;
+			content: "";
+			width: 50px;
+			height: 2px;
+			background: $brand-color;
+			position: absolute;
+			bottom: -2px;
+			left: 0;
+			transition: width 0.2s;
+		}
+	}
+
+	.mega-link-column{
+		margin-bottom: 10px;
+		padding: 0 15px;
+		width: 50%;
+
+		li{
+			width: 100%;
+
+			a{
+				padding: 8px 0;
+			}
+		}
+
+		&:hover {
+			.mega-links-head:after{
+				width: 65px;
+			}
+		}
+
+		.menu-sub-content{
+			width: 100%;
+			max-width: 200px;
+		}
+	}
+
+	.hide-mega-headings{
+		margin-top: 20px;
+		margin-bottom: 0;
+
+		> a{
+			display: none !important;
+		}
+	}
+
+	.mega-links-3col .mega-link-column{
+		width: 33.333%;
+
+		&:nth-child(3n + 4){
+			clear: left;
+		}
+	}
+
+	.mega-links-4col .mega-link-column{
+		width: 25%;
+
+		&:nth-child(4n + 5){
+			clear: left;
+		}
+	}
+
+	.mega-links-5col .mega-link-column{
+		width: 20%;
+
+		&:nth-child(5n + 6){
+			clear: left;
+		}
+	}
+
+	// Mega Categories -------------------------------------------
+	.main-menu {
+		.is-loading li{
+			opacity: 0.5 !important;
+			transition: opacity 0.3s;
+		}
+
+		.mega-cat-wrapper{
+			overflow: hidden;
+	    height: auto;
+	    clear: both;
+		}
+
+		.mega-ajax-content{
+			min-height: 200px;
+			position: relative; // to center the loader overlay
+		}
+
+		.mega-recent-featured{
+			.mega-ajax-content{
+				min-height: 325px;
+			}
+		}
+
+		.mega-cat {
+			.mega-menu-content{
+				clear: both;
+			}
+
+			.mega-menu-block{
+				padding: 0;
+			}
+		}
+
+		.mega-cat-content{
+			padding: 30px;
+		}
+
+		.mega-cat-sub-exists{
+			width: 80%;
+			float: left;
+		}
+
+		.horizontal-posts{
+			width: 100%;
+		}
+
+		.mega-cat-posts-container ul{
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+
+		.mega-cat .mega-menu-post{
+			width: 20%;
+			opacity: 0;
+			padding: 0 10px;
+
+			&:nth-child(5n + 1){
+				clear: both;
+			}
+		}
+
+		// post title and thumbs
+		.mega-menu{
+			.post-box-title{
+				line-height: 1.4;
+			}
+
+			a.mega-menu-link{
+				@include font-size(14px);
+				font-weight: 500;
+				border: 0;
+				display: block;
+
+				&:hover{
+					color: $brand-color;
+					background: transparent!important;
+				}
+			}
+
+			.post-thumb{
+				margin-bottom: 10px;
+			}
+
+			.post-meta{
+				margin: 5px 0 0;
+				line-height: 20px;
+
+				a:not(:hover){
+					color: #777;
+				}
+
+				a{
+					padding: 0;
+					background-color: transparent;
+				}
+			}
+		}
+
+		.vertical-posts .mega-menu-post{
+			width: 25%;
+		}
+
+		// if it has a sub-menu
+		.menu-item-has-children{
+			.mega-cat-wrapper{
+				border-top: 1px solid rgba(0,0,0,0.08);
+			}
+
+			.cats-vertical,
+			.cats-vertical	+ .mega-cat-content{
+				padding-top: 30px;
+			}
+		}
+
+		// Mega Cat More Links
+		// above the categories filters
+		ul.mega-cat-more-links{
+			opacity: 1 !important;
+			box-shadow: none;
+		}
+
+		.mega-cat-more-links{
+			padding: 20px 30px;
+			margin: 0 -10px;
+
+			> li{
+				float: left;
+				width: 25%;
+				padding: 0 10px;
+
+				> a{
+					border-bottom-width: 0;
+				}
+
+				&:nth-child(n + 5) > a{
+					border: solid rgba(0, 0, 0, 0.05);
+					border-width: 1px 0 0;
+				}
+
+				ul{
+					left: calc(100% - 10px);
+				}
+
+				li{
+					width: 100%;
+				}
+			}
+		}
+
+		// Categories Filters
+		ul.mega-cat-sub-categories{
+			overflow: hidden;
+			box-shadow: none;
+		}
+
+		// Horizontal Categories Filter
+		.cats-horizontal{
+			margin: 30px 30px -10px;
+
+			li{
+				line-height: 20px;
+				margin-right: 7px;
+
+				a{
+					border: 1px solid rgba(0,0,0,0.08);
+					background-color: rgba(0,0,0,0.02);
+					border-radius: $base-border-radius;
+					padding: 1px 10px;
+					width: auto;
+				}
+			}
+		}
+
+		@at-root .main-nav .mega-menu.mega-cat .cats-horizontal li {
+			a.is-active,
+			a:hover{
+				color: $bright;
+				background: $brand-color;
+				border-color: $brand-color;
+			}
+		}
+
+		// Vertical Categories Filter
+		.cats-vertical{
+			width: 20%;
+			float: left;
+			padding: 30px 0 0 20px;
+			padding-bottom: 1500px;
+			margin-bottom: -1500px;
+
+			li{
+				width: 100%;
+
+				&:last-child{
+					margin-bottom: 50px;
+				}
+
+				a{
+					display: block;
+					border-top: 0;
+					width: 100%;
+					padding: 8px 10px;
+				}
+
+			}
+		}
+	}
+
+
+	//  Mega Recent - Featured Posts -----------------------------
+	.main-menu{
+		// Posts List
+		.mega-recent-post{
+			float: left;
+			width: 37%;
+			padding-right: 30px;
+
+			.post-box-title a{
+				@include font-size(22px);
+				margin-top: 7px;
+				line-height: 30px;
+			}
+		}
+
+		.mega-check-also{
+			float: left;
+			width: 63%;
+
+			ul{
+				overflow: hidden;
+				margin: 0 -15px -20px;
+				box-shadow: none;
+			}
+
+			li{
+				width: 50%;
+				padding: 0 15px 20px;
+				overflow: hidden;
+
+				&:nth-child(2n + 1){
+					clear: left;
+				}
+			}
+
+			.post-thumbnail{
+				margin-right: 20px;
+				float: left;
+			}
+
+			.post-thumb{
+				overflow: hidden;
+				margin-bottom: 0;
+
+				img{
+					width: 110px;
+				}
+			}
+
+			.post-details{
+				padding-left: 130px;
+			}
+		}
+
+		.mega-recent-featured{
+			> .menu-sub-content{
+				overflow: hidden;
+			}
+
+			.mega-menu-content {
+				float: right;
+				position: relative;
+				min-height: 30px;
+				width: 100%;
+			}
+
+			// If it has a sub menu
+			&.menu-item-has-children{
+				.mega-menu-content {
+					width: 75%;
+				}
+
+				.mega-recent-post {
+					width: 52%;
+					padding-left: 30px;
+				}
+
+				.mega-check-also {
+					width: 48%;
+
+					li {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		// If it has a sub menu
+		ul.mega-recent-featured-list{
+			width: 25%;
+			padding-right: 30px;
+			float: left;
+			position: relative;
+			box-shadow: none;
+		}
+
+		.mega-recent-featured-list{
+			li{
+				width: 100%;
+				z-index: 2;
+			}
+
+			a{
+				display: block;
+				border-top: 0;
+				padding: 8px 0;
+				border-bottom: 1px solid rgba(0,0,0,0.06);
+			}
+
+			&:after{
+				content: "";
+				width: 1500px;
+				height: 1500px;
+				background: rgba(0,0,0,0.03);
+				position: absolute;
+				z-index: 1;
+				right: 0;
+				top: -100px;
+			}
+		}
+	}
+
+	.ajax-no-more-posts{
+		text-align: center;
+		position: absolute;
+		width: calc(100% - 40px);
+	}
+
+}
+
+
+// Demo purpose :: submenu in two columns.
+@include breakpoint(md){
+	.two-columns-submenu{
+		> ul{
+			width: 320px !important;
+
+			> li{
+				width: 50% !important;
+				float: left;
+
+				a{
+					width: 100% !important
+				}
+			}
+		}
+
+		&.odd{
+			> ul > li:last-child{
+				width: 100% !important;
+			}
+		}
+	}
+}
+
+
+// -fix the resize issue when resize to > 991
+// -when reload the page on window < 992 and then resize to large the stikcy classes still existing.
+// -this snippet will be removed when the tiesticky plugin stop firing when resizing to large.
+@include breakpoint(md){
+	.theme-header .logo-row > div{
+		height: auto !important;
+	}
+
+	.logo-container.fixed-nav.fixed-nav{
+		position: static !important;
+		line-height: initial !important;
+		box-shadow: none !important;
+		background-color: transparent !important;
+	}
+
+	.header-layout-3 .logo-container.fixed-nav.fixed-nav{
+		width: auto;
+	}
+
+	.header-layout-3 .stream-item-top-wrapper{
+		float: right;
+	}
+}

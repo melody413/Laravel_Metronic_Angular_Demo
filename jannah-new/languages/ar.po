@@ -1,0 +1,5386 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VERSION\n"
+"POT-Creation-Date: 2020-09-02 03:09+0000\n"
+"PO-Revision-Date: 2020-09-02 09:30+0300\n"
+"Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.3\n"
+
+msgid "Alphabetically"
+msgstr "أبجدياً"
+
+msgid "Classic Small"
+msgstr "كلاسيك صغير"
+
+msgid "Custom Read More Button text"
+msgstr "نص خاص لزر أكمل القراءة"
+
+msgid "Leave it empty to use the default text."
+msgstr "إتركها فارغة لإستخدام النص الإفتراضي."
+
+msgid "Note: This option doesn't work with the AJAX pagination."
+msgstr "ملاحظة: هذا الخيار لا يعمل مع نظام ترقيم الصفحات المعتمد على AJAX."
+
+msgid "Footer Description"
+msgstr "وصف التذييل"
+
+msgid "Footer Description Title"
+msgstr "عنوان وصف التذييل"
+
+msgid "This Description will appear at the end of the category page below the posts list."
+msgstr "هذه المنطقة تظهر في نهاية صفحة القسم تحت المقالات."
+
+msgid "Logo Inverted Image"
+msgstr "صورة الشعار المعكوسة | الوضع الليلي"
+
+msgid "Used if users are allowed to switch between Light and Dark skins."
+msgstr "تُستخدم إذا سُمح للمستخدمين بالتبديل بين الوضع الطبيعي والمظلم."
+
+msgid "Logo Inverted Image (Retina Version @2x)"
+msgstr "صورة الشعار المعكوسة | جودة عالية 2X"
+
+msgid "Logo width"
+msgstr "عرض الشعار"
+
+msgid "Logo height"
+msgstr "ارتفاع الشعار"
+
+msgid "Subtitle"
+msgstr "العنوان الثانوي"
+
+msgid "Hide page elemnts"
+msgstr "إخفاء عناصر الصفحة"
+
+msgid "Hide the featured image"
+msgstr "إخفاء الصورة البارزة"
+
+msgid "Display Breadcrumbs"
+msgstr "عرض شريط التصفح"
+
+msgid "You need to set the Google Map API Key in the theme options page > Integrations."
+msgstr "يجب عليك إضافة مفتاح Google Map API من خلال صفحة إعدادات القالب > الدمج."
+
+msgid "Disable All Ads"
+msgstr "تعطيل جميع الإعلانات"
+
+msgid "Above Post Ad"
+msgstr "إعلان أعلى المقال"
+
+msgid "Below Post Ad"
+msgstr "إعلان أسفل المقال"
+
+msgid "Above Content Ad"
+msgstr "إعلان أعلى محتوى المقال"
+
+msgid "Below Content Ad"
+msgstr "إعلان أسفل محتوى المقال"
+
+msgid "Select Image"
+msgstr "إختر الصورة"
+
+msgid "Select another image"
+msgstr "إختر صورة أخرى"
+
+msgid "Letter Spacing"
+msgstr "تباعد الأحرف"
+
+msgid "View affected templates"
+msgstr "اعرض القوالب المتأثرة"
+
+msgid "Your child theme contains outdated copies of some template files. These files may need updating to ensure they are compatible with the current version of the theme."
+msgstr "القالب الإبن يحتوي على نسخ غير محدثة لبعض الملفات. هذه الملفات يجب تحديثها لتتأكد من توافقها مع النسخة الحالية من القالب."
+
+msgid "Child Theme Templates"
+msgstr "مظهر قالب الإبن"
+
+msgid "Overrides"
+msgstr "تجاوز"
+
+#, php-format
+msgid "%1$s version %2$s is out of date. The core version is %3$s"
+msgstr "النسخة %1$s قديمة %2$s الإصدار الأساسي %3$s"
+
+msgid "Renew"
+msgstr "تجديد"
+
+msgid "404 Page"
+msgstr "صفحة 404"
+
+msgid "Integrations"
+msgstr "دمج"
+
+msgid "Images"
+msgstr "الصور"
+
+msgid "White Label"
+msgstr "بدون شعار"
+
+#, php-format
+msgid "Proudly Hosted by %s"
+msgstr "مُستضاف بفخر %s"
+
+msgid "Section Layout"
+msgstr "تخطيط القسم"
+
+msgid "Stretch Section"
+msgstr "تمديد القسم"
+
+msgid "Stretch the section to the full width of the page, supported if the site layout is Full-Width."
+msgstr "قم بتمديد القسم إلى العرض الكامل للصفحة، مدعوم إذا كان تخطيط الموقع بالعرض الكامل."
+
+msgid "Full Width Background Section"
+msgstr "العرض الكامل لقسم الخلفية"
+
+msgid "Posts Source"
+msgstr "مصدر المقالات"
+
+msgid "AJAX"
+msgstr "أجاكس"
+
+msgid "Next/Previous Buttons"
+msgstr "أزرار| التالي / السابق"
+
+msgid "Next/Previous Arrows Beside Title"
+msgstr "أزرار| التالي / السابق | بجانب العنوان"
+
+msgid "You need to set the YouTube API Key in the theme options page > Integrations."
+msgstr "تحتاج إلى تعيين مفتاح YouTube API في صفحة خيارات الموضوع | للربط مع يوتيوب"
+
+msgid "Secondary Color"
+msgstr "اللون الثانوي"
+
+msgid "Featured Image Position"
+msgstr "مكان الصورة البارزة"
+
+msgid "Left Top"
+msgstr "أعلى اليسار"
+
+msgid "Left Center"
+msgstr "منتصف اليسار"
+
+msgid "Left Bottom"
+msgstr "أسفل اليسار"
+
+msgid "Right Top"
+msgstr "أعلى اليمين"
+
+msgid "Right Center"
+msgstr "منتصف اليمين"
+
+msgid "Right Bottom"
+msgstr "اسفل اليمين"
+
+msgid "Center Top"
+msgstr "منتصف الوسط"
+
+msgid "Center Center"
+msgstr "وسط"
+
+msgid "Center Bottom"
+msgstr "أسفل الوسط"
+
+msgid "The content in the editor above will be ignored."
+msgstr "سيتم تجاهل المحتوى الموجود في المحرر أعلاه."
+
+msgid "Enable the TieLabs Builder"
+msgstr "تفعيل منشئ الويب ل TieLabs"
+
+msgid "Disable the TieLabs Builder"
+msgstr "تعطيل منشئ الويب ل TieLabs"
+
+msgid "Beta"
+msgstr "بيتا | تجريبي"
+
+msgid "Skype"
+msgstr "سكايب"
+
+msgid "Messenger"
+msgstr "ماسنجر"
+
+msgid "Line"
+msgstr "لاين"
+
+msgid "AMP Menu"
+msgstr "قائمة AMP | صفحات الجوال المسرعة"
+
+msgid "Menu Position"
+msgstr "مكان القائمة"
+
+msgid "Author name"
+msgstr "أسم الكاتب"
+
+msgid "Published date"
+msgstr "تاريخ النشر"
+
+msgid "Below Header"
+msgstr "أسفل الهيدر"
+
+msgid "Above Footer"
+msgstr "أعلى الفوتر"
+
+msgid "Rounded"
+msgstr "مدور"
+
+msgid "Sliders Settings"
+msgstr "إعدادات القائمة الجانبية"
+
+msgid "Default Featured Image Position"
+msgstr "موضع الصورة البارزة"
+
+msgid "Welcome back!"
+msgstr "مرحباً بعودتك!"
+
+msgid "News"
+msgstr "أخبار"
+
+msgid "Below Comments Ad"
+msgstr "إعلان أسفل التعليقات"
+
+msgid "Category Pages: Below the slider"
+msgstr "صفحات التصنيفات: أسفل السلايدر"
+
+msgid "Category Pages: Above the title"
+msgstr "صفحات التصنيفات: فوق العنوان"
+
+msgid "Category Pages: Below the title"
+msgstr "صفحات التصنيفات: أسفل العنوان"
+
+msgid "Category Pages: Below Posts"
+msgstr "صفحات التصنيفات: أسفل المقالات"
+
+msgid "Category Pages: Below Pagination"
+msgstr "صفحات التصنيف: أرقام الصفحات أدناه"
+
+msgid "Ad Image Width"
+msgstr "عرض صورة الإعلان"
+
+msgid "Recommended to reduce Cumulative Layout Shift (CLS)"
+msgstr "يُنصح به لخفض \"انتقال التصميم التراكمي CLS\""
+
+msgid "Ad Image Height"
+msgstr "إرتفاع صورة الإعلان"
+
+#, php-format
+msgid "You need to install the %s plugin to use this feature."
+msgstr "يتوجب عليك تنصيب %s من الإضافات لإستخدام هذه الخاصية"
+
+msgid "Follow Us Button style"
+msgstr "مظهر زر تابعنا"
+
+msgid "Body Code"
+msgstr "كود منطقة البودي"
+
+msgid "Will add after opening the &lt;body&gt; tag."
+msgstr "يجب إضافته بعد وسم &lt;body&gt;."
+
+msgid "Stretch Header"
+msgstr "هيدر متمدد"
+
+msgid "Full-Width Logo"
+msgstr "شعار العرض الكامل"
+
+msgid "​Secondary Nav Settings"
+msgstr "إعدادات القائمة العلوية الثانوية"
+
+msgid "​Secondary Nav Components"
+msgstr "مكونات القائمة العلوية الثانوية"
+
+msgid "Log In text"
+msgstr "نص تسجيل الدخول"
+
+msgid "Text beside the icon, Leave this empty to disable."
+msgstr "النص بجانب الأيقونة, إتركها فارغة لتعطيل هذه الخاصية."
+
+msgid "Light/Dark Skin Switcher"
+msgstr "زر التبديل بين الوضع المظلم والطبيعي"
+
+msgid "You need to set the Weather API Key in the theme options page > Integrations."
+msgstr ""
+"يجب عليك إضافة مفتاح API للطقس من خلال صفحة إعدادات القالب\n"
+"> الدمج"
+
+msgid "Images Settings"
+msgstr "إعدادات الصور"
+
+msgid "GIF Featured Image"
+msgstr "صورة GIF البارزة"
+
+msgid "Default Featured Image"
+msgstr "الصورة البارزة الافتراضية"
+
+msgid "This featured image will show up if no featured image is set."
+msgstr "هذه الصوة المميزة سيتم اظهارها في حالة عدم تحديد صورة مميزة"
+
+msgid "The Default Image"
+msgstr "الصورة الافتراضية"
+
+msgid "Verify your license to unlock this section."
+msgstr "قم بتأكيد الترخيص لفتح هذا القسم"
+
+msgid "The Access Token is expired, click the button below to refresh it."
+msgstr "ملفات الدخول انتهت، اضغط ادناه لتحديثها"
+
+msgid "Instagram Account"
+msgstr "حساب انستقرام"
+
+msgid "Connect your Instagram account"
+msgstr "اربط حسابك الإنستغرام"
+
+msgid "Connect another account"
+msgstr "اربط حساب آخر "
+
+msgid "Refresh Access Token"
+msgstr "معاودة عرض رمز الوصول"
+
+msgid "Google Maps"
+msgstr "خرائط قوقل"
+
+msgid "Google Maps API Key"
+msgstr "مفتاح الربط لخرائط قوقل API"
+
+msgid "Used for the Map post format."
+msgstr "يستخدم لمقالات الخرائط "
+
+msgid "YouTube API Key"
+msgstr "مفتاح الربط ل يوتيوب API"
+
+msgid "Used for the Videos Playlist Block."
+msgstr "يتم استخدامه في قسم قائمة عروض الفيديو"
+
+msgid "OpenWeather API Key"
+msgstr "مفتاح واجهة التطبيق البرمجية API لويدجيت الطقس المفتوح"
+
+msgid "Required for Facebook share button in the AMP pages and Select and Share module."
+msgstr "إلزامية لزر مشاركة فيسبوك في صفحات AMP ووحدة الاختيار والمشاركة"
+
+msgid "Sidebar Column Width"
+msgstr "عرض العمود الجانبي"
+
+msgid "Controls the sidebar column width in %."
+msgstr "يتحكم بعرض العمود الجانبي في %."
+
+msgid "Logo Position"
+msgstr "مكان الشعار"
+
+msgid "Logo Width"
+msgstr "عرض الشعار"
+
+msgid "Sticky Header behavior"
+msgstr "ترويسة ثابتة"
+
+msgid "Mobile Header Buttons"
+msgstr "أزرار الترويسة في نمط الهاتف الجوال"
+
+msgid "Display the buttons below the logo"
+msgstr "عرض الأزرار أسفل الشعار"
+
+msgid "Menu Button"
+msgstr "زر القائمة"
+
+#, php-format
+msgid "Icon %s"
+msgstr "أيقونة %s"
+
+msgid "Search Position"
+msgstr "مكان منطقة البحث"
+
+msgid "Sidebars on Mobile"
+msgstr "الأعمدة الجانبية في نمط الهاتف الجوال"
+
+msgid "Display sidebars before the content"
+msgstr "عرض الشريط الجانبي قبل المحتوى"
+
+msgid "Hide Read More Buttons"
+msgstr "اخفاء أزرار \"اقرأ المزيد\""
+
+msgid "Hide Inline Related posts"
+msgstr "إخفاء التدوينات الداخلية ذات الصلة"
+
+msgid "404 Page Settings"
+msgstr "إعدادات صفحة 404"
+
+msgid "Image above the main title"
+msgstr "الصورة أعلى العنوان الرئيسي"
+
+msgid "Enable Search"
+msgstr "تفعيل البحث"
+
+msgid "Enable Menu"
+msgstr "تفعيل القائمة"
+
+msgid "You can set the menu in the Menus page."
+msgstr "يمكنك تحديد القائمة في صفحة \"القوائم\"."
+
+msgid "Texts"
+msgstr "نصوص"
+
+msgid "You can change the texts from the Translations section."
+msgstr "يمكنك تغيير النصوص من قسم \"الترجمات\""
+
+msgid "This feature can not be used while the Auto Load Posts option is active."
+msgstr "لا يمكن استخدام هذه الميزة لدى تفعيل خيار \"التحميل التلقائي للتدوينات\"."
+
+msgid "Meta Description Tag"
+msgstr "وسم \"وصف البيانات التوضيحية\""
+
+msgid "Compact Comments Area"
+msgstr "منطقة التعليقات المصغرة"
+
+msgid "Compact Comments Custom Title"
+msgstr "عنوان مخصص للتعليقات المصغرة"
+
+msgid "Tags List Layout"
+msgstr "شكل/تصميم قائمة الوسوم"
+
+msgid "Modern"
+msgstr "عصري"
+
+msgid "Post meta area Layout"
+msgstr "شكل/تصميم منطقة البيانات التوضيحية للتدوينات"
+
+msgid "Column"
+msgstr "عمود"
+
+msgid "Last Updated"
+msgstr "آخر تحديث"
+
+msgid "Inline Related Posts"
+msgstr "التدوينات الداخلية ذات الصلة"
+
+msgid "Number of paragraphs before"
+msgstr "عدد الفقرات السابقة"
+
+msgid "Auto Load Posts"
+msgstr "التحميل التلقائي للتدوينات"
+
+msgid "Buttons Position"
+msgstr "موقع الأزرار"
+
+msgid "Inverted"
+msgstr "معكوسة/مقلوبة"
+
+msgid "Sticky Share Buttons"
+msgstr "أزرار ثابتة للمشاركة"
+
+msgid "Breakpoint (in px)"
+msgstr "نقطة التوقف (بالبكسل)"
+
+#, php-format
+msgid "Hide the buttons if the device/window width size is lower than this, default %s"
+msgstr "إخفاء الأزرار في حال كان عرض الجهاز أو الشاشة أقل من التالي، القياسي هو %s"
+
+msgid "Image Icon"
+msgstr "أيقونة الصورة"
+
+msgid "Widgets head color"
+msgstr "لون أعلى الويدجيت"
+
+msgid "Widgets Title text color"
+msgstr "لون الكتابة في عنوان الويدجت"
+
+msgid "Mobile Header Background Color"
+msgstr "لون الخلفية في أعلى جزئية الهاتف الجوال"
+
+msgid "Mobile Header Background Color 2"
+msgstr "لون الخلفية في أعلى جزئية الهاتف الجوال 2"
+
+msgid "Mobile Header Background Image"
+msgstr "صورة الخلفية في أعلى جزئية الهاتف الجوال"
+
+msgid "Mobile Header Icons color"
+msgstr "لون الأيقونات في أعلى جزئية الهاتف الجوال"
+
+msgid "Numbers"
+msgstr "أرقام"
+
+msgid "General Secondary Texts"
+msgstr "النصوص الثانوية العامة"
+
+msgid "Post title in widgets"
+msgstr "عنوان التدوينات في الويدجيت"
+
+msgid "Page Builder"
+msgstr "أداة بناء الصفحة"
+
+msgid "Sections Titles: Default & Centered Styles"
+msgstr "عناوين الاقسام : الافتراضية & الأنماط"
+
+msgid "Sections Titles: Big Style"
+msgstr "عناوين الاقسام : الشكل العام"
+
+msgid "Archive page"
+msgstr "صفحة الأرشيف"
+
+msgid "Main Title"
+msgstr "العنوان الرئيسي"
+
+msgid "Secondary Title"
+msgstr "العنوان الثانوي"
+
+msgid "Comment content"
+msgstr "محتوى التعليق"
+
+msgid "Theme Name"
+msgstr "اسم الثيم"
+
+#, php-format
+msgid "Replace %s text in the entire admin pages."
+msgstr "إستبدال %s في كل صفحات لوحة التحكم."
+
+msgid "Theme Options Page Logo"
+msgstr "لوجو صفحة لوحة التحكم"
+
+msgid "Choose an icon and paste the class name."
+msgstr "إختر آيقونة وضع إسم الكلاس الخاص بها هنا."
+
+msgid "Disable Help Links"
+msgstr "تعطيل روابط المساعدة"
+
+msgid "Enable help links from control panel and meta options."
+msgstr "تمكين روابط المساعدة من لوحة التحكم وخيارات التعريف."
+
+msgid "Only admins can manage the advanced settings in the post edit page"
+msgstr "يمكن للمسؤولين فقط إدارة الإعدادات المتقدمة في صفحة تحرير المقالات"
+
+msgid "WordPress Login page"
+msgstr "صفحة تسجيل الدخول إلى ووردبريس"
+
+msgid "Previous"
+msgstr "السابق"
+
+msgid "Next"
+msgstr "التالى"
+
+msgid "Failed to fetch your current loction! try again later!"
+msgstr "فشل في جلب موقعك الحالي، حاول في وقت لاحق!"
+
+msgid "Verify your license to use this feature."
+msgstr "قم بتفعيل رخصة القالب، لإستخدام هذه الخاصية."
+
+msgid "Edit menu item"
+msgstr "تعديل عنصر القائمة."
+
+msgid "Edit"
+msgstr "تعديل"
+
+msgid "Open link in a new tab"
+msgstr "افتح الرابط في علامة تبويب جديدة"
+
+msgid "You need to set the Location."
+msgstr "تحتاج إلى تعيين الموقع."
+
+#, php-format
+msgid "Photo of %s"
+msgstr "صورة %s"
+
+msgid "Steam"
+msgstr "ستيم"
+
+msgid "and"
+msgstr "و"
+
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr "و"
+
+msgid "Last Updated:"
+msgstr "آخر تحديث:"
+
+msgid "Blocks and Archives"
+msgstr "البلوكات وصفحات الأرشيف"
+
+msgid "Login Section"
+msgstr "قسم تسجيل الدخول"
+
+msgid "Widgets"
+msgstr "ويدجات"
+
+msgid "Checkout"
+msgstr "الدفع"
+
+msgid "Switch skin"
+msgstr "الوضع المظلم"
+
+#, php-format
+msgid "Show %s comments"
+msgstr "عرض %s تعليقات"
+
+msgid "Show one comment"
+msgstr "إظهار تعليق واحد"
+
+msgid "Leave a Reply"
+msgstr "اترك رد"
+
+msgid "Follow on Twitter"
+msgstr "تابع على تويتر"
+
+msgid "Send an email"
+msgstr "أرسل بريدا إلكترونيا"
+
+#, php-format
+msgid "%1$s x %2$s."
+msgstr "%1$s x %2$s."
+
+msgid "Subtotal:"
+msgstr "الإجمالي:"
+
+msgid "Verify your license to unlock bundeled plugins"
+msgstr "تحقق من الترخيص الخاص بك لإلغاء تأمين الإضافات"
+
+#, php-format
+msgid "TIE_TGMPA v%s"
+msgstr "TIE_TGMPA v%s"
+
+msgid "Account Name"
+msgstr "أسم الحساب"
+
+msgid "Avatar Image"
+msgstr "الصورة الرمزية"
+
+msgid "Bio"
+msgstr "السيرة الذاتية"
+
+msgid "Next/Previous Arrows"
+msgstr "الأسهم | التالي / السابق"
+
+msgid "Pagination:"
+msgstr "ترقيم الصفحات:"
+
+msgid "Enter the required account info."
+msgstr "قم بإدخال بيانات الحساب المطلوبة."
+
+msgid "Follow me"
+msgstr "اتبعني"
+
+msgid "Avatar size (px)"
+msgstr "حجم الصورة الرمزية (بكسل)"
+
+msgid "Circle"
+msgstr "دائرة"
+
+msgid "Show the total followers number?"
+msgstr "إظهار إجمالي عدد المتابعين؟"
+
+msgid "Text before the total number"
+msgstr "نص قبل العدد الإجمالي"
+
+msgid "Text after the total number"
+msgstr "النص بعد العدد"
+
+msgid "Position"
+msgstr "موضع"
+
+msgid "Before the counters."
+msgstr "قبل عدادات الشبكات الإجتماعية."
+
+msgid "After the counters."
+msgstr "بعد عدادات الشبكات الإجتماعية."
+
+msgid "Use icons"
+msgstr "استخدم الأيقونات"
+
+msgid "Visitor's Location?"
+msgstr "تفعيل مكان الزائر؟"
+
+msgid "Allow visitors to view the weather in their location"
+msgstr "السماح للزوار بعرض حالة الطقس في مدينتهم"
+
+msgid "​Secondary Nav Menu"
+msgstr "القائمة الثانوية"
+
+msgid "Error: Check the Instagarm section settings."
+msgstr "خطأ: قم بفحص إعدادات منطقة إنستجرام من خلال ل"
+
+msgid "Follow us"
+msgstr "تابعنا"
+
+msgid "404 :("
+msgstr "404 :("
+
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "المعذرة، هذه الصفحة غير موجودة."
+
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "يبدوا أننا لم &rsquo; نستطع أن نجد ما &rsquo; تبحث عنه. من الممكن أن يساعدك البحث."
+
+#, php-format
+msgid "%s Comments"
+msgstr "‫%s تعليقات"
+
+msgid "One Comment"
+msgstr "تعليق واحد"
+
+msgid "- Select a Slider -"
+msgstr "‫- إختر سلايدر -"
+
+msgid "- Select a Category -"
+msgstr "‫- إختر تصنيف -"
+
+msgid "- Select a Menu -"
+msgstr "- إختر قائمة -"
+
+msgid "Default"
+msgstr "الافتراضي"
+
+msgid "An error has occured. Please reload the page and try again."
+msgstr "حدث خطأ ما، يرجى إعادة تحميل الصفحة و المحاولة من جديد."
+
+msgid "TieLabs Page Builder widgets areas"
+msgstr "مناطق الودجات في مُبنى صفحات TieLabs"
+
+msgid "Manage Widgets"
+msgstr "إدارة الودجات"
+
+msgid "Done"
+msgstr "تم"
+
+msgid "Available Widgets"
+msgstr "ودجات متوفرة"
+
+msgid "Deactivate"
+msgstr "تعطيل"
+
+msgid "Drag widgets from here to a sidebar on the right to activate them. Drag widgets back here to deactivate them and delete their settings."
+msgstr "لتفعيل ودجت ما قم بسحبه إلى أحد الأماكن المتاحة. لتعطيل ودجت ما وحذف إعداداته، قم بسحبه مرة أخرى خارج مكانه."
+
+msgid "Section Widgets Area"
+msgstr "منطقة الودجات للسيكشن"
+
+msgid "Cancel"
+msgstr "الغاء"
+
+msgid "Add Widget"
+msgstr "أضف ودجت"
+
+msgid "All Demos Support RTL."
+msgstr "جميع التجارب تدعم اللغة العربية."
+
+msgid "Tip:"
+msgstr "تلميح:"
+
+msgid "You need to uninstall the imported demo before importing another one."
+msgstr "أنت بحاجة لحذف التجربة التي تمت استيرادها سابقاً قبل استيراد تجربة جديدة."
+
+msgid "Uninstall the Demo Data"
+msgstr "حذف بيانات الديمو المستورد"
+
+msgid "Choose the demo which you want to import"
+msgstr "اختر الديمو المراد إستيراده"
+
+msgid "Install Demos"
+msgstr "إستيراد الديمو"
+
+msgid "First Footer"
+msgstr "مساحة المربعات الجانبية الأولى في الفوتر"
+
+msgid "Second Footer"
+msgstr "مساحة المربعات الجانبية الثانوية في الفوتر"
+
+msgid "1st Column"
+msgstr "العمود الأول"
+
+msgid "2d Column"
+msgstr "العمود الثاني"
+
+msgid "3rd Column"
+msgstr "العمود الثالث"
+
+msgid "4th Column"
+msgstr "العمود الرابع"
+
+msgid "Settings import file could not be found."
+msgstr "ملف الإعدادات غير موجود."
+
+msgid "Home"
+msgstr "الرئيسية"
+
+msgid "More"
+msgstr "المزيد"
+
+msgid "Menu Title"
+msgstr "عنصر قائمة"
+
+msgid "Sub Menu"
+msgstr "قائمة فرعية"
+
+msgid "Buy now!"
+msgstr "شراء القالب!"
+
+msgid "About"
+msgstr "عن"
+
+msgid "Team"
+msgstr "فريق العمل"
+
+msgid "WordPress is a favorite blogging tool of mine and I share tips and tricks for using WordPress here."
+msgstr "نموذج نصي ... أضف المحتوى الذي تريد هنا."
+
+msgid "World"
+msgstr "أخبار العالم"
+
+msgid "After all is said and done, more is said than done"
+msgstr "إن اللغة مظهر من مظاهر الابتكار في الأمة"
+
+msgid "Knowledge is power"
+msgstr "سيد نفسه من لا سيد له"
+
+msgid "The Future Of Possible"
+msgstr "نحن أحرار بمقدار ما يكون غيرنا أحرارا"
+
+msgid "Xbox boss talks Project Scorpio price"
+msgstr "يولد الانسان حراً ، و لكنه في كل مكان يجر سلاسل الاستعباد"
+
+msgid "Hibs and Ross County fans on final"
+msgstr "ليس من المنطق أن تتباهى بالحرية و أنت مكبل بقيود المنطق"
+
+msgid "Tip of the day: That man again"
+msgstr "حيث تكون الحرية يكون الوطن"
+
+msgid "Spieth in danger of missing cut"
+msgstr "إذا تكلمت بالكلمة ملكتك وإذا لم تتكلم بها ملكتها"
+
+msgid "Persuasion is often more effectual than force"
+msgstr "تنتهي حريتك عندما تمس يدك الممدودة أنف رجل آخر"
+
+msgid "One swallow does not make the spring"
+msgstr "ليس هناك أحرارٌ تماماً ، لأن هناك عبيداً لحريتهم"
+
+msgid "Travel"
+msgstr "سياحة و سفر"
+
+msgid "Getting There is Half the FUN!"
+msgstr "لا يغرنك إرتقاء السهل، إذا كان المنحدر وعراً!"
+
+msgid "Goa Tourism Appealing Visitors From Across the Globe"
+msgstr "أمقت ما تكتب ، لكنني مستعد لدفع حياتي كي تواصل الكتابة"
+
+msgid "Fontainebleau A Forgotten Treasure"
+msgstr "لا تنه عن خلق وتأتي مثله عار عليك إذا فعلت عظيم"
+
+msgid "I know it hurts to say goodbye, but it is time for me to fly"
+msgstr "لا تتكلّم عن نفسك طوال الوقت، سواء إذا كنت سعيد أم لا"
+
+msgid "What We See When We Look at Travel Photography"
+msgstr "‫اصرخ لتعلم أنك ما زلتَ حيّاً وأن الحياة على هذه الأرض ممكن"
+
+msgid "How to make perfect vanilla cupcakes"
+msgstr "لسان الفتى عن عقله ترجمانه متى زل عقل المرء زل لسانه"
+
+msgid "The ultimate guide to herbal teas"
+msgstr "تنتهي حريتك حيث تبدأ حرية الآخرين"
+
+msgid "Making fruit and veg fun for kids"
+msgstr "علي أن أسعى وليس علي إدراك النجاح"
+
+msgid "Games"
+msgstr "ألعاب"
+
+msgid "New Heroes of the Storm Characters Bring Portals"
+msgstr "كالذي يحتاج لموافقة مختار القرية للشرب من ماء النهر"
+
+msgid "There May Be No Consoles in the Future, EA Exec Says"
+msgstr "الحرية هي الحق في أن تعمل ما يبيحه القانون"
+
+msgid "Play This Game for Free on Steam This Weekend"
+msgstr "وما استعصى على قوم منال إذا الإقدام كان لهم ركاب"
+
+msgid "The Game Officially Announced, Watch the Trailer Here"
+msgstr "‫الحرية هي الحياة ، و لكن لا حرية بلا فضيل"
+
+msgid "Here What is in the game $80 Deluxe Edition"
+msgstr "قطع ذنب الكلب لا يكفي كي يصبح شبيه الحصان"
+
+msgid "Nintendo Details Next Miitomo Update"
+msgstr "لسانك حصانك إن صنته صانك، وإن هنته هانك"
+
+msgid "Killing Floor 2 New Sharpshooter Class Detailed"
+msgstr "الحرية من غير قانون ليست سوى سيل مدمر"
+
+msgid "Foods"
+msgstr "صحة و جمال"
+
+msgid "Quinoa new recipes, feta & broad bean salad"
+msgstr "الادارة تعمل من خلال النظام اما القيادة فتعمل فوق النظام"
+
+msgid "Cooking with kids - how to get them involved"
+msgstr "لا تَلُمْ كفي إذا السيف نبا صح مِنِّي العزم والدهر أبى"
+
+msgid "6 Ways Drinking Warm Water Can Heal Your Body"
+msgstr "واحفظ لسانك لا تقول فتبتلى إن البلاء موكل بالمنطق"
+
+msgid "Ice Cream Maker Free Chocolate"
+msgstr "وما نيل المطالب بالتمني ولكن تؤخذ الدنيا غلاب"
+
+msgid "Growing vegetables at home, six of the best"
+msgstr "عندما لا ندري ما هي الحياة ، كيف يمكننا أن نعرف ما هو الموت"
+
+msgid "At Value-Focused Hotels, the Free Breakfast Gets Bigger"
+msgstr "زيادة القول تحكي النقص في العمل ومنطق المرء قد يهديه للزلل"
+
+msgid "A Refined Seattle Restaurant, Hold the Table Linens"
+msgstr "لا تطلقن القول في غير بصر إن اللسان غير مأمون الضرر"
+
+msgid "Business"
+msgstr "مال و أعمال"
+
+msgid "December home sales rebound? Here is the secret"
+msgstr "والمرء ليس بصادق في قوله حتى يؤيد قوله بفعاله"
+
+msgid "Why people are flocking to Oregon"
+msgstr "الذي لا يلمع في النهار، يلمع في الليل"
+
+msgid "Weekly mortgage applications pop on stock sell-off"
+msgstr "أفضل وسيلة لتدمير النظام الرأسمالي هو إفساد قيمة المال"
+
+msgid "Apartment vacancies rise for first time in 6 years"
+msgstr "الحياة قطار سريع ما اجتازه حلم ، و ما هو مقبل عليه وهم"
+
+msgid "China stock swoon could boost US real estate"
+msgstr "ليس للحياة قيمة إلا إذا وجدنا فيها شيئا نناضل من أجله"
+
+msgid "Why homeowners are leaving billions on the table"
+msgstr "يبدو العالم مظلما بالنسبة لمن يغطي عينيه"
+
+msgid "Lock in now! Stock sell-off sinks mortgage rates"
+msgstr "يسقط الطير حيث يُنْثَرُ الحب وتغشى منازل الكرماء"
+
+msgid "Tech"
+msgstr "تقنية"
+
+msgid "Former Microsoft CEO Ballmer does about-face on Linux technology"
+msgstr "الإنسان مخير فيما يعلم، مسيّر فيما لا يعلم يزداد حرية كلما ازداد علماً"
+
+msgid "Bosch looking to smart devices to get ahead in the cloud"
+msgstr "الحرية هي الحق في أن تختار و توجد لنفسك بدائل اختيار"
+
+msgid "Signs of life for Apple stock as Wall St"
+msgstr "يجب أن أخترع نظاماً وإلا فسيستعبدني نظام رجل آخر"
+
+msgid "YNAP sees slightly slower sales growth after strong 2015"
+msgstr "سر النجاح هو النظام نظام صارم يقضي على الفوضى في حياتك"
+
+msgid "Senators close to finishing encryption penalties"
+msgstr "الفوضى .. اسم لاي نظام يولد ارتباكاً في عقولنا"
+
+msgid "NASA plans to fix Mars spacecraft leak then launch in 2018"
+msgstr "الحياة شعلة إما أن نحترق بنارها أو نطفئها و نعيش في ظلام"
+
+msgid "Apple sets March 21 event, Wall Street sees new, smaller iPhone"
+msgstr "ليست الحرية غياب الالتزامات انما القدرة على اختيار ما هو أفضل"
+
+msgid "Samsung Elec says preorders for Galaxy S7 phones stronger"
+msgstr "اكتشف النظام في الاشياء التي لا تجد فيها نظاماً في النظرة الاولى"
+
+msgid "Life Style"
+msgstr "منوعات"
+
+msgid "Timeline"
+msgstr "مخطط زمني"
+
+msgid "Content"
+msgstr "المحتوى"
+
+msgid "Classic"
+msgstr "كلاسيك"
+
+msgid "Color"
+msgstr "اللون"
+
+msgid "Your server is running Suhosin, and your current maxvars settings may limit the number of menu items you can save."
+msgstr "الخادم الخاص بك يقوم بتشغيل \"Suhosin\"، والإعدادات الحالية لـ \"maxvars\" قد تحدّ عدد عناصر القوائم التي تستطيع حفظها."
+
+#, php-format
+msgid "You are approaching the post variable limit imposed by your server configuration. Exceeding this limit may automatically delete menu items settings when you save. Please increase your %1$s directive in php.ini. See: %2$s Increasing max input vars limit.%3$s"
+msgstr "أنتَ تقترب من الحد الأعلى لاستخدام المتغيرات (Variables) في المقالة، والمحدد من قِبل إعدادات الخادم الخاص بك. تعدّي هذا الحدّ يعرّض إعدادات عناصر القوائم للحذف بشكل تلقائي أثناء قيامك بالحفظ. يُرجى زيادة الأمر التوجيهي %1$s في ملف php.ini. انظر: %2$s كيفية زيادة الحد الأقصى من المتغيرات (Vars Limit). %3$s"
+
+msgid "Menu Item Limit Warning"
+msgstr "تحذير: حد عدد العناصر في القائمة"
+
+msgid "Need Help?"
+msgstr "تحتاج لمساعده؟"
+
+#, php-format
+msgid "Click on the help icon %s if you need help."
+msgstr "إضغط على أيقونة المساعدة %s إذا إحتجت إلى المساعدة."
+
+msgid "Happy New Year!"
+msgstr "عام سعيد!"
+
+msgid "To our client who have made our progress possible, All of us at TieLabs join in wishing you a Happy New Year with the best of everything in your life for you and your family and we look forward to serving you in the new year :)"
+msgstr "إلى عميلنا العزيز الذي كان دائماً شريكاً رئيسياً في نجاحنا و تقدمنا. فريق عمل TieLabs يتمنى كل التوفيق و النجاح لك و لعائلتك في العام الجديد. و كما كنا دائماً ستجدنا بالقرب إذا إحتجت أي مساعدة :)"
+
+#, php-format
+msgid "Follow us on %1$sTwitter%3$s or %2$sFacebook%3$s."
+msgstr "تابعنا على %1$sTwitter%3$s or %2$sFacebook%3$s."
+
+#, php-format
+msgid "Like %s?"
+msgstr "هل أعجبك %s؟"
+
+#, php-format
+msgid "We've noticed you've been using %1$s for some time now; we hope you love it! We'd be thrilled if you could %2$sgive us a 5* rating on themeforest.net!%4$s If you are experiencing issues, please %3$sopen a support ticket%4$s and we'll do our best to help you out."
+msgstr "أنت تستخدم قالب %1$s منذ مدة. نأمل أنك قد أحببته! سنكون سعداء إذا %2$sقيمت القالب ٥ نجوم على ثيم فورست%4$s إذا واجهتك أي مشاكل فلا تتردد في %3$sفتح تذكرة في مركز الدعم%4$s وسنكون سعداء بمساعدتك."
+
+#, php-format
+msgid "If you have translated the theme then many of our users would be delighted if you could share your translation files with the community and get %1s6 Months FREE Support%2s Just get in contact with us via our %3sSupport Center%4s and we will include the translation files in the next theme update if possible. Thank you very much for your contribution."
+msgstr ""
+"اذا قمت بترجمة القالب العديد من مستخدمينا سيكونون ممتنين لك إذا قمت بمشاركة ملف الترجمة مع المجتمع و إحصل على %1s6 شهور مجانية من الدعم الفني%2s فقط تواصل معنا عبر %3sالدعم الفني %4s وسوف نرفق ملفات الترجمة في التحديث القادم إذا أمكن.\n"
+"شكراً جزيلاً لمساهمتك."
+
+#, php-format
+msgid "%1s Translation Status: %2s Done"
+msgstr "ترجمة ‏اللغة %1s: إكتمل %2s"
+
+msgid "Get Extra FREE 6 Months Support period"
+msgstr "إحصل على ٦ أشهر من الدعم الفني مجاناً"
+
+msgid "Go to the Translation Portal"
+msgstr "الذهاب لبوابة ترجمة القالب"
+
+#, php-format
+msgid "If you have translated the theme then many of our users would be delighted if you could share your translation files with the community. Just get in contact with us via our %1sSupport Center%2s and we will include the translation files in the next theme update if possible. Thank you very much for your contribution."
+msgstr "اذا قمت بترجمة القالب العديد من مستخدمينا سيكونون ممتنين لك إذا قمت بمشاركة ملف الترجمة مع المجتمع. فقط تواصل معنا عبر %1sالدعم الفني %2s وسوف نرفق ملفات الترجمة في التحديث القادم إذا أمكن. شكراً جزيلاً لمساهمتك."
+
+msgid "Share your Language files with others"
+msgstr "شارك ملفات اللغة الخاصة بك مع الاخرين"
+
+msgid "YAY, New Features"
+msgstr "رائع، مميزات جديدة"
+
+msgid "Awesome, isn't it? Give us some love :)"
+msgstr "رائع، أليس كذلك؟ أرنا بعض الحب :)"
+
+#, php-format
+msgid "Rate %s"
+msgstr "تقييم %s"
+
+msgid "Followers"
+msgstr "متابعون"
+
+#, php-format
+msgid "%s Followers"
+msgstr "‫%s متابعون"
+
+msgid "Total Articles' Views!"
+msgstr "اجمالي عدد المشاهدات!"
+
+#, php-format
+msgid "%s articles views"
+msgstr "‫%s عدد زيارات المقالات"
+
+#, php-format
+msgid "We just reached the %s milestone! We are taking this moment to give YOU a big THANK YOU for all the support and confidence you gave us."
+msgstr "لقد وصلتَ للتوّ إلى الهدف %s! ونحن نستغل هذه اللحظة لشكرك شكراً عظيماً على كلّ الدعم والثقة التي منحتنا إياها!"
+
+msgid "New Milestone"
+msgstr "إنجاز جديد"
+
+msgid "Spread The Word"
+msgstr "إنشر الخبر"
+
+#, php-format
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] "عام"
+msgstr[1] "عام"
+msgstr[2] "عامين"
+msgstr[3] "%d أعوام"
+msgstr[4] "%d أعوام"
+msgstr[5] "%d أعوام"
+
+msgid "Happy Anniversary with TieLabs!"
+msgstr "ذكرى سعيدة!"
+
+#, php-format
+msgid "Woohoo! We are so happy You have been with us for %s We are looking forward to providing an awesome WordPress theme and plugins for you for many more. Thanks for being an awesome customer!"
+msgstr "مرحى! نحن سعداء للغاية، أنت عميل لدينا منذ %s نحن نطمح لتقديم المزيد من قوالب و إضافات ووردبريس الرائعة لك لسنوات عديدة قادمة، شكراً لكونك عميل رائع!"
+
+msgid "Your friends at TieLabs"
+msgstr "أصدقاؤك"
+
+msgid "Howdy"
+msgstr "مرحبا"
+
+msgid "Posts Switcher"
+msgstr "مُحَول المقالات"
+
+#, php-format
+msgid "Are You Megrating from %s?"
+msgstr "هل تقوم بالتحويل من %s؟"
+
+#, php-format
+msgid "It seems you are megrating from %1s%2s%3s theme, click on the button below to complete the switching process."
+msgstr "يبدوا انك تقوم بالتحويل من قالب %1s%2s%3s . إضغط على الزر بالأسفل لإتمام عملية التحويل."
+
+msgid "Are You Megrating from another theme?"
+msgstr "هل تقوم بالتحويل من قالب أخر؟"
+
+#, php-format
+msgid "It seems you are megrating from another theme, it is recommended to check our Switcher it supports %1s%2s%3s themes, click on the button below to check them."
+msgstr "يبدوا أنك تقوم بالتحويل من قالب أخر. برجاء معاينة إضافة مُحول المقالات. حاليا تدعم %1s%2s%3s قالب. إضغط على الزر بالأسفل للإطلاع عليهم."
+
+msgid "Run the Switcher"
+msgstr "الإنتقال إلى مُحول المقالات"
+
+#, php-format
+msgid "Switch to %s Theme"
+msgstr "التحويل إلى قالب %s"
+
+#, php-format
+msgid "%s Plugin is required"
+msgstr "مطلوب تركيب إضافة %s"
+
+#, php-format
+msgid "%s Plugin is required, click on the button below to go to the plugins page to install it."
+msgstr "برجاء تركيب و تفعيل إضافة %s ، إضغط على الزر بالأسفل للانتقال لصفحة تنصيب الاضافات."
+
+msgid "Go to the Plugins Page"
+msgstr "الذهاب لصفحة تركيب الإضافات"
+
+msgid "Install Plugins"
+msgstr "تنصيب الإضافات"
+
+msgid "Install Bundled Plugins"
+msgstr "تنصيب الإضافات"
+
+msgid "Share your Language files and Get Extra FREE 6 Months Support period"
+msgstr "شارك ملفات اللغة الخاصة بك واحصل على فترة دعم مجانية لمدة 6 أشهر"
+
+msgid "How to translate the theme"
+msgstr "كيف تترجم المظهر"
+
+msgid "Category Layout"
+msgstr "نظام عرض التصنيفات"
+
+msgid "Posts Settings"
+msgstr "إعدادات التدوينات"
+
+msgid "Posts Layout"
+msgstr "مخطط المقال"
+
+msgid "Slider"
+msgstr "سلايدر"
+
+msgid "Logo"
+msgstr "لوجو الموقع"
+
+msgid "Sidebar"
+msgstr "إضافة عمود جانبي"
+
+msgid "Styling"
+msgstr "إعدادات المظهر"
+
+msgid "Main Menu"
+msgstr "القائمة الرئيسية"
+
+msgid "Category Options"
+msgstr "خيارات التصنيفات"
+
+msgid "Large Thumbnail"
+msgstr "صورة كبيرة"
+
+msgid "Masonry"
+msgstr "الأعمدة المتداخلة"
+
+msgid "Large Post Above"
+msgstr "مقال كبير في الأعلى"
+
+msgid "Overlay Title"
+msgstr "العنوان فوق الصورة"
+
+msgid "Overlay Title Centered"
+msgstr "‫العنوان فوق الصورة في المنتصف"
+
+msgid "Excerpt Length"
+msgstr "طول المقتطف"
+
+msgid "Pagination"
+msgstr "ترقيم الصفحات"
+
+msgid "Next and Previous"
+msgstr "السابق والتالي"
+
+msgid "Numeric"
+msgstr "أرقام"
+
+msgid "Load More"
+msgstr "تحميل المزيد"
+
+msgid "Infinite Scroll"
+msgstr "التمرير اللا نهائي"
+
+msgid "Media Icon"
+msgstr "صورة الميديا"
+
+msgid "Media Icon Overlay"
+msgstr "تمييز مقالات الميديا"
+
+msgid "Category Page Layout"
+msgstr "نظام عرض التصنيفات"
+
+msgid "Full-Width"
+msgstr "العرض الكامل"
+
+msgid "Boxed"
+msgstr "مخطط المربع"
+
+msgid "Framed"
+msgstr "مخطط المحدد"
+
+msgid "Bordered"
+msgstr "مخطط البرواز"
+
+msgid "Post Layout"
+msgstr "نمط صفحة المقال (سنجل)"
+
+msgid "Layout"
+msgstr "المخطط"
+
+msgid "Featured area background"
+msgstr "خلفية المساحة المميزة"
+
+msgid "Use the featured image"
+msgstr "استخدام الصورة البارزة للمقال"
+
+msgid "Yes"
+msgstr "نعم"
+
+msgid "No"
+msgstr "لا"
+
+msgid "Upload Custom Image"
+msgstr "رفع صورة مخصصة"
+
+msgid "- OR -"
+msgstr "- أو -"
+
+msgid "Background Color"
+msgstr "لون الخلفية"
+
+msgid "Post Format Settings"
+msgstr "آعدادات نوع المقال"
+
+msgid "Standard Post Format:"
+msgstr "نمط المقال الإفتراضي:"
+
+msgid "Show the featured image"
+msgstr "إظهار الصورة البارزة"
+
+msgid "Image Post Format:"
+msgstr "نمط المقال صورة:"
+
+msgid "Uncropped featured image"
+msgstr "عدم قص الصورة البارزة"
+
+msgid "Featured image lightbox"
+msgstr "صورة بارزة + Lightbox"
+
+msgid "Structure Data"
+msgstr "بيانات الهيكل"
+
+msgid "Schema type"
+msgstr "‫نوع Schem"
+
+msgid "Article"
+msgstr "مقالة"
+
+msgid "NewsArticle"
+msgstr "مقالة أخبار"
+
+msgid "BlogPosting"
+msgstr "المدونة"
+
+#, php-format
+msgid "Slider #%s"
+msgstr "سلايدر #%s"
+
+msgid "Videos Playlist"
+msgstr "قائمة تشغيل الفيديوهات"
+
+msgid "TieLabs Slider"
+msgstr "سلايدر TieLabs"
+
+msgid "Enable"
+msgstr "تفعيل"
+
+msgid "Number of posts to show"
+msgstr "عدد المقالات المراد إظهارها"
+
+msgid "Query Type"
+msgstr "نوع الاستعلام"
+
+msgid "Recent Posts"
+msgstr "أخر المقالات"
+
+msgid "Random Posts"
+msgstr "مقالات عشوائية"
+
+msgid "Custom Slider"
+msgstr "سلايدر خاص"
+
+msgid "Colored Mask"
+msgstr "خلفية شفافة ملونة أعلى الصورة"
+
+msgid "Disable Gradiant Overlay"
+msgstr "تعطيل طبقة التدرج الأسود"
+
+msgid "Animate Automatically"
+msgstr "تحريك تلقائي"
+
+msgid "Title Length"
+msgstr "طول العنوان"
+
+msgid "Posts Excerpt"
+msgstr "مقتطف المقال"
+
+msgid "Posts Excerpt Length"
+msgstr "طول المقتطف"
+
+msgid "Post Primary Category"
+msgstr "التصنيف الرئيسي للمقال"
+
+msgid "Review Rating"
+msgstr "التقييم"
+
+msgid "Post Meta"
+msgstr "معلومات المقال"
+
+msgid "Playlist title"
+msgstr "عنوان قائمة التشغيل"
+
+msgid "Videos List"
+msgstr "قائمة تشغيل الفيديوهات"
+
+msgid "Enter each video url in a seprated line."
+msgstr "ضع كل رابط فيديو في سطر منفصل."
+
+msgid "Supports: YouTube and Vimeo videos only."
+msgstr "يدعم: YouTube و Vimeo فقط."
+
+msgid "Dark Skin"
+msgstr "الوضع المظلم"
+
+msgid "Background Image"
+msgstr "صوره الخلفية"
+
+msgid "Background Video"
+msgstr "خلفية فيديو"
+
+msgid "Parallax"
+msgstr "تأثير بارالكس"
+
+msgid "Parallax Effect"
+msgstr "نوع تأثير بارالكس"
+
+msgid "Scroll"
+msgstr "تمرير"
+
+msgid "Scale"
+msgstr "تكبير"
+
+msgid "Opacity"
+msgstr "تلاشي"
+
+msgid "Scroll + Opacity"
+msgstr "تمرير + تلاشي"
+
+msgid "Scale + Opacity"
+msgstr "تكبير + تلاشي"
+
+msgid "Revolution Slider"
+msgstr "سليدر Revolution"
+
+msgid "Disable"
+msgstr "تعطيل"
+
+msgid "Unnamed"
+msgstr "غير مُسمى"
+
+msgid "Will override the sliders above."
+msgstr "سيقوم بتخطي السليدرات بالأعلى."
+
+msgid "Choose Slider"
+msgstr "اختر سليدر"
+
+msgid "No sliders found, Please create a slider."
+msgstr "عفواً، لا توجد سليدرات، من فضلك قم بإنشاء سليدر."
+
+msgid "LayerSlider"
+msgstr "سليدر LayerSlider"
+
+msgid "Custom Logo"
+msgstr "لوجو خاص"
+
+msgid "Logo Settings"
+msgstr "إعدادات اللوجو"
+
+msgid "Image"
+msgstr "صورة"
+
+msgid "Site Title"
+msgstr "عنوان الموقع"
+
+msgid "Logo Text"
+msgstr "نص اللوجو"
+
+msgid "Logo Image"
+msgstr "صورة اللوجو"
+
+msgid "Logo Image (Retina Version @2x)"
+msgstr "صوره اللوجو (نسخة الريتنا @2x)"
+
+msgid "Please choose an image file for the retina version of the logo. It should be 2x the size of main logo."
+msgstr "من فضلك اختر ملف صورة اللوجو نسخة الريتنا، يجب أن تكون ضعف حجم الصورة الأصلية."
+
+msgid "Standard Logo Width for Retina Logo"
+msgstr "العرض الطبيعي لصورة اللوجو"
+
+msgid "If retina logo is uploaded, please enter the standard logo (1x) version width, do not enter the retina logo width."
+msgstr "إذا تم رفع لوجو نسخة ريتنا، من فضلك ادخل عرض اللوجو الطبيعي (1x)، لا تدخل عرض اللوجو نسخة الريتنا."
+
+msgid "Standard Logo Height for Retina Logo"
+msgstr "الإرتفاع الطبيعي لصورة اللوجو"
+
+msgid "If retina logo is uploaded, please enter the standard logo (1x) version height, do not enter the retina logo height."
+msgstr "إذا تم رفع لوجو نسخة ريتنا، من فضلك ادخل إرتفاع اللوجو الطبيعي (1x)، لا تدخل إرتفاع اللوجو نسخة الريتنا."
+
+msgid "Logo Margin Top"
+msgstr "هامش اللوجو العلوي"
+
+msgid "Leave it empty to use the default value."
+msgstr "اتركه فارغاً إذا كنت تريد استخدام القيمة الإفتراضية."
+
+msgid "Logo Margin Bottom"
+msgstr "الهامش السفلي للوجو"
+
+msgid "Custom Logo URL"
+msgstr "رابط خاص للوجو"
+
+msgid "Leave it empty to use the Site URL."
+msgstr "إتركها فرغة لإستخدام عنوان الموقع."
+
+msgid "Custom Menu"
+msgstr "قائمة خاصة"
+
+msgid "Category Sidebar"
+msgstr "عمود جانبي القسم"
+
+msgid "Sidebar Right"
+msgstr "العمود الجانبي يمين"
+
+msgid "Sidebar Left"
+msgstr "العمود الجانبي يسار"
+
+msgid "Without Sidebar"
+msgstr "بدون عمود جانبي"
+
+msgid "One Column"
+msgstr "عمود واحد"
+
+msgid "Sticky Sidebar"
+msgstr "عمود جانبي ثابت"
+
+msgid "Custom Sidebar"
+msgstr "عمود جانبي خاص"
+
+msgid "Category Style"
+msgstr "شكل التصنيف"
+
+msgid "Primary Color"
+msgstr "اللون الرئيسي"
+
+msgid "Background"
+msgstr "الخلفية"
+
+msgid "Bordered Layout supports plain background color only."
+msgstr "مخطط الموقع \" المحدد \" يدعم إستخدام لون خلفية واحد فقط ولا يدعم استخدام الصور."
+
+msgid "Background Color 2"
+msgstr "لون الخلفية ٢"
+
+msgid "Background Image type"
+msgstr "نوع الخلفية"
+
+msgid "None"
+msgstr "لا شيء"
+
+msgid "Pattern"
+msgstr "نمط"
+
+msgid "Background Pattern"
+msgstr "نمط الخلفية"
+
+msgid "Background Settings"
+msgstr "إعدادات الخلفية"
+
+msgid "Dots overlay layer"
+msgstr "طبقة نقاط"
+
+msgid "Background dimmer"
+msgstr "خلفية باهتة"
+
+msgid "Value between 0 and 100 to dim background image. 0 - no dim, 100 - maximum dim."
+msgstr "قيمة بين 0 و ١٠٠."
+
+msgid "Background dimmer color"
+msgstr "لون الخلفية الباهتة"
+
+msgid "Black"
+msgstr "أسود"
+
+msgid "White"
+msgstr "أبيض"
+
+msgid "Custom CSS"
+msgstr "أكواد CSS خاصة"
+
+msgid "Paste your CSS code, do not include any tags or HTML in the field. Any custom CSS entered here will override the theme CSS. In some cases, the !important tag may be needed."
+msgstr "أضف أكواد CSS هنا، لا تقم بوضع أي أكواد HTML هنا."
+
+#, php-format
+msgid "Use %s and it will be replaced with the primary color."
+msgstr "لإستخدام اللون الرئيسي إستخدم %s."
+
+msgid "Settings"
+msgstr "اعدادات"
+
+msgid "Front Page"
+msgstr "الصفحة الرئسية"
+
+msgid "TieLabs Builder"
+msgstr "مُبنى صفحات TieLab"
+
+msgid "Enter sub title here"
+msgstr "ادخل عنوان ثانوي هنا"
+
+#, php-format
+msgid "Current Front Page: %s"
+msgstr "الصفحة الرئيسية الحالية: %s"
+
+msgid "Set as the site Front Page?"
+msgstr "قم بتعيين الصفحة كصفحة رئيسية؟"
+
+msgid "Use the TieLabs Builder"
+msgstr "مُبني صفحات TieLabs"
+
+msgid "General"
+msgstr "الإعدادات العامة"
+
+msgid "Styles"
+msgstr "الأنماط"
+
+msgid "Advertisement"
+msgstr "الإعلانات"
+
+msgid "Components"
+msgstr "العناصر"
+
+msgid "Story Highlights"
+msgstr "اقرأ في هذا المقال"
+
+msgid "Source and Via"
+msgstr "المصدر وبواسطة"
+
+msgid "Masonry Page"
+msgstr "الأعمدة المتداخلة"
+
+msgid "Categories Meta"
+msgstr "معلومات التصنيفات"
+
+msgid "Categories"
+msgstr "تصنيفات"
+
+msgid "User Roles"
+msgstr "أدوار المستخدمين"
+
+msgid "Header and Footer Settings"
+msgstr "إعدادات الهيدر والفوتر"
+
+msgid "Hide the Header"
+msgstr "إخفاء الهيدر"
+
+msgid "Hide the Footer"
+msgstr "إخفاء الفوتر"
+
+msgid "Hide the page title"
+msgstr "إخفاء عنوان الصفحة"
+
+msgid "Don't duplicate posts"
+msgstr "عدم تكرار المقالات"
+
+msgid "Note: This option doesn't work with the AJAX pagination option in the blocks."
+msgstr "ملاحظة: هذا الخيار لا يعمل مع نظام ترقيم الصفحات المعتمد على AJAX في البلوكات."
+
+msgid "Primary Category"
+msgstr "التصنيف الرئيسي"
+
+msgid "If the post has multiple categories, the one selected here will be used for settings and it appears in the category labels."
+msgstr "إذا تم تعيين أكثر من تصنيف للمقال سيتم إستخدام هذا التصنيف في جلب اعدادات المقال مثل العمود الجانبي و الألوان وسيظهر اسم التصنيف في البلوكات و السلايدرات."
+
+msgid "Trending Post"
+msgstr "مقال نشط"
+
+msgid "Post Views"
+msgstr "عدد الزيارات"
+
+msgid "Post format"
+msgstr "نمط المقال"
+
+msgid "Standard"
+msgstr "الإفتراضي"
+
+msgid "Video"
+msgstr "فيديو"
+
+msgid "Audio"
+msgstr "ملف صوتي"
+
+msgid "Map"
+msgstr "خريطة"
+
+msgid "Embed Code"
+msgstr "كود مدمج"
+
+msgid "Self Hosted Video"
+msgstr "فيديو مستضاف على موقعك"
+
+msgid "Video URL"
+msgstr "رابط الفيديو"
+
+msgid "supports : YouTube, Vimeo, Viddler, Qik, Hulu, FunnyOrDie, DailyMotion, WordPress.tv and blip.tv"
+msgstr "يدعم الصيغ التالية: YouTube, Vimeo, Viddler, Qik, Hulu, FunnyOrDie, DailyMotion, WordPress.tv و blip.tv"
+
+msgid "MP3 file URL"
+msgstr "رابط ملف MP3"
+
+msgid "M4A file URL"
+msgstr "رابط ملف M4A"
+
+msgid "OGA file URL"
+msgstr "رابط ملف OGA"
+
+msgid "SoundCloud URL"
+msgstr "رابط SoundCloud"
+
+msgid "Google Maps URL"
+msgstr "رابط الخريطة Google Maps"
+
+msgid "Page Layout"
+msgstr "نمط الصفحة"
+
+msgid "Sidebar Position"
+msgstr "المكان الإفتراضي للعمود الجانبي"
+
+msgid "Choose Sidebar"
+msgstr "اختر العمود الجانبي"
+
+msgid "Header Background"
+msgstr "خلفية الهيدر"
+
+msgid "Extend the background of the first section to cover the Header"
+msgstr "مد خلفية أول سيكشن لتشمل الهيدر"
+
+msgid "Post Components"
+msgstr "عناصر المقال"
+
+msgid "Above Post share Buttons"
+msgstr "أزرار نشر المقال العلوية"
+
+msgid "Hide"
+msgstr "إخفاء"
+
+msgid "Show"
+msgstr "عرض"
+
+msgid "Below Post Share Buttons"
+msgstr "أزرار نشر المقال السفلية"
+
+msgid "Tags"
+msgstr "الوسوم"
+
+msgid "Post Author box"
+msgstr "مربع كاتب المقال"
+
+msgid "Next/Prev posts"
+msgstr "المقال السابق/التالي"
+
+msgid "Newsletter"
+msgstr "القائمة البريدية"
+
+msgid "Related Posts"
+msgstr "المقالات ذات الصلة"
+
+msgid "Fly Check Also Box"
+msgstr "صندوق شاهد أيضًا"
+
+msgid "Hide Above Post Ad"
+msgstr "إخفاء الإعلان أعلى المقال"
+
+msgid "Custom Above Post Ad"
+msgstr "‫إعلان خاص أعلى المقال"
+
+msgid "Hide Below Post Ad"
+msgstr "إخفاء الاعلان أسفل المقال"
+
+msgid "Custom Below Post Ad"
+msgstr "إعلان خاص أسفل المقال"
+
+msgid "Hide Above Content Ad"
+msgstr "‫إخفاء الاعلان أعلى محتوى المقال"
+
+msgid "Custom Above Content Ad"
+msgstr "‫إعلان خاص أعلى محتوى المقال"
+
+msgid "Hide Below Content Ad"
+msgstr "إخفاء الاعلان أسفل محتوى المقال"
+
+msgid "Custom Below Content Ad"
+msgstr "إعلان خاص أسفل محتوى المقال"
+
+msgid "Source"
+msgstr "المصدر"
+
+msgid "These links will appear at the end of the article in the Source section."
+msgstr "هذه الروابط ستظهر في نهاية المقال في منطقة المصادر."
+
+msgid "Link"
+msgstr "رابط"
+
+msgid "Add"
+msgstr "أضف"
+
+msgid "Source name is required."
+msgstr "مطلوب إدخال النص."
+
+msgid "Via"
+msgstr "بواسطة"
+
+msgid "These links will appear at the end of the article in the Via section."
+msgstr "‫هذه الروابط ستظهر في نهاية المقال في منطقة بواسطة."
+
+msgid "Via name is required."
+msgstr "مطلوب إدخال النص."
+
+msgid "Add Custom Text"
+msgstr "إضافة نص مخصص"
+
+msgid "Custom Text"
+msgstr "نص خاص"
+
+msgid "Text is required."
+msgstr "مطلوب إدخال النص."
+
+msgid "Upload"
+msgstr "رفع"
+
+msgid "Add Image"
+msgstr "إضافة صورة"
+
+msgid "Select"
+msgstr "إختر"
+
+msgid "no-repeat"
+msgstr "بدون-تكرار"
+
+msgid "Tile"
+msgstr "تمدد"
+
+msgid "Tile Horizontally"
+msgstr "تمدد افقي"
+
+msgid "Tile Vertically"
+msgstr "تمدد عمودي"
+
+msgid "Fixed"
+msgstr "ثابت"
+
+msgid "Cover"
+msgstr "Cover"
+
+msgid "Left"
+msgstr "يسار"
+
+msgid "Right"
+msgstr "يمين"
+
+msgid "Center"
+msgstr "وسط"
+
+msgid "Top"
+msgstr "أعلى"
+
+msgid "Bottom"
+msgstr "أسفل"
+
+msgid "Remove"
+msgstr "حذف"
+
+msgid "Font Size in Pixels"
+msgstr "حجم الخط بالبيكسل"
+
+msgid "Line Height"
+msgstr "ارتفاع الخط"
+
+msgid "Font Weight"
+msgstr "حجم الخط"
+
+msgid "Thin 100"
+msgstr "رفيع 100"
+
+msgid "Extra 200 Light"
+msgstr "خفيف جداً 200"
+
+msgid "Light 300"
+msgstr "خفيف 300"
+
+msgid "Regular 400"
+msgstr "عادي 400"
+
+msgid "Medium 500"
+msgstr "متوسط 500"
+
+msgid "Semi 600 Bold"
+msgstr "شبه داكن 600"
+
+msgid "Bold 700"
+msgstr "داكن 700"
+
+msgid "Extra 800 Bold"
+msgstr "داكن جداً 800"
+
+msgid "Black 900"
+msgstr "كثيف 900"
+
+msgid "Capitalization"
+msgstr "أول حرف كبير"
+
+msgid "UPPERCASE"
+msgstr "أحرف كبيرة"
+
+msgid "Capitalize"
+msgstr "تكبير أول حرف"
+
+msgid "lowercase"
+msgstr "أحرف صغيرة"
+
+msgid "System Status"
+msgstr "حالة النظام"
+
+msgid "WordPress environment"
+msgstr "بيئة عمل ووردبريس"
+
+msgid "Home URL"
+msgstr "رابط الرئيسية"
+
+msgid "Site URL"
+msgstr "رابط الموقع"
+
+msgid "WP version"
+msgstr "إصدار ووردبريس"
+
+msgid "WP multisite"
+msgstr "‫WordPress multisite"
+
+msgid "WP memory limit"
+msgstr "‫WP memory limit"
+
+#, php-format
+msgid "%1$s - We recommend setting memory to at least %2$s. To import the demo data %3$s of memory limit is required. See: %4$s"
+msgstr "%1$s - يُنصَح بتغيير إعدادات الذاكرة ليصبح %2$s على الأقل. استرداد معلومات الديمو %3$s الخاصة بالحد الأقصى للذاكرة هو متطلب وضروري. انظر: %4$s"
+
+msgid "Increasing memory allocated to PHP"
+msgstr "قم بزيادة الذاكرة المخصصة ل PHP"
+
+msgid "WP debug mode"
+msgstr "‫WP debug mode"
+
+msgid "Language"
+msgstr "اللغة"
+
+msgid "Hide errors from visitors"
+msgstr "اخفاء رسائل الخطأ عن الزوار"
+
+msgid "Error messages can contain sensitive information about your website environment. These should be hidden from untrusted visitors."
+msgstr "رسائل الخطأ قد تحتوي على معلومات حساسة عن بيئة موقعك."
+
+msgid "Server environment"
+msgstr "‫Server environment"
+
+msgid "Server info"
+msgstr "‫Server info"
+
+msgid "PHP version"
+msgstr "‫PHP version"
+
+#, php-format
+msgid "%1$s - We recommend a minimum PHP version of %2$s."
+msgstr "‏‫%1$s - ننصح بأن يكون إصدار PHP على الأقل %2$s."
+
+msgid "PHP post max size"
+msgstr "‫PHP post max size"
+
+msgid "PHP time limit"
+msgstr "‫PHP time limit"
+
+#, php-format
+msgid "%1$s - We recommend setting max execution time to at least %2$s."
+msgstr "‫%1$s - ننصح بأن تكون قيمة max execution time على الأقل %2$s."
+
+msgid "PHP max input vars"
+msgstr "‫PHP max input vars"
+
+msgid "cURL version"
+msgstr "‫cURL version"
+
+msgid "SUHOSIN installed"
+msgstr "‫SUHOSIN installed"
+
+msgid "You have to increase the suhosin.post.max_vars and suhosin.request.max_vars parameters to 2000 or more."
+msgstr "عليك زيادة قيمة المتغير suhosin.post.max_vars والمتغير suhosin.request.max_vars إلى القيمة 2000 أو أكثر."
+
+msgid "MySQL version"
+msgstr "‫MySQL version"
+
+#, php-format
+msgid "%1$s - WordPress recommends a minimum MySQL version of %2$s. See: %3$sWordPress requirements%4$s"
+msgstr "%1$s - ووردبريس تنصح بأن تكون أقل نسخة لـ MSQL  %2$s. أنظر: %3$s متطلبات الووردبريس %4$s"
+
+msgid "Max upload size"
+msgstr "‫Max upload size"
+
+msgid "fsockopen/cURL"
+msgstr "‫fsockopen/cURL"
+
+msgid "Your server does not have fsockopen or cURL enabled. Contact your hosting provider."
+msgstr "دوال fsockopen و cUR معطلة على السيرفر. برجاء التواصل مع مزود الإستضافة."
+
+msgid "Multibyte string"
+msgstr "‫Multibyte string"
+
+msgid "Your server does not support the mbstring functions - this is required for better character encoding. Some fallbacks will be used instead for it."
+msgstr "المخدم الخاص بك لا يدعم دالة mbstring - هذه الدالة مطلوبة لتحسين ترميز الأحرف. سيتم استخدام طرق اخرى بديلة."
+
+msgid "XMLReader"
+msgstr "‫XMLReader"
+
+msgid "The XMLReader PHP module/extension is missing. Please contact your hosting company and ask them to install that for you."
+msgstr "ملف XMLReader PHP موديل / إضافة مفقود، أرجو التواصل مع شركة الإستضافة و طلب تثبيته من قبلهم من أجلك."
+
+msgid "Remote post"
+msgstr "‫Remote post"
+
+msgid "wp_remote_post() failed. Contact your hosting provider."
+msgstr "‫wp_remote_post() failed. Contact your hosting provider."
+
+msgid "Remote get"
+msgstr "‫Remote get"
+
+msgid "wp_remote_get() failed. Contact your hosting provider."
+msgstr "‫wp_remote_get() failed. Contact your hosting provider."
+
+msgid "Theme"
+msgstr "القالب"
+
+msgid "Name"
+msgstr "الاسم"
+
+msgid "License"
+msgstr "الترخيص"
+
+msgid "Your Site is Validated"
+msgstr "تم تفعيل الموقع"
+
+msgid "Your Site is not Validated"
+msgstr "لم يتم تفعيل موقعك"
+
+msgid "Support"
+msgstr "الدعم الفني"
+
+msgid "Version"
+msgstr "الاصدار"
+
+#, php-format
+msgid "%s is available"
+msgstr "‫%s متاح حالياً"
+
+msgid "Author URL"
+msgstr "رابط المصمم"
+
+msgid "Child theme"
+msgstr "قالب إبن"
+
+msgid "Parent theme name"
+msgstr "إسم القالب الأب"
+
+msgid "Parent theme version"
+msgstr "‫إصدار القالب الأب"
+
+msgid "Parent theme author URL"
+msgstr "‫رابط مصمم القالب الأب"
+
+msgid "Latest Demo Installed"
+msgstr "أخر ديمو تم استيراده"
+
+msgid "Switched From"
+msgstr "مُحول من"
+
+msgid "Active plugins"
+msgstr "الإضافات المُفعلة"
+
+msgid "Network enabled"
+msgstr "‫Network enabled"
+
+#, php-format
+msgid "by %s"
+msgstr "بواسطة %s"
+
+msgid "Please copy and paste this information in your ticket when contacting support:"
+msgstr "برجاء نسخ وارفاق هذه البيانات عند فتح تذكرة جديدة:"
+
+msgid "Get system report"
+msgstr "عرض حالة النظام"
+
+#, php-format
+msgid "Looking for a good web hosting company? %1$sCheck our recommendations!%2$s"
+msgstr "هل تبحث عن شركة إستضافة مناسبة؟   %1$sقم بالإطلاع على ترشيحاتنا.%2$s"
+
+msgid "Theme Updates"
+msgstr "تحديثات القالب"
+
+msgid "New Update"
+msgstr "تحديث جديد للقالب"
+
+msgid "New"
+msgstr "جديد"
+
+msgid "New Theme Update"
+msgstr "تحديث جديد للقالب"
+
+#, php-format
+msgid "There is a new version of the %s available."
+msgstr "هناك إصدار جديد من قالب %s."
+
+#, php-format
+msgid "View version %1$s details."
+msgstr "عرض تفاصيل الإصدار %1$s."
+
+#, php-format
+msgid "The theme folder name does not match the original theme folder name %1$s%3$s%2$s, you need to chnage the theme folder name back to be able to update the theme automatically, or you can update the theme manually via FTP."
+msgstr "اسم مجلد القالب لا يتناسب مع اسم المجلد الأصلي للقالب %1$s%3$s%2$s، يجب أن يتم تغيير مجلد القالب إلى السابق لكي تتمكن من رفع المجلد بشكل تلقائي، أو تستطيع أن ترفع القالب بشكل يدوي بواسطة الـ FTP."
+
+msgid "How to update the theme manually?"
+msgstr "كيف أقوم بتحديث القالب يدوياً؟"
+
+msgid "Update Automatically"
+msgstr "الترقية تلقائياً"
+
+#, php-format
+msgid "Your Support Period has expired, %1$sAutomatic Theme Updates%2$s and %1$sSupport System Access%2$s have been disabled. %3$sRenew your Support Period%5$s. Once the support is renewed please go to the %4$stheme registration section%5$s and click on the %1$sRefresh expiration date%2$s button."
+msgstr "فترة الدعم الفني الخاصة بك قد إنتهت. %1$sالتحديثات التلقائية%2$s و %1$sإمكانية فتح تذاكر دعم فني%2$s قد تم تعطيلها. %3$sقم بتجديد فترة الدعم الفني%5$s بعد ذلك قم بالذهاب لمنطقة %4$sتفعيل القالب%5$s ثم قم بالضغط على زر %1$sتحديث تاريخ إنتهاء فترة الدعم%2$s."
+
+msgid "Please Note: Any customizations you have made to theme files will be lost. Please consider using child themes for modifications."
+msgstr "برجاء الملاحظة: أي تعديلات تم إجراؤها على ملفات القالب سيتم فقدها. يمكنك إستخدام القالب الإبن إذا أردت إجراء تعديلات على ملفات القالب."
+
+msgid "Congratulations"
+msgstr "تهانينا"
+
+msgid "Your site is now validated!, Demo import and bundeled plugins are now unlocked."
+msgstr "شكراً لك. تم تفعيل الموقع بنجاح."
+
+msgid "Your license is not validated. Click on the link below to unlock demo import, bundeled plugins and access to premium support."
+msgstr "لم تقم بتفعيل القالب. إضغط على الزر بالأسفل لتفعيل إستيراد الديمو وتركيب الإضافات المجانية."
+
+msgid "NOTE: A separate license is required for each site using the theme."
+msgstr "مهم: أنت بحاجة لشراء رخصة منفصلة لكل إسم نطاق يستخدم القالب."
+
+msgid "Have a question about the license? Check this article."
+msgstr "هل لديك أي أسئلة بخصوص ترخيص القالب؟ تفضل بالإطلاع على هذا المقال."
+
+msgid "You're almost finished!"
+msgstr "على وشك الإنتهاء!"
+
+msgid "Verify Now!"
+msgstr "تفعيل الآن!"
+
+msgid "Buy a License"
+msgstr "شراء رخصة أخرى"
+
+msgid "Authorization Failed"
+msgstr "فشلت عملية التفعيل"
+
+msgid "ERROR"
+msgstr "خطأ"
+
+msgid "Try again"
+msgstr "حاول مرة أخرى"
+
+msgid "Theme Registration"
+msgstr "تفعيل القالب"
+
+msgid "Are you sure?"
+msgstr "هل أنت متأكد؟"
+
+msgid "Revoke"
+msgstr "إلغاء التفعيل"
+
+msgid "Your Support Period Expiring Soon"
+msgstr "فترة الدعم الفني الخاصة بك قد أوشكت على الإنتهاء"
+
+#, php-format
+msgid "Your Support Period expires on %1$s, active Support Period is requried for %2$sAutomatic Theme Updates%3$s and %2$sSupport System Access%3$s. %4$sGet an extra 6 months of support now%5$s. Once the support is renewed please click on the button bellow."
+msgstr "‫‫فترة الدعم الفني الخاصة بك قد ستنتهي في %1$s. يلزم فترة دعم فني سارية للحصول على %2$sالتحديثات التلقائية%3$s و %2$sإمكانية فتح تذاكر دعم فني%3$s . %4$sقم بتجديد فترة الدعم الفني%5$s بعد ذلك قم بالضغط على الزر بالأسفل لتحديث تاريخ إنتهاء فترة الدعم الفني."
+
+msgid "Your Support Period is Active"
+msgstr "فترة الدعم الفني الخاصة بك فعالة"
+
+msgid "Your Support Period Has Expired"
+msgstr "فترة الدعم الفني الخاصة بك قد إنتهت"
+
+#, php-format
+msgid "Your Support Period has expired, %1$sAutomatic Theme Updates%2$s and %1$sSupport System Access%2$s have been disabled. %3$sRenew your Support Period%4$s. Once the support is renewed please click on the button bellow."
+msgstr "‫فترة الدعم الفني الخاصة بك قد إنتهت. %1$sالتحديثات التلقائية%2$s و %1$sإمكانية فتح تذاكر دعم فني%2$s قد تم تعطيلها. %3$sقم بتجديد فترة الدعم الفني%4$s بعد ذلك قم بالضغط على الزر بالأسفل لتحديث تاريخ إنتهاء فترة الدعم الفني."
+
+msgid "Refresh Expiration Date"
+msgstr "تحديث تاريخ إنتهاء فترة الدعم"
+
+msgid "More info"
+msgstr "للمزيد من المعلومات"
+
+msgid "Have you changed your mind? :)"
+msgstr "هل غيرت رأيك؟ :)"
+
+#, php-format
+msgid "We noticed that you rated the theme %1$s stars. We are looking to improve our theme so if you need help, please %2$ssubmit a ticket through our support system%5$s or %3$ssubmit your feature requests%5$s, otherwise we highly appreciate your valuable five stars. %4$sClick here to change your rating%5$s."
+msgstr "لاحظنا أنك قَيمت القالب %1$s نجوم. نحن نسعى دائماً لتحسين قوالبنا و خدماتنا. إذا كنت بحاجة إلى مساعده فبرجاء %2$sفتح تذكرة دعم فني%5$s من خلال مركز الدعم أو إذا كان لديك أي مقترحات لمميزات جديدة في القالب فيسعدنا %3$sمشاركتك لنا بها%5$s. أو يمكنك %4$sتغيير تقييمك للقالب إلى ٥ نجوم من هنا%5$s."
+
+msgid "Getting Started"
+msgstr "إبدأ من هنا"
+
+#, php-format
+msgid "Welcome to %s"
+msgstr "مرحبًا في %s"
+
+#, php-format
+msgid "I just installed the amazing %s #WordPress theme #tielabs"
+msgstr "لقد قمت بتركيب قالب %s لووردبريس #WordPress #tielabs"
+
+#, php-format
+msgid "Version %s"
+msgstr "الإصدار %s"
+
+msgid "Header"
+msgstr "الهيدر"
+
+msgid "Footer"
+msgstr "الفوتر"
+
+msgid "Blocks"
+msgstr "بلوكات"
+
+msgid "Archives"
+msgstr "أرشيف"
+
+msgid "Single Post Page"
+msgstr "إعدادات صفحة المقال"
+
+msgid "Share Buttons"
+msgstr "أزرار المشاركة"
+
+msgid "Sidebars"
+msgstr "العمود الجانبي - سايدبار"
+
+msgid "LightBox"
+msgstr "Lightbox"
+
+msgid "Typography"
+msgstr "الخطوط"
+
+msgid "Translations"
+msgstr "ترجمة النصوص"
+
+msgid "Social Networks"
+msgstr "الشبكات الإجتماعية"
+
+msgid "Mobile"
+msgstr "الجوال"
+
+msgid "AMP"
+msgstr "صفحات الجوال المسرعة AMP"
+
+msgid "Web Notifications"
+msgstr "اشعارات الصفحة"
+
+msgid "Advanced"
+msgstr "إعدادات متقدمة"
+
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+msgid "bbPress"
+msgstr "بي بي بريس"
+
+msgid "BuddyPress"
+msgstr "‫BuddyPress"
+
+msgid "Export/Import"
+msgstr "تصدير/استيراد"
+
+msgid "Theme Options"
+msgstr "إعدادات القالب"
+
+msgid "Knowledge Base"
+msgstr "قاعدة المعرفة"
+
+#, php-format
+msgid "Activate %s"
+msgstr "تفعيل %s"
+
+msgid "Update"
+msgstr "تحديث"
+
+msgid "Search"
+msgstr "بحث"
+
+#, php-format
+msgid "%1$s Copyright %2$s, All Rights Reserved &nbsp;|&nbsp; %3$s Theme by %4$s"
+msgstr "%1$s حقوق النشر %2$s، جميع الحقوق محفوظة &nbsp; | &nbsp; %3$s الثيم (المظهر) تم تصميمه من قِبل %4$s"
+
+msgid "Custom Author widget"
+msgstr "محتوى خاص للكاتب"
+
+msgid "Custom Author widget content"
+msgstr "نص المحتوى الخاص للكاتب"
+
+msgid "Supports: Text, HTML and Shortcodes."
+msgstr "يدعم: النصوص وأكواد HTML والأكواد المختصرة."
+
+msgid "- Select a menu -"
+msgstr "- إختر قائمة -"
+
+#, php-format
+msgid "You are awesome! Thanks for using our theme, %s is now installed and ready to use! Get ready to build something beautiful :)"
+msgstr "أنت رائع! شكراً لك على إستخدامك أحد قوالبنا، تم تركيب قالب %s بنجاح وهو جاهز للإستخدام. كن مستعداً لبناء شئ جميل :)"
+
+#, php-format
+msgid "Need help? We're here %s"
+msgstr "هل تحتاج لمساعدة؟ نحن في الخدمة %s"
+
+msgid "Submit a Ticket"
+msgstr "فتح تذكرة جديدة"
+
+msgid "Need one-to-one assistance? Get in touch with our Support team."
+msgstr "هل أنت بحاجة إلى المساعدة؟ تواصل مع فريق الدعم الفني."
+
+msgid "You need to validated your license to access the support system."
+msgstr "أنت بحاجة لتفعيل القالب الخاص بك لتتمكن من فتح تذكرة دعم فني."
+
+msgid "This is the place to go to reference different aspects of the theme."
+msgstr "هنا يمكنك إيجاد كل مقالات وشروحات إستخدام القالب."
+
+msgid "Browse the Knowledge Base"
+msgstr "إستعراض قاعدة المعرفة"
+
+msgid "Troubleshooting"
+msgstr "استكشاف الأخطاء وإصلاحها"
+
+msgid "If something is not working as expected, Please try these common solutions."
+msgstr "إذا واجهتك مشاكل .. يمكنك تجربة هذه المقترحات لحل المشكلة."
+
+msgid "Visit The Page"
+msgstr "عرض الصفحة"
+
+msgid "Section"
+msgstr "سيكشن"
+
+msgid "Edit Section"
+msgstr "تحرير السيكشن"
+
+msgid "Section Title"
+msgstr "عنوان السيكشن"
+
+msgid "(optional)"
+msgstr "(اختياري)"
+
+msgid "Title URL"
+msgstr "رابط العنوان"
+
+msgid "Title Style"
+msgstr "نمط العنوان"
+
+msgid "Centered"
+msgstr "في المنتصف"
+
+msgid "Big"
+msgstr "كبير"
+
+msgid "Title Color"
+msgstr "لون العنوان"
+
+msgid "Section Width"
+msgstr "عرض السيكشن"
+
+msgid "100% Interior Content Width"
+msgstr "عرض ١٠٠٪ للمحتوى"
+
+msgid "Select if the interior content is contained to site width or 100% width."
+msgstr "قم بتفعيل هذا الخيار لجعل عرض السيكشن ١٠٠٪ لعرض الموقع."
+
+msgid "Sidebar Settings"
+msgstr "اعدادات العامود الجانبي"
+
+msgid "Styling Settings"
+msgstr "إعدادات المظهر"
+
+msgid "Custom Classes"
+msgstr "CSS Classes خاصة"
+
+msgid "Margin Top"
+msgstr "المسافة العلوية"
+
+msgid "Margin Bottom"
+msgstr "المسافة السفلية"
+
+msgid "Add Block"
+msgstr "إضافة بلوك"
+
+msgid "Predefined Sidebar"
+msgstr "إختيار عمود جانبي"
+
+msgid "Block Title"
+msgstr "عنوان البلوك"
+
+msgid "Ad"
+msgstr "إعلان"
+
+msgid "Tabs block"
+msgstr "بلوك تابات للأقسام"
+
+msgid "Edit Block"
+msgstr "تحرير البلوك"
+
+msgid "Advanced Settings"
+msgstr "اعدادات متقدمة"
+
+msgid "Custom Title"
+msgstr "عنوان"
+
+msgid "Products Categories"
+msgstr "تصنيفات المنتجات"
+
+msgid "Will overide the Categories option."
+msgstr "سيقوم بتخطي خيارا التصنيفات."
+
+msgid "Exclude Posts"
+msgstr "استبعاد مقالات"
+
+msgid "Enter a post ID, or IDs separated by comma."
+msgstr "أدخل ID المقالات مفصولة بفاصلة."
+
+msgid "Last Modified Posts"
+msgstr "أحدث المقالات التي تم تحديثها"
+
+msgid "Most Commented posts"
+msgstr "أكثر المقالات تعليقاً"
+
+msgid "Most Viewed posts"
+msgstr "أكثر المقالات مشاهدةً"
+
+msgid "Sort Order"
+msgstr "ترتيب حسب"
+
+msgid "Offset - number of posts to pass over"
+msgstr "تخطي - عدد المقالات المراد تخطيها"
+
+msgid "Next and Previous Arrows"
+msgstr "أسهم السابق و التالي"
+
+msgid "Show More"
+msgstr "اظهر المزيد"
+
+msgid "Ad Image"
+msgstr "صورة الإعلان"
+
+msgid "Ad URL"
+msgstr "رابط الاعلان"
+
+msgid "Alternative Text For The image"
+msgstr "نص بديل للصورة"
+
+msgid "Open The Link In a new Tab"
+msgstr "فتح الرابط في تبويب جديد"
+
+msgid "Nofollow?"
+msgstr "بدون تتبع Nofollow؟"
+
+msgid "Custom Ad Code"
+msgstr "كود إعلان خاص"
+
+msgid "Slider Revolution"
+msgstr "سليدر Revolution"
+
+msgid "No sliders found, add a slider first!"
+msgstr "عفواً، لا توجد سليدرات، من فضلك قم بإنشاء سليدر!"
+
+msgid "Show the content only?"
+msgstr "عرض المحتوى فقط؟"
+
+msgid "Without background, padding nor borders."
+msgstr "بدون خلفية أو هوامش أو حدود."
+
+msgid "Ajax Filters"
+msgstr "فلترات اجاكس"
+
+msgid "Will not appear if the numeric pagination is active."
+msgstr "لن تظهر في حالة تفعيل نظام ترقيم الصفحات: أرقام."
+
+msgid "More Button"
+msgstr "زر المزيد"
+
+msgid "Will not appear if the Block URL is empty."
+msgstr "لن تظهر في حالة ترك رابط البلوك فارغاً‪."
+
+msgid "Posts Title Length"
+msgstr "طول العنوان"
+
+msgid "Read More Button"
+msgstr "زر أكمل القراءة"
+
+msgid "Hide thumbnail for the First post"
+msgstr "إخفاء صورة أول خبر"
+
+msgid "Hide small thumbnails"
+msgstr "اخفاء الصورة البارزة للمقالات المصغرة"
+
+msgid "Hide thumbnails"
+msgstr "اخفاء الصورة البارزة"
+
+msgid "Slider Speed in ms"
+msgstr "سرعة تحريك السلايدر"
+
+#, php-format
+msgid "Default is: %s"
+msgstr "الإفتراضي: %s"
+
+msgid "Animation Effect"
+msgstr "نوع تأثير الحركة"
+
+msgid "Typing"
+msgstr "كتابة"
+
+msgid "Fading"
+msgstr "تلاشي"
+
+msgid "Sliding Left"
+msgstr "مرور من اليسار"
+
+msgid "Sliding Right"
+msgstr "مرور من اليمين"
+
+msgid "Sliding Up"
+msgstr "مرور لأعلى"
+
+msgid "Sliding Down"
+msgstr "مرور لأسفل"
+
+msgid "Show the scrolling arrows?"
+msgstr "عرض أسهم التبديل؟"
+
+#, php-format
+msgid "Block #%s"
+msgstr "بلوك #%s"
+
+#, php-format
+msgid "Scrolling #%s"
+msgstr "متحرك #%s"
+
+msgid "News Ticker"
+msgstr "شريط الأخبار"
+
+msgid "Ad Block"
+msgstr "بلوك إعلان"
+
+msgid "Custom Content"
+msgstr "محتوى خاص"
+
+#, php-format
+msgid "WooCommerce #%s"
+msgstr "ووكوميرس #%s"
+
+msgid "Use the Default Editor"
+msgstr "المحرر الإفتراضي"
+
+msgid "Add Section"
+msgstr "أضف سيكشن"
+
+msgid "Save Changes"
+msgstr "حفظ التغييرات"
+
+msgid "TieLabs"
+msgstr "‏TieLabs"
+
+msgid "More Themes"
+msgstr "المزيد من القوالب"
+
+msgid "Need Help? Search the knowledge base"
+msgstr "هل تحتاج لمساعدة؟ إبحث في قاعدة المعرفة - بالإنجليزية فقط"
+
+msgid "Twitter"
+msgstr "تويتر"
+
+msgid "Facebook"
+msgstr "فيسبوك"
+
+msgid "Google+"
+msgstr "قوقل بلاس"
+
+msgid "LinkedIn"
+msgstr "لينكدإن"
+
+msgid "StumbleUpon"
+msgstr "‏StumbleUpon"
+
+msgid "Pinterest"
+msgstr "بينتيريست"
+
+msgid "Reddit"
+msgstr "‏Reddit"
+
+msgid "Tumblr"
+msgstr "‏Tumblr"
+
+msgid "VKontakte"
+msgstr "‏VKontakte"
+
+msgid "Odnoklassniki"
+msgstr "Odnoklassniki"
+
+msgid "Pocket"
+msgstr "بوكيت"
+
+msgid "WhatsApp"
+msgstr "واتساب"
+
+msgid "For Mobiles Only"
+msgstr "متاح للجوالات فقط"
+
+msgid "Telegram"
+msgstr "تيلقرام"
+
+msgid "Viber"
+msgstr "ڤايبر"
+
+msgid "Email"
+msgstr "إرسال لصديق"
+
+msgid "Print"
+msgstr "طباعة"
+
+msgid "Cache"
+msgstr "تفعيل الكاش"
+
+msgid "If enabled, some static parts like widgets, main menu and breaking news will be cached to reduce MySQL queries. Saving the theme settings, adding/editing/removing posts, adding comments, updating menus, activating/deactivating plugins, adding/editing/removing terms or updating WordPress, will flush the cache."
+msgstr "عند تفعيل هذا الخيار سيتم تخزين بعض المحتويات مثل الودجات و القائمة الرئيسية و الأخبار العاجلة بشكل مؤقت لتقليل إستعلامات MySQL. سيتم تحديث هذه المحتويات تلقائياً عند تحديث اعدادات القالب أو اضافة / تعديل / حذف مقالات أو إضافة تعليقات أو تحديث القوائم أو تفعيل / تعطيل الاضافات أو اضافة/تعديل/حذف اقسام او وسوم أو تحديث ووردبريس."
+
+msgid "Minified CSS and JS files"
+msgstr "إستخدام ملفات CSS و JS المضغوطة"
+
+msgid "Add a link to the theme options page to the Toolbar"
+msgstr "إظهار رابط صفحة إعدادات القالب في شريط الأدوات"
+
+msgid "Disable GIF Featured Images"
+msgstr "تعطيل خاصية صور GIF المتحركة"
+
+msgid "Disable the custom styles in the editor"
+msgstr "تعطيل الستايلات في محرر الكتابة"
+
+msgid "Disable the Posts Switcher"
+msgstr "تعطيل مُحَول المقالات"
+
+msgid "This will disable the Switcher page, all notifications and hide the plugin from the Bundeled plugins installing page."
+msgstr "هذا الخيار سيقوم بتعطيل صفحة مُحول المقالات وكل التنبيهات الخاصة به."
+
+msgid "Disable the Built-in Mega Menus"
+msgstr "تعطيل خاصية ميجا منيو."
+
+msgid "WordPress Login page Logo"
+msgstr "اللوجو الخاص بصفحة دخول الووردبريس"
+
+msgid "WordPress Login page Logo URL"
+msgstr "رابط اللوجو الخاص بصفحة دخول الووردبريس"
+
+msgid "Reset All Settings"
+msgstr "إعادة تعيين الإعدادات"
+
+msgid "This action can not be Undo. Clicking \"OK\" will reset your theme options to the default installation. Click \"Cancel\" to stop this operation."
+msgstr "لا يمكن الرجوع في هذا الإجراء. الموافقة ستقوم بحذف كل الاعدادات و اعادة الاعدادات الافتراضية."
+
+msgid "Accelerated Mobile Pages"
+msgstr "‫Accelerated Mobile Pages"
+
+msgid "AMP is a Google-backed project with the aim of speeding up the delivery of content through the use of stripped down code known as AMP HTML, it is a way to build web pages for static content (pages that don't change based on user behaviour), that allows the pages to load (and pre-render in Google search) much faster than regular HTML."
+msgstr "AMP هو مشروع مطور من طرف شركة جوجل يهدف إلى تسريع تقديم المحتوى باستعمال لغة برمجة تسمى AMP HTML، و هي لغة لتصميم صفحات ذات محتوى ثابت (لا يتفاعل مع المستخدم)، و هذا يسمح بتحميل الصفحات بشكل أسرع مقارنة بلغة HTML العادية."
+
+msgid "You may need to enable pretty permalinks if it isn't working."
+msgstr "ربما تحتاج لتفعيل الروابط الدائمة إذا لم تعمل."
+
+#, php-format
+msgid "To access the AMP version go to any blog post and add %s to the end of the URL."
+msgstr "للوصول لنسخة AMP للمقالات أضف %s بعد رابط المقال."
+
+msgid "Enable AMP"
+msgstr "تفعيل AMP"
+
+msgid "Post Settings"
+msgstr "اعدادات المقال"
+
+msgid "Categories and Tags"
+msgstr "التصنيفات والوسوم"
+
+msgid "Facebook APP ID"
+msgstr "معلومات Facebook App"
+
+msgid "(Required)"
+msgstr "(إلزامي)"
+
+msgid "Footer Settings"
+msgstr "إعدادات الفوتر"
+
+msgid "Back to top button"
+msgstr "زر الذهاب إلى الأعلى"
+
+msgid "Footer Logo Image"
+msgstr "صورة لوجو الفوتر"
+
+msgid "Footer Menu"
+msgstr "قائمة الفوتر"
+
+msgid "Variables"
+msgstr "متغيرات"
+
+msgid "These tags can be included in the textarea above and will be replaced when a page is displayed."
+msgstr "هذه الوسوم يمكن استخدامها في منطقة الكتابة بالاعلى وسوف تبدل عند زيارة موقعك."
+
+msgid "Replaced with the current year."
+msgstr "تبدل بالسنة الحالية."
+
+msgid "Replaced with The site's name."
+msgstr "تبدل باسم الموقع."
+
+msgid "Replaced with The site's URL."
+msgstr "تبدل برابط للموقع."
+
+msgid "Copyright Text"
+msgstr "نص حقوق الملكية"
+
+msgid "Above Content"
+msgstr "أعلى المحتوى"
+
+#, php-format
+msgid "Enter your Ad code, AMP pages support %1$s tag only, %2$sClick Here%3$s For More info."
+msgstr "قم بإدخال كود الإعلان، صفحات AMP تدعم فقط الوسم %1$s، %2$sإضغط هنا%3$s للمزيد من المعلومات."
+
+msgid "Below Content"
+msgstr "أسفل المحتوى"
+
+msgid "Header Background Color"
+msgstr "لون خلفية الهيدر"
+
+msgid "Post meta Color"
+msgstr "لون معلومات المقال"
+
+msgid "Links color"
+msgstr "لون الروابط"
+
+msgid "Footer color"
+msgstr "لون الفوتر"
+
+msgid "Underline text links on hover"
+msgstr "إضهار خط تحت الروابط عند مرور الفأرة"
+
+#, php-format
+msgid "You need to install the %s Plugin first."
+msgstr "أنت بحاجة إلى تركيب إضافة %s أولاً."
+
+msgid "Archives Settings"
+msgstr "إعدادات صفحات الأرشيف"
+
+msgid "Global Archives Settings"
+msgstr "إعدادات صفحات الأرشيف العامة"
+
+msgid "Disable Author name meta"
+msgstr "تعطيل اسم الكاتب"
+
+msgid "Disable Comments number meta"
+msgstr "تعطيل عدد التعليقات"
+
+msgid "Disable Views Number meta"
+msgstr "تعطيل عدد الزيارات"
+
+msgid "Default Layout Settings"
+msgstr "إعدادات النمط الإفتراضي"
+
+msgid "Category Page Settings"
+msgstr "اعدادات صفحة التصنيفات"
+
+msgid "Category Description"
+msgstr "وصف التصنيفات"
+
+msgid "Tag Page Settings"
+msgstr "اعدادات صفحة الوسوم"
+
+msgid "Tag Description"
+msgstr "وصف الوسوم"
+
+msgid "Author Page Settings"
+msgstr "اعدادات صفحة الكاتب"
+
+msgid "Author Bio"
+msgstr "نبذة عن الكاتب"
+
+msgid "Search Page Settings"
+msgstr "اعدادات صفحة البحث"
+
+msgid "Search in Category IDs"
+msgstr "البحث في الأرقام التعريفية للتصنيفات"
+
+msgid "Use minus sign (-) to exclude categories. Example: (1,4,-7) = search only in Category 1 & 4, and exclude Category 7."
+msgstr "استخدم علامة (-) لاستبعاد التصنيفات. مثال: (1,4,-7) = البحث فقط في تصنيف 1 و 4 و استبعاد 7."
+
+msgid "Exclude post types from search"
+msgstr "إستبعاد أنواع محتوى من البحث"
+
+msgid "Background (in case Boxed / Framed / Bordered layout is enabled)"
+msgstr "الخلفية ( في حالة إستخدام مخطط المربع / المحدد / البرواز )"
+
+msgid "Export/Import Theme Options"
+msgstr "تصدير/استيراد اعدادات القالب"
+
+msgid "The theme options have been imported successfully."
+msgstr "تم إستيراد إعدادات القالب بنجاح."
+
+msgid "Export"
+msgstr "تصدير"
+
+msgid "When you click the button below the theme will create a .dat file for you to save to your computer."
+msgstr "عند الضغط على الزر بالأسفل سيقوم القالب بإنشاء ملف .dat لتتمكن من حفظة على جهازك."
+
+msgid "Once you’ve saved the download file, you can use the Import function in another WordPress installation to import the theme options from this site."
+msgstr "بمجرد حفظ الملف يمكنك إستخدام خيار الإستيراد في مدونة ووردبريس أخرى لتقوم بإستيراد إعدادات القالب."
+
+msgid "Download Export File"
+msgstr "تحميل الملف"
+
+msgid "Import"
+msgstr "استيراد"
+
+msgid "Upload your .dat theme options file and we will import the options into this site."
+msgstr "قم برفع ملف .dat الخاص بإعدادات القالب."
+
+msgid "Choose a (.dat) file to upload, then click Upload file and import."
+msgstr "إختر ملف (.dat) ثم إضغط رفع ثم إستيراد."
+
+msgid "Choose a file from your computer:"
+msgstr "إختر ملف:"
+
+msgid "Upload file and import"
+msgstr "رفع الملف ثم الإستيراد"
+
+msgid "bbPress Sidebar"
+msgstr "العمود الجانبي لbbPress"
+
+msgid "Blocks Settings"
+msgstr "إعدادات البلوكات"
+
+msgid "Block Style"
+msgstr "نمط البلوك"
+
+msgid "Clean"
+msgstr "نظيف"
+
+msgid "Block Head Style"
+msgstr "نمط عناوين البلوكات"
+
+msgid "Style"
+msgstr "المخطط"
+
+msgid "Blocks Meta Settings"
+msgstr "إعدادات معلومات المقالات في البلوكات"
+
+msgid "Use the BuddyPress Member Profile link"
+msgstr "إستخدام رابط ملف العضو في BuddyPress"
+
+msgid "Use the BuddyPress Member Profile link instead of the default author page link in the post meta, author box and the login sections."
+msgstr "إستخدم رابط صفحة العضو في BuddyPress بدلاً من رابط صفحة الشخصية الإفتراضية لووردبريس."
+
+msgid "Advertisement Settings"
+msgstr "إعدادات الإعلانات"
+
+msgid "It is recommended to avoid using words like ad, ads, adv, advert, advertisement, banner, banners, sponsor, 300x250, 728x90, etc. in the image names or image path to avoid AdBlocks from blocking your Ad."
+msgstr "يٌنصح بعدم إستخدام الكلمات التالية في اسم او مسار الصورة لتجنب تعطيلها من قبل اضافات AdBlocks :  ad, ads, adv, advert, advertisement, banner, banners, sponsor, 300x250, 728x90."
+
+msgid "Ad Blocker Detector"
+msgstr "حاجب الإعلانات"
+
+msgid "Block the adblockers from browsing the site, till they turnoff the Ad Blocker"
+msgstr "منع الزوار مستخدمي اضافات حجب الإعلانات من تصفح الموقع"
+
+msgid "Background Image Ad"
+msgstr "إعلان الخلفية"
+
+msgid "Full Page Takeover"
+msgstr "آعلان خلفية الموقع"
+
+msgid "Site margin top"
+msgstr "الهامش العلوي للموقع"
+
+msgid "Above Header Ad"
+msgstr "إعلان أعلى الهيدر"
+
+msgid "Header Ad"
+msgstr "إعلان الهيدر"
+
+msgid "Above Footer Ad"
+msgstr "اعلان أعلى الفوتر"
+
+msgid "Below the Header Ad"
+msgstr "اعلان اسفل الهيدر"
+
+msgid "Above Article Ad"
+msgstr "اعلان أعلى المقال"
+
+msgid "Above Article Content Ad"
+msgstr "‫اعلان أعلى محتوى المقال"
+
+msgid "Below Article Content Ad"
+msgstr "اعلان اسفل محتوى المقال"
+
+msgid "Below Article Ad"
+msgstr "اعلان اسفل المقال"
+
+#, php-format
+msgid "Between Posts in Archives #%s"
+msgstr "بين المقالات في صفحات الأرشيف #%s"
+
+#, php-format
+msgid "Article inline ad #%s"
+msgstr "إعلان داخل محتوى المقال #%s"
+
+msgid "Number of posts before the Ad"
+msgstr "عدد المقالات المراد إظهارها قبل الاعلان"
+
+msgid "Number of paragraphs before the Ad"
+msgstr "عدد الفقرات قبل الإعلان"
+
+msgid "Ad Alignment"
+msgstr "محاذاة الإعلان"
+
+msgid "Ad Title"
+msgstr "عنوان الاعلان"
+
+msgid "A title for the Ad, like Advertisement - leave this empty to disable."
+msgstr "عنوان للإعلان - اتركه فارغاً لتعطيله."
+
+msgid "Ad Title Link"
+msgstr "عنوان الاعلان"
+
+msgid "AdRotate"
+msgstr "AdRotate"
+
+msgid "Type"
+msgstr "النوع"
+
+msgid "Advert - Use Advert ID"
+msgstr "Advert - Use Advert ID"
+
+msgid "Group - Use group ID"
+msgstr "Group - Use group ID"
+
+msgid "ID"
+msgstr "الرقم التعريفي"
+
+msgid "Shortcodes Ads"
+msgstr "إعلانات الأكواد المختصرة"
+
+msgid "Ad Shortcode"
+msgstr "كود مختصر للإعلانات"
+
+msgid "Instagram Footer Area"
+msgstr "منطقة إنستجرام أعلى الفوتر"
+
+msgid "Username"
+msgstr "إسم المستخدم"
+
+msgid "Media Source"
+msgstr "مصدر الصور"
+
+msgid "User Account"
+msgstr "حساب ستخدم"
+
+msgid "Hash Tag"
+msgstr "‎وسم (هاشتاج)"
+
+msgid "Enter the Username or the Hash Tag"
+msgstr "أدخل اسم المستخدم أو الوسم (هاشتاج)"
+
+msgid "Number of Rows"
+msgstr "عدد الصفوف"
+
+msgid "One Row"
+msgstr "صف واحد"
+
+msgid "Two Rows"
+msgstr "صفين"
+
+msgid "Link Images to"
+msgstr "رابط الصور"
+
+msgid "Link Media to"
+msgstr "الرابط"
+
+msgid "Media File"
+msgstr "ملف الصورة"
+
+msgid "Media Page on Instagram"
+msgstr "صفحة الصورة على إنستجرام"
+
+msgid "Follow Us Button"
+msgstr "زر تابعنا"
+
+msgid "Follow Us Button Text"
+msgstr "نص الزر"
+
+msgid "Follow Us Button URL"
+msgstr "رابط الزر"
+
+msgid "Footer Widgets layout"
+msgstr "نظام عرض المربعات الجانبية للفوتر"
+
+msgid "First Footer Widgets Area"
+msgstr "مساحة المربعات الجانبية الأولى في الفوتر"
+
+msgid "Add border around the widgets area"
+msgstr "أضف إطار حول الودجات"
+
+msgid "Second Footer Widgets Area"
+msgstr "مساحة المربعات الجانبية الثانية في الفوتر"
+
+msgid "Copyright Area"
+msgstr "منطقة نص الحقوق"
+
+msgid "Centered Layout"
+msgstr "محازاة العناصر بالمنتصف"
+
+msgid "Social Icons"
+msgstr "الشبكات الإجتماعية"
+
+msgid "Footer Text One"
+msgstr "نص الفوتر 1"
+
+msgid "Footer Text Two"
+msgstr "نص الفوتر 2"
+
+msgid "General Settings"
+msgstr "الإعدادات العامة"
+
+msgid "Date Settings"
+msgstr "إعدادات التاريخ"
+
+msgid "Date format for blog posts"
+msgstr "نمط الوقت للمقالات"
+
+msgid "Traditional"
+msgstr "عادي"
+
+msgid "Time Ago Format"
+msgstr "منذ / مضت"
+
+msgid "Disable all"
+msgstr "تعطيل"
+
+msgid "Show the date depending on"
+msgstr "طريقة عرض التاريخ"
+
+msgid "Post Published Date"
+msgstr "تاريخ نشر المقال"
+
+msgid "Post Modified Date"
+msgstr "تاريخ تحديث المقال"
+
+msgid "Breadcrumbs Settings"
+msgstr "إعدادت شريط التصفح"
+
+msgid "Breadcrumbs"
+msgstr "تفعيل شريط التصفح"
+
+msgid "Breadcrumbs Delimiter"
+msgstr "الفاصل"
+
+msgid "Trim Text Settings"
+msgstr "قص النص المقتطف"
+
+msgid "Trim text by"
+msgstr "قص النص المقتطف بواسطة"
+
+msgid "Words"
+msgstr "كلمات"
+
+msgid "Characters"
+msgstr "حروف"
+
+msgid "Post format icon on hover"
+msgstr "عرض أيقونة نمط المقال عند مرور الماوس"
+
+msgid "Show the post format icon on hover?"
+msgstr "‫عرض أيقونة نمط المقال عند مرور الماوس؟"
+
+msgid "Custom Codes"
+msgstr "أكواد خاصة"
+
+msgid "Header Code"
+msgstr "كود الهيدر"
+
+msgid "Will add to the &lt;head&gt; tag. Useful if you need to add additional codes such as CSS or JS."
+msgstr "الكود التالي سيتم إضافته لوسم &lt;head&gt; . يصلح لإضافة أي أكواد CSS او JS إضافية."
+
+msgid "Footer Code"
+msgstr "كود الفوتر"
+
+msgid "Will add to the footer before the closing  &lt;/body&gt; tag. Useful if you need to add Javascript."
+msgstr "سيتم إضافة الكود في نهاية الفوتر قبل اغلاق &lt;/body&gt;. مفيد إذا كنت تحتاج لإستخدام أكواد جافا سكريبت."
+
+msgid "Header Settings"
+msgstr "إعدادات الهيدر"
+
+msgid "Header Layout"
+msgstr "مخطط الهيدر"
+
+msgid "Main Nav Settings"
+msgstr "اعدادات القائمة الرئيسية"
+
+msgid "Secondry Nav Settings"
+msgstr "إعدادات الشريط العلوي"
+
+msgid "Boxed Layout"
+msgstr "مخطط المربع"
+
+msgid "Below The Header"
+msgstr "أسفل الهيدر"
+
+msgid "Today's date"
+msgstr "تاريخ اليوم"
+
+msgid "Today's date format"
+msgstr "صيغة تاريخ اليوم"
+
+msgid "Documentation on date and time formatting"
+msgstr "مساعده حول كيفية تنسيق الوقت والتاريخ"
+
+msgid "Left Area"
+msgstr "المساحة اليمين"
+
+msgid "Menu"
+msgstr "القائمة"
+
+msgid "Breaking News"
+msgstr "أخبار عاجلة"
+
+msgid "Right Area"
+msgstr "المساحة اليسار"
+
+msgid "Secondry Nav Components"
+msgstr "عناصر الشريط العلوي"
+
+msgid "Title"
+msgstr "العنوان"
+
+msgid "Trending"
+msgstr "أخر الأخبار"
+
+msgid "Enter a tag name, or names separated by comma."
+msgstr "ادخل اسم وسم أو اسماء متعدده بينهم فاصله (,)"
+
+msgid "Text and Link are required."
+msgstr "مطلوب إدخال النص والرابط."
+
+msgid "Above The Header"
+msgstr "أعلى الهيدر"
+
+msgid "Main Nav Components"
+msgstr "عناصر القائمة الرئيسية"
+
+msgid "Sticky Menu"
+msgstr "تثبيت القائمة"
+
+msgid "Sticky Menu behavior"
+msgstr "نوع القائمة المثبتة"
+
+msgid "When scrolling upwards"
+msgstr "ظهور القائمة في حالة العودة للأعلى"
+
+msgid "Sticky Menu Logo"
+msgstr "لوجو القائمة الثابتة"
+
+msgid "Custom Sticky Menu Logo"
+msgstr "رفع لوجو خاص"
+
+msgid "Use this option to set a custom logo in the sticky menu or Disable it to use the main logo."
+msgstr "إستخدم هذا الخيار لتعيين لوجو خاص في القائمة الثابتة أو قم بتعطيلة لتستخدم اللوجو الأساسي."
+
+msgid "Live Search"
+msgstr "بحث أجاكس"
+
+msgid "Search Layout"
+msgstr "نمط البحث"
+
+msgid "Compact"
+msgstr "مُصغر"
+
+msgid "Type To Search"
+msgstr "فتح مربع البحث عند الضغط على اي زر في الكيبورد"
+
+msgid "Slide Sidebar"
+msgstr "السيدبار المخفي"
+
+msgid "Log In"
+msgstr "تسجيل الدخول"
+
+msgid "Random Article Button"
+msgstr "تفعيل أيقونة مقال عشوائي"
+
+msgid "Shopping Cart"
+msgstr "عربة التسوق"
+
+msgid "BuddyPress Notifications"
+msgstr "تنبيهات BuddyPress"
+
+msgid "Social icons layout"
+msgstr "الشبكات الإجتماعية"
+
+msgid "Menu with names"
+msgstr "القائمة بالأسماء"
+
+msgid "Grid Menu"
+msgstr "قائمة بمخطط شبكي"
+
+msgid "Weather"
+msgstr "الطقس"
+
+msgid "Location"
+msgstr "الموقع الجغرافي"
+
+msgid "(i.e: London,UK or New York City)"
+msgstr "(مثال: Alexandria, EG أو Riyadh, SA)"
+
+msgid "Custom City Name"
+msgstr "اسم خاص للمدينة"
+
+msgid "API Key"
+msgstr "مفتاح API"
+
+msgid "How to get your API Key?"
+msgstr "طريقة الحصول على API Key؟"
+
+msgid "Units"
+msgstr "الوحدة"
+
+msgid "Animated Icons?"
+msgstr "أيقونات متحركة؟"
+
+msgid "Site Width"
+msgstr "عرض الموقع"
+
+msgid "Controls the overall site width. In px or %, ex: 100% or 1170px."
+msgstr "تحديد عرض الموقع. مثال: 100% أو 1170px."
+
+msgid "Theme Layout"
+msgstr "نظام القالب"
+
+msgid "Loader Icon"
+msgstr "أيقونة التحميل"
+
+msgid "Lightbox Settings"
+msgstr "إعدادات Lightbox"
+
+msgid "Enable Lightbox Automatically"
+msgstr "تفعيل Lightbox تلقائيًا"
+
+msgid "Enable Lightbox automatically for all images linked to an image file in the post content area"
+msgstr "تفعيل Lightbox تلقائيًا لكل الصور المرتبطه بملف صورة في منطقة محتوى المقال"
+
+msgid "Lightbox for Galleries"
+msgstr "‏Lightbox للمعارض الصور المضافة داخل المحتوى"
+
+msgid "Enable Lightbox automatically for all images added via [gallery] shortcode in the content area"
+msgstr "تفعيل الLightbox تلقائيًا لكل الصور المضافة عن طريق الكود المختصر [gallery] في منطقة محتوى المقال"
+
+msgid "Lightbox Skin"
+msgstr "نمط Lightbox"
+
+msgid "Lightbox Thumbnail Position"
+msgstr "موضع المصغرات"
+
+msgid "Vertical"
+msgstr "عمودي"
+
+msgid "Horizontal"
+msgstr "أفقي"
+
+msgid "Show Lightbox Arrows"
+msgstr "عرض أسهم الإنتقال"
+
+msgid "Favicon"
+msgstr "‫Favicon الموقع"
+
+msgid "Click here to set a Site Icon (favicon)"
+msgstr "إضغط هنا لتعيين أيقونة Favicon للموقع"
+
+msgid "Mobile Settings"
+msgstr "إعدادات الجوال"
+
+msgid "Disable the Responsiveness"
+msgstr "تعطيل خصائص القالب التجاوبية"
+
+msgid "This option works only on Tablets and Phones."
+msgstr "هذا الخيار يعمل فقط على الجوالات و الأجهزة اللوحية."
+
+msgid "Mobile Header"
+msgstr "منطقة الهيدر في الجوال"
+
+msgid "Sticky Header"
+msgstr "تثبيت الهيدر"
+
+msgid "Mobile Menu"
+msgstr "قائمة الجوال"
+
+msgid "Mobile Menu Layout"
+msgstr "نمط قائمة الجوال"
+
+msgid "Show menu text beside the icon"
+msgstr "إظهار كلمة القائمة بجانب الأيقونة"
+
+msgid "Parent items as links"
+msgstr "تفعيل العناصر الرئيسية كروابط"
+
+msgid "If disabled, parent menu items will only toggle child items."
+msgstr "في حالة تعطيلها، عند الضغط على العناصر الرئيسية ستقوم بإظهار العناصر الفرعية."
+
+msgid "Include the Top Menu items"
+msgstr "إظاهر عناصر القائمة العلوية"
+
+msgid "Show the icons"
+msgstr "تفعيل الأيقونات في قائمة الجوال"
+
+msgid "Main Nav Menu"
+msgstr "القائمة الرئيسية"
+
+msgid "Main Nav and Secondary Nav Menus"
+msgstr "قوائم المنيو الرئيسية و الفرعية"
+
+msgid "Compact the post content and show more button"
+msgstr "إختصار محتوى المقال و إظهار زر اظهر المزيد"
+
+msgid "Mobile Elements"
+msgstr "العناصر على الجوال"
+
+msgid "Hide Above header Ad"
+msgstr "إخفاء الإعلان أعلى الهيدر"
+
+msgid "Hide header Ad"
+msgstr "إخفاء إعلان الهيدر"
+
+msgid "Hide Below the header Ad"
+msgstr "إخفاء الاعلان اسفل الهيدر"
+
+msgid "Hide above the footer Ad"
+msgstr "إخفاء الاعلان أعلى الفوتر"
+
+msgid "Hide Header Breaking News"
+msgstr "إخفاء الأخبار العاجلة في الهيدر"
+
+msgid "Hide all sidebars"
+msgstr "إخفاء كل الأعمدة الجانبية"
+
+msgid "Hide Instagram Media Above Footer"
+msgstr "إخفاء انستجرام أعلى الفوتر"
+
+msgid "Hide copyright area"
+msgstr "إخفاء منطقة نص الحقوق"
+
+msgid "Hide Breadcrumbs"
+msgstr "إخفاء شريط التصفح"
+
+msgid "Hide Above Post share Buttons"
+msgstr "إخفاء أزرار المشاركة أعلى نص المقال"
+
+msgid "Hide Below Post share Buttons"
+msgstr "إخفاء أزرار المشاركة أسفل نص المقال"
+
+msgid "Hide Below Post Newsletter"
+msgstr "إخفاء القائمة البريدية أسفل نص المقال"
+
+msgid "Hide Below Post Read Next"
+msgstr "‫إخفاء ‫سلايدر إقرأ بعد ذلك أسفل المقال"
+
+msgid "Hide Below Post Related posts"
+msgstr "إخفاء المقالات ذات الصلة"
+
+msgid "Hide Below Post Author Box"
+msgstr "اخفاء مربع كاتب المقال"
+
+msgid "Hide Below Post Next/Prev posts"
+msgstr "إخفاء المقال السابق و التالي"
+
+msgid "Hide Back to top button"
+msgstr "إخفاء زر الذهاب إلى الأعلى"
+
+msgid "Sticky Mobile Share Buttons"
+msgstr "تفعيل أزرار المشاركة الثابتة على الجوال"
+
+msgid "Post Views Settings"
+msgstr "إعدادات عداد زوار المقالات"
+
+msgid "Post Views Source"
+msgstr "مصدر تعداد مرات الزيارة"
+
+msgid "Theme's module"
+msgstr "خاصية عداد الزوار الخاصة بالقالب"
+
+msgid "Jetpack plugin by Automattic"
+msgstr "إضافة Jetpack بواسطة Automattic"
+
+msgid "Third party post views plugin"
+msgstr "إضافة عداد زوار لووردبريس"
+
+msgid "Post meta field"
+msgstr "إسم خانة Post meta"
+
+msgid "Chnage this if you have used a post views plugin before."
+msgstr "قم بتغيير هذا الخيار إذا كنت تستخدم إضافة لعداد الزوار قبل ذلك."
+
+msgid "Starter Post Views number"
+msgstr "بداية تعداد الزيارات"
+
+msgid "This will applied on the new Posts only."
+msgstr "سيتم تطبيق هذا الخيار على المقالات الجديدة فقط."
+
+msgid "Colored Post Views Numbers"
+msgstr "عدد الزيارات الملونة"
+
+#, php-format
+msgid "%s Min. Views Number"
+msgstr "‫%s : الحد الأدنى لعدد الزيارات"
+
+msgid "WARM"
+msgstr "دافئ"
+
+msgid "HOT"
+msgstr "ساخن"
+
+msgid "VERY HOT"
+msgstr "ساخن جداً"
+
+msgid "Single Post Page Settings"
+msgstr "إعدادات صفحة المقال"
+
+msgid "Default Posts Layout"
+msgstr "النمط الإفتراضي للمقالات"
+
+msgid "Default Schema type"
+msgstr "نوع Schema الإفتراضي"
+
+msgid "Video Post Format:"
+msgstr "نمط المقال فيديو:"
+
+msgid "Sticky the Featured Video"
+msgstr "تثبيت الفيديو عند التمرير"
+
+msgid "Open Graph meta"
+msgstr "أكواد Open Graph"
+
+msgid "Default Open Graph Image"
+msgstr "الصورة الإفتراضية Open Graph"
+
+msgid "Reading Position Indicator"
+msgstr "مؤشر التقدم في القراءة"
+
+msgid "Post Author Box"
+msgstr "تفعيل عن الكاتب"
+
+msgid "In Post Responsive Tables"
+msgstr "تفعيل الجدوال المتجاوبة في المقالات"
+
+msgid "Disable this option if you use a custom responsive tables plugin."
+msgstr "فم بتعطيل هذا الخيار إذا كنت تستخدم إضافة خاصة للجدوال."
+
+msgid "Post info Settings"
+msgstr "اعدادات معلومات المقالات"
+
+msgid "Post meta area"
+msgstr "مساحة معلومات المقال"
+
+msgid "Author"
+msgstr "الكاتب"
+
+msgid "Author's Avatar"
+msgstr "صورة للكاتب"
+
+msgid "Twitter Icon"
+msgstr "أيقونة تويتر"
+
+msgid "Email Icon"
+msgstr "أيقونة البريد الالكتروني"
+
+msgid "Date"
+msgstr "التاريخ"
+
+msgid "Comments"
+msgstr "تعليقات"
+
+msgid "Views"
+msgstr "زيارة"
+
+msgid "Estimated reading time"
+msgstr "الوقت المٌقدر للقراءة"
+
+msgid "Text above the Email input field"
+msgstr "النص فوق خانة ادخال البريد الالكتروني"
+
+msgid "MailChimp Form Action URL"
+msgstr "رابط MailChimp Form Action"
+
+msgid "Feedburner ID"
+msgstr "الرقم التعريفي لـFeedburner"
+
+msgid "Related Posts Position"
+msgstr "مكان المقالات ذات الصلة"
+
+msgid "Below The Post"
+msgstr "أسفل المقال"
+
+msgid "Below The Comments"
+msgstr "أسفل التعليقات"
+
+msgid "Above The Footer"
+msgstr "أعلى الفوتر"
+
+msgid "Number of posts to show in Full width pages"
+msgstr "عدد المقالات المراد إظهارها في الصفحات ذات العرض الكامل"
+
+msgid "Posts in the same Categories"
+msgstr "مقالات في نفس التصنيفات"
+
+msgid "Posts in the same Tags"
+msgstr "مقالات بنفس الوسوم"
+
+msgid "Posts by the same Author"
+msgstr "مقالات لنفس الكاتب"
+
+msgid "Read Next Slider"
+msgstr "سلايدر إقرأ بعد ذلك"
+
+msgid "Read Next Style"
+msgstr "ستايل سلايدر إقرأ بعد ذلك"
+
+msgid "Check Also"
+msgstr "شاهد أيضاً"
+
+msgid "Check Also Box Position"
+msgstr "مكان صندوق شاهد أيضًا"
+
+msgid "Share Settings"
+msgstr "خيارات المشاركة"
+
+msgid "Share Buttons for Pages"
+msgstr "تفعيل أزرار المشاركة للصفحات"
+
+msgid "Use the post's Short Link"
+msgstr "استخدم الرابط المختصر للمقال"
+
+msgid "Twitter Username"
+msgstr "إسم مستخم حساب تويتر"
+
+msgid "Center the buttons"
+msgstr "توسيط الأزرار"
+
+msgid "Show the share title"
+msgstr "أظهر عنوان مساحة المشاركة"
+
+#, php-format
+msgid "You can change the \"%s\" text from the Translation tab."
+msgstr "يمكنك تغير \"%s\" من إعدادات الترجمة."
+
+msgid "Share"
+msgstr "شاركها"
+
+msgid "Share Buttons Style"
+msgstr "نمط أزرار المشاركة"
+
+msgid "Select and Share"
+msgstr "اظهار ايقونات المشاركة عند تحديد نص"
+
+msgid "When you double-click a word or highlight a few words, a small share icons are displayed. When you click an icon, a share modal will automatically launch, containing the text you selected along with a link to the post."
+msgstr "عندما تقوم بتحديد نص في محتوى المقال ستظهر أيقونات مشاركة هذا النص على الشبكات الإجتماعية مع رابط للمقال."
+
+msgid "Sidebars Settings"
+msgstr "إعدادات القائمة الجانبية"
+
+msgid "Widgets icon"
+msgstr "أيقونات المربعات الجانبية"
+
+msgid "Default Sidebar Position"
+msgstr "المكان الإفتراضي للعمود الجانبي"
+
+msgid "Add Custom Sidebar"
+msgstr "عمود جانبي مخصص"
+
+msgid "Sidebar Name"
+msgstr "اسم العمود الجانبي"
+
+msgid "Please add a name for the sidebar."
+msgstr "من فضلك أضف إسم للقائمة الجانبية."
+
+msgid "Custom Sidebars"
+msgstr "أعمدة جانبية خاصة"
+
+msgid "Home Sidebar"
+msgstr "العمود الجانبي للصفحة الرئيسية"
+
+msgid "Single Page Sidebar"
+msgstr "العمود الجانبيى لصفحة منفردة"
+
+msgid "Single Article Sidebar"
+msgstr "العمود الجانبي لمقال منفرد"
+
+msgid "Archives Sidebar"
+msgstr "العمود الجانبي للأرشيف"
+
+msgid "RSS"
+msgstr "ملخص الموقع RSS"
+
+msgid "Custom Social Network"
+msgstr "أضف شبكات إجتماعية خاصة"
+
+msgid "Icon"
+msgstr "أيقونة"
+
+msgid "Use the full Font Awesome icon name"
+msgstr "إستخدم الإسم الكامل لأيقونة Font Awesome"
+
+msgid "URL"
+msgstr "الرابط"
+
+msgid "Lazy Load For Images"
+msgstr "خاصية LazyLoad لتحميل الصور"
+
+msgid "Apply custom styling by inline code"
+msgstr "أضف أكواد المظهر في مصدر الصفحات مباشرة"
+
+msgid "check this option if you have problems with styling because of styling file rewrite permissions."
+msgstr "فعل هذا الخيار إذا واجهت مشاكل في تطبيق إعدادات المظهر نتيجة لمشاكل في تصاريح الملفات و المجلدات على السيرفر."
+
+msgid "Custom Body Classes"
+msgstr "CSS Classes لمنطقة Body"
+
+msgid "Predefined skins"
+msgstr "أنماط"
+
+msgid "Choose a Skin"
+msgstr "إختر نمط الوضع"
+
+msgid "Blue"
+msgstr "أزرق"
+
+msgid "Yellow"
+msgstr "أصفر"
+
+msgid "Alizarin"
+msgstr "الأليزارين"
+
+msgid "Sand"
+msgstr "رمال"
+
+msgid "Royal"
+msgstr "ملكي"
+
+msgid "Mint"
+msgstr "نعناع"
+
+msgid "Stylish Red"
+msgstr "أحمر أنيق"
+
+msgid "Twilight"
+msgstr "الشفق"
+
+msgid "Coffee"
+msgstr "قهوة"
+
+msgid "Ocean"
+msgstr "محيط"
+
+msgid "Cyan"
+msgstr "سماوي"
+
+msgid "Sahifa"
+msgstr "صحيفة"
+
+msgid "Mist"
+msgstr "ضباب"
+
+msgid "Serene"
+msgstr "هادئ"
+
+msgid "Fall"
+msgstr "خريف"
+
+msgid "Custom Primary Color"
+msgstr "لون رئيسي خاص"
+
+msgid "Body"
+msgstr "عنصر الـBody"
+
+msgid "Disable Boxed/Framed Layout Shadows"
+msgstr "تعطيل ظلال الصفحة في مخطط المربع / المحدد"
+
+msgid "Highlighted Text Color"
+msgstr "لون النص عند اختياره بالفأرة"
+
+msgid "Links Text Color"
+msgstr "لون الروابط"
+
+msgid "Links text HOVER color"
+msgstr "لون الروابط عند المرور بمؤشر الفأرة"
+
+msgid "Borders Color"
+msgstr "لون الإطارات و الفواصل"
+
+msgid "Secondary Nav"
+msgstr "القائمة الثانوية"
+
+msgid "Text Color"
+msgstr "لون النص"
+
+msgid "Links Color"
+msgstr "لون الروابط"
+
+msgid "Links Color on mouse over"
+msgstr "لون الروابط عند المرور بمؤشر الفأرة"
+
+msgid "Breaking news label background"
+msgstr "خلفية عنوان الأخبار العاجلة"
+
+msgid "Rainbow Line Above Header"
+msgstr "عرض شريط قوس قزح أعلى الموقع"
+
+msgid "Disable Header Shadows"
+msgstr "تعطيل ظل الهيدر"
+
+msgid "Main Navigation Styling"
+msgstr "شكل القائمة الرئيسية"
+
+msgid "Main Nav Border Top Color"
+msgstr "لون الإطار العلوي للقائمة الرئيسية"
+
+msgid "Main Nav Border Top Width"
+msgstr "‫سٌمك الإطار العلوي للقائمة الرئيسية"
+
+msgid "Main Nav Border Bottom Color"
+msgstr "‫لون الإطار السفلي للقائمة الرئيسية"
+
+msgid "Main Nav Border Bottom Width"
+msgstr "‫‫سٌمك الإطار السفلي للقائمة الرئيسة"
+
+msgid "Main Content Styling"
+msgstr "مظهر المحتوى الرئيسي"
+
+msgid "In Post Links Color"
+msgstr "لون الروابط في المقال"
+
+msgid "In Post Links Color on mouse over"
+msgstr "لون الروابط في المقال عند المرور بمؤشر الفأرة"
+
+msgid "Footer Border Top"
+msgstr "عرض الشريط أعلى الفوتر"
+
+msgid "Widgets Title color"
+msgstr "لون عناوين الويدجت"
+
+msgid "Footer Margin Top"
+msgstr "الهامش العلوي للفوتر"
+
+msgid "Footer Padding Top"
+msgstr "‫الحاشية العلوية للفوتر"
+
+msgid "Footer Padding Bottom"
+msgstr "‫‫الحاشية السفلية للفوتر"
+
+msgid "Back to top button Background Color"
+msgstr "لون خلفية زر الذهاب إلى الأعلى"
+
+msgid "Back to top button Arrow Color"
+msgstr "لون السهم في زر الذهاب إلى الأعلى"
+
+msgid "Mobile Menu Icon"
+msgstr "أيقونة قائمة الجوال"
+
+msgid "links color"
+msgstr "لون الروابط"
+
+msgid "Social Icons color"
+msgstr "لون أيقونات الشبكات الإجتماعية"
+
+msgid "Search Button color"
+msgstr "لون زر البحث"
+
+msgid "Mobile Menu Background"
+msgstr "خلفية قائمة الجوال"
+
+msgid "Gradient"
+msgstr "تدريج"
+
+msgid "Background Gradient Color 1"
+msgstr "لون الخلفية الأول"
+
+msgid "Background Gradient Color 2"
+msgstr "لون الخلفية الثاني"
+
+msgid "Tablets"
+msgstr "الأجهزة اللوحية"
+
+msgid "768px - 1024px"
+msgstr "768px - 1024px"
+
+msgid "Phones"
+msgstr "الجوالات"
+
+msgid "0 - 768px"
+msgstr "0 - 768px"
+
+msgid "Translations Settings"
+msgstr "إعدادات الترجمة"
+
+msgid "Typography Settings"
+msgstr "خصائص الخطوط"
+
+msgid "Body Font Family"
+msgstr "شكل خط الـBody"
+
+msgid "Headings Font Family"
+msgstr "شكل خط العناوين"
+
+msgid "Primary menu Font Family"
+msgstr "شكل خط القائمة الرئيسية"
+
+msgid "Blockquote Font Family"
+msgstr "شكل خط الإقتباسات"
+
+msgid "Theme Defaults"
+msgstr "إعدادات القالب الإفتراضية"
+
+msgid "Standard Fonts"
+msgstr "الخطوط الإفتراضية"
+
+msgid "Google Fonts"
+msgstr "خطوط Google"
+
+msgid "FontFace.me Fonts"
+msgstr "خطوط FontFace.me"
+
+msgid "Upload Custom Font"
+msgstr "تحميل خط مخصص"
+
+msgid "Any external fonts (e.g. Typekit)"
+msgstr "أي خط خارجي (مثل: Typekit )"
+
+msgid "Font Family"
+msgstr "شكل الخط"
+
+msgid "Choosing a lot of Variants may make your pages slow to load."
+msgstr "يرجى ملاحظة انه في حالة اختيار الكثير من الأنواع سيؤدي إلى بطئ في تحميل الصفحة."
+
+msgid "Font Variants"
+msgstr "أوزان الخط"
+
+msgid "Please, make sure that chosen font supports chosen weight."
+msgstr "من فضلك تأكد من أن الخط الذي قمت بإختيارة يدعم الحجم “font‪-‬weight” الذي اختارته."
+
+msgid "Thin 100 Italic"
+msgstr "رفيع 100 مائل"
+
+msgid "Extra 200 Light Italic"
+msgstr "خفيف جداً 200 مائل"
+
+msgid "Light 300 Italic"
+msgstr "خفيف 300 مائل"
+
+msgid "Regular 400 Italic"
+msgstr "عادي 400 مائل"
+
+msgid "Medium 500 Italic"
+msgstr "متوسط 500 مائل"
+
+msgid "Semi 600 Bold Italic"
+msgstr "شبه داكن 600 مائل"
+
+msgid "Bold 700 Italic"
+msgstr "داكن 700 مائل"
+
+msgid "Extra 800 Bold Italic"
+msgstr "داكن جداً 800 مائل"
+
+msgid "Black 900 Italic"
+msgstr "كثيف 900 مائل"
+
+msgid "Embed code for the &lt;head&gt; section"
+msgstr "كود مدمج لجزء الـ ‪&lt;‬head‪&gt;‬"
+
+msgid "Enter the value for 'font-family' attribute, also you can specify the stack of the fonts."
+msgstr "قم بتعيين إسم الخط 'font-family' يجب أن يكون بالانجليزية."
+
+#, php-format
+msgid "%s Font File"
+msgstr "%s ملف الخط"
+
+msgid "Google Web Font Character sets"
+msgstr "إختر ترميز خطوط Google"
+
+msgid "Choosing a lot of Character sets may make your pages slow to load."
+msgstr "يرجى ملاحظة انه في حالة اختيار الكثير من الأنواع سيؤدي إلى بطئ في تحميل الصفحة."
+
+msgid "Font Sizes, Weights and Line Heights"
+msgstr "حجم ووزن وإرتفاع الخطوط"
+
+msgid "Font Weight Tips:"
+msgstr "نصائح لحجم الخط:"
+
+msgid "- If you use a google font, make sure to load the font weight in 'Google Font Variants' field that corresponds to the one in parenthesis here."
+msgstr "إذا كنتَ تستخدم أحد خطوط جوجل، فتأكد من تحميل وزن الخط في حقل \"مغايرات خطوط جوجل\" والتابع للخط الموجود بين هلالين هنا."
+
+msgid "- Browser standard fonts in general support only 'Normal (400)' and 'Bold (700)' font weights."
+msgstr "- الخطوط الإفتراضية تدعم بشكل عام الأوزان عادي ٤٠٠ و داكن ٧٠٠."
+
+msgid "Header Site name"
+msgstr "اسم الموقع في الهيدر"
+
+msgid "Secondary Menu"
+msgstr "القائمة الثانوية"
+
+msgid "Secondary sub menus"
+msgstr "القوائم الفرعية في القائمة الثانوية"
+
+msgid "Main Navigation"
+msgstr "القائمة الرئيسية"
+
+msgid "Main Navigation sub menus"
+msgstr "القوائم الفرعية في القائمة الرئيسية"
+
+msgid "Breaking News Label"
+msgstr "عنوان أخبار عاجلة"
+
+msgid "Breaking News post titles"
+msgstr "عناوين المقالات في الأخبار العاجلة"
+
+msgid "Buttons"
+msgstr "الأزرار"
+
+msgid "Post Categories Label"
+msgstr "وسم الأقسام الملون"
+
+msgid "Single Post Title"
+msgstr "العنوان في صفحة عرض المقال"
+
+msgid "Archive Page Title"
+msgstr "عنوان صفحات الأرشيف"
+
+msgid "Post Titles in Homepage Sliders"
+msgstr "عناوين المقالات في السلايدرات"
+
+msgid "Medium Post Titles in Homepage Sliders"
+msgstr "عناوين المقالات المتوسطة في السلايدرات"
+
+msgid "Small Post Titles in Homepage Sliders"
+msgstr "عناوين المقالات الصغيرة في السلايدرات"
+
+msgid "Post Titles in Homepage Blocks"
+msgstr "عناوين المقالات في بلوكات الصفحة الرئيسية"
+
+msgid "Medium Post Titles in Homepage Blocks"
+msgstr "عناوين المقالات المتوسطة في بلوكات الصفحة الرئيسية"
+
+msgid "Small Post Titles in Homepage Blocks"
+msgstr "عناوين المقالات الصغيرة في بلوكات الصفحة الرئيسية"
+
+msgid "Single Post Page Content"
+msgstr "محتوى صفحة المقال"
+
+msgid "Blockquotes"
+msgstr "الاقتباسات"
+
+msgid "Blocks Titles"
+msgstr "عناوين المربعات"
+
+msgid "Widgets Titles"
+msgstr "عناوين المربعات الجانبية"
+
+msgid "Footer Widgets Titles"
+msgstr "عناوين المربعات الجانبية لمنطقة الفوتر"
+
+msgid "Post Heading:"
+msgstr "الترويسات:"
+
+msgid "Web Push notifications allow your users to opt-in to timely updates from your website. and allow you to effectively re-engage them with customized, engaging content whenever they are online, wherever they may be - even on their phones! It's easy to set up, and no technical skills are required."
+msgstr "خدمة تنبيهات الويب تسمح للمستخدم بالبقاء على إطلاع على جديد موقعك، مما يسمح بك بإعادة جذب المتصفحين إلى موقعك عن طريق اعلامهم بالمحتوى الجديد الذي تنشره بمجرد اتصالهم بالانترنيت، و هذا سواءا على الحواسيب أو على الهواتف المحمولة. و هذه الخدمة سهلة التثبيت و لا تحتاج إلى معرفة معمقة بالترجمة."
+
+msgid "Sign up for FREE"
+msgstr "قم بتجربته الآن مجاناً"
+
+msgid "FoxPush Setup"
+msgstr "إعداد FoxPush"
+
+msgid "One more step!"
+msgstr "خطوة واحدة!"
+
+msgid "Make sure you are logged into FoxPush."
+msgstr "قم بتسجيل الدخول إلى حسابك في FoxPush."
+
+msgid "From the navigation panel on the admin dashboard, click on Settings and then on API Keys."
+msgstr "من خلال قائمة التصفح في لوحة التحكم، إختر إعدادات ثم API Keys"
+
+msgid "Click on Generate New Key."
+msgstr "إضغط على زر Generate New Key."
+
+msgid "Choose your Domain Name. then click the Generate button."
+msgstr "إختر اسم النطاق ثم إضغط على زر Generate."
+
+msgid "Copy the Domain and the key and add them in the fields below."
+msgstr "قم بنسخ اسم النطاق و ال Key وقم بإضافتهم في الحقول بالأسفل."
+
+msgid "FoxPush Domain"
+msgstr "اسم نطاق حساب FoxPush"
+
+msgid "Statistics (Updated Hourly)"
+msgstr "إحصائيات (تُحدث كل ساعة)"
+
+msgid "Subscribers"
+msgstr "متابعون"
+
+msgid "Campaigns"
+msgstr "الحملات"
+
+msgid "Total Views"
+msgstr "عدد المشاهدات"
+
+msgid "Total Clicks"
+msgstr "عدد الضغطات"
+
+msgid "WooCommerce Settings"
+msgstr "إعدادات WooCommerce"
+
+msgid "Number of products per page"
+msgstr "عدد المنتجات في الصفحة"
+
+msgid "Number of the related products"
+msgstr "عدد المنتجات ذات الصلة"
+
+msgid "WooCommerce Sidebar Position"
+msgstr "مكان العمود الجانبي لووكوميرس"
+
+msgid "WooCommerce Product Page Sidebar Position"
+msgstr "مكان العمود الجانبي في صفحة المنتج لووكوميرس"
+
+msgid "No products found"
+msgstr "لم يتم العثور على أي منتجات"
+
+msgid "This Block requires the WooCoomerce plugin."
+msgstr "هذا البلوك يتطلب إضافة WooCommerce."
+
+msgid "Primary Sidebar"
+msgstr "القائمة الجانبية الرئيسية"
+
+msgid "Adblock Detected"
+msgstr "أنت تستخدم إضافة Adblock"
+
+msgid "Please consider supporting us by disabling your ad blocker"
+msgstr "برجاء دعمنا عن طريق تعطيل إضافة Adblock"
+
+msgid "No More Posts"
+msgstr "لا يوجد مزيد من المقالات"
+
+msgid "Nothing Found"
+msgstr "لم يتم العثور على نتائج"
+
+msgid "View all results"
+msgstr "عرض كل النتائج"
+
+#, php-format
+msgid "This section contains some shortcodes that requries the %2$s%1$s%3$s Plugin."
+msgstr "هذه المنطقة تحتوي على أكواد مختصرة shortcodes تتطلب تركيب إضافة %2$s%1$s%3$s."
+
+msgid "Read More &raquo;"
+msgstr "أكمل القراءة &raquo;"
+
+msgid "Web Notification Campaigns"
+msgstr "حملات ‏‫Web Notification"
+
+msgid "Send a Web Notification"
+msgstr "إرسال n‏‫Web Notificatio"
+
+msgid "Sent"
+msgstr "أُرسلت"
+
+msgid "Clicks"
+msgstr "الضغطات"
+
+msgid "You need to validated your license to use this feature."
+msgstr "أنت بحاجة لتفعيل القالب الخاص بك لتتمكن من فتح تذكرة دعم فني."
+
+msgid "You need to publish the post first."
+msgstr "أنت بحاجة إلى نشر المقال أولاً."
+
+msgid "Message"
+msgstr "الرسالة"
+
+msgid "Upload Icon"
+msgstr "رفع أيقونة"
+
+#, php-format
+msgid "Recommended size is %1spx x %2spx"
+msgstr "الحجم الذي ينصح به (على الأكثر): %1spx x %2spx"
+
+msgid "Send"
+msgstr "إرسال"
+
+msgid "Requried data Missing"
+msgstr "برجاء اكمال البيانات المطلوبة أولاً"
+
+msgid "Can not access the image from your server, send the Campaign from your account on FoxPush.com"
+msgstr "غير قادر على تحميل الصورة من السيرفر الخاص بك. يمكنك ارسال التنبيهات من خلال FoxPush.com مباشرة"
+
+msgid "Campaign has been sent"
+msgstr "تم إرسال الحملة بنجاح"
+
+msgid "Can not find the user!"
+msgstr "لم نستطع البحث عن المستخدم!"
+
+msgid "Can not connect to Instagram!"
+msgstr "لم نستطع الوصول إلى انستقرام!"
+
+msgid "Can not fetch the images!"
+msgstr "فشل في جلب الصور!"
+
+msgid "Something went wrong!"
+msgstr "حدث خطأ ما!"
+
+msgid "All"
+msgstr "الكل"
+
+msgid "Custom Settings:"
+msgstr "إعدادات خاصة:"
+
+msgid "(Only for Main Nav)"
+msgstr "(متاح للقائمة الرئيسية فقط)"
+
+msgid "Label Text"
+msgstr "نص الوسم"
+
+msgid "Label Background"
+msgstr "خلفية الوسم"
+
+msgid "Menu Icon"
+msgstr "الأيقونة"
+
+msgid "Show the icon only?"
+msgstr "عرض الأيقونة فقط؟"
+
+msgid "Enable The Mega Menu?"
+msgstr "تفعيل ميجا منيو؟"
+
+msgid "Posts - Vertical Sub-Categories Filter"
+msgstr "مقالات - فلتر رأسي للأقسام الفرعية"
+
+msgid "Posts - Horizontal Sub-Categories Filter"
+msgstr "مقالات - فلتر أفقي للأقسام الفرعية"
+
+msgid "Posts - 1st Post Highlighted"
+msgstr "مقالات - إبراز أول مقال"
+
+msgid "Mega Menu Columns"
+msgstr "أعمدة ميجا منيو"
+
+msgid "Number of Mega Menu Columns"
+msgstr "عدد الأعمدة"
+
+msgid "Hide Mega Menu headings?"
+msgstr "إخفاء عناوين الميجا منيو الرئيسية؟"
+
+msgid "Mega Menu Background Image"
+msgstr "صوره خلفية للـMega Menu"
+
+msgid "repeat"
+msgstr "تكرار"
+
+msgid "repeat-x"
+msgstr "تكرار-أفقي"
+
+msgid "repeat-y"
+msgstr "تكرار-رأسي"
+
+msgid "Padding Right"
+msgstr "ازاحه لليمين"
+
+msgid "Padding left"
+msgstr "ازاحه لليسار"
+
+msgid "Min Height"
+msgstr "أقل ارتفاع"
+
+#, php-format
+msgid "%s (Invalid)"
+msgstr "%s (غير صالح)"
+
+#, php-format
+msgid "%s (Pending)"
+msgstr "%s (قيد الانتظار)"
+
+msgid "sub item"
+msgstr "عنصر الفرعي"
+
+msgid "Move up"
+msgstr "تحريك لأعلى"
+
+msgid "Move down"
+msgstr "تحريك لأسفل"
+
+msgid "Edit Menu Item"
+msgstr "تحرير عنصر القائمة"
+
+msgid "Navigation Label"
+msgstr "اسم العنصر في القائمة"
+
+msgid "Title Attribute"
+msgstr "سمة العنوان"
+
+msgid "Open link in a new window/tab"
+msgstr "فتح الرابط في تبويب/نافذة جديدة"
+
+msgid "CSS Classes (optional)"
+msgstr "CSS Classes (اختياري)"
+
+msgid "Link Relationship (XFN)"
+msgstr "علاقة الرابط (XFN)"
+
+msgid "Description"
+msgstr "الوصف"
+
+msgid "The description will be displayed in the menu if the current theme supports it."
+msgstr "سوف يظهر الوصف في القائمة إذا كان القالب يدعم ذلك."
+
+msgid "Move"
+msgstr "حرك"
+
+msgid "Up one"
+msgstr "إلى الأعلى مرة"
+
+msgid "Down one"
+msgstr "إلى الأسفل مرة"
+
+msgid "To the top"
+msgstr "إلى الأعلى"
+
+#, php-format
+msgid "Original: %s"
+msgstr "أصلي: %s"
+
+msgid "Previous page"
+msgstr "الصفحة السابقة"
+
+msgid "Next page"
+msgstr "الصفحة التالية"
+
+msgid "First"
+msgstr "« الأولى"
+
+msgid "Last"
+msgstr "الأخيرة"
+
+msgid "&raquo;"
+msgstr "&raquo;"
+
+msgid "&laquo;"
+msgstr "&laquo;"
+
+msgid "You need to set the API key and Location."
+msgstr "أنت بحاجة إلى تعيين المدينة و API key."
+
+msgid "km/h"
+msgstr "كيلومتر/ساعة"
+
+msgid "mph"
+msgstr "ميل/ساعة"
+
+msgid "humidity:"
+msgstr "الرطوبة:"
+
+msgid "wind:"
+msgstr "الرياح:"
+
+msgid "Thunderstorm"
+msgstr "عاصفة رعدية"
+
+msgid "Drizzle"
+msgstr "رذاذ"
+
+msgid "Light Rain"
+msgstr "أمطار خفيفة"
+
+msgid "Heavy Rain"
+msgstr "أمطار شديدة"
+
+msgid "Rain"
+msgstr "أمطار"
+
+msgid "Snow"
+msgstr "ثلج"
+
+msgid "Clear Sky"
+msgstr "سماء صافية"
+
+msgid "Scattered Clouds"
+msgstr "غيوم متفرقة"
+
+#, php-format
+msgid "Search Results for: %s"
+msgstr "نتائج البحث عن :  %s"
+
+msgid "Website"
+msgstr "موقع الويب"
+
+msgid "Dashboard"
+msgstr "لوحة التحكم"
+
+msgid "Your Profile"
+msgstr "الملف الشخصي"
+
+msgid "Log Out"
+msgstr "تسجيل الخروج"
+
+msgid "Welcome"
+msgstr "أهلا بك"
+
+msgid "Password"
+msgstr "كلمة المرور"
+
+msgid "Forget?"
+msgstr "نسيت كلمة المرور؟"
+
+msgid "Remember me"
+msgstr "تذكرني"
+
+msgid "Don't have an account?"
+msgstr "ليس لديك حساب؟"
+
+msgid "Optional Custom Feed URL, Leave it empty to use the default WordPress feed URL."
+msgstr "اختياري، اتركه فارغاً إذا كنت تريد استخدام رابط خلاصات ووردبريس الافتراضي."
+
+msgid "Dribbble"
+msgstr "دريبل"
+
+msgid "Flickr"
+msgstr "صور من فليكر"
+
+msgid "YouTube"
+msgstr "يوتيوب"
+
+msgid "Digg"
+msgstr "‏Digg"
+
+msgid "Vimeo"
+msgstr "ڤميو"
+
+msgid "WordPress"
+msgstr "ووردبريس"
+
+msgid "Yelp"
+msgstr "‏Yelp"
+
+msgid "Last.FM"
+msgstr "‏Last.FM"
+
+msgid "Dropbox"
+msgstr "‏Dropbox"
+
+msgid "Xing"
+msgstr "‏Xing"
+
+msgid "DeviantArt"
+msgstr "‏DeviantArt"
+
+msgid "Apple"
+msgstr "‏Apple"
+
+msgid "Foursquare"
+msgstr "‏Foursquare"
+
+msgid "GitHub"
+msgstr "‏GitHub"
+
+msgid "SoundCloud"
+msgstr "ساوند كلاود"
+
+msgid "Behance"
+msgstr "بيهانس"
+
+msgid "Instagram"
+msgstr "انستقرام"
+
+msgid "Paypal"
+msgstr "‏Paypal"
+
+msgid "Spotify"
+msgstr "‏Spotify"
+
+msgid "Google Play"
+msgstr "‏Google Play"
+
+msgid "500px"
+msgstr "‏500px"
+
+msgid "vk.com"
+msgstr "‏vk.com"
+
+msgid "Bitbucket"
+msgstr "‏Bitbucket"
+
+msgid "Mixcloud"
+msgstr "‏Mixcloud"
+
+msgid "Medium"
+msgstr "وسط"
+
+msgid "Twitch"
+msgstr "‏Twitch"
+
+msgid "Vine"
+msgstr "‏Vine"
+
+msgid "Viadeo"
+msgstr "فياديو"
+
+msgid "Snapchat"
+msgstr "سناب تشات"
+
+msgid "TripAdvisor"
+msgstr "‫TripAdvisor"
+
+msgid "Type and hit Enter"
+msgstr "إكتب كلمة البحث ثم إضغط زر الإدخال"
+
+msgid "page"
+msgstr "صفحه"
+
+#, php-format
+msgid "%s ago"
+msgstr "منذ %s"
+
+msgid "Pages"
+msgstr "الصفحات"
+
+msgid "Authors"
+msgstr "الكُتاب"
+
+msgid "Share via Email"
+msgstr "مشاركة عبر البريد"
+
+#, php-format
+msgid "About %s"
+msgstr "عن %s"
+
+#, php-format
+msgid "By %s"
+msgstr "بواسطة %s"
+
+msgid "Popular"
+msgstr "الأشهر"
+
+msgid "Recent"
+msgstr "الأخيرة"
+
+msgid "Search for"
+msgstr "بحث عن"
+
+msgid "Price:"
+msgstr "السعر:"
+
+msgid "Quantity:"
+msgstr "الكمية:"
+
+msgid "Cart Subtotal:"
+msgstr "المجموع:"
+
+msgid "View Cart"
+msgstr "عرض عربة التسوق"
+
+msgid "Proceed to Checkout"
+msgstr "اتمام الشراء"
+
+msgid "Go to the shop"
+msgstr "الذهاب للمتجر"
+
+msgid "Random Article"
+msgstr "مقال عشوائي"
+
+msgid "Follow"
+msgstr "تابعنا"
+
+msgid "Subscribe"
+msgstr "إشترك"
+
+msgid "Related Articles"
+msgstr "مقالات ذات صلة"
+
+msgid "Read Next"
+msgstr "أقرأ التالي"
+
+msgid "Videos"
+msgstr "فيديوهات"
+
+msgid "Follow us on Flickr"
+msgstr "إتبعنا على فليكر"
+
+msgid "Follow Us"
+msgstr "إتبعنا"
+
+msgid "Follow us on Twitter"
+msgstr "إتبعنا على تويتر"
+
+msgid "Less than a minute"
+msgstr "أقل من دقيقة"
+
+#, php-format
+msgid "%s hours read"
+msgstr "%s ساعات"
+
+msgid "1 minute read"
+msgstr "دقيقة واحدة"
+
+#, php-format
+msgid "%s minutes read"
+msgstr "%s دقائق"
+
+msgid "No new notifications"
+msgstr "لا يوجد تنبيهات"
+
+msgid "Notifications"
+msgstr "التنبيهات"
+
+msgid "Show Less"
+msgstr "عرض أقل"
+
+msgid "View your shopping cart"
+msgstr "إستعراض سلة التسوق"
+
+msgid "Enter your Email address"
+msgstr "أدخل بريدك الإلكتروني"
+
+msgid "Your cart is currently empty."
+msgstr "عربة التسوق فارغة الآن."
+
+msgid "Type your search words then press enter"
+msgstr "اكتب كلمة البحث ثم اضغط على زر Enter"
+
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "يبدوا أن المحتوى المطلوب غير موجود، حاول إستخدام البحث."
+
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "المعذرة, ولكن لم يتم العثور على نتائج تطابق كلمة البحث، حاول البحث بإستخدام كلمات مختلفة ."
+
+#, php-format
+msgid "This theme requires at least PHP version 5.3. You are running version %s. Please upgrade and try again."
+msgstr "هذا القالب يتطلب إصدار 5.3 من PHP انت تستخدم الإصدار %s . برجاء الترقية ثم إعادة تفعيل القالب."
+
+msgid "Edit Post"
+msgstr "تحرير المقال"
+
+msgid "(no title)"
+msgstr "(بدون عنوان)"
+
+#, php-format
+msgid "This section contains some shortcodes that requries the %s Plugin. Install it from the Theme Menu &gt; Install Plugins."
+msgstr "هذا الويدجت يتطلب تركيب إضافة %s، يمكنك تنصيبها من خلال قائمة القالب &lt; تنصيب الإضافات."
+
+msgid "Best Reviews"
+msgstr "أفضل التقييمات"
+
+msgid "- Select a slider -"
+msgstr "-اختر سليدر-"
+
+msgid "- Select a category -"
+msgstr "- اختر التصنيف -"
+
+#, php-format
+msgid "Control WooCommerce sidebar settings from the theme options page &gt; %1$sWooCommerce settings%2$s."
+msgstr "يمكنك تغيير خيارات العمود الجانبي من صفحة إعدادات القالب ثم %1$sWooCommerce إعدادات%2$s."
+
+#, php-format
+msgid "The customizer import file is missing! File path: %s"
+msgstr "الملف المعدل المستورد مفقود! مسار الملف: %s"
+
+msgid "The customizer import file is not in a correct format. Please make sure to use the correct customizer import file."
+msgstr ""
+"الملف المعدل المستورد ليس في التنسيق الصحيح.\n"
+"الرجاء التأكد من استخدام التنسيق الصحيح للملف المستورد."
+
+msgid "The customizer import file is not suitable for current theme. You can only import customizer settings for the same theme or a child theme."
+msgstr "المجلد المعدل المستورد لا يتناسب مع القالب الحالي. تستطيع فقط استيراد الإعدادات المعدلة لنفس لقالب أو القالب الإبن."
+
+#, php-format
+msgid "URL for %s%s%s file is not defined!"
+msgstr "المسار URL الخاص بالملف %s%s%s غير معرّف!"
+
+#, php-format
+msgid "An error occurred while fetching %s%s%s file from the server!%sReason: %s - %s."
+msgstr "حدثت مشكلة أثناء جلب الملف %s%s%s من الخادم (السيرفر)! %s السبب: %s - %s."
+
+#, php-format
+msgid "An error occurred while writing file to your server! Tried to write a file to: %s%s."
+msgstr "حدثت مشكلة أثناء كتابة أحد الملفات ورفعه على الخادم (سيرفر) الخاص بك! تمت محاولة كتابة الملف على: %s%s."
+
+#, php-format
+msgid "An error occurred while reading a file from your server! Tried reading file from path: %s%s."
+msgstr "حدثت مشكلة أثناء قراءة أحد الملفات من الخادم (سيرفر) الخاص بك! تمت محاولة قراءة الملف على: %s%s."
+
+msgid "One Click Demo Import"
+msgstr "إستيراد الديمو"
+
+msgid "Import Demo Data"
+msgstr "استيراد بيانات الdemo"
+
+msgid "Your WordPress login credentials don't allow to use WP_Filesystem!"
+msgstr "بيانات الوردبريس المعتمدة الخاصة بك لا تسمح بإستخدم WP_Filesystem!"
+
+#, php-format
+msgid "%sYour user role isn't high enough. You don't have permission to import demo data.%s"
+msgstr "%s قوانين المستخدم لديك ليست عالية بما فيه الكفاية. ليس لديك الصلاحية لجلب البيانات التجريبية.%s"
+
+msgid "Upload files"
+msgstr "رفع الملفات"
+
+#, php-format
+msgid "Widget file was not uploaded. Error: %s"
+msgstr "لم يتم رفع ملف المدجت. خطأ: %s"
+
+#, php-format
+msgid "Customizer file was not uploaded. Error: %s"
+msgstr "الملف المعدل لم يتم رفعه. خطأ. %s"
+
+msgid "The import files were successfully uploaded!"
+msgstr "الملف المستورد تم رفعه بنجاح!"
+
+#, php-format
+msgid "MAX EXECUTION TIME = %s"
+msgstr "الحد الأقصى للوقت المسموح للتنفيذ (MAX EXECUTION TIME) = %s"
+
+msgid "not defined!"
+msgstr "غير موجود!"
+
+msgid "Widget import file could not be found."
+msgstr "ودجت الملف المستورد لم يتم العثور عليه."
+
+msgid "Widget import data could not be read. Please try a different file."
+msgstr "ودجت البيانات المستورده لم يتم قرآتها. الرجاء تجربة ملف آخر."
+
+msgid "Sidebar does not exist in theme (moving widget to Inactive)"
+msgstr "العمود الجانبي غير متواجد بالقالب (تحويل الودجت إلى غير نشطة)"
+
+msgid "Site does not support widget"
+msgstr "هذا الموقع لا يدعم الويدجات"
+
+msgid "Widget already exists"
+msgstr "الويدجت موجود سابقاً"
+
+msgid "Imported"
+msgstr "تم آستيراده"
+
+msgid "Imported to Inactive"
+msgstr "تم إستيراده الى الويدجات غير الفعالة"
+
+msgid "No Title"
+msgstr "بدون عنوان"
+
+msgid "No results for widget import!"
+msgstr "لا يوجد نتائج لاستيراد الويدجات!"
+
+msgid "Demo Import"
+msgstr "استيراد بيانات الdemo"
+
+msgid "Demo data has been successfully uninstalled"
+msgstr "تم حذف بيانات الديمو بنجاح"
+
+msgid "Importing demo data (post, pages, images, theme settings, ...) is the easiest way to setup your theme. It will allow you to quickly edit everything instead of creating content from scratch. When you import the data, the following things might happen:"
+msgstr "استيراد بيانات الديمو (مقالات،صفحات،صور،قالب،إعدادات.....) يعتبر أسهل طريقة لتنثبيت قالبك، سيسمح بك هذا بتعديل كل شيء بسرعة، عوض انشاء محتوى جديد من الصفر. عند استيراد البيانات، يمكن أن يحدث التالي :"
+
+msgid "No existing posts, pages, categories, images, custom post types or any other data will be deleted or modified."
+msgstr "لن يتم / تعديل أو حذف أي تدوينات, صفحات، تصنيفات، صور أو أي بيانات أخرى."
+
+msgid "Posts, pages, images, widgets and menus will get imported."
+msgstr "المشاركات، الصفحات، الصور، الودجات و القوائم سيتم استيرادها."
+
+msgid "Please click \"Import Demo Data\" button only once and wait, it can take a couple of minutes."
+msgstr "رجاء! قم بالنقر على \"استيراد بيانات الديمو\" مرة واحدة فقط ثم انتظر، يمكن لهذه العملية أن تستغرق بعض الدقائق."
+
+msgid "Before you begin, make sure all the required plugins are activated."
+msgstr "قبل البدأ، تأكد من أن جميع الإضافات قد تم تفعيلها."
+
+msgid "Live Demo"
+msgstr "معاينة الديمو"
+
+msgid "Important Notes:"
+msgstr "ملاحظات هامة:"
+
+msgid "We recommend to run Demo Import on a clean WordPress installation."
+msgstr "نحن ننصح بأن يتم تشغيل استيراد الديمو على ووردبريس مثبت جديد."
+
+msgid "The Demo Import will not import the images we have used in our live demos, due to copyright / license reasons."
+msgstr "استيراد الديمو لن يقوم باستيراد الصور التي استعملانها في العروض الحية. نظرا لحقوق الملكية و التراخيص."
+
+msgid "Do not run the Demo Import multiple times one after another, it will result in double content."
+msgstr "لا تقم رجاءا بتشغيل خاصية استيراد الديمو عدة مرات متتابعة، هذا الأمر سيؤدي إلى ظهور محتوى مكرر في موقعك."
+
+msgid "Visit Site"
+msgstr "زيارة الموقع"
+
+msgid "Importing Demo Content..."
+msgstr "جارى إستيراد البيانات …"
+
+msgid "Please be patient and do not navigate away from this page while the import is in progress. This can take a while if your server is slow."
+msgstr "‫برجاء الإنتظار ولا تقوم بالانتقال إلى صفحات أخرى حتى تنتهي عملية الإستيراد. ربما تاخذ بعض الوقت على بعض السيرفرات البطيئة."
+
+msgid "Please be patient and do not navigate away from this page while the import is in progress.\tThis can take a while if your server is slow."
+msgstr "رجاء! انتظر و لا تقم بتصفح قسم اخر أو غلق هذه التبويبة عند بداية عملية الاستيراد. يمكن لهذه العملية أن تستغرق مدة طويلة في حالة بطئ السيرفر."
+
+msgid "You will be notified via this page when the import is completed."
+msgstr "سيتم تنبيهك في هذه الصفحة عن اكتمال الاستيراد."
+
+msgid "No preview image defined for this import."
+msgstr "لم يتم تعيين صورة لهذا الديمو."
+
+msgid "Manually uploaded files"
+msgstr "رفع الملفات يدوياً"
+
+msgid "Downloaded files"
+msgstr "الملفات المُحملة"
+
+msgid "No import files specified!"
+msgstr "لم يتم تعيين ملفات لاستيراد الديمو!"
+
+msgid "Completed"
+msgstr "إكتمل"
+
+msgid "That's it, all done!"
+msgstr "هذا كل شئ، إنتهينا!"
+
+msgid "Importing content"
+msgstr "إستيراد المحتويات"
+
+msgid "Importing widgets"
+msgstr "إستيراد الويدجات"
+
+msgid "Importing customizer settings"
+msgstr "إستيراد الإعدادات المخصصة"
+
+msgid "Could not open the file for parsing"
+msgstr "لا يمكن فتح الملف للتحليل"
+
+msgid "The file does not exist, please try again."
+msgstr "الملف غير موجود, حاول من جديد."
+
+msgid "Invalid author mapping"
+msgstr "تعيين كاتب غير موجود"
+
+msgid "Cannot import auto-draft posts"
+msgstr "غير قادر على استيراد المسودات التلقائية"
+
+#, php-format
+msgid "Failed to import \"%s\": Invalid post type %s"
+msgstr "فشل في إستيراد \"%s\": نوع المشاركة خاطئ %s"
+
+#, php-format
+msgid "%s \"%s\" already exists."
+msgstr "%s \"%s\" موجود مسبقاً."
+
+#, php-format
+msgid "Failed to import \"%s\" (%s)"
+msgstr "فشل في استرداد \"%s\" (%s)"
+
+#, php-format
+msgid "Imported \"%s\" (%s)"
+msgstr "تم استرداد \"%s\" (%s)"
+
+#, php-format
+msgid "Post %d remapped to %d"
+msgstr "تم إعادة تعيين المقالة \"%d\" إلى %d"
+
+msgid "Invalid file type"
+msgstr "نوع الملف غير صحيح"
+
+#, php-format
+msgid "Failed to import user \"%s\""
+msgstr "فشل في إستيراد العضو “%s”"
+
+#, php-format
+msgid "Imported user \"%s\""
+msgstr "تم استرداد العضو \"%s\""
+
+#, php-format
+msgid "User %d remapped to %d"
+msgstr "تم إعادة تعيين المستخدم %d إلى %d"
+
+#, php-format
+msgid "Failed to import %s %s"
+msgstr "فشل في إستيراد %s %s"
+
+#, php-format
+msgid "Term %d remapped to %d"
+msgstr "تم إعادة تعيين المصطلح %d إلى %d"
+
+#, php-format
+msgid "Remote server returned %1$d %2$s for %3$s"
+msgstr "تحكم السيرفر تم استرجاعه %1$d%2$s لـ %3$s"
+
+msgid "Remote file is incorrect size"
+msgstr "حجم خاطئ للملف المراد الإستيراد منه"
+
+msgid "Zero size file downloaded"
+msgstr "حجم الملف المستورد صفر"
+
+#, php-format
+msgid "Remote file is too large, limit is %s"
+msgstr "الملف المطلوب الإستيراد منه كبير جداً ، الحد الأقصى المسموح به هو  %s"
+
+#, php-format
+msgid "Running post-processing for post %d"
+msgstr "تشغيل المعالجة البعدية للمشاركة %d"
+
+#, php-format
+msgid "Could not find the post parent for \"%s\" (post #%d)"
+msgstr "غير قادر على إيجاد المقالة الأم لـ \"%s\" (المقالة #%d)"
+
+#, php-format
+msgid "Post %d was imported with parent %d, but could not be found"
+msgstr "تم إدخال المقالة %d تحت اسم مقالة أم %d، لكنها غير موجودة"
+
+#, php-format
+msgid "Could not find the author for \"%s\" (post #%d)"
+msgstr "غير قادر على إيجاد المؤلف لـ \"%s\" (المقالة#%d)"
+
+#, php-format
+msgid "Post %d was imported with author \"%s\", but could not be found"
+msgstr "تم إدخال المقالة %d تحت اسم المؤلف \"%s\"، لكنها غير موجودة"
+
+#, php-format
+msgid "Post %d was marked for post-processing, but none was required."
+msgstr "المشاركة %d تم اختيارها للمعالجة البعدية، و لكن لم يكن هناك حاجة."
+
+#, php-format
+msgid "Could not update \"%s\" (post #%d) with mapped data"
+msgstr "غير قادر على تحديث المقالة \"%s\" (مقالة #%d) مع المعلومات المخططة والمعيّنة"
+
+#, php-format
+msgid "Could not find the menu object for \"%s\" (post #%d)"
+msgstr "غير قادر على إيجاد عنصر القائمة للمقالة \"%s\" (مقالة #%d)"
+
+#, php-format
+msgid "Post %d was imported with object \"%d\" of type \"%s\", but could not be found"
+msgstr "تم استرداد المقالة %d مع عنصر \"%d\" من نوع \"%s\"، لكنه غير موجود"
+
+#, php-format
+msgid "Could not find the comment parent for comment #%d"
+msgstr "غير قادر على ايجاد التعليق الأب للتعليق #%d"
+
+#, php-format
+msgid "Comment %d was imported with parent %d, but could not be found"
+msgstr "تم استرداد التعليق %d مع المقالة الأم %d، لكنها غير موجودة"
+
+#, php-format
+msgid "Could not find the author for comment #%d"
+msgstr "غير قادر على إيجاد كاتب التعليق #%d"
+
+#, php-format
+msgid "Comment %d was imported with author %d, but could not be found"
+msgstr "تم استرداد التعليق %d مع المؤلف %d، لكنها غير موجودة"
+
+#, php-format
+msgid "Could not update comment #%d with mapped data"
+msgstr "غير قادر على تحديث التعليق #%d مع المعلومات المخططة والمعيّنة"
+
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "تنصيب إضافة: %s"
+
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr "تحديث إضافة: %s"
+
+msgid "Something went wrong with the plugin API."
+msgstr "حدث خطأ ما مع API الإضافة."
+
+msgid "Return to Required Plugins Installer"
+msgstr "العودة إلى صفحة تنصيب الإضافات"
+
+msgid "Return to the Dashboard"
+msgstr "العودة إلى لوحة التحكم الرئيسية"
+
+msgid "Plugin activated successfully."
+msgstr "تم تفعيل الإضافة بنجاح."
+
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "لم يتم إتخاذ أي إجراء. الإضافة %1$s مفعله بالسابق."
+
+#, php-format
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr "لم يتم تفعيل الإضافة المطلوبة. تحتاج لإضافة نسخة أحدث من %s لهذا الثيم. يُرجى تحديث هذه الإضافة."
+
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "جميع الإضافات تم تثبيتها و تفعيلها بنجاح. %1$s"
+
+msgid "Dismiss this notice"
+msgstr "تجاهل"
+
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr "هناك واحده أو أكثر من الإضافات الضرورية أو التي ينصح بها تحتاج إلى التثبيت، التحديث أو التفعيل."
+
+msgid "Please contact the administrator of this site for help."
+msgstr "الرجاء التواصل مع مدير الموقع للمساعدة."
+
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr "هذه الإضافة تحتاج إلى تحديث لكي تتوافق مع القالب."
+
+msgid "Update Required"
+msgstr "تحديث مطلوب"
+
+msgid "Tested and Recommended Plugins"
+msgstr "إضافات يُنصح بها"
+
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr "حزمة الإضافة عن بعد لا تحتوي على المجلد مع البادئة المرغوبة و إعادة التسمية لا تعمل."
+
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr "الرجاء التواصل مع مالك الإضافة و إطلب منه برمجة الاضافة حسب توصيات ووردبريس."
+
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr "حزمة الإضافة عن بعد مكونه عبارة عن أكثر من ملف واحد، و لكن الملفات لم يتم وضعهم في مجلد."
+
+#, php-format
+msgid "TGMPA v%s"
+msgstr "‫TGMPA v%s"
+
+msgid "Required"
+msgstr "مطلوب"
+
+msgid "WordPress Repository"
+msgstr "مستودع إضافات WordPress"
+
+msgid "External Source"
+msgstr "مصدر خارجي"
+
+msgid "Pre-Packaged"
+msgstr "مدمجة"
+
+msgid "Not Installed"
+msgstr "غير مُنصبة"
+
+msgid "Installed But Not Activated"
+msgstr "مُحملة وغير فعالة"
+
+msgid "Active"
+msgstr "تفعيل"
+
+msgid "Required Update not Available"
+msgstr "التحديث المطلوب غير متاح"
+
+msgid "Requires Update"
+msgstr "يلزم الترقية"
+
+msgid "Update recommended"
+msgstr "يُنصح بالترقية"
+
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr "%1$s، %2$s"
+
+#, php-format
+msgid "%1$s, %2$s"
+msgstr "‫%1$s, %2$s"
+
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "اللغة المصدر لا تحتوي على هذا النموذج المتعدد."
+msgstr[1] "جميع <span class=\"count\"> (%s)</span>"
+msgstr[2] "اللغة المصدر لا تحتوي على هذا النموذج المتعدد."
+msgstr[3] "اللغة المصدر لا تحتوي على هذا النموذج المتعدد."
+msgstr[4] "اللغة المصدر لا تحتوي على هذا النموذج المتعدد."
+msgstr[5] "جميع <span class=\"count\"> (%s)</span>"
+
+#, php-format
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "اللغة المصدر لا تحتوي على هذا النموذج المتعدد."
+msgstr[1] "جميع <span class=\"count\"> (%s)</span>"
+msgstr[2] "اللغة المصدر لا تحتوي على هذا النموذج المتعدد."
+msgstr[3] "اللغة المصدر لا تحتوي على هذا النموذج المتعدد."
+msgstr[4] "اللغة المصدر لا تحتوي على هذا النموذج المتعدد."
+msgstr[5] "جميع <span class=\"count\"> (%s)</span>"
+
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] "لا تحتوي اللغة المصدر على نموذج الجمع هذا."
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] "لا تحتوي اللغة المصدر على نموذج الجمع هذا."
+msgstr[4] "لا تحتوي اللغة المصدر على نموذج الجمع هذا."
+msgstr[5] "لا تحتوي اللغة المصدر على نموذج الجمع هذا."
+
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] "اللغة المصدر لا تحتوي على هذا النموذج المتعدد."
+msgstr[1] "يوجد تحديث مُتاح <span class=\"count\"> (%s)</span>"
+msgstr[2] "اللغة المصدر لا تحتوي على هذا النموذج المتعدد."
+msgstr[3] "اللغة المصدر لا تحتوي على هذا النموذج المتعدد."
+msgstr[4] "اللغة المصدر لا تحتوي على هذا النموذج المتعدد."
+msgstr[5] "يوجد تحديث مُتاح <span class=\"count\"> (%s)</span>"
+
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] "اللغة المصدر لا تحتوي على هذا النموذج المتعدد."
+msgstr[1] "لتفعيل <span class=\"count\"> (%s) </span>"
+msgstr[2] "اللغة المصدر لا تحتوي على هذا النموذج المتعدد."
+msgstr[3] "اللغة المصدر لا تحتوي على هذا النموذج المتعدد."
+msgstr[4] "اللغة المصدر لا تحتوي على هذا النموذج المتعدد."
+msgstr[5] "لتفعيل <span class=\"count\"> (%s)</span>"
+
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr "غير معروف"
+
+msgid "unknown"
+msgstr "غير معروف"
+
+msgid "Installed version:"
+msgstr "الإصدار المُنصب:"
+
+msgid "Minimum required version:"
+msgstr "النسخة الأدنى المطلوبة :"
+
+msgid "Available version:"
+msgstr "الإصدار المتاح:"
+
+msgid "No plugins to install, update or activate."
+msgstr "لا يوجد إضافات تحتاج إلى التنصيب أو الترقية أو التفعيل."
+
+msgid "Plugin"
+msgstr "إضافة"
+
+msgid "Status"
+msgstr "الحالة"
+
+#, php-format
+msgid "Install %2$s"
+msgstr "تنصيب %2$s"
+
+#, php-format
+msgid "Update %2$s"
+msgstr "ترقية %2$s"
+
+#, php-format
+msgid "Activate %2$s"
+msgstr "تفعيل %2$s"
+
+msgid "Upgrade message from the plugin author:"
+msgstr "رسالة ترقية من صاحب الإضافة :"
+
+msgid "Install"
+msgstr "تنصيب"
+
+msgid "Activate"
+msgstr "تفعيل"
+
+msgid "No plugins were selected to be installed. No action taken."
+msgstr "لم يتم اختيار أي اضافة لتثبيتها. لم يتم القيام بأي عملية."
+
+msgid "No plugins were selected to be updated. No action taken."
+msgstr "لم يتم اختيار أي اضافات ليتم تحديثها. لم يتم القيام بأي عملية."
+
+msgid "No plugins are available to be installed at this time."
+msgstr "لا يوجد أي اضافات لتثبيتها حاليا."
+
+msgid "No plugins are available to be updated at this time."
+msgstr "لا يوجد اضافات لتحديثها حاليا."
+
+msgid "No plugins were selected to be activated. No action taken."
+msgstr "لم يتم اختيار أي اضافات لتفعيلها. لم يتم اجراء أي عملية."
+
+msgid "No plugins are available to be activated at this time."
+msgstr "لا توجد أي اضافات لتفعيلها حاليا."
+
+msgid "Plugin activation failed."
+msgstr "فشل تفعيل الإضافة."
+
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "جاري تحديث الإضافة %1$s (%2$d/%3$d)"
+
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "حدثت مشكلة أثناء تنزيل %1$s: <strong>%2$s</strong>."
+
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "لم تنجح عملية تثبيت %1$s."
+
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "بدأت عملية التنصيب. هذه العملية قد تستغرق بعض الوقت على بعض السيرفرات. لذلك رجاءا انتظر."
+
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "تم تثبيت وتفعيل %1$s بنجاح."
+
+msgid "All installations and activations have been completed."
+msgstr "جميع التنصيبات و التفعيلات تمت بنجاح."
+
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "جاري تثبيت وتفعيل الإضافة %1$s (%2$d/%3$d)"
+
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "بدأت عملية التنصيب. هذه العملية قد تستغرق بعض الوقت على بعض السيرفرات. لذلك رجاءا انتظر."
+
+#, php-format
+msgid "%1$s installed successfully."
+msgstr "تم تثبيت %1$s بنجاح."
+
+msgid "All installations have been completed."
+msgstr "جميع التنصيبات اكتملت بنجاح!."
+
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "جاري تثبيت الإضافة %1$s (%2$d/%3$d)"
+
+msgid "Show Details"
+msgstr "عرض التفاصيل"
+
+msgid "Hide Details"
+msgstr "إخفاء التفاصيل"
+
+msgid "Image URL"
+msgstr "رابط الصورة"
+
+msgid "Image Width"
+msgstr "عرض الصورة"
+
+msgid "Image Height"
+msgstr "إرتفاع الصورة"
+
+msgid "Image Margin Top"
+msgstr "هامش الصورة العلوي"
+
+msgid "Image Margin Bottom"
+msgstr "هامش الصورة السفلي"
+
+msgid "Circle Shape?"
+msgstr "الشكل الدائري؟"
+
+msgid "Text"
+msgstr "نص"
+
+msgid "Center the content?"
+msgstr "توسيط المحتوى؟"
+
+msgid "Show Social Icons?"
+msgstr "إظهار الشبكات الإجتماعية؟"
+
+msgid "Ads 125 x 125"
+msgstr "اعلان 125*125"
+
+msgid "Show the ads only?"
+msgstr "اظهر الإعلان فقط؟"
+
+msgid "Open links in a new window?"
+msgstr "فتح الروابط في نافذة جديدة؟"
+
+#, php-format
+msgid "Ad #%s"
+msgstr "إعلان #%s"
+
+msgid "Image path:"
+msgstr "مسار الصورة:"
+
+msgid "Code:"
+msgstr "كود:"
+
+msgid "About the post&rsquo;s author"
+msgstr "عن كاتب المقال"
+
+msgid "This Widget appears in the single post page only."
+msgstr "هذا الودجت يظهر فقط في صفحة المقال."
+
+msgid "Posts By Post's Author"
+msgstr "مقالات بواسطة كاتب المقال الحالي"
+
+msgid "Display (All) link:"
+msgstr "عرض رابط (الكل)"
+
+msgid "Custom Author Content"
+msgstr "محتوى خاص للكاتب"
+
+msgid "Center content:"
+msgstr "توسيط المحتوى:"
+
+msgid "Show child categories?"
+msgstr "عرض التصنيفات الفرعية؟"
+
+msgid "Recent Comments with avatar"
+msgstr "آحدث التعليقات مع صورة شخصية"
+
+msgid "Recent Comments"
+msgstr "أخر التعليقات"
+
+msgid "Number of comments to show:"
+msgstr "عدد التعليقات المراد إظهارها:"
+
+msgid "Find us on Facebook"
+msgstr "تابعنا على فيسبوك"
+
+msgid "Page URL:"
+msgstr "رابط الصفحة :"
+
+msgid "Hide cover Photo?"
+msgstr "إخفاء كوفر الصفحة؟"
+
+msgid "Show Faces?"
+msgstr "إظهار وجوه الأصدقاء؟"
+
+msgid "Show Stream?"
+msgstr "إظهار المحتوى؟"
+
+msgid "Flickr ID:"
+msgstr "الرقم التعريفي لـFlickr :"
+
+msgid "Find your ID at idGettr"
+msgstr "ابحث عن رقمك التعريفي على idGettr"
+
+msgid "Photos Order:"
+msgstr "ترتيب الصور:"
+
+msgid "Most recent"
+msgstr "الأحدث نشرًا"
+
+msgid "Random"
+msgstr "عشوائي"
+
+msgid "Number of photos to show:"
+msgstr "عدد الصور المراد عرضها :"
+
+msgid "Google+ page"
+msgstr "صفحة Google‪+‬"
+
+msgid "Follow us on Google+"
+msgstr "إتبعنا على Google+"
+
+msgid "Show the Bio and counters?"
+msgstr "عرض النبذة الشخصية و الإحصائيات؟"
+
+msgid "Go to the InstaNow Settings page to connect your account to the Instagram API."
+msgstr "قم بالذهاب لصفحة إعدادات إضافة InstaNow لتقوم بتفعيل حساب Instagram الخاص بك."
+
+msgid "Number of Media Items"
+msgstr "عدد الصور"
+
+msgid "Show the icon?"
+msgstr "عرض الأيقونة؟"
+
+msgid "Posts list"
+msgstr "قائمة المقالات"
+
+msgid "Jetpack - Most Viewed for 7 days"
+msgstr "‫Jetpack - الأكثر زيارة في ٧ أيام"
+
+msgid "Jetpack - Most Viewed for 30 days"
+msgstr "‏‫Jetpack - الأكثر زيارة في ٣٠ يوم"
+
+msgid "Related Posts by Categories"
+msgstr "‫مقالات ذات الصلة عن طريق التصنيفات"
+
+msgid "Related Posts by Tags"
+msgstr "مقالات ذات الصلة عن طريق الوسوم"
+
+msgid "Related Posts by Author"
+msgstr "‫مقالات ذات الصلة عن الكاتب"
+
+msgid "Posts order:"
+msgstr "ترتيب المقالات:"
+
+msgid "You need to install the Jetpack plugin. in order to use the show the most viewed for 7 or 30 days."
+msgstr "أنت بحاجة إلى تركيب إضافة Jetpack لتتمكن من إستخدام الأكثر زيارة في ٧ أيام و ٣٠ يوم."
+
+msgid "Please Note that for Jetpack - Most Viewed posts it may take a few hours before views are counted. It will fallback to comments sorting type until then."
+msgstr "ننبهكم إلى لى أن خاصية  المقالات الأكثر مشاهدة لإضافة Jetpack تستغرق بعض الساعات لتقوم بحساب عدد المشاهدات. سيتم التصنيف حسب التعليقات في غضون هذا الوقت."
+
+msgid "Exclude Current Post in the single post page."
+msgstr "قم بإستثناء المقال الحالي في صفحة عرض المقال."
+
+msgid "Featured Posts"
+msgstr "المقالات المميزة"
+
+msgid "Show the Slider only?"
+msgstr "عرض السلايدر فقط؟"
+
+msgid "Social Counters"
+msgstr "عداد الشبكات الإجتماعية"
+
+msgid "This widget requries the Arqam Lite Plugin, You can install it from the Theme settings menu > Install Plugins."
+msgstr "هذا الويدجت يتطلب إضافة أرقام لايت، يمكنك تنصيبها من خلال قائمة القالب > تنصيب الإضافات."
+
+msgid "Go to the Arqam options page to set your social accounts."
+msgstr "من صفحة إعدادات إضافة أرقام قم بتعيين بيانات حساباتك على الشبكات الإجتماعية."
+
+msgid "Show the social icons only?"
+msgstr "إظهار أزرارالشبكات الإجتماعية فقط؟"
+
+msgid "Autoplay?"
+msgstr "تشغيل تلقائي؟"
+
+msgid "Tabs"
+msgstr "التبويبات"
+
+msgid "Number of items to show:"
+msgstr "عدد العناصر المراد إظهارها:"
+
+msgid "Order of tabs:"
+msgstr "ترتيب التبويبات:"
+
+msgid "Popular tab order"
+msgstr "الأشهر على حسب"
+
+msgid "Most Commented"
+msgstr "الأكثر تعليقًا"
+
+msgid "Most Viewed"
+msgstr "الأكثر مشاهدةً"
+
+msgid "Disable the Popular tab?"
+msgstr "تعطيل تبويب أشهر المقالات؟"
+
+msgid "Disable the Recent tab?"
+msgstr "تعطيل تبويب أخر المقالات؟"
+
+msgid "Disable the Comments tab?"
+msgstr "تعطيل تبويب التعليقات؟"
+
+msgid "Text or HTML"
+msgstr "نص او HTML"
+
+msgid "Text, Shortcodes or HTML code"
+msgstr "نص، كود مختصر او كود HTML"
+
+msgid "Error Can not Get Tweets, Incorrect account info."
+msgstr "خطأ، لا يمكن الحصول على تغريدات، معلومات الحساب غير صحيحة."
+
+msgid "Consumer key:"
+msgstr "Consumer key:"
+
+msgid "Consumer secret:"
+msgstr "Consumer secret:"
+
+msgid "Number of Tweets to show:"
+msgstr "عدد التغريدات المراد إظهارها:"
+
+msgid "Slider Layout?"
+msgstr "تفعيل السلايدر؟"
+
+msgid "Find Your Location"
+msgstr "تحديد مدينتك"
+
+msgid "F"
+msgstr "ف"
+
+msgid "C"
+msgstr "س"
+
+msgid "Forecast"
+msgstr "التنبؤ بالطقس"
+
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "يوم"
+msgstr[1] "يوم"
+msgstr[2] "يومين"
+msgstr[3] "%d أيام"
+msgstr[4] "%d أيام"
+msgstr[5] "%d أيام"
+
+msgid "Subscribe to our channel"
+msgstr "إنضم لقناتنا"
+
+msgid "Channel Name or ID:"
+msgstr "اسم للقناة أو الرقم التعريفي للمستخدم:"
+
+msgid "Get it from your account advanced page."
+msgstr "يمكنك الحصور عليه من صفحة حسابك - إعدادات متقدمة."
+
+msgid "Jannah"
+msgstr "جَنَّة"
+
+msgid "Secondry Nav Menu"
+msgstr "القائمة الثانوية أعلى الموقع"
+
+msgid "404 Page menu"
+msgstr "قائمة صفحة 404"
+
+msgid "Footer Navigation"
+msgstr "القائمة أسفل الموقع"
+
+msgid "Primary Widget Area"
+msgstr "المربع الجانبي الرئيسي"
+
+msgid "Slide Widget Area"
+msgstr "مساحة الودجات للقائمة الجانبية المخفية"
+
+msgid "Shop - For WooCommerce Pages"
+msgstr "المتجر - لصفحات ووكوميرس"
+
+msgid "This widget area uses in the WooCommerce pages."
+msgstr "هذه القائمة الجانبية تستتخدم في صفحات ووكوميرس."
+
+#, php-format
+msgid "Section #%s"
+msgstr "سيكشن #%s"
+
+msgid "Secondary Sidebar"
+msgstr "القائمة الجانبية الثانوية"
+
+msgid "Close"
+msgstr "إغلاق"
+
+msgid "Primary Navigation"
+msgstr "القائمة الرئيسية"
+
+msgid "Secondary Navigation"
+msgstr "الشريط العلوي"
+
+#, php-format
+msgid "Ready to publish your first post? %1$sGet started here%2$s."
+msgstr "هل أنت مُستعد لنشر أول مقال؟ %1$sإبدأ من هنا%2$s."
