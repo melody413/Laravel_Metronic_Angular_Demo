@@ -31,7 +31,7 @@ class BodyPart extends BaseModel
         $query->addSelect('body_part_trans.name as name');
         $query->join('body_part_trans', 'body_part_id', '=', 'body_parts.id');
         $query->where('body_part_trans.locale', '=', 'ar');
-dd($query);
+        dd($query);
         return $query->where('name', 'LIKE', "%$search%");
     }
 

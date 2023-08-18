@@ -9,8 +9,7 @@
       <form
         novalidate
         class="form"
-        method="post"
-        action="http://localhost:8000/admin/body_part/store"
+        (ngSubmit)="create()"
       >
         <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
           Language Data
@@ -20,19 +19,11 @@
             <div class="row">
               <div class="col-lg-6 fv-col">
                 <h2 class="fs-2">Name Arabic :</h2>
-                <input
-                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
-                  type="text"
-                  name=""
-                />
+                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="arName" name="ar[name]" type="text" value="">
               </div>
               <div class="col-lg-6">
                 <h2 class="fs-2">Name English :</h2>
-                <input
-                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
-                  type="text"
-                  name=""
-                />
+                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="enName" name="en[name]" type="text" value="">
               </div>
             </div>
           </div>
@@ -40,24 +31,12 @@
             <div class="row">
               <div class="col-lg-6 col-sm-12 fv-row">
                 <h2 class="fs-2">Excerpt Ar :</h2>
-                <textarea
-                  cols="50"
-                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
-                  type="text"
-                  name=""
-                  placeholder="Arabic[expert]"
-                ></textarea>
+                <textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0l" [(ngModel)]="arExcerpt" placeholder="excerpt" rows="2" name="ar[excerpt]" cols="50"></textarea>
                 <small>display in list not show in unit</small>
               </div>
               <div class="col-lg-6 col-sm-12 fv-row">
                 <h2 class="fs-2">Excerpt En :</h2>
-                <textarea
-                  cols="50"
-                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
-                  type="text"
-                  name=""
-                  placeholder="English[expert]"
-                ></textarea>
+                <textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0l" [(ngModel)]="enExcerpt" placeholder="English[expert]" rows="2" name="en[excerpt]" cols="50"></textarea>
                 <small>display in list not show in unit</small>
               </div>
             </div>
@@ -66,9 +45,11 @@
           <div class="col-lg-12 p-y-30">
             <div class="row">
               <div class="col-lg-6 fv-row">
-                <label for="descriptionar">Descriptionar :</label>
+                <label for="descriptionar">Description ar :</label>
                 <!-- <textarea class="form-control tinymce" placeholder="Description" [(ngModel)]="enDescription" name="en[description]" cols="50" rows="10"></textarea> -->
                 <editor
+                  [(ngModel)]="arDescription"
+                  name = "ar[description]"
                   placeholder="Description"
                   cols="50"
                   rows="10"
@@ -80,8 +61,10 @@
                 ></editor>
               </div>
               <div class="col-lg-6 fv-row">
-                <label for="descriptionar">Descriptionen :</label>
+                <label for="descriptionar">Description en :</label>
                 <editor
+                  [(ngModel)]="enDescription"
+                  name = "en[description]"
                   placeholder="Description"
                   cols="50"
                   rows="10"
@@ -91,9 +74,9 @@
                     menubar: false
                   }"
                   toolbar="
-                                        undo redo | formatselect | bold italic backcolor | \
-                                        alignleft aligncenter alignright alignjustify | \
-                                        bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                    undo redo | formatselect | bold italic backcolor | \
+                    alignleft aligncenter alignright alignjustify | \
+                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
                 ></editor>
               </div>
             </div>
@@ -110,21 +93,21 @@
           </h2>
           <div class="col-lg-12 row">
             <div
-              *ngFor="let item of items; let i = index"
-              class="col-lg-3 fv-row"
-            >
-              <input
-                id="{{ i + 1 }}"
-                class="filled-in chk-col-brown form-check-input subcp"
-                onchange="return OptionsSelectedSubs(this)"
-                name="parent[]"
-                type="radio"
-                value="{{ i + 1 }}"
-              />
-              <label for="subcp_1" class="fs-2" style="padding-left: 8px">{{
-                item.name
-              }}</label>
-            </div>
+            *ngFor="let item of items; let i = index"
+            class="col-lg-3 fv-row"
+          >
+            <input
+              [(ngModel)]="parent"
+              id="{{ i + 1 }}"
+              class="filled-in chk-col-brown form-check-input subcp"
+              name="parent[]"
+              type="radio"
+              value="{{ i + 1 }}"
+            />
+            <label for="subcp_1" class="fs-2" style="padding-left: 8px">{{
+              item.name
+            }}</label>
+          </div>
           </div>
 
           <br />
@@ -134,6 +117,7 @@
             <h1 class="card-title fw-bolder text-muted fs-4">Logo :</h1>
             <!-- <div class="p-5 border rounded-lg">Choose File</div> -->
             <input
+              (change)="onFileSelected($event)"
               type="file"
               class="form-control-lg form-control-solid mb-3 mb-lg-0"
               name="image"
@@ -156,20 +140,26 @@
               class="form-check form-check-custom form-check-solid form-check-success form-switch"
             >
               <input
+                [(ngModel)] = "isActive"
+                name="is_active"
                 class="form-check-input"
                 type="checkbox"
-                name="model.app.sidebar.default.minimize.desktop.enabled"
-              />
+              selected/>
             </div>
             <span>ON</span>
           </div>
         </div>
+        <div class="col d-flex gap-2 align-items-center">
+          <button class="btn btn-md btn-secondary">Reset</button>
+          <button class="btn btn-md btn-success" type="submit">Save</button>
+          <button class="btn btn-md btn-primary">Save & create new</button>
+        </div>
       </form>
-      <div class="col d-flex gap-2 align-items-center">
+      <!-- <div class="col d-flex gap-2 align-items-center">
         <button class="btn btn-md btn-secondary">Reset</button>
         <button class="btn btn-md btn-success">Save</button>
         <button class="btn btn-md btn-primary">Save & create new</button>
-      </div>
+      </div> -->
     </div>
   </div>
 

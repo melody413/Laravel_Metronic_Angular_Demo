@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-create-body-part',
@@ -6,6 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-body-part.component.scss'],
 })
 export class CreateBodyPartComponent {
+  arName: string ;
+  arExcerpt: string ;
+  arDescription: string ;
+  enName: string ;
+  enExcerpt: string ;
+  enDescription: string ;
+  countryId: number ;
+  parent: string ;
+  image: File ;
+  isActive: boolean ;
+  hasError : boolean = false;
+
   content: string = '';
   constructor() {}
   items = [
@@ -89,5 +102,20 @@ export class CreateBodyPartComponent {
   ];
   save() {
     console.log(this.content);
+  }
+  create(){
+    if(this.arName==null || this.enName==null){
+      this.hasError = true;
+      return;
+    }
+    if(this.isActive == undefined){
+      this.isActive = false;
+    }
+    console.log(this.arName + this.parent + this.arDescription + this.isActive );
+  }
+  onFileSelected(event: any){
+    this.image = event.target.files[0];
+    console.log(this.image);
+
   }
 }

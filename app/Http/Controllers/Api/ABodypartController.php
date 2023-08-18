@@ -74,20 +74,38 @@ class ABodyPartController extends BaseController
         'body_parts' => $body_parts, 'body_parts_parent' => $body_parts_parent]);
     }
 
+    /**
+     * _token: oovpARb5OuBJLedqEPvB06FzoMPqXKUuSf3amDfD
+     *  module_name: 
+     *  ar[name]: asdf
+     *  ar[excerpt]: asdfasdfasdfasdfasd
+     *  ar[description]: fasdfasdf
+     *  en[name]: asdfasd
+     *  en[excerpt]: asdfasdfasdfasdfasdf
+     *  en[description]: 
+     *  country_id: 1
+     *  parent[]: 39
+     *  image: images.jpg
+     *  is_active: 1
+     */
     public function store(Request $request)
     {
-
         $id = $request->item_id;
         $postData = $request->except('_token');
 
         if($request->parent)
             $postData['parent'] = (implode(",", $request->parent));
             // dd($request->parent);
+        // $request->validate([
+        //     'ar.name' => 'required|max:255',
+        //     'en.name' => 'required|max:255'
+        // ]);
 
-        $request->validate([
-            'ar.name' => 'required|max:255',
-            'en.name' => 'required|max:255'
-        ]);
+        if($postData['country_id'] == null) $postData['country_id'] = 1;
+
+        if($postData['ar']['name'] == null || $postData['en']['name'] == null){
+            return response(['fail' => "input name correctly"], 400);
+        }
 
         if($id)
         {
@@ -105,7 +123,6 @@ class ABodyPartController extends BaseController
             $row->image = $image;
             $row->save();
         }
-
         if($request->has('image_delete'))
         {
             $row->image = '';
@@ -116,11 +133,8 @@ class ABodyPartController extends BaseController
             'flash_message' => trans('admin.save_success_message') ,
             'flash_type' => 'success' ,
         ];
+        return response(["result"=> $redirctMsg], 200);
 
-        if($request->input('saveNew'))
-            return redirect(route('admin.body_part.create'))->with($redirctMsg);
-
-        return redirect(route('admin.body_part.index'))->with($redirctMsg);
     }
 
     public function delete($id)

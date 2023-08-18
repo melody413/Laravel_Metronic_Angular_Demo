@@ -29,6 +29,12 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::post('/loginout', 'AuthController@logout')->name('loginout');
     Route::get('/dashboard', 'ADashboardController@home')->name('dashboard');
     Route::get('/bodypart/list', 'ABodypartController@index')->name('bodypart');
+    
+    Route::post('/bodypart/store', 'ABodypartController@store');
+
+
+
+
     Route::get('/disease/list', 'ADiseaseController@index')->name('disease');
     Route::get('/doctor/list', 'ADoctorController@index')->name('Adoctor');
     Route::get('/reservation/list', 'AReservationController@index')->name('Adoctor');    
