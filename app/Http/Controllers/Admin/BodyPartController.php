@@ -76,7 +76,6 @@ class BodyPartController extends BaseController
 
     public function store(Request $request)
     {
-
         $id = $request->item_id;
         $postData = $request->except('_token');
 
@@ -98,14 +97,13 @@ class BodyPartController extends BaseController
         {
             $row = BodyPart::create($postData);
         }
-
+        
         if($request->hasFile('image'))
         {
             $image = $this->moveFile($request->file('image') , 'body_parts/');
             $row->image = $image;
             $row->save();
         }
-
         if($request->has('image_delete'))
         {
             $row->image = '';

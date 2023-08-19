@@ -27,8 +27,8 @@ abstract class BaseController extends Controller
     {
         $directory = public_path('uploads/') . $path;
 
-        if (!Flysystem::connection('local')->createDir($directory))
-            throw new \Exception(sprintf('we can not create directory %s please give the root folder permission to write in it', $directory));
+        // if (!Flysystem::connection('local')->createDir($directory))
+        //     throw new \Exception(sprintf('we can not create directory %s please give the root folder permission to write in it', $directory));
 
         $fullName = null;
 

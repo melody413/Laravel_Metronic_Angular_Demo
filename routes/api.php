@@ -31,6 +31,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/bodypart/list', 'ABodypartController@index')->name('bodypart');
     
     Route::post('/bodypart/store', 'ABodypartController@store');
+    Route::get('/bodypart/create', 'ABodypartController@create');
 
 
 

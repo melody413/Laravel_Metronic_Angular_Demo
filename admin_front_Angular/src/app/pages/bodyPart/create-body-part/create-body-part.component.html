@@ -10,6 +10,7 @@
         novalidate
         class="form"
         (ngSubmit)="create()"
+        enctype="multipart/form-data"
       >
         <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
           Language Data
@@ -20,10 +21,13 @@
               <div class="col-lg-6 fv-col">
                 <h2 class="fs-2">Name Arabic :</h2>
                 <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="arName" name="ar[name]" type="text" value="">
+                <div *ngIf="errorMessage" class="error-message fs-6" style="color: red;">{{errorMessage}}</div>
+
               </div>
               <div class="col-lg-6">
                 <h2 class="fs-2">Name English :</h2>
                 <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="enName" name="en[name]" type="text" value="">
+                <div *ngIf="errorMessage" class="error-message fs-6" style="color: red;">{{errorMessage}}</div>
               </div>
             </div>
           </div>

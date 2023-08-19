@@ -1,26 +1,37 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, FormsModule } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-create-body-part',
   templateUrl: './create-body-part.component.html',
   styleUrls: ['./create-body-part.component.scss'],
 })
-export class CreateBodyPartComponent {
+
+export class CreateBodyPartComponent implements OnInit {
   arName: string ;
   arExcerpt: string ;
   arDescription: string ;
   enName: string ;
   enExcerpt: string ;
   enDescription: string ;
-  countryId: number ;
+  countryId: number = 1;
   parent: string ;
   image: File ;
   isActive: boolean ;
   hasError : boolean = false;
-
+  errorMessage : String;
   content: string = '';
-  constructor() {}
+
+  constructor(private http: HttpClient) {}
+
+  ngOnInit(): void {
+    this.http.get(environment.apiUrl+'bodypart/create')
+    .subscribe((response) => {
+      console.log(response);
+    })
+  }
+
   items = [
     { name: 'الجهاز الدوري' },
     { name: 'الأوعية الدموية' },
@@ -103,19 +114,40 @@ export class CreateBodyPartComponent {
   save() {
     console.log(this.content);
   }
+  //new body part process
   create(){
+    //validation process
     if(this.arName==null || this.enName==null){
-      this.hasError = true;
+      if(this.arName == null) this.errorMessage = "Please input the ar Name";
+      if(this.enName == null) this.errorMessage = "Please input the en Name";
       return;
     }
+
     if(this.isActive == undefined){
       this.isActive = false;
     }
-    console.log(this.arName + this.parent + this.arDescription + this.isActive );
+
+    const formData = new FormData();
+    formData.append('module_name', ''); // Add the appropriate value based on your requirement
+    formData.append('ar[name]', this.arName);
+    formData.append('ar[excerpt]', this.arExcerpt);
+    formData.append('ar[description]', this.arDescription);
+    formData.append('en[name]', this.enName);
+    formData.append('en[excerpt]', this.enExcerpt);
+    formData.append('en[description]', this.enDescription);
+    formData.append('country_id', this.countryId.toString());
+    formData.append('parent[]', this.parent);
+    formData.append('image', this.image);
+    formData.append('is_active', this.isActive ? '1' : '0');
+
+    this.http
+    .post('http://localhost:8000/api/api/bodypart/store', formData)
+    .subscribe((response) => {
+      console.log(response);
+    });
   }
   onFileSelected(event: any){
     this.image = event.target.files[0];
     console.log(this.image);
-
   }
 }

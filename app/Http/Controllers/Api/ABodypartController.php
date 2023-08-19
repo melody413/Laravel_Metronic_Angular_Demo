@@ -20,31 +20,27 @@ class ABodyPartController extends BaseController
     {
 
         $data = dataTable()
-                ->of( BodyPart::query() )
-                ->filterColumns(['id', 'slug'])
-                ->each(function ($row) {
-                    $parent = "";
-                    if ($row->parent)
-                        $parent = BodyPart::find($row->parent)->name;
+            ->of( BodyPart::query() )
+            ->filterColumns(['id', 'slug'])
+            ->each(function ($row) {
+                $parent = "";
+                if ($row->parent)
+                    $parent = BodyPart::find($row->parent)->name;
 
-                    return [
-                        $row->id,
-                        img_tag($row->image,'body_parts/'),
-                        isset($row->translate('ar')->name)?$row->translate('ar')->name:'',
-                        $parent,
-                        date('d-m-Y', strtotime($row->updated_at)),
-                        table_actions([
-                            'edit' => ['admin.body_part.edit', ['id' => $row->id]],
-                            //'copy' => ['admin.body_part.copy', ['id' => $row->id]],
-                            'delete' => ['admin.body_part.delete', ['id' => $row->id]]
-                        ])
-                    ];
-                })
-                ->rows()
-            ;
-
-
-
+                return [
+                    $row->id,
+                    img_tag($row->image,'body_parts/'),
+                    isset($row->translate('ar')->name)?$row->translate('ar')->name:'',
+                    $parent,
+                    date('d-m-Y', strtotime($row->updated_at)),
+                    table_actions([
+                        'edit' => ['admin.body_part.edit', ['id' => $row->id]],
+                        //'copy' => ['admin.body_part.copy', ['id' => $row->id]],
+                        'delete' => ['admin.body_part.delete', ['id' => $row->id]]
+                    ])
+                ];
+            })
+            ->rows();
         return response($data, 200);
 
     }
@@ -53,8 +49,8 @@ class ABodyPartController extends BaseController
     {
         view()->share(['action_title' => 'Create']);
         $body_parts = BodyPart::all();
-
-        return view($this->getTemplatePath('create'),['body_parts' => $body_parts]);
+        return response(['body_parts' => $body_parts], 200);
+        // return view($this->getTemplatePath('create'),['body_parts' => $body_parts]);
     }
 
     public function edit($id)
@@ -75,18 +71,17 @@ class ABodyPartController extends BaseController
     }
 
     /**
-     * _token: oovpARb5OuBJLedqEPvB06FzoMPqXKUuSf3amDfD
-     *  module_name: 
-     *  ar[name]: asdf
-     *  ar[excerpt]: asdfasdfasdfasdfasd
-     *  ar[description]: fasdfasdf
-     *  en[name]: asdfasd
-     *  en[excerpt]: asdfasdfasdfasdfasdf
-     *  en[description]: 
-     *  country_id: 1
-     *  parent[]: 39
-     *  image: images.jpg
-     *  is_active: 1
+     *  module_name: string
+     *  ar[name]: string
+     *  ar[excerpt]: string
+     *  ar[description]: string
+     *  en[name]: string
+     *  en[excerpt]: string
+     *  en[description]: string
+     *  country_id: number
+     *  parent[]: number
+     *  image: file
+     *  is_active: boolean
      */
     public function store(Request $request)
     {
@@ -95,11 +90,6 @@ class ABodyPartController extends BaseController
 
         if($request->parent)
             $postData['parent'] = (implode(",", $request->parent));
-            // dd($request->parent);
-        // $request->validate([
-        //     'ar.name' => 'required|max:255',
-        //     'en.name' => 'required|max:255'
-        // ]);
 
         if($postData['country_id'] == null) $postData['country_id'] = 1;
 
@@ -107,22 +97,32 @@ class ABodyPartController extends BaseController
             return response(['fail' => "input name correctly"], 400);
         }
 
+
         if($id)
         {
             $row = BodyPart::findOrFail($id);
             $row->update($postData);
+            return response(["result" => "update success"], 200);
         }
         else
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            } else {
+                $postData['image'] = '';
+            }
             $row = BodyPart::create($postData);
         }
-
         if($request->hasFile('image'))
-        {
+        {            
             $image = $this->moveFile($request->file('image') , 'body_parts/');
             $row->image = $image;
             $row->save();
-        }
+        } 
+        
+
         if($request->has('image_delete'))
         {
             $row->image = '';

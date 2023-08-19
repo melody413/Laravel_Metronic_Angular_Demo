@@ -3,13 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+
   production: false,
   tinyMceApiKey: '1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q',
 
   appVersion: 'v8.1.8',
   USERDATA_KEY: 'authf649fc9a5f55',
   isMockEnabled: true,
-   apiUrl: 'http://localhost:8000/api',
+   apiUrl: 'http://localhost:8000/api/api/',
    //apiUrl: 'api',
   appThemeName: 'Metronic',
   appPurchaseUrl: 'https://1.envato.market/EA4JP',
