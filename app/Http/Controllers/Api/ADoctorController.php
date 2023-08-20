@@ -31,8 +31,8 @@ class ADoctorController extends BaseController
     public function create(Request $request)
     {
         view()->share(['action_title' => 'Create']);
-
-        return view($this->getTemplatePath('create'));
+        return response(['action_title' => 'create'], 200);
+        // return view($this->getTemplatePath('create'));
     }
 
     public function edit($id)
@@ -53,9 +53,12 @@ class ADoctorController extends BaseController
         //dd($item->description);
         $tags_ar=''; $tags_en='';
         
-        return view($this->getTemplatePath('edit'), ['item' => $item, 'branch'=>$branch,
+        return response(['item' => $item, 'branch'=>$branch,
         'specialityIds' => $specialityIds, 'hospitals'=> $hospitals, 'insuranceCompanies'=> $insuranceCompanies, 
-        'tags'=> $tags, 'centers' => $centers]);
+        'tags'=> $tags, 'centers' => $centers], 200);
+        // return view($this->getTemplatePath('edit'), ['item' => $item, 'branch'=>$branch,
+        // 'specialityIds' => $specialityIds, 'hospitals'=> $hospitals, 'insuranceCompanies'=> $insuranceCompanies, 
+        // 'tags'=> $tags, 'centers' => $centers]);
     }
 
     public function store(Request $request)
@@ -162,20 +165,22 @@ class ADoctorController extends BaseController
         ];
 
         if($request->input('saveNew'))
-            return redirect(route('admin.doctor.create'))->with($redirctMsg);
+            return response(['next' => "savenew"]);
+            // return redirect(route('admin.doctor.create'))->with($redirctMsg);
 
-        return redirect(route('admin.doctor.edit', ['id' => $row->id]))->with($redirctMsg);
+        // return redirect(route('admin.doctor.edit', ['id' => $row->id]))->with($redirctMsg);
+        return response(['id' => $row->id], 200);
     }
-
     public function delete($id)
     {
         $row = Doctor::findOrFail($id);
         $row->delete();
-
-        return redirect(route('admin.doctor.index'))->with([
-            'flash_message' => trans('admin.delete_success_message') ,
-            'flash_type' => 'success' ,
-        ]);
+        return reponse(['flash_message' => trans('admin.delete_success_message') ,
+        'flash_type' => 'success'], 200);
+        // return redirect(route('admin.doctor.index'))->with([
+        //     'flash_message' => trans('admin.delete_success_message') ,
+        //     'flash_type' => 'success' ,
+        // ]);
     }
 
     public function saveBrnachInCreate($request, $postData, $id = null)
@@ -215,11 +220,12 @@ class ADoctorController extends BaseController
 
         $new = $row->replicateWithTranslations();
         $new->save();
-
-        return redirect(route('admin.doctor.index'))->with([
-            'flash_message' => trans('admin.copy_success_message') ,
-            'flash_type' => 'success' ,
-        ]);
+        return response(['flash_message' => trans('admin.copy_success_message') ,
+        'flash_type' => 'success'], 200);
+        // return redirect(route('admin.doctor.index'))->with([
+        //     'flash_message' => trans('admin.copy_success_message') ,
+        //     'flash_type' => 'success' ,
+        // ]);
     }
 
     public function getTemplateFolder()

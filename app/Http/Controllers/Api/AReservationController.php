@@ -64,8 +64,8 @@ class AReservationController extends BaseController
     public function view($id)
     {
         $item = Reservation::findOrFail($id);
-
-        return view($this->getTemplatePath('index'), compact(['id']));
+        return response(['result' => compact(['id'])], 200);
+        // return view($this->getTemplatePath('index'), compact(['id']));
     }
 
     public function create($id)
@@ -73,8 +73,8 @@ class AReservationController extends BaseController
         $doctor = Doctor::findOrFail($id);
 
         view()->share(['action_title' => 'Add New']);
-
-        return view($this->getTemplatePath('create'), ['doctor' => $doctor]);
+        return response(['doctor' => $doctor], 200);
+        // return view($this->getTemplatePath('create'), ['doctor' => $doctor]);
     }
 
     public function edit($id)
@@ -82,8 +82,8 @@ class AReservationController extends BaseController
         view()->share(['action_title' => 'Edit']);
 
         $item = Reservation::findOrFail($id);
-
-        return view($this->getTemplatePath('edit'), ['item' => $item]);
+        return response(['item' => $item], 200);
+        // return view($this->getTemplatePath('edit'), ['item' => $item]);
     }
 
     public function store(Request $request)
@@ -127,9 +127,8 @@ class AReservationController extends BaseController
         ];
 
         if($request->input('saveNew'))
-            return redirect(route('admin.reservation.index', ['id' => $row->doctor_id]))->with($redirctMsg);
-
-        return redirect(route('admin.reservation.index', ['id' => $row->doctor_id]))->with($redirctMsg);
+            return response([['id' => $row->doctor_id, 'next' => 'saveNew'], 200]);
+        return response(['id' => $row->doctor_id, 'next' => 'list'], 200);
     }
 
     public function delete($id)
@@ -137,11 +136,12 @@ class AReservationController extends BaseController
         $row = Reservation::findOrFail($id);
         $doctorId = $row->doctor_id;
         $row->delete();
-
-        return redirect(route('admin.reservation.index', ['id' => $doctorId]))->with([
-            'flash_message' => trans('admin.delete_success_message') ,
-            'flash_type' => 'success' ,
-        ]);
+        return response(['flash_message' => trans('admin.delete_success_message') ,
+        'flash_type' => 'success'], 200);
+        // return redirect(route('admin.reservation.index', ['id' => $doctorId]))->with([
+        //     'flash_message' => trans('admin.delete_success_message') ,
+        //     'flash_type' => 'success' ,
+        // ]);
     }
 
     public function getTemplateFolder()

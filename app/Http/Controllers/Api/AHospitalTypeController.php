@@ -45,8 +45,9 @@ class AHospitalTypeController extends BaseController
     public function create()
     {
         view()->share(['action_title' => 'Create']);
+        return response(['action_title' => 'Create'], 200);
 
-        return view($this->getTemplatePath('create'));
+        // return view($this->getTemplatePath('create'));
     }
 
     public function edit($id)
@@ -54,8 +55,9 @@ class AHospitalTypeController extends BaseController
         view()->share(['action_title' => 'Edit']);
 
         $item = HospitalType::findOrFail($id);
+        return response(['item' => $item], 200);
 
-        return view($this->getTemplatePath('edit'), ['item' => $item]);
+        // return view($this->getTemplatePath('edit'), ['item' => $item]);
     }
 
     public function store(Request $request)
@@ -97,20 +99,21 @@ class AHospitalTypeController extends BaseController
         ];
 
         if($request->input('saveNew'))
-            return redirect(route('admin.hospital_type.create'))->with($redirctMsg);
+            return response(['next' => "savenew"]);
 
-        return redirect(route('admin.hospital_type.index'))->with($redirctMsg);
+        return response(['id' => $row->id], 200);  
     }
 
     public function delete($id)
     {
         $row = HospitalType::findOrFail($id);
         $row->delete();
-
-        return redirect(route('admin.hospital_type.index'))->with([
-            'flash_message' => trans('admin.delete_success_message') ,
-            'flash_type' => 'success' ,
-        ]);
+        return response(['flash_message' => trans('admin.delete_success_message') ,
+            'flash_type' => 'success'], 200);
+        // return redirect(route('admin.hospital_type.index'))->with([
+        //     'flash_message' => trans('admin.delete_success_message') ,
+        //     'flash_type' => 'success' ,
+        // ]);
     }
 
     /*public function copy($id)

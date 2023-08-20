@@ -24,8 +24,8 @@ class ALabServiceController extends BaseController
     public function create()
     {
         view()->share(['action_title' => 'Create']);
-
-        return view($this->getTemplatePath('create'));
+        return response(['action_title' => 'Create'], 200);
+        // return view($this->getTemplatePath('create'));
     }
 
     public function edit($id)
@@ -34,9 +34,9 @@ class ALabServiceController extends BaseController
 
         $item = LabService::findOrFail($id);
         $categories_parent = (explode(",",$item->lab_category));
-
+        return response(['result' => compact('item', 'categories_parent')], 200);
         // return view($this->getTemplatePath('edit'), ['item' => $item]);
-        return view($this->getTemplatePath('edit'), compact('item', 'categories_parent'));
+        // return view($this->getTemplatePath('edit'), compact('item', 'categories_parent'));
 
     }
 
@@ -79,22 +79,26 @@ class ALabServiceController extends BaseController
             'flash_message' => trans('admin.save_success_message') ,
             'flash_type' => 'success' ,
         ];
-
         if($request->input('saveNew'))
-            return redirect(route('admin.lab_service.create'))->with($redirctMsg);
+            return response(['next' => "savenew"]);
 
-        return redirect(route('admin.lab_service.index'))->with($redirctMsg);
+        return response(['id' => $row->id], 200);
+        // if($request->input('saveNew'))
+        //     return redirect(route('admin.lab_service.create'))->with($redirctMsg);
+
+        // return redirect(route('admin.lab_service.index'))->with($redirctMsg);
     }
 
     public function delete($id)
     {
         $row = LabService::findOrFail($id);
         $row->delete();
-
-        return redirect(route('admin.lab_service.index'))->with([
-            'flash_message' => trans('admin.delete_success_message') ,
-            'flash_type' => 'success' ,
-        ]);
+        return response(['flash_message' => trans('admin.delete_success_message') ,
+        'flash_type' => 'success'], 200);
+        // return redirect(route('admin.lab_service.index'))->with([
+        //     'flash_message' => trans('admin.delete_success_message') ,
+        //     'flash_type' => 'success' ,
+        // ]);
     }
 
     public function copy($id)
@@ -105,11 +109,12 @@ class ALabServiceController extends BaseController
 
         $new = $row->replicateWithTranslations();
         $new->save();
-
-        return redirect(route('admin.lab_service.index'))->with([
-            'flash_message' => trans('admin.copy_success_message') ,
-            'flash_type' => 'success' ,
-        ]);
+        return response(['flash_message' => trans('admin.delete_success_message') ,
+        'flash_type' => 'success'], 200);
+        // return redirect(route('admin.lab_service.index'))->with([
+        //     'flash_message' => trans('admin.copy_success_message') ,
+        //     'flash_type' => 'success' ,
+        // ]);
     }
 
     public function getTemplateFolder()

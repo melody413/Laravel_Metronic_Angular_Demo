@@ -9,7 +9,7 @@ import { InlineSVGModule } from 'ng-inline-svg-2';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { FormsModule } from '@angular/forms';
-
+import { DataTablesModule } from "angular-datatables";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthService } from './modules/auth/services/auth.service';
@@ -92,6 +92,7 @@ function appInitializer(authService: AuthService) {
   ],
   imports: [
     // BodypartListModule,
+    DataTablesModule,
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,

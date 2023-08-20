@@ -49,8 +49,9 @@ class ACenterController extends BaseController
     public function create()
     {
         view()->share(['action_title' => 'Create']);
+        return response(['action_title' => 'Create'], 200);
 
-        return view($this->getTemplatePath('create'));
+        // return view($this->getTemplatePath('create'));
     }
 
     public function edit($id)
@@ -62,8 +63,9 @@ class ACenterController extends BaseController
         //$centerTypeIds = $item->center_types()->pluck('center_type_id')->toArray();
 
         $insuranceCompanies = $item->insuranceCompanies->pluck('name', 'id');
+        return response(['item' => $item, 'specialityIds'=> $specialityIds/*, 'centerTypeIds'=> $centerTypeIds*/, 'insuranceCompanies' => $insuranceCompanies], 200);
 
-        return view($this->getTemplatePath('edit'), ['item' => $item, 'specialityIds'=> $specialityIds/*, 'centerTypeIds'=> $centerTypeIds*/, 'insuranceCompanies' => $insuranceCompanies]);
+        // return view($this->getTemplatePath('edit'), ['item' => $item, 'specialityIds'=> $specialityIds/*, 'centerTypeIds'=> $centerTypeIds*/, 'insuranceCompanies' => $insuranceCompanies]);
     }
 
     public function store(Request $request)
@@ -133,11 +135,10 @@ class ACenterController extends BaseController
             'flash_message' => trans('admin.save_success_message') ,
             'flash_type' => 'success' ,
         ];
-
         if($request->input('saveNew'))
-            return redirect(route('admin.center.create'))->with($redirctMsg);
+            return response(['next' => "savenew"]);
 
-        return redirect(route('admin.center.edit', ['id' => $row->id]))->with($redirctMsg);
+        return response(['id' => $row->id], 200);  
     }
 
     public function delete($id)
@@ -145,10 +146,8 @@ class ACenterController extends BaseController
         $row = Center::findOrFail($id);
         $row->delete();
 
-        return redirect(route('admin.center.index'))->with([
-            'flash_message' => trans('admin.delete_success_message') ,
-            'flash_type' => 'success' ,
-        ]);
+        return response(['flash_message' => trans('admin.delete_success_message') ,
+            'flash_type' => 'success'], 200);
     }
 
     public function copy($id)
@@ -160,10 +159,8 @@ class ACenterController extends BaseController
         $new = $row->replicateWithTranslations();
         $new->save();
 
-        return redirect(route('admin.center.index'))->with([
-            'flash_message' => trans('admin.copy_success_message') ,
-            'flash_type' => 'success' ,
-        ]);
+        return response(['flash_message' => trans('admin.delete_success_message') ,
+            'flash_type' => 'success'], 200);
     }
 
     public function getTemplateFolder()

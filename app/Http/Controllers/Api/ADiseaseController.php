@@ -44,8 +44,7 @@ class ADiseaseController extends BaseController
     {
         view()->share(['action_title' => 'Create']);
         $diseases = Disease::all();
-
-        return view($this->getTemplatePath('create'),['diseases' => $diseases]);
+        return response(['diseases' => $diseases], 200);
     }
 
     public function edit($id)
@@ -67,9 +66,9 @@ class ADiseaseController extends BaseController
         if($item->symptom_ids)
             $symps_parent = array_map('intval', json_decode($item->symptom_ids, true));
 
+        return response(['item' => $item,
+        'diseases' => $diseases, 'diseases_parent' => $diseases_parent, 'bps_parent' => $bps_parent, 'symps_parent' => $symps_parent], 200);
         // dd($diseases_parent);
-        return view($this->getTemplatePath('edit'), ['item' => $item,
-        'diseases' => $diseases, 'diseases_parent' => $diseases_parent, 'bps_parent' => $bps_parent, 'symps_parent' => $symps_parent]);
     }
 
     public function store(Request $request)
@@ -130,9 +129,10 @@ class ADiseaseController extends BaseController
         ];
 
         if($request->input('saveNew'))
-            return redirect(route('admin.disease.create'))->with($redirctMsg);
-
-        return redirect(route('admin.disease.index'))->with($redirctMsg);
+            return response(['result' => 'savenew'], 200);
+            // return redirect(route('admin.disease.create'))->with($redirctMsg);
+        return response(['result' => 'list'], 200);
+        // return redirect(route('admin.disease.index'))->with($redirctMsg);
     }
 
     public function delete($id)
@@ -140,10 +140,10 @@ class ADiseaseController extends BaseController
         $row = Disease::findOrFail($id);
         $row->delete();
 
-        return redirect(route('admin.disease.index'))->with([
+        return response([
             'flash_message' => trans('admin.delete_success_message') ,
             'flash_type' => 'success' ,
-        ]);
+        ], 200);
     }
 
     public function copy($id)
@@ -155,10 +155,10 @@ class ADiseaseController extends BaseController
         $new = $row->replicateWithTranslations();
         $new->save();
 
-        return redirect(route('admin.disease.index'))->with([
+        return response([
             'flash_message' => trans('admin.copy_success_message') ,
             'flash_type' => 'success' ,
-        ]);
+        ], 200);
     }
 
     public function getTemplateFolder()

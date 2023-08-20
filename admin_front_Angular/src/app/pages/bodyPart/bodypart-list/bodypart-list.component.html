@@ -8,7 +8,7 @@
     data-bs-trigger="hover"
     title="Click to add a user"
   >
-    <a class="btn btn-sm btn-primary"> + New Member </a>
+    <a class="btn btn-sm btn-primary"> + New Member{{tmp1}} </a>
   </div>
 </div>
 <!-- end::Header -->
@@ -23,7 +23,7 @@
       <!-- begin::Table head -->
       <thead>
         <tr class="fw-bolder text-muted">
-          <th class="min-w-240px">ID#</th>
+          <th class="min-w-240px">ID</th>
           <th class="min-w-250px">LOGO</th>
           <th class="min-w-240px">NAME AR</th>
           <th class="min-w-220px">PARENT</th>
@@ -34,9 +34,19 @@
       <!-- end::Table head -->
       <!-- begin::Table body -->
       <tbody>
-        <tr>
-          <td>#1</td>
+        <tr *ngFor="let data of tabledata">
+          <td>1</td>
+          <td [innerHTML]="data[1]"></td>
+          <td>{{ data[2] }}</td>
+          <td>{{ data[3] }}</td>
+          <td>{{ data[4] }}</td>
+          <td>{{ data[5] }}</td>
+        </tr>
+        <!-- <tr *ngFor="let data of list_data; let i = index">
+          
+          <td>{{data[0]}}</td>
           <td>
+            [innerHTML]="data[1]"
             <div class="d-flex align-items-center">
               <div class="symbol symbol-45px me-5">
                 <img src="./assets/media/avatars/300-14.jpg" alt="" />
@@ -65,71 +75,7 @@
               DELETE
             </button>
           </td>
-        </tr>
-        <tr>
-          <td>#2</td>
-          <td>
-            <div class="d-flex align-items-center">
-              <div class="symbol symbol-45px me-5">
-                <img src="./assets/media/avatars/300-3.jpg" alt="" />
-              </div>
-              <div class="d-flex justify-content-start flex-column">
-                <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-                  Ana Simmons
-                </a>
-                <span class="text-muted fw-bold text-muted d-block fs-7">
-                  HTML, JS, ReactJS
-                </span>
-              </div>
-            </div>
-          </td>
-          <td>Yevhenii Perekiata</td>
-          <td>Quilting device</td>
-          <td>2023.04.13</td>
-          <td>
-            <button class="btn btn-sm btn-primary" style="margin: 5px">
-              EDIT
-            </button>
-            <button
-              class="btn btn-sm red"
-              style="background-color: rgb(226, 17, 17); margin: 5px"
-            >
-              DELETE
-            </button>
-          </td>
-        </tr>
-        <tr>
-          <td>#3</td>
-          <td>
-            <div class="d-flex align-items-center">
-              <div class="symbol symbol-45px me-5">
-                <img src="./assets/media/avatars/300-2.jpg" alt="" />
-              </div>
-              <div class="d-flex justify-content-start flex-column">
-                <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-                  Ana Simmons
-                </a>
-                <span class="text-muted fw-bold text-muted d-block fs-7">
-                  HTML, JS, ReactJS
-                </span>
-              </div>
-            </div>
-          </td>
-          <td>Yevhenii Perekiata</td>
-          <td>Quilting device</td>
-          <td>2023.04.13</td>
-          <td>
-            <button class="btn btn-sm btn-primary" style="margin: 5px">
-              EDIT
-            </button>
-            <button
-              class="btn btn-sm red"
-              style="background-color: rgb(226, 17, 17); margin: 5px"
-            >
-              DELETE
-            </button>
-          </td>
-        </tr>
+        </tr> -->
       </tbody>
       <!-- end::Table body -->
     </table>

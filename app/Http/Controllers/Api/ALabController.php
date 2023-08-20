@@ -28,8 +28,8 @@ class ALabController extends BaseController
         view()->share(['action_title' => 'Create']);
 
         $this->formData();
-
-        return view($this->getTemplatePath('create'));
+        return response(['action_title' => 'Create']);
+        // return view($this->getTemplatePath('create'));
     }
 
     public function edit($id)
@@ -42,8 +42,8 @@ class ALabController extends BaseController
         $labServicesId = $item->labServices()->pluck('lab_service_id')->toArray();
 
         $insuranceCompanies = $item->insuranceCompanies()->listsTranslations('name')->pluck('name','id')->toArray();
-
-        return view($this->getTemplatePath('edit'), ['item' => $item, 'labServicesId'=> $labServicesId, 'insuranceCompanies' => $insuranceCompanies]);
+        return response(['item' => $item, 'labServicesId'=> $labServicesId, 'insuranceCompanies' => $insuranceCompanies], 200);
+        // return view($this->getTemplatePath('edit'), ['item' => $item, 'labServicesId'=> $labServicesId, 'insuranceCompanies' => $insuranceCompanies]);
     }
 
     public function store(Request $request)
@@ -99,20 +99,25 @@ class ALabController extends BaseController
         ];
 
         if($request->input('saveNew'))
-            return redirect(route('admin.lab.create'))->with($redirctMsg);
+            return response(['next' => 'saveNew'], 200);
+            // return redirect(route('admin.lab.create'))->with($redirctMsg);
 
-        return redirect(route('admin.lab.index'))->with($redirctMsg);
+        return response(['next' => 'list'], 200);
+        // return redirect(route('admin.lab.index'))->with($redirctMsg);
     }
 
     public function delete($id)
     {
         $row = Lab::findOrFail($id);
         $row->delete();
-
-        return redirect(route('admin.lab.index'))->with([
+        return response([
             'flash_message' => trans('admin.delete_success_message') ,
             'flash_type' => 'success' ,
-        ]);
+        ], 200);
+        // return redirect(route('admin.lab.index'))->with([
+        //     'flash_message' => trans('admin.delete_success_message') ,
+        //     'flash_type' => 'success' ,
+        // ]);
     }
 
     public function formData()

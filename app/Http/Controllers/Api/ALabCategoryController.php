@@ -28,7 +28,9 @@ class ALabCategoryController extends BaseController
     {
         view()->share(['action_title' => 'Create']);
         $this->formData();
-        return view($this->getTemplatePath('create'));
+        return response(['action_title' => 'Create'], 200);
+
+        // return view($this->getTemplatePath('create'));
     }
 
     public function edit($id)
@@ -37,8 +39,9 @@ class ALabCategoryController extends BaseController
         $this->formData();
         $item = LabCategory::findOrFail($id);
         $categories_parent = $item->lab_category;
+        return response(['result' => compact('item', 'categories_parent')], 200);
 
-        return view($this->getTemplatePath('edit'), compact('item', 'categories_parent'));
+        // return view($this->getTemplatePath('edit'), compact('item', 'categories_parent'));
     }
 
     public function store(Request $request)
@@ -94,22 +97,26 @@ class ALabCategoryController extends BaseController
             'flash_message' => trans('admin.save_success_message') ,
             'flash_type' => 'success' ,
         ];
-
         if($request->input('saveNew'))
-            return redirect(route('admin.lab_category.create'))->with($redirctMsg);
+            return response(['next' => "savenew"]);
 
-        return redirect(route('admin.lab_category.index'))->with($redirctMsg);
+        return response(['id' => $row->id], 200);
+        // if($request->input('saveNew'))
+        //     return redirect(route('admin.lab_category.create'))->with($redirctMsg);
+
+        // return redirect(route('admin.lab_category.index'))->with($redirctMsg);
     }
 
     public function delete($id)
     {
         $row = LabCategory::findOrFail($id);
         $row->delete();
-
-        return redirect(route('admin.lab_category.index'))->with([
-            'flash_message' => trans('admin.delete_success_message') ,
-            'flash_type' => 'success' ,
-        ]);
+        return response(['flash_message' => trans('admin.delete_success_message') ,
+        'flash_type' => 'success'], 200);
+        // return redirect(route('admin.lab_category.index'))->with([
+        //     'flash_message' => trans('admin.delete_success_message') ,
+        //     'flash_type' => 'success' ,
+        // ]);
     }
 
     public function formData()

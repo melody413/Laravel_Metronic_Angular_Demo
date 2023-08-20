@@ -64,10 +64,9 @@ class ABodyPartController extends BaseController
         // if($item->parent)
         //     $body_parts_parent = array_map('intval', json_decode($item->parent, true));
         $body_parts_parent = (explode(",",$item->parent));
-
         // dd($body_parts_parent);
-        return view($this->getTemplatePath('edit'), ['item' => $item,
-        'body_parts' => $body_parts, 'body_parts_parent' => $body_parts_parent]);
+        return response(['item' => $item,
+        'body_parts' => $body_parts, 'body_parts_parent' => $body_parts_parent], 200);
     }
 
     /**
@@ -141,11 +140,10 @@ class ABodyPartController extends BaseController
     {
         $row = BodyPart::findOrFail($id);
         $row->delete();
-
-        return redirect(route('admin.body_part.index'))->with([
+        return response([
             'flash_message' => trans('admin.delete_success_message') ,
             'flash_type' => 'success' ,
-        ]);
+        ], 200);
     }
 
     public function copy($id)
@@ -157,10 +155,8 @@ class ABodyPartController extends BaseController
         $new = $row->replicateWithTranslations();
         $new->save();
 
-        return redirect(route('admin.body_part.index'))->with([
-            'flash_message' => trans('admin.copy_success_message') ,
-            'flash_type' => 'success' ,
-        ]);
+        return response(['flash_message' => trans('admin.copy_success_message') ,
+        'flash_type' => 'success' ,], 200);
     }
 
     public function getTemplateFolder()

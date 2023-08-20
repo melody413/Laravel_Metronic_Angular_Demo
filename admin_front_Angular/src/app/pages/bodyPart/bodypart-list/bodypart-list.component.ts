@@ -1,9 +1,7 @@
-import { AfterViewInit, Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
-import { ADTSettings,  } from 'angular-datatables/src/models/settings';
-import { Subject } from 'rxjs';
+import { Component, OnInit, OnChanges, Input, ChangeDetectorRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { TableModule, SharedModule } from '@coreui/angular';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-bodypart-list',
@@ -11,11 +9,24 @@ import { TableModule, SharedModule } from '@coreui/angular';
   styleUrls: ['./bodypart-list.component.scss']
 })
 export class BodypartListComponent implements OnInit{
-  constructor(private http: HttpClient) { }
-  ngOnInit(): void {
-      this.http.get(environment.apiUrl + "bodypart/list").
-      subscribe((response)=>{
-        console.log(response);
-      })
+  tabledata : any[];
+  tmp1 : string ;
+  constructor(private http: HttpClient, private cdr: ChangeDetectorRef) { }
+
+  ngOnInit(){
+    this.http.get<any>(environment.apiUrl + "bodypart/list").
+      subscribe((response) => {        
+        this.tabledata = response.data;
+        this.tmp1 = "1231231";
+        console.log(typeof response.data);
+        console.log(this.tabledata);
+      });
+    this.tmp1 = "1231231";    
+    this.updateData();
   }
+
+  updateData() {
+    this.cdr.detectChanges(); // Manually trigger change detection
+  }
+
 }
