@@ -73,12 +73,6 @@ class ADiseaseController extends BaseController
 
     public function store(Request $request)
     {
-        if($request->parent_ids)
-            $request->parent_ids = (implode(",", $request->parent_ids));
-
-        if($request->body_part_ids)
-            $request->body_part_ids = (implode(",", $request->body_part_ids));
-
         if($request->symptom_ids)
             $request->symptom_ids = (implode(",", $request->symptom_ids));
 
@@ -130,9 +124,7 @@ class ADiseaseController extends BaseController
 
         if($request->input('saveNew'))
             return response(['result' => 'savenew'], 200);
-            // return redirect(route('admin.disease.create'))->with($redirctMsg);
         return response(['result' => 'list'], 200);
-        // return redirect(route('admin.disease.index'))->with($redirctMsg);
     }
 
     public function delete($id)

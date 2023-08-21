@@ -90,10 +90,11 @@ class DiseaseController extends BaseController
         $id = $request->item_id;
         $postData = $request->except('_token');
 
-        $request->validate([
-            'ar.name' => 'required|max:255',
-            'en.name' => 'required|max:255'
-        ]);
+        var_dump($postData); die();
+        // $request->validate([
+        //     'ar.name' => 'required|max:255',
+        //     'en.name' => 'required|max:255'
+        // ]);
 
         if($id)
         {
@@ -103,6 +104,7 @@ class DiseaseController extends BaseController
         else
         {
             $row = Disease::create($postData);
+            
         }
 
         if($request->has('specialties'))

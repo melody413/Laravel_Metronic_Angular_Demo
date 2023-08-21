@@ -2,15 +2,15 @@
 <div class="card">
   <div class="card-body">
     <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
-      create-disease
+      Create disease
     </h1>
     <hr />
     <div class="card-body">
       <form
         novalidate
         class="form"
-        method="post"
-        action="http://localhost:8000/admin/body_part/store"
+        (ngSubmit)="create()"
+        enctype="multipart/form-data"
       >
         <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
           Language Data
@@ -23,7 +23,8 @@
                 <input
                   class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
                   type="text"
-                  name=""
+                  name="arName"
+                  [(ngModel)] = "arName"
                 />
               </div>
               <div class="col-lg-6">
@@ -31,7 +32,8 @@
                 <input
                   class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
                   type="text"
-                  name=""
+                  name="enName"
+                  [(ngModel)] = "enName"
                 />
               </div>
             </div>
@@ -44,7 +46,8 @@
                   cols="50"
                   class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
                   type="text"
-                  name=""
+                  name="arExcerpt"
+                  [(ngModel)] = "arExcerpt"
                   placeholder="Arabic[expert]"
                 ></textarea>
                 <small>display in list not show in unit</small>
@@ -55,7 +58,8 @@
                   cols="50"
                   class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
                   type="text"
-                  name=""
+                  name="enExcerpt"
+                  [(ngModel)] = "enExcerpt"
                   placeholder="English[expert]"
                 ></textarea>
                 <small>display in list not show in unit</small>
@@ -63,18 +67,16 @@
             </div>
           </div>
 
-          <div
-            *ngFor="let desItem of desItems; let i = index"
-            class="col-lg-12 p-y-30"
-          >
+          <div class="col-lg-12 p-y-30">
             <div class="row">
               <div class="col-lg-6 fv-row">
-                <label for="{{ desItem.title }}"
-                  >{{ desItem.title }} Ar :</label
+                <label for="Description"
+                  >Description Ar :</label
                 >
-                <!-- <textarea class="form-control tinymce" placeholder="Description" [(ngModel)]="enDescription" name="en[description]" cols="50" rows="10"></textarea> -->
                 <editor
-                  id="{{ desItem.title }}"
+                  name = "arDescription"
+                  [(ngModel)] = "arDescription"
+                  id="Description"
                   cols="50"
                   rows="10"
                   apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
@@ -85,8 +87,10 @@
                 ></editor>
               </div>
               <div class="col-lg-6 fv-row">
-                <label for="descriptionar">{{ desItem.title }} En :</label>
+                <label>Description En :</label>
                 <editor
+                  [(ngModel)] = "enDescription"
+                  name = "enDescription"
                   placeholder="Description"
                   cols="50"
                   rows="10"
@@ -96,13 +100,297 @@
                     menubar: false
                   }"
                   toolbar="
-                                        undo redo | formatselect | bold italic backcolor | \
-                                        alignleft aligncenter alignright alignjustify | \
-                                        bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                    undo redo | formatselect | bold italic backcolor | \
+                    alignleft aligncenter alignright alignjustify | \
+                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
                 ></editor>
               </div>
             </div>
           </div>
+
+          <div class="col-lg-12 p-y-30">
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <label for="Symptoms"
+                  >Symptoms Ar :</label
+                >
+                <editor
+                  name = "arSymptoms"
+                  [(ngModel)] = "arSymptoms"
+                  id="Symptoms"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                ></editor>
+              </div>
+              <div class="col-lg-6 fv-row">
+                <label>Symptoms En :</label>
+                <editor
+                  [(ngModel)] = "enSymptoms"
+                  name = "enSymptoms"
+                  placeholder="Symptoms"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                  toolbar="
+                    undo redo | formatselect | bold italic backcolor | \
+                    alignleft aligncenter alignright alignjustify | \
+                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                ></editor>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-12 p-y-30">
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <label for="Causes"
+                  >Causes Ar :</label
+                >
+                <editor
+                  name = "arCauses"
+                  [(ngModel)] = "arCauses"
+                  id="Causes"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                ></editor>
+              </div>
+              <div class="col-lg-6 fv-row">
+                <label>Causes En :</label>
+                <editor
+                  [(ngModel)] = "enCauses"
+                  name = "enCauses"
+                  placeholder="Causes"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                  toolbar="
+                    undo redo | formatselect | bold italic backcolor | \
+                    alignleft aligncenter alignright alignjustify | \
+                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                ></editor>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 p-y-30">
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <label for="Complications"
+                  >Complications Ar :</label
+                >
+                <editor
+                  name = "arComplications"
+                  [(ngModel)] = "arComplications"
+                  id="Complications"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                ></editor>
+              </div>
+              <div class="col-lg-6 fv-row">
+                <label>Complications En :</label>
+                <editor
+                  [(ngModel)] = "enComplications"
+                  name = "enComplications"
+                  placeholder="Complications"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                  toolbar="
+                    undo redo | formatselect | bold italic backcolor | \
+                    alignleft aligncenter alignright alignjustify | \
+                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                ></editor>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 p-y-30">
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <label for="Diagnosis"
+                  >Diagnosis Ar :</label
+                >
+                <editor
+                  name = "arDiagnosis"
+                  [(ngModel)] = "arDiagnosis"
+                  id="Diagnosis"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                ></editor>
+              </div>
+              <div class="col-lg-6 fv-row">
+                <label>Diagnosis En :</label>
+                <editor
+                  [(ngModel)] = "enDiagnosis"
+                  name = "enDiagnosis"
+                  placeholder="Diagnosis"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                  toolbar="
+                    undo redo | formatselect | bold italic backcolor | \
+                    alignleft aligncenter alignright alignjustify | \
+                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                ></editor>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 p-y-30">
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <label for="Treatment"
+                  >Treatment Ar :</label
+                >
+                <editor
+                  name = "arTreatment"
+                  [(ngModel)] = "arTreatment"
+                  id="Treatment"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                ></editor>
+              </div>
+              <div class="col-lg-6 fv-row">
+                <label>Treatment En :</label>
+                <editor
+                  [(ngModel)] = "enTreatment"
+                  name = "enTreatment"
+                  placeholder="Treatment"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                  toolbar="
+                    undo redo | formatselect | bold italic backcolor | \
+                    alignleft aligncenter alignright alignjustify | \
+                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                ></editor>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 p-y-30">
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <label for="Protection"
+                  >Protection Ar :</label
+                >
+                <editor
+                  name = "arProtection"
+                  [(ngModel)] = "arProtection"
+                  id="Protection"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                ></editor>
+              </div>
+              <div class="col-lg-6 fv-row">
+                <label>Protection En :</label>
+                <editor
+                  [(ngModel)] = "enProtection"
+                  name = "enProtection"
+                  placeholder="Protection"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                  toolbar="
+                    undo redo | formatselect | bold italic backcolor | \
+                    alignleft aligncenter alignright alignjustify | \
+                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                ></editor>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 p-y-30">
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <label for="Description"
+                  >Alternative_therapies Ar :</label
+                >
+                <editor
+                  name = "arAlternative_therapies"
+                  [(ngModel)] = "arAlternative_therapies"
+                  id="Alternative_therapies"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                ></editor>
+              </div>
+              <div class="col-lg-6 fv-row">
+                <label>Alternative_therapies En :</label>
+                <editor
+                  [(ngModel)] = "enAlternative_therapies"
+                  name = "enAlternative_therapies"
+                  placeholder="Alternative_therapies"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                  toolbar="
+                    undo redo | formatselect | bold italic backcolor | \
+                    alignleft aligncenter alignright alignjustify | \
+                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                ></editor>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
@@ -112,14 +400,17 @@
           <h2 class="card-title fw-bolder text-hover-primary fs-2">
             Parent Disease:
           </h2>
-          <div class="fv-row">
+          <div
+            *ngFor="let item of parentdisease; let i = index"
+            class="col-lg-3 fv-row"
+          >            
             <input
-              id="parent-disease"
               class="filled-in chk-col-brown form-check-input subcp"
-              onchange="return OptionsSelectedSubs(this)"
-              name="parent[]"
+              name="parent_ids[]"
               type="checkbox"
-              value="parent-disease"
+              [value]="i + 1"
+              [checked]="parent_ids.includes(i + 1)"
+              (change)="toggleCheckbox_parent_ids(i + 1)"
             />
             <label for="parent-disease" class="fs-2" style="padding-left: 8px"
               >الدوالي</label
@@ -133,16 +424,16 @@
           </h2>
           <div class="col-lg-12 row">
             <div
-              *ngFor="let item of items; let i = index"
+              *ngFor="let item of parentBodyIds; let i = index"
               class="col-lg-3 fv-row"
             >
               <input
-                id="{{ i + 1 }}"
+                [value]="i + 1"
+                name="parentBodyIds[]"
                 class="filled-in chk-col-brown form-check-input subcp"
-                onchange="return OptionsSelectedSubs(this)"
-                name="parent[]"
                 type="checkbox"
-                value="{{ i + 1 }}"
+                [checked]="body_part_ids.includes(i + 1)"
+                (change)="toggleCheckbox_body_part_ids(i + 1)"
               />
               <label for="subcp_1" class="fs-2" style="padding-left: 8px">{{
                 item.name
@@ -184,20 +475,22 @@
               class="form-check form-check-custom form-check-solid form-check-success form-switch"
             >
               <input
+                [(ngModel)]="is_active"
                 class="form-check-input"
                 type="checkbox"
-                name="model.app.sidebar.default.minimize.desktop.enabled"
+                name="is_active"
               />
             </div>
             <span>ON</span>
           </div>
         </div>
+        <div class="col d-flex gap-2 align-items-center">
+          <button class="btn btn-md btn-secondary">Reset</button>
+          <button class="btn btn-md btn-success" type="submit">Save</button>
+          <button class="btn btn-md btn-primary">Save & create new</button>
+        </div>
       </form>
-      <div class="col d-flex gap-2 align-items-center">
-        <button class="btn btn-md btn-secondary">Reset</button>
-        <button class="btn btn-md btn-success">Save</button>
-        <button class="btn btn-md btn-primary">Save & create new</button>
-      </div>
+      
     </div>
   </div>
 

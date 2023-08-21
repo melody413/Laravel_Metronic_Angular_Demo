@@ -114,7 +114,8 @@ export class CreateBodyPartComponent implements OnInit {
   save() {
     console.log(this.content);
   }
-  //new body part process
+  
+  //save btn 
   create(){
     //validation process
     if(this.arName==null || this.enName==null){
