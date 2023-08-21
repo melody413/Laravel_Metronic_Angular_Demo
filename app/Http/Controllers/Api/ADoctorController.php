@@ -92,9 +92,15 @@ class ADoctorController extends BaseController
         }
         else
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            } else {
+                $postData['image'] = '';
+            }
             $row = Doctor::create($postData);
         }
-
         $postData['doctor_id'] = $row->id;
         //get first branch id
         $branch = DoctorBranch::where('doctor_id', $row->id)->first();

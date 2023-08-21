@@ -77,7 +77,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/pharmacy_company/copy/{id}', 'APharmacyCompanyController@copy' );
     Route::post('/pharmacy_company/store', 'APharmacyCompanyController@store' );
 
-    //
+    //Lab Service API
     Route::get('/lab_services/list', 'ALabServiceController@index');
     Route::get('/lab_services/create', 'ALabServiceController@create' );
     Route::get('/lab_services/edit/{id}', 'ALabServiceController@edit' );
@@ -149,5 +149,8 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/symptom/delete/{id}','ASymptomController@delete');
     Route::get('/symptom/copy/{id}','ASymptomController@copy' );
     Route::post('/symptom/store', 'ASymptomController@store');
+
+    //Multiple Image process
+    Route::any('/data/uploadImages', 'ADataFormController@uploadImages');
 
 });
