@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Api;
 
 use App\Mangers\DataTableManger;
 use Okipa\LaravelTable\TableList;
@@ -10,8 +10,9 @@ use App\Models\MedicinesCompany;
 use App\Models\MedicinesScName;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use App\Http\Controllers\Admin\BaseController;
 
-class MedicineController extends BaseController
+class AMedicineController extends BaseController
 {
     public function init()
     {
@@ -22,7 +23,7 @@ class MedicineController extends BaseController
     {
         $medicines = Medicine::search($request->q)->orderByRaw('created_at DESC')->paginate(15)->fragment('medicines');
         // dd($medicines);
-        return view($this->getTemplatePath('index'), [/*$table,*/ "medicines" => $medicines]);
+        return response(["medicines" => $medicines], 200);
     }
 
     public function create()
@@ -31,8 +32,8 @@ class MedicineController extends BaseController
         $companies = MedicinesCompany::all();
         $medicines_sc_names = MedicinesScName::all();
         $categories = MedicinesCategory::all();
-
-        return view($this->getTemplatePath('create'), compact('companies', 'medicines_sc_names', 'categories'));
+        return response(["result" => compact('companies', 'medicines_sc_names', 'categories')], 200);
+        // return view($this->getTemplatePath('create'), compact('companies', 'medicines_sc_names', 'categories'));
     }
 
     public function edit($id)
@@ -61,8 +62,8 @@ class MedicineController extends BaseController
         $drug_classes =  MedicinesCategory::all();
         $available_strengthes = MedicinesCategory::all();
         //dd($companies[0]->translate('ar')->name);
-        return view($this->getTemplatePath('edit'), compact('item', 'bps_parent', 'symps_parent', 'drug_classes', 'available_strengthes',
-         'companies', 'medicines_sc_names', 'categories', 'categories_parent') );
+        return response(["result" => compact('item', 'bps_parent', 'symps_parent', 'drug_classes', 
+        'available_strengthes','companies', 'medicines_sc_names', 'categories', 'categories_parent')], 200);
     }
 
     public function store(Request $request)
@@ -115,10 +116,11 @@ class MedicineController extends BaseController
             'flash_type' => 'success' ,
         ];
 
-        if($request->input('saveNew'))
-            return redirect(route('admin.medicine.create'))->with($redirctMsg);
 
-        return redirect(route('admin.medicine.index'))->with($redirctMsg);
+        if($request->input('saveNew'))
+            return response(['next' => "savenew"]);
+
+        return response(['id' => $row->id], 200);
     }
 
     public function delete($id)
@@ -126,10 +128,8 @@ class MedicineController extends BaseController
         $row = Medicine::findOrFail($id);
         $row->delete();
 
-        return redirect(route('admin.medicine.index'))->with([
-            'flash_message' => trans('admin.delete_success_message') ,
-            'flash_type' => 'success' ,
-        ]);
+        return reponse(['flash_message' => trans('admin.delete_success_message') ,
+        'flash_type' => 'success'], 200);
     }
 
     public function copy($id)
@@ -140,11 +140,8 @@ class MedicineController extends BaseController
 
         $new = $row->replicateWithTranslations();
         $new->save();
-
-        return redirect(route('admin.medicine.index'))->with([
-            'flash_message' => trans('admin.copy_success_message') ,
-            'flash_type' => 'success' ,
-        ]);
+        return response(['flash_message' => trans('admin.copy_success_message') ,
+        'flash_type' => 'success'], 200);
     }
 
     public function getTemplateFolder()

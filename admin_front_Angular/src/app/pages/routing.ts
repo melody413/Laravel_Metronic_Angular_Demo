@@ -24,7 +24,6 @@ import { HospitalListComponent } from './hospital/hospital-list/hospital-list.co
 import { CreatehospitalComponent } from './hospital/createhospital/createhospital.component';
 import { CenterListComponent } from './center/center-list/center-list.component';
 import { CreateCenterComponent } from './center/create-center/create-center.component';
-
 const Routing: Routes = [
 
   //body part router

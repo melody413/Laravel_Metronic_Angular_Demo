@@ -172,9 +172,7 @@ class ADoctorController extends BaseController
 
         if($request->input('saveNew'))
             return response(['next' => "savenew"]);
-            // return redirect(route('admin.doctor.create'))->with($redirctMsg);
 
-        // return redirect(route('admin.doctor.edit', ['id' => $row->id]))->with($redirctMsg);
         return response(['id' => $row->id], 200);
     }
     public function delete($id)
@@ -183,10 +181,7 @@ class ADoctorController extends BaseController
         $row->delete();
         return reponse(['flash_message' => trans('admin.delete_success_message') ,
         'flash_type' => 'success'], 200);
-        // return redirect(route('admin.doctor.index'))->with([
-        //     'flash_message' => trans('admin.delete_success_message') ,
-        //     'flash_type' => 'success' ,
-        // ]);
+
     }
 
     public function saveBrnachInCreate($request, $postData, $id = null)
@@ -228,10 +223,7 @@ class ADoctorController extends BaseController
         $new->save();
         return response(['flash_message' => trans('admin.copy_success_message') ,
         'flash_type' => 'success'], 200);
-        // return redirect(route('admin.doctor.index'))->with([
-        //     'flash_message' => trans('admin.copy_success_message') ,
-        //     'flash_type' => 'success' ,
-        // ]);
+
     }
 
     public function getTemplateFolder()
