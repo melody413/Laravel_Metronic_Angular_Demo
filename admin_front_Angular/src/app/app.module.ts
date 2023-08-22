@@ -46,6 +46,33 @@ import { ToggleSwitchComponent } from './component/toggle-switch/toggle-switch.c
 import { ZeroConfigComponentComponent } from './component/zero-config-component/zero-config-component.component';
 import { WidgetsModule } from './_metronic/partials';
 import { ModalsModule } from './_metronic/partials';
+import { MedicineListComponent } from './pages/Medicine/medicine-list/medicine-list.component';
+import { CreateMedicineComponent } from './pages/Medicine/create-medicine/create-medicine.component';
+import { MedicineCompanyListComponent } from './pages/Medicine/medicine-company-list/medicine-company-list.component';
+import { MedicineNameListComponent } from './pages/Medicine/medicine-name-list/medicine-name-list.component';
+import { MedicineCategoryListComponent } from './pages/Medicine/medicine-category-list/medicine-category-list.component';
+import { CreateTagComponent } from './pages/tag/create-tag/create-tag.component';
+import { TagListComponent } from './pages/tag/tag-list/tag-list.component';
+import { CreateSubCategoryComponent } from './pages/sub_category/create-sub-category/create-sub-category.component';
+import { SubCategoryListComponent } from './pages/sub_category/sub-category-list/sub-category-list.component';
+import { CreateQuestionAnswerComponent } from './pages/question_answer/create-question-answer/create-question-answer.component';
+import { QuestionAnswerListComponent } from './pages/question_answer/question-answer-list/question-answer-list.component';
+import { CreateCountryComponent } from './pages/create-country/create-country.component';
+import { CountryListComponent } from './pages/country-list/country-list.component';
+import { CityListComponent } from './pages/city/city-list/city-list.component';
+import { CreateCityComponent } from './pages/city/create-city/create-city.component';
+import { CreateAreaComponent } from './pages/area/create-area/create-area.component';
+import { AreaListComponent } from './pages/area/area-list/area-list.component';
+import { SpecialityListComponent } from './pages/speciality/speciality-list/speciality-list.component';
+import { CreateSpecialityComponent } from './pages/speciality/create-speciality/create-speciality.component';
+import { CreatePageComponent } from './pages/page/create-page/create-page.component';
+import { PageListComponent } from './pages/page/page-list/page-list.component';
+import { CreateFaqComponent } from './pages/faq/create-faq/create-faq.component';
+import { FaqListComponent } from './pages/faq/faq-list/faq-list.component';
+import { CreateRoleComponent } from './pages/role/create-role/create-role.component';
+import { RoleListComponent } from './pages/role/role-list/role-list.component';
+import { CreateUserComponent } from './pages/user/create-user/create-user.component';
+import { UserListComponent } from './pages/user/user-list/user-list.component';
 
 // import { BodypartListModule } from './pages/bodyPart/bodypart-list/bodypart-list.module';
 // #fake-end#
@@ -88,7 +115,7 @@ function appInitializer(authService: AuthService) {
     CreateCenterComponent, 
     CenterListComponent, 
     ToggleSwitchComponent, 
-    ZeroConfigComponentComponent,
+    ZeroConfigComponentComponent, MedicineListComponent, CreateMedicineComponent, MedicineCompanyListComponent, MedicineNameListComponent, MedicineCategoryListComponent, CreateTagComponent, TagListComponent, CreateSubCategoryComponent, SubCategoryListComponent, CreateQuestionAnswerComponent, QuestionAnswerListComponent, CreateCountryComponent, CountryListComponent, CityListComponent, CreateCityComponent, CreateAreaComponent, AreaListComponent, SpecialityListComponent, CreateSpecialityComponent, CreatePageComponent, PageListComponent, CreateFaqComponent, FaqListComponent, CreateRoleComponent, RoleListComponent, CreateUserComponent, UserListComponent,
   ],
   imports: [
     // BodypartListModule,
