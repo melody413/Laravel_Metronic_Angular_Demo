@@ -9,7 +9,6 @@ import { environment } from 'src/environments/environment';
 })
 export class CreateCenterComponent {
   //reference valuables
-  parent_id: number;
   arName: string;
   enName: string;
   arExcerpt: string;
@@ -202,6 +201,7 @@ export class CreateCenterComponent {
 
 
   create(){
+    
     if(this.is_active == undefined){
       this.is_active = false;
     }
@@ -209,7 +209,7 @@ export class CreateCenterComponent {
     const formdata = new FormData();
 
     //language data
-    formdata.append("parent_id", this.parent_id.toString());
+    formdata.append("parent_id", "0");
     formdata.append("ar[name]", this.arName);
     formdata.append("en[name]", this.enName);
     formdata.append("ar[excerpt]", this.arExcerpt);
@@ -247,8 +247,7 @@ export class CreateCenterComponent {
     formdata.append("map_link", this.maplink);
     formdata.append("is_active", this.is_active.toString());
 
-
-    this.http.post<any>(environment.apiUrl + "hospital/store", formdata).subscribe(
+    this.http.post<any>(environment.apiUrl + "center/store", formdata).subscribe(
       (response) => {
         console.log(response);
       }
