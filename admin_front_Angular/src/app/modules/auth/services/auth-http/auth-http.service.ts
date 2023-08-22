@@ -17,7 +17,7 @@ export class AuthHTTPService {
 
   // public methods
   login(email: string, password: string): Observable<any> {
-      return this.http.post<any>(`${API_USERS_URL}/login`, {
+      return this.http.post<any>(environment.apiUrl+"login", {
         email,
         password,
       });

@@ -8,7 +8,7 @@
     data-bs-trigger="hover"
     title="Click to add a user"
   >
-    <a class="btn btn-sm btn-primary"> + New Member{{tmp1}} </a>
+    <a class="btn btn-sm btn-primary"> + New Member</a>
   </div>
 </div>
 <!-- end::Header -->
@@ -34,20 +34,19 @@
       <!-- end::Table head -->
       <!-- begin::Table body -->
       <tbody>
-        <tr *ngFor="let data of tabledata">
+        <!-- <tr *ngFor="let data of tableData; let i = index">
           <td>1</td>
           <td [innerHTML]="data[1]"></td>
           <td>{{ data[2] }}</td>
           <td>{{ data[3] }}</td>
           <td>{{ data[4] }}</td>
           <td>{{ data[5] }}</td>
-        </tr>
-        <!-- <tr *ngFor="let data of list_data; let i = index">
+        </tr> -->
+        <tr *ngFor="let data of tableData; let i = index">
           
           <td>{{data[0]}}</td>
-          <td>
-            [innerHTML]="data[1]"
-            <div class="d-flex align-items-center">
+          <td [innerHTML]="data[1]">
+            <!-- <div class="d-flex align-items-center">
               <div class="symbol symbol-45px me-5">
                 <img src="./assets/media/avatars/300-14.jpg" alt="" />
               </div>
@@ -59,11 +58,11 @@
                   HTML, JS, ReactJS
                 </span>
               </div>
-            </div>
+            </div> -->
           </td>
-          <td>Yevhenii Perekiata</td>
-          <td>Quilting device</td>
-          <td>2023.04.13</td>
+          <td>{{ data[2] }}</td>
+          <td>{{ data[3] }}</td>
+          <td>{{ data[4] }}</td>
           <td>
             <button class="btn btn-sm btn-primary" style="margin: 5px">
               EDIT
@@ -75,7 +74,7 @@
               DELETE
             </button>
           </td>
-        </tr> -->
+        </tr>
       </tbody>
       <!-- end::Table body -->
     </table>
