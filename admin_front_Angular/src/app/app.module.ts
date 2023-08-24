@@ -6,6 +6,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ClipboardModule } from 'ngx-clipboard';
 import { TranslateModule } from '@ngx-translate/core';
 import { InlineSVGModule } from 'ng-inline-svg-2';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { FormsModule } from '@angular/forms';
@@ -14,6 +15,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthService } from './modules/auth/services/auth.service';
 import { environment } from 'src/environments/environment';
+import {MatTableModule} from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 // #fake-start#
 import { FakeAPIService } from './_fake/fake-api.service';
@@ -119,6 +123,8 @@ function appInitializer(authService: AuthService) {
   ],
   imports: [
     // BodypartListModule,
+    MatFormFieldModule,
+    MatSelectModule,
     DataTablesModule,
     BrowserModule,
     FormsModule,
@@ -127,6 +133,8 @@ function appInitializer(authService: AuthService) {
     HttpClientModule,
     ClipboardModule,
     EditorModule,
+    MatPaginatorModule,
+    MatTableModule,
     // WidgetsModule,
     // ModalsModule,
     // #fake-start#

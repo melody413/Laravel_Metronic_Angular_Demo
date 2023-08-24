@@ -27,7 +27,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () {
     Route::post('/login', 'AuthController@login')->name('login');
     Route::post('/loginout', 'AuthController@logout')->name('loginout');
-
+    //In role page 
+    Route::get('/permission-config', function () {
+        return response()->json(config('permission'));
+    });
     //dashboard API
     Route::get('/dashboard', 'ADashboardController@home')->name('dashboard');
 
@@ -172,7 +175,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/medicines_company/copy/{id}', 'AMedicinesCompanyController@copy' );
     Route::post('/medicines_company/store', 'AMedicinesCompanyController@store' );
 
-    Route::get('/medicines_category/list', 'AMedicinesCategoryController@list');
+    Route::get('/medicines_category/list', 'AMedicinesCategoryController@index');
     Route::get('/medicines_category/create', 'AMedicinesCategoryController@create');
     Route::get('/medicines_category/edit/{id}','AMedicinesCategoryController@edit');
     Route::get('/medicines_category/delete/{id}','AMedicinesCategoryController@delete');
@@ -187,7 +190,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::post('/medicines_sc_name/store', 'AMedicinesScNamesController@store');
 
     //Tag API
-    Route::get('/tag/list', 'ATagController@index');
+    Route::get('/tag/list', 'ATagController@list');
     Route::get('/tag/create', 'ATagController@create');
     Route::get('/tag/edit/{id}', 'ATagController@edit');
     Route::get('/tag/delete/{id}', 'ATagController@delete');
