@@ -78,6 +78,13 @@ class AFaqController extends BaseController
         }
         else
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            } else {
+                $postData['image'] = '';
+            }
             $row = Faq::create($postData);
         }
 

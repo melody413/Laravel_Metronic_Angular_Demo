@@ -11,7 +11,7 @@ use App\Models\MedicinesScName;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Admin\BaseController;
-
+use App\Models\BodyPart;
 class AMedicineController extends BaseController
 {
     public function init()
@@ -32,7 +32,8 @@ class AMedicineController extends BaseController
         $companies = MedicinesCompany::all();
         $medicines_sc_names = MedicinesScName::all();
         $categories = MedicinesCategory::all();
-        return response(["result" => compact('companies', 'medicines_sc_names', 'categories')], 200);
+        $bodyparts = BodyPart::all();
+        return response(["result" => compact('companies', 'medicines_sc_names', 'categories', 'bodyparts')], 200);
         // return view($this->getTemplatePath('create'), compact('companies', 'medicines_sc_names', 'categories'));
     }
 

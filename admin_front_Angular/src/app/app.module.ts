@@ -18,6 +18,8 @@ import { environment } from 'src/environments/environment';
 import {MatTableModule} from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import {MatTabsModule} from '@angular/material/tabs';
+
 
 // #fake-start#
 import { FakeAPIService } from './_fake/fake-api.service';
@@ -122,8 +124,8 @@ function appInitializer(authService: AuthService) {
     ZeroConfigComponentComponent, MedicineListComponent, CreateMedicineComponent, MedicineCompanyListComponent, MedicineNameListComponent, MedicineCategoryListComponent, CreateTagComponent, TagListComponent, CreateSubCategoryComponent, SubCategoryListComponent, CreateQuestionAnswerComponent, QuestionAnswerListComponent, CreateCountryComponent, CountryListComponent, CityListComponent, CreateCityComponent, CreateAreaComponent, AreaListComponent, SpecialityListComponent, CreateSpecialityComponent, CreatePageComponent, PageListComponent, CreateFaqComponent, FaqListComponent, CreateRoleComponent, RoleListComponent, CreateUserComponent, UserListComponent,
   ],
   imports: [
-    // BodypartListModule,
     MatFormFieldModule,
+    MatTabsModule,
     MatSelectModule,
     DataTablesModule,
     BrowserModule,

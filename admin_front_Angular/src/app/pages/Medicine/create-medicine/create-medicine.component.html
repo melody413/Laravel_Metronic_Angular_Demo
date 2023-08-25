@@ -1,1 +1,862 @@
-<p>create-medicine works!</p>
+<div class="card">
+    <div class="card-body">
+        <form
+            novalidate
+            class="form"
+            enctype="multipart/form-data"
+        >
+            <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+                Language Data
+            </h1>
+            <div class="card-body border-top">            
+                <mat-tab-group>
+                    <mat-tab label="Basic Content">
+                        <div class="col-lg-12 mt-10">
+                            <div class="row">
+                                <div class="col-lg-6 fv-col">
+                                    <h2 class="fs-3">*Name Arabic :</h2>
+                                    <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="name_ar" name="name_ar" type="text" value="">
+                                    <div *ngIf="errorMessage1" class="error-message fs-6" style="color: red;">{{errorMessage1}}</div>        
+                                </div>  
+                                <div class="col-lg-6">
+                                    <h2 class="fs-3">*Name English :</h2>
+                                    <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="name_en" name="name_en" type="text" value="">
+                                    <div *ngIf="errorMessage2" class="error-message fs-6" style="color: red;">{{errorMessage2}}</div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-lg-12 mt-10">
+                            <div class="row">
+                                <div class="col-lg-6 fv-col">
+                                    <h2 class="fs-3">Excerpt Arabic :</h2>
+                                    <textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="excerpt_ar" name="excerpt_ar" type="text" placeholder="Excerpt"></textarea>
+                                </div>  
+                                <div class="col-lg-6">
+                                    <h2 class="fs-3">Excerpt English :</h2>
+                                    <textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="excerpt_en" name="excerpt_en" type="text" placeholder="Excerpt"></textarea>
+                                </div>
+                            </div>
+                        </div>
+        
+        
+                        <div class="col-lg-12 mt-10">
+                            <div class="row">
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">Description Arabic :</h2>
+                                <editor
+                                  [(ngModel)]="description_ar"
+                                  name = "description_ar"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                ></editor>
+                              </div>
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">Description English :</h2>
+                                <editor
+                                  [(ngModel)]="description_en"
+                                  name = "description_en"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                  toolbar="
+                                    undo redo | formatselect | bold italic backcolor | \
+                                    alignleft aligncenter alignright alignjustify | \
+                                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                                ></editor>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 row mt-10">
+                            <div class="col-lg-6">
+                                <h2 class="fs-3">Integration 1:</h2>                           
+                                <input list="ingredient2" class="form-control" name="ingredient2" [(ngModel)]="ingredient2">
+                                <datalist id="ingredient2">
+                                    <option class="fs-2" *ngFor="let integration of medicines_sc_names; let i = index" value={{integration.id}}>
+                                        {{integration.name}}:{{integration.translations[1]["name"]}}
+                                    </option>
+                                </datalist>
+                            </div>
+                            <div class="col-lg-6">
+                                <h2 class="fs-3">Concentration 1:</h2>
+                                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="concentration" name="concentration" type="text" value="">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 row mt-10">
+                            <div class="col-lg-6">
+                                <h2 class="fs-3">Integration 2:</h2>                           
+                                <input list="ingredient3" class="form-control" name="ingredient3" [(ngModel)]="ingredient3">
+                                <datalist id="ingredient3">
+                                    <option class="fs-2" *ngFor="let integration of medicines_sc_names; let i = index" value={{integration.id}}>
+                                        {{integration.name}}:{{integration.translations[1]["name"]}}
+                                    </option>
+                                </datalist>
+                            </div>
+                            <div class="col-lg-6">
+                                <h2 class="fs-3">Concentration 2:</h2>
+                                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="concentration2" name="concentration2" type="text" value="">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 row mt-10">
+                            <div class="col-lg-6">
+                                <h2 class="fs-3">Integration 3:</h2>                           
+                                <input list="ingredient1" class="form-control" name="ingredient1" [(ngModel)]="ingredient1">
+                                <datalist id="ingredient1">
+                                    <option class="fs-2" *ngFor="let integration of medicines_sc_names; let i = index" value={{integration.id}}>
+                                        {{integration.name}}:{{integration.translations[1]["name"]}}
+                                    </option>
+                                </datalist>
+                            </div>
+                            <div class="col-lg-6">
+                                <h2 class="fs-3">Concentration 3:</h2>
+                                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="concentration3" name="concentration3" type="text" value="">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mt-10">
+                            <div class="row">
+                                <div class="col-lg-6 fv-col">
+                                    <h2 class="fs-3">ActiveIngredient :</h2>
+                                    <textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="activeIngredient" name="activeIngredient" type="text" placeholder="Excerpt"></textarea>
+                                </div>  
+                                <div class="col-lg-6">
+                                    <h2 class="fs-3">MaximumIntake :</h2>
+                                    <textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="maximumIntake" name="maximumIntake" type="text" placeholder="Excerpt"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 mt-10 row">
+                            <div class="col-lg-4 fv-col">
+                                <h2 class="fs-3">Drug Class :</h2>
+                                <select class="form-control">
+                                    <option></option>
+                                </select>
+                            </div>  
+                            <div class="col-lg-4">
+                                <h2 class="fs-3">Available Strength :</h2>
+                                <select class="form-control">
+                                    <option></option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4">
+                                <h2 class="fs-3">Company:</h2>                           
+                                <input list="companies" class="form-control" name="companies" [(ngModel)]="company">
+                                <datalist id="companies">
+                                    <option class="fs-2" *ngFor="let company of companies; let i = index" value={{company.id}}>
+                                        {{company.name}}:{{company.translations[1]["name"]}}
+                                    </option>
+                                </datalist>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group p-y-30 col-lg-15 d-flex gap-5 align-items-center mt-10">
+                            <h2 class="fs-3 fw-bolder col-auto" for="is_active">Is Available Generically :</h2>
+                            <span>OFF</span>
+                            <div class="form-check form-check-custom form-check-solid form-check-success form-switch">
+                                <input
+                                    [(ngModel)] = "is_available"
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    name="is_available"
+                                />
+                            </div>
+                            <span>ON</span>
+                        </div> 
+                        <div class="input-group p-y-30 col-lg-15 d-flex gap-5 align-items-center mt-10 mb-5">
+                            <h2 class="fs-3 fw-bolder col-auto" for="is_active">Is Proprietary :</h2>
+                            <span>OFF</span>
+                            <div class="form-check form-check-custom form-check-solid form-check-success form-switch">
+                                <input
+                                    [(ngModel)] = "is_proprietary"
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    name="is_proprietary"
+                                />
+                            </div>
+                            <span>ON</span>
+                        </div> 
+
+                    </mat-tab>
+                    <mat-tab label="Dosage">
+                        <div class="col-lg-12 row mt-10">
+                            <div class="col-lg-6">
+                                <h2 class="fs-3">Form :</h2>
+                                <select class="form-control" name="form" id="form_sel" [(ngModel)]="form">
+                                    <option value="">Select form</option>
+                                    <option value="Tablets">Tablets, اقراص</option>
+                                    <option value="Capsule">Capsule, كبسولات </option>
+                                    <option value="Ampoules">Ampoules, أمبول</option>
+                                    <option value="Syrup">Syrup, شراب</option>
+                                    <option value="Cream">Cream, كريم</option>
+                                    <option value="Sachets">Sachets, اكياس </option>
+                                    <option value="Lotion">Lotion, لوشن </option>
+                                    <option value="Drops">Drops, قطرة </option>
+                                    <option value="Antiseptic_Solution">Antiseptic Solution, محلول مطهر </option>
+                                    <option value="Infant_Milk">Infant Milk, لبن اطفال </option>
+                                    <option value="Mouth_Wash">Mouth Wash, غسول فم </option>
+                                    <option value="Tea_bag">Tea bag, أكياس شاي </option>
+                                    <option value="Powder">Powder, بودرة </option>
+                                    <option value="Infusion">Infusion, محلول معلق </option>
+                                    <option value="Inhalation">Inhalation, بخاخة للصدر </option>
+                                    <option value="Hair_Oil">Hair Oil. زيت شعر</option>
+                                    <option value="Lozenges">Lozenges, استحلاب </option>
+                                    <option value="Oral_Drops">Oral Drops, قطرة فم </option>
+                                    <option value="Vial">Vial, امبول</option>
+                                    <option value="Suppository">Suppository, لبوس</option>
+                                    <option value="Vag.Douch">Vag.Douch, دش مهبلي</option>
+                                    <option value="foam_spray">Foam spray, بخاخ فوم</option>
+                                    <option value="solution">Solution, محلول</option>
+                                    <option value="Emulsion">Emulsion, مستحلب</option>
+                                    <option value="Liquid">Liquid, سائل</option>
+                                    <option value="Oint">Oint, مرهم</option>
+                                    <option value="inhaln">inhaln, استنشاق</option>
+                                    <option value="Spray">Spray, رش</option>
+                                    <option value="Gel">Gel, جل</option>
+                                    <option value="Volatile">Volatile, متطايرة</option>
+                                    <option value="bottle">Bottle, زجاجة</option>
+                                    <option value="sprayer">Sprayer, بخاخ</option>
+                                    <option value="soap">Soap, صابون</option>
+                                    <option value="shampoo">Shampoo, شامبو</option>
+                                    <option value="hair_lotion">Hair lotion, غسول للشعر</option>
+                                    <option value="serum">Serum, سيروم</option>
+                                    <option value="mask">Mask, ماسك</option>
+                                    <option value="Condition">Condition, بلسم</option>
+                                    <option value="hair_ampoules">Hair ampoules, أمبولات الشعر</option>
+                                    <option value="bath_oil">Bath oil, زيت الاستحمام</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <h2 class="fs-3">Conc Type :</h2>
+                                <textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="conc_type" name="conc_type" type="text" placeholder="Excerpt"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 row mt-10">                            
+                            <div class="col-lg-4 fv-row">
+                                <h2 class="fs-3">Dose Ar :</h2>
+                                <editor
+                                  [(ngModel)]="dose_ar"
+                                  name = "dose_ar"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                ></editor>
+                            </div>
+                            <div class="col-lg-4 fv-row">
+                                <h2 class="fs-3">Dose :</h2>
+                                <editor
+                                  [(ngModel)]="dose"
+                                  name = "dose"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                ></editor>
+                            </div>
+                            <div class="col-lg-4 fv-row">
+                                <h2 class="fs-3">Overdosage En :</h2>
+                                <editor
+                                  [(ngModel)]="en_overdosage"
+                                  name = "en[overdosage]"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                ></editor>
+                            </div>                            
+                        </div>
+                        <div class="col-lg-12 row mt-10">
+                            <div class="col-lg-4">
+                                <h2 class="fs-3">DoseUnit :</h2>
+                                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="doseUnit" name="doseUnit" type="text" placeholder="Excerpt">
+                            </div>
+                            <div class="col-lg-4">
+                                <h2 class="fs-3">Max DoseValue :</h2>
+                                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="max_doseValue" name="max_doseValue" type="text" placeholder="Excerpt">
+                            </div>
+                            <div class="col-lg-4">
+                                <h2 class="fs-3">Max DoseUnit :</h2>
+                                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="max_doseUnit" name="max_doseUnit" type="text" placeholder="Excerpt">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 row mt-10">
+                            <div class="col-lg-3">
+                                <h2 class="fs-3">Frequency :</h2>
+                                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="frequency" name="frequency" type="text" rows="5">
+                            </div>
+                            <div class="col-lg-3">
+                                <h2 class="fs-3">TargetPopulation :</h2>
+                                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="targetPopulation" name="targetPopulation" type="text" rows="5">
+                            </div>  
+                            <div class="col-lg-3">
+                                <h2 class="fs-3">Max Frequency :</h2>
+                                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="max_frequency" name="max_frequency" type="text" rows="5">
+                            </div>
+                            <div class="col-lg-3">
+                                <h2 class="fs-3">Max TargetPopulation :</h2>
+                                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="max_targetPopulation" name="max_targetPopulation" type="text" rows="5">
+                            </div>
+                        </div>
+
+
+                    </mat-tab>
+                    <mat-tab label="Warnings">
+                        <div class="col-lg-12 row mt-10">
+                            <div class="col-lg-6">
+                                <h2 class="fs-3">BreastfeedingWarning Ar :</h2>
+                                <textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="ar_breastfeedingWarning" name="ar_breastfeedingWarning" type="text" placeholder="Excerpt"></textarea>
+                            </div>
+                            <div class="col-lg-6">
+                                <h2 class="fs-3">BreastfeedingWarning En :</h2>
+                                <textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="en_breastfeedingWarning" name="en_breastfeedingWarning" type="text" placeholder="Excerpt"></textarea>
+                            </div>                          
+                        </div>
+
+                        <div class="col-lg-12 row mt-10">
+                            <div class="col-lg-6">
+                                <h2 class="fs-3">ClinicalPharmacology Ar :</h2>
+                                <textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="ar_clinicalPharmacology" name="ar_clinicalPharmacology" type="text" placeholder="Excerpt"></textarea>
+                                <small>display in list not show in unit</small>
+
+                            </div>
+                            <div class="col-lg-6">
+                                <h2 class="fs-3">ClinicalPharmacology En :</h2>
+                                <textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="en_clinicalPharmacology" name="en_clinicalPharmacology" type="text" placeholder="Excerpt"></textarea>
+                                <small>display in list not show in unit</small>
+
+                            </div>                          
+                        </div>
+                        <div class="col-lg-12 mt-10">
+                            <div class="row">
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">FoodWarning Ar :</h2>
+                                <!-- <textarea class="form-control tinymce" placeholder="Description" [(ngModel)]="enDescription" name="en[description]" cols="50" rows="10"></textarea> -->
+                                <editor
+                                  [(ngModel)]="ar_foodWarning"
+                                  name = "ar_foodWarning"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                ></editor>
+                              </div>
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">FoodWarning En :</h2>
+                                <editor
+                                  [(ngModel)]="en_foodWarning"
+                                  name = "en_foodWarning"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                  toolbar="
+                                    undo redo | formatselect | bold italic backcolor | \
+                                    alignleft aligncenter alignright alignjustify | \
+                                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                                ></editor>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mt-10">
+                            <div class="row">
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">MechanismOfAction Ar :</h2>
+                                <editor
+                                  [(ngModel)]="ar_mechanismOfAction"
+                                  name = "ar_mechanismOfAction"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                ></editor>
+                              </div>
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">MechanismOfAction En :</h2>
+                                <editor
+                                  [(ngModel)]="en_mechanismOfAction"
+                                  name = "en_mechanismOfAction"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                  toolbar="
+                                    undo redo | formatselect | bold italic backcolor | \
+                                    alignleft aligncenter alignright alignjustify | \
+                                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                                ></editor>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mt-10">
+                            <div class="row">
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">PregnancyWarning Ar :</h2>
+                                <!-- <textarea class="form-control tinymce" placeholder="Description" [(ngModel)]="enDescription" name="en[description]" cols="50" rows="10"></textarea> -->
+                                <editor
+                                  [(ngModel)]="ar_pregnancyWarning"
+                                  name = "ar_pregnancyWarning"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                ></editor>
+                              </div>
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">PregnancyWarning En :</h2>
+                                <editor
+                                  [(ngModel)]="en_pregnancyWarning"
+                                  name = "en_pregnancyWarning"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                  toolbar="
+                                    undo redo | formatselect | bold italic backcolor | \
+                                    alignleft aligncenter alignright alignjustify | \
+                                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                                ></editor>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mt-10">
+                            <div class="row">
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">PrescriptionStatus Ar :</h2>
+                                <!-- <textarea class="form-control tinymce" placeholder="Description" [(ngModel)]="enDescription" name="en[description]" cols="50" rows="10"></textarea> -->
+                                <editor
+                                  [(ngModel)]="ar_prescriptionStatus"
+                                  name = "ar_prescriptionStatus"
+                                  cols="50"
+                                  rows="10" 
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                ></editor>
+                              </div>
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">PrescriptionStatus En :</h2>
+                                <editor
+                                  [(ngModel)]="en_prescriptionStatus"
+                                  name = "en_prescriptionStatus"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                  toolbar="
+                                    undo redo | formatselect | bold italic backcolor | \
+                                    alignleft aligncenter alignright alignjustify | \
+                                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                                ></editor>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mt-10">
+                            <div class="row">
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">Warning Arabic :</h2>
+                                <!-- <textarea class="form-control tinymce" placeholder="Description" [(ngModel)]="enDescription" name="en[description]" cols="50" rows="10"></textarea> -->
+                                <editor
+                                  [(ngModel)]="warning_ar"
+                                  name = "warning_ar"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                ></editor>
+                              </div>
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">Warning English :</h2>
+                                <editor
+                                  [(ngModel)]="warning_en"
+                                  name = "warning_en"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                  toolbar="
+                                    undo redo | formatselect | bold italic backcolor | \
+                                    alignleft aligncenter alignright alignjustify | \
+                                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                                ></editor>
+                              </div>
+                            </div>
+                        </div>
+
+                    </mat-tab>
+                    <mat-tab label="Content">
+                        <div class="col-lg-12 mt-10">
+                            <div class="row">
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">Medical Uses Arabic :</h2>
+                                <editor
+                                  [(ngModel)]="medical_uses_ar"
+                                  name = "medical_uses_ar"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                ></editor>
+                              </div>
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">Medical Uses English :</h2>
+                                <editor
+                                  [(ngModel)]="medical_uses"
+                                  name = "medical_uses"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                  toolbar="
+                                    undo redo | formatselect | bold italic backcolor | \
+                                    alignleft aligncenter alignright alignjustify | \
+                                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                                ></editor>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 row mt-10">
+                            <div class="col-lg-6">
+                                <h2 class="fs-3">Type :</h2>
+                                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="type" name="type" type="text" placeholder="Excerpt">
+                            </div>
+                            <div class="col-lg-6">
+                                <h2 class="fs-3">Suspensie :</h2>
+                                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="suspensie" name="suspensie" type="text" placeholder="Excerpt">
+                            </div>                          
+                        </div>
+                        <div class="col-lg-12 row mt-10">
+                            <div class="col-lg-6">
+                                <h2 class="fs-3">Quantity :</h2>
+                                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="quantity" name="quantity" type="number" placeholder="Excerpt">
+                            </div>
+                            <div class="col-lg-6">
+                                <h2 class="fs-3">Price :</h2>
+                                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="price" name="price" type="text" placeholder="Excerpt">
+                            </div>                          
+                        </div>
+                        <div class="col-lg-12 mt-10 row">
+                            <div class="col-lg-6">
+                                <h2 class="fs-3">Made In :</h2>
+                                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="made_in" name="made_in" type="text" placeholder="Excerpt">
+                            </div>
+                            
+                            <div class="col-lg-6">
+                                <h2 class="fs-3">Category :</h2>
+                                <input list="category" class="form-control" name="category" [(ngModel)]="category">
+                                <datalist id="category">
+                                    <option  *ngFor="let category of categories; let i = index" value={{category.id}}>{{category.name}}</option>
+                                </datalist>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 mt-10">
+                            <div class="row">
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">Side Effects Arabic :</h2>
+                                <!-- <textarea class="form-control tinymce" placeholder="Description" [(ngModel)]="enDescription" name="en[description]" cols="50" rows="10"></textarea> -->
+                                <editor
+                                  [(ngModel)]="side_effects_ar"
+                                  name = "side_effects_ar"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                ></editor>
+                              </div>
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">Side Effects English :</h2>
+                                <editor
+                                  [(ngModel)]="side_effects"
+                                  name = "side_effects"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                  toolbar="
+                                    undo redo | formatselect | bold italic backcolor | \
+                                    alignleft aligncenter alignright alignjustify | \
+                                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                                ></editor>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 mt-10">
+                            <div class="row">
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">Disease Arabic :</h2>
+                                <!-- <textarea class="form-control tinymce" placeholder="Description" [(ngModel)]="enDescription" name="en[description]" cols="50" rows="10"></textarea> -->
+                                <editor
+                                  [(ngModel)]="disease_ar"
+                                  name = "disease_ar"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                ></editor>
+                              </div>
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">Disease English :</h2>
+                                <editor
+                                  [(ngModel)]="disease"
+                                  name = "disease"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                  toolbar="
+                                    undo redo | formatselect | bold italic backcolor | \
+                                    alignleft aligncenter alignright alignjustify | \
+                                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                                ></editor>
+                              </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-12 mt-10">
+                            <div class="row">
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">Disease2 Arabic :</h2>
+                                <!-- <textarea class="form-control tinymce" placeholder="Description" [(ngModel)]="enDescription" name="en[description]" cols="50" rows="10"></textarea> -->
+                                <editor
+                                  [(ngModel)]="disease_2_ar"
+                                  name = "disease_2_ar"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                ></editor>
+                              </div>
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">Disease2 English :</h2>
+                                <editor
+                                  [(ngModel)]="disease_2"
+                                  name = "disease_2"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                  toolbar="
+                                    undo redo | formatselect | bold italic backcolor | \
+                                    alignleft aligncenter alignright alignjustify | \
+                                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                                ></editor>
+                              </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-12 mt-10">
+                            <div class="row">
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">Disease3 Arabic :</h2>
+                                <!-- <textarea class="form-control tinymce" placeholder="Description" [(ngModel)]="enDescription" name="en[description]" cols="50" rows="10"></textarea> -->
+                                <editor
+                                  [(ngModel)]="disease_3_ar"
+                                  name = "disease_3_ar"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                ></editor>
+                              </div>
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">Disease3 English :</h2>
+                                <editor
+                                  [(ngModel)]="disease_3"
+                                  name = "disease_3"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                  toolbar="
+                                    undo redo | formatselect | bold italic backcolor | \
+                                    alignleft aligncenter alignright alignjustify | \
+                                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                                ></editor>
+                              </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-12 mt-10">
+                            <div class="row">
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">Interactions Arabic :</h2>
+                                <!-- <textarea class="form-control tinymce" placeholder="Description" [(ngModel)]="enDescription" name="en[description]" cols="50" rows="10"></textarea> -->
+                                <editor
+                                  [(ngModel)]="interactions_ar"
+                                  name = "interactions_ar"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                ></editor>
+                              </div>
+                              <div class="col-lg-6 fv-row">
+                                <h2 class="fs-3">Interactions English :</h2>
+                                <editor
+                                  [(ngModel)]="interactions"
+                                  name = "interactions"
+                                  cols="50"
+                                  rows="10"
+                                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                                  [init]="{
+                                    height: 500,
+                                    menubar: false
+                                  }"
+                                  toolbar="
+                                    undo redo | formatselect | bold italic backcolor | \
+                                    alignleft aligncenter alignright alignjustify | \
+                                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                                ></editor>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 row mt-10">
+                            <h2 class="fs-3 col-lg-1" style="display: block; padding-top: 10px;">Body Part :</h2>
+                            <div class="col-lg-5">
+                                <input list="bodypart" class="form-control" name="bodypart" [(ngModel)]="bodypart">
+                                <datalist id="bodypart">
+                                    <option  *ngFor="let bodypart of bodyparts; let i = index" value={{bodypart.id}}>
+                                        {{bodypart.name}}:{{bodypart.translations[1]["name"]}}
+                                    </option>
+                                </datalist>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 row mt-10">
+                            <h2 class="fs-3 col-lg-1" style="display: block; padding-top: 10px;">Symptoms :</h2>
+
+                        </div>
+
+                        <div class="col-lg-12 row mt-10">
+                            <h2 class="fs-3 col-lg-1" style="display: block; padding-top: 10px;">Country :</h2>
+                            <div class="col-lg-5">
+                                <input list="country" class="form-control" name="country" [(ngModel)]="country">
+                                <datalist id="country">
+                                    <option  *ngFor="let country of coutries; let i = index" value={{country[0]}}>
+                                        {{country[1]}}
+                                    </option>
+                                </datalist>
+                            </div>
+                        </div>
+
+                        <div class="input-group input-group-lg col-lg-15 d-flex gap-5 align-items-center mt-10">
+                            <h1 class="card-title fw-bolder text-muted fs-4">Image :</h1>
+                            <input
+                                (change)="onFileSelected($event)"
+                                type="file"
+                                class="form-control-lg form-control-solid mb-3 mb-lg-0"
+                                name="image"
+                            />
+                            <img id="image" style="display: none; border-radius: 10%;" width="200" height="200" />
+
+                        </div>
+
+                        <div class="input-group p-y-30 col-lg-15 d-flex gap-5 align-items-center mt-10 mb-5">
+                            <h2 class="fs-3 fw-bolder col-auto" for="is_active">Is Active :</h2>
+                            <span>OFF</span>
+                            <div class="form-check form-check-custom form-check-solid form-check-success form-switch">
+                                <input
+                                    [(ngModel)] = "is_active"
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    name="is_active"
+                                />
+                            </div>
+                            <span>ON</span>
+                        </div>                         
+                        <div class="col d-flex gap-2 align-items-center mt-10 mb-10">
+                            <button class="btn btn-md btn-secondary">Reset</button>
+                            <button class="btn btn-md btn-success" type="submit">Save</button>
+                            <button class="btn btn-md btn-primary">Save & create new</button>
+                          </div>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+        </form>
+    </div>
+</div>

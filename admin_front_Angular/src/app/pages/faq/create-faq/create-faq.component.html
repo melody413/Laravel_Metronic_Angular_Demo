@@ -1,1 +1,142 @@
-<p>create-faq works!</p>
+<div class="card">
+    <div class="card-body">
+        <form
+            novalidate
+            class="form"
+            enctype="multipart/form-data"
+            (ngSubmit)="create()"
+        >
+            <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+                Language Data
+            </h1>
+            <div class="card-body border-top">    
+                <div class="col-lg-12 mt-10">
+                    <div class="row">
+                        <div class="col-lg-6 fv-col">
+                            <h2 class="fs-3">*Title Arabic :</h2>
+                            <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="title_ar" name="title_ar" type="text" value="">
+                            <div *ngIf="errorMessage1" class="error-message fs-6" style="color: red;">{{errorMessage1}}</div>        
+                        </div>  
+                        <div class="col-lg-6">
+                            <h2 class="fs-3">*Title English :</h2>
+                            <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="title_en" name="title_en" type="text" value="">
+                            <div *ngIf="errorMessage2" class="error-message fs-6" style="color: red;">{{errorMessage2}}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 mt-10">
+                    <div class="row">
+                      <div class="col-lg-6 fv-row">
+                        <h2 class="fs-3">Content  Arabic :</h2>
+                        <editor
+                          [(ngModel)]="content_ar"
+                          name = "content_ar"
+                          cols="50"
+                          rows="10"
+                          apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                          [init]="{
+                            height: 500,
+                            menubar: false
+                          }"
+                        ></editor>
+                      </div>
+                      <div class="col-lg-6 fv-row">
+                        <h2 class="fs-3">Content  English :</h2>
+                        <editor
+                          [(ngModel)]="content_en"
+                          name = "content_en"
+                          cols="50"
+                          rows="10"
+                          apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                          [init]="{
+                            height: 500,
+                            menubar: false
+                          }"
+                          toolbar="
+                            undo redo | formatselect | bold italic backcolor | \
+                            alignleft aligncenter alignright alignjustify | \
+                            bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                        ></editor>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 row mt-10">
+                    <div class="col-lg-6 fv-col">
+                        <h2 class="fs-3">Meta Title Arabic :</h2>
+                        <textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="meta_title_ar" name="meta_title_ar" type="text" placeholder="Excerpt"></textarea>
+                    </div>  
+                    <div class="col-lg-6">
+                        <h2 class="fs-3">Meta Title English :</h2>
+                        <textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="meta_title_en" name="meta_title_en" type="text" placeholder="Excerpt"></textarea>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 row mt-10">
+                    <div class="col-lg-6 fv-col">
+                        <h2 class="fs-3">Meta Description Arabic :</h2>
+                        <textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="meta_description_ar" name="meta_description_ar" type="text" placeholder="Excerpt"></textarea>
+                    </div>  
+                    <div class="col-lg-6">
+                        <h2 class="fs-3">Meta Description English :</h2>
+                        <textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="meta_description_en" name="meta_description_en" type="text" placeholder="Excerpt"></textarea>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 row mt-10">
+                    <div class="col-lg-6 fv-col">
+                        <h2 class="fs-3">Meta Keywords  Arabic :</h2>
+                        <textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="meta_keywords_ar" name="meta_keywords_ar" type="text" placeholder="Excerpt"></textarea>
+                    </div>  
+                    <div class="col-lg-6">
+                        <h2 class="fs-3">Meta Keywords  English :</h2>
+                        <textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="meta_keywords_en" name="meta_keywords_en" type="text" placeholder="Excerpt"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+                Other Data
+            </h1>
+            <div class="card-body border-top mt-10">
+                <div class="col-lg-12 row">
+                    <h2 class="fs-3 col-lg-1" style="display: block; padding-top: 10px;">Slug :</h2>
+                    <div class="col-lg-5">
+                        <input class="form-control" [(ngModel)]="slug" name="slug"/>
+                    </div>
+                </div>
+                <div class="input-group input-group-lg col-lg-15 d-flex gap-5 align-items-center mt-10">
+                    <h2 class="fs-3 col-lg-1" style="display: block; padding-top: 10px;">Image :</h2>
+                    <input
+                        (change)="onFileSelected($event)"
+                        type="file"
+                        class="form-control-lg form-control-solid mb-3 mb-lg-0"
+                        name="image"
+                    />
+                    <img id="image" style="display: none; border-radius: 10%;" width="200" height="200" />
+
+                </div>
+                <div class="input-group p-y-30 col-lg-15 d-flex gap-5 align-items-center mt-10">
+                    <h2 class="fs-3 fw-bolder col-auto" for="is_active">Is Active :</h2>
+                    <span>OFF</span>
+                    <div class="form-check form-check-custom form-check-solid form-check-success form-switch">
+                        <input
+                            [(ngModel)] = "is_active"
+                            class="form-check-input"
+                            type="checkbox"
+                            name="is_actives"
+                        />
+                    </div>
+                    <span>ON</span>
+                </div> 
+
+                <div class="col d-flex gap-2 align-items-center mt-10 mb-10">
+                    <button class="btn btn-md btn-secondary">Reset</button>
+                    <button class="btn btn-md btn-success" type="submit">Save</button>
+                    <button class="btn btn-md btn-primary">Save & create new</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
