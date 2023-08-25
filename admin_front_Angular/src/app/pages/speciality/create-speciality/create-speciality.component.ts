@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class CreateSpecialityComponent {
 
+  //directive valuable
+  question_ar: string = " ";
+  question_en: string = " ";
+  errorMessage1: string= " ";
+  errorMessage2: string= " ";
 }

@@ -7,6 +7,7 @@ use App\Models\Country;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Admin\BaseController;
+use Illuminate\Support\Facades\DB;
 
 class ACountryController extends BaseController
 {
@@ -77,6 +78,13 @@ class ACountryController extends BaseController
         }
         else
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            } else {
+                $postData['image'] = '';
+            }
             $row = Country::create($postData);
         }
 
@@ -130,7 +138,20 @@ class ACountryController extends BaseController
             'flash_type' => 'success' ,
         ]);
     }*/
+    public function getAllCity($id){
+        $query = "SELECT city_id, name 
+                  FROM (SELECT * FROM city_trans WHERE locale='ar' ) as city_name 
+                  INNER JOIN  ( SELECT id FROM cities WHERE country_id = :id AND is_active = 1 ) as city_id 
+                  ON city_name.city_id = city_id.id";
 
+        $queryParams = array('id' => $id);
+          
+        // Execute the query and retrieve the cities
+        $cities = DB::select($query, $queryParams);
+        return response(["city" => $cities]);
+
+        // Return the cities
+    }
     public function getTemplateFolder()
     {
         return 'country';

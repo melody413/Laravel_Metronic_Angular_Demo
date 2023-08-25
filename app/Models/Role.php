@@ -6,6 +6,7 @@ use App\Models\BaseModel;
 
 class Role extends BaseModel
 {
+    protected $table = 'roles';
     public $fillable = [
         'name',
         'label'
@@ -19,5 +20,9 @@ class Role extends BaseModel
     public function givePermissionTo(Permission $permission)
     {
         return $this->permissions()->save($permission);
+    }
+
+    public function getAllRoles(){
+        return self::all();
     }
 }

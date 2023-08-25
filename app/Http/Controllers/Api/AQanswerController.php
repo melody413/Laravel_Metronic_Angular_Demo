@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Mangers\DataTableManger;
+use App\Mangers\DataForm;
 use App\Models\Qanswer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Admin\BaseController;
+use App\Models\MedicinesCategoryTrans;
 
 class AQanswerController extends BaseController
 {
@@ -140,4 +142,14 @@ class AQanswerController extends BaseController
     {
         return 'qanswer';
     }
+
+    public function getSpeciality(){
+        $speciallities = DataForm::getSpeciality();
+        return response(["specialities" => $speciallities], 200);
+    }
+
+    public function getCategory(){
+        $category = MedicinesCategoryTrans::where('locale','ar')->get();
+        return response(["categories" => $category]);
+    }   
 }

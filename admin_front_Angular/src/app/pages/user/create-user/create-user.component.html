@@ -1,1 +1,265 @@
-<p>create-user works!</p>
+<div class="card">
+    <div class="card-body">
+      <div class="card-body">
+        <form
+          novalidate
+          class="form"
+          (ngSubmit)="create()"
+          enctype="multipart/form-data"
+        >
+            <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
+                User Information:
+            </h1>
+            <div class="card-body border-top">
+                <div class="row col-lg-12">
+                    <div class="col-lg-6 fv-col">
+                        <h2 class="fs-4">*Name :</h2>
+                        <input 
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                            [(ngModel)]="name" 
+                            name="name" 
+                            type="text" 
+                            value=""
+                            (ngModelChange)="onInputChange1($event)"
+
+                        />
+                        <div *ngIf="errorMessage1" class="error-message fs-6" style="color: red;">{{errorMessage1}}</div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="fs-4">*Email :</h2>
+                        <input 
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                            [(ngModel)]="email" 
+                            name="email" 
+                            type="email" 
+                            value=""
+                            (ngModelChange)="onInputChange2($event)"
+                        />
+                        <div *ngIf="errorMessage2" class="error-message fs-6" style="color: red;">{{errorMessage2}}</div>
+                        <div *ngIf="errorMessage4" class="error-message fs-6" style="color: red;">{{errorMessage4}}</div>
+                    </div>
+                </div>
+                <div class="row col-lg-12 mt-10">
+                    <div class="col-lg-6 fv-col">
+                        <h2 class="fs-4">*Password :</h2>
+                        <input 
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                            [(ngModel)]="password" 
+                            name="password" 
+                            type="password" 
+                            value=""
+                            (ngModelChange)="onInputChange($event)"
+
+                        />
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="fs-4">*RePassword :</h2>
+                        <input 
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                            [(ngModel)]="rpassword" 
+                            name="rpassword" 
+                            type="password" 
+                            value="" 
+                            (ngModelChange)="onInputChange($event)"
+                        />
+                        <div *ngIf="errorMessage3" class="error-message fs-6" style="color: red;">{{errorMessage3}}</div>
+                    </div>
+                </div>
+                <div class="row col-lg-12 mt-10">
+                    <div class="col-lg-6 fv-col">
+                        <h2 class="fs-4">*Dr Phone :</h2>
+                        <input 
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                            [(ngModel)]="drPhone" 
+                            name="drPhone" 
+                            type="text" 
+                            value=""
+                        />
+                        <!-- <div *ngIf="errorMessage1" class="error-message fs-6" style="color: red;">{{errorMessage1}}</div> -->
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="fs-4">*Clinic Phone :</h2>
+                        <input 
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                            [(ngModel)]="clinicPhone" 
+                            name="clinicPhone" 
+                            type="email" 
+                            value="" 
+                        />
+                        <!-- <div *ngIf="errorMessage2" class="error-message fs-6" style="color: red;">{{errorMessage2}}</div> -->
+                    </div>
+                </div>
+                <div class="row col-lg-12 mt-10">
+                    <h2 class="fs-4 col-1" style="display: block; padding-top: 10px;">Gender :</h2>
+                    <div class="col-lg-4">
+                        <select class="form-control">
+                            <option value="0" >Male</option>
+                            <option value="1" >Female</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row col-lg-12 mt-10 ">
+                    <div class="col-lg-6 fv-col">
+                        <h2 class="fs-4">Birthday :</h2>
+                        <input 
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                            [(ngModel)]="birthday" 
+                            name="birthday" 
+                            type="date" 
+                            value=""
+                        />
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="fs-4">Address :</h2>
+                        <input 
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                            [(ngModel)]="address" 
+                            name="address" 
+                            type="text" 
+                            value="" 
+                        />
+                    </div>
+                </div>
+                <div class="row col-lg-12 mt-10 ">
+                    <div class="col-lg-6 fv-col">
+                        <h2 class="fs-4">Speciality :</h2>
+                        <input 
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                            [(ngModel)]="speciality" 
+                            name="speciality" 
+                            type="text" 
+                            value=""
+                        />
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="fs-4">Speciality In :</h2>
+                        <input 
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                            [(ngModel)]="specialityIn" 
+                            name="specialityIn" 
+                            type="text" 
+                            value="" 
+                        />
+                    </div>
+                </div>
+
+                <div class="row col-lg-12 mt-10 ">
+                    <div class="col-lg-4 fv-col">
+                        <h2 class="fs-4">Facebook :</h2>
+                        <input 
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                            [(ngModel)]="facebook" 
+                            name="facebook" 
+                            type="text" 
+                            value=""
+                        />
+                    </div>
+                    <div class="col-lg-4">
+                        <h2 class="fs-4">Twitter :</h2>
+                        <input 
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                            [(ngModel)]="twitter" 
+                            name="twitter" 
+                            type="text" 
+                            value="" 
+                        />
+                    </div>
+                    <div class="col-lg-4">
+                        <h2 class="fs-4">Instagram :</h2>
+                        <input 
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                            [(ngModel)]="instagram" 
+                            name="instagram" 
+                            type="text" 
+                            value="" 
+                        />
+                    </div>
+                </div>
+
+
+                <div class="row col-lg-12 mt-10">
+                    <div class="col-lg-4 fv-col" style="display: flex; justify-content: space-evenly;">
+                        <h2 class="fs-4">Share Approved :</h2>
+                        <input 
+                            class="form-check-input" 
+                            [(ngModel)]="share_approve" 
+                            name="share_approve" 
+                            type="checkbox" 
+                            value=""
+                        />
+                    </div>
+                    <div class="col-lg-4" style="display: flex; justify-content: space-evenly;">
+                        <h2 class="fs-4">Live Approved :</h2>
+                        <input 
+                            class="form-check-input" 
+                            [(ngModel)]="live_approve" 
+                            name="live_approve" 
+                            type="checkbox" 
+                            value="" 
+                        />
+                    </div>
+                    <div class="col-lg-4" style="display: flex; justify-content: space-evenly;">
+                        <h2 class="fs-4">Services Approved :</h2>
+                        <input 
+                            class="form-check-input" 
+                            [(ngModel)]="service_approve" 
+                            name="service_approve" 
+                            type="checkbox" 
+                            value="" 
+                        />
+                    </div>
+                </div>
+
+            </div>
+
+            <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
+                User Role:
+            </h1>
+            <div class="card-body border-top">
+                <div class="row col-lg-12 mt-10">
+                    <h2 class="fs-4 col-1" style="display: block; padding-top: 10px;">Type :</h2>
+                    <div class="col-lg-4">
+                        <select class="form-control" [(ngModel)]="type" name="type">
+                            <option value="0">Select the Gender</option>
+                            <option value="1" >User</option>
+                            <option value="2" >Doctor</option>
+                            <option value="3" >Admin</option>
+                            <option value="4" >Moderator</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row col-lg-12 mt-10">
+                    <h2 class="fs-4 col-1" style="display: block; padding-top: 10px;">Role :</h2>
+                    <div class="col-lg-4">
+                        <select class="form-control" [(ngModel)]="role" name="role">
+                            <option *ngFor="let role of roles; let i = index" [value]="role.id">{{ role.name }}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex gap-2 align-items-center mt-15">
+                <button class="btn btn-md btn-secondary">Reset</button>
+                <button class="btn btn-md btn-success" type="submit">Save</button>
+                <button class="btn btn-md btn-primary">Save & create new</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  
+    <script
+      src="https://cdn.tiny.cloud/1/your-api-key/tinymce/6/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script>
+  
+    <script>
+      tinymce.init({
+        selector: "#editor",
+        plugins:
+          "a11ychecker advcode advlist advtable anchor autocorrect autolink autoresize autosave casechange charmap checklist code codesample directionality editimage emoticons export footnotes formatpainter fullscreen help image importcss inlinecss insertdatetime link linkchecker lists media mediaembed mentions mergetags nonbreaking pagebreak pageembed permanentpen powerpaste preview quickbars save searchreplace table tableofcontents template tinycomments tinydrive tinymcespellchecker typography visualblocks visualchars wordcount",
+      });
+    </script>
+  </div>
+  

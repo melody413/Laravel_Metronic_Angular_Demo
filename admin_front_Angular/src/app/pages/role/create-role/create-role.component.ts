@@ -1,7 +1,7 @@
 import { Component,  OnInit, ChangeDetectorRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-create-role',
   templateUrl: './create-role.component.html',
@@ -20,7 +20,11 @@ export class CreateRoleComponent implements OnInit {
   permission_data: any[];
 
   group : string [] =[];
-  constructor(private http: HttpClient, private cdr : ChangeDetectorRef) {}
+  constructor(
+    private http: HttpClient, 
+    private cdr: ChangeDetectorRef,
+    private router: Router,
+  ) {}
   ngOnInit(): void {
     this.http.get<any>(environment.apiUrl+"permission-config")
     .subscribe((response)=>{
@@ -67,7 +71,9 @@ export class CreateRoleComponent implements OnInit {
     
     this.http.post<any>(environment.apiUrl + "role/store", formData)
         .subscribe((response)=>{
-          console.log(response);
+          if(response.id){
+            this.router.navigate(['role/list']);
+          }
         });
   }
 

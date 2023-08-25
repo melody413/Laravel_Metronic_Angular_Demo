@@ -21,9 +21,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
-
-
 Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () {
     Route::post('/login', 'AuthController@login')->name('login');
     Route::post('/loginout', 'AuthController@logout')->name('loginout');
@@ -212,6 +209,9 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/qanswer/delete/{id}', 'AQanswerController@delete');
     Route::get('/qanswer/copy/{id}', 'AQanswerController@copy');
     Route::post('/qanswer/store', 'AQanswerController@store');
+    Route::get('/qanswer/getSpeciality', 'AQanswerController@getSpeciality');
+    Route::get('/qanswer/getCategory', 'AQanswerController@getCategory');
+
 
     //Country API
     Route::get('/country/list', 'ACountryController@index');
@@ -220,6 +220,8 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/country/delete/{id}', 'ACountryController@delete');
     Route::get('/country/copy/{id}', 'ACountryController@copy');
     Route::post('/country/store', 'ACountryController@store');
+    Route::get('/country/getall', 'AAreaController@formData');
+    Route::get('/country/getAllCity/{id}', 'ACountryController@getAllCity');
 
     //City API
     Route::get('/city/list', 'ACityController@index');
@@ -268,6 +270,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/role/delete/{id}', 'ARoleController@delete');
     Route::get('/role/copy/{id}', 'ARoleController@copy');
     Route::post('/role/store', 'ARoleController@store');
+    Route::get('/role/all', 'ARoleController@getTotalRole');
 
     //User API
     Route::get('/user/list', 'AUserController@index'  );

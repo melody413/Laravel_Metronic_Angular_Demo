@@ -139,4 +139,9 @@ class ARoleController extends BaseController
     {
         return 'role';
     }
+
+    public function getTotalRole(){
+        $roles = Role::getAllRoles();
+        return response(["roles" => $roles], 200);
+    }
 }

@@ -1,1 +1,35 @@
-<p>create-speciality works!</p>
+<div class="card">
+    <div class="card-body">
+        <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
+            Create BodyPart
+        </h1>
+        <hr />
+        <div class="card-body">
+            <form
+            novalidate
+            class="form"
+            enctype="multipart/form-data"
+            >
+                <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+                    Language Data
+                </h1>
+                <div class="card-body border-top">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-6 fv-col">
+                                <h2 class="fs-2">Question Arabic :</h2>
+                                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="question_ar" name="question_ar" type="text" value="">
+                                <div *ngIf="errorMessage1" class="error-message fs-6" style="color: red;">{{errorMessage1}}</div>        
+                            </div>
+                            <div class="col-lg-6">
+                                <h2 class="fs-2">Question English :</h2>
+                                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="question_en" name="question_en" type="text" value="">
+                                <div *ngIf="errorMessage2" class="error-message fs-6" style="color: red;">{{errorMessage2}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
