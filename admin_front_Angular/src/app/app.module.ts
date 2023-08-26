@@ -20,8 +20,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import {MatTabsModule} from '@angular/material/tabs';
 
-
-// #fake-start#
 import { FakeAPIService } from './_fake/fake-api.service';
 import { DoctorListComponent } from './pages/doctor/doctor-list/doctor-list.component';
 import { CreateDoctorComponent } from './pages/doctor/create-doctor/create-doctor.component';
