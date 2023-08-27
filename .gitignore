@@ -11,27 +11,9 @@
 #     https://www.atlassian.com/git/tutorials/git-lfs
 
 /node_modules
-/public/hot
-/public/storage
-/storage/*.key
-/vendor
-/.idea
-/blog
-/blog_bk
-/.vscode
-/.vagrant
-Homestead.json
-Homestead.yaml
-npm-debug.log
-yarn-error.log
 
-storage/uploads/
+/vendor
 
 node_modules/
-tmp/
-package-lock.json
-art
-custom_log
-error_log
-.DS_store
+
 admin_front_Angular/node_module/
