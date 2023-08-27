@@ -24,9 +24,9 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-.env
+
 storage/uploads/
-public/uploads
+
 node_modules/
 tmp/
 package-lock.json
