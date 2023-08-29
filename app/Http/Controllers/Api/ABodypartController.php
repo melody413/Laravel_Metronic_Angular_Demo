@@ -169,7 +169,7 @@ class ABodyPartController extends BaseController
             $query->select('body_parts.*');
             $query->addSelect('body_part_trans.name as name');
             $query->join('body_part_trans', 'body_part_id', '=', 'body_parts.id');
-            $query->where('body_part_trans.locale', '=', 'ar');
+            $query->where('body_part_trans.locale', '=', 'ar')->orderByRaw('created_at DESC');
             $results = $query->where('name', 'LIKE', "%$searchIndex%")->get(); 
             $resultsArray = $results->toArray();
             $transformedResults = array_map(function ($row) {
@@ -199,7 +199,7 @@ class ABodyPartController extends BaseController
             $query = DB::table('body_parts')
                 ->select('body_parts.*', 'body_part_trans.name as name')
                 ->join('body_part_trans', 'body_part_id', '=', 'body_parts.id')
-                ->where('body_part_trans.locale', '=', 'ar')
+                ->where('body_part_trans.locale', '=', 'ar')->orderByRaw('created_at DESC')
                 ->limit($pageSize) // Set the number of records per page
                 ->offset(($pageIndex - 1) * $pageSize); // Calculate the offset based on the desired page
 

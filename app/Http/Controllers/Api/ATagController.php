@@ -7,6 +7,7 @@ use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Admin\BaseController;
+use Illuminate\Support\Facades\DB;
 
 class ATagController extends BaseController
 {
@@ -18,7 +19,7 @@ class ATagController extends BaseController
     public function index(Request $request)
     {
         $data = dataTable()
-            ->of( Tag::query() )
+            ->of( Tag::query()->orderByRaw('created_at DESC') )
             ->filterColumns(['id', 'slug'])
             ->each(function ($row) {
                 return [
@@ -140,5 +141,84 @@ class ATagController extends BaseController
     public function getTemplateFolder()
     {
         return 'tag';
+    }
+
+    public function table(Request $request){
+        if($request->has("search_index")){
+            $searchIndex = $request->search_index;
+            $query = DB::table(function ($query) {
+                $query->select(
+                    'tags.*',
+                    'tag_trans.NAME AS arname'
+                )
+                ->from('tags')
+                ->join('tag_trans', 'tags.id', '=', 'tag_trans.tag_id')
+                ->where('tag_trans.locale', 'ar');
+            }, 'result1')
+            ->join('tag_trans', 'result1.id', '=', 'tag_trans.tag_id')
+            ->select(
+                'result1.*',
+                'tag_trans.NAME AS enname'
+            )
+            ->where('tag_trans.locale', 'en')->orderByRaw('created_at DESC');
+            $results = $query->where('arname', 'LIKE', "%$searchIndex%"); 
+
+            $results = $query->get();
+            $resultsArray = $results->toArray();
+            $transformedResults = array_map(function ($row) {
+                return [                
+                    $row->id,
+                    img_tag($row->image,'tags/'),
+                    $row->arname,
+                    $row->enname,
+                    date('d-m-Y', strtotime($row->updated_at)),
+                    table_actions([
+                        'edit' => ['admin.medicines_company.edit', ['id' => $row->id]],
+                        'delete' => ['admin.medicines_company.delete', ['id' => $row->id]]
+                    ]) 
+                ];
+            }, $resultsArray);
+            return response(['search_result' => $transformedResults], 200);
+            
+        }else{
+
+            $pageSize = $request->params['updates'][0]['value'];
+            $pageIndex = $request->params['updates'][1]['value'] + 1;
+
+            $query = DB::table(function ($query) {
+                $query->select(
+                    'tags.*',
+                    'tag_trans.NAME AS arname'
+                )
+                ->from('tags')
+                ->join('tag_trans', 'tags.id', '=', 'tag_trans.tag_id')
+                ->where('tag_trans.locale', 'ar');
+            }, 'result1')
+            ->join('tag_trans', 'result1.id', '=', 'tag_trans.tag_id')
+            ->select(
+                'result1.*',
+                'tag_trans.NAME AS enname'
+            )
+            ->where('tag_trans.locale', 'en')->orderByRaw('created_at DESC')
+            ->limit($pageSize) // Set the number of records per page
+            ->offset(($pageIndex - 1) * $pageSize); // Calculate the offset based on the desired page
+
+            $results = $query->get(); 
+            $resultsArray = $results->toArray();
+            $transformedResults = array_map(function ($row) {
+                return [                
+                    $row->id,
+                    img_tag($row->image,'tags/'),
+                    $row->arname,
+                    $row->enname,
+                    date('d-m-Y', strtotime($row->updated_at)),
+                    table_actions([
+                        'edit' => ['admin.medicines_company.edit', ['id' => $row->id]],
+                        'delete' => ['admin.medicines_company.delete', ['id' => $row->id]]
+                    ]) 
+                ];
+            }, $resultsArray);
+            return response(['search_result' => $transformedResults], 200);
+        }
     }
 }

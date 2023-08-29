@@ -7,6 +7,7 @@ use App\Models\LabService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Admin\BaseController;
+use Illuminate\Support\Facades\DB;
 
 class ALabServiceController extends BaseController
 {
@@ -120,5 +121,25 @@ class ALabServiceController extends BaseController
     public function getTemplateFolder()
     {
         return 'lab_service';
+    }
+
+    public function table(Request $request){
+        if($request->has("search_index")){
+            $searchIndex = $request->search_index;
+            $query = DB::table('lab_services');
+            $lab_services = LabService::scopeSearch($query, $searchIndex)->orderByRaw('created_at DESC')->get();
+            return response(['search_result' => $lab_services], 200);
+        }else{
+            $pageSize = $request->params['updates'][0]['value'];
+            $pageIndex = $request->params['updates'][1]['value'] + 1;
+
+            $lab_services = LabService::search($request->q)
+            ->orderBy('created_at', 'DESC')
+            ->paginate($pageSize, ['*'], 'page', $pageIndex)
+            ->fragment('lab_services');
+            return response(['search_result' => $lab_services], 200);
+
+            
+        }
     }
 }

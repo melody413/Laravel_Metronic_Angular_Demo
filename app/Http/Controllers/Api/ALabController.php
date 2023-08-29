@@ -8,6 +8,7 @@ use Okipa\LaravelBootstrapTableList\TableList;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Admin\BaseController;
+use Illuminate\Support\Facades\DB;
 
 class ALabController extends BaseController
 {
@@ -18,7 +19,7 @@ class ALabController extends BaseController
 
     public function index(Request $request)
     {
-        $labs = Lab::search($request->q)->orderByRaw('created_at DESC')->paginate(15)->fragment('labs');
+        $labs = Lab::search($request->q)->orderByRaw('created_at DESC')->paginate(10)->fragment('labs');
 
         return response(['labs' => $labs], 200);
     }
@@ -132,5 +133,23 @@ class ALabController extends BaseController
     public function getTemplateFolder()
     {
         return 'lab';
+    }
+
+    public function table(Request $request){
+        if($request->has("search_index")){
+            $searchIndex = $request->search_index;
+            $query = DB::table('labs');
+            $labs = Lab::scopeSearch($query, $searchIndex)->orderByRaw('created_at DESC')->get();
+            return response(['search_result' => $labs], 200);
+        }else{
+            $pageSize = $request->params['updates'][0]['value'];
+            $pageIndex = $request->params['updates'][1]['value'] + 1;
+            $labs = Lab::search($request->q)
+            ->orderBy('created_at', 'DESC')
+            ->paginate($pageSize, ['*'], 'page', $pageIndex)
+            ->fragment('labs');
+            
+            return response(['search_result' => $labs], 200);
+        }
     }
 }

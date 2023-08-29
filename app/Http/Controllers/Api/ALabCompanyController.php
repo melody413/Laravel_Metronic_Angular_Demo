@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use Illuminate\Support\Facades\DB;
 use App\Mangers\DataTableManger;
 use App\Models\LabCompany;
 use App\Models\Country;
@@ -133,5 +134,23 @@ class ALabCompanyController extends BaseController
     public function getTemplateFolder()
     {
         return 'lab_company';
+    }
+
+    public function table(Request $request){
+        if($request->has("search_index")){
+            $searchIndex = $request->search_index;
+            $query = DB::table('lab_companies');
+            $lab_companies = LabCompany::scopeSearch($query, $searchIndex)->orderByRaw('created_at DESC')->get();
+            return response(['search_result' => $lab_companies], 200);
+        }else{
+            $pageSize = $request->params['updates'][0]['value'];
+            $pageIndex = $request->params['updates'][1]['value'] + 1;
+            $lab_companies = LabCompany::search($request->q)
+            ->orderBy('created_at', 'DESC')
+            ->paginate($pageSize, ['*'], 'page', $pageIndex)
+            ->fragment('lab_companies');
+            
+            return response(['search_result' => $lab_companies], 200);
+        }
     }
 }

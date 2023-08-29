@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use Illuminate\Support\Facades\DB;
 use App\Mangers\DataTableManger;
 use App\Models\SubCategory;
 use Illuminate\Http\Request;
@@ -19,7 +20,7 @@ class ASubCategoryController extends BaseController
     {
 
         $data = dataTable()
-            ->of( SubCategory::query() )
+            ->of( SubCategory::query()->orderByRaw('created_at DESC') )
             ->filterColumns(['id', 'slug'])
             ->each(function ($row) {
                 return [
@@ -147,5 +148,88 @@ class ASubCategoryController extends BaseController
     public function getTemplateFolder()
     {
         return 'sub_category';
+    }
+
+    public function table(Request $request){
+        if($request->has("search_index")){
+            $searchIndex = $request->search_index;
+            $query = DB::table(function ($query) use ($searchIndex) {
+                $query->select(
+                        'sub_categories.*',
+                        'sub_category_trans.NAME AS arname'
+                    )
+                    ->from('sub_categories')
+                    ->join('sub_category_trans', 'sub_categories.id', '=', 'sub_category_trans.sub_category_id')
+                    ->where('sub_category_trans.locale', 'ar');
+            }, 'result1')
+            ->join('sub_category_trans', 'result1.id', '=', 'sub_category_trans.sub_category_id')
+            ->select(
+                'result1.*',
+                'sub_category_trans.NAME AS enname'
+            )
+            ->where('sub_category_trans.locale', 'en')
+            ->orderByRaw('created_at DESC');
+            
+            $results = $query->where(function($query) use ($searchIndex) {
+                $query->where('result1.arname', 'LIKE', "%$searchIndex%")
+                      ->orWhere('sub_category_trans.NAME', 'LIKE', "%$searchIndex%");
+            })->get();
+            
+            $resultsArray = $results->toArray();
+            $transformedResults = array_map(function ($row) {
+                return [                
+                    $row->id,
+                    img_tag($row->image,'sub_categories/'),
+                    $row->arname,
+                    $row->enname,
+                    date('d-m-Y', strtotime($row->updated_at)),
+                    table_actions([
+                        'edit' => ['admin.medicines_company.edit', ['id' => $row->id]],
+                        'delete' => ['admin.medicines_company.delete', ['id' => $row->id]]
+                    ]) 
+                ];
+            }, $resultsArray);
+            return response(['search_result' => $transformedResults], 200);
+            
+        }else{
+
+            $pageSize = $request->params['updates'][0]['value'];
+            $pageIndex = $request->params['updates'][1]['value'] + 1;
+            $query = DB::table(function ($query){
+                $query->select(
+                        'sub_categories.*',
+                        'sub_category_trans.NAME AS arname'
+                    )
+                    ->from('sub_categories')
+                    ->join('sub_category_trans', 'sub_categories.id', '=', 'sub_category_trans.sub_category_id')
+                    ->where('sub_category_trans.locale', 'ar');
+            }, 'result1')
+            ->join('sub_category_trans', 'result1.id', '=', 'sub_category_trans.sub_category_id')
+            ->select(
+                'result1.*',
+                'sub_category_trans.NAME AS enname'
+            )
+            ->where('sub_category_trans.locale', 'en')
+            ->orderByRaw('created_at DESC')
+            ->limit($pageSize) // Set the number of records per page
+            ->offset(($pageIndex - 1) * $pageSize); // Calculate the offset based on the desired page
+
+            $results = $query->get(); 
+            $resultsArray = $results->toArray();
+            $transformedResults = array_map(function ($row) {
+                return [                
+                    $row->id,
+                    img_tag($row->image,'sub_categories/'),
+                    $row->arname,
+                    $row->enname,
+                    date('d-m-Y', strtotime($row->updated_at)),
+                    table_actions([
+                        'edit' => ['admin.medicines_company.edit', ['id' => $row->id]],
+                        'delete' => ['admin.medicines_company.delete', ['id' => $row->id]]
+                    ]) 
+                ];
+            }, $resultsArray);
+            return response(['search_result' => $transformedResults], 200);
+        }
     }
 }

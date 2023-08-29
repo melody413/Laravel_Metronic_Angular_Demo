@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\BaseController;
+use Illuminate\Support\Facades\DB;
 
 class AHospitalController extends BaseController
 {
@@ -104,7 +105,7 @@ class AHospitalController extends BaseController
         //         'delete' => ['admin.hospital.delete', ['id' => $entity->id]]
         //     ]) );
         // });
-        $hospitals = Hospital::search($request->q)->orderByRaw('created_at DESC')->paginate(15)->fragment('hospitals');
+        $hospitals = Hospital::search($request->q)->orderByRaw('created_at DESC')->paginate(10)->fragment('hospitals');
 
         return response( ['hospitals' => $hospitals], 200);
     }
@@ -251,5 +252,23 @@ class AHospitalController extends BaseController
     public function getTemplateFolder()
     {
         return 'hospital';
+    }
+
+    public function table(Request $request){
+        if($request->has("search_index")){
+            $searchIndex = $request->search_index;
+            $query = DB::table('hospitals');
+            $hospitals = Hospital::scopeSearch($query, $searchIndex)->orderByRaw('created_at DESC')->get();
+            return response(['search_result' => $hospitals], 200);
+        }else{
+            $pageSize = $request->params['updates'][0]['value'];
+            $pageIndex = $request->params['updates'][1]['value'] + 1;
+            $hospitals = Hospital::search($request->q)
+            ->orderBy('created_at', 'DESC')
+            ->paginate($pageSize, ['*'], 'page', $pageIndex)
+            ->fragment('hospitals');
+            
+            return response(['search_result' => $hospitals], 200);
+        }
     }
 }

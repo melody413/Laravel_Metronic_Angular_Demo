@@ -7,6 +7,7 @@ use App\Models\MedicinesCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Admin\BaseController;
+use Illuminate\Support\Facades\DB;
 
 class AMedicinesCategoryController extends BaseController
 {
@@ -17,7 +18,7 @@ class AMedicinesCategoryController extends BaseController
 
     public function index(Request $request)
     {
-        $medicines = MedicinesCategory::search($request->q)->orderByRaw('created_at DESC')->paginate(15)->fragment('medicines');
+        $medicines = MedicinesCategory::search($request->q)->orderByRaw('created_at DESC')->paginate(10)->fragment('medicines');
         // dd($medicines);
 
         return response(["medicines" => $medicines], 200);
@@ -119,5 +120,31 @@ class AMedicinesCategoryController extends BaseController
     public function getTemplateFolder()
     {
         return 'medicines_category';
+    }
+
+    public function table(Request $request){
+        if($request->has("search_index")){
+            $searchIndex = $request->search_index;
+            $query = DB::table('medicines_categories');
+            $query->select('medicines_categories.*');
+            $query->addSelect('medicines_category_trans.name as name');
+            $query->join('medicines_category_trans', 'medicines_category_id', '=', 'medicines_categories.id');
+            $query->where('medicines_category_trans.locale', '=', 'ar');
+            $query->where('medicines_category_trans.name', 'LIKE', "%$searchIndex%");
+            $medicines = $query->get();
+            return response(['search_result' => $medicines], 200);
+        }else{
+            $pageSize = $request->params['updates'][0]['value'];
+            $pageIndex = $request->params['updates'][1]['value'] + 1;
+
+            $medicines = MedicinesCategory::search($request->q)
+            ->orderBy('created_at', 'DESC')
+            ->paginate($pageSize, ['*'], 'page', $pageIndex)
+            ->fragment('medicines');
+            
+            return response(['search_result' => $medicines], 200);
+
+            
+        }
     }
 }

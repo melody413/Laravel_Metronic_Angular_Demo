@@ -98,6 +98,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/lab_services/delete/{id}', 'ALabServiceController@delete');
     Route::get('/lab_services/copy/{id}', 'ALabServiceController@copy' );
     Route::post('/lab_services/store', 'ALabServiceController@store' );
+    Route::post('/lab_services/table', 'ALabServiceController@table');
 
     //Lab API
     Route::get('/lab/list', 'ALabController@index');
@@ -106,6 +107,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/lab/delete/{id}', 'ALabController@delete' );
     Route::get('/lab/copy/{id}', 'ALabController@copy');
     Route::post('/lab/store', 'ALabController@store' );
+    Route::post('/lab/table', 'ALabController@table');
 
     //Lab company API
     Route::get('/lab_company/list', 'ALabCompanyController@index');
@@ -114,7 +116,8 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/lab_company/delete/{id}', 'ALabCompanyController@delete' );
     Route::get('/lab_company/copy/{id}', 'ALabCompanyController@copy' );
     Route::post('/lab_company/store', 'ALabCompanyController@store' );
-    
+    Route::post('/lab_company/table', 'ALabCompanyController@table');
+
 
     //Lab category API
     Route::get('/lab_category/list', 'ALabCategoryController@index');
@@ -123,6 +126,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/lab_category/delete/{id}', 'ALabCategoryController@delete' );
     Route::get('/lab_category/copy/{id}', 'ALabCategoryController@copy' );
     Route::post('/lab_category/store', 'ALabCategoryController@store' );
+    Route::post('/lab_category/table', 'ALabCategoryController@table');
 
     //insurance API
     Route::get('/insurance_company/list', 'AInsuranceCompanyController@index');
@@ -131,6 +135,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/insurance_company/delete/{id}','AInsuranceCompanyController@delete' );
     Route::get('/insurance_company/copy/{id}', 'AInsuranceCompanyController@copy' );
     Route::post('/insurance_company/store', 'AInsuranceCompanyController@store' );
+    Route::post('/insurance_company/table', 'AInsuranceCompanyController@table');
 
     //Hospital API
     Route::get('/hospital/list', 'AHospitalController@index');
@@ -139,6 +144,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/hospital/delete/{id}','AHospitalController@delete');
     Route::get('/hospital/copy/{id}', 'AHospitalController@copy' );
     Route::post('/hospital/store', 'AHospitalController@store');
+    Route::post('/hospital/table', 'AHospitalController@table');
 
     //Hospital type API
     Route::get('/hospital_type/list', 'AHospitalTypeController@index');
@@ -155,7 +161,8 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/center/delete/{id}', 'ACenterController@delete' );
     Route::get('/center/copy/{id}', 'ACenterController@copy' );
     Route::post('/center/store', 'ACenterController@store');
-    
+    Route::post('/center/table', 'ACenterController@table');
+
     //Symptom API
     Route::get('/symptom/list', 'ASymptomController@index');
     Route::get('/symptom/create', 'ASymptomController@create' );
@@ -163,6 +170,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/symptom/delete/{id}','ASymptomController@delete');
     Route::get('/symptom/copy/{id}','ASymptomController@copy' );
     Route::post('/symptom/store', 'ASymptomController@store');
+    Route::post('/symptom/table', 'ASymptomController@table');
 
     Route::get('/medicines/list', 'AMedicineController@index' );
     Route::get('/medicines/create', 'AMedicineController@create' );
@@ -170,6 +178,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/medicines/delete/{id}', 'AMedicineController@delete' );
     Route::get('/medicines/copy/{id}', 'AMedicineController@copy'  );
     Route::post('/medicines/store', 'AMedicineController@store'  );
+    Route::post('/medicines/table', 'AMedicineController@table');
 
     Route::get('/medicines_company/list', 'AMedicinesCompanyController@index' );
     Route::get('/medicines_company/create', 'AMedicinesCompanyController@create' );
@@ -177,6 +186,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/medicines_company/delete/{id}', 'AMedicinesCompanyController@delete' );
     Route::get('/medicines_company/copy/{id}', 'AMedicinesCompanyController@copy' );
     Route::post('/medicines_company/store', 'AMedicinesCompanyController@store' );
+    Route::post('/medicines_company/table', 'AMedicinesCompanyController@table');
 
     Route::get('/medicines_category/list', 'AMedicinesCategoryController@index');
     Route::get('/medicines_category/create', 'AMedicinesCategoryController@create');
@@ -184,6 +194,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/medicines_category/delete/{id}','AMedicinesCategoryController@delete');
     Route::get('/medicines_category/copy/{id}', 'AMedicinesCategoryController@copy' );
     Route::post('/medicines_category/store', 'AMedicinesCategoryController@store');
+    Route::post('/medicines_category/table', 'AMedicinesCategoryController@table');
 
     Route::get('/medicines_sc_name/list', 'AMedicinesScNamesController@index');
     Route::get('/medicines_sc_name/create', 'AMedicinesScNamesController@create');
@@ -191,6 +202,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/medicines_sc_name/delete/{id}','AMedicinesScNamesController@delete');
     Route::get('/medicines_sc_name/copy/{id}', 'AMedicinesScNamesController@copy');
     Route::post('/medicines_sc_name/store', 'AMedicinesScNamesController@store');
+    Route::post('/medicines_sc_name/table', 'AMedicinesScNamesController@table');
 
     //Tag API
     Route::get('/tag/list', 'ATagController@index');
@@ -199,6 +211,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/tag/delete/{id}', 'ATagController@delete');
     Route::get('/tag/copy/{id}', 'ATagController@copy');
     Route::post('/tag/store', 'ATagController@store');
+    Route::post('/tag/table', 'ATagController@table');
 
     //sub_category API
     Route::get('/sub_category/list', 'ASubCategoryController@index');
@@ -207,6 +220,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/sub_category/delete/{id}', 'ASubCategoryController@delete' );
     Route::get('/sub_category/copy/{id}','ASubCategoryController@copy');
     Route::post('/sub_category/store', 'ASubCategoryController@store');
+    Route::post('/sub_category/table', 'ASubCategoryController@table');
 
     //question & answer API
     Route::get('/qanswer/list', 'AQanswerController@index');
@@ -217,6 +231,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::post('/qanswer/store', 'AQanswerController@store');
     Route::get('/qanswer/getSpeciality', 'AQanswerController@getSpeciality');
     Route::get('/qanswer/getCategory', 'AQanswerController@getCategory');
+    Route::post('/qanswer/table', 'AQanswerController@table');
 
 
     //Country API
@@ -228,6 +243,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::post('/country/store', 'ACountryController@store');
     Route::get('/country/getall', 'AAreaController@formData');
     Route::get('/country/getAllCity/{id}', 'ACountryController@getAllCity');
+    Route::post('/country/table', 'ACountryController@table');
 
     //City API
     Route::get('/city/list', 'ACityController@index');
@@ -236,6 +252,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/city/delete/{id}', 'ACityController@delete' );
     Route::get('/city/copy/{id}', 'ACityController@copy');
     Route::post('/city/store', 'ACityController@store' );
+    Route::post('/city/table', 'ACityController@table');
 
     //Area API
     Route::get('/area/list', 'AAreaController@index' );
@@ -244,6 +261,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/area/delete/{id}', 'AAreaController@delete'  );
     Route::get('/area/copy/{id}', 'AAreaController@copy' );
     Route::post('/area/store', 'AAreaController@store'  );
+    Route::post('/area/table', 'AAreaController@table');
 
     //speciality API
     Route::get('/specialty/list', 'ASpecialtyController@index');
@@ -252,6 +270,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/specialty/delete/{id}', 'ASpecialtyController@delete');
     Route::get('/specialty/copy/{id}', 'ASpecialtyController@copy');
     Route::post('/specialty/store', 'ASpecialtyController@store');
+    Route::post('/specialty/table', 'ASpecialtyController@table');
 
     //Page API
     Route::get('/pages/list', 'APageController@index');
@@ -260,6 +279,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/pages/delete/{id}', 'APageController@delete');
     Route::get('/pages/copy/{id}', 'APageController@copy');
     Route::post('/pages/store', 'APageController@store');
+    Route::post('/pages/table', 'APageController@table');
 
     //Faq API
     Route::get('/faqs/list', 'AFaqController@index');
@@ -268,6 +288,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/faqs/delete/{id}', 'AFaqController@delete');
     Route::get('/faqs/copy/{id}', 'AFaqController@copy');
     Route::post('/faqs/store', 'AFaqController@store' );
+    Route::post('/faqs/table', 'AFaqController@table');
 
     //Role API
     Route::get('/role/list', 'ARoleController@index');
@@ -277,6 +298,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/role/copy/{id}', 'ARoleController@copy');
     Route::post('/role/store', 'ARoleController@store');
     Route::get('/role/all', 'ARoleController@getTotalRole');
+    Route::post('/role/table', 'ARoleController@table');
 
     //User API
     Route::get('/user/list', 'AUserController@index'  );
@@ -284,6 +306,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/user/index_moderator', 'AUserController@index_moderator'  );
     Route::get('/user/index_doctors','AUserController@index_doctors'  );
     Route::get('/user/index_users', 'AUserController@index_users'  );
+    Route::post('/user/table', 'AUserController@table');
 
     Route::get('/user/create', 'AUserController@create' );
     Route::get('/user/edit/{id}', 'AUserController@edit' );

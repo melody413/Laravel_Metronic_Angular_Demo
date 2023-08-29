@@ -12,6 +12,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Admin\BaseController;
 use App\Models\BodyPart;
+use Illuminate\Support\Facades\DB;
+
 class AMedicineController extends BaseController
 {
     public function init()
@@ -21,7 +23,7 @@ class AMedicineController extends BaseController
 
     public function index(Request $request)
     {
-        $medicines = Medicine::search($request->q)->orderByRaw('created_at DESC')->paginate(15)->fragment('medicines');
+        $medicines = Medicine::search($request->q)->orderByRaw('created_at DESC')->paginate(10)->fragment('medicines');
         // dd($medicines);
         return response(["medicines" => $medicines], 200);
     }
@@ -148,5 +150,23 @@ class AMedicineController extends BaseController
     public function getTemplateFolder()
     {
         return 'medicine';
+    }
+
+    public function table(Request $request){
+        if($request->has("search_index")){
+            $searchIndex = $request->search_index;
+            $query = DB::table('medicines');
+            $medicines = Medicine::scopeSearch($query, $searchIndex)->orderByRaw('created_at DESC')->get();
+            return response(['search_result' => $medicines], 200);
+        }else{
+            $pageSize = $request->params['updates'][0]['value'];
+            $pageIndex = $request->params['updates'][1]['value'] + 1;
+            $medicines = Medicine::search($request->q)
+            ->orderBy('created_at', 'DESC')
+            ->paginate($pageSize, ['*'], 'page', $pageIndex)
+            ->fragment('medicines');
+            
+            return response(['search_result' => $medicines], 200);
+        }
     }
 }

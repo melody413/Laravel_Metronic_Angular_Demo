@@ -7,6 +7,7 @@ use App\Models\Center;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Admin\BaseController;
+use Illuminate\Support\Facades\DB;
 
 class ACenterController extends BaseController
 {
@@ -41,7 +42,7 @@ class ACenterController extends BaseController
 
         //     return $data;
         // }
-        $centers = Center::search($request->q)->orderByRaw('created_at DESC')->paginate(15)->fragment('centers');
+        $centers = Center::search($request->q)->orderByRaw('created_at DESC')->paginate(10)->fragment('centers');
 
         return response(["centers" => $centers], 200);
     }
@@ -173,5 +174,23 @@ class ACenterController extends BaseController
     public function getTemplateFolder()
     {
         return 'center';
+    }
+
+    public function table(Request $request){
+        if($request->has("search_index")){
+            $searchIndex = $request->search_index;
+            $query = DB::table('centers');
+            $centers = Center::scopeSearch($query, $searchIndex)->orderByRaw('created_at DESC')->get();
+            return response(['search_result' => $centers], 200);
+        }else{
+            $pageSize = $request->params['updates'][0]['value'];
+            $pageIndex = $request->params['updates'][1]['value'] + 1;
+            $centers = Center::search($request->q)
+            ->orderBy('created_at', 'DESC')
+            ->paginate($pageSize, ['*'], 'page', $pageIndex)
+            ->fragment('centers');
+            
+            return response(['search_result' => $centers], 200);
+        }
     }
 }

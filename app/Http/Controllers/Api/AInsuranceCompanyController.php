@@ -8,6 +8,7 @@ use Okipa\LaravelBootstrapTableList\TableList;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Admin\BaseController;
+use Illuminate\Support\Facades\DB;
 
 class AInsuranceCompanyController extends BaseController
 {
@@ -18,7 +19,7 @@ class AInsuranceCompanyController extends BaseController
 
     public function index(Request $request)
     {
-        $insurance_companies = InsuranceCompany::search($request->q)->orderByRaw('created_at DESC')->paginate(15)->fragment('insurance_companies');
+        $insurance_companies = InsuranceCompany::search($request->q)->orderByRaw('created_at DESC')->paginate(10)->fragment('insurance_companies');
 
         return response(['insurance_companies' => $insurance_companies], 200);
     }
@@ -122,5 +123,22 @@ class AInsuranceCompanyController extends BaseController
     public function getTemplateFolder()
     {
         return 'insurance_company';
+    }
+    public function table(Request $request){
+        if($request->has("search_index")){
+            $searchIndex = $request->search_index;
+            $query = DB::table('insurance_companies');
+            $insurance_companies = InsuranceCompany::scopeSearch($query, $searchIndex)->orderByRaw('created_at DESC')->get();
+            return response(['search_result' => $insurance_companies], 200);
+        }else{
+            $pageSize = $request->params['updates'][0]['value'];
+            $pageIndex = $request->params['updates'][1]['value'] + 1;
+            $insurance_companies = InsuranceCompany::search($request->q)
+            ->orderBy('created_at', 'DESC')
+            ->paginate($pageSize, ['*'], 'page', $pageIndex)
+            ->fragment('insurance_companies');
+            
+            return response(['search_result' => $insurance_companies], 200);
+        }
     }
 }

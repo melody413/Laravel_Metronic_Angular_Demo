@@ -85,7 +85,7 @@ class Medicine extends BaseModel
         $query->join('medicine_trans', 'medicine_id', '=', 'medicines.id');
         $query->where('medicine_trans.locale', '=', 'ar');
 
-        return $query->where('name', 'LIKE', "%$search%");
+        return $query->where('medicines_category_trans.name', 'LIKE', "%$search%");
     }
 
     public function specialties()
