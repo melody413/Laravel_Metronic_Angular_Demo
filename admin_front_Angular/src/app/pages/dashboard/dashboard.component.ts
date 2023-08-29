@@ -25,6 +25,19 @@ import { trigger, transition, style, animate } from '@angular/animations';
 })
 export class DashboardComponent implements OnInit{
   today: string;
+  center_count: number;
+  doctor_branches_count: number;
+  doctors_count: number;
+  hospital_count:number;
+  insurance_company_count: number;
+  lab: number;
+  medicine_count:number;
+  pharmacy_count: number;
+  user_admin_count: number;
+  user_count: number;
+  user_doctor_count: number;
+  user_moderator_count: number;
+  user_normal_count: number;
 
   chartOptions = {
 	  title: {
@@ -33,7 +46,7 @@ export class DashboardComponent implements OnInit{
 	  data: [{
 		type: "column",
 		dataPoints: [
-      { label: "Users",  y: 149  },
+      { label: "Users",  y: 123 },
       { label: "Doctors", y: 471  },
       { label: "Moderator", y: 25  },
       { label: "Admin",  y: 30  },
@@ -61,7 +74,24 @@ export class DashboardComponent implements OnInit{
   ngOnInit(): void {
     this.http.get<any>(environment.apiUrl + "dashboard")
         .subscribe((response)=>{
-          
+          this.doctors_count = response.doctors_count;
+          this.center_count = response.center_count;
+          this.doctor_branches_count = response.doctor_branches_count;
+          this.hospital_count = response.hospital_count;
+          this.user_normal_count = response.user_normal_count;
+          this.insurance_company_count = response.insurance_company_count;
+          this.lab = response.lab;
+          this.medicine_count = response.medicine_count;
+          this.pharmacy_count = response.pharmacy_count;
+          this.user_admin_count = response.user_admin_count
+          this.user_moderator_count = response.user_moderator_count;
+          this.user_count = response.user_count;
+          this.user_doctor_count = response.user_doctor_count;
+          this.chartOptions.data[0]['dataPoints'][0]['y'] = this.user_normal_count;
+          this.chartOptions.data[0]['dataPoints'][1]['y'] = this.user_doctor_count;
+          this.chartOptions.data[0]['dataPoints'][2]['y'] = this.user_moderator_count;
+          this.chartOptions.data[0]['dataPoints'][3]['y'] = this.user_admin_count;
+          this.cdr.detectChanges();
         });
     interval(4000).subscribe(() => {
       this.slideNext();

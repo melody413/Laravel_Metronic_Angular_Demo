@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Admin\BaseController;
 use App\Mangers\DataTableManger;
 use App\Models\Pharmacy;
@@ -20,7 +20,7 @@ class APharmacyController extends BaseController
 
     public function index(Request $request)
     {
-        $pharmacies = Pharmacy::search($request->q)->orderByRaw('created_at DESC')->paginate(15)->fragment('pharmacys');
+        $pharmacies = Pharmacy::search($request->q)->orderByRaw('created_at DESC')->paginate(10)->fragment('pharmacys');
         return response(['pharmacies' => $pharmacies], 200);
     }
 
@@ -121,5 +121,25 @@ class APharmacyController extends BaseController
     public function getTemplateFolder()
     {
         return 'pharmacy';
+    }
+
+    public function table(Request $request){
+        if($request->has("search_index")){
+            $searchIndex = $request->search_index;
+            $query = DB::table('pharmacies');
+            $pharmacies = Pharmacy::scopeSearch($query, $searchIndex)->orderByRaw('created_at DESC')->get();
+            return response(['search_result' => $pharmacies], 200);
+        }else{
+            $pageSize = $request->params['updates'][0]['value'];
+            $pageIndex = $request->params['updates'][1]['value'] + 1;
+
+            $pharmacies = Pharmacy::search($request->q)
+            ->orderBy('created_at', 'DESC')
+            ->paginate($pageSize, ['*'], 'page', $pageIndex)
+            ->fragment('pharmacys');
+            return response(['search_result' => $pharmacies], 200);
+
+            
+        }
     }
 }

@@ -6,11 +6,6 @@
 </div>
 
 <div class="col-lg-12 row mt-10">
-  <app-tables-widget1
-    class="card card-xxl-stretch col-lg-8"
-  ></app-tables-widget1>
-
-<!-- 
     <div class="card card-xxl-stretch col-lg-8">
       <div class="card-header border-0 pt-5">
         <h3 class="card-title align-items-start flex-column">
@@ -18,14 +13,168 @@
         </h3>
       </div>
       <div class="card-body py-3 row">
-        <div class="col-lg-6">
-          
+        <div class="col-lg-6" style="padding: 1%">
+          <div class="mt-10" style="display: flex; justify-content: space-between;">
+            <div class="symbol symbol-50px me-2">
+              <span class="symbol-label">
+                <img
+                  src="./assets/media/svg/brand-logos/plurk.svg"
+                  class="h-50 align-self-center"
+                  alt=""
+                />
+              </span>
+            </div>
+            <a
+              routerLinkActive="active" routerLink="/doctor/list"
+              class="text-dark fw-bolder text-hover-primary mb-1"
+              style=" font-size: 30px"
+            >
+              Doctors
+            </a>
+            <span style="display: inline-block; float: right;" class="text-muted me-2 fs-1 fw-bold">{{doctors_count}}</span>
+          </div>
+          <div class="mt-10" style="display: flex; justify-content: space-between;">
+            <div class="symbol symbol-50px me-2">
+              <span class="symbol-label">
+                <img
+                  src="./assets/media/svg/brand-logos/telegram.svg"
+                  class="h-50 align-self-center"
+                  alt=""
+                />
+              </span>
+            </div>
+            <a
+              routerLinkActive="active" routerLink="/doctor/list"
+              class="text-dark fw-bolder text-hover-primary mb-1"
+              style=" font-size: 30px"
+            >
+              Branches
+            </a>
+            <span style="display: inline-block;float: right;" class="text-muted me-2 fs-1 fw-bold">{{doctor_branches_count}}</span>
+          </div>
+          <div class="mt-10" style="display: flex; justify-content: space-between;">
+            <div class="symbol symbol-50px me-2">
+              <span class="symbol-label">
+                <img
+                  src="./assets/media/svg/brand-logos/vimeo.svg"
+                  class="h-50 align-self-center"
+                  alt=""
+                />
+              </span>
+            </div>
+            <a
+              routerLinkActive="active" routerLink="/pharmecy/list"
+              class="text-dark fw-bolder text-hover-primary mb-1"
+              style="font-size: 30px"
+            >
+              Pharmacies
+            </a>
+            <span style="display: inline-block; float: right;" class="text-muted me-2 fs-1 fw-bold">{{pharmacy_count}}</span>
+          </div>
+          <div class="mt-10" style="display: flex; justify-content: space-between;">
+            <div class="symbol symbol-50px me-2">
+              <span class="symbol-label">
+                <img
+                  src="./assets/media/svg/brand-logos/bebo.svg"
+                  class="h-50 align-self-center"
+                  alt=""
+                />
+              </span>
+            </div>
+            <a
+              routerLinkActive="active" routerLink="/lab/lab_list"
+              class="text-dark fw-bolder text-hover-primary mb-1"
+              style="font-size: 30px"
+            >
+              Labs
+            </a>
+            <span style="display: inline-block; float: right" class="text-muted me-2 fs-1 fw-bold">{{lab}}</span>
+          </div>
+
+
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6" style="padding: 1%">
+          <div class="mt-10" style="display: flex; justify-content: space-between;">
+            <div class="symbol symbol-50px me-2">
+              <span class="symbol-label">
+                <img
+                  src="./assets/media/svg/brand-logos/plurk.svg"
+                  class="h-50 align-self-center"
+                  alt=""
+                />
+              </span>
+            </div>
+            <a
+              routerLinkActive="active" routerLink="/insurance/list"
+              class="text-dark fw-bolder text-hover-primary mb-1"
+              style="font-size: 30px"
+            >
+              Insurance Co.
+            </a>
+            <span style="display: inline-block; float: right;" class="text-muted me-2 fs-1 fw-bold">{{insurance_company_count}}</span>
+          </div>
+          <div class="mt-10" style="display: flex; justify-content: space-between;">
+            <div class="symbol symbol-50px me-2">
+              <span class="symbol-label">
+                <img
+                  src="./assets/media/svg/brand-logos/telegram.svg"
+                  class="h-50 align-self-center"
+                  alt=""
+                />
+              </span>
+            </div>
+            <a
+              routerLinkActive="active" routerLink="/hospital/list"
+              class="text-dark fw-bolder text-hover-primary mb-1"
+              style="font-size: 30px"
+            >
+              Hospitals
+            </a>
+            <span style="display: inline-block;float: right;" class="text-muted me-2 fs-1 fw-bold">{{hospital_count}}</span>
+          </div>
+          <div class="mt-10" style="display: flex; justify-content: space-between;">
+            <div class="symbol symbol-50px me-2">
+              <span class="symbol-label">
+                <img
+                  src="./assets/media/svg/brand-logos/vimeo.svg"
+                  class="h-50 align-self-center"
+                  alt=""
+                />
+              </span>
+            </div>
+            <a
+              routerLinkActive="active" routerLink="/center/list"
+              class="text-dark fw-bolder text-hover-primary mb-1"
+              style="font-size: 30px"
+            >
+              Centers
+            </a>
+            <span style="display: inline-block; float: right;" class="text-muted me-2 fs-1 fw-bold">{{center_count}}</span>
+          </div>
+          <div class="mt-10" style="display: flex; justify-content: space-between;">
+            <div class="symbol symbol-50px me-2">
+              <span class="symbol-label">
+                <img
+                  src="./assets/media/svg/brand-logos/bebo.svg"
+                  class="h-50 align-self-center"
+                  alt=""
+                />
+              </span>
+            </div>
+            <a
+              routerLinkActive="active" routerLink="/medicines/list"
+              class="text-dark fw-bolder text-hover-primary mb-1"
+              style="font-size: 30px"
+            >
+              Medicines
+            </a>
+            <span style="display: inline-block; float: right" class="text-muted me-2 fs-1 fw-bold">{{medicine_count}}</span>
+          </div>
+
 
         </div>
       </div>
-    </div> -->
+    </div>
 
 
 

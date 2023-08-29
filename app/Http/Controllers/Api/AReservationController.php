@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\BaseController;
 use App\Models\Doctor;
 use App\Models\DoctorReservation as Reservation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -147,6 +148,9 @@ class AReservationController extends BaseController
     public function getTemplateFolder()
     {
         return 'reservation';
+    }
+
+    public function table(Request $request){
     }
 
 }

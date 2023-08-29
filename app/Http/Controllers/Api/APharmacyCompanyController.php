@@ -10,6 +10,7 @@ use App\Models\Country;
 use Okipa\LaravelBootstrapTableList\TableList;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\DB;
 
 class APharmacyCompanyController extends BaseController
 {
@@ -20,7 +21,7 @@ class APharmacyCompanyController extends BaseController
 
     public function index(Request $request)
     {
-        $pharmacy_companies = PharmacyCompany::search($request->q)->orderByRaw('created_at DESC')->paginate(15)->fragment('pharmacy_companies');
+        $pharmacy_companies = PharmacyCompany::search($request->q)->orderByRaw('created_at DESC')->paginate(10)->fragment('pharmacy_companies');
 
         return response(['pharmacy_companies' => $pharmacy_companies], 200);
     }
@@ -134,5 +135,25 @@ class APharmacyCompanyController extends BaseController
     public function getTemplateFolder()
     {
         return 'pharmacy_company';
+    }
+    public function table(Request $request){
+        if($request->has("search_index")){
+            $searchIndex = $request->search_index;
+            $query = DB::table('pharmacy_companies');
+            $pharmacy_companies = PharmacyCompany::scopeSearch($query, $searchIndex)->orderByRaw('created_at DESC')->get();
+            return response(['search_result' => $pharmacy_companies], 200);
+        }else{
+            $pageSize = $request->params['updates'][0]['value'];
+            $pageIndex = $request->params['updates'][1]['value'] + 1;
+
+            $doctors = Doctor::search($request->q)
+            ->orderBy('created_at', 'DESC')
+            ->paginate($pageSize, ['*'], 'page', $pageIndex)
+            ->fragment('doctors');
+            
+            return response(['search_result' => $doctors], 200);
+
+            
+        }
     }
 }

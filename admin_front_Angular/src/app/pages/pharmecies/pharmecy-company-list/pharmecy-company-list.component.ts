@@ -12,18 +12,19 @@ export class PharmecyCompanyListComponent {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @Input() tableData: any[];
   pageSize : number ;
+  search_index: string;
 
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
   ngOnInit(): void {
     this.http.get<any>(environment.apiUrl + "pharmacy_company/list").
       subscribe((response) => {        
         this.tableData = response.pharmacy_companies["data"];
-        this.paginator.pageSize = 15;
+        this.paginator.pageSize = response.pharmacy_companies["per_page"];
         this.paginator.length = response.pharmacy_companies["total"]; 
       });
   }
+
   onPageChange(event: any) {
-    console.log("--------" + this.paginator.length);
   }
 
   onSelectChange(event : any) {
@@ -41,5 +42,23 @@ export class PharmecyCompanyListComponent {
 
   ngAfterViewInit() {
     this.paginator.pageSize = this.pageSize;
+  }
+
+
+  //search with the index
+  search(){
+    if(this.search_index == ""){
+      this.ngOnInit();
+    }else{
+      this.http.post<any>(environment.apiUrl + "pharmacy_company/table", {"search_index": this.search_index.toString()})   
+          .subscribe((response)=>{
+            this.tableData = response.search_result;
+            this.paginator.pageSize = response.search_result.length;
+            this.paginator.length = response.search_result.length;
+            this.paginator.pageIndex = response.search_result["current_page"]-1;
+            this.cdr.detectChanges(); // Manually trigger change detection
+            
+          })   
+    }
   }
 }

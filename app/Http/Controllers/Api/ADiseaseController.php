@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Admin\BaseController;
 use App\Mangers\DataTableManger;
 use App\Models\Disease;
@@ -18,9 +18,9 @@ class ADiseaseController extends BaseController
 
     public function index(Request $request)
     {
-
+        $query = Disease::query();
         $data = dataTable()
-            ->of( Disease::query() )
+            ->of($query )
             ->filterColumns(['id', 'slug'])
             ->each(function ($row) {
                 return [
@@ -156,5 +156,83 @@ class ADiseaseController extends BaseController
     public function getTemplateFolder()
     {
         return 'disease';
+    }
+    public function table(Request $request){
+        if($request->has("search_index")){
+            $searchIndex = $request->search_index;
+            $query = DB::table(function ($query) {
+                $query->select(
+                    'diseases.*',
+                    'disease_trans.NAME AS arname'
+                )
+                ->from('diseases')
+                ->join('disease_trans', 'diseases.id', '=', 'disease_trans.disease_id')
+                ->where('disease_trans.locale', 'ar');
+            }, 'result1')
+            ->join('disease_trans', 'result1.id', '=', 'disease_trans.disease_id')
+            ->select(
+                'result1.*',
+                'disease_trans.NAME AS enname'
+            )
+            ->where('disease_trans.locale', 'en');
+            $results = $query->where('arname', 'LIKE', "%$searchIndex%"); 
+
+            $results = $query->get();
+            $resultsArray = $results->toArray();
+            
+            $transformedResults = array_map(function ($row) {
+                return [                    
+                    $row->id,
+                    img_tag($row->image, 'diseases/'),
+                    $row->arname,
+                    $row->enname,
+                    date('d-m-Y', strtotime($row->updated_at)),
+                    [
+                        'edit' => ['admin.diseases.edit', ['id' => $row->id]],
+                        'delete' => ['admin.diseases.delete', ['id' => $row->id]]
+                    ]
+                ];
+            }, $resultsArray);
+            
+            return response(["search_result" => $transformedResults], 200);
+        }else{
+            $pageSize = $request->params['updates'][0]['value'];
+            $pageIndex = $request->params['updates'][1]['value'] + 1;
+
+            $query = DB::table(function ($query) {
+                $query->select(
+                    'diseases.*',
+                    'disease_trans.NAME AS arname'
+                )
+                ->from('diseases')
+                ->join('disease_trans', 'diseases.id', '=', 'disease_trans.disease_id')
+                ->where('disease_trans.locale', 'ar');
+            }, 'result1')
+            ->join('disease_trans', 'result1.id', '=', 'disease_trans.disease_id')
+            ->select(
+                'result1.*',
+                'disease_trans.NAME AS enname'
+            )
+            ->where('disease_trans.locale', 'en')
+            ->limit($pageSize) // Set the number of records per page
+            ->offset(($pageIndex - 1) * $pageSize); // Calculate the offset based on the desired page
+
+            $results = $query->get(); 
+            $resultsArray = $results->toArray();
+            $transformedResults = array_map(function ($row) {
+                return [
+                    $row->id,
+                    img_tag($row->image, 'diseases/'),
+                    $row->arname,
+                    $row->enname,
+                    date('d-m-Y', strtotime($row->updated_at)),
+                    [
+                        'edit' => ['admin.diseases.edit', ['id' => $row->id]],
+                        'delete' => ['admin.diseases.delete', ['id' => $row->id]]
+                    ]
+                ];
+            }, $resultsArray);
+            return response(["search_result" => $transformedResults], 200);
+        }
     }
 }

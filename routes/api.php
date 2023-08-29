@@ -38,6 +38,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/bodypart/delete/{id}', 'ABodypartController@delete');
     Route::get('/bodypart/edit/{id}',  'ABodypartController@edit');
     Route::get('/body_part/copy/{id}',  'ABodypartController@copy');
+    Route::post('/bodypart/table', 'ABodypartController@table');
 
     //Disease API
     Route::get('/disease/list', 'ADiseaseController@index')->name('disease');
@@ -46,6 +47,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/disease/delete/{id}', 'ADiseaseController@delete' );
     Route::get('/disease/copy/{id}', 'ADiseaseController@copy' );
     Route::post('/disease/store', 'ADiseaseController@store' );
+    Route::post('/disease/table', 'ADiseaseController@table');
 
     //Doctor API
     Route::get('/doctor/list', 'ADoctorController@index')->name('Adoctor');
@@ -53,6 +55,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/doctor/edit/{id}', 'ADoctorController@edit' );
     Route::get('/doctor/delete/{id}', 'ADoctorController@delete' );
     Route::post('/doctor/store', 'ADoctorController@store' );
+    Route::post('/doctor/table', 'ADoctorController@table');
 
     //Doctor branch API
     Route::get('/doctor/branch/{id}', 'ADoctorBranchController@index' );
@@ -68,6 +71,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::post('/reservation/store', 'AReservationController@store');
     Route::get('/reservation/delete/{id}', 'AReservationController@delete' );
     Route::get('/reservation/view/{id}', 'AReservationController@view' );
+    Route::post('/reservation/table', 'AReservationController@table');
 
     //Pharmacy API
     Route::get('/pharmacy/list', 'APharmacyController@index')->name('pharmecy');
@@ -76,6 +80,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/pharmacy/delete/{id}', 'APharmacyController@delete' );
     Route::get('/pharmacy/copy/{id}', 'APharmacyController@copy' );
     Route::post('/pharmacy/store', 'APharmacyController@store' );
+    Route::post('/pharmacy/table', 'APharmacyController@table');
 
     //Pharemacy company API
     Route::get('/pharmacy_company/list', 'APharmacyCompanyController@index');
@@ -84,6 +89,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/pharmacy_company/delete/{id}', 'APharmacyCompanyController@delete' );
     Route::get('/pharmacy_company/copy/{id}', 'APharmacyCompanyController@copy' );
     Route::post('/pharmacy_company/store', 'APharmacyCompanyController@store' );
+    Route::post('/pharmacy_company/table', 'APharmacyCompanyController@table');
 
     //Lab Service API
     Route::get('/lab_services/list', 'ALabServiceController@index');

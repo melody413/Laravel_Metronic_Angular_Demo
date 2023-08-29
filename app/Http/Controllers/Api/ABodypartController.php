@@ -8,6 +8,7 @@ use App\Mangers\DataTableManger;
 use App\Models\BodyPart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\DB;
 
 class ABodyPartController extends BaseController
 {
@@ -20,7 +21,7 @@ class ABodyPartController extends BaseController
     {
 
         $data = dataTable()
-            ->of( BodyPart::query() )
+            ->of( BodyPart::query()->orderByRaw('created_at DESC') )
             ->filterColumns(['id', 'slug'])
             ->each(function ($row) {
                 $parent = "";
@@ -35,14 +36,12 @@ class ABodyPartController extends BaseController
                     date('d-m-Y', strtotime($row->updated_at)),
                     table_actions([
                         'edit' => ['admin.body_part.edit', ['id' => $row->id]],
-                        //'copy' => ['admin.body_part.copy', ['id' => $row->id]],
                         'delete' => ['admin.body_part.delete', ['id' => $row->id]]
                     ])
                 ];
             })
             ->rows();
-        return response($data, 200);
-
+        return response($data);
     }
 
     public function create()
@@ -162,5 +161,70 @@ class ABodyPartController extends BaseController
     public function getTemplateFolder()
     {
         return 'body_part';
+    }
+    public function table(Request $request){
+        if($request->has("search_index")){
+            $searchIndex = $request->search_index;
+            $query = DB::table('body_parts');
+            $query->select('body_parts.*');
+            $query->addSelect('body_part_trans.name as name');
+            $query->join('body_part_trans', 'body_part_id', '=', 'body_parts.id');
+            $query->where('body_part_trans.locale', '=', 'ar');
+            $results = $query->where('name', 'LIKE', "%$searchIndex%")->get(); 
+            $resultsArray = $results->toArray();
+            $transformedResults = array_map(function ($row) {
+                $parent = "";
+                if ($row->parent)
+                    $parent = BodyPart::find($row->parent)->name;
+            
+                return [
+                    $row->id,
+                    img_tag($row->image, 'body_parts/'),
+                    // isset($row->translate('ar')->name) ? $row->translate('ar')->name : '',
+                    $row->name,
+                    $parent,
+                    date('d-m-Y', strtotime($row->updated_at)),
+                    [
+                        'edit' => ['admin.body_part.edit', ['id' => $row->id]],
+                        'delete' => ['admin.body_part.delete', ['id' => $row->id]]
+                    ]
+                ];
+            }, $resultsArray);
+            
+            return response(["search_result" => $transformedResults], 200);
+        }else{
+            $pageSize = $request->params['updates'][0]['value'];
+            $pageIndex = $request->params['updates'][1]['value'] + 1;
+
+            $query = DB::table('body_parts')
+                ->select('body_parts.*', 'body_part_trans.name as name')
+                ->join('body_part_trans', 'body_part_id', '=', 'body_parts.id')
+                ->where('body_part_trans.locale', '=', 'ar')
+                ->limit($pageSize) // Set the number of records per page
+                ->offset(($pageIndex - 1) * $pageSize); // Calculate the offset based on the desired page
+
+            $results = $query->get(); 
+            $resultsArray = $results->toArray();
+            $transformedResults = array_map(function ($row) {
+                $parent = "";
+                if ($row->parent)
+                    $parent = BodyPart::find($row->parent)->name;
+            
+                return [
+                    $row->id,
+                    img_tag($row->image, 'body_parts/'),
+                    // isset($row->translate('ar')->name) ? $row->translate('ar')->name : '',
+                    $row->name,
+                    $parent,
+                    date('d-m-Y', strtotime($row->updated_at)),
+                    [
+                        'edit' => ['admin.body_part.edit', ['id' => $row->id]],
+                        'delete' => ['admin.body_part.delete', ['id' => $row->id]]
+                    ]
+                ];
+            }, $resultsArray);
+            return response(["search_result" => $transformedResults], 200);
+            
+        }
     }
 }
