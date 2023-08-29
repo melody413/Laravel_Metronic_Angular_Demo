@@ -22,6 +22,7 @@ export class CenterListComponent {
       subscribe((response) => {        
         this.tableData = response.centers["data"];
         this.paginator.pageSize = response.centers["per_page"];
+        this.pageSize = response.centers["per_page"];
         this.paginator.length = response.centers["total"];
       });
   }

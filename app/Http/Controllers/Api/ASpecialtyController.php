@@ -7,6 +7,7 @@ use App\Models\Specialty;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Admin\BaseController;
+use Illuminate\Support\Facades\DB;
 
 class ASpecialtyController extends BaseController
 {
@@ -18,7 +19,7 @@ class ASpecialtyController extends BaseController
     public function index(Request $request)
     {
         $data = dataTable()
-            ->of( Specialty::query() )
+            ->of( Specialty::query()->orderByRaw('created_at DESC') )
             ->filterColumns(['id', 'slug'])
             ->each(function ($row) {
                 return [
@@ -123,5 +124,85 @@ class ASpecialtyController extends BaseController
     public function getTemplateFolder()
     {
         return 'specialty';
+    }
+
+    public function table(Request $request){
+        if($request->has("search_index")){
+            $searchIndex = $request->search_index;
+            $query = DB::table(function ($query) use ($searchIndex) {
+                $query->select(
+                        'specialties.*',
+                        'specialty_trans.NAME AS arname'
+                    )
+                    ->from('specialties')
+                    ->join('specialty_trans', 'specialties.id', '=', 'specialty_trans.specialty_id')
+                    ->where('specialty_trans.locale', 'ar');
+            }, 'result1')
+            ->join('specialty_trans', 'result1.id', '=', 'specialty_trans.specialty_id')
+            ->select(
+                'result1.*',
+                'specialty_trans.NAME AS enname'
+            )
+            ->where('specialty_trans.locale', 'en')
+            ->orderByRaw('created_at DESC');
+            
+            $results = $query->where(function($query) use ($searchIndex) {
+                $query->where('result1.arname', 'LIKE', "%$searchIndex%")
+                      ->orWhere('specialty_trans.NAME', 'LIKE', "%$searchIndex%");
+            })->get();
+            $resultsArray = $results->toArray();
+            $transformedResults = array_map(function ($row) {
+                return [           
+                    $row->id,
+                    $row->arname,
+                    $row->enname,
+                    date('d-m-Y', strtotime($row->updated_at)),
+                    table_actions([
+                        'edit' => ['admin.specialty.edit', ['id' => $row->id]],
+                        'delete' => ['admin.specialty.delete', ['id' => $row->id]]
+                    ])
+                ];
+            }, $resultsArray);
+            return response(['search_result' => $transformedResults], 200);
+            
+        }else{
+
+            $pageSize = $request->params['updates'][0]['value'];
+            $pageIndex = $request->params['updates'][1]['value'] + 1;
+            $query = DB::table(function ($query){
+                $query->select(
+                        'specialties.*',
+                        'specialty_trans.NAME AS arname'
+                    )
+                    ->from('specialties')
+                    ->join('specialty_trans', 'specialties.id', '=', 'specialty_trans.specialty_id')
+                    ->where('specialty_trans.locale', 'ar');
+            }, 'result1')
+            ->join('specialty_trans', 'result1.id', '=', 'specialty_trans.specialty_id')
+            ->select(
+                'result1.*',
+                'specialty_trans.NAME AS enname'
+            )
+            ->where('specialty_trans.locale', 'en')
+            ->orderByRaw('created_at DESC')
+            ->limit($pageSize) // Set the number of records per page
+            ->offset(($pageIndex - 1) * $pageSize); // Calculate the offset based on the desired page
+
+            $results = $query->get(); 
+            $resultsArray = $results->toArray();
+            $transformedResults = array_map(function ($row) {
+                return [           
+                    $row->id,
+                    $row->arname,
+                    $row->enname,
+                    date('d-m-Y', strtotime($row->updated_at)),
+                    table_actions([
+                        'edit' => ['admin.specialty.edit', ['id' => $row->id]],
+                        'delete' => ['admin.specialty.delete', ['id' => $row->id]]
+                    ])
+                ];
+            }, $resultsArray);
+            return response(['search_result' => $transformedResults], 200);
+        }
     }
 }

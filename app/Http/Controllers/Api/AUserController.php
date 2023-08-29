@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Http\Controllers\Admin\BaseController;
+use Illuminate\Support\Facades\DB;
 
 class AUserController extends BaseController
 {
@@ -24,7 +25,7 @@ class AUserController extends BaseController
 
     public function index_doctors(Request $request){
         $users_count = User::search($request->q)->where("type", 2)->search($request->tel)->search($request->email)->count();
-        $dr_users = User::search($request->q)->where("type", 2)->search($request->tel)->search($request->email)->orderByRaw('created_at DESC')->paginate(15)->fragment('users');
+        $dr_users = User::search($request->q)->where("type", 2)->search($request->tel)->search($request->email)->orderByRaw('created_at DESC')->paginate(10)->fragment('users');
         // return view($this->getTemplatePath('index_doctors'), ['dr_users' => $dr_users, 'users_count' => $users_count]);
         return response(['dr_users' => $dr_users, 'users_count' => $users_count], 200);
     }
@@ -79,7 +80,7 @@ class AUserController extends BaseController
             //     ->rows()
             // ;
             $users_count = User::search($request->q)->search($request->tel)->search($request->email)->count();
-            $users = User::search($request->q)->search($request->tel)->search($request->email)->orderByRaw('created_at DESC')->paginate(15)->fragment('users');
+            $users = User::search($request->q)->search($request->tel)->search($request->email)->orderByRaw('created_at DESC')->paginate(10)->fragment('users');
             return response(['users' => $users, 'users_count' => $users_count], 200);
             
             // return view($this->getTemplatePath('index'), ['users' => $users, 'users_count' => $users_count]);
@@ -180,5 +181,24 @@ class AUserController extends BaseController
     public function getTemplateFolder()
     {
         return 'user';
+    }
+
+    public function table(Request $request){
+        if($request->has("search_index")){
+            $searchIndex = $request->search_index;
+            $query = DB::table('users');
+            $users = User::scopeSearch($query, $searchIndex)->orderByRaw('created_at DESC')->get();
+            return response(['search_result' => $users], 200);
+        }else{
+            $pageSize = $request->params['updates'][0]['value'];
+            $pageIndex = $request->params['updates'][1]['value'] + 1;
+            $users = User::search($request->q)->search($request->tel)->search($request->email)
+            ->orderBy('created_at', 'DESC')
+            ->paginate($pageSize, ['*'], 'page', $pageIndex)
+            ->fragment('users');
+            
+            return response(['search_result' => $users], 200);
+
+        }
     }
 }
