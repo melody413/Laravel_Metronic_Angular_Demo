@@ -1,0 +1,95 @@
+<div class="card">
+    <div class="card-body">
+      <div class="card-body">
+        <form
+          novalidate
+          class="form"
+          (ngSubmit)="create()"
+          enctype="multipart/form-data"
+        >
+            <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
+                Language Data:
+            </h1>
+            <div class="card-body border-top">
+                <div class="row col-lg-12">
+                    <div class="col-lg-6 fv-col">
+                        <h2 class="fs-4">*Name Ar:</h2>
+                        <input 
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                            [(ngModel)]="arName" 
+                            name="arName" 
+                            type="text" 
+                            value=""
+                        />
+                        <div *ngIf="errorMessage1" class="error-message fs-6" style="color: red;">{{errorMessage1}}</div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="fs-4">*Name En:</h2>
+                        <input 
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                            [(ngModel)]="enName" 
+                            name="enName" 
+                            type="text" 
+                            value=""
+                        />
+                        <div *ngIf="errorMessage2" class="error-message fs-6" style="color: red;">{{errorMessage2}}</div>
+                    </div>
+                </div>                
+            </div>
+
+            <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
+                Other Data :
+            </h1>
+            <div class="card-body border-top">
+                <div class="col-lg-12 row">
+                    <h2 class="fs-4 col-lg-1" style="display: block; padding-top: 10px">Country :</h2>
+                    <div class="col-lg-6">
+                        <select class="form-control fs-3" [(ngModel)]="country_id" name="country_id">
+                            <option 
+                               *ngFor="let country of response_countries let i = index"                                 
+                               [value]="country[0]"    
+                            >
+                                {{country[1]}}
+                            </option>
+                        </select>
+                    </div>                    
+                </div> 
+
+                <div class="input-group p-y-30 col-lg-15 d-flex gap-5 align-items-center mt-10">
+                    <h2 class="fw-bolder col-auto" for="is_active">Is Active :</h2>
+                    <span>OFF</span>
+                    <div class="form-check form-check-custom form-check-solid form-check-success form-switch">
+                        <input
+                            [(ngModel)] = "is_active"
+                            class="form-check-input"
+                            type="checkbox"
+                            name="is_active"
+                        />
+                    </div>
+                    <span>ON</span>
+                </div>
+                
+            </div>
+            <div class="col d-flex gap-2 align-items-center mt-15">
+                <button class="btn btn-md btn-secondary">Reset</button>
+                <button class="btn btn-md btn-success" type="submit">Save</button>
+                <button class="btn btn-md btn-primary">Save & create new</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  
+    <script
+      src="https://cdn.tiny.cloud/1/your-api-key/tinymce/6/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script>
+  
+    <script>
+      tinymce.init({
+        selector: "#editor",
+        plugins:
+          "a11ychecker advcode advlist advtable anchor autocorrect autolink autoresize autosave casechange charmap checklist code codesample directionality editimage emoticons export footnotes formatpainter fullscreen help image importcss inlinecss insertdatetime link linkchecker lists media mediaembed mentions mergetags nonbreaking pagebreak pageembed permanentpen powerpaste preview quickbars save searchreplace table tableofcontents template tinycomments tinydrive tinymcespellchecker typography visualblocks visualchars wordcount",
+      });
+    </script>
+  </div>
+  

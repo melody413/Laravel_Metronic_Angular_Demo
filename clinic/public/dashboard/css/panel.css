@@ -1,0 +1,198 @@
+.top-bar-breadcrumb{
+    font-size: 20px;
+    padding: 19px;
+}
+.top-bar-breadcrumb li >a{
+    color: orangered;
+}
+
+.card{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin: 25px 0;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    border-radius: 6px;
+    color: rgba(0, 0, 0, 0.87);
+    background: #fff;
+}
+
+.card .card-content{
+    padding: 15px 20px;
+    position: relative;
+}
+
+.card .card-header.card-header-icon{
+    float: left;
+    background: linear-gradient(60deg, rgba(255, 69, 0, 0.8), rgba(255, 69, 0,0.95));
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4);
+    color: #FFF;
+    margin: -20px 15px 0px;
+    padding: 15px;
+    border-radius: 3px;
+    position: relative;
+}
+
+
+.card .card-header{
+    padding: 15px 20px 0;
+    z-index: 3;
+}
+
+.card .card-header.card-header-icon i{
+    width: 33px;
+    height: 33px;
+    text-align: center;
+    line-height: 33px;
+}
+.card .card-header.card-header-icon+.card-content .card-title{
+    padding-bottom: 15px;
+}
+
+.card .card-title{
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+
+.card-title{
+    color: #3C4858;
+    text-decoration: none;
+}
+
+.card-content form{
+    margin-top: 35px;
+}
+
+#image-preview {
+    background-image: url("../images/image_placeholder.jpg");
+    width: 250px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    color: #ecf0f1;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 250px 250px;
+    box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42),
+    0 4px 25px 0px rgba(0, 0, 0, 0.12), 0
+    8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+#image-preview input {
+    line-height: 200px;
+    font-size: 200px;
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+}
+#image-preview label {
+    position: absolute;
+    z-index: 5;
+    opacity: 0.8;
+    cursor: pointer;
+    background-color: orangered;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.page-item .page-link{
+    color: orangered;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: orangered;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: 900;
+
+}
+.pagination > .active > a,.page-item.active .page-link{
+    background-color: orangered;
+    border-color: orangered;
+}
+
+.pagination > .active > a{
+    background-color: orangered;
+    border-color: red;
+    border-radius: 50%;
+    font-weight: 900;
+    box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42),
+    0 4px 25px 0px rgba(0, 0, 0, 0.12), 0
+    8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.pagination > li > a:hover{
+    background-color: orangered;
+    color: #ffffff;
+}
+
+
+
+table thead tr:first-child{
+    color: orangered!important;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+body {
+    background: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
+}
+
+.loading-bro {
+    margin: 50px auto;
+    width: 150px;
+}
+.loading-bro > h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    font-weight: 300;
+    color: #8E8E8E;
+}
+
+#load {
+    width: 150px;
+    animation: loading 3s linear infinite;
+}
+#load #loading-inner {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 300;
+    stroke-width: 10;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    animation: loading-circle 2s linear infinite;
+    stroke: #51BBA7;
+    fill: transparent;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes loading-circle {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: -600;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .top-bar-breadcrumb{
+        display: none;
+    }
+}

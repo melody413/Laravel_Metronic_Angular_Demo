@@ -1,0 +1,88 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+// Notifications Messages (Woocommerce/bbpress/Buddypress)------
+.woocommerce-message,
+.woocommerce-error,
+.woocommerce-info,
+// #message,               // buddypress message
+.bbp-template-notice,
+.indicator-hint{
+  list-style: none outside;
+  width: 100%;
+  word-wrap: break-word;
+  position: relative;
+  padding: 10px 10px 10px 50px !important;
+  margin: 15px 0 !important;
+  line-height: 30px;
+  background-color: $success_color;
+  color: #ffffff;
+  border-radius: $base-border-radius;
+  *zoom: 1;
+
+  p{
+    margin: 0;
+    line-height: inherit;
+    height: auto;
+  }
+
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:before {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-family: tiefonticon;
+    content: "\f00c";
+    @include font-size(14px);
+    width: 30px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  a,
+  a.button{
+    color: #ffffff !important;
+    background: transparent;
+    float: right;
+    padding: 0 10px;
+    line-height: 30px;
+
+    &:hover{
+      background-color: rgba(#ffffff, 0.1) !important;
+    }
+  }
+}
+
+.woocommerce-info,
+.bbp-template-notice.info {
+  background-color: $info_color !important;
+
+  &:before {
+    content: "\f129";
+  }
+}
+
+.woocommerce-error,
+// #message.error,
+.bbp-template-notice.error{
+  background-color: $danger_color;
+
+  &:before {
+    content: "\e117";
+  }
+}
+
+.woocommerce-warning,
+// #message.warning,
+.bbp-template-notice.important,
+.bbp-template-notice.warning{
+  background-color: $warning_color;
+
+  &:before {
+    content: "\f071";
+  }
+}

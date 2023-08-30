@@ -1,0 +1,1569 @@
+
+// BP RTL.
+// @version 3.0.0
+.rtl{
+
+	// *----------------------------------------------------------
+	// * @section 2.1 - Navs Object Nav / Sub Nav (bp-list)
+	// *
+	// * The main navigational elements for all BP screens
+	// *----------------------------------------------------------
+
+
+	// Import our generic navigation styles--------------------
+	.bp-navs {
+		ul {
+
+			li {
+
+				.count {
+					margin-right: 4px;
+					margin-left: 0;
+
+					right: 50%;
+					left: auto;
+				}
+			}
+
+		} // close ul
+	} // close .bp-navs
+
+	@include medium-up() {
+
+		.bp-dir-hori-nav:not(.bp-vertical-navs){
+			.bp-navs.main-navs{
+				ul {
+
+					li {
+						margin: 0 0 0 10px;
+					}
+				}
+			} // .bp-navs.main-navs
+
+			.main-navs.dir-navs:not(.tabbed-links){
+				ul li{
+					float: right;
+				}
+			}
+
+			.main-navs:not(.dir-navs){
+
+				#object-nav{
+					li{
+						body.groups &{
+							float: none;
+						}
+					}
+				}
+			} // .main-navs:not(.dir-navs)
+		} // .bp-dir-hori-nav:not(.bp-vertical-navs)
+	}
+
+	@include medium-up() {
+		#group-create-tabs:not(.tabbed-links){
+
+			li{
+				float: none;
+
+				&:not(:last-child):after{
+					content: '\f177';
+				}
+			}
+		}
+	}
+
+	.main-navs.dir-navs {
+		.count{
+			margin-right: 1px;
+			margin-left: 0;
+		}
+	}
+
+	.buddypress-wrap {
+
+		#compose-personal-li{
+			@include medium-up(){
+				float: left;
+			}
+		}
+
+	} // close .buddypress-wrap
+
+	.buddypress_object_nav,
+	.buddypress-wrap {
+		.bp-navs.group-create-links {
+			ul {
+				li.current {
+					a {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+
+	.buddypress-wrap {
+		@include medium-up() {
+
+			.bp-navs li,
+			.subnav {
+				float: right;
+			}
+
+			ul.subnav {
+				width: auto;
+			}
+
+			// user screen last filter
+			#subsubnav {
+				.activity-search {
+					float: right;
+				}
+
+				.filter {
+					float: left;
+				}
+			}
+
+		} // close @media
+
+	} // close .buddypress-wrap
+
+	@include medium-up() {
+
+		// the top level class activating vert layout
+		.bp-dir-vert-nav {
+
+			.bp-navs.dir-navs {
+				a {
+
+					.count {
+						float: left;
+					}
+				}
+			}
+		}
+	}
+
+	.buddypress-wrap {
+		@include medium-up {
+			@include tabbed-links();
+			.bp-navs.tabbed-links {
+				ul {
+
+					li {
+
+						a {
+							border-right-width: 1px;
+							border-left: 0;
+						}
+					}
+
+					li.last {
+						float: left;
+					}
+				}
+			} // close .bp-navs.tabbed-links
+		} // @media
+	}
+
+
+	// Import our Filter styles--------------------------------
+	.buddypress-wrap {
+		@include clearfix-element(".subnav-filters");
+
+		.subnav-filters {
+			> ul {
+				float: right;
+			}
+
+			div {
+				float: none;
+			}
+
+			.feed {
+				margin-left: $marg-med;
+				margin-right: 0;
+			}
+
+			.user-messages-bulk-actions {
+				.bulk-actions {
+					float: right;
+				}
+
+				label {
+					margin-left: 25px;
+					margin-right: 0;
+				}
+
+				.bulk-apply {
+					text-align: center;
+				}
+			}
+
+			//position for wider screens
+
+			@include medium-small-up() {
+				.subnav-search,
+				.subnav-search form,
+				.feed,
+				.bp-search,
+				.dir-search,
+				.user-messages-bulk-actions,
+				.user-messages-search,
+				.group-invites-search,
+				.group-act-search {
+					float: right;
+				}
+
+				.last,
+				.component-filters,
+				.user-messages-search {
+					float: left;
+				}
+
+			} // @media
+
+		}
+
+	}
+
+
+	// *
+	// *----------------------------------------------------------
+	// * @section 2.2 - Pagination
+	// *----------------------------------------------------------
+
+	.buddypress-wrap {
+
+		.bp-pagination {
+			.pag-count {
+				float: right;
+			}
+
+			.bp-pagination-links {
+				float: left;
+				margin-left: $marg-sml;
+				margin-right: 0;
+			}
+
+			.next,
+			.prev{
+				transform: rotate(180deg);
+				display: inline-block;
+			}
+		}
+	}
+
+	// *
+	// *-------------------------------------------------------------------------------
+	// * @section 3.0 - BP Lists / Loops Generic
+	// *-------------------------------------------------------------------------------
+
+
+	.bp-list {
+		li {
+
+			.activity-meta.action {
+				.generic-button {
+					margin: 0 0 0 $marg-sml;
+				}
+			}
+
+			@include medium-up() {
+
+
+				.item-avatar {
+					float: right;
+					margin-left: $marg-med;
+					margin-right: 0;
+				}
+
+				.action {
+					clear: right;
+					text-align: right;
+
+					// if it's a ul/li wrapper
+					li.generic-button {
+						margin-left: 0;
+					}
+				}
+
+			} // close @media
+
+		} // close li
+
+	}
+
+	.buddypress-wrap {
+		.groups-list,
+		.members-list,
+		.members-group-list{
+			&:not(.grid) li:not(:last-child) .item {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.friends-request-list,
+	.membership-requests-list {
+		@include medium-up() {
+			li {
+				.action {
+					text-align: left;
+				}
+
+				.item-title {
+					text-align: right;
+				}
+			}
+		}
+	}
+
+	body:not(.logged-in) {
+		.bp-list {
+			@include medium-up() {
+				.item {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	// *
+	// *-----------------------------------------------------
+	// * @section 3.1.1 - Activity Whats New
+	// *-----------------------------------------------------
+
+	.activity-update-form {
+		#whats-new-post-in-box-items {
+			.bp-activity-object {
+				border: $base-border;
+
+				span {
+					padding-right: $marg-sml;
+					padding-left: 0;
+				}
+
+				.bp-remove-item{
+			    margin-right: $marg-sml;
+			    margin-left: 0;
+				}
+			}
+		}
+
+		#whats-new-submit {
+			margin: 0 0 $marg-sml;
+		}
+
+		@include medium-up() {
+			#whats-new-post-in-box {
+				float: right;
+
+				select {
+					float: right;
+					margin-left: 4%;
+					margin-right: 0;
+				}
+			}
+
+			#whats-new-post-in-box-items {
+				float: right;
+			}
+
+			#whats-new-submit {
+				float: left;
+			}
+
+			#whats-new-avatar {
+				float: right;
+			}
+
+			#whats-new-content,
+			#whats-new-post-in-box{
+				margin-right: 70px;
+				margin-left: 0;
+			}
+
+			#whats-new-submit {
+				input {
+					margin-right: $marg-sml;
+					margin-left: 0;
+					float: left;
+				}
+			}
+		} // close @media
+
+		#message{
+			float: right;
+		}
+	}
+
+	// *
+	// *-----------------------------------------------------
+	// * @section 3.1.2 - Activity Entries
+	// *-----------------------------------------------------
+
+	.activity-list {
+
+		.activity-item { // li element - (entries)
+			&:not(.load-more):before {
+		    right: 15px;
+		    left: auto;
+			}
+
+
+			div.item-avatar { // 'div' for weight
+				float: right;
+				margin-left: $marg-sml;
+				margin-right:0;
+			}
+
+			@include medium-up() {
+				&:not(.load-more):before {
+			    right: 25px;
+			    left: auto;
+				}
+			}
+
+			&.mini {
+				.activity-avatar {
+				  margin-right: 40px;
+				}
+			} // close .mini
+
+			&.new_forum_post,
+			&.new_forum_topic {
+
+				.activity-inner {
+					border-right: 2px solid $light-grey;
+					border-left: 0;
+					margin-right: $marg-sml;
+					margin-left: 0;
+					padding-right: $pad-med;
+					padding-left: 0;
+				}
+			}
+
+			.activity-content {
+				margin-right: 40px;
+				margin-left: 0;
+			}
+
+			.activity-read-more {
+				margin-right: 1em;
+				margin-left: 0;
+			}
+
+			ul.activity-meta {
+				padding-right: 0;
+			}
+
+			.activity-meta.action {
+				text-align: right;
+			}
+
+			// Main Activity items
+			@include medium-up(){
+				> .activity-content > .activity-meta.action {
+					left: 0;
+					right: auto;
+				}
+			}
+		}
+	}
+
+	@include medium-up() {
+		.activity-list {
+			.activity-item {
+				.activity-content {
+					margin: 0 70px 0 0;
+				}
+
+				.activity-header {
+					margin: 0 0 0 110px;
+				}
+
+			} // li entry item
+		}
+	}
+
+	body.activity-permalink {
+		.activity-list {
+			.activity-content {
+				.activity-inner,
+				blockquote {
+					margin-right: 0;
+				}
+			}
+
+			@include medium-up() {
+				.activity-avatar {
+					right: -20px;
+					left: auto;
+					margin-left: 0;
+				}
+
+				.activity-content {
+					margin-left: $marg-sml;
+
+					.activity-header {
+						p {
+							text-align: right;
+						}
+					}
+				}
+			} // close @media
+
+		}
+	}
+
+	// *
+	// *-----------------------------------------------------
+	// * @section 3.1.3 - Activity Comments
+	// *-----------------------------------------------------
+
+	// bp_activity_comments.scss ----------------------------------------
+	.buddypress-wrap {
+
+		.activity-comments {
+			margin: 0 70px 0 0;
+
+			@include medium-max(){
+				margin-right: 40px;
+				margin-left: 0;
+			}
+
+			ul {
+				li {
+					ul {
+						// indent any nested comments - comment to a comment
+						margin-right: 5%;
+						margin-left: 0;
+					}
+				}
+			} // close ul
+
+			div.acomment-avatar {
+				img {
+					float: right;
+				}
+			}
+
+			.acomment-content {
+				border-width: 0 3px 0 0;
+				margin: $marg-med 40px 0 0;
+				padding-right: $marg-med;
+				padding-left: 0;
+			}
+
+			.acomment-options {
+				float: right;
+				margin: $marg-sml $marg-lrg $marg-sml 0;
+			} // close .acomment-options
+
+			.activity-meta.action {
+				margin-right: 35px;
+				margin-left: 0;
+			}
+
+			.show-all {
+
+				button {
+					padding-right: $pad-sml;
+					padding-left: 0;
+				}
+			}
+
+		} // close .activity-comments
+
+	} // close .buddypress-wrap
+
+	// Single Activity Comment Entry View
+	body.activity-permalink {
+
+		.activity-comments {
+			> ul {
+				padding: 0 $pad-med 0 $pad-sml;
+			}
+		}
+	} //close .activity-permalink
+
+
+	// bp_comment_form.scss ---------------------------------------------
+	form.ac-form {
+		.ac-reply-avatar {
+			float: right;
+			margin-left: $marg-sml;
+			margin-right: 0;
+		}
+
+		.ac-reply-content {
+			padding-right: $pad-xlrg;
+			padding-left: 0;
+		}
+
+	}
+
+	.activity-comments li form.ac-form {
+		margin-left: $marg-med;
+		margin-right: 0;
+	}
+
+	.activity-comments form.root {
+		margin-right: 0;
+	}
+
+	// *
+	// *----------------------------------------------------------
+	// * @section 3.2 - Blogs Loop
+	// *----------------------------------------------------------
+
+	.buddypress-wrap {
+
+		.blogs-list { // ul
+
+			li {
+
+				@include medium-up() {
+					.item-meta {
+						clear: right;
+					}
+				} // close @media
+
+			} // close li
+
+		} // close .blogs-list
+	}
+
+
+	// *
+	// *----------------------------------------------------------
+	// * @section 3.2 - Groups Loop
+	// *----------------------------------------------------------
+	.buddypress-wrap {
+
+		.groups-list { // ul
+
+			li {
+				.group-details {
+					clear: right;
+				}
+
+				@include medium-up() {
+
+					.list-title,
+					.item-meta {
+						text-align: right;
+					}
+
+				} // close @media
+
+			} // close li
+
+			li.group-no-avatar div.group-desc {
+				margin-right: 0;
+			}
+		}
+
+	}
+
+	@include medium-up() {
+
+		.buddypress { // body class
+
+			.bp-vertical-navs {
+
+				.groups-list {
+
+					.item-avatar {
+						margin-left: 3%;
+						margin-right: 03%;
+					}
+				}
+			}
+		}
+	}
+
+
+	// *
+	// *----------------------------------------------------------
+	// * @section 3.2 - Members Loop
+	// *----------------------------------------------------------
+
+	.buddypress-wrap {
+		.members-list { // ul
+			li {
+				.user-update {
+					.activity-read-more {
+						padding-right: 2px;
+						padding-left: 0;
+					}
+				}
+
+				@include medium-up() {
+					.last-activity {
+						clear: right;
+					}
+				}
+			} // close li
+		}
+
+		.members-group-list {
+
+			li {
+				@include medium-up() {
+
+					.joined {
+						clear: right;
+					}
+				}
+			}
+		}
+	}
+
+	// *
+	// *-------------------------------------------------------------------------------
+	// * @section 4.0 - Directories
+	// *-------------------------------------------------------------------------------
+	.register-page {
+		.signup-form {
+			#signup-avatar img {
+				margin: 0 0 $marg-sml $marg-med;
+			}
+
+			.wp-pwd button{
+				left: 0;
+				right: auto;
+			}
+		} // close .signup-form
+
+	} // close .register-page
+
+	@include medium-up() {
+		.buddypress-wrap {
+			.register-page {
+				.layout-wrap {
+					.default-profile {
+						padding-left: $pad-lrg;
+						padding-right: 0;
+					}
+
+					.blog-details {
+						padding-right: $pad-lrg;
+						padding-left: 0;
+					}
+				}
+			}
+		}
+	}
+
+	@include medium-up() {
+		.buddypress-wrap.extended-default-reg {
+			.register-page {
+				.default-profile {
+					padding-left: $pad-med;
+					padding-right: 0;
+				}
+
+				.extended-profile {
+					padding-right: $pad-med;
+					padding-left: 0;
+				}
+			}
+		}
+	}
+
+
+	// *
+	// *-------------------------------------------------------------------------------
+	// * @section 5.0 - Single Item screens: Groups, Users
+	// *-------------------------------------------------------------------------------
+
+	// *
+	// *-----------------------------------------------------------
+	// * @subsection 5.1 - Item Header Global
+	// *-----------------------------------------------------------
+	#buddypress {
+		#item-header{
+			h2 {
+				// direction: rtl;
+			}
+		}
+
+		#item-header{
+			.bp-feedback{
+				p{
+					padding-left: 20px;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+
+
+	// *
+	// *-----------------------------------------------------------
+	// * @subsection 5.2 - Item Body: Global
+	// *-----------------------------------------------------------
+
+	.buddypress-wrap.bp-single-vert-nav {
+
+		.bp-list:not(.grid) {
+
+			.item-entry {
+				padding-right: $pad-sml;
+				padding-left: 0;
+			}
+		}
+	}
+
+
+	// *
+	// *-----------------------------------------
+	// * @subsection 5.2.1.1 - Management Settings Screens
+	// *-----------------------------------------
+
+	.buddypress-wrap {
+
+		.group-status-type {
+
+			ul {
+				margin: 0 $marg-lrg $marg-lrg 0;
+			}
+		}
+	}
+
+	.groups-manage-members-list {
+		@include medium-small-up() {
+			.member-name {
+				text-align: right;
+			}
+		}
+
+		@include medium-up() {
+			ul{
+				li {
+
+					.avatar,
+					.member-name {
+						float: right;
+					}
+
+					.action.text-links-list{
+						margin: 0 45px 0 0;
+					}
+
+					.avatar {
+						margin-left: $marg-med;
+						margin-right: 0;
+					}
+
+					.action {
+						float: right;
+					}
+
+				}
+			}
+		} // close @media
+	}
+
+
+
+	// *-----------------------------------------
+	// * @subsection 5.2.1.3 - Group Invites List
+	// *-----------------------------------------
+
+	/*
+	 * bp-nouveau styling: invite members, sent invites
+	 * @version 3.0.0
+	 */
+	.buddypress {
+
+		.bp-invites-content {
+
+			ul.item-list {
+
+				> li {
+					.item{
+						float: right;
+					}
+
+					.item-avatar{
+						float: right;
+						margin-left: 15px;
+						margin-right: 0;
+					}
+
+
+					.action {
+						left: 10px;
+						right: auto;
+					}
+
+
+				}
+
+			} // close ul
+
+
+			li {
+				ul.group-inviters {
+					li {
+						float: right;
+
+						.avatar{
+							margin-right: 5px;
+							margin-left: 0;
+						}
+					}
+				}
+
+			} // close li
+
+
+			#send-invites-editor {
+
+				ul {
+
+					li {
+						float: right;
+					}
+				}
+
+			} // close #send-invites-editor
+
+
+			@include medium-up() {
+
+				ul.item-list {
+
+					> li {
+						float: right;
+
+						&:nth-child(odd) {
+							margin-left: 0.5%;
+							margin-right: 0;
+						}
+
+						&:nth-child(even) {
+							margin-right: 0.5%;
+							margin-left: 0;
+						}
+					} // close  li
+
+				} // ul
+
+			} // close @media
+
+		} // close bp-invites-content
+	}
+
+
+	// *
+	// *-------------------------------------------
+	// * @subsection 5.2.2.2 - Extended Profiles
+	// *-------------------------------------------
+
+	.buddypress-wrap {
+
+		.profile {
+
+			.profile-fields{
+				&:before{
+					right: 14px;
+					left: auto;
+				}
+
+				tr{
+					td{
+						&.data{
+							padding: 0 40px 20px 0;
+							p{
+								padding-right: 0;
+							}
+						}
+					}
+				}
+
+				.label{
+					padding-right: 40px;
+					padding-left: 0;
+
+
+					&:before{
+						right: 11px;
+						left: auto;
+					}
+				}
+
+				p{
+					padding-right: 15px;
+					padding-left: 0;
+				}
+			}
+		}
+	}
+
+	// Edit Screen
+
+	.buddypress-wrap {
+
+		.profile.edit {
+
+			// The groups tabs
+			.button-nav {
+				li {
+					margin-left: $marg-lrg;
+					margin-right: 0;
+				}
+			}
+		} // .profile
+	} // close .buddypress-wrap
+
+	// .buddypress-wrap {
+	// 	.html-active button.switch-html {
+	// 		background: #f5f5f5;
+	// 		border-bottom-color: transparent;
+	// 		border-bottom-left-radius: 0;
+	// 		border-bottom-right-radius: 0;
+	// 	}
+
+	// 	.tmce-active button.switch-tmce {
+	// 		background: #f5f5f5;
+	// 		border-bottom-color: transparent;
+	// 		border-bottom-left-radius: 0;
+	// 		border-bottom-right-radius: 0;
+	// 	}
+	// }
+
+
+	// *
+	// *-------------------------------------------
+	// * @subsection 5.2.2.5 - Private Messaging
+	// *-------------------------------------------
+
+
+
+	// The actual messages list
+	#message-threads {
+
+		// The primary list elements
+		li {
+
+			.thread-from,
+			.thread-to {
+
+				img.avatar {
+					float: right;
+					margin: 0 0 0 $marg-sml;
+				}
+			}
+
+			.thread-date {
+				padding-left: 5px;
+				padding-right: 0;
+				text-align: left;
+			}
+
+		} // close li
+
+	} // close message-threads
+
+	.bp-messages-content {
+
+		.actions {
+			float: left;
+		}
+
+		// The single view of messages in a conversation thread
+		#bp-message-thread-list {
+
+			.message-metadata {
+				.user-link {
+					float: right;
+				}
+			}
+
+			img.avatar {
+				float: right;
+				margin: 0 0 0 $marg-sml;
+			}
+
+			.message-content{
+				margin: 1em 40px 0 0;
+			}
+		} // close #bp-message-thread-list
+
+		form.send-reply {
+
+			.avatar-box {
+
+				.avatar{
+					float: right;
+					margin-left: $marg-sml;
+					margin-right: 0;
+				}
+			}
+		}
+
+		.preview-thread-title,
+		.single-thread-title {
+			.messages-title {
+				padding-right: $pad-lrg;
+				padding-left: 0;
+			}
+		}
+
+		.thread-participants {
+			float: right;
+
+			li {
+				float: right;
+				margin-right: 5px;
+				margin-left: 0;
+			}
+		}
+
+		#thread-preview .preview-message,
+		#bp-message-thread-list li .message-content {
+
+			ul,
+			ol,
+			blockquote {
+				margin-right: 0;
+			}
+		}
+	}
+
+
+	// *
+	// *----------------------------------------------------------
+	// * @section 6.1 - Directory Search
+	// *
+	// * The Search form & controls in directory pages
+	// *----------------------------------------------------------
+
+	.buddypress-wrap { // the ID is required to add weight to rules
+
+		form.bp-dir-search-form,
+		form.bp-messages-search-form,
+		form.bp-invites-search-form {
+
+			input[type="search"],
+			input[type="text"] {
+				float: right;
+			}
+
+			button[type="submit"] {
+				float: left;
+			}
+
+		}
+
+	}
+
+
+
+	// *
+	// *-------------------------------------------------------------------------------
+	// * @section 6.0 - Forms  - General
+	// *-------------------------------------------------------------------------------
+
+
+	.buddypress-wrap {
+		.standard-form {
+			input[type="radio"],
+			input[type="checkbox"] {
+				margin-left: $marg-xsml;
+				margin-right: 0;
+			}
+
+			div.submit input {
+				margin-left: $marg-med;
+				margin-right: 0;
+			}
+
+
+			@include medium-up() {
+
+				.left-menu {
+					float: right;
+				}
+
+				#invite-list ul {
+
+					li {
+						margin: 0 1% 0 0;
+					}
+				}
+
+				.main-column {
+					margin-right: 190px;
+					margin-left: 0;
+
+					ul#friend-list {
+						float: right;
+					}
+				}
+
+			}
+
+		}
+
+	}
+
+	.buddypress-wrap {
+		.select-wrap {
+			select {
+				margin-left: -25px;
+				margin-right: 0;
+				padding: 6px $marg-sml 6px 25px;
+			}
+		}
+
+		@include medium-small-up() {
+
+			.notifications-options-nav {
+
+				.select-wrap {
+					float: right;
+				}
+			}
+		}
+	}
+
+
+	// *
+	// *-------------------------------------------------------------------------------
+	// * @section 7.0 - Tables - General
+	// *-------------------------------------------------------------------------------
+
+	.buddypress-wrap {
+		table td, table th{
+			text-align: right;
+		}
+
+		.bp-tables-user,
+		table.wp-profile-fields,
+		table.forum {
+			tr {
+				td.label {
+					border-left: 1px solid $light-grey;
+					border-right: 0;
+				}
+			}
+		}
+
+
+		table.notification-settings {
+			text-align: right;
+		}
+	} // close .buddypress-wrap
+
+
+
+
+	// *
+	// *-------------------------------------------------------------------------------
+	// * @section 8.0 - Classes - Messages, Ajax, Widgets, Buttons
+	// *-------------------------------------------------------------------------------
+
+	// Import Buttons styles --------------------------------------------
+	.buddypress {
+		.buddypress-wrap {
+			.text-links-list {
+
+				a.button {
+					border-left: 1px solid $bp-border-color;
+					border-right: 0;
+				}
+
+				a:first-child {
+					padding-right: 0;
+					padding-left: $pad-med;
+				}
+
+				a:last-child {
+					border-left: 0;
+				}
+
+			}
+		} // close .buddypress
+
+
+		#buddypress {
+
+			.create-button {
+				@include medium-up {
+					float: left;
+				}
+			} // .create-button
+
+			&.bp-dir-vert-nav {
+
+				@include medium-up {
+
+					.create-button {
+						a {
+							margin-left: 0.5em;
+							margin-right: 0;
+						}
+					}
+				}
+			}
+		} // close #buddypress
+	}
+
+
+
+	// Import Messages/info dialogues------------------------------------
+	.buddypress-wrap {
+		.bp-feedback {
+			span.bp-icon {
+				right: 0;
+				left: auto;
+				margin-left: $marg-sml;
+				margin-right: 0;
+			}
+		}
+
+		a[data-bp-close],
+		button[data-bp-close] {
+			left: 10px;
+			right: auto;
+		}
+
+		.bp-feedback.no-icon {
+
+			a[data-bp-close],
+			button[data-bp-close] {
+				left: 6px;
+				right: auto;
+			}
+		}
+
+		.accept,
+		.reject {
+			float: right;
+			margin-right: $marg-sml;
+			margin-left: 0;
+		}
+	} // close .buddypress-wrap
+
+
+	// Import BP Widget styles ------------------------------------------
+	.buddypress-wrap{
+		.widget.buddypress .bp-login-widget-user-avatar,
+		.widget.buddypress #bp-login-widget-form .forgetmenot{
+	    float: right;
+		}
+
+		.widget.buddypress .bp-login-widget-user-links > div,
+		.widget.buddypress #groups-list li .item,
+		.widget.buddypress #members-list li .item,
+		.widget.buddypress #friends-list li .item {
+			padding-left: 0;
+			padding-right: 60px;
+			margin-left: 0;
+		}
+
+		.widget.buddypress .item-options a{
+			margin-left: 5px;
+			margin-right: 0;
+			white-space: nowrap;
+		}
+
+		.widget.widget_bp_core_friends_widget .item-options a {
+	    margin-left: 5px;
+	    margin-right: 0;
+		}
+
+		.widget.buddypress .item-avatar img.avatar {
+	    float: right;
+	    margin: 0 0 15px 10px;
+		}
+	}
+
+
+	// Import BP Tooltips -----------------------------------------------
+	.bp-invites-content #send-invites-editor .bp-tooltip {
+		&:after {
+			right: 0;
+			left: auto;
+		}
+	}
+
+
+	// *
+	// *-------------------------------------------------------------------------------
+	// * @section 9.0 - Layout classes
+	// *-------------------------------------------------------------------------------
+
+	@include small-up() {
+		.grid {
+			> li.item-entry {
+				float: right;
+			}
+		}
+	}
+
+	.buddypress-wrap {
+		.grid.bp-list {
+			> li {
+				.item-avatar {
+					text-align: center;
+				}
+
+				.item-meta,
+				.list-title {
+					float: none;
+					text-align: center;
+				}
+
+				.item {
+					right: 0;
+					left: auto;
+					text-align: center;
+
+					.item-block,
+					.group-desc {
+						float: none;
+					}
+					.user-update {
+						text-align: right;
+					}
+				}
+
+				.action {
+					float: none;
+					right: 0;
+					left: auto;
+					text-align: center;
+
+					.generic-button {
+						float: none;
+						text-align: center;
+					}
+				}
+
+				.item-avatar,
+				.avatar,
+				.item {
+					float: none;
+				}
+
+			} // close > li
+		} // close .grid.bp-list
+	} // close .buddypress-wrap
+
+	@include medium-up() {
+
+		.bp-single-vert-nav { // described for the #buddypress element
+
+			.bp-navs.vertical {
+
+				ul {
+					border-left: 0;
+					border-right: 1px solid $med-light-grey;
+					float: right;
+					margin-left: -1px;
+					margin-right: 0;
+				}
+
+				li {
+					float: none;
+					margin-left: 0;
+
+					span {
+						float: left;
+						margin-left: 2px;
+						margin-right: 0;
+					}
+				} // li
+
+			}
+
+			.bp-navs.vertical.tabbed-links {
+
+				li.selected {
+
+					a {
+						padding-right: 0;
+					}
+				}
+			}
+
+			// re-factor the related elements like the #item-body so it sits
+			// to the side(floated)
+			.bp-wrap {
+				.user-nav-tabs.users-nav,
+				.group-nav-tabs.groups-nav {
+
+					ul {
+						li.current {
+							right: 1px;
+							left: auto;
+						}
+					}
+				}
+			}
+
+			.item-body:not(#group-create-body) {
+				border-right: 1px solid $med-light-grey;
+				border-left: 0;
+				float: left;
+				padding: 0 $pad-med 0 0;
+
+				#subnav:not(.tabbed-links) {
+					margin: 0 -5px 0 0;
+				} // close #subnav
+			}
+		}
+
+		.bp-dir-vert-nav { // described for the #buddypress element
+
+			.dir-navs {
+				float: right;
+				right: 1px;
+				left: auto;
+
+				ul {
+
+					li {
+						float: none;
+					}
+
+				}
+			} // close .dir-navs
+
+			.screen-content {
+				border-right: 1px solid $med-light-grey;
+				border-left: 0;
+				margin-right: 20%;
+				margin-left: 0;
+				padding: 0 $pad-med $pad-lrg 0;
+			}
+		}
+
+		.buddypress-wrap {
+
+			&.bp-vertical-navs {
+
+				.dir-navs.activity-nav-tabs,
+				.dir-navs.sites-nav-tabs,
+				.dir-navs.groups-nav-tabs,
+				.dir-navs.members-nav-tabs,
+				.main-navs.user-nav-tabs,
+				.main-navs.group-nav-tabs {
+
+					@include primary-navs-vert-tabs-rtl();
+				}
+			}
+		}
+
+	}
+
+
+} // End of .rtl ----------------------------------------------------
+

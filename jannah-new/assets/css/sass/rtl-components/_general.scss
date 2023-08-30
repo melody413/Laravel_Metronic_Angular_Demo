@@ -1,0 +1,218 @@
+// General Components
+
+.post-cat{
+  margin-right: 0;
+  margin-left: 4px;
+}
+
+.search-field{
+  float: right;
+}
+
+.woocommerce-product-search [type="submit"],
+.search-submit[type="submit"] {
+  float: left;
+  margin-right: 2%;
+  margin-left: 0;
+}
+
+.post-meta {
+  .meta-item{
+    margin-left: 8px;
+    margin-right: 0;
+
+    .mag-box &{
+      white-space: nowrap; // safari fix
+    }
+  }
+
+  // Icons
+  .tie-icon{
+    &:before{
+      padding-left: 3px;
+      padding-right: 0 !important;
+    }
+  }
+
+  @include breakpoint(max_min_sm){
+    .entry-header &,
+    .main-content &{
+      > span,
+      > div{
+        float: right;
+      }
+    }
+  }
+}
+
+.slider-arrow-nav {
+  float: left;
+  margin-left: 0;
+  margin-right: 5px;
+
+  li{
+    float: right;
+  }
+
+  a{
+    margin-left: 0;
+    margin-right: 5px;
+  }
+}
+
+
+// Popup
+.tie-popup-search-wrap input[type="text"]{
+  padding-right: 20px;
+  padding-left: 80px;
+}
+
+button.tie-popup-search-submit {
+  left: 25px;
+  right: auto;
+}
+
+// rating
+.post-thumb .post-rating,
+.digital-rating{
+  left: 10px;
+  right: auto;
+}
+
+.post-meta .post-rating{
+  float: right;
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+.digital-rating-static {
+  left: auto;
+  right: 0;
+  text-align: left;
+}
+
+.post-thumb .trending-post.trending-lg {
+  right: 10px;
+  left: auto;
+}
+
+.trending-post.trending-sm{
+  float: right;
+}
+
+.thumb-meta .trending-post {
+  margin-left: 7px;
+  margin-right: 0;
+}
+
+// pages-navigation
+.first-last-pages {
+  .pagination-icon {
+    border-width: 0 1px 0 0;
+    margin: 0 10px 0 0;
+    text-align: left;
+
+    &:before {
+      content: "\f104";
+    }
+  }
+
+  &.first-page .pagination-icon{
+    float: right;
+    border-width: 0 0 0 1px;
+    margin: 0 0 0 10px;
+    text-align: right;
+
+    &:before {
+      content: "\f106";
+    }
+  }
+}
+
+.pages-standard{
+  .first-page{
+    float: right;
+  }
+
+  .last-page,
+  .pagination-icon {
+    float: left;
+  }
+}
+
+
+// Alert Messages
+.woocommerce-message,
+.woocommerce-error,
+.woocommerce-info,
+// #message,
+.bbp-template-notice,
+.indicator-hint{
+  padding: 10px 50px 10px 10px !important;
+
+  &:before{
+    right: 10px;
+    left: auto;
+  }
+
+  a,
+  a.button{
+    float: left;
+  }
+}
+
+
+// - WPML
+.menu-item-language img.iclflag{
+  margin-right: 0;
+  margin-left: 4px;
+}
+
+
+// - YouTube Widget issue fix
+div[style*="visibility: hidden;"][style*="left: -10000px;"]{
+  left: auto !important;
+  right: -10000px !important;
+}
+
+// - Remove/Close button
+a.remove{
+  left: 0;
+  right: auto;
+
+  // popup module [login & search]
+  .tie-popup &{
+    left: 15px;
+    right: auto;
+  }
+}
+
+#tie-popup-search-mobile{
+  button.tie-popup-search-submit {
+    right: auto;
+    left: 0;
+  }
+
+  input.tie-popup-search-input {
+    padding-right: 20px;
+    padding-left: 50px;
+  }
+}
+
+.block-head-7 #check-also-close{
+  left: 5px;
+  right: auto;
+}
+
+// -ilightbox
+.ilightbox-toolbar{
+  .ilightbox-prev-button,
+  .ilightbox-next-button {
+    transform: rotate(180deg);
+  }
+}
+
+// WPCF7
+div.wpcf7 {
+  direction: rtl !important;
+}

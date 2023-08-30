@@ -1,0 +1,218 @@
+.magazine2{
+	.container-wrapper,
+	&.woocommerce div.product .woocommerce-tabs,
+	&.woocommerce div.product .related.products{
+		border-width: 0;
+    padding: 0;
+    background-color: transparent;
+    opacity: 0.99;
+	}
+
+	@include breakpoint(md){
+		&.sidebar-left .sidebar,
+		.sidebar-left .sidebar{
+		  padding-right: 40px;
+		}
+
+		&.sidebar-right .sidebar,
+		.sidebar-right .sidebar{
+		  padding-left: 40px;
+		}
+	}
+
+	&.page .entry-content,
+	&.archive .wide-post-box .container-wrapper{
+		padding-top: 0;
+	}
+
+	// mag boxes
+	.mag-box,
+	.sidebar .container-wrapper,
+	.sidebar .tie-weather-widget,
+	.widget-content-only{
+		margin-bottom: 50px;
+
+		@include breakpoint(max_min_md){
+			margin-bottom: 30px;
+		}
+	}
+
+	.has-background .slider-area,
+	.mag-box.breaking-news-outer{
+		margin-bottom: 30px;
+
+		@include breakpoint(max_min_md){
+			margin-bottom: 15px;
+		}
+	}
+
+	html:not(.dark-skin) & .section-item:not(.dark-skin) .box-dark-skin > .container-wrapper{
+		padding: 30px;
+
+		@include breakpoint(max_min_sm){
+			padding: 15px;
+		}
+	}
+
+	.dark-skin &{
+		.container-wrapper{
+			background-color: transparent;
+		}
+	}
+
+	.dark-skin & .mag-box,
+	.box-dark-skin{
+		&.timeline-box .posts-items:last-of-type:after{
+		  background-image: linear-gradient(to bottom, #404146 0%, $dark-bg 80%);
+		}
+
+		.day-month:before{
+			border-color: $dark-bg;
+		}
+	}
+
+	@include breakpoint(sm){
+		.dark-skin & .mag-box.full-overlay-title li:not(.no-post-thumb) .block-title-overlay{
+	    background: $dark-bg;
+		}
+	}
+
+	// Post Layouts -------------------------------
+	&.post-layout-1 .entry-header-outer,
+	&.post-layout-2 .entry-header-outer,
+	&.post-layout-6 .entry-header-outer{
+		padding: 0 0 20px;
+	}
+
+	&.post-layout-2 .featured-area,
+	&.archive:not(.bbpress) .entry-header-outer,
+	&.search .entry-header-outer{
+		margin-bottom: 30px;
+
+		@include breakpoint(max_min_md){
+			margin-bottom: 20px;
+		}
+	}
+
+	@include breakpoint(md){
+		&.post-layout-8.one-column-no-sidebar .main-content {
+		  padding: 30px;
+		  background: #ffffff;
+		}
+
+		.dark-skin &.post-layout-8.one-column-no-sidebar .main-content {
+		  background-color: $darker-bg;
+		}
+	}
+
+	.share-buttons-bottom{
+		border: $primary-border;
+		padding: 15px;
+	}
+
+	.share-buttons-top{
+		padding-right: 0;
+		padding-left: 0;
+
+		&:first-child{
+			padding-top: 0;
+		}
+	}
+
+	.post-components > div,
+	.post-components #add-comment-block {
+    margin-top: 50px;
+
+    @include breakpoint(max_min_md){
+    	margin-top: 30px;
+    }
+	}
+
+	#post-newsletter{
+		padding: 30px;
+		border-width: 1px;
+    background: $base-light-light-color;
+
+    @include breakpoint_max(670px){
+    	padding: 15px;
+    }
+	}
+
+	.dark-skin & #post-newsletter{
+		background-color: darken($darker-bg, 3%);
+	}
+
+	.entry-content{
+		padding: 0 0 30px;
+
+		@include breakpoint_max(670px){
+    	padding: 0 0 15px;
+    }
+	}
+
+	&:not(.post-layout-8):not(.one-column-no-sidebar) .tie-full-width-img img,
+	&:not(.post-layout-8):not(.one-column-no-sidebar):not(.full-width) .entry .alignwide, // Gutenberg
+	&:not(.post-layout-8):not(.one-column-no-sidebar):not(.full-width) .entry .alignfull{ // Gutenberg
+		margin-right: 0;
+		margin-left: 0;
+		width: 100%;
+	}
+
+	// Masonry Templates
+	.post-element {
+		.entry-archives-header{
+			padding: 0;
+		}
+
+		.entry-content {
+			padding: 15px 0 0;
+		}
+	}
+
+	&.full-width .masonry-with-spaces:not(.media-page-layout){
+		@include breakpoint(sm){
+			.post-element{
+				width: calc(92% / 3);
+				margin-bottom: 4%;
+			}
+
+			.grid-sizer {
+				width: calc(92% / 3);
+			}
+
+			.gutter-sizer {
+				width: 4%;
+			}
+		}
+
+		#masonry-grid:not(.masonry-loaded){
+			// Fix the pre-js load issue
+			.post-element{
+				margin-right: 4%;
+				margin-left: 0;
+
+				&:nth-child(3n+3){
+					margin-right: 0;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	// Authors Template
+	.entry .authors-wrap{
+		margin-top: 60px;
+
+		> li{
+			margin-bottom: 50px;
+		}
+	}
+
+	.has-custom-bg-color .container-wrapper{
+		padding: 30px;
+
+		@include breakpoint(max_min_sm){
+			padding: 15px;
+		}
+	}
+}

@@ -1,0 +1,776 @@
+.main-nav-wrapper{
+	position: relative;
+	z-index: 4;
+
+	.main-nav-below.top-nav-below-main-nav &{
+		z-index: 9;
+	}
+
+	.main-nav-above.top-nav-below &{
+		z-index: 10;
+	}
+}
+
+.main-nav{
+	position: relative;
+	border: $base-border;
+	border-width: 1px 0;
+}
+
+.main-menu-wrapper{
+	border: 0 solid $base-border-color;
+	position: relative;
+}
+
+
+@include breakpoint(md){
+
+	// header menus [Main menu, Top menu] ------------------------
+	.header-menu{
+		float: left;
+
+		.menu {
+			li {
+				display: block;
+				float: left;
+			}
+
+			a {
+				display: block;
+				position: relative;
+			}
+
+			.sub-menu{
+				a {
+					padding: 8px 10px;
+				}
+			}
+
+			a:hover,
+			li:hover > a{
+				z-index: 2;
+			}
+
+			// lower levels
+			ul {
+				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+				li {
+					position: relative;
+				}
+
+				a {
+					border-width: 0 0 1px;
+					transition: 0.15s;
+				}
+
+				ul{
+					top: 0;
+					left: 100%;
+				}
+			}
+		}
+	}
+
+	// Main Navigation--------------------------------------------
+	#main-nav{
+		z-index: 9;
+		line-height: 60px;
+
+		// Remove the thick border bottom of current item.
+		.top-nav-below-main-nav & .main-menu > ul > li,
+		.header-layout-1.top-nav-below & .main-menu > ul > li{
+			border-bottom: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	.main-menu {
+		.menu {
+			a{
+				transition: 0.15s;
+			}
+
+			// first level
+			> li {
+				> a {
+					padding: 0 14px;
+					font-size: 13px;
+					font-weight: 600;
+				}
+
+				> .menu-sub-content{
+					border-top: 2px solid $brand-color;
+				}
+
+				&.tie-current-menu{
+					border-bottom: 5px solid $brand-color;
+					margin-bottom: -5px;
+
+					> a{
+						&:after{
+							content: "";
+							width: 20px;
+							height: 2px;
+							position: absolute;
+							margin-top: 17px;
+							@include center(xy);
+							background: $dark-color;
+							transition: 0.3s;
+						}
+					}
+				}
+
+				&.is-icon-only {
+					> a{
+						padding: 0 20px;
+						line-height: inherit;
+
+						&:after,
+						&:before{
+							display: none;
+						}
+
+						.tie-menu-icon{
+							font-size: 160%;
+							transform: translateY(15%);
+						}
+					}
+				}
+			}
+
+			ul{
+				line-height: 20px;
+				z-index: 1;
+			}
+
+			.sub-menu .tie-menu-icon,
+			.mega-recent-featured-list .tie-menu-icon,
+			.mega-link-column .tie-menu-icon,
+			.mega-cat-more-links .tie-menu-icon{
+				width: 20px;
+			}
+		}
+
+		.menu-sub-content{
+			display: none;
+			padding: 15px;
+			width: 230px;
+			position: absolute;
+			box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+
+			a{
+				width: 200px;
+			}
+
+			.menu-item-has-children{
+				> a:before{
+					right: 5px;
+				}
+			}
+		}
+
+		ul{
+			li:hover > .menu-sub-content,
+			li[aria-expanded="true"] > ul,
+			li[aria-expanded="true"] > .mega-menu-block{
+				display: block;
+				z-index: 1;
+			}
+		}
+	}
+
+	// current item
+	nav.main-nav .menu > li.tie-current-menu > a,
+	nav.main-nav .menu > li:hover > a{
+		background-color: $brand-color;
+		color: $bright;
+	}
+
+	// Photography demo menu
+	.header-layout-1 .main-menu-wrap .menu > li:only-child{
+		&:not(.mega-menu){
+			position: relative;
+		}
+
+		> .menu-sub-content{
+			right: 0;
+			left: auto;
+
+			ul{
+		    left: auto;
+		    right: 100%;
+			}
+		}
+	}
+
+	// Main Nav Components ---------------------------------------
+	nav.main-nav{
+		.components{
+			> li:hover > a{
+				color: $brand-color;
+			}
+		}
+	}
+
+
+	// Main Nav Dark Skin  ---------------------------------------
+	.main-nav-dark{
+		.main-nav{
+			background: $darker-bg;
+			border-width: 0;
+
+			.search-bar {
+				border-color: rgba(255,255,255,0.07);
+			}
+
+			.components > li > a {
+				color: #ffffff;
+			}
+
+			.components > li.social-icons-item .social-link:not(:hover) span{
+				color: #ffffff;
+			}
+
+			&.fixed-nav{
+				background-color: rgba(31,32,36,0.95);
+			}
+		}
+
+		.main-menu {
+			.menu {
+				> li a{
+					color: #ffffff;
+				}
+
+				ul{
+					li:hover > a,
+					li.current-menu-item:not(.mega-link-column) > a{ // active link in the sub menu
+						color: $brand-color;
+					}
+				}
+			}
+
+			.menu-sub-content {
+				background: $darker-bg;
+				color: #ffffff;
+			}
+		}
+
+		.main-menu .menu ul a,
+		.main-menu .mega-cat-wrapper,
+		.mega-cat-more-links > li a{
+		  border-color: rgba(255,255,255,0.04);
+		}
+
+		.mega-recent-featured-list:after {
+		  background: rgba(0, 0, 0, 0.08);
+		}
+
+		&.main-nav-boxed .main-nav .main-menu-wrapper{
+			background-color: #1f2024;
+		}
+
+		.cats-vertical,
+		ul.cats-horizontal li a{
+			background: rgba(0,0,0,0.2);
+		}
+
+		ul.cats-horizontal li a{
+			border: none;
+		}
+
+		ul.cats-vertical li{
+			a.is-active,
+			a:hover{
+				background: $darker-bg;
+			}
+		}
+	}
+
+
+	// Main Nav Light Skin ---------------------------------------
+	.main-nav-light{
+		.main-nav{
+			background-color: #ffffff;
+			color: $base-color;
+
+			.menu-sub-content{
+				background: #ffffff;
+			}
+
+			.menu ul li:hover > a,
+			.components li a:hover,
+			.menu ul li.current-menu-item:not(.mega-link-column) > a {
+			  color: $brand-color;
+			}
+
+			.menu a,
+			.components li a{
+				color: $base-color;
+			}
+
+			.components li a.button:hover,
+			.components li a.checkout-button{
+				color: $bright;
+			}
+
+			&.fixed-nav{
+				background-color: rgba(255,255,255,0.95);
+			}
+		}
+
+		.cats-vertical{
+			background: rgba(0,0,0,0.03);
+		}
+
+		ul.cats-vertical li{
+			a.is-active,
+			a:hover{
+				background: #fff;
+			}
+		}
+
+		.mega-menu .post-meta,
+		.mega-menu .post-meta a:not(:hover){
+			color: rgba(0,0,0,0.5);
+		}
+	}
+
+}
+
+
+// Header menus arrows ---------------------------------------
+@include breakpoint(md){
+	.menu-item-has-children,
+	.mega-menu{
+		> a:before{
+			content: '';
+			position: absolute;
+			right: 12px;
+			margin-top: 2px;
+			@include center(y);
+			width: 0;
+			height: 0;
+			border: 4px solid transparent;
+			border-top: 4px solid #ffffff;
+			transition: border 0.15s;
+		}
+
+		.menu-item-has-children > a:before{
+			border: 4px solid transparent;
+			border-left-color: #ffffff;
+		}
+	}
+
+	.menu > .menu-item-has-children:not(.is-icon-only) > a,
+	.menu .mega-menu:not(.is-icon-only) > a{
+		padding-right: 25px;
+	}
+
+	// Main menu arrow
+	.main-menu .menu > li.tie-current-menu > a:before,
+	.main-menu .menu > li:hover > a:before {
+	  border-top-color: $bright;
+	}
+
+	.main-nav-light{
+		.main-nav .menu-item-has-children,
+		.mega-menu {
+			> a:before {
+				border-top-color: $base-color;
+			}
+
+			.menu-item-has-children > a:before {
+				border-top-color: transparent;
+				border-left-color: $base-color;
+			}
+
+			li:hover > a:before{
+				border-left-color: $brand-color;
+			}
+		}
+	}
+
+	// Top menu arrow
+	.top-nav-dark{
+		.top-menu .menu-item-has-children {
+			> a:before{
+				border-top-color: $dark-base-color;
+			}
+
+			.menu-item-has-children > a:before{
+				border-left-color: $dark-base-color;
+				border-top-color: transparent;
+			}
+		}
+	}
+}
+
+
+//Boxed Main Menu ----------------------------------------------
+@include breakpoint(md){
+	.main-nav-boxed{
+		.main-nav{
+			border-width: 0;
+		}
+
+		.main-menu-wrapper{
+			float: left;
+			width: 100%;
+
+			.search-bar{
+				border-right-width: 0;
+			}
+		}
+
+		&.main-nav-light{
+			.main-menu-wrapper{
+				border-width: 1px;
+				background-color: #ffffff;
+
+				.dark-skin &{
+					border-width: 0;
+				}
+			}
+
+			.fixed-nav .main-menu-wrapper{
+				border-color: transparent;
+			}
+		}
+	}
+
+	// borders between topNav and MainNav
+	.main-nav-above.top-nav-above #main-nav:not(.fixed-nav){
+		top: -1px;
+	}
+
+	.main-nav-below.top-nav-below #main-nav:not(.fixed-nav){
+		bottom: -1px;
+	}
+
+	.dark-skin .main-nav-below.top-nav-above #main-nav{
+		border-width: 0;
+	}
+
+	.dark-skin .main-nav-below.top-nav-below-main-nav #main-nav{
+		border-top-width: 0;
+	}
+}
+
+// Main Nav Boxed transparent background in stikcy mode
+.main-nav-boxed .main-nav:not(.fixed-nav),
+.main-nav-boxed .fixed-nav .main-menu-wrapper,
+.theme-header:not(.main-nav-boxed) .fixed-nav .main-menu-wrapper{
+  background: transparent !important;
+}
+
+
+// Header Layout #1
+@include breakpoint(md){
+	.header-layout-1.main-nav-below.top-nav-above{
+		.main-nav{
+			margin-top: -1px;
+		}
+
+		.top-nav{
+			border-top-width: 0;
+		}
+
+		.breaking-title{
+			top: 0;
+			margin-bottom: -1px;
+		}
+	}
+}
+
+.header-layout-1.main-nav-below.top-nav-below-main-nav {
+	.main-nav-wrapper{
+		z-index: 9;
+	}
+
+	.main-nav{
+		margin-bottom: -1px;
+		bottom: 0;
+		border-top-width: 0;
+	}
+
+	@include breakpoint(md){
+		.top-nav{
+			margin-top: -1px;
+		}
+	}
+}
+
+.header-layout-1.has-shadow:not(.top-nav-below) .main-nav{
+	border-bottom: 0 !important;
+}
+
+#theme-header.header-layout-1 > div:only-child nav{
+	border-width: 0 !important;
+}
+
+// Padding of the First level itmes in responsive from 992px to 1100px.
+@include breakpoint_min_max($screen-md,1100px){
+	.main-nav .menu > li{
+		&:not(.is-icon-only) > a{
+			padding-left: 7px;
+			padding-right: 7px;
+
+			&:before{
+				display: none;
+			}
+		}
+
+		&.is-icon-only > a{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}
+
+// Tiny Label
+.menu-tiny-label{
+	font-size: 10px;
+	border-radius: 10px;
+	padding: 2px 7px 3px;
+	margin-left: 3px;
+	line-height: 1;
+	position: relative;
+	top: -1px;
+
+  &.menu-tiny-circle{
+   	border-radius: 100%;
+  }
+}
+
+
+// hide stikcy logo in responsive
+@include breakpoint(max_min_md){
+	#sticky-logo{
+		display: none;
+	}
+}
+
+// Sticky Menu -----------------------------------------------
+@include breakpoint(md){
+
+	#sticky-logo{
+		overflow: hidden;
+		float: left;
+		vertical-align: middle;
+
+		a{
+			line-height: 1;
+			display: inline-block;
+		}
+
+		img{
+			position: relative;
+			vertical-align: middle;
+			padding: 8px 10px;
+			top: -1px;
+			max-height: 50px;
+
+			.just-before-sticky &,
+			.header-layout-1 &{
+				padding: 0;
+			}
+		}
+
+		.header-layout-1:not(.has-custom-sticky-logo) &{
+			display: none;
+		}
+	}
+
+	.theme-header{
+		#sticky-logo img{
+			opacity: 0;
+			visibility: hidden;
+			width: 0 !important;
+			transform: translateY(75%);
+			transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1), opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+		}
+
+		&.header-layout-1:not(.has-custom-sticky-logo) #sticky-logo img{
+			transition: none;
+		}
+	}
+
+	.theme-header:not(.header-layout-1) #main-nav:not(.fixed-nav) #sticky-logo img{
+		margin-left: -20px;
+	}
+
+	.header-layout-1 .flex-placeholder{ // fake div to override justify-content for single element .
+		flex-grow: 1;
+	}
+}
+
+
+//Desktip Sitcky Main Menu ----------------------------------------------
+.theme-header{
+	.fixed-nav{
+		position: fixed;
+		width: 100%;
+		top: 0;
+		bottom: auto !important;
+		z-index: 100;
+  	will-change: transform;
+  	transform: translateY(-100%);
+		transition: transform 0.3s;
+		box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+		border-width: 0;
+		background-color: rgba(255,255,255,0.95);
+
+		// @include breakpoint(max_min_md){ // Fix Mobile issue
+		// 	transform: translateZ(0) !important;
+		// }
+
+		&:not(.just-before-sticky){
+			line-height: 60px !important;
+
+			@include breakpoint(md){
+				.header-layout-1-logo{
+					display: none;
+				}
+			}
+
+			#sticky-logo img{
+				opacity: 1;
+				visibility: visible;
+				width: auto !important;
+				transform: translateY(0);
+			}
+		}
+
+		@include breakpoint(md){
+			@at-root .header-layout-1:not(.just-before-sticky):not(.has-custom-sticky-logo) .fixed-nav #sticky-logo{
+				display: block;
+			}
+		}
+
+		.admin-bar &{
+			top: 32px;
+
+			@include breakpoint_max(782px){
+			  top: 46px;
+			}
+
+			@include breakpoint_max(600px){
+				top: 0;
+			}
+		}
+
+		@include breakpoint(md){
+			.border-layout &{
+				top: 25px;
+			}
+
+			.border-layout.admin-bar &{
+				top: 57px;
+			}
+		}
+
+		.container{
+			opacity: 0.95;
+		}
+
+		.main-menu-wrapper,
+		.main-menu{
+			border-top: 0;
+		}
+
+		&.fixed-unpinned:not(.default-behavior-mode) {
+			.main-menu .menu > li.tie-current-menu{
+				border-bottom-width: 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.fixed-nav.unpinned-no-transition {
+		transition: none;
+	}
+
+	.fixed-pinned,
+	.default-behavior-mode.fixed-unpinned {
+	  transform: translate3d(0,0,0);
+	}
+}
+
+// Mobile Sticky Nav -----------------------------------------------------
+@include breakpoint(max_min_md){
+	.fixed-nav{
+		.theme-header &{
+			transition: none;
+		}
+
+		&.logo-container.sticky-up,
+		&.logo-container.sticky-nav-slide.sticky-down,
+		&#main-nav.sticky-up,
+		&#main-nav.sticky-nav-slide.sticky-down {
+			transition: transform 0.4s ease;
+		}
+
+		.sticky-type-slide &.logo-container.sticky-nav-slide-visible,
+		.sticky-type-slide &#main-nav.sticky-nav-slide-visible {
+			transform: translateY(0);
+		}
+
+		&.default-behavior-mode{
+			transform: none !important;
+		}
+	}
+}
+
+// Mobile main nav --------------------------------------
+@include breakpoint(max_min_md){
+	#tie-wrapper header#theme-header{
+		box-shadow: none;
+		background: transparent !important; // used to overide the sari3 (html)
+	}
+
+	.logo-container,
+	.header-layout-1 .main-nav{
+		border-width: 0;
+		box-shadow: 0 3px 7px 0 rgba(0,0,0,0.1);
+	}
+
+	.header-layout-1.top-nav-below .main-nav:not(.fixed-nav){
+		box-shadow: none;
+	}
+
+	// fix the separator issue
+	.is-header-layout-1.has-header-ad .top-nav-below .main-nav{
+		border-bottom-width: 1px;
+	}
+
+	.logo-container,
+	.header-layout-1 .main-nav{
+		background-color: #ffffff;
+	}
+
+	.dark-skin .logo-container,
+	.main-nav-dark.header-layout-1 .main-nav{
+		background-color: $darker-bg;
+	}
+
+	.dark-skin #theme-header .logo-container.fixed-nav{
+		background-color: rgba(31,32,36,0.95);
+	}
+
+	.header-layout-1.main-nav-below.top-nav-below-main-nav .main-nav{
+		margin-bottom: 0;
+	}
+
+	#sticky-nav-mask,
+	.header-layout-1 #menu-components-wrap,
+	.header-layout-3 .main-nav-wrapper,
+	.header-layout-2 .main-nav-wrapper{
+		display: none;
+	}
+
+	.main-menu-wrapper .tie-alignleft{
+		width: 100%;
+	}
+}

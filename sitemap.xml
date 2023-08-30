@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml-stylesheet type="text/xsl" href="https://doctorak.com/generator/pages/mods/sitemap.xsl"?> -->
+<sitemapindex
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="
+            http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd">
+
+<sitemap>
+	<loc>https://doctorak.com/sitemap1.xml</loc>
+	<lastmod>2022-06-26T21:33:02+00:00</lastmod>
+</sitemap>
+<sitemap>
+	<loc>https://doctorak.com/sitemap2.xml</loc>
+	<lastmod>2022-06-26T21:33:02+00:00</lastmod>
+</sitemap>
+<sitemap>
+	<loc>https://doctorak.com/sitemap3.xml</loc>
+	<lastmod>2022-06-26T21:33:02+00:00</lastmod>
+</sitemap>
+<sitemap>
+	<loc>https://doctorak.com/sitemap4.xml</loc>
+	<lastmod>2022-06-26T21:33:02+00:00</lastmod>
+</sitemap>
+<sitemap>
+	<loc>https://doctorak.com/sitemap5.xml</loc>
+	<lastmod>2022-06-26T21:33:02+00:00</lastmod>
+</sitemap>
+</sitemapindex>

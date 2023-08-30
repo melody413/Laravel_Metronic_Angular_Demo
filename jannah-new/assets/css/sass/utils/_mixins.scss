@@ -1,0 +1,243 @@
+// Clearfix
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    contenteditable attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+//
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+
+@mixin clearfix(){
+  &:before,
+  &:after{
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after{
+    clear: both;
+  }
+}
+
+
+@mixin font-smoothing {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin background-size($width: 100%, $height: $width){
+	@if type-of($width) == 'number' and $height != null{
+		background-size: #{$width} #{$height};
+	} @else{
+		background-size: #{$width};
+	}
+}
+
+// rem fallback - credits: http://zerosixthree.se/
+@function calculateRem($size){
+	$remSize: $size / 16px;
+	@return $remSize * 1rem;
+}
+
+// font size
+@mixin font-size($size){
+		font-size: $size;
+		//font-size: calculateRem($size);
+}
+
+// center vertically and/or horizontally an absolute positioned element
+@mixin center($xy:xy){
+	@if $xy == xy {
+		left: 50%;
+		top: 50%;
+		bottom: auto;
+		right: auto;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	@else if $xy == x {
+		left: 50%;
+		right: auto;
+		transform: translateX(-50%);
+	}
+
+	@else if $xy == y {
+		top: 50%;
+		bottom: auto;
+		transform: translateY(-50%);
+	}
+}
+
+// placeholder
+@mixin placeholder {
+  $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+  @each $placeholder in $placeholders {
+    &:#{$placeholder}-placeholder {
+      @content;
+    }
+  }
+}
+
+//Clearfix
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// media query mixins
+@mixin breakpoint($point){
+	// as bootstrap breakpoint
+	@if $point == lg{
+		@media (min-width: $screen-lg-min){ @content; }
+	}
+	@else if $point == md{
+		@media (min-width: $screen-md-min){ @content; }
+	}
+	@else if $point == sm{
+		@media (min-width: $screen-sm-min){ @content; }
+	}
+	@else if $point == xs{
+		@media (min-width: $screen-xs-min){ @content; }
+	}
+
+	@else if $point == max_min_xs{
+		@media (max-width: $screen-xs-min-1){ @content; }
+	}
+	@else if $point == max_min_sm{
+		@media (max-width: $screen-xs-max){ @content; }
+	}
+	@else if $point == max_min_md{
+		@media (max-width: $screen-sm-max){ @content; }
+	}
+	@else if $point == max_min_lg{
+		@media (max-width: $screen-md-max){ @content; }
+	}
+}
+
+// custom breakpint
+@mixin breakpoint_max($max-width){
+	@media (max-width: $max-width){ @content; }
+}
+
+@mixin breakpoint_min($min-width){
+	@media (min-width: $min-width){ @content; }
+}
+
+@mixin breakpoint_min_max($min-width,$max-width){
+	@media only screen and (min-width: $min-width) and (max-width: $max-width){ @content; }
+}
+
+
+// Woocommerce :: Fontawesome Mixins
+// Mixins
+// --------------------------
+$fa-font-size-base:   1em;
+$fa-line-height-base: 1 !default;
+
+@mixin fa-icon(){
+  display: inline-block;
+  font: normal normal normal #{$fa-font-size-base}/#{$fa-line-height-base} tiefonticon; // shortening font declaration
+  font-size: inherit; // can't have font-size inherit on line above, so need to override
+  text-rendering: auto; // optimizelegibility throws things off #1094
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+@mixin fa-icon-rotate($degrees, $rotation){
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation})";
+  transform: rotate($degrees);
+}
+
+@mixin fa-icon-flip($horiz, $vert, $rotation){
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation}, mirror=1)";
+	transform: scale($horiz, $vert);
+}
+
+// --------------------------------------------------------------------------------
+// get the contrast color based on it's background and vice versa
+// Luminance based measurement
+// --------------------------------------------------------------------------------
+
+@function gcd($a, $b){
+    // From: http://rosettacode.org/wiki/Greatest_common_divisor#JavaScript
+    @if ($b !=0){
+        @return gcd($b, $a % $b);
+    }
+    @else {
+        @return abs($a);
+    }
+}
+
+@function pow($base, $exponent, $prec: 12){
+    // Handles decimal exponents by trying to convert them into a fraction and then use a nthRoot-algorithm for parts of the calculation
+    @if (floor($exponent) !=$exponent){
+        $prec2: pow(10, $prec);
+        $exponent: round($exponent * $prec2);
+        $denominator: gcd($exponent, $prec2);
+        @return nthRoot(pow($base, $exponent / $denominator), $prec2 / $denominator, $prec);
+    }
+    $value: $base;
+    @if $exponent > 1 {
+        @for $i from 2 through $exponent {
+            $value: $value * $base;
+        }
+    }
+    @else if $exponent < 1 {
+        @for $i from 0 through -$exponent {
+            $value: $value / $base;
+        }
+    }
+    @return $value;
+}
+
+@function nthRoot($num, $n: 2, $prec: 12){
+    // From: http://rosettacode.org/wiki/Nth_root#JavaScript
+    $x: 1;
+    @for $i from 0 through $prec {
+        $x: 1 / $n * (($n - 1) * $x + ($num / pow($x, $n - 1)));
+    }
+    @return $x;
+}
+
+
+@function luma($color){
+    // Adapted from: https://gist.github.com/voxpelli/6304812
+    $rgba: red($color), green($color), blue($color);
+    $rgba2: ();
+    @for $i from 1 through 3 {
+        $rgb: nth($rgba, $i);
+        $rgb: $rgb / 255;
+        $rgb: if($rgb < .03928, $rgb / 12.92, pow(($rgb + .055) / 1.055, 2.4));
+        $rgba2: append($rgba2, $rgb);
+    }
+    @return (.2126 * nth($rgba2, 1) + .7152 * nth($rgba2, 2) + 0.0722 * nth($rgba2, 3))*100;
+}
+
+@function color-contrast($color){
+    @return if(luma($color) < 51, #ffffff, #000000)
+}
+
+// Spinner Cirlce Width
+@mixin spinner-width($spinner-width){
+	.spinner-circle{
+		top: - $spinner-width / 2;
+		left: - $spinner-width / 2;
+		height: $spinner-width;
+	  width: $spinner-width;
+	  clip: rect(0, $spinner-width, $spinner-width, ($spinner-width / 2) );
+
+	  &:after{
+	  	left: 0;
+			top: 0;
+	    height: $spinner-width;
+	    width: $spinner-width;
+	    clip: rect(0, $spinner-width, $spinner-width, ($spinner-width / 2))
+	  }
+	}
+}

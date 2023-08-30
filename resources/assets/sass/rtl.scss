@@ -1,0 +1,10 @@
+@import './node_modules/lightgallery.js/src/sass/lightgallery'; // Bootstrap.
+@import './node_modules/bootstrap/scss/bootstrap'; // Bootstrap.
+@import './resources/assets/sass/partials/bootstrap_rtl'; // Bootstrap.
+@import './node_modules/bootstrap-select/sass/bootstrap-select'; // Bootstrap.
+@import './node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker'; // Bootstrap.
+@import "partials/mixin"; // General mixins.
+@import "partials/settings"; // Settings.
+@import "partials/classes"; // Classes.
+@import "partials/components"; // Components.
+@import "partials/rtl"; // Components.

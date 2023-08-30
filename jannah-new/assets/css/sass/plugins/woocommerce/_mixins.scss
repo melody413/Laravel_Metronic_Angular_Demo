@@ -1,0 +1,54 @@
+
+@mixin screen-reader-text() {
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+
+@mixin iconbefore( $glyph: "\f019" ){
+	font-family: 'tiefonticon';
+	speak: never;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	margin-right: 5px;
+	content: $glyph;
+	text-decoration: none;
+}
+
+@mixin iconafter( $glyph: "\f019" ){
+	font-family: 'tiefonticon';
+	speak: never;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	margin-left: 5px;
+	content: $glyph;
+	text-decoration: none;
+}
+
+@mixin loader(){
+	&:before {
+		height: 1em;
+		width: 1em;
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -.5em;
+		margin-top: -.5em;
+		display: block;
+		content: "";
+		animation: spin 1s ease-in-out infinite;
+		font-family: tiefonticon;
+		content: "\f110";
+		line-height: 1;
+		text-align: center;
+		font-size: 2em;
+		color: rgba(#000,0.75);
+	}
+}

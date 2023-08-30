@@ -1,0 +1,224 @@
+<!-- <p>create-disease works!</p> -->
+<div class="card">
+  <div class="card-body">
+    <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
+      Edit body_part
+    </h1>
+    <hr />
+    <div class="card-body">
+      <form novalidate class="form" enctype="multipart/form-data">
+        <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+          Language Data
+        </h1>
+        <div class="card-body border-top">
+          <div class="col-lg-12 mt-10">
+            <div class="row">
+              <div class="col-lg-6 fv-col">
+                <h2 class="fs-2">Name Arabic :</h2>
+                <input
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  [(ngModel)]="arName"
+                  name="ar[name]"
+                  type="text"
+                  value=""
+                  (ngModelChange)="onInputChange1($event)"
+                />
+                <div
+                  *ngIf="errorMessage1"
+                  class="error-message fs-6"
+                  style="color: red"
+                >
+                  {{ errorMessage1 }}
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <h2 class="fs-2">Name English :</h2>
+                <input
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  [(ngModel)]="enName"
+                  name="en[name]"
+                  type="text"
+                  value=""
+                  (ngModelChange)="onInputChange2($event)"
+                />
+                <div
+                  *ngIf="errorMessage2"
+                  class="error-message fs-6"
+                  style="color: red"
+                >
+                  {{ errorMessage2 }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 form-group p-y-30 mt-10">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 fv-row">
+                <h2 class="fs-2">Excerpt Ar :</h2>
+                <textarea
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0l"
+                  [(ngModel)]="arExcerpt"
+                  placeholder="excerpt"
+                  rows="2"
+                  name="ar[excerpt]"
+                  cols="50"
+                ></textarea>
+                <small>display in list not show in unit</small>
+              </div>
+              <div class="col-lg-6 col-sm-12 fv-row">
+                <h2 class="fs-2">Excerpt En :</h2>
+                <textarea
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0l"
+                  [(ngModel)]="enExcerpt"
+                  placeholder="English[expert]"
+                  rows="2"
+                  name="en[excerpt]"
+                  cols="50"
+                ></textarea>
+                <small>display in list not show in unit</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12 p-y-30 mt-10">
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <h2 class="fs-2" for="descriptionar">Description ar :</h2>
+                <!-- <textarea class="form-control tinymce" placeholder="Description" [(ngModel)]="enDescription" name="en[description]" cols="50" rows="10"></textarea> -->
+                <editor
+                  [(ngModel)]="arDescription"
+                  name="ar[description]"
+                  placeholder="Description"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                ></editor>
+              </div>
+              <div class="col-lg-6 fv-row">
+                <h2 class="fs-2" for="descriptionar">Description en :</h2>
+                <editor
+                  [(ngModel)]="enDescription"
+                  name="en[description]"
+                  placeholder="Description"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                  toolbar="
+                      undo redo | formatselect | bold italic backcolor | \
+                      alignleft aligncenter alignright alignjustify | \
+                      bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                ></editor>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+          Other Data
+        </h1>
+
+        <div class="card-body border-top p-9">
+          <h2 class="fs-2">Parent Body Part</h2>
+          <div class="col-lg-12 row">
+            <div
+              *ngFor="let item of bodypart_parent; let i = index"
+              class="col-lg-4 fv-row"
+            >
+              <input
+                [(ngModel)]="parent"
+                id="{{ i + 1 }}"
+                class="filled-in chk-col-brown form-check-input subcp"
+                name="parent[]"
+                type="radio"
+                value="{{ item.id }}"
+                [checked]="selectedItemIndex === item.id"
+              />
+              <label for="subcp_1" class="fs-2" style="padding-left: 8px">{{
+                item.name
+              }}</label>
+            </div>
+          </div>
+
+          <br />
+          <div
+            class="input-group input-group-lg col-lg-15 d-flex gap-5 align-items-center"
+          >
+            <h1 class="fs-2">Logo :</h1>
+            <!-- <div class="p-5 border rounded-lg">Choose File</div> -->
+            <input
+              (change)="onFileSelected($event)"
+              type="file"
+              class="form-control-lg form-control-solid mb-3 mb-lg-0"
+              name="image"
+            />
+            <img
+              id="image"
+              style="display: none; border-radius: 10%"
+              width="200"
+              height="200"
+            />
+            <img
+              *ngIf="image_name"
+              [src]="image_name"
+              style="border-radius: 10%"
+              width="200"
+              height="200"
+            />
+          </div>
+
+          <br />
+          <div
+            class="input-group input-group-lg col-lg-15 d-flex gap-5 align-items-center"
+          >
+            <h1 class="fs-2" style="display: block; text-align: center">
+              Is Active :
+            </h1>
+            <span>OFF</span>
+            <div
+              class="form-check form-check-custom form-check-solid form-check-success form-switch"
+            >
+              <input
+                [(ngModel)]="isActive"
+                name="is_active"
+                class="form-check-input"
+                type="checkbox"
+                selected
+              />
+            </div>
+            <span>ON</span>
+          </div>
+        </div>
+      </form>
+      <div class="col d-flex gap-2 align-items-center">
+        <button class="btn btn-md btn-secondary" (click)="reset()">
+          Reset
+        </button>
+        <button class="btn btn-md btn-success" (click)="create()">Save</button>
+        <button class="btn btn-md btn-primary" (click)="savenew()">
+          Save & create new
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script
+    src="https://cdn.tiny.cloud/1/your-api-key/tinymce/6/tinymce.min.js"
+    referrerpolicy="origin"
+  ></script>
+
+  <script>
+    tinymce.init({
+      selector: "#editor",
+      plugins:
+        "a11ychecker advcode advlist advtable anchor autocorrect autolink autoresize autosave casechange charmap checklist code codesample directionality editimage emoticons export footnotes formatpainter fullscreen help image importcss inlinecss insertdatetime link linkchecker lists media mediaembed mentions mergetags nonbreaking pagebreak pageembed permanentpen powerpaste preview quickbars save searchreplace table tableofcontents template tinycomments tinydrive tinymcespellchecker typography visualblocks visualchars wordcount",
+    });
+  </script>
+</div>

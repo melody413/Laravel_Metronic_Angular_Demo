@@ -1,0 +1,68 @@
+.navbar {
+    background-color: transparent;
+    background-image: linear-gradient(225deg, #0D7DE0 0%, #50E3DA 100%);
+}
+.navbar-brand {
+    text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    font-weight: bold;
+}
+ul.card .header .header-dropdown {
+    top: 14px;
+}
+ul.card .header .header-dropdown .btn{
+
+}
+.header-dropdown a.btn {
+    top: -9px;
+}
+.btn {
+    line-height: 25px;
+}
+.btn i {
+    top: 4px;
+}
+.card .header .header-dropdown i {
+    color: #fff;
+}
+input[type="reset"].btn {
+    padding: 8px 12px;
+    margin-right: 1px;
+}
+.input-group-addon {
+    /*display: flex;*/
+}
+
+.demo-switch .switch {
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+}
+.dropdown-menu.open {
+
+}
+
+.bootstrap-select {
+
+}
+
+.form-group span.col-sm-1 {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.3333333;
+    color: #555;
+    padding-left: 0;
+    padding-right: 0;
+}
+.demo-checkbox label, .demo-radio-button label {
+    min-width: 235px;
+    margin-right: 5px;
+}
+.table thead tr th {
+    text-transform: uppercase;
+}
+.table td .navigation.col-sm-6.text-left {
+    visibility: hidden;
+}

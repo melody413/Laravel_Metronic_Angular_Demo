@@ -1,0 +1,251 @@
+.dark-skin{
+	&,
+	body{
+		background-color: $darker-bg;
+		color: #ffffff;
+	}
+
+	.change-skin-icon:before{
+		content: "\f113";
+	}
+
+	.mag-box .post-excerpt,
+	.wp-caption .wp-caption-text,
+	.entry-header .entry-sub-title{
+		color: $dark-base-color;
+	}
+
+	textarea,
+	input:not([type="submit"]),
+	select{
+		color: $dark-base-color;
+	}
+
+	a:not(:hover),
+	.single-big-img .post-meta,
+	.single-big-img .post-meta a:not(:hover),
+	.pages-nav .pages-numbers a:not(:hover),
+	.page-title,
+	.entry h1,
+	.entry h2,
+	.entry h3,
+	.entry h4,
+	.entry h5,
+	.entry h6{
+		color: #ffffff;
+	}
+
+	.post-meta,
+	.post-meta a:not(:hover),
+	.timeline-widget ul li .date,
+	.multiple-post-pages a:not(:hover),
+	.video-playlist-nav-wrapper .video-playlist-item .video-duration,
+	.login-widget .forget-text:not(:hover),
+	#autocomplete-suggestions,
+	.mobile-header-components:not(:hover) .menu-text,
+	.about-author .social-icons li.social-icons-item a:not(:hover) span{
+		color: $dark-base-color !important; // override the single.css file sari3
+	}
+
+	@include breakpoint_min(1600px){
+		#story-index li a:not(.is-current){
+			color: $dark-base-color;
+		}
+	}
+
+	textarea,
+	input:not([type=submit]),
+	select,
+	code, kbd, pre, samp,
+	.latest-tweets-slider-widget .latest-tweets-slider .tie-slider-nav li a:not(:hover),
+	.next-posts,
+	.prev-posts,
+	.show-more-button,
+	.pages-nav .pages-numbers a,
+	.pages-nav .pages-numbers span.pages-nav-item,
+	.pages-nav .pages-numbers .first-last-pages .pagination-icon,
+	.multiple-post-pages .post-page-numbers,
+	.latest-tweets-widget .slider-links .tie-slider-nav span{
+		border-color: $base-border-color-in-white;
+	}
+
+	#tie-wrapper,
+	#theme-header{
+		background-color: $dark-bg;
+	}
+
+	.subscribe-widget .subscribe-widget-content h4:after,
+	.boxed-slider-three-slides-wrapper li:not(.slick-active) button:not(:hover),
+	.boxed-four-taller-slider li:not(.slick-active) button:not(:hover),
+	.boxed-five-slides-slider li:not(.slick-active) button:not(:hover){
+		background-color: $base-border-color-in-white;
+	}
+
+	.video-playlist-wrapper,
+	.tie-slider-nav span{
+		background: darken($darker-bg, 3%);
+	}
+
+	// Boxed Layout -------------------
+	.boxed-layout.wrapper-has-shadow {
+		#tie-wrapper {
+			box-shadow: 0 1px 10px rgba(0,0,0, 0.3);
+		}
+	}
+
+	//Widgets -------------------------
+	.container-wrapper{
+		background-color: $darker-bg;
+		border-color: $base-border-color-in-white;
+	}
+
+	.post-layout-3 .fullwidth-entry-title,
+	.post-layout-7 .fullwidth-entry-title{
+		background-color: transparent;
+	}
+
+	.tie-popup-container .container-wrapper{
+		background-color: $darker-bg !important;
+	}
+
+	.widget a:not(:hover),
+	.widget-title,
+	.widget-title a:not(:hover){
+		color: #ffffff;
+	}
+
+	.widget-title-icon {
+		color: $dark-base-color;
+	}
+
+	// tags/cats cloud
+	.widget_product_tag_cloud,
+	.widget_tag_cloud .tagcloud,
+	.post-tags,
+	.widget_layered_nav_filters{
+		a {
+			border-color: $base-border-color-in-white;
+		}
+	}
+
+	// timeline
+	.timeline-widget {
+		ul:before{
+			background: rgba(0,0,0,0.3);
+		}
+
+		.date:before {
+			background: $dark-bg;
+			border-color: rgba(0,0,0,0.3);
+		}
+	}
+
+	//NewsLetter
+	.subscribe-widget{
+		.subscribe-widget-content {
+			h3{
+				color: #ffffff;
+			}
+		}
+
+		.newsletter-icon,
+		form:before{
+			color: rgba(255,255,255,0.3);
+		}
+	}
+
+	.magazine1 .entry-header-outer + .mag-box{
+		border-top: 1px solid $base-border-color-in-white;
+	}
+
+	.post-layout-8 #content{
+		background-color: $dark-bg; //$darker-bg;
+	}
+
+	@include breakpoint(md){
+		.post-layout-8.one-column-no-sidebar #content{
+			background-color: transparent;
+		}
+	}
+
+	// instagram
+
+	.tie-instagram.lite-skin,
+	.tie-instagram.default-skin{
+		background-color: #ffffff;
+
+		a{
+			color: $base-color;
+		}
+	}
+
+	// Post Elements ------------------
+	@include breakpoint(max_min_md){
+		.post-has-toggle #the-post .entry:not(.is-expanded):before {
+			background-image: linear-gradient(to bottom, rgba(31,32,36, 0.15) 50%, $darker-bg 100%);
+		}
+
+		.magazine2.post-has-toggle #the-post .entry:not(.is-expanded):before {
+			background-image: linear-gradient(to bottom, rgba(39,41,45, 0.15) 50%, $dark-bg 100%);
+		}
+	}
+
+	.sticky{
+	  background: #1c1c1d;
+	  padding: 10px;
+	}
+
+	.entry-header .entry-title {
+		color: #ffffff;
+	}
+
+	.share-buttons-bottom,
+	.wp-block-table.is-style-stripes{
+		border-color: $base-border-color-in-white;
+	}
+
+	.magazine1 .share-buttons-bottom{
+		background: $darker-bg;
+	}
+
+	.comment-list li,
+	.commentlist li,
+	.entry table *,
+	.woocommerce table.shop_table tfoot *{
+		border-color: $base-border-color-in-white;
+	}
+
+	.wp-block-table.is-style-stripes tbody tr:nth-child(2n+1) {
+		background-color: #333;
+	}
+
+	.comment-list,
+	.commentlist{
+		.comment-author img {
+			box-shadow: 0 0 6px #111;
+			border-color: $base-border-color-in-white;
+		}
+	}
+
+
+	// ShortCodes ---------------------
+	.post-content-slideshow,
+	.post-content-slideshow .tie-slider-nav-wrapper,
+	.post-content-slideshow .tie-slider-nav li span,
+	.divider,
+	.toggle,
+	.tabs-wrapper.tabs-vertical:after,
+	.tabs-wrapper.tabs-vertical .tabs li a{
+		border-color: $base-border-color-in-white;
+	}
+
+	// General Elements ---------------
+	#check-also-box{
+		border-color: $base-border-color-in-white;
+		background-color: $darker-bg;
+	}
+
+	.site-footer{
+		background-color: #1c1d21;
+	}
+}

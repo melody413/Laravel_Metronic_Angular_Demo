@@ -1,0 +1,30 @@
+// BP Single Group Header Styles.
+// @version 3.0.0
+
+.groups-header {
+
+	.bp-group-type-list {
+		margin: 0;
+	}
+
+	.bp-feedback {
+		clear: both;
+	}
+
+	// groups admin/mod wrapper block
+	.group-item-actions {
+		margin-bottom: 15px;
+		padding-top: 0;
+		width: 100%;
+	}
+
+	.desc-wrap {
+		position: absolute;
+		z-index: 1;
+		bottom: 50px;
+		padding: $pad-med;
+		text-align: center;
+		width: 100%;
+	}
+} // close groups-header
+

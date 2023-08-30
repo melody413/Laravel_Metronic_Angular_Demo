@@ -1,0 +1,327 @@
+// MIXINS & GLOBAL VARIALS ALL OVER THE THEME & CSS3 MIXINS
+@import "../utils/mixins";
+@import "../utils/variables";
+
+
+// Most Importing General CSS
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+}
+
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+
+body{
+	background: $bg-color;
+	color: $base-color;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", "Open Sans", Arial, sans-serif;
+	font-size: 13px;
+	line-height: 21px;
+}
+
+h1,h2,h3,h4,h5,h6, .the-subtitle{
+	line-height: 1.4;
+	font-weight: 600;
+}
+
+h1{
+	font-size: $font-size-h1;
+	font-weight: 700;
+}
+
+h2{
+	font-size: $font-size-h2;
+}
+
+h3{
+	font-size: $font-size-h3;
+}
+
+h4,
+.the-subtitle{
+	font-size: $font-size-h4;
+}
+
+h5{
+	font-size: $font-size-h5;
+}
+
+h6{
+	font-size: $font-size-h6;
+}
+
+a{
+	color: #333;
+	text-decoration: none;
+	transition: 0.15s;
+}
+
+a:hover{
+	color: $brand-color;
+}
+
+img,
+object,
+embed{
+	max-width: 100%;
+	height: auto;
+}
+
+iframe{
+	max-width: 100%;
+}
+
+p{
+	line-height: 21px;
+}
+
+
+// Accessabiltiy :Screen reader text
+.says,
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+
+// ADS ---------------------------------------------------------
+.stream-title {
+  margin-bottom: 3px;
+  font-size: 85%;
+  color: #a5a5a5;
+  display: block;
+}
+
+.stream-item{
+	text-align: center;
+	position: relative;
+	z-index: 2;
+	margin: 20px 0;
+	padding: 0;
+
+	iframe{
+    margin: 0 auto;
+	}
+
+	img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: middle;
+	}
+
+	&.stream-item-above-header{
+		margin: 0;
+	}
+
+	// Reduce CLS
+	//@include breakpoint_max($screen-sm){
+		//.adsbygoogle {
+			//min-height: 300px;
+		//}
+	//}
+
+	&.stream-item-between .post-item-inner{
+		width: 100%;
+		display: block;
+	}
+}
+
+.post-layout-8.is-header-layout-1.has-header-ad .entry-header-outer,
+body.post-layout-8.has-header-below-ad .entry-header-outer{
+	padding-top: 0;
+}
+
+.stream-item-top-wrapper ~ .stream-item-below-header,
+.is-header-layout-1.has-header-ad.post-layout-6 .featured-area,
+.has-header-below-ad.post-layout-6 .featured-area{
+	margin-top: 0;
+}
+
+.has-header-below-ad .fullwidth-entry-title.container-wrapper,
+.is-header-layout-1.has-header-ad .fullwidth-entry-title,
+.is-header-layout-1.has-header-ad .is-first-section,
+.has-header-below-ad .is-first-section{
+	padding-top: 0;
+	margin-top: 0;
+}
+
+@include breakpoint(max_min_md){
+	body:not(.is-header-layout-1).has-header-below-ad.has-header-ad{
+		.top-nav-below .has-breaking-news{
+			margin-bottom: 20px;
+		}
+	}
+
+	.has-header-ad .fullwidth-entry-title.container-wrapper,
+	.has-header-ad.has-header-below-ad .stream-item-below-header,
+	.single.has-header-ad:not(.has-header-below-ad) #content,
+	.page.has-header-ad:not(.has-header-below-ad) #content{
+		margin-top: 0;
+	}
+
+	.has-header-ad .is-first-section{
+		padding-top: 0;
+	}
+
+	.has-header-ad:not(.has-header-below-ad) .buddypress-header-outer{
+		margin-bottom: 15px;
+	}
+}
+
+.has-full-width-logo,
+.header-layout-2 {
+	.stream-item-top-wrapper{
+		width: 100%;
+		max-width: 100%;
+		float: none;
+		clear: both;
+	}
+}
+
+.header-layout-2{
+	&.has-normal-width-logo{
+		@include breakpoint(md){
+			.stream-item-top-wrapper{
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+.header-layout-3 {
+
+	&.no-stream-item .logo-container{
+		width: 100%;
+		float: none;
+	}
+
+	&.has-normal-width-logo{
+		.stream-item-top{
+
+			@include breakpoint(md){
+				img{
+					float: right;
+				}
+			}
+
+			@include breakpoint(max_min_md){
+				clear: both;
+			}
+		}
+	}
+}
+
+
+// Background ADS
+#background-ad-cover{
+	top: 0;
+	left: 0;
+	z-index: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+}
+
+
+// Disable elements on mobile ----------------------------------
+@include breakpoint_max($screen-sm){
+	.hide_banner_header .stream-item-above-header,
+	.hide_banner_top .stream-item-top-wrapper,
+	.hide_banner_below_header .stream-item-below-header,
+	.hide_banner_bottom .stream-item-above-footer,
+	.hide_banner_above .stream-item-above-post,
+	.hide_banner_above_content .stream-item-above-post-content,
+	.hide_banner_below_content .stream-item-below-post-content,
+	.hide_banner_below .stream-item-below-post,
+	.hide_banner_comments .stream-item-below-post-comments,
+	.hide_breaking_news #top-nav,
+	.hide_sidebars .sidebar,
+	.hide_footer #footer-widgets-container,
+	.hide_copyright #site-info,
+	.hide_breadcrumbs #breadcrumb,
+	.hide_share_post_top .share-buttons-top,
+	.hide_share_post_bottom .share-buttons-bottom,
+	.hide_post_newsletter #post-newsletter,
+	.hide_related #related-posts,
+	.hide_read_next #read-next-block,
+	.hide_post_authorbio .post-components .about-author,
+	.hide_post_nav .prev-next-post-nav,
+	.hide_back_top_button #go-to-top,
+	.hide_read_more_buttons .more-link,
+	.hide_inline_related_posts #inline-related-post{
+		display: none !important;
+	}
+}
+
+// Load this early to avoid screen shift
+.tie-icon:before,
+[class^="tie-icon-"],
+[class*=" tie-icon-"] {
+  font-family: 'tiefonticon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+}
+
+
+// Hide Elements till the CSS file load
+// this class added by Sari3 Project
+body.tie-no-js{
+	a.remove,
+	.tooltip,
+	.woocommerce-message,
+	.woocommerce-error,
+	.woocommerce-info,
+	.bbp-template-notice,
+	.indicator-hint,
+	.menu-counter-bubble-outer,
+	.notifications-total-outer,
+	.comp-sub-menu,
+	.menu-sub-content{
+    display: none !important;
+	}
+
+	.fa,
+	.fas,
+	.far,
+	.fab,
+	.tie-icon:before,
+	[class^="tie-icon-"],
+	[class*=" tie-icon-"],
+	.weather-icon{
+    visibility: hidden !important;
+	}
+
+	[class^="tie-icon-"],
+	[class*=" tie-icon-"]{
+		&:before{
+			content: "\f105";
+		}
+	}
+}
+
+// These Two elements appears after footer, tie-no-js removed before the Helper file got fully loaded, we need to keep them hidden and they by default hidden.
+.tie-popup,
+#autocomplete-suggestions{
+	display: none;
+}

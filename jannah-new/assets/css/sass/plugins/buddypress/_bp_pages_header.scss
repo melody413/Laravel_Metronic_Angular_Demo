@@ -1,0 +1,31 @@
+// BP Pages Header
+// @version 3.0.0
+
+header.buddypress-header-outer{
+	background: $bg-color;
+	border-bottom: $primary-border;
+	padding: 25px 0;
+	overflow: hidden;
+
+	#breadcrumb{
+		margin-top: 25px;
+	}
+
+	.entry-header{
+		padding: 10px 0;
+		margin-bottom: 0;
+		border-width: 0;
+
+		h1{
+			margin-bottom: 0;
+		}
+	}
+
+	@media only screen and (max-width: 768px){
+		padding-top: 0;
+	}
+
+	.dark-skin &{
+		background-color: $darker-bg;
+	}
+}

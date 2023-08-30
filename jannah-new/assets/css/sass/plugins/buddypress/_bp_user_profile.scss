@@ -1,0 +1,423 @@
+// BP User Profiles screen
+// @version 3.0.0
+//
+// 0/ General :)
+// 1/ Profile Edit
+// 2/ Profile Public Display
+// 3/ Profile Photo
+
+// General
+
+.buddypress-wrap {
+
+	.profile {
+		.bp-widget{
+			margin-bottom: 30px;
+			position: relative;
+			padding-bottom: 50px;
+			border-bottom: $primary-border;
+
+			&:last-of-type{
+				border-bottom: 0;
+				margin-bottom: 0;
+				padding-bottom: 20px;
+			}
+		}
+
+		h4{
+			padding: 10px 0;
+			margin-bottom: 0;
+		}
+
+		.profile-fields{
+			border: 0;
+			padding-top: 10px;
+			position: relative;
+
+			&:before{
+				content: "";
+				background-color: $base-border-color;
+				position: absolute;
+				left: 14px;
+				height: 100%;
+				width: 2px;
+			}
+
+			tr{
+				padding: 10px;
+
+				td{
+					display: block;
+
+					&.data{
+						padding: 0 0 20px 40px;
+
+						p{
+							padding-left: 0;
+						}
+					}
+				}
+			}
+
+			tr,
+			tr:nth-child(even),
+			tr td,
+			tr:nth-child(even) td{
+				background: transparent;
+				border: 0;
+			}
+
+			.label{
+				border-right: 0;
+				vertical-align: top;
+				padding-left: 40px;
+				position: relative;
+				color: $brand-color;
+				width: 100%;
+
+
+				&:before{
+					content: "";
+			    background-color: $brand-color;
+			    box-shadow: 0 0 0 5px #ffffff;
+			    box-sizing: content-box;
+			    position: absolute;
+					left: 11px;
+					top: 16px;
+					height: 8px;
+					width: 8px;
+					border-radius: 50%;
+				}
+			}
+
+			p{
+				padding-left: 15px;
+			}
+		}
+	}
+}
+
+// Edit Screen
+
+.buddypress-wrap {
+
+	.profile.edit {
+
+		// The groups tabs
+		.button-nav {
+			list-style: none;
+			margin: $marg-xlrg 0;
+			border-bottom: 1px solid $bp-border-color;
+			@include box-shadow( 0 2px 12px 0 $off-white);
+
+			li {
+				display: inline-block;
+				margin-right: $marg-lrg;
+				overflow: hidden;
+
+				a {
+					padding: $pad-sml 0;
+					@include font-size(16);
+					background: transparent !important;
+
+				}
+
+				a:hover,
+				&.current a{
+					color: $brand-color;
+				}
+			}
+		}
+
+		.edit-profile-screen{
+			@include font-size(30);
+		}
+
+		.profile-group-title{
+			@include font-size(16);
+		}
+
+		.editfield {
+			// background: $off-white;
+			border: 1px solid $bp-border-color;
+			margin: $marg-med 0;
+			padding: $pad-med;
+
+			fieldset {
+				border: 0;
+
+				label {
+					font-weight: 400;
+
+					&.xprofile-field-label {
+						display: inline;
+					}
+				}
+			}
+		}
+
+		// The visual layout of the form controls and group description
+		.editfield {
+			display: flex;
+			flex-direction: column;
+
+			.description {
+				margin-top: $marg-sml;
+				order: 2;
+			}
+
+			> fieldset {
+				order: 1;
+			}
+
+			.field-visibility-settings-toggle,
+			.field-visibility-settings {
+				order: 3;
+			}
+
+			.field-visibility-settings-header{
+				color: #8a8a8a;
+				font-size: 13px;
+				margin-top: 15px;
+				padding: 3px 0;
+				border-radius: 3px;
+				// background-color: #f9f9f9;
+				// border: $base-border;
+
+				.visibility-toggle-link{
+					color: #fff;
+					border: none;
+					font-size: 11px;
+					padding: 2px 8px;
+					margin-left: 8px;
+					letter-spacing: .03em;
+					background-color: $dark-base-color;
+					border-radius: $base-border-radius;
+					text-decoration: none !important;
+					transition: background 0.3s;
+
+					&:hover{
+						background-color: darken($dark-base-color, 10%);
+					}
+				}
+			}
+		}
+
+	} // .profile
+
+	.bp-help-text{
+		margin-bottom: $marg-sml;
+	}
+} // close .buddypress-wrap
+
+body.no-js {
+
+	.buddypress-wrap .field-visibility-settings-toggle,
+	.buddypress-wrap .field-visibility-settings-close {
+		display: none;
+	}
+
+	.buddypress-wrap .field-visibility-settings {
+		display: block;
+	}
+}
+
+.buddypress-wrap {
+
+	.field-visibility-settings {
+		margin: $marg-sml 0;
+	}
+
+	.profile.edit .editfield{
+		.field-visibility-settings{
+			fieldset{
+				border: $base-border;
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.field-visibility-settings{
+		.radio{
+			padding: 10px;
+
+			label{
+				display: flex;
+				align-items: center;
+
+				&:not(:last-of-type){
+					margin-bottom: 15px;
+				}
+			}
+
+			.field-visibility-text:before{
+				content: '\f0ac';
+				display: inline-block;
+				font: normal normal normal 14px/1 tiefonticon;
+				font-size: inherit;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				border-radius: 50%;
+				width: 25px;
+				height: 25px;
+				text-align: center;
+				line-height: 25px;
+				margin: 0 5px;
+				color: #fff;
+				background-image: linear-gradient( 109.6deg,  rgba(209,158,246,1) 11.2%, rgba(93,219,241,1) 91.1% );
+			}
+
+			label	{
+				&:nth-of-type(2) .field-visibility-text:before{
+					content: '\f023';
+					background-color: #FFE53B;
+					background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+				}
+
+				&:nth-of-type(3) .field-visibility-text:before{
+					content: '\f0c0';
+					background-image: linear-gradient( 135deg, #70F570 10%, #49C628 100%);
+				}
+
+				&:nth-of-type(4) .field-visibility-text:before{
+					content: '\f2b5';
+					background-image: linear-gradient( 109.6deg,  rgba(255,78,80,1) 11.2%, rgba(249,212,35,1) 100.2% );
+				}
+			}
+		}
+	}
+
+	.current-visibility-level {
+		font-style: normal;
+		font-weight: 700;
+	}
+
+	.field-visibility-settings,
+	.field-visibility-settings-header {
+		color: $light-text-plus;
+	}
+
+	.field-visibility-settings {
+
+		fieldset {
+			margin: $marg-xsml 0;
+		}
+	}
+
+	.standard-form { // this needs to be a specific profile edit form class
+
+		.editfield {
+
+			fieldset {
+				margin: 0;
+			}
+		}
+
+		.field-visibility-settings {
+
+			label {
+				font-weight: 400;
+				margin: 0;
+			}
+
+			.radio {
+				list-style: none;
+				margin-bottom: 0;
+			}
+
+			.field-visibility-settings-close {
+
+				@include font-size(12);
+			}
+		}
+
+		.wp-editor-container {
+			border: 1px solid #dedede;
+
+			textarea {
+				background: $white;
+				width: 100%;
+			}
+		}
+
+		// field item description
+		.description {
+			background: $off-white;
+			font-size: inherit;
+		}
+
+		.field-visibility-settings legend,
+		.field-visibility-settings-header {
+			font-style: italic;
+		}
+
+		.field-visibility-settings-header {
+			margin-top: 5px;
+			@include font-size(14);
+		}
+
+		.field-visibility-settings {
+
+			legend,
+			label {
+
+				@include font-size(14);
+			}
+		}
+
+		.field-visibility select {
+			margin: 0;
+		}
+
+	} // close .standard-form
+
+	.html-active button.switch-html {
+		background: #f5f5f5;
+		border-bottom-color: transparent;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	.tmce-active button.switch-tmce {
+		background: #f5f5f5;
+		border-bottom-color: transparent;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+} // close .buddypress-wrap
+
+// Public Profile
+
+.buddypress-wrap {
+
+	.profile.public {
+
+		.profile-group-title {
+			font-weight: bold;
+			margin-bottom: 0;
+		}
+
+		.view-profile-screen{
+			display: none;
+		}
+	}
+}
+
+// This needs to be reviewed and re-located!?
+body.register .buddypress-wrap .page ul {
+	list-style: none;
+}
+
+// Avatars & Cover Image
+
+.buddypress-wrap {
+
+	.profile {
+
+		.bp-avatar-nav {
+			margin-top: $marg-lrg;
+		}
+	}
+}

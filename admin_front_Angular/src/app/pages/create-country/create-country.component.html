@@ -1,0 +1,104 @@
+<div class="card">
+    <div class="card-body">
+      <div class="card-body">
+        <form
+          novalidate
+          class="form"
+          (ngSubmit)="create()"
+          enctype="multipart/form-data"
+        >
+            <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
+                Language Data:
+            </h1>
+            <div class="card-body border-top">
+                <div class="row col-lg-12">
+                    <div class="col-lg-6 fv-col">
+                        <h2 class="fs-4">*Name Ar:</h2>
+                        <input 
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                            [(ngModel)]="arName" 
+                            name="arName" 
+                            type="text" 
+                            value=""
+                        />
+                        <div *ngIf="errorMessage1" class="error-message fs-6" style="color: red;">{{errorMessage1}}</div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="fs-4">*Name En:</h2>
+                        <input 
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                            [(ngModel)]="enName" 
+                            name="enName" 
+                            type="text" 
+                            value=""
+                        />
+                        <div *ngIf="errorMessage2" class="error-message fs-6" style="color: red;">{{errorMessage2}}</div>
+                    </div>
+                </div>                
+            </div>
+
+            <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
+                Other Data :
+            </h1>
+            <div class="card-body border-top">
+                <div class="row col-lg-12 mt-10">
+                    <div class="col-lg-6">
+                        <h2 class="fs-4">Country Code</h2>
+                        <input 
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                            [(ngModel)]="countryCode" 
+                            name="countryCode" 
+                            type="text" 
+                            value=""
+                        />
+                        <div *ngIf="errorMessage3" class="error-message fs-6" style="color: red;">{{errorMessage3}}</div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="fs-4">Currency Code</h2>
+                        <input 
+                            class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" 
+                            [(ngModel)]="currencyCode" 
+                            name="currencyCode" 
+                            type="text" 
+                            value=""
+                        />
+                        <div *ngIf="errorMessage4" class="error-message fs-6" style="color: red;">{{errorMessage4}}</div>
+                    </div>
+                </div>
+                <div
+                    class="input-group input-group-lg col-lg-15 d-flex gap-5 align-items-center mt-10"
+                >
+                    <h2 for="doctor_image" class="card-title fw-bolder fs-4">Image :</h2>
+                    <input
+                        name = "image"
+                        type="file"
+                        class="form-control-lg form-control-solid mb-3 mb-lg-0"
+                        name="doctor_image"
+                        (change)="onFileSelected($event)"
+                    />
+                    <img id="image" style="display: none; border-radius: 10%;" width="200" height="200" />
+                </div>
+            </div>
+            <div class="col d-flex gap-2 align-items-center mt-15">
+                <button class="btn btn-md btn-secondary">Reset</button>
+                <button class="btn btn-md btn-success" type="submit">Save</button>
+                <button class="btn btn-md btn-primary">Save & create new</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  
+    <script
+      src="https://cdn.tiny.cloud/1/your-api-key/tinymce/6/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script>
+  
+    <script>
+      tinymce.init({
+        selector: "#editor",
+        plugins:
+          "a11ychecker advcode advlist advtable anchor autocorrect autolink autoresize autosave casechange charmap checklist code codesample directionality editimage emoticons export footnotes formatpainter fullscreen help image importcss inlinecss insertdatetime link linkchecker lists media mediaembed mentions mergetags nonbreaking pagebreak pageembed permanentpen powerpaste preview quickbars save searchreplace table tableofcontents template tinycomments tinydrive tinymcespellchecker typography visualblocks visualchars wordcount",
+      });
+    </script>
+  </div>
+  

@@ -1,0 +1,478 @@
+//Footer allways in dark skin
+#footer .container-wrapper{
+	padding: 15px 0;
+	margin: 0;
+	background: transparent;
+}
+
+.site-footer{
+	margin-top: 50px;
+	padding: 0;
+
+	@include breakpoint(max_min_md){
+		margin-top: 30px;
+
+		.section-wrapper.has-background + &{
+			margin-top: 0
+		}
+	}
+
+	.container-full.has-background + &{
+		margin-top: 0;
+		overflow: hidden;
+	}
+
+	.widget-title-icon{
+		display: none;
+	}
+
+	.widget,
+	.widget-content-only{
+		margin-bottom: 0;
+		border: 0;
+
+		&.buddypress{
+			margin-bottom: 30px;
+		}
+	}
+
+	.widget.tie-weather-widget{
+		margin: 15px 0;
+	}
+
+	@include breakpoint(max_min_sm){
+		.widget {
+			margin-bottom: 20px;
+		}
+	}
+
+	.widget_nav_menu li{
+		list-style: none;
+	}
+
+	.posts-list-counter .posts-list-items li.widget-post-list:before{
+		border-color: $dark-color;
+	}
+}
+
+.footer-widget-area{
+	margin-bottom: 10px;
+
+	&:first-child:not(.footer-boxed-widget-area){
+		padding-top: 60px;
+
+		@include breakpoint(max_min_sm){
+			padding-top: 30px;
+		}
+	}
+
+	&:last-child{
+		margin-bottom: 20px
+	}
+
+	@include breakpoint(max_min_sm){
+		margin-bottom: 20px;
+	}
+}
+
+@include breakpoint(md){
+	.footer-boxed-widget-area{
+		padding: 30px 30px 0;
+		margin-bottom: 50px;
+		border: $base-border-in-white;
+		border-radius: $base-border-radius;
+
+		&:first-child{
+			margin-top: 50px;
+		}
+
+		&:last-child{
+			margin-bottom: 30px;
+		}
+
+		> .tie-row > [class*="tie-col"]{
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+
+		#footer & .container-wrapper,
+		#footer & .widget.widget-content-only{
+			padding: 0;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.side-aside,
+.site-footer{
+	.latest-tweets-widget .dark-btn{
+		display: none;
+	}
+}
+
+
+// Instagram above footer --------------------------------------
+
+.tie-insta-photos{
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+}
+
+.tie-insta-post{
+	position: relative;
+
+	a{
+		display: block;
+		line-height: 0;
+		position: relative;
+		height: 100%;
+
+		&:hover img{
+			opacity: 0.8;
+		}
+	}
+
+	img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		float: left;
+	}
+
+	.media-video{
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		color: #ffffff;
+		font-size: 20px;
+		text-shadow: 0 0 10px rgba(0,0,0,0.5);
+	}
+}
+
+
+#footer-tiktok{
+	position: relative;
+	text-align: center;
+	color: #fff;
+
+	.tiktok-feed-list{
+		margin: 0 !important;
+
+		.tiktok-feed-item{
+			padding: 0 !important;
+		}
+	}
+
+	.tiktok-feed-actions{
+		position: absolute;
+		z-index: 999;
+		@include center(xy);
+
+		.tiktok-feed-button{
+			&:hover{
+				box-shadow: 0px 9px 20px -5px #ff5374;
+			}
+		}
+	}
+
+	@media screen and (max-width:1023px) and (min-width:768px) {
+		.tiktok-feed-feed[data-feed_layout=gallery] .tiktok-feed-list .tiktok-feed-item,
+		.tiktok-feed-feed[data-feed_layout=masonry] .tiktok-feed-list .tiktok-feed-item {
+			min-width:16%;
+		}
+	}
+	@media screen and (max-width:767px) {
+		.tiktok-feed-feed[data-feed_layout=gallery] .tiktok-feed-list .tiktok-feed-item,
+		.tiktok-feed-feed[data-feed_layout=masonry] .tiktok-feed-list .tiktok-feed-item {
+			min-width:33.333%
+		}
+	}
+}
+
+#footer-instagram{
+	position: relative;
+	text-align: center;
+	color: #fff;
+
+	.tie-insta-photos {
+		grid-template-columns: repeat(6,1fr);
+	}
+
+	@include breakpoint_max(900px){
+
+		.tie-insta-photos{
+			white-space: nowrap;
+			overflow-x: auto;
+			overflow-y: hidden;
+			scrollbar-width: thin;
+
+			&::-webkit-scrollbar {
+				width: 5px;
+			}
+		}
+
+		.tie-insta-post {
+			width: 150px !important;
+		}
+	}
+}
+
+
+#instagram-link{
+	position: absolute;
+	display: block;
+	z-index: 1;
+	@include center(xy);
+	display: block;
+	@include font-size(16px);
+	font-weight: 600;
+	text-align: center;
+	white-space: nowrap;
+	word-wrap: normal; // IE fix
+	line-height: 1;
+
+	.account-username{
+		direction: ltr;
+	}
+
+	&.is-compact{
+		background: rgba(0,0,0,.7);
+		text-shadow: 0 0 5px #000000;
+		color: #ffffff;
+		padding: 20px;
+	}
+
+	&.is-expanded{
+		background: #ffffff;
+		color: #000;
+		padding: 40px;
+		font-size: 18px;
+
+		html.dark-skin &{
+			background-color: $darker-bg;
+			color: #ffffff;
+
+			a:not(:hover){
+				color: #fff;
+			}
+		}
+
+		&.has-6-media{
+			padding: 20px;
+		}
+
+
+		@include breakpoint(sm){
+
+			span:not(:last-child){
+				display: block;
+				text-align: center;
+				margin: 0 auto 20px;
+			}
+
+			span.tie-icon-instagram{
+				font-size: 50px;
+				width: 50px;
+				height: 50px;
+				margin-bottom: 10px;
+			}
+		}
+
+		a:not(:hover){
+			color: #000;
+		}
+
+		.follow-button{
+			font-size: 16px;
+			color: inherit;
+			background-color: transparent !important;
+			border: 2px solid #000;
+			border-radius: 0;
+			padding-left: 40px;
+			padding-right: 40px;
+			font-weight: 600;
+
+			html.dark-skin &:not(:hover){
+				border-color: #fff;
+			}
+
+			&:hover{
+				color: $brand-color;
+				border-color: $brand-color;
+			}
+		}
+
+		&.is-colored{
+			.tie-icon-instagram,
+			.account-username,
+			.follow-button{
+				background: #f09433;
+				background: linear-gradient(29.61deg, #f38334 0%, #da2e7d 50.39%, #6b54c6 100%);
+				border: none;
+			}
+
+			a.follow-button{
+				color: #fff !important;
+
+				&:hover{
+					box-shadow: 0px 9px 20px -3px #6b54c6;
+				}
+			}
+
+			.tie-icon-instagram,
+			.account-username{
+				background-size: 100%;
+				-webkit-background-clip: text;
+				-moz-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				-moz-text-fill-color: transparent;
+			}
+		}
+	}
+
+	.tie-icon-instagram{
+		font-size: 22px;
+		vertical-align: sub;
+		width: 22px;
+		height: 22px;
+	}
+
+	@include breakpoint(max_min_sm){
+		right: 10px;
+		top: 10px;
+		left: auto;
+		transform: none;
+		padding: 10px !important;
+		border-radius: $base-border-radius;
+
+		.account-username,
+		.follow-button{
+			display: none !important;
+		}
+	}
+}
+
+
+// Site Info Bar------------------------------------------------
+.site-info{
+	background: $darker-bg-more;
+	padding: 20px 0;
+	line-height: 32px;
+	text-align: center;
+}
+
+.copyright-text{
+	font-size: 13px;
+}
+
+.footer-menu{
+	text-align: center;
+
+	li{
+		display: inline-block;
+		margin: 0 5px;
+	}
+}
+
+.site-info{
+	.social-icons{
+		text-align: center;
+
+		li{
+			float:none;
+			display: inline-block;
+			margin: 0;
+
+			a{
+
+				@include breakpoint(max_min_sm){
+					width: 48px !important;
+					height: 48px !important;
+					line-height: 48px !important;
+					font-size: 18px;
+					margin-top: 10px;
+				}
+
+				span{
+					color: $dark-base-color;
+				}
+
+				&:hover span{
+					color: #ffffff;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(max_min_sm){
+		.tie-alignleft,
+		.tie-alignright{
+			float: none;
+		}
+	}
+}
+
+@include breakpoint(sm){
+	.site-info-layout-2{
+		.copyright-text-first{
+			float: left;
+		}
+
+		.copyright-text-second,
+		ul.social-icons,
+		.footer-menu{
+			float: right;
+			margin: 0;
+			margin-left: 10px;
+		}
+	}
+}
+
+a.go-to-top-button{
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	background: $brand-color;
+	text-align: center;
+	display: block;
+	position: fixed;
+	bottom: -100px;
+	right: 15px;
+	z-index: 3;
+	color: #ffffff;
+	transition: 0.3s;
+
+	&:hover{
+		opacity: 0.85;
+	}
+
+	&.show-top-button{
+		bottom: 15px;
+
+		@at-root .border-layout &{
+			bottom: 30px;
+		}
+	}
+
+	@include breakpoint(max_min_sm){
+		right: 5px;
+		//width: 25px;
+		//height: 25px;
+		//line-height: 25px;
+
+		&.show-top-button{
+			bottom: 45px;
+		}
+	}
+}
+
+// Footer Ads
+.stream-item-above-footer{
+	margin: 40px auto 5px;
+
+	@include breakpoint(max_min_sm){
+		max-width: 728px;
+		margin: 40px 15px 5px;
+	}
+}

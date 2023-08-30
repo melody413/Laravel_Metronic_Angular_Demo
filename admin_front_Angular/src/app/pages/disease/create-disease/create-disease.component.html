@@ -1,0 +1,521 @@
+<!-- <p>create-disease works!</p> -->
+<div class="card">
+  <div class="card-body">
+    <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
+      Create disease
+    </h1>
+    <hr />
+    <div class="card-body">
+      <form novalidate class="form" enctype="multipart/form-data">
+        <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+          Language Data
+        </h1>
+        <div class="card-body border-top">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-6 fv-col">
+                <h2 class="fs-2">Name Arabic :</h2>
+                <input
+                  (ngModelChange)="onInputChange1($event)"
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  name="arName"
+                  [(ngModel)]="arName"
+                />
+                <div
+                  *ngIf="errorMessage1"
+                  class="error-message fs-6"
+                  style="color: red"
+                >
+                  {{ errorMessage1 }}
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <h2 class="fs-2">Name English :</h2>
+                <input
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  name="enName"
+                  [(ngModel)]="enName"
+                  (ngModelChange)="onInputChange2($event)"
+                />
+                <div
+                  *ngIf="errorMessage2"
+                  class="error-message fs-6"
+                  style="color: red"
+                >
+                  {{ errorMessage2 }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 form-group p-y-30">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 fv-row">
+                <h2 class="fs-2">Excerpt Ar :</h2>
+                <textarea
+                  cols="50"
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  name="arExcerpt"
+                  [(ngModel)]="arExcerpt"
+                  placeholder="Arabic[expert]"
+                ></textarea>
+                <small>display in list not show in unit</small>
+              </div>
+              <div class="col-lg-6 col-sm-12 fv-row">
+                <h2 class="fs-2">Excerpt En :</h2>
+                <textarea
+                  cols="50"
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  name="enExcerpt"
+                  [(ngModel)]="enExcerpt"
+                  placeholder="English[expert]"
+                ></textarea>
+                <small>display in list not show in unit</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12 p-y-30">
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <h2 for="Description" class="fs-2">Description Ar :</h2>
+                <editor
+                  name="arDescription"
+                  [(ngModel)]="arDescription"
+                  id="Description"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                ></editor>
+              </div>
+              <div class="col-lg-6 fv-row">
+                <h2 class="fs-2">Description En :</h2>
+                <editor
+                  [(ngModel)]="enDescription"
+                  name="enDescription"
+                  placeholder="Description"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                  toolbar="
+                    undo redo | formatselect | bold italic backcolor | \
+                    alignleft aligncenter alignright alignjustify | \
+                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                ></editor>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12 p-y-30">
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <h2 class="fs-2">Symptoms Ar :</h2>
+                <editor
+                  name="arSymptoms"
+                  [(ngModel)]="arSymptoms"
+                  id="Symptoms"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                ></editor>
+              </div>
+              <div class="col-lg-6 fv-row">
+                <h2 class="fs-2">Symptoms En :</h2>
+                <editor
+                  [(ngModel)]="enSymptoms"
+                  name="enSymptoms"
+                  placeholder="Symptoms"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                  toolbar="
+                    undo redo | formatselect | bold italic backcolor | \
+                    alignleft aligncenter alignright alignjustify | \
+                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                ></editor>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12 p-y-30">
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <h2 for="Causes" class="fs-2">Causes Ar :</h2>
+                <editor
+                  name="arCauses"
+                  [(ngModel)]="arCauses"
+                  id="Causes"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                ></editor>
+              </div>
+              <div class="col-lg-6 fv-row">
+                <h2 class="fs-2">Causes En :</h2>
+                <editor
+                  [(ngModel)]="enCauses"
+                  name="enCauses"
+                  placeholder="Causes"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                  toolbar="
+                    undo redo | formatselect | bold italic backcolor | \
+                    alignleft aligncenter alignright alignjustify | \
+                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                ></editor>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 p-y-30">
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <h2 class="fs-2" for="Complications">Complications Ar :</h2>
+                <editor
+                  name="arComplications"
+                  [(ngModel)]="arComplications"
+                  id="Complications"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                ></editor>
+              </div>
+              <div class="col-lg-6 fv-row">
+                <h2 class="fs-2">Complications En :</h2>
+                <editor
+                  [(ngModel)]="enComplications"
+                  name="enComplications"
+                  placeholder="Complications"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                  toolbar="
+                    undo redo | formatselect | bold italic backcolor | \
+                    alignleft aligncenter alignright alignjustify | \
+                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                ></editor>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 p-y-30">
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <h2 class="fs-2" for="Diagnosis">Diagnosis Ar :</h2>
+                <editor
+                  name="arDiagnosis"
+                  [(ngModel)]="arDiagnosis"
+                  id="Diagnosis"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                ></editor>
+              </div>
+              <div class="col-lg-6 fv-row">
+                <h2 class="fs-2">Diagnosis En :</h2>
+                <editor
+                  [(ngModel)]="enDiagnosis"
+                  name="enDiagnosis"
+                  placeholder="Diagnosis"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                  toolbar="
+                    undo redo | formatselect | bold italic backcolor | \
+                    alignleft aligncenter alignright alignjustify | \
+                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                ></editor>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 p-y-30">
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <h2 class="fs-2" for="Treatment">Treatment Ar :</h2>
+                <editor
+                  name="arTreatment"
+                  [(ngModel)]="arTreatment"
+                  id="Treatment"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                ></editor>
+              </div>
+              <div class="col-lg-6 fv-row">
+                <h2 class="fs-2">Treatment En :</h2>
+                <editor
+                  [(ngModel)]="enTreatment"
+                  name="enTreatment"
+                  placeholder="Treatment"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                  toolbar="
+                    undo redo | formatselect | bold italic backcolor | \
+                    alignleft aligncenter alignright alignjustify | \
+                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                ></editor>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 p-y-30">
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <h2 class="fs-2" for="Protection">Protection Ar :</h2>
+                <editor
+                  name="arProtection"
+                  [(ngModel)]="arProtection"
+                  id="Protection"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                ></editor>
+              </div>
+              <div class="col-lg-6 fv-row">
+                <h2 class="fs-2" for="Protection">Protection En :</h2>
+                <editor
+                  [(ngModel)]="enProtection"
+                  name="enProtection"
+                  placeholder="Protection"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                  toolbar="
+                    undo redo | formatselect | bold italic backcolor | \
+                    alignleft aligncenter alignright alignjustify | \
+                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                ></editor>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 p-y-30">
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <h2 class="fs-2" for="Description">
+                  Alternative_therapies Ar :
+                </h2>
+                <editor
+                  name="arAlternative_therapies"
+                  [(ngModel)]="arAlternative_therapies"
+                  id="Alternative_therapies"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                ></editor>
+              </div>
+              <div class="col-lg-6 fv-row">
+                <h2 class="fs-2" for="Description">
+                  Alternative_therapies En :
+                </h2>
+                <editor
+                  [(ngModel)]="enAlternative_therapies"
+                  name="enAlternative_therapies"
+                  placeholder="Alternative_therapies"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                  toolbar="
+                    undo redo | formatselect | bold italic backcolor | \
+                    alignleft aligncenter alignright alignjustify | \
+                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                ></editor>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+          Other Data
+        </h1>
+        <div class="card-body border-top p-9">
+          <h2 class="card-title fw-bolder text-hover-primary fs-2">
+            Parent Disease:
+          </h2>
+          <div class="col-lg-12 row">
+            <div
+              *ngFor="let item of parent_disease; let i = index"
+              class="col-lg-3 fv-row"
+            >
+              <input
+                class="filled-in chk-col-brown form-check-input subcp"
+                name="parent_ids[]"
+                type="checkbox"
+                [value]="i + 1"
+                [checked]="parent_ids.includes(i + 1)"
+                (change)="toggleCheckbox_parent_ids(i + 1)"
+              />
+              <label
+                for="parent-disease"
+                class="fs-2"
+                style="padding-left: 8px"
+                >{{ item.name }}</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body border-top p-9">
+          <h2 class="card-title fw-bolder text-hover-primary fs-2">
+            Parent Body Part:
+          </h2>
+          <div class="col-lg-12 row">
+            <div
+              *ngFor="let item of bodyparts; let i = index"
+              class="col-lg-3 fv-row"
+            >
+              <input
+                [value]="i + 1"
+                name="parentBodyIds[]"
+                class="filled-in chk-col-brown form-check-input subcp"
+                type="checkbox"
+                [checked]="body_part_ids.includes(i + 1)"
+                (change)="toggleCheckbox_body_part_ids(i + 1)"
+              />
+              <label for="subcp_1" class="fs-2" style="padding-left: 8px">{{
+                item.name
+              }}</label>
+            </div>
+          </div>
+
+          <br />
+          <div
+            class="input-group input-group-lg col-lg-15 d-flex gap-5 align-items-center"
+          >
+            <h1
+              class="card-title fw-bolder text-muted fs-4"
+              style="display: block; text-align: center; padding: 10px"
+            >
+              Logo :
+            </h1>
+            <!-- <div class="p-5 border rounded-lg">Choose File</div> -->
+            <input
+              (change)="onFileSelected($event)"
+              type="file"
+              class="form-control-lg form-control-solid mb-3 mb-lg-0"
+              name="image"
+            />
+            <img
+              id="image"
+              style="display: none; border-radius: 10%"
+              width="200"
+              height="200"
+            />
+            <!-- <div>No Choose File</div> -->
+          </div>
+
+          <br />
+          <div
+            class="input-group input-group-lg col-lg-15 d-flex gap-5 align-items-center"
+          >
+            <h1
+              class="card-title fw-bolder text-muted fs-4"
+              style="display: block; text-align: center; padding: 10px"
+            >
+              Is Active :
+            </h1>
+            <span>OFF</span>
+            <div
+              class="form-check form-check-custom form-check-solid form-check-success form-switch"
+            >
+              <input
+                [(ngModel)]="is_active"
+                class="form-check-input"
+                type="checkbox"
+                name="is_active"
+              />
+            </div>
+            <span>ON</span>
+          </div>
+        </div>
+      </form>
+      <div class="col d-flex gap-2 align-items-center">
+        <button class="btn btn-md btn-secondary" (click)="reset()">
+          Reset
+        </button>
+        <button class="btn btn-md btn-success" (click)="create()">Save</button>
+        <button class="btn btn-md btn-primary" (click)="savenew()">
+          Save & create new
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script
+    src="https://cdn.tiny.cloud/1/your-api-key/tinymce/6/tinymce.min.js"
+    referrerpolicy="origin"
+  ></script>
+
+  <script>
+    tinymce.init({
+      selector: "#editor",
+      plugins:
+        "a11ychecker advcode advlist advtable anchor autocorrect autolink autoresize autosave casechange charmap checklist code codesample directionality editimage emoticons export footnotes formatpainter fullscreen help image importcss inlinecss insertdatetime link linkchecker lists media mediaembed mentions mergetags nonbreaking pagebreak pageembed permanentpen powerpaste preview quickbars save searchreplace table tableofcontents template tinycomments tinydrive tinymcespellchecker typography visualblocks visualchars wordcount",
+    });
+  </script>
+</div>

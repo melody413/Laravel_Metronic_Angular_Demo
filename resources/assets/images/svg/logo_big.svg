@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="127px" height="76px" viewBox="0 0 127 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-3.5%" y="-5.3%" width="107.1%" height="117.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <text id="text-2" font-family="Raleway-Bold, Raleway" font-size="16" font-weight="bold" letter-spacing="2.79999995" fill="#000000">
+            <tspan x="43.7680002" y="56">doctora</tspan>
+            <tspan x="123.304" y="56">k</tspan>
+        </text>
+        <filter x="-3.5%" y="-31.6%" width="107.0%" height="142.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="-2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Doctorak-Home-Page" transform="translate(-108.000000, -84.000000)">
+            <g id="logo" transform="translate(110.000000, 37.000000)">
+                <g transform="translate(0.000000, 47.000000)" id="stethoscope">
+                    <g filter="url(#filter-1)">
+                        <g id="Group" fill="#000000" fill-rule="nonzero">
+                            <path d="M25.2409091,47.5086815 C13.3042208,47.5086815 3.59279221,37.8618401 3.59279221,26.0045385 L3.59279221,4.51606971 C3.59279221,0.76333774 6.66623377,-2.28966346 10.4442857,-2.28966346 L16.7466234,-2.28966346 C18.323961,-2.28966346 19.6030519,-1.01907933 19.6030519,0.547768029 C19.6030519,2.11461538 18.323961,3.38519952 16.7466234,3.38519952 L10.4442857,3.38519952 C9.81642857,3.38519952 9.30545455,3.89258173 9.30545455,4.51626322 L9.30545455,26.004732 C9.30545455,34.7329832 16.454026,41.8342055 25.2409091,41.8342055 C34.0277922,41.8342055 41.1763636,34.7331767 41.1763636,26.004732 L41.1763636,4.51606971 C41.1763636,3.89238822 40.6653896,3.38500601 40.0375325,3.38500601 L33.7351948,3.38500601 C32.1578571,3.38500601 30.8787662,2.11442188 30.8787662,0.547574519 C30.8787662,-1.01927284 32.1578571,-2.28966346 33.735,-2.28966346 L40.0373377,-2.28966346 C43.8153896,-2.28966346 46.8888312,0.76333774 46.8888312,4.51606971 L46.8888312,26.0045385 C46.889026,37.8618401 37.1775974,47.5086815 25.2409091,47.5086815 Z" id="Shape" transform="translate(25.240812, 22.609509) rotate(-90.000000) translate(-25.240812, -22.609509) "></path>
+                        </g>
+                        <g id="Group" transform="translate(54.000000, 1.000000)" fill="#000000" fill-rule="nonzero">
+                            <path d="M22.5,44.7222222 C10.0937593,44.7222222 0,34.6912453 0,22.3612179 C0,10.0311906 10.0933294,0 22.5,0 C34.9066706,0 45,10.030977 45,22.3612179 C44.9997851,34.690818 34.9062407,44.7222222 22.5,44.7222222 Z M22.5,6.26444765 C13.5688221,6.26444765 6.30317243,13.4856403 6.30317243,22.3616451 C6.30317243,31.2376499 13.569037,38.4584154 22.5,38.4584154 C31.430963,38.4584154 38.6968276,31.2374363 38.6968276,22.3616451 C38.6968276,13.4858539 31.430963,6.26444765 22.5,6.26444765 Z" id="Shape"></path>
+                            <ellipse id="Oval" cx="23.4782609" cy="23.3333333" rx="3.91304348" ry="3.88888889"></ellipse>
+                            <path d="M22.5001102,29.1666667 C18.7240053,29.1666667 15.6521739,26.1137972 15.6521739,22.3612206 C15.6521739,18.608644 18.7242256,15.5555556 22.5001102,15.5555556 C26.2759947,15.5555556 29.3478261,18.608644 29.3478261,22.3612206 C29.3478261,26.1137972 26.2759947,29.1666667 22.5001102,29.1666667 Z M22.5001102,21.9779694 C22.2874619,21.9779694 22.1142582,22.150104 22.1142582,22.3614396 C22.1142582,22.5727753 22.2874619,22.7444718 22.5001102,22.7444718 C22.7127585,22.7444718 22.8855214,22.5727753 22.8855214,22.3614396 C22.8855214,22.150104 22.7129788,21.9779694 22.5001102,21.9779694 Z" id="Shape"></path>
+                        </g>
+                        <path d="M37.2857143,38.0555556 C46.518843,44.0185185 55.3910498,47 63.9023346,47 C72.4136194,47 80.6842697,44.0185185 88.7142857,38.0555556" id="Path-2" stroke="#000000" stroke-width="2"></path>
+                    </g>
+                </g>
+                <path d="M73.5,120 C100.838095,120 123,97.6142375 123,70 C123,65.9075587 122.51325,61.9299522 121.595038,58.1230273 C116.317507,36.2422707 96.7865782,20 73.5,20 C46.1619049,20 24,42.3857625 24,70 C24,97.6142375 46.1619049,120 73.5,120 Z" id="Oval-4" transform="translate(73.500000, 70.000000) rotate(34.000000) translate(-73.500000, -70.000000) "></path>
+                <g id="doctorak" transform="translate(88.000000, 50.500000) rotate(34.000000) translate(-88.000000, -50.500000) " fill="#000000" fill-opacity="1">
+                    <use filter="url(#filter-3)" xlink:href="#text-2"></use>
+                    <use xlink:href="#text-2"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

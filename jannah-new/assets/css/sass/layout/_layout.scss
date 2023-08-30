@@ -1,0 +1,186 @@
+// Bootstrap Grid System ---------------------------------------
+// License - http://getbootstrap.com
+@import "vendors/bootstrap-grid/grid-framework";
+@import "vendors/bootstrap-grid/grid-mixins";
+@import "vendors/bootstrap-grid/grid";
+
+
+.tie-alignleft{
+	float: left;
+}
+
+.tie-alignright{
+	float: right;
+}
+
+.tie-aligncenter{
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.fullwidth{
+	width: 100% !important;
+}
+
+// Alignments
+.alignleft {
+	float: left;
+	margin: 0.375em 1.75em 1em 0;
+}
+
+.alignright {
+	float: right;
+	margin: 0.375em 0 1em 1.75em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto 1.75em;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+@include breakpoint(max_min_sm){
+	.entry .alignright,
+	.entry .alignleft{
+
+		&,
+		& img{
+			float: none;
+			clear: both;
+			display: block;
+			margin: 0 auto 1.75em;
+		}
+	}
+}
+
+// let's clear some floats
+.clearfix{
+	&:before,
+	&:after{
+		content: "\0020";
+		display: block;
+		height: 0;
+		overflow: hidden;
+	}
+
+	&:after{
+		clear: both;
+	}
+}
+
+
+.tie-container,
+#tie-wrapper{
+	height: 100%;
+	min-height: 650px;
+}
+
+.tie-container{
+	position: relative;
+	overflow: hidden;
+}
+
+#tie-wrapper {
+  background: #ffffff;
+	position: relative;
+	z-index: 108;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.container-wrapper{
+	background: #ffffff;
+	border: $primary-border;
+	border-radius: $base-border-radius;
+	padding: $container-padding;
+}
+
+#content{
+	margin-top: 30px;
+
+	@include breakpoint(max_min_md){
+		margin-top: 15px;
+	}
+}
+
+.site-content{
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+
+// BOXED LAYOUT
+.boxed-layout{
+	#tie-wrapper,
+	.fixed-nav{
+		max-width: 1230px;
+	}
+
+	&.wrapper-has-shadow{
+		#tie-wrapper{
+			box-shadow: 0 1px 7px rgba(171,171,171,0.5);
+		}
+	}
+
+	@include breakpoint(md){
+		#main-nav.fixed-nav,
+		#tie-wrapper {
+			width: 95%;
+		}
+	}
+}
+
+
+// FRAMED LAYOUT
+.framed-layout{
+	#tie-wrapper{
+		@include breakpoint(md){
+			margin-top: 25px;
+			margin-bottom: 25px;
+		}
+	}
+}
+
+
+// BORDER LAYOUT
+@include breakpoint(md){
+	.border-layout{
+		#tie-container{
+			margin: 25px;
+		}
+
+		&:after,
+		&:before{
+			background: inherit;
+			content: "";
+			display: block;
+			height: 25px;
+			left: 0;
+			bottom: 0;
+			position: fixed;
+			width: 100%;
+			z-index: 110;
+		}
+
+		&:before{
+			top: 0;
+			bottom: auto;
+		}
+
+		&.admin-bar:before{
+			top: 32px;
+		}
+
+		#main-nav.fixed-nav{
+		  left: 25px;
+		  right: 25px;
+		  width: calc(100% - 50px);
+		}
+	}
+}

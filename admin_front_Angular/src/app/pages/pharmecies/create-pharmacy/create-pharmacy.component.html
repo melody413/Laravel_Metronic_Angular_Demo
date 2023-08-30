@@ -1,0 +1,342 @@
+<!-- <p>create-disease works!</p> -->
+<div class="card">
+  <div class="card-body">
+    <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
+      Create Pharmecies
+    </h1>
+    <hr />
+    <div class="card-body">
+      <form
+        novalidate
+        class="form"
+        method="post"
+        action="http://localhost:8000/admin/body_part/store"
+      >
+        <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+          Language Data
+        </h1>
+        <div class="card-body border-top">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-6 fv-col">
+                <h2 class="fs-2">Name Arabic :</h2>
+                <input
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  name=""
+                />
+              </div>
+              <div class="col-lg-6">
+                <h2 class="fs-2">Name English :</h2>
+                <input
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  name=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 form-group p-y-30">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 fv-row">
+                <h2 class="fs-2">Excerpt Ar :</h2>
+                <textarea
+                  cols="50"
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  name=""
+                  placeholder="Arabic[expert]"
+                ></textarea>
+                <small>display in list not show in unit</small>
+              </div>
+              <div class="col-lg-6 col-sm-12 fv-row">
+                <h2 class="fs-2">Excerpt En :</h2>
+                <textarea
+                  cols="50"
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  name=""
+                  placeholder="English[expert]"
+                ></textarea>
+                <small>display in list not show in unit</small>
+              </div>
+            </div>
+          </div>
+
+          <div
+            *ngFor="let desItem of desItems; let i = index"
+            class="col-lg-12 p-y-30"
+          >
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <h2>{{ desItem.title }} Ar :</h2>
+                <!-- <textarea class="form-control tinymce" placeholder="Description" [(ngModel)]="enDescription" name="en[description]" cols="50" rows="10"></textarea> -->
+                <editor
+                  id="{{ desItem.title }}"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                ></editor>
+              </div>
+              <div class="col-lg-6 fv-row">
+                <h2 for="descriptionar">{{ desItem.title }} En :</h2>
+                <editor
+                  placeholder="Description"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                  toolbar="
+                                        undo redo | formatselect | bold italic backcolor | \
+                                        alignleft aligncenter alignright alignjustify | \
+                                        bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                ></editor>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Address -->
+        <div class="d-flex gap-5 align-items-center p-y-30">
+          <div class="col-lg-6">
+            <h3>Address Ar:</h3>
+            <h4 for="address_ar" class="card-title fw-bolder">Address:</h4>
+            <div>
+              <input
+                type="text"
+                maxlength="50"
+                class="form-control form-control-lg form-control-solid"
+                name="address_ar"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3>Address En:</h3>
+            <h4 for="phones" class="card-title fw-bolder">Address:</h4>
+            <div>
+              <input
+                type="text"
+                maxlength="50"
+                class="form-control form-control-lg form-control-solid"
+                name="address_en"
+              />
+            </div>
+          </div>
+        </div>
+        <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+          Other Data
+        </h1>
+        <div class="card-body border-top p-9">
+          <br />
+
+          <div class="row p-y-30">
+            <h3 for="doctor_facebook" class="">Facebook</h3>
+            <input
+              name="doctor_facebook"
+              value=""
+              class="form-control form-control-solid"
+            />
+          </div>
+          <div class="row p-y-30">
+            <h3 for="doctor_twitter" class="">Twitter</h3>
+            <input
+              name="doctor_twitter"
+              value=""
+              class="form-control form-control-solid"
+            />
+          </div>
+          <div class="row p-y-30">
+            <h3 for="doctor_instagram" class="">Instagram</h3>
+            <input
+              name="doctor_instagram"
+              value=""
+              class="form-control form-control-solid"
+            />
+          </div>
+          <div class="row p-y-30">
+            <h3 for="doctor_youtube" class="">Youtube</h3>
+            <input
+              name="doctor_youtube"
+              value=""
+              class="form-control form-control-solid"
+            />
+          </div>
+          <div class="row p-y-30">
+            <h3 for="doctor_website" class="">Website</h3>
+            <input
+              name="doctor_website"
+              value=""
+              class="form-control form-control-solid"
+            />
+          </div>
+
+          <div
+            class="input-group input-group-lg col-lg-15 d-flex gap-5 align-items-center"
+          >
+            <h1 class="card-title fw-bolder text-muted fs-4">Logo :</h1>
+            <!-- <div class="p-5 border rounded-lg">Choose File</div> -->
+            <input
+              type="file"
+              class="form-control-lg form-control-solid mb-3 mb-lg-0"
+              name="image"
+            />
+            <!-- <div>No Choose File</div> -->
+          </div>
+
+          <div class="row">
+            <!-- Phones -->
+            <div class="d-flex gap-5 align-items-center p-y-30">
+              <h3 for="phones" class="card-title fw-bolder">Phones:</h3>
+              <div>
+                <input
+                  type="text"
+                  maxlength="50"
+                  class="form-control form-control-lg form-control-solid"
+                  name="phones"
+                />
+                <span>seperate between numbers using "/"</span>
+              </div>
+            </div>
+
+            <!-- Open Hours -->
+            <div class="d-flex gap-5 align-items-center p-y-30">
+              <h3 for="open_hours" class="card-title fw-bolder">Open Hours:</h3>
+              <div>
+                <input
+                  type="text"
+                  maxlength="50"
+                  class="form-control form-control-lg form-control-solid"
+                  name="open_hours"
+                />
+                <span>per Hours ex: 24</span>
+              </div>
+            </div>
+            <!-- Insurance Company -->
+            <div class="d-flex gap-5 align-items-center p-y-30">
+              <h3 for="insurance_company" class="card-title fw-bolder">
+                Insurance Company:
+              </h3>
+              <div>
+                <input
+                  type="text"
+                  maxlength="50"
+                  class="form-control form-control-lg form-control-solid"
+                  name="insurance_company"
+                />
+              </div>
+            </div>
+
+            <!-- country -->
+            <div class="row p-y-30">
+              <h4 for="country_name">Country:</h4>
+              <select
+                address="address_country"
+                class="form-control form-control-solid"
+              >
+                <option value="">Nothing Selected</option>
+                <option value="ar">Ar</option>
+                <option value="uk">UK</option>
+                <option value="ca">CA</option>
+                <option value="ga">GA</option>
+              </select>
+            </div>
+            <!-- city -->
+            <div class="row p-y-30">
+              <h4 for="country_name">City:</h4>
+              <select
+                name="address_city"
+                class="form-control form-control-solid"
+              >
+                <option value="">Nothing selected</option>
+                <option value="ar">Ar</option>
+                <option value="uk">UK</option>
+                <option value="ca">CA</option>
+                <option value="ga">GA</option>
+              </select>
+            </div>
+            <!-- area -->
+            <div class="row p-y-30">
+              <h4 for="country_name">Area:</h4>
+              <select
+                name="adress_area"
+                class="form-control form-control-solid"
+              >
+                <option value=""></option>
+                <option value="ar">Ar</option>
+                <option value="uk">UK</option>
+                <option value="ca">CA</option>
+                <option value="ga">GA</option>
+              </select>
+            </div>
+
+            <div class="d-flex align-items-center gap-5 p-y-30">
+              <h5 for="gmap">GMAP</h5>
+              <div class="col">
+                <div
+                  class="bg-primary"
+                  style="width: 100%; height: 300px"
+                ></div>
+                <div
+                  class="border-bottom"
+                  style="margin-top: 16px; padding-bottom: 50px"
+                >
+                  <div class="d-flex gap-5 align-items-center">
+                    <h4>LatLang:</h4>
+                    <div class="border-bottom">
+                      <input class="form-control" name="latlang" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="input-group input-group-lg col-lg-15 d-flex gap-5 align-items-center"
+            >
+              <h1
+                class="card-title fw-bolder text-muted fs-4"
+                style="display: block; text-align: center; padding: 10px"
+              >
+                Is Active :
+              </h1>
+              <span>OFF</span>
+              <div
+                class="form-check form-check-custom form-check-solid form-check-success form-switch"
+              >
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="model.app.sidebar.default.minimize.desktop.enabled"
+                />
+              </div>
+              <span>ON</span>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="col d-flex gap-2 align-items-center">
+        <button class="btn btn-md btn-secondary">Reset</button>
+        <button class="btn btn-md btn-success">Save</button>
+        <button class="btn btn-md btn-primary">Save & create new</button>
+      </div>
+    </div>
+  </div>
+
+  <script
+    src="https://cdn.tiny.cloud/1/your-api-key/tinymce/6/tinymce.min.js"
+    referrerpolicy="origin"
+  ></script>
+
+  <script>
+    tinymce.init({
+      selector: "#editor",
+      plugins:
+        "a11ychecker advcode advlist advtable anchor autocorrect autolink autoresize autosave casechange charmap checklist code codesample directionality editimage emoticons export footnotes formatpainter fullscreen help image importcss inlinecss insertdatetime link linkchecker lists media mediaembed mentions mergetags nonbreaking pagebreak pageembed permanentpen powerpaste preview quickbars save searchreplace table tableofcontents template tinycomments tinydrive tinymcespellchecker typography visualblocks visualchars wordcount",
+    });
+  </script>
+</div>

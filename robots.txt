@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /doctorakadmin/
+Disallow: /download/
+Disallow: /phpMyAdmin/
+Disallow: /
+
+Sitemap: https://doctorak.com/sitemap.xml

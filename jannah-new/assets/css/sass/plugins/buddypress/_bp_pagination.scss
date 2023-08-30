@@ -1,0 +1,63 @@
+// BP pagination  - generic styling for all screens
+// @version 3.0.0
+.buddypress-wrap {
+
+	.bp-pagination {    
+		display: flex;
+    justify-content: space-between;
+    align-items: center;
+		background: transparent;
+		border: 0;
+		color: $light-text;
+		float: left;
+		font-size: small;
+		margin: 0;
+		padding: $pad-sml 0;
+		position: relative;
+		width: 100%;
+
+		.pag-count {
+			float: left;
+		}
+
+		.bp-pagination-links {
+			float: right;
+			// margin-right: $marg-sml;
+
+			span,
+			a {
+				line-height: 32px;
+				padding: 0 15px;
+				border: $base-border;
+				border-radius :$base-border-radius;
+				display: inline-block;
+				overflow: hidden;
+			}
+
+			.current{
+				background-color: $brand-color;
+				color: color-contrast($brand-color);
+				border-color: transparent;
+			}
+		}
+
+		.bp-pagination-links {
+
+			a:focus,
+			a:hover {
+				opacity: 1;
+			}
+		}
+
+		p {
+			margin: 0;
+		}
+
+		&.top{
+			margin-top: $marg-med;
+			border-bottom: 1px solid $light-grey;
+		}
+
+	} // close .bp-pagination
+
+}

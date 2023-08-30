@@ -1,0 +1,675 @@
+<!-- <p>create-disease works!</p> -->
+<div class="card">
+  <div class="card-body">
+    <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
+      Create Disease
+    </h1>
+    <hr />
+    <div class="card-body">
+      <form
+        novalidate
+        class="form"
+        (ngSubmit)="create()"
+        enctype="multipart/form-data"
+      >
+        <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+          Language Data
+        </h1>
+        <div class="card-body border-top">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-6 fv-col">
+                <h2 class="fs-2">Name Arabic :</h2>
+                <input
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  [(ngModel)]="arName"
+                  name="ar[name]"
+                />
+              </div>
+              <div class="col-lg-6">
+                <h2 class="fs-2">Name English :</h2>
+                <input
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  [(ngModel)]="enName"
+                  name="en[name]"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-6 fv-col">
+                <h2 class="fs-2">Title Arabic :</h2>
+                <input
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  [(ngModel)]="arTitle"
+                  name="ar[Title]"
+                />
+              </div>
+              <div class="col-lg-6">
+                <h2 class="fs-2">Title English :</h2>
+                <input
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  [(ngModel)]="enTitle"
+                  name="en[Title]"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12 form-group p-y-30">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 fv-row">
+                <h2 class="fs-2">Excerpt Ar :</h2>
+                <textarea
+                  [(ngModel)]="arExcerpt"
+                  cols="50"
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  name="ar[excerpt]"
+                  placeholder="Arabic[expert]"
+                ></textarea>
+                <small>display in list not show in unit</small>
+              </div>
+              <div class="col-lg-6 col-sm-12 fv-row">
+                <h2 class="fs-2">Excerpt En :</h2>
+                <textarea
+                  [(ngModel)]="enExcerpt"
+                  cols="50"
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  name="en[excerpt]"
+                  placeholder="English[expert]"
+                ></textarea>
+                <small>display in list not show in unit</small>
+              </div>
+            </div>
+          </div>
+        
+          <div
+            *ngFor="let desItem of desItems; let i = index"
+            class="col-lg-12 p-y-30"
+          >
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <h2>{{ desItem.title }} Ar :</h2>
+                <editor
+                  [(ngModel)]="arDescription"
+                  name = "arDescription"
+                  id="{{ desItem.title }}"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                ></editor>
+              </div>
+              <div class="col-lg-6 fv-row">
+                <h2 for="descriptionar">{{ desItem.title }} En :</h2>
+                <editor
+                  [(ngModel)]="enDescription"
+                  name = "enDescription"
+                  placeholder="Description"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                  toolbar="
+                    undo redo | formatselect | bold italic backcolor | \
+                    alignleft aligncenter alignright alignjustify | \
+                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                ></editor>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+          Other Data
+        </h1>
+        <div class="card-body border-top p-9">
+          <br />
+          <div
+            class="input-group input-group-lg col-lg-15 d-flex gap-5 align-items-center"
+          >
+            <h2 for="doctor_image" class="card-title fw-bolder">Image :</h2>
+            <input
+              name = "image"
+              type="file"
+              class="form-control-lg form-control-solid mb-3 mb-lg-0"
+              name="doctor_image"
+              (change)="onFileSelected($event)"
+            />
+            <img id="image" style="display: none; border-radius: 10%;" width="200" height="200" />
+            <!-- <div>No Choose File</div> -->
+          </div>
+          <br />
+
+          <!-- Gallary Dropzone -->
+          <div class="d-flex gap-5 align-items-center p-y-30">
+            <h2 for="gallary" class="card-title fw-bolder">Gallary:</h2>
+            <div class="dropzone" style="height: 100% !important;" appDnd>
+              <input
+                accept="image/*"
+                type="file"
+                name="gallary"
+                (change)="onMultipleFileSelected($event)"
+                multiple                
+              />
+              <div id="image_gallery_selector" *ngIf="image_gallery_count === 0"
+              >
+                <img
+                style="width: 50px; height: 50px"
+                src="../../../../assets/custom/img/drag-up-svgrepo-com.svg"
+                alt="pic"
+                />
+                <h3>Drag and drop file here</h3>
+                <h3>or</h3>
+                <label for="fileDropRef">Browser for file</label>
+              </div>  
+              <div *ngIf="image_gallery">
+                <div *ngFor="let file of image_gallery; let i = index" class="dz-preview dz-processing dz-image-preview dz-complete">
+                  <!-- Display the image preview if the file type is an image -->
+                  <img *ngIf="file.type.includes('image')" [src]="getPreviewImage(file)" alt="Preview" style="width: 200px; position: relative; border-radius: 10%; ">
+                  <button (click)="cancelUpload(i)" style="z-index: 100; position: relative; background: #2b2b40;border-color: #2b2b40; color: white; margin-left: 5px;">Cancel</button>
+                </div>
+              </div>
+              
+                          
+            </div>
+          </div>
+
+          <!-- Gender -->
+          <div class="d-flex gap-5 align-items-center p-y-30">
+            <h2 for="gender" class="card-title fw-bolder">Gender:</h2>
+            <select              
+              [(ngModel)]="gender"
+              name="gender"
+              class="form-select form-select-sm w-125px form-select-solid me-6"
+              data-control="select2"
+              data-placeholder="Latest"
+              data-hide-search="true"
+            >
+              <option value=""></option>
+              <option value="0">Male</option>
+              <option value="1">Female</option>
+            </select>
+          </div>
+
+          <!-- Specialty -->
+          <h2 class="card-title fw-bolder text-hover-primary fs-2">
+            Speciality:
+          </h2>
+          <div class="col-lg-12 row">
+            <div
+              *ngFor="let item of items; let i = index"
+              class="col-lg-3 fv-row"
+            >
+              <input
+                [value]="i + 1"
+                name="parentBodyIds[]"
+                class="filled-in chk-col-brown form-check-input subcp"
+                type="checkbox"
+                [checked]="specialty.includes(i + 1)"
+                (change)="toggleCheckbox_specialty(i + 1)"
+              />
+              <label for="subcp_1" class="fs-2" style="padding-left: 8px">{{
+                item.name
+              }}</label>
+            </div>
+          </div>
+          <br />
+
+          <!-- Wait time -->
+          <div class="d-flex gap-5 align-items-center p-y-30">
+            <h2 for="wait_time" class="card-title fw-bolder col-auto">
+              Wait Time:
+            </h2>
+            <div>
+              <input
+                [(ngModel)] = "wait_time"
+                type="number"
+                max="1000"
+                class="form-control form-control-lg form-control-solid"
+                name="wait_time"
+              />
+              <span>Time per Minuets ex: 45</span>
+            </div>
+          </div>
+
+          <!-- user e-mail time -->
+          <div class="d-flex gap-5 align-items-center p-y-30">
+            <h2 for="user_email" class="card-title fw-bolder col-auto">
+              User E-mail:
+            </h2>
+            <div>
+              <input
+                [(ngModel)] = "useremail"
+                type="email"
+                maxlength="50"
+                class="form-control form-control-lg form-control-solid"
+                name="user_email"
+              />
+            </div>
+          </div>
+
+          <!-- is Reserve -->
+          <div
+            class="input-group p-y-30 input-group-lg col-lg-15 d-flex gap-5 align-items-center"
+          >
+            <h2 class="fw-bolder" for="is_Reserve">Is Reserve :</h2>
+            <span>OFF</span>
+            <div
+              class="form-check form-check-custom form-check-solid form-check-success form-switch"
+            >
+              <input
+                [(ngModel)] = "is_reserve"
+                class="form-check-input"
+                type="checkbox"
+                name="is_Reserve"
+              />
+            </div>
+            <span>ON</span>
+          </div>
+
+          <!-- is Active -->
+          <div
+            class="input-group p-y-30 col-lg-15 d-flex gap-5 align-items-center"
+          >
+            <h2 class="fw-bolder col-auto" for="is_active">Is Active :</h2>
+            <span>OFF</span>
+            <div
+              class="form-check form-check-custom form-check-solid form-check-success form-switch"
+            >
+              <input
+                [(ngModel)] = "is_active"
+                class="form-check-input"
+                type="checkbox"
+                name="is_active"
+              />
+            </div>
+            <span>ON</span>
+          </div>
+
+          <!-- Additional Data -->
+          <div class="row p-y-30">
+            <h3>Additional Data:</h3>
+            <div class="row p-y-30">
+              <h3 for="doctor_hospital">Hospitals</h3>
+              <input
+                [(ngModel)] = "hospital"
+                name="doctor_hospital"
+                class="form-control form-control-solid"
+              />
+            </div>
+            <div class="row p-y-30">
+              <h3 for="doctor_center" class="">Centers</h3>
+              <input
+               [(ngModel)] = "center"
+                name="doctor_center"
+                value=""
+                class="form-control form-control-solid"
+              />
+            </div>
+            <div class="row p-y-30">
+              <h3 for="doctor_insurance_company">Insurance Company</h3>
+              <input
+                [(ngModel)] = "insuranceCompany"
+                name="doctor_insurance_company"
+                class="form-control form-control-solid"
+              />
+            </div>
+            <div class="row p-y-30">
+              <h3 for="doctor_facebook" class="">Facebook</h3>
+              <input
+                [(ngModel)] = "facebook"
+                name="doctor_facebook"
+                class="form-control form-control-solid"
+              />
+            </div>
+            <div class="row p-y-30">
+              <h3 for="doctor_twitter" class="">Twitter</h3>
+              <input
+                [(ngModel)] = "twitter"
+                name="doctor_twitter"
+                class="form-control form-control-solid"
+              />
+            </div>
+            <div class="row p-y-30">
+              <h3 for="doctor_instagram" class="">Instagram</h3>
+              <input
+                [(ngModel)] = "instagram"
+                name="doctor_instagram"
+                class="form-control form-control-solid"
+              />
+            </div>
+            <div class="row p-y-30">
+              <h3 for="doctor_youtube" class="">Youtube</h3>
+              <input
+                [(ngModel)]="youtube"
+                name="doctor_youtube"
+                class="form-control form-control-solid"
+              />
+            </div>
+            <div class="row p-y-30">
+              <h3 for="doctor_website" class="">Website</h3>
+              <input
+                [(ngModel)]="website"
+                name="doctor_website"
+                value=""
+                class="form-control form-control-solid"
+              />
+            </div>
+            <div class="row p-y-30">
+              <h3 for="doctor_entry" class="">User Entry</h3>
+              <input
+                [(ngModel)]="user_entry_id"
+                name="doctor_entry"
+                class="form-control form-control-solid"
+              />
+            </div>
+          </div>
+
+          <!-- First branch -->
+          <div class="row">
+            <h3>First branch:</h3>
+            <div class="d-flex col-lg-12 gap-5 p-5 align-items-center">
+              <h3 class="col-lg-2">Branch Work Days:</h3>
+              <div class="d-flex gap-5 border-bottom p-y-30">
+                <div class="d-flex gap-2">
+                  <input
+                    type="checkbox"
+                    class="filled-in chk-col-brown form-check-input subcp"
+                    name="work_days[]"
+                    value="0"
+                    [(ngModel)]="work_days[0]"
+                  />
+                  <label for="work_days" class="">Sunday</label>
+                </div>
+                <div class="d-flex gap-2">
+                  <input
+                    type="checkbox"
+                    class="filled-in chk-col-brown form-check-input subcp"
+                    name="work_days[]"
+                    value="1"
+                    [(ngModel)]="work_days[1]"
+
+                  />
+                  <label for="work_days" class="">Monday</label>
+                </div>
+                <div class="d-flex gap-2">
+                  <input
+                    type="checkbox"
+                    class="filled-in chk-col-brown form-check-input subcp"
+                    name="work_days[]"
+                    value="2"
+                    [(ngModel)]="work_days[2]"
+
+                  />
+                  <label for="work_days" class="">Tuesday</label>
+                </div>
+                <div class="d-flex gap-2">
+                  <input
+                    type="checkbox"
+                    class="filled-in chk-col-brown form-check-input subcp"
+                    name="work_days[]"
+                    value="3"
+                    [(ngModel)]="work_days[3]"
+
+                  />
+                  <label for="work_days" class="">Wednesday</label>
+                </div>
+                <div class="d-flex gap-2">
+                  <input
+                    type="checkbox"
+                    class="filled-in chk-col-brown form-check-input subcp"
+                    name="work_days[]"
+                    value="4"
+                    [(ngModel)]="work_days[4]"
+
+                  />
+                  <label for="work_days" class="">Thuresday</label>
+                </div>
+                <div class="d-flex gap-2">
+                  <input
+                    type="checkbox"
+                    class="filled-in chk-col-brown form-check-input subcp"
+                    name="work_days[]"
+                    value="5"
+                    [(ngModel)]="work_days[5]"
+                  />
+                  <label for="work_days" class="">Friday</label>
+                </div>
+                <div class="d-flex gap-2">
+                  <input
+                    type="checkbox"
+                    class="filled-in chk-col-brown form-check-input subcp"
+                    name="work_days[]"
+                    value="6"
+                    [(ngModel)]="work_days[6]"
+                  />
+                  <label for="work_days" class="">Saturday</label>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex col-lg-12 gap-5 p-5 align-items-center">
+              <div class="col-lg-4">
+                <h3 for="start_time">Start Time:</h3>
+                <input
+                  [(ngModel)] = "time_start"
+                  type="time"
+                  name="start_time"
+                  class="form-control form-control-solid"
+                />
+              </div>
+              <div class="col-lg-4">
+                <h3 for="end_time">End Time:</h3>
+                <input
+                  [(ngModel)] = "time_end"
+                  type="time"
+                  name="end_time"
+                  class="form-control form-control-solid"
+                />
+              </div>
+              <div class="col-lg-4">
+                <h3 for="start_time">Patient Every :</h3>
+                <input
+                  [(ngModel)]="patient_every"
+                  type="number"
+                  name="count_patience"
+                  class="form-control form-control-solid"
+                />
+              </div>
+            </div>
+
+            <!-- price -->
+            <div class="d-flex gap-5 align-items-center p-y-30">
+              <h3 for="price" class="card-title fw-bolder col-lg-1">Price:</h3>
+              <div>
+                <input
+                  [(ngModel)]="price"
+                  type="number"
+                  maxlength="50"
+                  class="form-control form-control-lg form-control-solid"
+                  name="price"
+                />
+              </div>
+            </div>
+
+            <!-- Phones -->
+            <div class="d-flex gap-5 align-items-center p-y-30">
+              <h3 for="phones" class="card-title fw-bolder col-lg-1">
+                Phones:
+              </h3>
+              <div>
+                <input
+                  [(ngModel)]="phone"
+                  type="text"
+                  maxlength="50"
+                  class="form-control form-control-lg form-control-solid"
+                  name="phones"
+                />
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="d-flex gap-5 align-items-center p-y-30">
+              <div class="col-lg-6">
+                <h3>Address Ar:</h3>
+                <h4 for="address_ar" class="card-title fw-bolder">Address:</h4>
+                <div>
+                  <input
+                    [(ngModel)]="arAddress"
+                    type="text"
+                    maxlength="50"
+                    class="form-control form-control-lg form-control-solid"
+                    name="address_ar"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <h3>Address En:</h3>
+                <h4 for="phones" class="card-title fw-bolder">Address:</h4>
+                <div>
+                  <input
+                    [(ngModel)]="enAddress"
+                    type="text"
+                    maxlength="50"
+                    class="form-control form-control-lg form-control-solid"
+                    name="address_en"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- country -->
+            <div class="row p-y-30">
+              <h4 for="country_name">Country:</h4>
+              <select
+                [(ngModel)]="country_id"
+                address="address_country"
+                class="form-control form-control-solid"
+                name="country_id"
+              >
+                <option value="">Nothing Selected</option>
+                <option value="1">Ar</option>
+                <option value="2">UK</option>
+                <option value="3">CA</option>
+                <option value="4">GA</option>
+              </select>
+            </div>
+            <!-- city -->
+            <div class="row p-y-30">
+              <h4 for="country_name">City:</h4>
+              <select
+                [(ngModel)]="city"
+                name="address_city"
+                class="form-control form-control-solid"
+              >
+                <option value="">Nothing selected</option>
+                <option value="1">Ar</option>
+                <option value="2">UK</option>
+                <option value="3">CA</option>
+                <option value="4">GA</option>
+              </select>
+            </div>
+            <!-- area -->
+            <div class="row p-y-30">
+              <h4 for="country_name">Area:</h4>
+              <select
+                [(ngModel)]="area"
+                name="adress_area"
+                class="form-control form-control-solid"
+              >
+                <option value=""></option>
+                <option value="1">Ar</option>
+                <option value="2">UK</option>
+                <option value="3">CA</option>
+                <option value="4">GA</option>
+              </select>
+            </div>
+
+            <div class="d-flex align-items-center gap-5 p-y-30">
+              <h5 for="gmap">GMAP</h5>
+              <div class="col">
+                <div
+                  class="bg-primary"
+                  style="width: 100%; height: 300px"
+                ></div>
+                <div
+                  class="border-bottom"
+                  style="margin-top: 16px; padding-bottom: 50px"
+                >
+                  <div class="d-flex gap-5 align-items-center">
+                    <h4>LatLang:</h4>
+                    <div class="border-bottom">
+                      <input [(ngModel)]="lat_lng" class="form-control" name="latlang" value="29.971142, 31.242678"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-2 align-items-center">
+              <div class="col-auto">
+                <h5 for="map_link">Map Link:</h5>
+              </div>
+              <div class="col-auto">
+                <input class="form-control border-none" type="text" name="map_link" [(ngModel)]="maplink"/>
+              </div>
+            </div>
+          </div>
+          <div class="col p-y-30 border-bottom" style="padding-bottom: 80px">
+            <div class="row g-2 align-items-center">
+              <div class="col-auto">
+                <label for="tags" class="form-label">Tags:</label>
+              </div>
+              <!-- <div class="col-auto">
+                <input name="tags" class="form-control" type="text" />
+              </div> -->
+            </div>
+          </div>
+          <div class="col p-y-30 border-bottom" style="padding-bottom: 80px">
+            <div class="row g-2 align-items-center">
+              <div class="col-auto">
+                <label for="tags" class="form-label">Subcatigory:</label>
+              </div>
+              <!-- <div class="col-auto">
+                <input name="tags" class="form-control" type="text" />
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex gap-2 align-items-center">
+          <button class="btn btn-md btn-secondary">Reset</button>
+          <button class="btn btn-md btn-success" type="submit">Save</button>
+          <button class="btn btn-md btn-primary">Save & create new</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <script
+    src="https://cdn.tiny.cloud/1/your-api-key/tinymce/6/tinymce.min.js"
+    referrerpolicy="origin"
+  ></script>
+
+  <script>
+    tinymce.init({
+      selector: "#editor",
+      plugins:
+        "a11ychecker advcode advlist advtable anchor autocorrect autolink autoresize autosave casechange charmap checklist code codesample directionality editimage emoticons export footnotes formatpainter fullscreen help image importcss inlinecss insertdatetime link linkchecker lists media mediaembed mentions mergetags nonbreaking pagebreak pageembed permanentpen powerpaste preview quickbars save searchreplace table tableofcontents template tinycomments tinydrive tinymcespellchecker typography visualblocks visualchars wordcount",
+    });
+  </script>
+</div>

@@ -1,0 +1,383 @@
+// Widgets
+
+.widget-title-icon {
+	left: 0;
+	right: auto;
+}
+
+.post-widget-body {
+	padding-left: 0;
+	padding-right: 125px;
+
+	.posts-inverted &:not(.no-small-thumbs){
+		padding-right: 0;
+		padding-left: 125px;
+	}
+}
+
+.post-widget-thumbnail {
+	float: right;
+	margin-left: 15px;
+	margin-right: 0;
+
+	.posts-inverted &{
+		float: left;
+		margin-right: 15px;
+		margin-left: 0;
+	}
+}
+
+.widget-pagination-wrapper .slider-arrow-nav {
+	flex-direction: row-reverse;
+}
+
+// Login Widget
+.login-widget .pass-container input[type="password"] {
+	padding-left: 70px;
+	padding-right: 10px;
+}
+
+.login-widget .forget-text {
+	left: 10px;
+	right: auto;
+}
+
+.flickr-widget .flickr_badge_image {
+	float: right;
+}
+
+// Recent Comments Widget
+.authors-posts .post-widget-body,
+.recent-comments-widget .comment-body,
+.tab-content-comments .comment-body {
+	padding-left: 0;
+	padding-right: 80px;
+}
+
+// NewsLetter Widget
+.subscribe-widget {
+	.widget-title {
+		text-align: right;
+	}
+
+	form:before {
+		right: 12px;
+		left: auto;
+	}
+}
+
+// Instagram Widget
+.tie-instagram-post {
+	float: right;
+}
+
+// TikTok Widget
+.tie-tiktok-avatar {
+	a{
+		float: right;
+    margin-right: 0;
+    margin-left: 15px;
+	}
+}
+
+.tie-tiktok-counts{
+	li{
+		padding: 0 0 0 10px;
+	}
+}
+
+
+@include breakpoint(max_min_sm) {
+	.site-footer #instagram-link {
+		left: 10px;
+		right: auto;
+	}
+}
+
+.tie-insta-avatar a {
+	float: right;
+	margin-right: 0;
+	margin-left: 15px;
+}
+
+// -Arrow Bullet List widget
+.widget_categories,
+.widget_product_categories,
+.widget_archive {
+	li {
+		text-align: left;
+
+		a {
+			float: right;
+		}
+	}
+}
+
+.widget_categories li,
+.widget_product_categories li,
+.widget_layered_nav li,
+.widget_archive li,
+.widget_nav_menu li,
+.widget_meta li,
+.widget_pages li,
+.widget_recent_entries li,
+.widget_display_forums li,
+.widget_display_views li,
+.widget_rss li,
+.widget_display_stats dt {
+	padding: 5px 12px 5px 0;
+}
+
+.widget_categories li a,
+.widget_product_categories li a,
+.widget_layered_nav li a,
+.widget_archive li a,
+.widget_nav_menu li a,
+.widget_meta li a,
+.widget_pages li a,
+.widget_recent_entries li a,
+.widget_display_forums li a,
+.widget_display_views li a,
+.widget_rss li a,
+.widget_display_stats dt {
+	// Fourms Statistics Widget
+	&:before {
+		content: '\f104';
+		text-align: right;
+		margin-right: -12px;
+		margin-left: 0;
+	}
+}
+
+// children menu
+.widget_categories .children,
+.widget_product_categories .children,
+.widget_nav_menu .sub-menu,
+.widget_pages .children {
+	li {
+		padding-right: 15px;
+		padding-left: 0;
+	}
+}
+
+// Posts list Widget
+.posts-list-bigs li,
+.posts-list-big-first li:first-child,
+.posts-list-half-posts li {
+	.post-widget-thumbnail {
+		margin-left: 0;
+	}
+
+	.post-widget-body {
+		padding-right: 0;
+	}
+}
+
+.posts-list-half-posts li {
+	float: right;
+
+	&:nth-child(2n) {
+		float: left;
+	}
+}
+
+@include breakpoint(max_min_md) {
+	.posts-list-big-first li,
+	.posts-list-bigs li {
+		float: right;
+
+		&:nth-child(2n) {
+			float: left;
+		}
+	}
+
+	.posts-list-big-first li {
+		&:first-child {
+			float: right;
+			clear: left;
+		}
+
+		&:nth-child(n + 2) {
+			float: left;
+		}
+	}
+}
+
+.timeline-widget {
+	ul {
+		padding-right: 15px;
+		padding-left: 0;
+
+		&:before {
+			right: 0;
+			left: auto;
+		}
+
+		li .date::before {
+			right: -20px;
+			left: auto;
+		}
+	}
+}
+
+.posts-list-counter .posts-list-items li.widget-post-list:before {
+	right: -15px;
+	left: auto;
+
+	@include breakpoint(max_min_md) {
+		.magazine2 & {
+			right: -10px;
+			left: auto;
+		}
+	}
+}
+
+// Menu Widget
+.widget_nav_menu {
+	ul.children,
+	ul.sub-menu {
+		li {
+			padding-right: 15px;
+			padding-left: 0;
+		}
+	}
+}
+
+// Twitter Widget
+.latest-tweets-widget {
+	.tweetaya-body {
+		padding-left: 0;
+		padding-right: 20px;
+	}
+
+	.tweetaya-meta {
+		text-align: left;
+	}
+
+	.twitter-icon-wrap {
+		float: right;
+	}
+
+	.slider-links {
+		float: left;
+
+		.tie-slider-nav li {
+			float: left;
+		}
+	}
+
+	.tie-slick-slider .twitter-icon-wrap {
+		margin-right: 0;
+		margin-left: 20px;
+	}
+}
+
+.fullwidth-area .latest-tweets-widget {
+	.slider-links {
+		left: 20px;
+		right: auto;
+	}
+
+	@include breakpoint(xs) {
+		.tie-slick-slider .tweetaya-body {
+			padding-right: 60px;
+			padding-left: 0;
+		}
+	}
+
+	ul:not(.tie-slick-slider) {
+		.tweetaya-meta {
+			text-align: right;
+		}
+	}
+}
+
+
+// Weather Widget
+.weather-more-todays-stats {
+	text-align: right;
+	padding-right: 10px;
+	padding-left: 0;
+}
+
+.widget .tie-weather-user-location{
+	right: auto;
+	left: 10px;
+
+	&.has-title{
+		left: 20px;
+	}
+}
+
+// Social Statistics Widget
+.social-statistics-widget {
+	ul li,
+	a span.counter-icon,
+	a span[class^="arqicon-"],
+	a span[class*=" arqicon-"] {
+		float: right;
+	}
+
+	.followers {
+		float: right;
+		margin-right: 10px;
+		margin-left: 0;
+	}
+}
+
+.fullwidth-stats-icons li::before {
+	left: auto;
+	right: 50px;
+}
+
+.fullwidth-stats-icons .followers {
+	margin-right: 30px;
+	margin-left: 0;
+}
+
+.fullwidth-stats-icons .followers span {
+	float: right;
+	margin-left: 5px;
+	margin-right: 0;
+}
+
+.circle-three-cols .social-icons-item a span {
+	&.counter-icon,
+	&[class^="arqicon-"],
+	&[class*=" arqicon-"] {
+		left: auto;
+		right: 50%;
+		margin-left: 0;
+		margin-right: -35px;
+	}
+}
+
+.squared-four-cols li:nth-child(n) a {
+	.counter-icon,
+	[class^="arqicon-"],
+	[class*=" arqicon-"] {
+		left: auto;
+		margin-left: 0;
+		right: 50%;
+		margin-right: -27px;
+	}
+}
+
+// social icons widget
+.social-icons-widget .social-icons-item {
+	float: right;
+}
+
+// about widget
+.aboutme-widget .about-author-img {
+	float: right;
+	margin-right: 0;
+	margin-left: 12px;
+}
+
+// Video Widget
+.widget_media_video {
+	iframe.me-plugin {
+		right: 0;
+	}
+}

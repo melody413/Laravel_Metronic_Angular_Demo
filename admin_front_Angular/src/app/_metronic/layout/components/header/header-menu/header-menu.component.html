@@ -1,0 +1,573 @@
+<!-- Dashboard -->
+<div class="menu-item me-lg-1">
+  <a
+    class="menu-link py-3"
+    routerLinkActive="active menu-here"
+    routerLink="/dashboard"
+  >
+    <span class="menu-title" translate="MENU.DASHBOARD"></span>
+  </a>
+</div>
+
+<!-- Layout Builder -->
+<!-- <div class="menu-item me-lg-1">
+  <a class="menu-link py-3" routerLinkActive="active menu-here" routerLink="/builder">
+    <span class="menu-title">Layout Builder
+    </span>
+  </a>
+</div> -->
+
+<!-- Body part -->
+<div
+  class="menu-item menu-lg-down-accordion me-lg-1 menu-dropdown"
+  data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+  data-kt-menu-placement="bottom-start"
+>
+  <span
+    class="menu-link py-3"
+    [ngClass]="calculateMenuItemCssClass('/crafted')"
+  >
+    <span class="menu-title">Body part</span>
+    <span class="menu-arrow d-lg-none"></span>
+  </span>
+  <div
+    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px"
+    data-kt-menu-dismiss="true"
+    data-popper-placement="bottom-start"
+  >
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/pages')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-archive"></i></span>
+        <a routerLink="/bodypart/create">
+          <span class="menu-title">Create new Body part</span>
+        </a>
+
+        <!-- <span
+          class="menu-arrow"></span> -->
+      </span>
+    </div>
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/account')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-person"></i></span>
+        <a routerLink="/bodypart/list">
+          <span class="menu-title" data-link="/crafted/account"
+            >List Body Parts
+          </span>
+        </a>
+        <!-- <span class="menu-arrow"></span> -->
+      </span>
+    </div>
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/account')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-person"></i></span>
+        <a routerLink="/bodypart/list">
+          <span class="menu-title" data-link="/crafted/symptom">Symptom </span>
+        </a>
+
+        <!-- <span class="menu-arrow"></span> -->
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- Disease -->
+<div
+  class="menu-item menu-lg-down-accordion me-lg-1 menu-dropdown"
+  data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+  data-kt-menu-placement="bottom-start"
+>
+  <span
+    class="menu-link py-3"
+    [ngClass]="calculateMenuItemCssClass('/crafted')"
+  >
+    <span class="menu-title">Disease</span>
+    <span class="menu-arrow d-lg-none"></span>
+  </span>
+  <div
+    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px"
+    data-kt-menu-dismiss="true"
+    data-popper-placement="bottom-start"
+  >
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/pages')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-archive"></i></span>
+        <a routerLink="/disease/create">
+          <span class="menu-title">Create new Disease</span>
+        </a>
+
+        <!-- <span
+          class="menu-arrow"></span> -->
+      </span>
+    </div>
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/account')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-person"></i></span>
+        <a routerLink="/disease/list">
+          <span class="menu-title" data-link="/crafted/account"
+            >List disease</span
+          >
+        </a>
+
+        <!-- <span class="menu-arrow"></span> -->
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- Pharmecies -->
+<div
+  class="menu-item menu-lg-down-accordion me-lg-1 menu-dropdown"
+  data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+  data-kt-menu-placement="bottom-start"
+>
+  <span
+    class="menu-link py-3"
+    [ngClass]="calculateMenuItemCssClass('/crafted')"
+  >
+    <span class="menu-title">Pharmecies</span>
+    <span class="menu-arrow d-lg-none"></span>
+  </span>
+  <div
+    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px"
+    data-kt-menu-dismiss="true"
+    data-popper-placement="bottom-start"
+  >
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/pages')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-archive"></i></span>
+        <a routerLink="/pharmecy/create">
+          <span class="menu-title">Create new Pharmacy</span>
+        </a>
+
+        <!-- <span
+          class="menu-arrow"></span> -->
+      </span>
+    </div>
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/account')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-person"></i></span>
+        <a routerLink="/pharmecy/list">
+          <span class="menu-title" data-link="/crafted/account"
+            >List Pharmecies</span
+          >
+        </a>
+
+        <!-- <span class="menu-arrow"></span> -->
+      </span>
+    </div>
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/account')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-person"></i></span>
+        <a routerLink="/pharmecy/companylist">
+          <span class="menu-title" data-link="/crafted/account"
+            >List Pharmecies companies</span
+          >
+        </a>
+
+        <!-- <span class="menu-arrow"></span> -->
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- Labs -->
+<div
+  class="menu-item menu-lg-down-accordion me-lg-1 menu-dropdown"
+  data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+  data-kt-menu-placement="bottom-start"
+>
+  <span
+    class="menu-link py-3"
+    [ngClass]="calculateMenuItemCssClass('/crafted')"
+  >
+    <span class="menu-title">Labs</span>
+    <span class="menu-arrow d-lg-none"></span>
+  </span>
+  <div
+    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px"
+    data-kt-menu-dismiss="true"
+    data-popper-placement="bottom-start"
+  >
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/pages')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-archive"></i></span>
+        <a routerLink="/lab/create_labservice">
+          <span class="menu-title">Create new lab service </span>
+        </a>
+
+        <!-- <span
+          class="menu-arrow"></span> -->
+      </span>
+    </div>
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/account')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-person"></i></span>
+        <a routerLink="/lab/labservice_list">
+          <span class="menu-title" data-link="/crafted/account"
+            >List lab service
+          </span>
+        </a>
+
+        <!-- <span class="menu-arrow"></span> -->
+      </span>
+    </div>
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/account')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-person"></i></span>
+        <a routerLink="/lab/create_lab">
+          <span class="menu-title" data-link="/crafted/account"
+            >Create new lab
+          </span>
+        </a>
+
+        <!-- <span class="menu-arrow"></span> -->
+      </span>
+    </div>
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/account')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-person"></i></span>
+        <a routerLink="/lab/lab_list">
+          <span class="menu-title" data-link="/crafted/account"
+            >List labs
+          </span>
+        </a>
+
+        <!-- <span class="menu-arrow"></span> -->
+      </span>
+    </div>
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/account')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-person"></i></span>
+        <a routerLink="/lab/labCompany_list">
+          <span class="menu-title" data-link="/crafted/account"
+            >List lab companies
+          </span>
+        </a>
+
+        <!-- <span class="menu-arrow"></span> -->
+      </span>
+    </div>
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/account')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-person"></i></span>
+        <a routerLink="/lab/labCategory_list">
+          <span class="menu-title" data-link="/crafted/account"
+            >List lab categories
+          </span>
+        </a>
+
+        <!-- <span class="menu-arrow"></span> -->
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- Insurance companies -->
+<div
+  class="menu-item menu-lg-down-accordion me-lg-1 menu-dropdown"
+  data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+  data-kt-menu-placement="bottom-start"
+>
+  <span
+    class="menu-link py-3"
+    [ngClass]="calculateMenuItemCssClass('/crafted')"
+  >
+    <span class="menu-title">Insurance companies</span>
+    <span class="menu-arrow d-lg-none"></span>
+  </span>
+  <div
+    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px"
+    data-kt-menu-dismiss="true"
+    data-popper-placement="bottom-start"
+  >
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/pages')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-archive"></i></span>
+        <a routerLink="/insurance/create">
+          <span class="menu-title">Create new insurance company</span>
+        </a>
+
+        <!-- <span
+          class="menu-arrow"></span> -->
+      </span>
+    </div>
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/account')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-person"></i></span>
+        <a routerLink="/insurance/list">
+          <span class="menu-title" data-link="/crafted/account"
+            >List insurance company
+          </span>
+        </a>
+
+        <!-- <span class="menu-arrow"></span> -->
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- Hospitals -->
+<div
+  class="menu-item menu-lg-down-accordion me-lg-1 menu-dropdown"
+  data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+  data-kt-menu-placement="bottom-start"
+>
+  <span
+    class="menu-link py-3"
+    [ngClass]="calculateMenuItemCssClass('/crafted')"
+  >
+    <span class="menu-title">Hospitals</span>
+    <span class="menu-arrow d-lg-none"></span>
+  </span>
+  <div
+    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px"
+    data-kt-menu-dismiss="true"
+    data-popper-placement="bottom-start"
+  >
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/pages')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-archive"></i></span>
+        <a routerLink="/hospital/create">
+          <span class="menu-title">Create new hospital </span>
+        </a>
+
+        <!-- <span
+          class="menu-arrow"></span> -->
+      </span>
+    </div>
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/account')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-person"></i></span>
+        <a routerLink="/hospital/list">
+          <span class="menu-title" data-link="/crafted/account"
+            >List hospitals
+          </span>
+        </a>
+
+        <!-- <span class="menu-arrow"></span> -->
+      </span>
+    </div>
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/account')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-person"></i></span>
+        <a routerLink="/hospital/create_hospitaltype">
+          <span class="menu-title" data-link="/crafted/account"
+            >Create new hospital type
+          </span>
+        </a>
+
+        <!-- <span class="menu-arrow"></span> -->
+      </span>
+    </div>
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/account')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-person"></i></span>
+        <a routerLink="/hospital/hospitaltype_list">
+          <span class="menu-title" data-link="/crafted/account"
+            >List hospital types
+          </span>
+        </a>
+
+        <!-- <span class="menu-arrow"></span> -->
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- Centers -->
+<div
+  class="menu-item menu-lg-down-accordion me-lg-1 menu-dropdown"
+  data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+  data-kt-menu-placement="bottom-start"
+>
+  <span
+    class="menu-link py-3"
+    [ngClass]="calculateMenuItemCssClass('/crafted')"
+  >
+    <span class="menu-title">Centers</span>
+    <span class="menu-arrow d-lg-none"></span>
+  </span>
+  <div
+    class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px"
+    data-kt-menu-dismiss="true"
+    data-popper-placement="bottom-start"
+  >
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/pages')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-archive"></i></span>
+        <a routerLink="/center/create">
+          <span class="menu-title">Create new center</span>
+        </a>
+
+        <!-- <span
+          class="menu-arrow"></span> -->
+      </span>
+    </div>
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/crafted/account')"
+      >
+        <span class="menu-icon"><i class="bi fs-3 bi-person"></i></span>
+        <a routerLink="/center/list">
+          <span class="menu-title" data-link="/crafted/account"
+            >List centers
+          </span>
+        </a>
+
+        <!-- <span class="menu-arrow"></span> -->
+      </span>
+    </div>
+  </div>
+</div>

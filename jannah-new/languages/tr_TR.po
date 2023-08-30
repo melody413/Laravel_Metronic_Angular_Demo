@@ -1,0 +1,5499 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VERSION\n"
+"POT-Creation-Date: 2020-09-02 06:26+0000\n"
+"PO-Revision-Date: 2021-02-15 12:05+0300\n"
+"Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.3\n"
+
+msgid "- Select a Taxonomy -"
+msgstr "- Bir Sınıflandırma Seçin -"
+
+msgid "- Select a Term -"
+msgstr "- Bir Terim Seçin -"
+
+msgid "Alphabetically"
+msgstr "Alfabetik olarak"
+
+msgid "Classic Small"
+msgstr "Klasik Küçük"
+
+msgid "Custom Read More Button text"
+msgstr "Özel Daha Fazla Bilgi Düğmesi metni"
+
+msgid "Leave it empty to use the default text."
+msgstr "Varsayılan metni kullanmak için boş bırakın."
+
+msgid "Note: This option doesn't work with the AJAX pagination."
+msgstr "Not: Bu seçenek AJAX sayfalandırmasıyla çalışmaz."
+
+msgid "Footer Description"
+msgstr "Altbilgi Açıklaması"
+
+msgid "Footer Description Title"
+msgstr "Altbilgi Açıklama Başlığı"
+
+msgid "This Description will appear at the end of the category page below the posts list."
+msgstr "Bu Açıklama, mesaj listesinin altındaki kategori sayfasının sonunda görünecektir."
+
+msgid "Disable Gradient Overlay"
+msgstr "Degrade Yerleşimini Devre Dışı Bırak"
+
+msgid "Logo Inverted Image"
+msgstr "Logo Ters Görüntü"
+
+msgid "Used if users are allowed to switch between Light and Dark skins."
+msgstr "Kullanıcıların Açık ve Koyu kaplamalar arasında geçiş yapmalarına izin verilirse kullanılır."
+
+msgid "Logo Inverted Image (Retina Version @2x)"
+msgstr "Logo Ters Çevrilmiş Görüntü (Retina Sürümü @2x)"
+
+msgid "Logo width"
+msgstr "Logo genişliği"
+
+msgid "Logo height"
+msgstr "Logo yüksekliği"
+
+msgid "In the Logo Image type this will be used as the ALT text."
+msgstr "Logo Görüntü tipinde bu, ALT metni olarak kullanılacaktır."
+
+msgid "Subtitle"
+msgstr "Alt yazı"
+
+msgid "Hide page elemnts"
+msgstr "Sayfa öğelerini gizle"
+
+msgid "Hide the featured image"
+msgstr "Öne çıkan resmi gizle"
+
+msgid "Display Breadcrumbs"
+msgstr "Kırıntıları Görüntüle"
+
+msgid "You need to set the Google Map API Key in the theme options page > Integrations."
+msgstr "Tema seçenekleri sayfası> Entegrasyonlar bölümünde Google Harita API Anahtarını ayarlamanız gerekir."
+
+msgid "Disable All Ads"
+msgstr "Tüm Reklamları Devre Dışı Bırak"
+
+msgid "Above Post Ad"
+msgstr "İlanın Üstü"
+
+msgid "Below Post Ad"
+msgstr "İlanın Altında"
+
+msgid "Above Content Ad"
+msgstr "İçerik Reklamının Üstü"
+
+msgid "Below Content Ad"
+msgstr "İçerik Reklamının Altında"
+
+msgid "Select Image"
+msgstr "Fotoğraf seç"
+
+msgid "Select another image"
+msgstr "Başka bir resim seçin"
+
+msgid "Letter Spacing"
+msgstr "Harf boşluğu"
+
+msgid "View affected templates"
+msgstr "Etkilenen şablonları görüntüleyin"
+
+msgid "Your child theme contains outdated copies of some template files. These files may need updating to ensure they are compatible with the current version of the theme."
+msgstr "Alt temanız bazı şablon dosyalarının eski kopyalarını içeriyor. Temanın mevcut sürümüyle uyumlu olduklarından emin olmak için bu dosyaların güncellenmesi gerekebilir."
+
+msgid "Child Theme Templates"
+msgstr "Çocuk Teması Şablonları"
+
+msgid "Overrides"
+msgstr "Geçersiz kılmalar"
+
+#, php-format
+msgid "%1$s version %2$s is out of date. The core version is %3$s"
+msgstr "%1$s  sürüm %2$s  güncel değil. Çekirdek sürüm %3$s"
+
+msgid "Renew"
+msgstr "Yenile"
+
+msgid "404 Page"
+msgstr "404 Sayfa"
+
+msgid "Integrations"
+msgstr "Entegrasyonlar"
+
+msgid "Images"
+msgstr "Görüntüler"
+
+msgid "White Label"
+msgstr "Beyaz etiket"
+
+#, php-format
+msgid "Proudly Hosted by %s"
+msgstr "%s Tarafından Gururla Barındırılır"
+
+msgid "Section Layout"
+msgstr "Bölüm Düzeni"
+
+msgid "Stretch Section"
+msgstr "Bölüm Düzeni"
+
+msgid "Stretch the section to the full width of the page, supported if the site layout is Full-Width."
+msgstr "Site düzeni Tam Genişlik ise bölümü, sayfanın tam genişliğine uzatın."
+
+msgid "Full Width Background Section"
+msgstr "Tam Genişlikte Arka Plan Bölümü"
+
+msgid "Posts Source"
+msgstr "Gönderi Kaynağı"
+
+msgid "AJAX"
+msgstr "AJAX"
+
+msgid "Next/Previous Buttons"
+msgstr "Sonraki / Önceki Düğmeler"
+
+msgid "Next/Previous Arrows Beside Title"
+msgstr "Başlığın Yanında Sonraki / Önceki Oklar"
+
+msgid "You need to set the YouTube API Key in the theme options page > Integrations."
+msgstr "YouTube API Anahtarını tema seçenekleri sayfası> Entegrasyonlar bölümünde ayarlamanız gerekir."
+
+msgid "Secondary Color"
+msgstr "İkincil renk"
+
+msgid "Featured Image Position"
+msgstr "Öne Çıkan Resim Konumu"
+
+msgid "Left Top"
+msgstr "Sol üst"
+
+msgid "Left Center"
+msgstr "Sol Orta"
+
+msgid "Left Bottom"
+msgstr "Sol alt"
+
+msgid "Right Top"
+msgstr "Sağ üst"
+
+msgid "Right Center"
+msgstr "Sağ Orta"
+
+msgid "Right Bottom"
+msgstr "Sağ Alt"
+
+msgid "Center Top"
+msgstr "Orta Üst"
+
+msgid "Center Center"
+msgstr "Orta"
+
+msgid "Center Bottom"
+msgstr "Orta Alt"
+
+msgid "The content in the editor above will be ignored."
+msgstr "Yukarıdaki düzenleyicideki içerik göz ardı edilecektir."
+
+msgid "Enable the TieLabs Builder"
+msgstr "TieLabs Builder'ı etkinleştirin"
+
+msgid "Disable the TieLabs Builder"
+msgstr "TieLabs Builder'ı devre dışı bırakın"
+
+msgid "Beta"
+msgstr "Beta"
+
+msgid "Skype"
+msgstr "Skype"
+
+msgid "Messenger"
+msgstr "Messenger"
+
+msgid "Line"
+msgstr "Line"
+
+msgid "AMP Menu"
+msgstr "AMP Menü"
+
+msgid "Menu Position"
+msgstr "Menü Konumu"
+
+msgid "Author name"
+msgstr "Yazar adı"
+
+msgid "Published date"
+msgstr "Yayınlanma tarihi"
+
+msgid "Below Header"
+msgstr "Başlığın Altında"
+
+msgid "Above Footer"
+msgstr "Alt bilginin Üstü"
+
+msgid "Rounded"
+msgstr "Yuvarlak"
+
+msgid "Sliders Settings"
+msgstr "Kaydırıcı Ayarları"
+
+msgid "Default Featured Image Position"
+msgstr "Varsayılan Öne Çıkan Resim Konumu"
+
+msgid "Welcome back!"
+msgstr "Tekrar hoşgeldiniz!"
+
+msgid "News"
+msgstr "Haberler"
+
+msgid "Below Comments Ad"
+msgstr "Yorumların Altında Reklam"
+
+msgid "Category Pages: Below the slider"
+msgstr "Kategori Sayfaları: Kaydırıcının altında"
+
+msgid "Category Pages: Above the title"
+msgstr "Kategori Sayfaları: Başlığın üstünde"
+
+msgid "Category Pages: Below the title"
+msgstr "Kategori Sayfaları: Başlığın altında"
+
+msgid "Category Pages: Below Posts"
+msgstr "Kategori Sayfaları: Yazıların Altında"
+
+msgid "Category Pages: Below Pagination"
+msgstr "Kategori Sayfaları: Sayfalandırmanın Altında"
+
+msgid "Ad Image Width"
+msgstr "Reklam Resmi Genişliği"
+
+msgid "Recommended to reduce Cumulative Layout Shift (CLS)"
+msgstr "Kümülatif Düzen Kaymasını (CLS) azaltmak için önerilir"
+
+msgid "Ad Image Height"
+msgstr "Reklam Resmi Yüksekliği"
+
+#, php-format
+msgid "You need to install the %s plugin to use this feature."
+msgstr "Bu özelliği kullanmak için %s eklentisini kurmanız gerekiyor."
+
+msgid "Follow Us Button style"
+msgstr "Bizi Takip Edin Düğme stili"
+
+msgid "Body Code"
+msgstr "Body Kodu"
+
+msgid "Will add after opening the &lt;body&gt; tag."
+msgstr "&lt;body&gt; etiketini açtıktan sonra eklenecektir."
+
+msgid "Stretch Header"
+msgstr "Uzatma Başlığı"
+
+msgid "Full-Width Logo"
+msgstr "Tam Genişlikte Logo"
+
+msgid "​Secondary Nav Settings"
+msgstr "İkincil Gezinme Ayarları"
+
+msgid "​Secondary Nav Components"
+msgstr "İkincil Gezinme Bileşenleri"
+
+msgid "Log In text"
+msgstr "Giriş metni"
+
+msgid "Text beside the icon, Leave this empty to disable."
+msgstr "Simgenin yanındaki metin, Devre dışı bırakmak için bunu boş bırakın."
+
+msgid "Light/Dark Skin Switcher"
+msgstr "Açık / Koyu Tema Değiştirici"
+
+msgid "You need to set the Weather API Key in the theme options page > Integrations."
+msgstr "Tema seçenekleri sayfası> Entegrasyonlar'da Hava Durumu API Anahtarını ayarlamanız gerekir."
+
+msgid "Images Settings"
+msgstr "Görüntü Ayarları"
+
+msgid "GIF Featured Image"
+msgstr "GIF Öne Çıkan Resim"
+
+msgid "Default Featured Image"
+msgstr "Varsayılan Öne Çıkan Resim"
+
+msgid "This featured image will show up if no featured image is set."
+msgstr "Öne çıkan resim ayarlanmadıysa bu öne çıkan resim görünecektir."
+
+msgid "The Default Image"
+msgstr "Varsayılan Resim"
+
+msgid "Verify your license to unlock this section."
+msgstr "Bu bölümün kilidini açmak için lisansınızı doğrulayın."
+
+msgid "The Access Token is expired, click the button below to refresh it."
+msgstr "Erişim Belirtecinin süresi doldu, yenilemek için aşağıdaki düğmeyi tıklayın."
+
+msgid "Instagram Account"
+msgstr "Instagram Hesabı"
+
+msgid "Connect your Instagram account"
+msgstr "Instagram hesabınızı bağlayın"
+
+msgid "Connect another account"
+msgstr "Başka bir hesap bağlayın"
+
+msgid "Refresh Access Token"
+msgstr "Erişim Tokeni Yenile"
+
+msgid "Google Maps"
+msgstr "Google Harita"
+
+msgid "Google Maps API Key"
+msgstr "Google Harita API Anahtarı"
+
+msgid "Used for the Map post format."
+msgstr "Harita gönderi biçimi için kullanılır."
+
+msgid "YouTube API Key"
+msgstr "YouTube API Anahtarı"
+
+msgid "Used for the Videos Playlist Block."
+msgstr "Video Oynatma Listesi Bloğu için kullanılır."
+
+msgid "OpenWeather API Key"
+msgstr "OpenWeather API Anahtarı"
+
+msgid "Required for Facebook share button in the AMP pages and Select and Share module."
+msgstr "AMP sayfalarında ve Seç ve Paylaş modülünde Facebook paylaş düğmesi için gereklidir."
+
+msgid "Sidebar Column Width"
+msgstr "Kenar Çubuğu Sütun Genişliği"
+
+msgid "Controls the sidebar column width in %."
+msgstr "Kenar çubuğu sütun genişliğini % cinsinden kontrol eder."
+
+msgid "Logo Position"
+msgstr "Logo Konumu"
+
+msgid "Logo Width"
+msgstr "Logo Genişliği"
+
+msgid "Sticky Header behavior"
+msgstr "Yapışkan Başlık davranışı"
+
+msgid "Mobile Header Buttons"
+msgstr "Mobil Başlık Düğmeleri"
+
+msgid "Display the buttons below the logo"
+msgstr "Logonun altındaki düğmeleri göster"
+
+msgid "Menu Button"
+msgstr "Menü butonu"
+
+#, php-format
+msgid "Icon %s"
+msgstr "simge %s"
+
+msgid "Search Position"
+msgstr "Arama Pozisyonu"
+
+msgid "Sidebars on Mobile"
+msgstr "Mobil Cihazlarda Kenar Çubukları"
+
+msgid "Display sidebars before the content"
+msgstr "İçerikten önce kenar çubuklarını görüntüleyin"
+
+msgid "Hide Read More Buttons"
+msgstr "Gizle Daha Fazla Oku Düğmelerini"
+
+msgid "Hide Inline Related posts"
+msgstr "Satır içi ilgili gönderileri gizle"
+
+msgid "404 Page Settings"
+msgstr "404 Sayfa Ayarları"
+
+msgid "Image above the main title"
+msgstr "Ana başlığın üzerindeki resim"
+
+msgid "Enable Search"
+msgstr "Aramayı Etkinleştir"
+
+msgid "Enable Menu"
+msgstr "Menüyü Etkinleştir"
+
+msgid "You can set the menu in the Menus page."
+msgstr "Menüyü Menüler sayfasında ayarlayabilirsiniz."
+
+msgid "Texts"
+msgstr "Metinler"
+
+msgid "You can change the texts from the Translations section."
+msgstr "Metinleri Çeviriler bölümünden değiştirebilirsiniz."
+
+msgid "This feature can not be used while the Auto Load Posts option is active."
+msgstr "Bu özellik, Gönderileri Otomatik Yükle seçeneği etkinken kullanılamaz."
+
+msgid "Meta Description Tag"
+msgstr "Meta Açıklama Etiketi"
+
+msgid "Compact Comments Area"
+msgstr "Kompakt Yorum Alanı"
+
+msgid "Compact Comments Custom Title"
+msgstr "Kompakt Yorumlar Özel Başlık"
+
+msgid "Tags List Layout"
+msgstr "Etiketler Listesi Düzeni"
+
+msgid "Modern"
+msgstr "Modern"
+
+msgid "Post meta area Layout"
+msgstr "Meta alan düzeni yayınla"
+
+msgid "Column"
+msgstr "Sütun"
+
+msgid "Last Updated"
+msgstr "Son güncelleme"
+
+msgid "Inline Related Posts"
+msgstr "Satır İçi İlgili Gönderiler"
+
+msgid "Number of paragraphs before"
+msgstr "Önceki paragraf sayısı"
+
+msgid "Auto Load Posts"
+msgstr "Otomatik Yükleme Gönderileri"
+
+msgid "Buttons Position"
+msgstr "Düğmelerin Konumu"
+
+msgid "Inverted"
+msgstr "Ters"
+
+msgid "Sticky Share Buttons"
+msgstr "Yapışkan Paylaşım Düğmeleri"
+
+msgid "Breakpoint (in px)"
+msgstr "Kesme noktası (piksel cinsinden)"
+
+#, php-format
+msgid "Hide the buttons if the device/window width size is lower than this, default %s"
+msgstr "Aygıt / pencere genişliği boyutu bundan daha düşükse düğmeleri gizleyin, varsayılan %s"
+
+msgid "Image Icon"
+msgstr "Görüntü Simgesi"
+
+msgid "Widgets head color"
+msgstr "Widget üst rengi"
+
+msgid "Widgets Title text color"
+msgstr "Widget'lar Başlık metin rengi"
+
+msgid "Mobile Header Background Color"
+msgstr "Mobil Üstbilgi Arka Plan Rengi"
+
+msgid "Mobile Header Background Color 2"
+msgstr "Mobil Üstbilgi Arka Plan Rengi 2"
+
+msgid "Mobile Header Background Image"
+msgstr "Mobil Üstbilgi Arka Plan Resmi"
+
+msgid "Mobile Header Icons color"
+msgstr "Mobil Başlık Simgelerinin rengi"
+
+msgid "Numbers"
+msgstr "Sayılar"
+
+msgid "General Secondary Texts"
+msgstr "Genel İkincil Metinler"
+
+msgid "Post title in widgets"
+msgstr "Widget'larda yayın başlığı"
+
+msgid "Page Builder"
+msgstr "Sayfa Oluşturucu"
+
+msgid "Sections Titles: Default & Centered Styles"
+msgstr "Bölüm Başlıkları: Varsayılan ve Ortalanmış Stiller"
+
+msgid "Sections Titles: Big Style"
+msgstr "Bölüm Başlıkları: Big Style"
+
+msgid "Archive page"
+msgstr "Arşiv sayfası"
+
+msgid "Main Title"
+msgstr "Ana başlık"
+
+msgid "Secondary Title"
+msgstr "İkincil Başlık"
+
+msgid "Comment content"
+msgstr "Yorum içeriği"
+
+msgid "For further customization on theme name, slug, thumbnail and description that appears in Appearance > Themes, please use the child theme."
+msgstr "Görünüm> Temalar'da görünen tema adı, bilgi, küçük resim ve açıklama hakkında daha fazla özelleştirme için lütfen alt temayı kullanın."
+
+msgid "Theme Name"
+msgstr "Tema Adı"
+
+#, php-format
+msgid "Replace %s text in the entire admin pages."
+msgstr "Tüm yönetici sayfalarında %s metnini değiştirin."
+
+msgid "Theme Options Page Logo"
+msgstr "Tema Seçenekleri Sayfası Logosu"
+
+msgid "Choose an icon and paste the class name."
+msgstr "Bir simge seçin ve sınıf adını yapıştırın."
+
+msgid "Disable Help Links"
+msgstr "Yardım Bağlantılarını Devre Dışı Bırak"
+
+msgid "Enable help links from control panel and meta options."
+msgstr "Kontrol panelinden ve meta seçeneklerinden yardım bağlantılarını etkinleştirin."
+
+msgid "Disable the Knowledge Base Beacon"
+msgstr "Bilgi Tabanı İşaretini devre dışı bırakın"
+
+msgid "Only admins can manage the advanced settings in the post edit page"
+msgstr "Yalnızca yöneticiler, kayıt düzenleme sayfasındaki gelişmiş ayarları yönetebilir"
+
+msgid "WordPress Login page"
+msgstr "WordPress Giriş sayfası"
+
+msgid "Previous"
+msgstr "Önceki"
+
+msgid "Next"
+msgstr "Sonraki"
+
+msgid "Failed to fetch your current loction! try again later!"
+msgstr "Mevcut konumunuz getirilemedi! daha sonra tekrar deneyin!"
+
+msgid "Verify your license to use this feature."
+msgstr "Bu özelliği kullanmak için lisansınızı doğrulayın."
+
+msgid "Edit menu item"
+msgstr "Menü öğesini düzenle"
+
+msgid "Edit"
+msgstr "Düzenle"
+
+msgid "Open link in a new tab"
+msgstr "Bağlantıyı yeni bir sekmede aç"
+
+msgid "You need to set the Location."
+msgstr "Konumu ayarlamanız gerekir."
+
+#, php-format
+msgid "Photo of %s"
+msgstr "%s fotoğrafı"
+
+msgid "Steam"
+msgstr "Buhar"
+
+msgid "and"
+msgstr "ve"
+
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr "ve"
+
+msgid "Last Updated:"
+msgstr "Son güncelleme:"
+
+msgid "Blocks and Archives"
+msgstr "Bloklar ve Arşivler"
+
+msgid "Login Section"
+msgstr "Giriş Bölümü"
+
+msgid "Widgets"
+msgstr "Widget'lar"
+
+msgid "Checkout"
+msgstr "Çıkış yapmak"
+
+msgid "Switch skin"
+msgstr "Dış görünümü değiştir"
+
+#, php-format
+msgid "Show %s comments"
+msgstr "%s yorumlarını göster"
+
+msgid "Show one comment"
+msgstr "Bir yorum göster"
+
+msgid "Leave a Reply"
+msgstr "Cevap bırakın"
+
+msgid "Follow on Twitter"
+msgstr "Twitter'da takip edin"
+
+msgid "Send an email"
+msgstr "Bir e-posta göndermek"
+
+#, php-format
+msgid "%1$s x %2$s."
+msgstr "%1$s x %2$s."
+
+msgid "Subtotal:"
+msgstr "Ara toplam:"
+
+msgid "Verify your license to unlock bundeled plugins"
+msgstr "Birlikte verilen eklentilerin kilidini açmak için lisansınızı doğrulayın"
+
+#, php-format
+msgid "TIE_TGMPA v%s"
+msgstr "TIE_TGMPA v%s"
+
+msgid "Error: Check the widget settings!"
+msgstr "Hata: Widget ayarlarını kontrol edin!"
+
+msgid "Account Name"
+msgstr "Hesap adı"
+
+msgid "Avatar Image"
+msgstr "Avatar Resmi"
+
+msgid "Bio"
+msgstr "Bio"
+
+msgid "Next/Previous Arrows"
+msgstr "Sonraki / Önceki Oklar"
+
+msgid "Pagination:"
+msgstr "Sayfalandırma:"
+
+msgid "Enter the required account info."
+msgstr "Gerekli hesap bilgilerini girin."
+
+msgid "Follow me"
+msgstr "Takip Et"
+
+msgid "Avatar size (px)"
+msgstr "Avatar boyutu (piksel)"
+
+msgid "Circle"
+msgstr "Daire"
+
+msgid "Show the total followers number?"
+msgstr "Toplam takipçi sayısı gösterilsin mi?"
+
+msgid "Text before the total number"
+msgstr "Toplam sayıdan önce metin"
+
+msgid "Text after the total number"
+msgstr "Toplam sayıdan sonra metin"
+
+msgid "Position"
+msgstr "Pozisyon"
+
+msgid "Before the counters."
+msgstr "Sayaçlardan önce."
+
+msgid "After the counters."
+msgstr "Sayaçlardan sonra."
+
+msgid "Use icons"
+msgstr "Simgeleri kullan"
+
+msgid "Visitor's Location?"
+msgstr "Ziyaretçinin Yeri?"
+
+msgid "Allow visitors to view the weather in their location"
+msgstr "Ziyaretçilerin bulundukları konumdaki hava durumunu görmelerine izin verin"
+
+msgid "Style and Layout"
+msgstr "Stil ve Düzen"
+
+msgid "​Secondary Nav Menu"
+msgstr "İkincil Gezinme Menüsü"
+
+msgid "Error: Check the Instagarm section settings."
+msgstr "Hata: Instagarm bölüm ayarlarını kontrol edin."
+
+msgid "Follow us"
+msgstr "Bizi takip et"
+
+msgid "YouTube API ERROR, Go to the Youtube API Console on Google Cloud and remove any restrictions on the API key, Then edit the current page and click on the Update/Save button to re-connect to the YouTube servers to load the videos."
+msgstr "YouTube API HATASI, Google Cloud üzerindeki Youtube API Konsoluna gidin ve API anahtarındaki tüm kısıtlamaları kaldırın, Ardından mevcut sayfayı düzenleyin ve videoları yüklemek için YouTube sunucularına yeniden bağlanmak için Güncelle / Kaydet düğmesini tıklayın."
+
+msgid "404 :("
+msgstr "404 :("
+
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Hay aksi. Aradığınız &rsquo;t bulunamadı."
+
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Öyle görünüyor ki aradığınızı bulamıyoruz. Arama yapmak yardımcı olabilir."
+
+#, php-format
+msgid "%s Comments"
+msgstr "%s Yorum"
+
+msgid "One Comment"
+msgstr "Bir Yorum"
+
+msgid "- Select a Slider -"
+msgstr "Slider Seç"
+
+msgid "- Select a Category -"
+msgstr "Kategori Seç"
+
+msgid "- Select a Menu -"
+msgstr "Menü Seç"
+
+msgid "Default"
+msgstr "Varsayılan"
+
+msgid "An error has occured. Please reload the page and try again."
+msgstr "Bir hata oluştu. Lütfen sayfayı yeniden yükleyip, tekrar deneyin."
+
+msgid "TieLabs Page Builder widgets areas"
+msgstr "TieLabs Sayfa Oluşturucu widgetları bölümü"
+
+msgid "Manage Widgets"
+msgstr "Widgetları Yönet"
+
+msgid "Done"
+msgstr "Tamam"
+
+msgid "Available Widgets"
+msgstr "Mevcut Widgetlar"
+
+msgid "Deactivate"
+msgstr "Devre dışı bırak"
+
+msgid "Drag widgets from here to a sidebar on the right to activate them. Drag widgets back here to deactivate them and delete their settings."
+msgstr "Herhangi bir widgetı aktif hale getirmek için buradan sap taraftaki kenar çubuğuna sürükleyip bırakın. Widgetları devre dışı bırakıp, ayarlarını silmek için geri buraya sürükleyin."
+
+msgid "Section Widgets Area"
+msgstr "Bölüm Widget Alanı"
+
+msgid "Cancel"
+msgstr "İptal Et"
+
+msgid "Add Widget"
+msgstr "Widget Ekle"
+
+msgid "All Demos Support RTL."
+msgstr "Sağdan Sola Lisanları Destekleyen Tüm Demolar."
+
+msgid "Tip:"
+msgstr "İpucu:"
+
+msgid "You need to uninstall the imported demo before importing another one."
+msgstr "Yeni bir demo yüklemeden önce yüklenmiş demoyu kaldırmalısınız."
+
+msgid "Uninstall the Demo Data"
+msgstr "Demo Datayı Kaldır"
+
+msgid "Choose the demo which you want to import"
+msgstr "Yüklemek istediğiniz demoyu seçin"
+
+msgid "Install Demos"
+msgstr "Demoları Yükle"
+
+msgid "First Footer"
+msgstr "Birincil Alt Bilgi Alanı"
+
+msgid "Second Footer"
+msgstr "İkincil Alt Bilgi Alanı"
+
+msgid "1st Column"
+msgstr "1. Sütun"
+
+msgid "2d Column"
+msgstr "2. Sütun"
+
+msgid "3rd Column"
+msgstr "3. Sütun"
+
+msgid "4th Column"
+msgstr "4. Sütun"
+
+msgid "Settings import file could not be found."
+msgstr "İçe aktarım ayar dosyası bulunamadı."
+
+msgid "Home"
+msgstr "Anasayfa"
+
+msgid "More"
+msgstr "Daha"
+
+msgid "Menu Title"
+msgstr "Menü Başlığı"
+
+msgid "Sub Menu"
+msgstr "Alt Menü"
+
+msgid "Buy now!"
+msgstr "Şimdi satın al!"
+
+msgid "About"
+msgstr "Hakkında"
+
+msgid "Team"
+msgstr "Takım"
+
+msgid "WordPress is a favorite blogging tool of mine and I share tips and tricks for using WordPress here."
+msgstr "WordPress benim favori bir blog aracım ve burada WordPress'i kullanmak için ipuçları ve püf noktaları paylaşıyorum."
+
+msgid "World"
+msgstr "Dünya"
+
+msgid "After all is said and done, more is said than done"
+msgstr "Her şey söyledikten ve yapıldıktan sonra, yapılandan daha fazlası söylenir"
+
+msgid "Knowledge is power"
+msgstr "Bilgi güçtür"
+
+msgid "The Future Of Possible"
+msgstr "Mümkün Olanın Geleceği"
+
+msgid "Xbox boss talks Project Scorpio price"
+msgstr "Xbox patronu Scorpio Projesinin fiyatını söylüyor"
+
+msgid "Hibs and Ross County fans on final"
+msgstr "Hibs ve Ross County taraftarları finalde"
+
+msgid "Tip of the day: That man again"
+msgstr "Günün ipucu: Yine o adam"
+
+msgid "Spieth in danger of missing cut"
+msgstr "Spieth eksik kesim tehlikesi altında"
+
+msgid "Persuasion is often more effectual than force"
+msgstr "İkna genellikle kaba kuvvetten daha etkilidir"
+
+msgid "One swallow does not make the spring"
+msgstr "Bir kırlangıçla bahar gelmez"
+
+msgid "Travel"
+msgstr "Seyahat"
+
+msgid "Getting There is Half the FUN!"
+msgstr "Oraya varmak EĞLENCEYİ yarılamaktır!"
+
+msgid "Goa Tourism Appealing Visitors From Across the Globe"
+msgstr "Goa Turizmi Dünyanın Her Yanından Ziyaretçileri Çekiyor"
+
+msgid "Fontainebleau A Forgotten Treasure"
+msgstr "Unutulmuş Bir Hazine Fontainebleau"
+
+msgid "I know it hurts to say goodbye, but it is time for me to fly"
+msgstr "Elveda demenin acıttığını biliyorum, ancak benim için uçma zamanı"
+
+msgid "What We See When We Look at Travel Photography"
+msgstr "Seyahat Fotoğrafçılığına Baktığımızda Gördüklerimiz"
+
+msgid "How to make perfect vanilla cupcakes"
+msgstr "Mükemmel vanilyalı cupcake nasıl yapılır"
+
+msgid "The ultimate guide to herbal teas"
+msgstr "Bitkisel çaylar için tam kapsamlı rehber"
+
+msgid "Making fruit and veg fun for kids"
+msgstr "Sebze ve meyveleri çocuklar için eğlenceli hale getirmek"
+
+msgid "Games"
+msgstr "Oyunlar"
+
+msgid "New Heroes of the Storm Characters Bring Portals"
+msgstr "Storm Characters'in Yeni Kahramanları Portallara Geldi"
+
+msgid "There May Be No Consoles in the Future, EA Exec Says"
+msgstr "Gelecekte Oyun Konsolları Yok Olabilir, EA Yöneticisi Anlatıyor"
+
+msgid "Play This Game for Free on Steam This Weekend"
+msgstr "Bu Oyunu Bu Hafta Steam'de Ücretsiz Oyna"
+
+msgid "The Game Officially Announced, Watch the Trailer Here"
+msgstr "Oyun Resmen Duyuruldu, Fragmanını İzle"
+
+msgid "Here What is in the game $80 Deluxe Edition"
+msgstr "Oyunun 80$ değerindeki Deluxe Edisyonunda neler olduğu işte burada"
+
+msgid "Nintendo Details Next Miitomo Update"
+msgstr "Nintendo Gelecek Miitomo Güncellemesini Detaylandırdı"
+
+msgid "Killing Floor 2 New Sharpshooter Class Detailed"
+msgstr "Killing Floor 2 New Sharpshooter Class Tüm Detayları"
+
+msgid "Foods"
+msgstr "Yiyecekler"
+
+msgid "Quinoa new recipes, feta & broad bean salad"
+msgstr "Yeni kinoa tarifleri, beyaz ve geniş fasülye salatası"
+
+msgid "Cooking with kids - how to get them involved"
+msgstr "Çocuklar ile pişirmek - onları nasıl dahil edersiniz"
+
+msgid "6 Ways Drinking Warm Water Can Heal Your Body"
+msgstr "Sıcak Su İçmenin Vücudunuza İyi Geleceğini Gösteren 6 Sebep"
+
+msgid "Ice Cream Maker Free Chocolate"
+msgstr "Dondurma Makinesi Ücretsiz Çikolata"
+
+msgid "Growing vegetables at home, six of the best"
+msgstr "Evde sebze yetiştirmek, en iyi altısı"
+
+msgid "At Value-Focused Hotels, the Free Breakfast Gets Bigger"
+msgstr "Değer Odaklı Otellerde Ücretsiz Kahvaltı Daha Büyük Olur"
+
+msgid "A Refined Seattle Restaurant, Hold the Table Linens"
+msgstr "Seçkin Bir Seattle Restoranı, Masa Örtülerini Tutun"
+
+msgid "Business"
+msgstr "İş"
+
+msgid "December home sales rebound? Here is the secret"
+msgstr "Aralıkta konut satışları yükseldi mi? İşte gizli gerçek"
+
+msgid "Why people are flocking to Oregon"
+msgstr "İnsanlar neden Oregon'a akın ediyor"
+
+msgid "Weekly mortgage applications pop on stock sell-off"
+msgstr "Haftalık mortgage başvuruları stoktan satışlarla yükseldi"
+
+msgid "Apartment vacancies rise for first time in 6 years"
+msgstr "Boş daire stoğu 6 yıldır ilk kez yükselişte"
+
+msgid "China stock swoon could boost US real estate"
+msgstr "Çin hisse senedi piyasası ABD gayrimenkulünü artırabilir"
+
+msgid "Why homeowners are leaving billions on the table"
+msgstr "Ev sahipleri milyarları neden masada bırakıyor?"
+
+msgid "Lock in now! Stock sell-off sinks mortgage rates"
+msgstr "Tam şu anda! Hisse senedi satışları mortgage oranlarını batırıyor"
+
+msgid "Tech"
+msgstr "Teknoloji"
+
+msgid "Former Microsoft CEO Ballmer does about-face on Linux technology"
+msgstr "Eski Microsoft CEO'su Ballmer Linux teknolojiye çok yakın"
+
+msgid "Bosch looking to smart devices to get ahead in the cloud"
+msgstr "Bosch bulutta ilerlemek için akıllı cihazlara bakıyor"
+
+msgid "Signs of life for Apple stock as Wall St"
+msgstr "Apple hissesi için Wall St'de yaşam belirtileri"
+
+msgid "YNAP sees slightly slower sales growth after strong 2015"
+msgstr "YNAP güçlü 2015 büyümesi sonrası daha yavaş satış büyümesi bekliyor"
+
+msgid "Senators close to finishing encryption penalties"
+msgstr "Senatörler şifreleme cezalarını bitirmeye çok yakın"
+
+msgid "NASA plans to fix Mars spacecraft leak then launch in 2018"
+msgstr "NASA, Mars uzay aracı sızıntı sorununu giderip 2018'de fırlatmayı planlıyor"
+
+msgid "Apple sets March 21 event, Wall Street sees new, smaller iPhone"
+msgstr "Apple 21 Mart'ta etkinlik düzenliyor, Wall Street yeni, daha küçük iPhone'u fiyatlıyor"
+
+msgid "Samsung Elec says preorders for Galaxy S7 phones stronger"
+msgstr "Samsung, Galaxy S7 cihazları için ön talebin daha güçlü olduğunu açıkladı"
+
+msgid "Life Style"
+msgstr "Yaşam Tarzı"
+
+msgid "Timeline"
+msgstr "Zaman Tüneli"
+
+msgid "Content"
+msgstr "İçerik"
+
+msgid "Classic"
+msgstr "Klasik"
+
+msgid "Color"
+msgstr "Renk"
+
+msgid "Your server is running Suhosin, and your current maxvars settings may limit the number of menu items you can save."
+msgstr "Server'ınız Suhosin çalıştırıyor, ve geçerli maxvars ayarlarınız kaydedeceğiniz menü sayısını sınırlandırabilir."
+
+#, php-format
+msgid "You are approaching the post variable limit imposed by your server configuration. Exceeding this limit may automatically delete menu items settings when you save. Please increase your %1$s directive in php.ini. See: %2$s Increasing max input vars limit.%3$s"
+msgstr "Sunucu yapılandırmanızın verdiği post değişken limitine yaklaşıyorsunuz. Bu sınırı aşmanız, kaydettiğinizde menü öğeleri ayarlarını otomatik olarak silebilir. Lütfen php.ini adresinde %1$s değerini artırın.  Bakınız: %2$s Artan maksimum giriş değişkenleri sınırı. %3$s"
+
+msgid "Menu Item Limit Warning"
+msgstr "Menü Öğe Limiti Uyarısı"
+
+msgid "Need Help?"
+msgstr "Yardım"
+
+#, php-format
+msgid "Click on the help icon %s if you need help."
+msgstr "Yardıma ihtiyacınız varsa yardım simgesine %s tıklayın."
+
+msgid "Happy New Year!"
+msgstr "Mutlu Seneler"
+
+msgid "To our client who have made our progress possible, All of us at TieLabs join in wishing you a Happy New Year with the best of everything in your life for you and your family and we look forward to serving you in the new year :)"
+msgstr "İlerlememizi mümkün kılan müşterilerimize, TieLabs'ta hepimiz, siz ve aileniz için hayatınızdaki her şeyin en iyisi ile Mutlu Yıllar dileriz ve yeni yılda sizlere hizmet vermeyi dört gözle bekliyoruz :)"
+
+#, php-format
+msgid "Follow us on %1$sTwitter%3$s or %2$sFacebook%3$s."
+msgstr "Bizi %1$sTwitter%3$s veya %2$sFacebook%3$s üzerinden takip edin."
+
+#, php-format
+msgid "Like %s?"
+msgstr "%s Beğendiniz mi?"
+
+#, php-format
+msgid "We've noticed you've been using %1$s for some time now; we hope you love it! We'd be thrilled if you could %2$sgive us a 5* rating on themeforest.net!%4$s If you are experiencing issues, please %3$sopen a support ticket%4$s and we'll do our best to help you out."
+msgstr "Fark ettik ki bir süredir %1$s kullanıyorsun; umarız sevmişsindir! Eğer %2$sbize themeforeset.net'te 5 yıldız verebilirsen%4$s çok seviniriz ! Eğer bir sorun yaşıyorsan, lütfen %3$sdestek çağrısı oluştur%4$s bizde sana yardım etmek için elimizden gelenin en iyisini yapalım."
+
+#, php-format
+msgid "%1s comes localization-ready out of the box. All that’s needed is a translation file for your language, Contribute in our translation portal to complete the %2s translation, In exchange, we offer %3sExtra 6 Months FREE TieLabs Support*%4s to the most 3 contributors for each completed translation. Thank you very much for your contribution."
+msgstr "%1s kullanıma hazır paketten çıkar. Tek ihtiyacınız olan diliniz için bir %2s çeviri dosyasıdır. Buna karşılık, tamamlanmış her çeviri için en fazla 3 katılımcıya %3sEkstra 6 Aylık ÜCRETSİZ TieLabs Desteği%4s sunuyoruz. Katkınız için çok teşekkür ederim."
+
+#, php-format
+msgid "%1s comes localization-ready out of the box. All that’s needed is a translation file for your language, Contribute in our translation portal to complete the %2s translation, In exchange, we offer %3sExtra 6 Months FREE Support%4s to the most 3 contributors for each completed translation. Thank you very much for your contribution."
+msgstr "%1s kullanıma hazır paketten çıkar. Tek ihtiyacınız olan diliniz için bir %2s çeviri dosyasıdır. Buna karşılık, tamamlanmış her çeviri için en fazla 3 katılımcıya %3sEkstra 6 Aylık ÜCRETSİZ TieLabs Desteği%4s sunuyoruz. Katkınız için çok teşekkür ederim."
+
+#, php-format
+msgid "If you have translated the theme then many of our users would be delighted if you could share your translation files with the community and get %1s6 Months FREE Support%2s Just get in contact with us via our %3sSupport Center%4s and we will include the translation files in the next theme update if possible. Thank you very much for your contribution."
+msgstr "Eğer temayı çevirdiysen, bir çok kullanıcımız çeviri dosyalarını topluluğumuzla paylaşmandan büyük keyif alır. Paylaştıktan sonra %1s6 Ay ÜCRETSİZ Destek%2s alabilirsin. Bizimle %3sDestek Merkezimiz%4s aracılığı ile iletişime geç ve eğer mümkünse çeviri dosyalarını gelecek tema güncellemesine ekleyelim. Katkıların için çok teşekkür ederiz."
+
+#, php-format
+msgid "%1s Translation Status: %2s Done"
+msgstr "%1s Çeviri Durumu: %2s Bitti"
+
+msgid "* The extra support will appear in your profile on our website, support center and in the theme dashboared only. it will not appear on ThemeForest."
+msgstr "* Ekstra destek, web sitemizdeki, destek merkezimizdeki profilinizde ve yalnızca gösterge tablosundaki temada görünecektir. Bu ThemeForest'ta görünmez."
+
+msgid "Get Extra FREE 6 Months Support period"
+msgstr "Ekstra 6 Aylık Destek Süresi Alın"
+
+msgid "Go to the Translation Portal"
+msgstr "Çeviri Portalı'na git"
+
+#, php-format
+msgid "If you have translated the theme then many of our users would be delighted if you could share your translation files with the community. Just get in contact with us via our %1sSupport Center%2s and we will include the translation files in the next theme update if possible. Thank you very much for your contribution."
+msgstr "Eğer temayı çevirdiysen, bir çok kullanıcımız çeviri dosyalarını topluluğumuzla paylaşmandan büyük keyif alır. Paylaştıktan sonra %1s6 Ay ÜCRETSİZ Destek%2s alabilirsin. Bizimle %3sDestek Merkezimiz%4s aracılığı ile iletişime geç ve eğer mümkünse çeviri dosyalarını gelecek tema güncellemesine ekleyelim. Katkıların için çok teşekkür ederiz."
+
+msgid "Share your Language files with others"
+msgstr "Dil dosyalarını başkalarıyla paylaşın"
+
+msgid "YAY, New Features"
+msgstr "HOLLEY, Yeni Özellikler"
+
+msgid "Awesome, isn't it? Give us some love :)"
+msgstr "Harika değil mi? Bize biraz sevgi verin :)"
+
+#, php-format
+msgid "Rate %s"
+msgstr "%s Oran"
+
+msgid "Followers"
+msgstr "Takipçi"
+
+#, php-format
+msgid "%s Followers"
+msgstr "%s Takipçi"
+
+msgid "Total Articles' Views!"
+msgstr "Toplam Makalelerin Görüntülenmeleri"
+
+#, php-format
+msgid "%s articles views"
+msgstr "%s makalelerin görüntülenmeleri"
+
+#, php-format
+msgid "We just reached the %s milestone! We are taking this moment to give YOU a big THANK YOU for all the support and confidence you gave us."
+msgstr "%s hedefe ulaştık! Bu anı bize verdiğiniz destek ve güven için SİZE kocaman bir TEŞEKKÜR ETMEYE ayırdık."
+
+msgid "New Milestone"
+msgstr "Yeni Hedef"
+
+msgid "Spread The Word"
+msgstr "Duymayan Kalmasın"
+
+#, php-format
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] "%d yıl"
+msgstr[1] "%d yıl"
+
+msgid "Happy Anniversary with TieLabs!"
+msgstr "TieLabs ile mutlu yıldönümü!"
+
+#, php-format
+msgid "Woohoo! We are so happy You have been with us for %s We are looking forward to providing an awesome WordPress theme and plugins for you for many more. Thanks for being an awesome customer!"
+msgstr "VuuHuu! Bizimle %s  beraber olduğunuz için çok mutluyuz. Sizler için harika bir WordPress teması ve eklentileri sunmayı dört gözle bekliyoruz. Harika bir müşteri olduğun için teşekkürler!"
+
+msgid "Your friends at TieLabs"
+msgstr "TieLabs'teki arkadaşların"
+
+msgid "Howdy"
+msgstr "Merhaba"
+
+msgid "Posts Switcher"
+msgstr "Yazı Aktarıcı"
+
+#, php-format
+msgid "Are You Megrating from %s?"
+msgstr "%s buradan birleştirmek istediğinize emin misiniz?"
+
+#, php-format
+msgid "It seems you are megrating from %1s%2s%3s theme, click on the button below to complete the switching process."
+msgstr "%1s%2s%3s temasından geçiş yapıyorsunuz, geçiş işlemini tamamlamak için aşağıdaki düğmeye tıklayın."
+
+msgid "Are You Megrating from another theme?"
+msgstr "Başka bir tema ile birleştirecek misiniz?"
+
+#, php-format
+msgid "It seems you are megrating from another theme, it is recommended to check our Switcher it supports %1s%2s%3s themes, click on the button below to check them."
+msgstr "Başka bir temadan geçiş yaptığınız görülüyor, Switcher eklentisi %1s%2s%3s temalarını destekler ve tavsiye eder, kontrol etmek için aşağıdaki düğmeye tıklayın."
+
+msgid "Run the Switcher"
+msgstr "Aktarıcıyı Çalıştır"
+
+#, php-format
+msgid "Switch to %s Theme"
+msgstr " %s buna aktar"
+
+#, php-format
+msgid "%s Plugin is required"
+msgstr "%s eklenti gerekli"
+
+#, php-format
+msgid "%s Plugin is required, click on the button below to go to the plugins page to install it."
+msgstr "%s eklenti gerekli, aşağıdaki butona tıklayarak eklentiler sayfasına gidin"
+
+msgid "Go to the Plugins Page"
+msgstr "Eklentiler sayfasına git"
+
+msgid "Install Plugins"
+msgstr "Eklentileri Yükle"
+
+msgid "Install Bundled Plugins"
+msgstr "Paket Eklentilerini Yükle"
+
+msgid "Share your Language files and Get Extra FREE 6 Months Support period"
+msgstr "Tercüme dosyanızı paylaşın ve 6 Ay ÜCRETSİZ Ek Destek süreci edinin"
+
+msgid "How to translate the theme"
+msgstr "Tema nasıl tercüme edilir"
+
+msgid "Category Layout"
+msgstr "Kategori Düzeni"
+
+msgid "Posts Settings"
+msgstr "Yazı Ayarlar"
+
+msgid "Posts Layout"
+msgstr "Yazılar Düzeni"
+
+msgid "Slider"
+msgstr "Kaydırıcı"
+
+msgid "Logo"
+msgstr "Logo"
+
+msgid "Sidebar"
+msgstr "Kenar Bölmesi"
+
+msgid "Styling"
+msgstr "Tasarım"
+
+msgid "Main Menu"
+msgstr "Ana Menü"
+
+msgid "Category Options"
+msgstr "Kategori Ayarları"
+
+msgid "Large Thumbnail"
+msgstr "Geniş Küçük Resim"
+
+msgid "Masonry"
+msgstr "Akış"
+
+msgid "Large Post Above"
+msgstr "Üstte Geniş Yazı"
+
+msgid "Overlay Title"
+msgstr "Yerleşim Başlığı"
+
+msgid "Overlay Title Centered"
+msgstr "Ortalanmış Yerleşim Başlığı"
+
+msgid "Excerpt Length"
+msgstr "Metin Uzunluğu"
+
+msgid "Pagination"
+msgstr "Sayfalandırma"
+
+msgid "Next and Previous"
+msgstr "Sonraki ve Önceki"
+
+msgid "Numeric"
+msgstr "Numaralandırılmış"
+
+msgid "Load More"
+msgstr "Daha Fazla Yükle"
+
+msgid "Infinite Scroll"
+msgstr "Sonsuz Kaydırma"
+
+msgid "Media Icon"
+msgstr "Medya İkon"
+
+msgid "Media Icon Overlay"
+msgstr "Medya İkon Yerleşimi"
+
+msgid "Category Page Layout"
+msgstr "Kategori Sayfa Düzeni"
+
+msgid "Full-Width"
+msgstr "Tam Ekran Düzeni"
+
+msgid "Boxed"
+msgstr "Kutu Düzeni"
+
+msgid "Framed"
+msgstr "Çerçeveli"
+
+msgid "Bordered"
+msgstr "Sınırlandırılmış"
+
+msgid "Post Layout"
+msgstr "Yazı Düzeni"
+
+msgid "Layout"
+msgstr "Düzen"
+
+msgid "Featured area background"
+msgstr "Öne Çıkarılan Alan Arka Planı"
+
+msgid "Use the featured image"
+msgstr "Öne çıkarılan görseli kullan"
+
+msgid "Yes"
+msgstr "Evet"
+
+msgid "No"
+msgstr "Hayır"
+
+msgid "Upload Custom Image"
+msgstr "Özel Resim Yükle"
+
+msgid "- OR -"
+msgstr "-VEYA-"
+
+msgid "Background Color"
+msgstr "Arka Plan Rengi"
+
+msgid "Post Format Settings"
+msgstr "Yazı Biçimi Ayarları"
+
+msgid "Standard Post Format:"
+msgstr "Standart Yazı Biçimi"
+
+msgid "Show the featured image"
+msgstr "Öne çıkarılan resmi göster"
+
+msgid "Image Post Format:"
+msgstr "Görüntülü Yazı Biçimi:"
+
+msgid "Uncropped featured image"
+msgstr "Kırpılmamış öne çıkarılan görsel"
+
+msgid "Featured image lightbox"
+msgstr "Öne çıkarılan lightbox görsel"
+
+msgid "Structure Data"
+msgstr "Yapısal Veri"
+
+msgid "Schema type"
+msgstr "Şema türü"
+
+msgid "Article"
+msgstr "Makale"
+
+msgid "NewsArticle"
+msgstr "Haber Makalesi"
+
+msgid "BlogPosting"
+msgstr "Blog Yazısı"
+
+#, php-format
+msgid "Slider #%s"
+msgstr "Slayt #%s"
+
+msgid "Videos Playlist"
+msgstr "Video Oynatma Listesi"
+
+msgid "TieLabs Slider"
+msgstr "TieLabs Kaydırıcı"
+
+msgid "Enable"
+msgstr "Etkinleştir"
+
+msgid "Number of posts to show"
+msgstr "Gösterilecek yazı sayısı"
+
+msgid "Query Type"
+msgstr "Sorgu Tipi"
+
+msgid "Recent Posts"
+msgstr "Son Yazılar"
+
+msgid "Random Posts"
+msgstr "Rastgele Yazılar"
+
+msgid "Custom Slider"
+msgstr "Özel Kaydırıcı"
+
+msgid "Colored Mask"
+msgstr "Renklendirilmiş Maske"
+
+msgid "Disable Gradiant Overlay"
+msgstr "Degrade Yerleşimini Devre Dışı Bırak"
+
+msgid "Animate Automatically"
+msgstr "Otomatik Olarak Anime Et"
+
+msgid "Title Length"
+msgstr "Başlık Uzunluğu"
+
+msgid "Posts Excerpt"
+msgstr "İçerikden Alıntı"
+
+msgid "Posts Excerpt Length"
+msgstr "İçerik Alıntı Uzunluğu"
+
+msgid "Post Primary Category"
+msgstr "Yazı Öncelikli Kategorisi"
+
+msgid "Review Rating"
+msgstr "Değerlendirme Puanı"
+
+msgid "Post Meta"
+msgstr "Yazı Meta"
+
+msgid "Playlist title"
+msgstr "Oynatma listesi başlığı"
+
+msgid "Videos List"
+msgstr "Video Listesi"
+
+msgid "Enter each video url in a seprated line."
+msgstr "Her video url adresini ayrı satıra girin."
+
+msgid "Supports: YouTube and Vimeo videos only."
+msgstr "Desteklenenler: Yalnızca YouTube ve Vimeo videoları."
+
+msgid "Dark Skin"
+msgstr "Koyu Tema"
+
+msgid "Background Image"
+msgstr "Arka Plan Görseli"
+
+msgid "Background Video"
+msgstr "Arka Plan Videosu"
+
+msgid "Parallax"
+msgstr "Paralaks"
+
+msgid "Parallax Effect"
+msgstr "Paralaks Etkisi"
+
+msgid "Scroll"
+msgstr "Kaydır"
+
+msgid "Scale"
+msgstr "Ölçek"
+
+msgid "Opacity"
+msgstr "Opaklık"
+
+msgid "Scroll + Opacity"
+msgstr "Kaydırma + Opaklık"
+
+msgid "Scale + Opacity"
+msgstr "Ölçek + Opaklık"
+
+msgid "Revolution Slider"
+msgstr "Revolution Slider"
+
+msgid "Disable"
+msgstr "Devredışı"
+
+msgid "Unnamed"
+msgstr "Adsız"
+
+msgid "Will override the sliders above."
+msgstr "Yukarıdaki kaydırıcıları geçersiz kılacak."
+
+msgid "Choose Slider"
+msgstr "Slayt Seç"
+
+msgid "No sliders found, Please create a slider."
+msgstr "Slayt bulunamadı, Lütfen slayt oluşturun."
+
+msgid "LayerSlider"
+msgstr "LayerSlider"
+
+msgid "Custom Logo"
+msgstr "Özel Logo"
+
+msgid "Logo Settings"
+msgstr "Logo Ayarları"
+
+msgid "Image"
+msgstr "Görsel"
+
+msgid "Site Title"
+msgstr "Site Başlığı"
+
+msgid "Logo Text"
+msgstr "Logo Metni"
+
+msgid "Logo Image"
+msgstr "Logo Görseli"
+
+msgid "Logo Image (Retina Version @2x)"
+msgstr "Logo Görseli (Retina Versiyon @2x)"
+
+msgid "Please choose an image file for the retina version of the logo. It should be 2x the size of main logo."
+msgstr "Logonun retina versiyonu için lütfen bir resim dosyası seçin. Ana logodan 2 kat daha büyük olmalıdır."
+
+msgid "Standard Logo Width for Retina Logo"
+msgstr "Retina Logo İçin Standart Logo Genişliği"
+
+msgid "If retina logo is uploaded, please enter the standard logo (1x) version width, do not enter the retina logo width."
+msgstr "Retina logo yüklediyseniz, lütfen standart logo (1x) versiyon genişlik ölçüsünü giriniz, retina logo genişlik ölçüsü girmeyiniz."
+
+msgid "Standard Logo Height for Retina Logo"
+msgstr "Retina Logo için Standart Logo Yüksekliği"
+
+msgid "If retina logo is uploaded, please enter the standard logo (1x) version height, do not enter the retina logo height."
+msgstr "Retina logo yüklediyseniz, lütfen standart logo (1x) versiyon yükseklik ölçüsünü giriniz, retina logo yükseklik ölçüsü girmeyiniz."
+
+msgid "Logo Margin Top"
+msgstr "Logo Üst Kenar Uzaklığı"
+
+msgid "Leave it empty to use the default value."
+msgstr "Varsayılan değeri kullanmak için boş bırakın."
+
+msgid "Logo Margin Bottom"
+msgstr "Logo Alt Kenar Uzaklığı"
+
+msgid "Custom Logo URL"
+msgstr "Özel Logo URL"
+
+msgid "Leave it empty to use the Site URL."
+msgstr "Site URL kullanmak için boş bırakın."
+
+msgid "Custom Menu"
+msgstr "Özel Menü"
+
+msgid "Category Sidebar"
+msgstr "Kategori Kenar Çubuğu"
+
+msgid "Sidebar Right"
+msgstr "Sağ Kenar Çubuğu"
+
+msgid "Sidebar Left"
+msgstr "Sol Kenar Çubuğu"
+
+msgid "Without Sidebar"
+msgstr "Kenar Çubuğu Olmadan"
+
+msgid "One Column"
+msgstr "Tek Sütun"
+
+msgid "Sticky Sidebar"
+msgstr "Yapışkan Kenar Çubuğu"
+
+msgid "Custom Sidebar"
+msgstr "Özel Kenar Çubuğu"
+
+msgid "Global Sidebar Settings for Posts in this Category"
+msgstr "Bu Kategorideki yazılar için Global Kenar Çubuğu Ayarları"
+
+msgid "Category Style"
+msgstr "Kategori Stili"
+
+msgid "Primary Color"
+msgstr "Öncelikli Renk"
+
+msgid "Background"
+msgstr "Arka Plan"
+
+msgid "Bordered Layout supports plain background color only."
+msgstr "Sınırlandırılmış Düzen yalnızca sade arka plan rengini destekler."
+
+msgid "Background Color 2"
+msgstr "Arka Plan Rengi 2"
+
+msgid "Background Image type"
+msgstr "Arka Plan Görsel tipi"
+
+msgid "None"
+msgstr "Yok"
+
+msgid "Pattern"
+msgstr "Desen"
+
+msgid "Background Pattern"
+msgstr "Arka Plan Deseni"
+
+msgid "Background Settings"
+msgstr "Arka Plan Ayarları"
+
+msgid "Dots overlay layer"
+msgstr "Katman üzerine noktalar"
+
+msgid "Background dimmer"
+msgstr "Kısık arka plan"
+
+msgid "Value between 0 and 100 to dim background image. 0 - no dim, 100 - maximum dim."
+msgstr "Arka plan görselini kısmak için 0 ve 100 arasında değer. 0 - kısma yok, 100 - maksimum kısma."
+
+msgid "Background dimmer color"
+msgstr "Arka plan kısma rengi"
+
+msgid "Black"
+msgstr "Siyah"
+
+msgid "White"
+msgstr "Beyaz"
+
+msgid "Custom CSS"
+msgstr "Özel CSS"
+
+msgid "Paste your CSS code, do not include any tags or HTML in the field. Any custom CSS entered here will override the theme CSS. In some cases, the !important tag may be needed."
+msgstr "CSS kodunuzu yapıştırın, herhangi bir etiket veya HTML eklemeyin. Girilen her özel CSS Tema CSS'inin üzerine yazılacaktır. Bazı durumlarda \"!important\" etiketi gerekli olabilir."
+
+#, php-format
+msgid "Use %s and it will be replaced with the primary color."
+msgstr "%s kullanın ve ana renkle değiştirilecektir."
+
+msgid "Settings"
+msgstr "Ayarlar"
+
+msgid "Front Page"
+msgstr "Ön Sayfa"
+
+msgid "TieLabs Builder"
+msgstr "TieLabs Builder"
+
+msgid "Enter sub title here"
+msgstr "Alt başlığı buraya girin"
+
+#, php-format
+msgid "Current Front Page: %s"
+msgstr "Geçerli Ön Sayfa: %s"
+
+msgid "Set as the site Front Page?"
+msgstr "Site Ön Sayfası olarak ayarla?"
+
+msgid "Use the TieLabs Builder"
+msgstr "TieLabs Builder'ı Kullanın"
+
+msgid "General"
+msgstr "Genel"
+
+msgid "Styles"
+msgstr "Stiller"
+
+msgid "Advertisement"
+msgstr "Reklamlar"
+
+msgid "Components"
+msgstr "Bileşenler"
+
+msgid "Story Highlights"
+msgstr "Hikaye Öne Çıkanlar"
+
+msgid "Source and Via"
+msgstr "Kaynak ve Paylaşım"
+
+msgid "Masonry Page"
+msgstr "Akış Sayfası"
+
+msgid "Categories Meta"
+msgstr "Kategoriler Meta"
+
+msgid "Categories"
+msgstr "Kategoriler"
+
+msgid "User Roles"
+msgstr "Kullanıcı rolleri"
+
+msgid "Header and Footer Settings"
+msgstr "Üstbilgi ve Altbilgi Ayarları"
+
+msgid "Hide the Header"
+msgstr "Üstbilgiyi Gizle"
+
+msgid "Hide the Footer"
+msgstr "Altbilgiyi Gizle"
+
+msgid "Hide the page title"
+msgstr "Sayfa başlığını gizle"
+
+msgid "Don't duplicate posts"
+msgstr "Yazıları Tekrarlama"
+
+msgid "Note: This option doesn't work with the AJAX pagination option in the blocks."
+msgstr "Not: Bu seçenek, bloklardaki AJAX sayfalandırma seçeneği ile çalışmaz."
+
+msgid "Primary Category"
+msgstr "Birincil Kategori"
+
+msgid "If the post has multiple categories, the one selected here will be used for settings and it appears in the category labels."
+msgstr "Gönderide birden fazla kategori varsa, burada seçilenler ayarlar için kullanılacaktır ve kategori etiketlerinde görünür."
+
+msgid "Trending Post"
+msgstr "Trend Yazı"
+
+msgid "Post Views"
+msgstr "Yazı Görünümü"
+
+msgid "Post format"
+msgstr "Yazı Formatı"
+
+msgid "Standard"
+msgstr "Standart"
+
+msgid "Video"
+msgstr "Video"
+
+msgid "Audio"
+msgstr "Ses"
+
+msgid "Map"
+msgstr "Harita"
+
+msgid "Embed Code"
+msgstr "Yerleştirme kodu"
+
+msgid "Self Hosted Video"
+msgstr "Kendinde Barındırılan Video"
+
+msgid "Video URL"
+msgstr "Video linki"
+
+msgid "supports : YouTube, Vimeo, Viddler, Qik, Hulu, FunnyOrDie, DailyMotion, WordPress.tv and blip.tv"
+msgstr "destekler: YouTube, Vimeo, Viddler, Qik, Hulu, FunnyOrDie, DailyMotion, WordPress.tv ve blip.tv"
+
+msgid "MP3 file URL"
+msgstr "MP3 dosyası linki"
+
+msgid "M4A file URL"
+msgstr "M4A dosyası linki"
+
+msgid "OGA file URL"
+msgstr "OGA dosyası linki"
+
+msgid "SoundCloud URL"
+msgstr "SoundCloud linki"
+
+msgid "Google Maps URL"
+msgstr "Google Haritalar linki"
+
+msgid "Page Layout"
+msgstr "Sayfa düzeni"
+
+msgid "Sidebar Position"
+msgstr "Sidabar Pozisyonu"
+
+msgid "Choose Sidebar"
+msgstr "Kenar çubuğunu seç"
+
+msgid "Header Background"
+msgstr "Üst Kısım Ara Planı"
+
+msgid "Extend the background of the first section to cover the Header"
+msgstr "Üst kısmı doldurmak için birincil arka planı genişletin"
+
+msgid "Post Components"
+msgstr "Yazı Bileşenleri"
+
+msgid "Above Post share Buttons"
+msgstr "Yazı Paylaşım Tuşlarının Üstünde"
+
+msgid "Hide"
+msgstr "Gizle"
+
+msgid "Show"
+msgstr "Göster"
+
+msgid "Below Post Share Buttons"
+msgstr "Yazı Paylaşım Düğmelerinin Altında"
+
+msgid "Tags"
+msgstr "Etiketler"
+
+msgid "Post Author box"
+msgstr "Yazı Yazarı Kutusu"
+
+msgid "Next/Prev posts"
+msgstr "Sonraki / Önceki Yazılar"
+
+msgid "Newsletter"
+msgstr "Bülten"
+
+msgid "Related Posts"
+msgstr "Benzer Yazılar"
+
+msgid "Fly Check Also Box"
+msgstr "Uçan Gözden Geçir Kutusu"
+
+msgid "Hide Above Post Ad"
+msgstr "Üst Yazı Reklamını Gizle"
+
+msgid "Custom Above Post Ad"
+msgstr "Özel Yazı Üstü Reklamı"
+
+msgid "Hide Below Post Ad"
+msgstr "Alt Yazı Reklamını Gizle"
+
+msgid "Custom Below Post Ad"
+msgstr "Özel Yazı Altı Reklamı"
+
+msgid "Hide Above Content Ad"
+msgstr "İçerik Reklamını Gizle"
+
+msgid "Custom Above Content Ad"
+msgstr "Özel İçerik Reklamı"
+
+msgid "Hide Below Content Ad"
+msgstr "İçerik Alt Reklamını Gizle"
+
+msgid "Custom Below Content Ad"
+msgstr "Özel İçerik Alt Reklamı"
+
+msgid "Source"
+msgstr "Kaynak"
+
+msgid "These links will appear at the end of the article in the Source section."
+msgstr "Bu bağlantılar Kaynak bölümdeki makalenin sonunda görünecektir."
+
+msgid "Link"
+msgstr "Link"
+
+msgid "Add"
+msgstr "Ekle"
+
+msgid "Source name is required."
+msgstr "Kaynak adı gerekli."
+
+msgid "Via"
+msgstr "Yoluyla"
+
+msgid "These links will appear at the end of the article in the Via section."
+msgstr "Bu bağlantılar, Paylaş bölümündeki makalenin sonunda görünecektir."
+
+msgid "Via name is required."
+msgstr "Paylaşım ismi gerekli."
+
+msgid "Add Custom Text"
+msgstr "Özel Metin Ekle"
+
+msgid "Custom Text"
+msgstr "Özel Metin"
+
+msgid "Text is required."
+msgstr "Metin gerekli."
+
+msgid "Upload"
+msgstr "Yükle"
+
+msgid "Add Image"
+msgstr "Görsel Ekle"
+
+msgid "Select"
+msgstr "Seç"
+
+msgid "no-repeat"
+msgstr "tekrarlamama"
+
+msgid "Tile"
+msgstr "Döşeme (Tile)"
+
+msgid "Tile Horizontally"
+msgstr "Yatay Döşeme"
+
+msgid "Tile Vertically"
+msgstr "Dikey Döşeme"
+
+msgid "Fixed"
+msgstr "Sabit"
+
+msgid "Cover"
+msgstr "Kapla"
+
+msgid "Left"
+msgstr "Sol"
+
+msgid "Right"
+msgstr "Sağ"
+
+msgid "Center"
+msgstr "Orta"
+
+msgid "Top"
+msgstr "Yukarı"
+
+msgid "Bottom"
+msgstr "Aşağı"
+
+msgid "Remove"
+msgstr "Sil"
+
+msgid "Font Size in Pixels"
+msgstr "Piksel cinsinden yazı tipi boyutu"
+
+msgid "Line Height"
+msgstr "Satır yüksekliği"
+
+msgid "Font Weight"
+msgstr "Yazı Tipi Genişliği"
+
+msgid "Thin 100"
+msgstr "İnce 100"
+
+msgid "Extra 200 Light"
+msgstr "Ekstra Hafif  200"
+
+msgid "Light 300"
+msgstr "Hafif 300"
+
+msgid "Regular 400"
+msgstr "Normal 400"
+
+msgid "Medium 500"
+msgstr "Orta 500"
+
+msgid "Semi 600 Bold"
+msgstr "Yarı Kalın 600"
+
+msgid "Bold 700"
+msgstr "Kalın 700"
+
+msgid "Extra 800 Bold"
+msgstr "Ekstra Kalın 800"
+
+msgid "Black 900"
+msgstr "Siyah 900"
+
+msgid "Capitalization"
+msgstr "Büyük harf kullanımı"
+
+msgid "UPPERCASE"
+msgstr "BÜYÜK HARF YAPMA"
+
+msgid "Capitalize"
+msgstr "Baş harf büyütme"
+
+msgid "lowercase"
+msgstr "küçük harf yapma"
+
+msgid "System Status"
+msgstr "Sistem Durumu"
+
+msgid "WordPress environment"
+msgstr "WordPress ortamı"
+
+msgid "Home URL"
+msgstr "Anasayfa Bağlantısı"
+
+msgid "Site URL"
+msgstr "Site Bağlantısı"
+
+msgid "WP version"
+msgstr "WP versiyonu"
+
+msgid "WP multisite"
+msgstr "WP Çoklu Site"
+
+msgid "WP memory limit"
+msgstr "WP Hafıza limiti"
+
+#, php-format
+msgid "%1$s - We recommend setting memory to at least %2$s. To import the demo data %3$s of memory limit is required. See: %4$s"
+msgstr "%1$s Belleği en az %2$s olarak ayarlamanızı öneririz. Demo verisini almak için %3$s  bellek limiti gereklidir.  Bkz:%4$s"
+
+msgid "Increasing memory allocated to PHP"
+msgstr "PHP ayrılan hafıza limitini arttırın"
+
+msgid "WP debug mode"
+msgstr "WP Hata Ayıklama Modu"
+
+msgid "Language"
+msgstr "Dil"
+
+msgid "Hide errors from visitors"
+msgstr "Hataları ziyaretçilerden gizle"
+
+msgid "Error messages can contain sensitive information about your website environment. These should be hidden from untrusted visitors."
+msgstr "Hata mesajları, web sitesi ortamınız hakkında hassas bilgiler içerebilir. Bunlar güvenilmeyen ziyaretçilerden gizlenmelidir."
+
+msgid "Server environment"
+msgstr "Sunucu Özellikleri"
+
+msgid "Server info"
+msgstr "Sunucu bilgisi"
+
+msgid "PHP version"
+msgstr "Php Sürümü"
+
+#, php-format
+msgid "%1$s - We recommend a minimum PHP version of %2$s."
+msgstr "%1$s - %2$s Minimum PHP sürümünü öneriyoruz."
+
+msgid "PHP post max size"
+msgstr "PHP gönderisi maksimum boyut"
+
+msgid "PHP time limit"
+msgstr "PHP zaman sınırı"
+
+#, php-format
+msgid "%1$s - We recommend setting max execution time to at least %2$s."
+msgstr "%1$s olan maksimum yürütme süresini (max execution time) %2$s olarak ayarlamanızı öneririz."
+
+msgid "PHP max input vars"
+msgstr "PHP maksimum giriş değişkenleri"
+
+#, php-format
+msgid "%1$s - Recommended Value: %2$s. Max input vars limitation will truncate POST data such as menus. See: %3$sIncreasing max input vars limit.%4$s"
+msgstr "%1$s  Önerilen Değer: %2$s. Maksimum giriş değişkenleri sınırlaması, menüler gibi gönderi verilerini kısıtlar.  Bakınız: %3$s Artan maksimum giriş değişkenleri sınırı. %4$s"
+
+msgid "cURL version"
+msgstr "cURL Sürümü"
+
+msgid "SUHOSIN installed"
+msgstr "SUHOSIN Yüklü"
+
+msgid "You have to increase the suhosin.post.max_vars and suhosin.request.max_vars parameters to 2000 or more."
+msgstr "Suhosin.post.max_vars ve suhosin.request.max_vars parametrelerini 2000 veya daha fazlaya yükseltmelisiniz."
+
+msgid "MySQL version"
+msgstr "MySQL Sürümü"
+
+#, php-format
+msgid "%1$s - WordPress recommends a minimum MySQL version of %2$s. See: %3$sWordPress requirements%4$s"
+msgstr "%1$s WordPress %2$s minimum MySQL sürümünü önerir. Bakınız: %3$s WordPress gereksinimleri %4$s"
+
+msgid "Max upload size"
+msgstr "Maksimum yükleme boyutu"
+
+msgid "fsockopen/cURL"
+msgstr "fsockopen/cURL"
+
+msgid "Your server does not have fsockopen or cURL enabled. Contact your hosting provider."
+msgstr "Sunucunuzda  fsockopen veya cURL etkin değil. Barındırma sağlayıcınıza başvurun."
+
+msgid "Multibyte string"
+msgstr "Çok baytlı dizge (Multibyte string)"
+
+msgid "Your server does not support the mbstring functions - this is required for better character encoding. Some fallbacks will be used instead for it."
+msgstr "Sunucunuz mbstring işlevlerini desteklemiyor - bu daha iyi karakter kodlaması için gereklidir. Bunun yerine bazı yedekler kullanılacaktır."
+
+msgid "XMLReader"
+msgstr "XML Okuyucu (XMLReader)"
+
+msgid "The XMLReader PHP module/extension is missing. Please contact your hosting company and ask them to install that for you."
+msgstr "XMLReader PHP modülü / uzantısı eksik. Lütfen hosting firmanız ile iletişime geçin ve sizin için bunları yüklemelerini isteyin."
+
+msgid "Remote post"
+msgstr "Uzaktan gönder"
+
+msgid "wp_remote_post() failed. Contact your hosting provider."
+msgstr "wp_remote_post() komutu çalıştırılamadı. Lütfen host desteği sağlayan firmanızla görüşünüz."
+
+msgid "Remote get"
+msgstr "Uzaktan al"
+
+msgid "wp_remote_get() failed. Contact your hosting provider."
+msgstr "wp_remote_get() komutu çalıştırılamadı. Lütfen host desteği sağlayan firmanızla görüşünüz."
+
+msgid "Theme"
+msgstr "Tema"
+
+msgid "Name"
+msgstr "İsim"
+
+msgid "License"
+msgstr "Lisans"
+
+msgid "Your Site is Validated"
+msgstr "Siteniz Doğrulandı"
+
+msgid "Your Site is not Validated"
+msgstr "Siteniz Doğrulanmadı"
+
+msgid "Support"
+msgstr "Destek"
+
+msgid "Version"
+msgstr "Sürüm"
+
+#, php-format
+msgid "%s is available"
+msgstr "%s geçerlidir"
+
+msgid "Author URL"
+msgstr "Yazar Adresi"
+
+msgid "Child theme"
+msgstr "Alt tema"
+
+msgid "Parent theme name"
+msgstr "Ana tema ismi"
+
+msgid "Parent theme version"
+msgstr "Ana tema versiyonu"
+
+msgid "Parent theme author URL"
+msgstr "Ana Tema Yayıncı URL"
+
+msgid "Latest Demo Installed"
+msgstr "En Son Demo Yüklendi"
+
+msgid "Switched From"
+msgstr "Buradan aktarıldı"
+
+msgid "Active plugins"
+msgstr "Aktif Eklentiler"
+
+msgid "Network enabled"
+msgstr "Ağ Etkin"
+
+#, php-format
+msgid "by %s"
+msgstr "%s tarafından"
+
+msgid "Please copy and paste this information in your ticket when contacting support:"
+msgstr "Destek birimi ile iletişime geçtiğinizde lütfen bu bilgileri kopyalayıp gönderinize yapıştırın:"
+
+msgid "Get system report"
+msgstr "Sistem Raporu Al"
+
+#, php-format
+msgid "Looking for a good web hosting company? %1$sCheck our recommendations!%2$s"
+msgstr "İyi bir web hosting şirketi mi arıyorsunuz? %1$s Önerilerimizi kontrol edin! %2$s"
+
+msgid "Theme Updates"
+msgstr "Temayı Güncelle"
+
+msgid "New Update"
+msgstr "Yeni Güncelleme"
+
+msgid "New"
+msgstr "Yeni"
+
+msgid "New Theme Update"
+msgstr "Yeni Tema Güncellemesi"
+
+#, php-format
+msgid "There is a new version of the %s available."
+msgstr "%s için mevcut yeni bir sürüm var."
+
+#, php-format
+msgid "View version %1$s details."
+msgstr "%1$s Versiyon ayrıntılarını görüntüle."
+
+#, php-format
+msgid "The theme folder name does not match the original theme folder name %1$s%3$s%2$s, you need to chnage the theme folder name back to be able to update the theme automatically, or you can update the theme manually via FTP."
+msgstr "%1$s%3$s%2$s Tema klasörü adı, orijinal tema klasörü adıyla eşleşmiyor, temayı otomatik olarak güncelleyebilmek için tema klasörünün adını geri yüklemeniz gerekiyor veya temayı manuel olarak FTP ile güncelleyebilirsiniz."
+
+msgid "How to update the theme manually?"
+msgstr "Temayı manuel olarak nasıl güncellerim?"
+
+msgid "Update Automatically"
+msgstr "Otomatik Olarak Güncelle"
+
+#, php-format
+msgid "Your Support Period has expired, %1$sAutomatic Theme Updates%2$s and %1$sSupport System Access%2$s have been disabled. %3$sRenew your Support Period%5$s. Once the support is renewed please go to the %4$stheme registration section%5$s and click on the %1$sRefresh expiration date%2$s button."
+msgstr "Destek Sürenizin süresi doldu, %1$sOtomatik Tema Güncellemeleri%2$s ve %1$sDestek Sistemi Erişimi%2$s devre dışı bırakıldı. %3$sDestek Sürenizi Yenileyin%5$s. Destek yenilendiğinde %4$stema kayıt bölümüne%5$s gidiniz ve %1$sson kullanma tarihini Yenile%2$s tuşuna basınız."
+
+msgid "Please Note: Any customizations you have made to theme files will be lost. Please consider using child themes for modifications."
+msgstr "Lütfen Dikkat: Tema dosyalarına yaptığınız tüm özelleştirmeler kaybolur. Lütfen değişiklikler için alt temaları kullanmayı düşünün."
+
+msgid "Congratulations"
+msgstr "Tebrikler"
+
+msgid "Your site is now validated!, Demo import and bundeled plugins are now unlocked."
+msgstr "Siteniz şimdi doğrulandı! Demoları içe aktarma ve paketlenmiş eklentiler artık kullanıma hazır."
+
+msgid "Your license is not validated. Click on the link below to unlock demo import, bundeled plugins and access to premium support."
+msgstr "Lisansınız doğrulanmadı. Demoları içe aktarma, paketlenmiş eklentiler ve üstün kaliteli desteğe erişim için aşağıdaki bağlantıyı tıklayın."
+
+msgid "NOTE: A separate license is required for each site using the theme."
+msgstr "NOT: Temayı kullanan her site için ayrı bir lisans gereklidir."
+
+msgid "Have a question about the license? Check this article."
+msgstr "Lisansla ilgili bir sorunuz mu var? Bu makaleyi kontrol et."
+
+msgid "You're almost finished!"
+msgstr "Neredeyse bitti!"
+
+msgid "Verify Now!"
+msgstr "Şimdi Onayla"
+
+msgid "Buy a License"
+msgstr "Lisans Satın Al"
+
+msgid "Authorization Failed"
+msgstr "Yetkilendirme Başarısız"
+
+msgid "ERROR"
+msgstr "HATA"
+
+msgid "Try again"
+msgstr "Tekrar Dene"
+
+msgid "Theme Registration"
+msgstr "Temayı Kaydet"
+
+msgid "Are you sure?"
+msgstr "Emin misin?"
+
+msgid "Revoke"
+msgstr "Yetki İptali"
+
+msgid "Your Support Period Expiring Soon"
+msgstr "Destek Döneminin Sona Erme Süresi"
+
+#, php-format
+msgid "Your Support Period expires on %1$s, active Support Period is requried for %2$sAutomatic Theme Updates%3$s and %2$sSupport System Access%3$s. %4$sGet an extra 6 months of support now%5$s. Once the support is renewed please click on the button bellow."
+msgstr "Destek Süreniz %1$s tarihinde bitecektir, %2$s Otomatik Tema Güncellemeleri%3$s ve %2$s Destek Sistemine Erişim%3$s için aktif Destek Süresi gereklidir. %4$s Ekstra 6 aylık desteği şimdi edinin%5$s. Destek yenilendiğinde lütfen alttaki tuşa basınız."
+
+msgid "Your Support Period is Active"
+msgstr "Destek Süreniz Aktif"
+
+msgid "Your Support Period Has Expired"
+msgstr "Destek Sürenizin Süresi Doldu"
+
+#, php-format
+msgid "Your Support Period has expired, %1$sAutomatic Theme Updates%2$s and %1$sSupport System Access%2$s have been disabled. %3$sRenew your Support Period%4$s. Once the support is renewed please click on the button bellow."
+msgstr "Destek Sürenizin süresi doldu, %1$sOtomatik Tema Güncellemeleri%2$s ve %1$sDestek Sistemi Erişimi%2$s devre dışı bırakıldı. %3$sDestek Sürenizi Yenileyin%5$s. Destek yenilendiğinde %4$stema kayıt bölümüne%5$s gidiniz ve %1$sson kullanma tarihini Yenile%2$s tuşuna basınız."
+
+msgid "Refresh Expiration Date"
+msgstr "Son Kullanma Tarihini Yenile"
+
+msgid "More info"
+msgstr "Daha fazla bilgi"
+
+msgid "Have you changed your mind? :)"
+msgstr "Fikrini mi değiştirdin? :)"
+
+#, php-format
+msgid "We noticed that you rated the theme %1$s stars. We are looking to improve our theme so if you need help, please %2$ssubmit a ticket through our support system%5$s or %3$ssubmit your feature requests%5$s, otherwise we highly appreciate your valuable five stars. %4$sClick here to change your rating%5$s."
+msgstr "Temayı %1$s yıldızla oyladığını fark ettik. Temamıza geliştirmeyi umuyoruz bu yüzden eğer yardıma ihtiyacın olursa lütfen %2$s destek sistemimize çağrı oluştur%5$s yada %3$s olmasını istediğin özellikleri bildir%5$s aksi takdirde değerli beş yıldızınıza minnet duyarız. %4$sOyunuzu değiştirmek için buraya tıklayınız%5$s."
+
+msgid "Getting Started"
+msgstr "Başlarken"
+
+#, php-format
+msgid "Welcome to %s"
+msgstr "Hoşgeldin %s"
+
+#, php-format
+msgid "I just installed the amazing %s #WordPress theme #tielabs"
+msgstr "Daha yeni harika %s Wordpress temasını kurdum #tielabs"
+
+#, php-format
+msgid "Version %s"
+msgstr "Sürüm %s"
+
+msgid "Header"
+msgstr "Üst Kısım"
+
+msgid "Footer"
+msgstr "Alt Kısım"
+
+msgid "Blocks"
+msgstr "Bloklar"
+
+msgid "Archives"
+msgstr "Arşiv"
+
+msgid "Single Post Page"
+msgstr "Tekil Yazı Sayfası"
+
+msgid "Share Buttons"
+msgstr "Paylaş Butonları"
+
+msgid "Sidebars"
+msgstr "Kenar çubukları"
+
+msgid "LightBox"
+msgstr "Işık kutusu (LightBox)"
+
+msgid "Typography"
+msgstr "Yazı Tipi"
+
+msgid "Translations"
+msgstr "Çeviriler"
+
+msgid "Social Networks"
+msgstr "Sosyal Ağlar"
+
+msgid "Mobile"
+msgstr "Mobil"
+
+msgid "AMP"
+msgstr "AMP"
+
+msgid "Web Notifications"
+msgstr "Web Bildirimleri"
+
+msgid "Advanced"
+msgstr "Gelişmiş"
+
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+msgid "bbPress"
+msgstr "bbPress"
+
+msgid "BuddyPress"
+msgstr "BuddyPress"
+
+msgid "Export/Import"
+msgstr "Dışa/İçe Aktar"
+
+msgid "Theme Options"
+msgstr "Tema Ayarları"
+
+msgid "Knowledge Base"
+msgstr "Bilgi Tabanı"
+
+#, php-format
+msgid "Activate %s"
+msgstr "%s Aktif"
+
+msgid "Update"
+msgstr "Güncelleme"
+
+msgid "Search"
+msgstr "Ara"
+
+#, php-format
+msgid "%1$s Copyright %2$s, All Rights Reserved &nbsp;|&nbsp; %3$s Theme by %4$s"
+msgstr "%1$s Telif Hakkı %2$s, Tüm Hakları Saklıdır&nbsp; | &nbsp; %3$s Tasarımcı %4$s"
+
+msgid "Custom Author widget"
+msgstr "Özel Yazar widget'ı"
+
+msgid "Custom Author widget content"
+msgstr "Özel Yazar widget içeriği"
+
+msgid "Supports: Text, HTML and Shortcodes."
+msgstr "Destekler: Metin, HTML ve Kısa Kodlar."
+
+msgid "- Select a menu -"
+msgstr "Menü Seç"
+
+#, php-format
+msgid "You are awesome! Thanks for using our theme, %s is now installed and ready to use! Get ready to build something beautiful :)"
+msgstr "Harikasın! Temamızı kullandığınız için teşekkürler, %s şimdi yüklü ve kullanıma hazır! Güzel bir şey inşa etmeye hazır olun :)"
+
+#, php-format
+msgid "Need help? We're here %s"
+msgstr "Yardıma mı ihtiyacınız var? Buradayız %s"
+
+msgid "Submit a Ticket"
+msgstr "Destek Gönder"
+
+msgid "Need one-to-one assistance? Get in touch with our Support team."
+msgstr "Bire bir yardıma mı ihtiyacınız var? Destek ekibimizle iletişime geçin."
+
+msgid "You need to validated your license to access the support system."
+msgstr "Destek sistemine erişmek için lisansınızı doğrulamanız gerekir."
+
+msgid "This is the place to go to reference different aspects of the theme."
+msgstr "Temanın farklı yönlerine atıfta bulunacak yer burası."
+
+msgid "Browse the Knowledge Base"
+msgstr "Bilgi Tabanına Göz Atın"
+
+msgid "Troubleshooting"
+msgstr "Sorunlar"
+
+msgid "If something is not working as expected, Please try these common solutions."
+msgstr "Bir şey beklendiği gibi çalışmıyorsa, lütfen bu genel çözümleri deneyin."
+
+msgid "Visit The Page"
+msgstr "Sayfayı Ziyaret Et"
+
+msgid "Section"
+msgstr "Bölüm"
+
+msgid "Edit Section"
+msgstr "Bölüm Düzenle"
+
+msgid "Section Title"
+msgstr "Bölüm Başlığı"
+
+msgid "(optional)"
+msgstr "(Opsiyon)"
+
+msgid "Title URL"
+msgstr "Başlık URL"
+
+msgid "Title Style"
+msgstr "Başlık Sitili"
+
+msgid "Centered"
+msgstr "Merkelenmiş"
+
+msgid "Big"
+msgstr "Büyük"
+
+msgid "Title Color"
+msgstr "Başlık Rengi"
+
+msgid "Section Width"
+msgstr "Bölüm Genişliği"
+
+msgid "100% Interior Content Width"
+msgstr "% 100 İç İçerik Genişliği"
+
+msgid "Select if the interior content is contained to site width or 100% width."
+msgstr "İç içeriğin site genişliği veya% 100 genişlikte olup olmadığını seçin."
+
+msgid "Sidebar Settings"
+msgstr "Sidebar Ayarları"
+
+msgid "Styling Settings"
+msgstr "Stil Ayarları"
+
+msgid "Custom Classes"
+msgstr "Kişisel Class"
+
+msgid "Margin Top"
+msgstr "Üst Kenar Uzaklığı"
+
+msgid "Margin Bottom"
+msgstr "Alt Kenar Uzaklığı"
+
+msgid "Add Block"
+msgstr "Blok Ekle"
+
+msgid "Predefined Sidebar"
+msgstr "Öntanımlı Kenar Çubuğu"
+
+msgid "Block Title"
+msgstr "Blok Başlığı"
+
+msgid "Ad"
+msgstr "Reklam"
+
+msgid "Tabs block"
+msgstr "Sekmeler bloğu"
+
+msgid "Edit Block"
+msgstr "Bloğu Düzenle"
+
+msgid "Advanced Settings"
+msgstr "Gelişmiş Seçenekler"
+
+msgid "Custom Title"
+msgstr "Özel Başlık"
+
+msgid "Products Categories"
+msgstr "Ürünler Kategorisi"
+
+msgid "Will overide the Categories option."
+msgstr "Kategoriler seçeneğini geçersiz kılar."
+
+msgid "Exclude Posts"
+msgstr "Mesajları Hariç Tut"
+
+msgid "Enter a post ID, or IDs separated by comma."
+msgstr "Bir yazı kimliği (ID) veya virgül ile ayrılmış birden fazla yazı kimliği girin."
+
+msgid "Last Modified Posts"
+msgstr "Son Değiştirilen Yazılar"
+
+msgid "Most Commented posts"
+msgstr "En Çok Yorumlanan Yazılar"
+
+msgid "Most Viewed posts"
+msgstr "En Çok Görüntülenen Yazılar"
+
+msgid "Sort Order"
+msgstr "Sıralama Düzeni"
+
+msgid "Offset - number of posts to pass over"
+msgstr "Taşı - Belirli bir kısımdan sonrasını ilet"
+
+msgid "Next and Previous Arrows"
+msgstr "Sonraki ve Önceki Okları"
+
+msgid "Show More"
+msgstr "Daha Fazla Göster"
+
+msgid "Ad Image"
+msgstr "Görsel Ekle"
+
+msgid "Ad URL"
+msgstr "Bağlantı Ekle"
+
+msgid "Alternative Text For The image"
+msgstr "Görsel için Alternatif Metin"
+
+msgid "Open The Link In a new Tab"
+msgstr "Link'i yeni bir sekmede aç"
+
+msgid "Nofollow?"
+msgstr "Takip edilmesin?"
+
+msgid "Custom Ad Code"
+msgstr "Özel Reklam Kodu"
+
+msgid "Slider Revolution"
+msgstr "Slider Revolution"
+
+msgid "No sliders found, add a slider first!"
+msgstr "Slayt bulunamadı, önce bir slayt ekleyin!"
+
+msgid "Show the content only?"
+msgstr "Sadece içeriği göster?"
+
+msgid "Without background, padding nor borders."
+msgstr "Arka plan, dolgu veya kenarlıksız."
+
+msgid "Ajax Filters"
+msgstr "Ajax Filtreler"
+
+msgid "Will not appear if the numeric pagination is active."
+msgstr "Sayısal sayfalandırma etkinse görünmez."
+
+msgid "More Button"
+msgstr "Biraz Daha Tuşu"
+
+msgid "Will not appear if the Block URL is empty."
+msgstr "Blok Link'i boşsa görünmez."
+
+msgid "Posts Title Length"
+msgstr "Yazı Başlığı Uzunluğu"
+
+msgid "Read More Button"
+msgstr "Daha Fazla Oku Tuşu"
+
+msgid "Hide thumbnail for the First post"
+msgstr "İlk yayın için küçük resimleri gizle"
+
+msgid "Hide small thumbnails"
+msgstr "Minik küçük resimleri gizle"
+
+msgid "Hide thumbnails"
+msgstr "Küçük resimleri gizle"
+
+msgid "Slider Speed in ms"
+msgstr "Ms cinsinden slayt hızı"
+
+#, php-format
+msgid "Default is: %s"
+msgstr "Varsayılan: %s"
+
+msgid "Animation Effect"
+msgstr "Animasyon Efekti"
+
+msgid "Typing"
+msgstr "Yazım"
+
+msgid "Fading"
+msgstr "Solan"
+
+msgid "Sliding Left"
+msgstr "Sola Kayan"
+
+msgid "Sliding Right"
+msgstr "Sağa Kayan"
+
+msgid "Sliding Up"
+msgstr "Yukarı Kayan"
+
+msgid "Sliding Down"
+msgstr "Aşağı Kayan"
+
+msgid "Show the scrolling arrows?"
+msgstr "Kaydırma oklarını göster?"
+
+#, php-format
+msgid "Block #%s"
+msgstr "Blok #%s"
+
+#, php-format
+msgid "Scrolling #%s"
+msgstr "Kaydırma #%s"
+
+msgid "News Ticker"
+msgstr "Haber Seçici"
+
+msgid "Ad Block"
+msgstr "Reklam Bloğu"
+
+msgid "Custom Content"
+msgstr "Özel İçerik"
+
+#, php-format
+msgid "WooCommerce #%s"
+msgstr "WooCommerce #%s"
+
+msgid "Use the Default Editor"
+msgstr "Varsayılan Düzenleyiciyi Kullan"
+
+msgid "Add Section"
+msgstr "Bölüm ekle"
+
+msgid "Save Changes"
+msgstr "Değişiklikleri Kaydet"
+
+msgid "TieLabs"
+msgstr "TieLabs"
+
+msgid "More Themes"
+msgstr "Daha Fazla Tema"
+
+msgid "Need Help? Search the knowledge base"
+msgstr "Yardıma mı ihtiyacınız var ? Bilgi bankasında arama yapın"
+
+msgid "Twitter"
+msgstr "Twitter"
+
+msgid "Facebook"
+msgstr "Facebook"
+
+msgid "Google+"
+msgstr "Google+"
+
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+msgid "StumbleUpon"
+msgstr "StumbleUpon"
+
+msgid "Pinterest"
+msgstr "Pinterest"
+
+msgid "Reddit"
+msgstr "Reddit"
+
+msgid "Tumblr"
+msgstr "Tumblr"
+
+msgid "VKontakte"
+msgstr "VKontakte"
+
+msgid "Odnoklassniki"
+msgstr "Odnoklassniki"
+
+msgid "Pocket"
+msgstr "Pocket"
+
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+msgid "For Mobiles Only"
+msgstr "Sadece Cep Telefonları İçin"
+
+msgid "Telegram"
+msgstr "Telegram"
+
+msgid "Viber"
+msgstr "Viber"
+
+msgid "Email"
+msgstr "E-Posta"
+
+msgid "Print"
+msgstr "Yazdır"
+
+msgid "Cache"
+msgstr "Önbellek"
+
+msgid "If enabled, some static parts like widgets, main menu and breaking news will be cached to reduce MySQL queries. Saving the theme settings, adding/editing/removing posts, adding comments, updating menus, activating/deactivating plugins, adding/editing/removing terms or updating WordPress, will flush the cache."
+msgstr "Etkinleştirilmişse, widget'lar, ana menü ve son dakika haberleri gibi bazı statik parçalar MySQL sorgularını azaltmak için önbelleğe alınacaktır. Tema ayarlarını kaydetme, mesajları ekleme / düzenleme / kaldırma, yorum ekleme, menüleri güncelleme, eklentileri etkinleştirme / devre dışı bırakma, terimleri ekleme / düzenleme / kaldırma veya WordPress'i güncelleme, önbelleği temizler."
+
+msgid "Minified CSS and JS files"
+msgstr "Küçültülmüş CSS ve JS dosyaları"
+
+msgid "Add a link to the theme options page to the Toolbar"
+msgstr "Tema ayarları sayfası linkini araç çubuğuna ekle"
+
+msgid "Disable GIF Featured Images"
+msgstr "GIF Özellikli Resimleri Devre Dışı Bırak"
+
+msgid "Disable the custom styles in the editor"
+msgstr "Düzenleyicideki özel stilleri devre dışı bırak"
+
+msgid "Disable the Posts Switcher"
+msgstr "Yazı Aktarıcıyı (Posts Switcher) Devre Dışı Bırak"
+
+msgid "This will disable the Switcher page, all notifications and hide the plugin from the Bundeled plugins installing page."
+msgstr "Bu, Switcher sayfasını ve tüm bildirimleri devre dışı bırakacak ve paketlenmiş eklentileri yükleme sayfasından gizleyecektir."
+
+msgid "Disable the Built-in Mega Menus"
+msgstr "Yerleşik Mega Menüleri Devre Dışı Bırakın"
+
+msgid "Use this option to disable the built-in mega menus feature if you want to use a third party mega menus plugin."
+msgstr "Üçüncü taraf bir mega menü eklentisi kullanmak istiyorsanız, yerleşik mega menüler özelliğini devre dışı bırakmak için bu seçeneği kullanın."
+
+msgid "WordPress Login page Logo"
+msgstr "WordPress Giriş sayfası Logo"
+
+msgid "WordPress Login page Logo URL"
+msgstr "WordPress Giriş sayfası Logo Linki"
+
+msgid "Reset All Settings"
+msgstr "Bütün Ayarları Sıfırla"
+
+msgid "This action can not be Undo. Clicking \"OK\" will reset your theme options to the default installation. Click \"Cancel\" to stop this operation."
+msgstr "Bu işlem geri alınamaz. \"Tamam\" ı tıkladığınızda tema seçeneklerinizi varsayılan yüklemeye sıfırlar. Bu işlemi durdurmak için \"İptal\" i tıklayın."
+
+msgid "Accelerated Mobile Pages"
+msgstr "Hızlandırılmış Mobil Sayfalar"
+
+msgid "AMP is a Google-backed project with the aim of speeding up the delivery of content through the use of stripped down code known as AMP HTML, it is a way to build web pages for static content (pages that don't change based on user behaviour), that allows the pages to load (and pre-render in Google search) much faster than regular HTML."
+msgstr "AMP, AMP HTML olarak bilinen soyulmuş kodların kullanılması yoluyla içeriğin yayınlanmasını hızlandırmak amacıyla Google destekli bir projedir. Bu, statik içerik için web sayfaları oluşturmanın bir yoludur (kullanıcılara göre değişmeyen sayfalar) davranışı), sayfaların normal HTML’den daha hızlı yüklenmesine (ve Google aramasında önceden oluşturulmasına) olanak tanır."
+
+msgid "You may need to enable pretty permalinks if it isn't working."
+msgstr "Çalışmıyorsa güzel permalinkleri etkinleştirmeniz gerekebilir.ss"
+
+#, php-format
+msgid "To access the AMP version go to any blog post and add %s to the end of the URL."
+msgstr "AMP sürümüne erişmek için herhangi bir blog yayınına gidin ve URL’nin sonuna %s ekleyin."
+
+msgid "Enable AMP"
+msgstr "AMP'yi etkinleştir"
+
+msgid "Post Settings"
+msgstr "Yazı Ayarları"
+
+msgid "Categories and Tags"
+msgstr "Kategoriler ve Etiketler"
+
+msgid "Facebook APP ID"
+msgstr "Facebook Uygulama ID"
+
+msgid "(Required)"
+msgstr "(Gereklidir)"
+
+msgid "Footer Settings"
+msgstr "Altbilgi Ayarları"
+
+msgid "Back to top button"
+msgstr "Başa dön tuşu"
+
+msgid "Footer Logo Image"
+msgstr "Altbilgi Logo Görseli"
+
+msgid "Footer Menu"
+msgstr "Altbilgi Menüsü"
+
+msgid "Variables"
+msgstr "Değişkenler"
+
+msgid "These tags can be included in the textarea above and will be replaced when a page is displayed."
+msgstr "Bu etiketler yukarıdaki metin alanına dahil edilebilir ve bir sayfa görüntülendiğinde değiştirilir."
+
+msgid "Replaced with the current year."
+msgstr "Geçerli yıl ile değiştirildi."
+
+msgid "Replaced with The site's name."
+msgstr "Sitenin adı ile değiştirildi."
+
+msgid "Replaced with The site's URL."
+msgstr "Sitenin Linki ile değiştirildi."
+
+msgid "Copyright Text"
+msgstr "Telif Hakkı Metini"
+
+msgid "Above Content"
+msgstr "İçeriğin Üstü"
+
+#, php-format
+msgid "Enter your Ad code, AMP pages support %1$s tag only, %2$sClick Here%3$s For More info."
+msgstr "Reklam kodunuzu girin, AMP sayfaları yalnızca %1$s etiketini destekliyor,  Daha fazla bilgi için %2$sBuraya Tıklayın%3$s."
+
+msgid "Below Content"
+msgstr "İçeriğin Altında"
+
+msgid "Header Background Color"
+msgstr "Üstbilgi Arkaplan Rengi"
+
+msgid "Post meta Color"
+msgstr "Yazı meta rengi"
+
+msgid "Links color"
+msgstr "Linklerin rengi"
+
+msgid "Footer color"
+msgstr "Altbilgi rengi"
+
+msgid "Underline text links on hover"
+msgstr "Linklerin altını çiz"
+
+#, php-format
+msgid "You need to install the %s Plugin first."
+msgstr "Önce %s Eklentisini yüklemeniz gerekir."
+
+msgid "Archives Settings"
+msgstr "Arşiv Ayarları"
+
+msgid "Global Archives Settings"
+msgstr "Genel Arşiv Ayarları"
+
+msgid "Disable Author name meta"
+msgstr "Yazar adı metasını devre dışı bırak"
+
+msgid "Disable Comments number meta"
+msgstr "Yorumların sayı metasını devre dışı bırak"
+
+msgid "Disable Views Number meta"
+msgstr "Görüntüleme Sayısı meta verisini devre dışı bırak"
+
+msgid "Default Layout Settings"
+msgstr "Varsayılan Düzen Ayarları"
+
+msgid "Category Page Settings"
+msgstr "Kategori Sayfası Ayarları"
+
+msgid "Category Description"
+msgstr "Kategori tanımı"
+
+msgid "Tag Page Settings"
+msgstr "Etiket Sayfa Ayarları"
+
+msgid "Tag Description"
+msgstr "Etiket Açıklaması"
+
+msgid "Author Page Settings"
+msgstr "Yazar Sayfası Ayarları"
+
+msgid "Author Bio"
+msgstr "Yazar Biyografisi"
+
+msgid "Search Page Settings"
+msgstr "Arama Sayfası Ayarları"
+
+msgid "Search in Category IDs"
+msgstr "Kategori Kimliklerinde (IDs) Ara"
+
+msgid "Use minus sign (-) to exclude categories. Example: (1,4,-7) = search only in Category 1 & 4, and exclude Category 7."
+msgstr "Kategorileri hariç tutmak için eksi işareti (-) kullanın. Örnek: (1,4, -7) = Sadece Kategori 1 ve 4'te arama yapın ve Kategori 7'yi hariç tutun."
+
+msgid "Exclude post types from search"
+msgstr "Aramada yazıları(Post) hariç tut"
+
+msgid "Background (in case Boxed / Framed / Bordered layout is enabled)"
+msgstr "Arkaplan (Kutulu / Çerçeveli / Kenarlık düzeni etkinse)"
+
+msgid "Export/Import Theme Options"
+msgstr "Tema Ayarlarını Dışarı Aktar / İçe Aktar"
+
+msgid "The theme options have been imported successfully."
+msgstr "Tema ayarları başarıyla içe aktarıldı."
+
+msgid "Export"
+msgstr "Dışarı Aktar"
+
+msgid "When you click the button below the theme will create a .dat file for you to save to your computer."
+msgstr "Aşağıdaki düğmeyi tıkladığınızda, tema bilgisayarınıza kaydedeceğiniz bir .dat dosyası oluşturacaktır."
+
+msgid "Once you’ve saved the download file, you can use the Import function in another WordPress installation to import the theme options from this site."
+msgstr "İndirme dosyasını kaydettikten sonra, bu sitedeki tema ayarlarını içe aktarmak için başka bir WordPress yüklemesinde İçe Aktar işlevini kullanabilirsiniz."
+
+msgid "Download Export File"
+msgstr "Dışa Aktarım Dosyasını İndir"
+
+msgid "Import"
+msgstr "İçeri Aktar"
+
+msgid "Upload your .dat theme options file and we will import the options into this site."
+msgstr ".datuzantılı tema ayarları dosyanızı yükleyin ve ayarları bu siteye aktaralım"
+
+msgid "Choose a (.dat) file to upload, then click Upload file and import."
+msgstr "Yüklemek için bir (.dat) dosyası seçin, ardından Dosya yükle ve içe aktar'ı tıklayın."
+
+msgid "Choose a file from your computer:"
+msgstr "Bilgisayarınızdan bir dosya seçin:"
+
+msgid "Upload file and import"
+msgstr "Dosya yükle ve içe aktar"
+
+msgid "bbPress Sidebar"
+msgstr "bbPress Kenar Çubuğu"
+
+msgid "Blocks Settings"
+msgstr "Blok Ayarları"
+
+msgid "Block Style"
+msgstr "Blok Stili"
+
+msgid "Clean"
+msgstr "Temizle"
+
+msgid "Block Head Style"
+msgstr "Blok Tepe Stili"
+
+msgid "Style"
+msgstr "Stil"
+
+msgid "Blocks Meta Settings"
+msgstr "Blok Meta Ayarları"
+
+msgid "Use the BuddyPress Member Profile link"
+msgstr "BuddyPress Üye Profili bağlantısını kullan"
+
+msgid "Use the BuddyPress Member Profile link instead of the default author page link in the post meta, author box and the login sections."
+msgstr "Gönderi meta, yazar kutusu ve giriş bölümlerinde varsayılan yazar sayfası bağlantısı yerine BuddyPress Üye Profili bağlantısını kullanın."
+
+msgid "Advertisement Settings"
+msgstr "Reklam Ayarları"
+
+msgid "It is recommended to avoid using words like ad, ads, adv, advert, advertisement, banner, banners, sponsor, 300x250, 728x90, etc. in the image names or image path to avoid AdBlocks from blocking your Ad."
+msgstr "AdBlock'ların Reklamınızı engellemesini önlemek için resim adlarında veya resim yolundaad, ads, adv, advert, advertisement, banner, banners, sponsor, 300x250, 728x90 vb. Kelimeleri kullanmamanız önerilir."
+
+msgid "Ad Blocker Detector"
+msgstr "Reklam Engelleyici Dedektörü"
+
+msgid "Block the adblockers from browsing the site, till they turnoff the Ad Blocker"
+msgstr "Reklam Engelleyiciyi kapatmadan siteye göz atmasını engelle"
+
+msgid "Background Image Ad"
+msgstr "Arka Plan Resmi Reklamı"
+
+msgid "Full Page Takeover"
+msgstr "Tüm Sayfayı Kapla"
+
+msgid "Site margin top"
+msgstr "Site üst kenar uzaklığı"
+
+msgid "Above Header Ad"
+msgstr "Üstbilgi üstü Relşam"
+
+msgid "Header Ad"
+msgstr "Üstbilgi Reklamı"
+
+msgid "Above Footer Ad"
+msgstr "Altbilgi Üstü Reklamı"
+
+msgid "Below the Header Ad"
+msgstr "Üstbilgi Altı Reklamı"
+
+msgid "Above Article Ad"
+msgstr "Makale Üstü Reklamı"
+
+msgid "Above Article Content Ad"
+msgstr "Makale İçeriği Üstlü Reklamı"
+
+msgid "Below Article Content Ad"
+msgstr "Makale İçeriği Altı Reklamı"
+
+msgid "Below Article Ad"
+msgstr "Makale Altı Rseklamı"
+
+#, php-format
+msgid "Between Posts in Archives #%s"
+msgstr "Arşivlerdeki Yazılar Arasındakiler #%s"
+
+#, php-format
+msgid "Article inline ad #%s"
+msgstr "Satır içi makale reklamı #%s"
+
+msgid "Number of posts before the Ad"
+msgstr "Reklamdan önceki yazı sayısı"
+
+msgid "Number of paragraphs before the Ad"
+msgstr "Reklamdan önceki paragraf sayısı"
+
+msgid "Ad Alignment"
+msgstr "Reklam Hizalama"
+
+msgid "Ad Title"
+msgstr "Reklam Başlığı"
+
+msgid "A title for the Ad, like Advertisement - leave this empty to disable."
+msgstr "Reklam için Reklam gibi bir başlık - devre dışı bırakmak için bu boş bırakın."
+
+msgid "Ad Title Link"
+msgstr "Reklam Başlığı Linki"
+
+msgid "AdRotate"
+msgstr "Reklam döndürme"
+
+msgid "Type"
+msgstr "Tür"
+
+msgid "Advert - Use Advert ID"
+msgstr "Reklam - Reklam Kimliği (ID) kullan"
+
+msgid "Group - Use group ID"
+msgstr "Grup - Grup kimliğini (ID) kullan"
+
+msgid "ID"
+msgstr "Kimlik (ID)"
+
+msgid "Shortcodes Ads"
+msgstr "Reklam Kısa Kodları"
+
+msgid "Ad Shortcode"
+msgstr "Reklam Kısa Kodu"
+
+msgid "Instagram Footer Area"
+msgstr "Instagram Footer Alanı"
+
+msgid "Username"
+msgstr "Kullanıcı Adı"
+
+msgid "Media Source"
+msgstr "Medya Kaynağı"
+
+msgid "User Account"
+msgstr "Kullanıcı Hesabı"
+
+msgid "Hash Tag"
+msgstr "Hashtag"
+
+msgid "Enter the Username or the Hash Tag"
+msgstr "Kullanıcı adı veya hashtag giriniz"
+
+msgid "Number of Rows"
+msgstr "Satır sayısı"
+
+msgid "One Row"
+msgstr "tek satır"
+
+msgid "Two Rows"
+msgstr "İki Satır"
+
+msgid "Link Images to"
+msgstr "Görüntüler Linki"
+
+msgid "Videos always linked to the Media Page on Instagram."
+msgstr "Videolar her zaman Instagram'daki Medya Sayfasına bağlantılıdır."
+
+msgid "Link Media to"
+msgstr "Medya Linki"
+
+msgid "Media File"
+msgstr "Medya Dosyası"
+
+msgid "Media Page on Instagram"
+msgstr "İngstram Medya Sayfası"
+
+msgid "Follow Us Button"
+msgstr "Bizi Takip Et Butonu"
+
+msgid "Follow Us Button Text"
+msgstr "Bizi Takip Et Buton Metni"
+
+msgid "Follow Us Button URL"
+msgstr "Bizi Takip Et Buton URL'si"
+
+msgid "Footer Widgets layout"
+msgstr "Altbilgi Widget'ları düzeni"
+
+msgid "First Footer Widgets Area"
+msgstr "İlk Altbilgi Widget Alanı"
+
+msgid "Add border around the widgets area"
+msgstr "Widget alanının çevresine sınır ekle"
+
+msgid "Second Footer Widgets Area"
+msgstr "İkinci Altbilgi Widget Alanı"
+
+msgid "Copyright Area"
+msgstr "Telif Hakkı Alanı"
+
+msgid "Centered Layout"
+msgstr "Ortalanmış Düzen"
+
+msgid "Social Icons"
+msgstr "Sosyal Simgeleri"
+
+msgid "Footer Text One"
+msgstr "Altbilgi Metni Bir"
+
+msgid "Footer Text Two"
+msgstr "Altbilgi Metni İki"
+
+msgid "General Settings"
+msgstr "Genel Ayarlar"
+
+msgid "Date Settings"
+msgstr "Tarih Ayarları"
+
+msgid "Date format for blog posts"
+msgstr "Blog gönderileri için tarih biçimi"
+
+msgid "Traditional"
+msgstr "Geleneksel"
+
+msgid "Time Ago Format"
+msgstr "Geçmiş Zaman Formatı"
+
+msgid "Disable all"
+msgstr "Tümünü devre dışı bırak"
+
+msgid "Show the date depending on"
+msgstr "Tarihe bağlı olarak göster"
+
+msgid "Post Published Date"
+msgstr "Yayınlanma Tarihi"
+
+msgid "Post Modified Date"
+msgstr "Yazı Değişiklik Tarihi"
+
+msgid "Breadcrumbs Settings"
+msgstr "İçerik Haritası Ayarları"
+
+msgid "Breadcrumbs"
+msgstr "İçerik Haritası"
+
+msgid "Breadcrumbs Delimiter"
+msgstr "İçerik Haritası Sınırlayıcı (Delimiter)"
+
+msgid "Trim Text Settings"
+msgstr "Metin Kırpma (Trim Text) Ayarları"
+
+msgid "Trim text by"
+msgstr "Metini kırpan"
+
+msgid "Words"
+msgstr "Kelimeler"
+
+msgid "Characters"
+msgstr "Karakterler"
+
+msgid "Post format icon on hover"
+msgstr "Yazı formatı simgesinin üzerindeyken"
+
+msgid "Show the post format icon on hover?"
+msgstr "Yazı formatı simgesini üzerindeyken göster?"
+
+msgid "Custom Codes"
+msgstr "Özel kodlar"
+
+msgid "Header Code"
+msgstr "Üst Kısım (Header) Kodu"
+
+msgid "Will add to the &lt;head&gt; tag. Useful if you need to add additional codes such as CSS or JS."
+msgstr "&lt;Head&gt; etiketine eklenir. CSS veya JS gibi ek kodlar eklemeniz gerekiyorsa kullanışlıdır."
+
+msgid "Footer Code"
+msgstr "Altbilgi Kodu"
+
+msgid "Will add to the footer before the closing  &lt;/body&gt; tag. Useful if you need to add Javascript."
+msgstr "Kapanış &lt;/ body&gt; etiketinden önce altbilgi ekleyecektir. Javascript eklemeniz gerekiyorsa kullanışlıdır."
+
+msgid "Header Settings"
+msgstr "Üst Kısım Ayarları"
+
+msgid "Header Layout"
+msgstr "Üst Kısım Düzeni"
+
+msgid "Main Nav Settings"
+msgstr "Ana Gezinti (Main Nav) Ayarları"
+
+msgid "Secondry Nav Settings"
+msgstr "İkincil Gezinti (Secondary Nav) Ayarları"
+
+msgid "Boxed Layout"
+msgstr "Kutulu Yerleşim"
+
+msgid "Below The Header"
+msgstr "Üst Kısmın Altında"
+
+msgid "Today's date"
+msgstr "Bugünün tarihi"
+
+msgid "Today's date format"
+msgstr "Bugünün tarih formatı"
+
+msgid "Documentation on date and time formatting"
+msgstr "Tarih ve saat formatındaki dokümanlar"
+
+msgid "Left Area"
+msgstr "Sol alan"
+
+msgid "Menu"
+msgstr "Menü"
+
+msgid "Breaking News"
+msgstr "Son Dakika Haberleri"
+
+msgid "Right Area"
+msgstr "Sağ Alan"
+
+msgid "Secondry Nav Components"
+msgstr "İkincil Gezinti (Nav) Bileşenleri"
+
+msgid "Title"
+msgstr "Başlık"
+
+msgid "Trending"
+msgstr "Trend"
+
+msgid "Enter a tag name, or names separated by comma."
+msgstr "Bir etiket adı veya virgülle ayrılmış adlar girin."
+
+msgid "Text and Link are required."
+msgstr "Metin ve Link gerekli."
+
+msgid "Above The Header"
+msgstr "Başlığın üstünde"
+
+msgid "Main Nav Components"
+msgstr "Ana Gezinti (Nav) Bileşenleri"
+
+msgid "Sticky Menu"
+msgstr "Yapışkan Menü"
+
+msgid "Sticky Menu behavior"
+msgstr "Yapışkan Menü davranışı"
+
+msgid "When scrolling upwards"
+msgstr "Yukarı doğru kaydırırken"
+
+msgid "Sticky Menu Logo"
+msgstr "Yapışkan Menü Logosu"
+
+msgid "Custom Sticky Menu Logo"
+msgstr "Özel Yapışkan Menü Logosu"
+
+msgid "Use this option to set a custom logo in the sticky menu or Disable it to use the main logo."
+msgstr "Yapışkan menüde özel bir logo ayarlamak için bu seçeneği kullanın veya ana logoyu kullanmak için Devre Dışı Bırak seçeneğini kullanın."
+
+msgid "Live Search"
+msgstr "Canlı Arama"
+
+msgid "Search Layout"
+msgstr "Arama Düzeni"
+
+msgid "Compact"
+msgstr "Kompakt"
+
+msgid "Type To Search"
+msgstr "Aramaya Yaz"
+
+msgid "Slide Sidebar"
+msgstr "Kenar çubuğunu kaydır"
+
+msgid "Log In"
+msgstr "Kayıt Ol"
+
+msgid "Random Article Button"
+msgstr "Rastgele Makale Tuşu"
+
+msgid "Shopping Cart"
+msgstr "Alışveriş kartı"
+
+msgid "BuddyPress Notifications"
+msgstr "BuddyPress Bildirimleri"
+
+msgid "Social icons layout"
+msgstr "Sosyal simgeler düzeni"
+
+msgid "Menu with names"
+msgstr "Menü isimleri ile"
+
+msgid "Grid Menu"
+msgstr "Izgara Menüsü"
+
+msgid "Weather"
+msgstr "Hava Durumu"
+
+msgid "Location"
+msgstr "Lokasyon"
+
+msgid "(i.e: London,UK or New York City)"
+msgstr "(mesela: İstanbul,TR)"
+
+msgid "Custom City Name"
+msgstr "Özel şehir adı"
+
+msgid "API Key"
+msgstr "API Anahtarı"
+
+msgid "How to get your API Key?"
+msgstr "API Anahtarınız nasıl alınır?"
+
+msgid "Units"
+msgstr "Birimler"
+
+msgid "Animated Icons?"
+msgstr "Animasyonlu Simgeler?"
+
+msgid "Site Width"
+msgstr "Site Genişliği"
+
+msgid "Controls the overall site width. In px or %, ex: 100% or 1170px."
+msgstr "Genel site genişliğini kontrol eder. Px veya %, örn: 100% veya 1170px."
+
+msgid "Theme Layout"
+msgstr "Tema Düzeni"
+
+msgid "Loader Icon"
+msgstr "Yükleyici Simgesi"
+
+msgid "Lightbox Settings"
+msgstr "Işık Kutusu (LightBox) Ayarları"
+
+msgid "Enable Lightbox Automatically"
+msgstr "Işık Kutusunu (LightBox)s Otomatik Olarak Etkinleştir"
+
+msgid "Enable Lightbox automatically for all images linked to an image file in the post content area"
+msgstr "Yazı içeriği alanındaki bir görüntü dosyasına bağlı tüm resimler için Işık Kutusunu otomatik olarak etkinleştir"
+
+msgid "Lightbox for Galleries"
+msgstr "Galeriler için Işık Kutusu"
+
+msgid "Enable Lightbox automatically for all images added via [gallery] shortcode in the content area"
+msgstr "İçerik alanında [gallery] kısa koduyla eklenen tüm resimler için Işık Kutusunu otomatik olarak etkinleştir"
+
+msgid "Lightbox Skin"
+msgstr "Işık Kutusu Stili"
+
+msgid "Lightbox Thumbnail Position"
+msgstr "Işık Kutusu Küçük Resim Konumu"
+
+msgid "Vertical"
+msgstr "Dikey"
+
+msgid "Horizontal"
+msgstr "Yatay"
+
+msgid "Show Lightbox Arrows"
+msgstr "Işık Kutusu Oklarını Göster"
+
+msgid "Favicon"
+msgstr "Site Simgesi"
+
+msgid "Click here to set a Site Icon (favicon)"
+msgstr "Site Simgesini ayarlamak için buraya tıklayın (favicon)"
+
+msgid "Mobile Settings"
+msgstr "Mobil Ayarlar"
+
+msgid "Disable the Responsiveness"
+msgstr "Uyumluluğu Devre Dışı Bırak"
+
+msgid "This option works only on Tablets and Phones."
+msgstr "Bu seçenek sadece Tabletlerde ve Telefonlarda çalışır."
+
+msgid "Mobile Header"
+msgstr "Mobil Üst Kısım"
+
+msgid "Sticky Header"
+msgstr "Yapışkan Başlık"
+
+msgid "Mobile Menu"
+msgstr "Mobil Menü"
+
+msgid "Mobile Menu Layout"
+msgstr "Mobil Menü Düzeni"
+
+msgid "Show menu text beside the icon"
+msgstr "Simgenin yanında menü metnini göster"
+
+msgid "Parent items as links"
+msgstr "Ana başlık linkleri"
+
+msgid "If disabled, parent menu items will only toggle child items."
+msgstr "Devre dışı ise, üst menü öğeleri yalnızca alt öğeleri açacaktır."
+
+msgid "Include the Top Menu items"
+msgstr "Üst Menü öğelerini dahil et"
+
+msgid "Show the icons"
+msgstr "Simgeleri göster"
+
+msgid "Main Nav Menu"
+msgstr "Ana Gezinti Menüsü"
+
+msgid "Main Nav and Secondary Nav Menus"
+msgstr "Ana Gezinme ve İkincil Gezinme Menüleri"
+
+msgid "Compact the post content and show more button"
+msgstr "Gönderi içeriğini sıkıştırın ve daha fazla tuşunu gösterin"
+
+msgid "Mobile Elements"
+msgstr "Mobil Öğeler"
+
+msgid "Hide Above header Ad"
+msgstr "Üstbilgi Üstü Reklamını Gizle"
+
+msgid "Hide header Ad"
+msgstr "Üstbilgi Reklamını gizle"
+
+msgid "Hide Below the header Ad"
+msgstr "Üstbilgi Altındaki Reklamı Gizle"
+
+msgid "Hide above the footer Ad"
+msgstr "Altbilgi Üstü Reklamını Gizle"
+
+msgid "Hide Header Breaking News"
+msgstr "Üstbilgi Son Dakika Haberlerini Gizle"
+
+msgid "Hide all sidebars"
+msgstr "Tüm kenar çubuklarını gizle"
+
+msgid "Hide Instagram Media Above Footer"
+msgstr "Altbilgi Üstündeki İnstagram Medyalarını Gizle"
+
+msgid "Hide copyright area"
+msgstr "Telif hakkı alanını gizle"
+
+msgid "Hide Breadcrumbs"
+msgstr "İçerik Haritasını Gizle (.../.../.../.../)"
+
+msgid "Hide Above Post share Buttons"
+msgstr "Yazının Üstündeki Paylaşma Tuşlarını Gizle"
+
+msgid "Hide Below Post share Buttons"
+msgstr "Yazının Altındaki Paylaşma Tuşlarını Gizle"
+
+msgid "Hide Below Post Newsletter"
+msgstr "Yazı Altı Bülteni Gizle"
+
+msgid "Hide Below Post Read Next"
+msgstr "Yazının Altını Gizle Sonrakini Oku"
+
+msgid "Hide Below Post Related posts"
+msgstr "Yazı Altındaki İlgili Yazıları Gizle"
+
+msgid "Hide Below Post Author Box"
+msgstr "Yazı Altındaki Yazar Kutusunu Gizle"
+
+msgid "Hide Below Post Next/Prev posts"
+msgstr "Yazı Altındaki Sonraki/Önceki Yazı Kısmını Gizle"
+
+msgid "Hide Back to top button"
+msgstr "Başa dön tuşunu gizle"
+
+msgid "Sticky Mobile Share Buttons"
+msgstr "Yapışkan Mobil Paylaşma Tuşları"
+
+msgid "Post Views Settings"
+msgstr "Yazı Görüntüleme Ayarları"
+
+msgid "Post Views Source"
+msgstr "Yazı Görüntüleme Kaynağı"
+
+msgid "Theme's module"
+msgstr "Tema modülü"
+
+msgid "Jetpack plugin by Automattic"
+msgstr "Otomatik olarak Jetpack eklentisi"
+
+msgid "Third party post views plugin"
+msgstr "Üçüncü taraf yazı görüntüleme eklentisi"
+
+msgid "Post meta field"
+msgstr "Yazı meta alanı"
+
+msgid "Chnage this if you have used a post views plugin before."
+msgstr "Daha önce bir yazı görüntüleme eklentisi kullandıysanız bunu değiştirin."
+
+msgid "Starter Post Views number"
+msgstr "Başlangıç Mesajı Görüntüleme sayısı"
+
+msgid "This will applied on the new Posts only."
+msgstr "Bu sadece yeni Mesajlara uygulanacaktır."
+
+msgid "Colored Post Views Numbers"
+msgstr "Renkli Yazı Görüntüleme Numaraları"
+
+#, php-format
+msgid "%s Min. Views Number"
+msgstr "%s Min. Görüntüleme Sayısı"
+
+msgid "WARM"
+msgstr "ILIK"
+
+msgid "HOT"
+msgstr "SICAK"
+
+msgid "VERY HOT"
+msgstr "ÇOK SICAK"
+
+msgid "Single Post Page Settings"
+msgstr "Tek Yazı Sayfası Ayarları"
+
+msgid "Default Posts Layout"
+msgstr "Varsayılan Yazılar Düzeni"
+
+msgid "Default Schema type"
+msgstr "Varsayılan Şema türü"
+
+msgid "Video Post Format:"
+msgstr "Video Gönderi Biçimi:"
+
+msgid "Sticky the Featured Video"
+msgstr "Öne Çıkan Videoyu Yapıştırma"
+
+msgid "Open Graph meta"
+msgstr "Grafik metasını aç"
+
+msgid "Default Open Graph Image"
+msgstr "Varsayılan Açık Grafik Resmi"
+
+msgid "Reading Position Indicator"
+msgstr "Okuma Pozisyonu Göstergesi"
+
+msgid "Post Author Box"
+msgstr "Yazar Kutusu"
+
+msgid "In Post Responsive Tables"
+msgstr "Yazı uyumlu tablolar"
+
+msgid "Disable this option if you use a custom responsive tables plugin."
+msgstr "Özel uyumluluk tablo eklentisi kullanıyorsanız bu seçeneği devre dışı bırakın."
+
+msgid "Post info Settings"
+msgstr "Yazı bilgisi ayarları"
+
+msgid "Post meta area"
+msgstr "Yazı meta alanı"
+
+msgid "Author"
+msgstr "Yazar"
+
+msgid "Author's Avatar"
+msgstr "Yazarın Profil Fotoğrafı"
+
+msgid "Twitter Icon"
+msgstr "Twitter Simgesi"
+
+msgid "Email Icon"
+msgstr "E-Posta Simgesi"
+
+msgid "Date"
+msgstr "Tarih"
+
+msgid "Comments"
+msgstr "Yorumlar"
+
+msgid "Views"
+msgstr "Görüntüleme"
+
+msgid "Estimated reading time"
+msgstr "Tahmini okuma süresi"
+
+msgid "Text above the Email input field"
+msgstr "E-posta giriş alanının üstündeki metin"
+
+msgid "MailChimp Form Action URL"
+msgstr "Mailchimp Form Eylem Linki"
+
+msgid "Feedburner ID"
+msgstr "Feedburner Kimliği (ID)"
+
+msgid "Related Posts Position"
+msgstr "İlgili Mesajlar Pozisyonu"
+
+msgid "Below The Post"
+msgstr "Yazının Altında"
+
+msgid "Below The Comments"
+msgstr "Yorumun Altında"
+
+msgid "Above The Footer"
+msgstr "Altbilginin Üstünde"
+
+msgid "Number of posts to show in Full width pages"
+msgstr "Tam genişlikte sayfalarda gösterilecek yazı sayısı"
+
+msgid "Posts in the same Categories"
+msgstr "Aynı Kategorideki Yazılar"
+
+msgid "Posts in the same Tags"
+msgstr "Aynı Etiketlerdeki Yazılar"
+
+msgid "Posts by the same Author"
+msgstr "Aynı Yazarın Yazıları"
+
+msgid "Read Next Slider"
+msgstr "Sonraki Kaydırıcıyı Oku"
+
+msgid "Read Next Style"
+msgstr "Sonraki Stili Oku"
+
+#, php-format
+msgid "Read Next #%s"
+msgstr "Sonrakini Oku #%s"
+
+msgid "Check Also"
+msgstr "Göz Atın"
+
+msgid "Check Also Box Position"
+msgstr "Göz Atın Kutusu Pozisyonu"
+
+msgid "Share Settings"
+msgstr "Paylaşım Ayarları"
+
+msgid "Share Buttons for Pages"
+msgstr "Sayfalar için Paylaş Tuşları"
+
+msgid "Use the post's Short Link"
+msgstr "Gönderinin Kısa Bağlantısını Kullan"
+
+msgid "Twitter Username"
+msgstr "Twitter Kullanıcı Adı"
+
+msgid "Center the buttons"
+msgstr "Tuşları ortala"
+
+msgid "Show the share title"
+msgstr "Paylaşım başlığını göster"
+
+#, php-format
+msgid "You can change the \"%s\" text from the Translation tab."
+msgstr "\"%s\" metnini Çeviri sekmesinden değiştirebilirsiniz."
+
+msgid "Share"
+msgstr "Paylaş"
+
+msgid "Share Buttons Style"
+msgstr "Paylaşım Tuşları Stili"
+
+msgid "Select and Share"
+msgstr "Seç ve Paylaş"
+
+msgid "When you double-click a word or highlight a few words, a small share icons are displayed. When you click an icon, a share modal will automatically launch, containing the text you selected along with a link to the post."
+msgstr "Bir kelimeyi çift tıklattığınızda veya birkaç kelimeyi vurguladığınızda, küçük bir paylaşım simgesi görüntülenir. Bir simgeyi tıklattığınızda, seçtiğiniz metne yazıyla bir bağlantı içeren bir paylaşım modeli otomatik olarak başlayacaktır."
+
+msgid "Sidebars Settings"
+msgstr "Kenar Çubuğu Ayarları"
+
+msgid "Widgets icon"
+msgstr "Widget'lar simgesi"
+
+msgid "Default Sidebar Position"
+msgstr "Varsayılan Kenar Çubuğu Konumu"
+
+msgid "Add Custom Sidebar"
+msgstr "Özel Kenar Çubuğu Ekle"
+
+msgid "Sidebar Name"
+msgstr "Kenar Çubuğu Adı"
+
+msgid "Please add a name for the sidebar."
+msgstr "Lütfen kenar çubuğu için bir ad ekleyin."
+
+msgid "Custom Sidebars"
+msgstr "Özel Kenar Çubukları"
+
+msgid "Home Sidebar"
+msgstr "Ana Kenar Çubuğu"
+
+msgid "Single Page Sidebar"
+msgstr "Tek Sayfa Kenar Çubuğu"
+
+msgid "Single Article Sidebar"
+msgstr "Tek Makale Kenar Çubuğu"
+
+msgid "Archives Sidebar"
+msgstr "Arşivler Kenar Çubuğu"
+
+msgid "RSS"
+msgstr "RSS"
+
+msgid "Custom Social Network"
+msgstr "Özel Sosyal Ağ"
+
+msgid "Icon"
+msgstr "ikon"
+
+msgid "Use the full Font Awesome icon name"
+msgstr "Tam Font Awesome ikon adını kullanın"
+
+msgid "URL"
+msgstr "Link"
+
+msgid "Lazy Load For Images"
+msgstr "Görseller için indikçe yüklenen mod"
+
+msgid "Apply custom styling by inline code"
+msgstr "Satır içi kod ile özel stil uygulayın"
+
+msgid "check this option if you have problems with styling because of styling file rewrite permissions."
+msgstr "stil dosyası yeniden yazma izinleri nedeniyle şekillendirme ile ilgili sorunlarınız varsa bu seçeneği işaretleyin."
+
+msgid "Custom Body Classes"
+msgstr "Özel Gövde (Body) Sınıfları"
+
+msgid "Predefined skins"
+msgstr "Öntanımlı kaplamalar  (Skin)"
+
+msgid "Choose a Skin"
+msgstr "Bir kaplama (Skin) seçin"
+
+msgid "Blue"
+msgstr "Mavi"
+
+msgid "Yellow"
+msgstr "Sarı"
+
+msgid "Alizarin"
+msgstr "Alizarin - Kök Kırmızısı"
+
+msgid "Sand"
+msgstr "Sand - Kum"
+
+msgid "Royal"
+msgstr "Royal - Asil"
+
+msgid "Mint"
+msgstr "Mint - Nane"
+
+msgid "Stylish Red"
+msgstr "Stylish Red - Şık Kırmızı"
+
+msgid "Twilight"
+msgstr "Twilight Alaca Karanlık"
+
+msgid "Coffee"
+msgstr "Coffee - Kahve"
+
+msgid "Ocean"
+msgstr "Ocean - Okyanus"
+
+msgid "Cyan"
+msgstr "Cyan Mavi"
+
+msgid "Sahifa"
+msgstr "Sahifa"
+
+msgid "Mist"
+msgstr "Mist - Sis"
+
+msgid "Serene"
+msgstr "Serene - Huzurlu"
+
+msgid "Fall"
+msgstr "Fall - Sonbahar"
+
+msgid "Custom Primary Color"
+msgstr "Özel Birincil Renk"
+
+msgid "Body"
+msgstr "Gövde"
+
+msgid "Disable Boxed/Framed Layout Shadows"
+msgstr "Kutulu / Çerçeveli Düzen Gölgelerini Devre Dışı Bırak / Disable Boxed/Framed Layout Shadows"
+
+msgid "Highlighted Text Color"
+msgstr "Vurgulanan (Highlighted) Metin Rengi"
+
+msgid "Links Text Color"
+msgstr "Linklerin Metin Rengi"
+
+msgid "Links text HOVER color"
+msgstr "Linklerin Üzerine Gelindeğindeki Metin Rengi"
+
+msgid "Borders Color"
+msgstr "Çerçevelik Rengi"
+
+msgid "Secondary Nav"
+msgstr "İkincil Gezinti (Nav)"
+
+msgid "Text Color"
+msgstr "Metin Rengi"
+
+msgid "Links Color"
+msgstr "Linklerin Rengi"
+
+msgid "Links Color on mouse over"
+msgstr "Linklerin Üzerindeykenki Rengi"
+
+msgid "Breaking news label background"
+msgstr "Son dakika haber etiket arka planı"
+
+msgid "Rainbow Line Above Header"
+msgstr "Üstbilgi Üstündeki Gökkuşağı (Rainbow) Çizgisi"
+
+msgid "Disable Header Shadows"
+msgstr "Üstbilgi Gölgelerini Devre Dışı Bırak"
+
+msgid "Main Navigation Styling"
+msgstr "Ana Gezinme Şekillendirici"
+
+msgid "Main Nav Border Top Color"
+msgstr "Ana Nav Üst Kenar Rengi"
+
+msgid "Main Nav Border Top Width"
+msgstr "Ana Nav Üst Kenar Genişliği"
+
+msgid "Main Nav Border Bottom Color"
+msgstr "Ana Nav Alt Kenar Rengi"
+
+msgid "Main Nav Border Bottom Width"
+msgstr "Ana Nav Alt Kenar Genişliği"
+
+msgid "Main Content Styling"
+msgstr "Ana İçerik Tasarımı"
+
+msgid "In Post Links Color"
+msgstr "Yazı Linkleri Rengi"
+
+msgid "In Post Links Color on mouse over"
+msgstr "Yazıdaki Linklerin Üzerine Gelinceki Rengi"
+
+msgid "Footer Border Top"
+msgstr "Altbilgi Üst Kenar"
+
+msgid "Widgets Title color"
+msgstr "Widget'lar Başlık rengi"
+
+msgid "Footer Margin Top"
+msgstr "Altbilgi Üst Kenar Uzaklığı"
+
+msgid "Footer Padding Top"
+msgstr "Altbilgi Üst Kenar iç Uzaklığı"
+
+msgid "Footer Padding Bottom"
+msgstr "Altbilgi Üst iç Uzaklığı"
+
+msgid "Back to top button Background Color"
+msgstr "Başa dön Tuşu Arka plan Rengi"
+
+msgid "Back to top button Arrow Color"
+msgstr "Başa dön düğmesi Ok Rengi"
+
+msgid "Mobile Menu Icon"
+msgstr "Mobil Menü Simgesi"
+
+msgid "links color"
+msgstr "linklerin rengi"
+
+msgid "Social Icons color"
+msgstr "Sosyal Simgeler rengi"
+
+msgid "Search Button color"
+msgstr "Arama Düğmesi rengi"
+
+msgid "Mobile Menu Background"
+msgstr "Mobil Menü Arkaplan"
+
+msgid "Gradient"
+msgstr "Degrade / Gradient"
+
+msgid "Background Gradient Color 1"
+msgstr "Arka Plan Degrade Renk 1"
+
+msgid "Background Gradient Color 2"
+msgstr "Arka Plan Degrade Renk 2"
+
+msgid "Tablets"
+msgstr "Tabletler"
+
+msgid "768px - 1024px"
+msgstr "768px - 1024px"
+
+msgid "Phones"
+msgstr "Telefonlar"
+
+msgid "0 - 768px"
+msgstr "0 - 768px"
+
+msgid "Translations Settings"
+msgstr "Çeviri Ayarları"
+
+msgid "Typography Settings"
+msgstr "Tipografi Ayarları"
+
+msgid "Body Font Family"
+msgstr "Gövde Font Ailesi"
+
+msgid "Headings Font Family"
+msgstr "Üst kısım Font Ailesi"
+
+msgid "Primary menu Font Family"
+msgstr "Ana Menü Font Ailesi"
+
+msgid "Blockquote Font Family"
+msgstr "Alıntı Bloğu Font Ailesi"
+
+msgid "Theme Defaults"
+msgstr "Tema Varsayılanları"
+
+msgid "Standard Fonts"
+msgstr "Standart Yazı Tipleri"
+
+msgid "Google Fonts"
+msgstr "Google Yazı Tipleri"
+
+msgid "FontFace.me Fonts"
+msgstr "FontFace.me Yazı Tipleri"
+
+msgid "Upload Custom Font"
+msgstr "Özel Yazı Tipi Yükleyin"
+
+msgid "Any external fonts (e.g. Typekit)"
+msgstr "Herhangi bir harici yazı tipi (ör. Typekit)"
+
+msgid "Font Family"
+msgstr "Font Ailesi"
+
+msgid "Choosing a lot of Variants may make your pages slow to load."
+msgstr "Çok sayıda Varyantı seçmek sayfalarınızın yüklenmesini yavaşlatabilir."
+
+msgid "Font Variants"
+msgstr "Yazı Tipi Varyantları"
+
+msgid "Please, make sure that chosen font supports chosen weight."
+msgstr "Lütfen seçilen yazı tipinin seçilen genişliği desteklediğinden emin olun."
+
+msgid "Thin 100 Italic"
+msgstr "İnce  İtalik 100"
+
+msgid "Extra 200 Light Italic"
+msgstr "Ekstra Hafif İtalik 200"
+
+msgid "Light 300 Italic"
+msgstr "Hafif İtalik 300"
+
+msgid "Regular 400 Italic"
+msgstr "Normal İtalik 400"
+
+msgid "Medium 500 Italic"
+msgstr "Orta İtalik 500"
+
+msgid "Semi 600 Bold Italic"
+msgstr "Yarı Kalın İtalik 600"
+
+msgid "Bold 700 Italic"
+msgstr "Kalın İtalik 700"
+
+msgid "Extra 800 Bold Italic"
+msgstr "Ekstra Kalın İtalik 800"
+
+msgid "Black 900 Italic"
+msgstr "Siyah İtalik 900"
+
+msgid "Embed code for the &lt;head&gt; section"
+msgstr "&lt;Head&gt; bölümü için embed kodu"
+
+msgid "Enter the value for 'font-family' attribute, also you can specify the stack of the fonts."
+msgstr "'Font-family' özniteliği için değeri girin, ayrıca fontların kümesini de belirtebilirsiniz."
+
+#, php-format
+msgid "%s Font File"
+msgstr "%s Yazı Tipi Dosyası"
+
+msgid "Google Web Font Character sets"
+msgstr "Google Web Yazı Karakteri Setleri"
+
+msgid "Choosing a lot of Character sets may make your pages slow to load."
+msgstr "Çok sayıda Karakter kümesi seçmek sayfalarınızın yüklenmesini yavaşlatabilir."
+
+msgid "Latin charset by default. Include additional character sets for fonts (make sure at http://www.google.com/fonts/ before that charset is available for chosen font)"
+msgstr "Varsayılan olarak Latin karakter kümesi. Yazı tipleri için ek karakter kümelerini dahil et (seçili yazı tipi için bu karakter kümesini önce http://www.google.com/fonts/ adresinden kontrol edin)"
+
+msgid "Font Sizes, Weights and Line Heights"
+msgstr "Yazı Tipi Boyutları, Genişlikleri ve Satır Yükseklikleri"
+
+msgid "Font Weight Tips:"
+msgstr "Yazı Tipi Genişlik İpuçları:"
+
+msgid "- If you use a google font, make sure to load the font weight in 'Google Font Variants' field that corresponds to the one in parenthesis here."
+msgstr "- Eğer bir google yazı tipi kullanırsanız, font parantezini burada 'parantez içinde' yazan 'Google Yazı Tipi Varyantları' alanına yüklediğinizden emin olun."
+
+msgid "- Browser standard fonts in general support only 'Normal (400)' and 'Bold (700)' font weights."
+msgstr "- Tarayıcı standart fontları genel olarak sadece 'Normal (400)' ve 'Bold (700)' font ağırlıklarını destekler."
+
+msgid "Header Site name"
+msgstr "Üstbilgi Site Adı"
+
+msgid "Secondary Menu"
+msgstr "İkincil Menü"
+
+msgid "Secondary sub menus"
+msgstr "İkincil Alt Menüleri"
+
+msgid "Main Navigation"
+msgstr "Ana Menü"
+
+msgid "Main Navigation sub menus"
+msgstr "Ana Menü Alt Menüleri"
+
+msgid "Breaking News Label"
+msgstr "Son Dakika Haber Etiketi"
+
+msgid "Breaking News post titles"
+msgstr "Son Dakika Haber Başlığı"
+
+msgid "Buttons"
+msgstr "Butonlar"
+
+msgid "Post Categories Label"
+msgstr "Yazı Kategorileri Etiketi"
+
+msgid "Single Post Title"
+msgstr "Tek Yazı Başlığı"
+
+msgid "Archive Page Title"
+msgstr "Arşiv Sayfası Başlığı"
+
+msgid "Post Titles in Homepage Sliders"
+msgstr "Anasayfa Yazı Başlıkları Slaytları"
+
+msgid "Medium Post Titles in Homepage Sliders"
+msgstr "Orta Anasayfa Yazı Başlıkları Slaytları"
+
+msgid "Small Post Titles in Homepage Sliders"
+msgstr "Küçük Anasayfa Yazı Başlıkları Slaytları"
+
+msgid "Post Titles in Homepage Blocks"
+msgstr "Ana Sayfa Bloklarındaki Yazı Başlıkları"
+
+msgid "Medium Post Titles in Homepage Blocks"
+msgstr "Orta Ana Sayfa Bloklarındaki Yazı Başlıkları"
+
+msgid "Small Post Titles in Homepage Blocks"
+msgstr "Küçük Ana Sayfa Bloklarındaki Yazı Başlıkları"
+
+msgid "Single Post Page Content"
+msgstr "Tek Yazı Sayfa İçeriği"
+
+msgid "Blockquotes"
+msgstr "Alıntılar"
+
+msgid "Blocks Titles"
+msgstr "Blok Başlıkları"
+
+msgid "Widgets Titles"
+msgstr "Widget Başlıkları"
+
+msgid "Footer Widgets Titles"
+msgstr "Altbilgi Widget Başlıkları"
+
+msgid "Post Heading:"
+msgstr "Yazı Başlığı:"
+
+msgid "Web Push notifications allow your users to opt-in to timely updates from your website. and allow you to effectively re-engage them with customized, engaging content whenever they are online, wherever they may be - even on their phones! It's easy to set up, and no technical skills are required."
+msgstr "Web Push bildirimleri, kullanıcılarınızın web sitenizden zamanında güncellemeleri yapmalarına izin verir. çevrimiçi olduklarında, nerede olurlarsa olsunlar, telefonlarında bile, özelleştirilmiş, ilgi çekici içeriklerle etkin bir şekilde yeniden etkileşimde bulunmalarına izin verin! Kurulması kolaydır ve teknik beceri gerektirmez."
+
+msgid "Sign up for FREE"
+msgstr "ÜCRETSİZ Kaydol"
+
+msgid "FoxPush Setup"
+msgstr "FoxPush Kurulumu"
+
+msgid "One more step!"
+msgstr "Bir adım daha!"
+
+msgid "Make sure you are logged into FoxPush."
+msgstr "FoxPush'a giriş yaptığınızdan emin olun."
+
+msgid "From the navigation panel on the admin dashboard, click on Settings and then on API Keys."
+msgstr "Yönetici kontrol panelindeki gezinme panelinden Ayarlar ve ardından API Anahtarları'nı tıklayın."
+
+msgid "Click on Generate New Key."
+msgstr "Yeni Anahtar Oluştur'a tıklayın."
+
+msgid "Choose your Domain Name. then click the Generate button."
+msgstr "Alan Adınızı seçin. Sonra Oluştur düğmesine tıklayın."
+
+msgid "Copy the Domain and the key and add them in the fields below."
+msgstr "Etki Alanını ve anahtarı kopyalayın ve bunları aşağıdaki alanlara ekleyin."
+
+msgid "FoxPush Domain"
+msgstr "FoxPush Domain"
+
+msgid "Statistics (Updated Hourly)"
+msgstr "İstatistikler (Saat Başı)"
+
+msgid "Subscribers"
+msgstr "Aboneler"
+
+msgid "Campaigns"
+msgstr "Kampanyalar"
+
+msgid "Total Views"
+msgstr "Toplam Görüntülenme"
+
+msgid "Total Clicks"
+msgstr "Toplam Tıklanma"
+
+msgid "WooCommerce Settings"
+msgstr "WooCommerce Ayarları"
+
+msgid "Number of products per page"
+msgstr "Sayfa başına ürün sayısı"
+
+msgid "Number of the related products"
+msgstr "Ilgili ürünlerin sayısı"
+
+msgid "WooCommerce Sidebar Position"
+msgstr "WooCommerce Kenar Çubuğu Konumu"
+
+msgid "WooCommerce Product Page Sidebar Position"
+msgstr "WooCommerce Ürün Sayfası Kenar Çubuğu Konumu"
+
+msgid "No products found"
+msgstr "Ürün bulunamadı"
+
+msgid "This Block requires the WooCoomerce plugin."
+msgstr "Bu Blok, WooCommerce eklentisini gerektirir."
+
+msgid "Primary Sidebar"
+msgstr "Birincil Kenar Çubuğu"
+
+msgid "Adblock Detected"
+msgstr "Reklam Engelleyici Algılandı"
+
+msgid "Please consider supporting us by disabling your ad blocker"
+msgstr "Lütfen reklam engelleyiciyi devre dışı bırakarak bizi desteklemeyi düşünün"
+
+msgid "No More Posts"
+msgstr "Daha Fazla Yazı Yok"
+
+msgid "Nothing Found"
+msgstr "Eşleşen Bir İçerik Bulunamadı!"
+
+msgid "View all results"
+msgstr "Tüm sonuçları görüntüle"
+
+#, php-format
+msgid "This section contains some shortcodes that requries the %2$s%1$s%3$s Plugin."
+msgstr "Bu bölüm, gereken bazı kısa kodları %2$s%1$s%3$s gerektirir."
+
+msgid "Read More &raquo;"
+msgstr "Devamını Oku &raquo;"
+
+msgid "Web Notification Campaigns"
+msgstr "Web Bildirim Kampanyaları"
+
+msgid "Send a Web Notification"
+msgstr "Web Bildirimi Gönder"
+
+msgid "Sent"
+msgstr "Gönderilenler"
+
+msgid "Clicks"
+msgstr "Tıklanma"
+
+msgid "You need to validated your license to use this feature."
+msgstr "Bu özelliği kullanmak için lisansınızı doğrulamanız gerekiyor."
+
+msgid "You need to publish the post first."
+msgstr "İlk önce yazı yayınlaman gerekiyor."
+
+msgid "Message"
+msgstr "Mesaj"
+
+msgid "Upload Icon"
+msgstr "Simge Yükle"
+
+#, php-format
+msgid "Recommended size is %1spx x %2spx"
+msgstr "Önerilen boyutu %1spx x %2spx"
+
+msgid "Send"
+msgstr "Gönder"
+
+msgid "Requried data Missing"
+msgstr "Gerekli Veriler Eksik"
+
+msgid "Can not access the image from your server, send the Campaign from your account on FoxPush.com"
+msgstr "Görsele sunucunuzdan erişilemiyor, Kampanyayı FoxPush.com'daki hesabınızdan gönderebilirsiniz"
+
+msgid "Campaign has been sent"
+msgstr "Kampanya gönderildi"
+
+msgid "Can not find the user!"
+msgstr "Kullanıcı bulunamıyor!"
+
+msgid "Can not connect to Instagram!"
+msgstr "Instagram'a bağlanılamıyor!"
+
+msgid "Can not fetch the images!"
+msgstr "Görüntüleri getiremiyorum!"
+
+msgid "Can not decoding the instagram json"
+msgstr "Instagram json kodunu çözemiyorum"
+
+msgid "Something went wrong!"
+msgstr "Bir şeyler yanlış gitti!"
+
+msgid "All"
+msgstr "Tümü"
+
+msgid "Custom Settings:"
+msgstr "Özel Ayarlar:"
+
+msgid "(Only for Main Nav)"
+msgstr "(Sadece Ana Nav için)"
+
+msgid "Label Text"
+msgstr "Etiket Metni"
+
+msgid "Label Background"
+msgstr "Etiket Arkaplanı"
+
+msgid "Menu Icon"
+msgstr "Menü Simgesi"
+
+msgid "Show the icon only?"
+msgstr "Sadece simgeyi göster?"
+
+msgid "Enable The Mega Menu?"
+msgstr "Mega Menüyü Etkinleştirin?"
+
+msgid "Posts - Vertical Sub-Categories Filter"
+msgstr "Yazılar - Dikey Alt Kategoriler Filtresi"
+
+msgid "Posts - Horizontal Sub-Categories Filter"
+msgstr "Yazılar - Yatay Alt Kategoriler Filtresi"
+
+msgid "Posts - 1st Post Highlighted"
+msgstr "Yazılar- Birinci Yazı Vurgulandı"
+
+msgid "Mega Menu Columns"
+msgstr "Mega Menü Sütunları"
+
+msgid "Number of Mega Menu Columns"
+msgstr "Mega Menü Sütun Sayısı"
+
+msgid "Hide Mega Menu headings?"
+msgstr "Mega Menü başlıklarını gizle?"
+
+msgid "Mega Menu Background Image"
+msgstr "Mega menü arka plan görseli"
+
+msgid "repeat"
+msgstr "Yineleme"
+
+msgid "repeat-x"
+msgstr "yineleme-x"
+
+msgid "repeat-y"
+msgstr "yineleme-y"
+
+msgid "Padding Right"
+msgstr "Sağ İç Uzaklık"
+
+msgid "Padding left"
+msgstr "Sol İç Uzaklık"
+
+msgid "Min Height"
+msgstr "Min. Yükseklik"
+
+#, php-format
+msgid "%s (Invalid)"
+msgstr "%s (Geçersiz)"
+
+#, php-format
+msgid "%s (Pending)"
+msgstr "%s (Sırasında)"
+
+msgid "sub item"
+msgstr "alt öğe"
+
+msgid "Move up"
+msgstr "Yukarı taşı"
+
+msgid "Move down"
+msgstr "Aşağı taşı"
+
+msgid "Edit Menu Item"
+msgstr "Menü Öğesini Düzenle"
+
+msgid "Navigation Label"
+msgstr "Gezinme(Nav) Etiketi"
+
+msgid "Title Attribute"
+msgstr "Başlık Sembolü"
+
+msgid "Open link in a new window/tab"
+msgstr "Bağlantıyı yeni bir pencerede / sekmede aç"
+
+msgid "CSS Classes (optional)"
+msgstr "CSS Sınıfları (isteğe bağlı)"
+
+msgid "Link Relationship (XFN)"
+msgstr "Link İlişkisi (XFN)"
+
+msgid "Description"
+msgstr "Açıklama"
+
+msgid "The description will be displayed in the menu if the current theme supports it."
+msgstr "Mevcut tema destekliyorsa, açıklama menüde görüntülenecektir."
+
+msgid "Move"
+msgstr "Taşı"
+
+msgid "Up one"
+msgstr "Bir yukarı"
+
+msgid "Down one"
+msgstr "Bir aşağı"
+
+msgid "To the top"
+msgstr "Başa"
+
+#, php-format
+msgid "Original: %s"
+msgstr "Orijinal: %s"
+
+msgid "Previous page"
+msgstr "Önceki sayfa"
+
+msgid "Next page"
+msgstr "Sonraki sayfa"
+
+msgid "First"
+msgstr "İlk"
+
+msgid "Last"
+msgstr "Son"
+
+msgid "&raquo;"
+msgstr "&raquo;"
+
+msgid "&laquo;"
+msgstr "&laquo;"
+
+msgid "You need to set the API key and Location."
+msgstr "API anahtarını ve Konumunu ayarlamanız gerekir."
+
+msgid "km/h"
+msgstr "km/h"
+
+msgid "mph"
+msgstr "mph"
+
+msgid "humidity:"
+msgstr "nem:"
+
+msgid "wind:"
+msgstr "rüzgar:"
+
+msgid "Thunderstorm"
+msgstr "Fırtına"
+
+msgid "Drizzle"
+msgstr "Drizzle"
+
+msgid "Light Rain"
+msgstr "Hafif yağmur"
+
+msgid "Heavy Rain"
+msgstr "Yoğun yağış"
+
+msgid "Rain"
+msgstr "Yağmur"
+
+msgid "Snow"
+msgstr "Kar"
+
+msgid "Clear Sky"
+msgstr "Açık hava"
+
+msgid "Scattered Clouds"
+msgstr "Parçalı Bulutlu"
+
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Arama Sonuçları: %s"
+
+msgid "Website"
+msgstr "Web sitesi"
+
+msgid "Dashboard"
+msgstr "Gösterge Paneli"
+
+msgid "Your Profile"
+msgstr "Profiliniz"
+
+msgid "Log Out"
+msgstr "Çıkış Yap"
+
+msgid "Welcome"
+msgstr "Hoş geldiniz"
+
+msgid "Password"
+msgstr "Şifre"
+
+msgid "Forget?"
+msgstr "Unuttunuz mu?"
+
+msgid "Remember me"
+msgstr "Beni hatırla"
+
+msgid "Don't have an account?"
+msgstr "Hesabınız yok mu?"
+
+msgid "Optional Custom Feed URL, Leave it empty to use the default WordPress feed URL."
+msgstr "İsteğe bağlı Özel Besleme Feed URL'si, varsayılan WordPress besleme URL'sini kullanmak için boş bırakın."
+
+msgid "Dribbble"
+msgstr "Dribbble"
+
+msgid "Flickr"
+msgstr "Flickr"
+
+msgid "YouTube"
+msgstr "YouTube"
+
+msgid "Digg"
+msgstr "Digg"
+
+msgid "Vimeo"
+msgstr "Vimeo"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "Yelp"
+msgstr "Yelp"
+
+msgid "Last.FM"
+msgstr "Last.FM"
+
+msgid "Dropbox"
+msgstr "Dropbox"
+
+msgid "Xing"
+msgstr "Xing"
+
+msgid "DeviantArt"
+msgstr "DeviantArt"
+
+msgid "Apple"
+msgstr "Apple"
+
+msgid "Foursquare"
+msgstr "Foursquare"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "SoundCloud"
+msgstr "SoundCloud"
+
+msgid "Behance"
+msgstr "Behance"
+
+msgid "Instagram"
+msgstr "Instagram"
+
+msgid "Paypal"
+msgstr "Paypal"
+
+msgid "Spotify"
+msgstr "Spotify"
+
+msgid "Google Play"
+msgstr "Google Play"
+
+msgid "500px"
+msgstr "500px"
+
+msgid "vk.com"
+msgstr "vk.com"
+
+msgid "Bitbucket"
+msgstr "Bitbucket"
+
+msgid "Mixcloud"
+msgstr "Mixcloud"
+
+msgid "Medium"
+msgstr "Medium"
+
+msgid "Twitch"
+msgstr "Twitch"
+
+msgid "Vine"
+msgstr "Vine"
+
+msgid "Viadeo"
+msgstr "Viadeo"
+
+msgid "Snapchat"
+msgstr "Snapchat"
+
+msgid "TripAdvisor"
+msgstr "TripAdvisor"
+
+msgid "Type and hit Enter"
+msgstr "Yazın ve enter tuşuna basın"
+
+msgid "page"
+msgstr "sayfa"
+
+#, php-format
+msgid "%s ago"
+msgstr "%s önce"
+
+msgid "Pages"
+msgstr "Sayfalar"
+
+msgid "Authors"
+msgstr "Yazarlar"
+
+msgid "Share via Email"
+msgstr "E-Posta ile paylaş"
+
+#, php-format
+msgid "About %s"
+msgstr "Hakkında %s"
+
+#, php-format
+msgid "By %s"
+msgstr "%s Tarafından"
+
+msgid "Popular"
+msgstr "Popüler"
+
+msgid "Recent"
+msgstr "Son Eklenen"
+
+msgid "Search for"
+msgstr "Arama yap ..."
+
+msgid "Price:"
+msgstr "Fiyat:"
+
+msgid "Quantity:"
+msgstr "Adet:"
+
+msgid "Cart Subtotal:"
+msgstr "Sepet Ara Toplamı:"
+
+msgid "View Cart"
+msgstr "Sepeti Görüntüle"
+
+msgid "Proceed to Checkout"
+msgstr "Satın almaya doğru devam et"
+
+msgid "Go to the shop"
+msgstr "Dükkana git"
+
+msgid "Random Article"
+msgstr "Rastgele Makale"
+
+msgid "Follow"
+msgstr "Takip"
+
+msgid "Subscribe"
+msgstr "Abone ol"
+
+msgid "Related Articles"
+msgstr "İlgili Makaleler"
+
+msgid "Read Next"
+msgstr "Sonrakini Oku"
+
+msgid "Videos"
+msgstr "Videolar"
+
+msgid "Follow us on Flickr"
+msgstr "Bizi Flickr'da takip edin"
+
+msgid "Follow Us"
+msgstr "Takip Et"
+
+msgid "Follow us on Twitter"
+msgstr "Bizi Twitter'da takip edin"
+
+msgid "Less than a minute"
+msgstr "Bir dakikadan az"
+
+#, php-format
+msgid "%s hours read"
+msgstr "%s saatte okunur"
+
+msgid "1 minute read"
+msgstr "1 dakika okuma süresi"
+
+#, php-format
+msgid "%s minutes read"
+msgstr "%s dakika okuma süresi"
+
+msgid "No new notifications"
+msgstr "Yeni bildirim yok"
+
+msgid "Notifications"
+msgstr "Bildirimler"
+
+msgid "Show Less"
+msgstr "Daha Azını Göster"
+
+msgid "View your shopping cart"
+msgstr "Alışveriş sepetinizi görüntüleyin"
+
+msgid "Enter your Email address"
+msgstr "E-Posta adresinizi giriniz"
+
+msgid "Your cart is currently empty."
+msgstr "Sepetiniz şu anda boş."
+
+msgid "Type your search words then press enter"
+msgstr "Arama kelimelerinizi yazıp enter tuşuna basın"
+
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "Aradığın şeyi bulamıyoruz gibi görünüyor. Belki de arama yapmak yardımcı olabilir."
+
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Üzgünüz, ancak arama terimlerinizle hiçbir şey eşleşmedi. Lütfen farklı anahtar kelimelerle tekrar deneyin."
+
+#, php-format
+msgid "This theme requires at least PHP version 5.3. You are running version %s. Please upgrade and try again."
+msgstr "Bu tema en az PHP sürüm 5.3 gerektirir. %s sürümünü çalıştırıyorsunuz. Lütfen yeni sürüme geçirin ve tekrar deneyin."
+
+msgid "Edit Post"
+msgstr "İçeriği Düzenle"
+
+msgid "(no title)"
+msgstr "(Başlık yok)"
+
+#, php-format
+msgid "This section contains some shortcodes that requries the %s Plugin. Install it from the Theme Menu &gt; Install Plugins."
+msgstr "Bu bölüm, %s Eklentisini gerektiren bazı kısa kodları içerir. Tema Menüsünden&gt; Eklentileri Yükle'den yükleyin."
+
+msgid "Best Reviews"
+msgstr "En İyi Yorumlar"
+
+msgid "- Select a slider -"
+msgstr "Slider Seç"
+
+msgid "- Select a category -"
+msgstr "Kategori Seç"
+
+#, php-format
+msgid "Control WooCommerce sidebar settings from the theme options page &gt; %1$sWooCommerce settings%2$s."
+msgstr "Tema seçenekleri sayfasından WooCommerce kenar çubuğu ayarlarını kontrol edin&gt;%1$sWooCommerce ayarları%2$s."
+
+#, php-format
+msgid "The customizer import file is missing! File path: %s"
+msgstr "Özelleştirici içe aktarma dosyası eksik! Dosya yolu: %s"
+
+msgid "The customizer import file is not in a correct format. Please make sure to use the correct customizer import file."
+msgstr "Özelleştirici içe aktarma dosyası doğru biçimde değil. Lütfen doğru özelleştirici içe aktarma dosyasını kullandığınızdan emin olun."
+
+msgid "The customizer import file is not suitable for current theme. You can only import customizer settings for the same theme or a child theme."
+msgstr "Özelleştirici içe aktarma dosyası mevcut tema için uygun değil. Aynı tema veya çocuk teması için olan özelleştirici ayarlarını içe aktarabilirsiniz."
+
+#, php-format
+msgid "URL for %s%s%s file is not defined!"
+msgstr "%s%s%s  dosyası için URL tanımlı değil!"
+
+#, php-format
+msgid "An error occurred while fetching %s%s%s file from the server!%sReason: %s - %s."
+msgstr "%s%s%s dosyası sunucudan getirilirken bir hata oluştu! %sNedeni: %s - %s"
+
+#, php-format
+msgid "An error occurred while writing file to your server! Tried to write a file to: %s%s."
+msgstr "Sunucunuza dosya yazılırken bir hata oluştu! Bu Dosyayı yazmaya çalıştı: %s%s"
+
+#, php-format
+msgid "An error occurred while reading a file from your server! Tried reading file from path: %s%s."
+msgstr "Sunucunuzdan bir dosya okunurken bir hata oluştu! Doysya yolu: %s%s."
+
+#, php-format
+msgid "This WordPress page does not have %sdirect%s write file access. This plugin needs it in order to save the demo import xml file to the upload directory of your site. You can change this setting with these instructions: %s."
+msgstr "Bu WordPress sayfasında %sdirect%s dosya yazma erişimi yok. Bu eklenti, demo içe aktarma xml dosyasını sitenizin yükleme dizinine kaydetmek için buna ihtiyaç duyar. Bu ayarı şu talimatlarla değiştirebilirsiniz: %s."
+
+msgid "One Click Demo Import"
+msgstr "Tek Tıklama ile Demoyu İçe Aktar"
+
+msgid "Import Demo Data"
+msgstr "Demo Verilerini İçe Aktar"
+
+msgid "An error occurred while retrieving reading/writing permissions to your server (could not retrieve WP filesystem credentials)!"
+msgstr "Sunucunuza okuma / yazma izinleri alınırken bir hata oluştu (WP dosya sistemi kimlik bilgileri alınamadı)!"
+
+msgid "Your WordPress login credentials don't allow to use WP_Filesystem!"
+msgstr "WordPress giriş bilgileriniz WP_Filesystem'ı kullanmasına izin vermez!"
+
+#, php-format
+msgid "%sYour user role isn't high enough. You don't have permission to import demo data.%s"
+msgstr "%sKullanıcı rolünüz yeterince yüksek değil. Demo verilerini içe aktarma izniniz yok.%s"
+
+msgid "Please upload XML file for content import. If you want to import widgets or customizer settings only, please use Widget Importer & Exporter or the Customizer Export/Import plugin."
+msgstr "Lütfen içerik içe aktarma için XML dosyası yükleyin. Yalnızca widget'ları veya özelleştirici ayarlarını almak istiyorsanız, Widget İçe Aktarıcı & Dışarı Aktarıcı veya Özelleştirici İçe Aktarıcı / Dışarı Aktarıcı eklentisini kullanın."
+
+msgid "Upload files"
+msgstr "Dosyaları yükle"
+
+#, php-format
+msgid "Widget file was not uploaded. Error: %s"
+msgstr "Widget dosyası yüklenmedi. Hatalar : %s"
+
+#, php-format
+msgid "Customizer file was not uploaded. Error: %s"
+msgstr "Özelleştirici dosyası yüklenmedi. Hata: %s"
+
+msgid "The import files were successfully uploaded!"
+msgstr "İçe aktarma dosyaları başarıyla yüklendi!"
+
+#, php-format
+msgid "MAX EXECUTION TIME = %s"
+msgstr "MAX EXECUTION TIME = %s"
+
+#, php-format
+msgid "Files info:%1$sSite URL = %2$s%1$sData file = %3$s%1$sWidget file = %4$s%1$sCustomizer file = %5$s"
+msgstr "Dosya bilgisi:%1$sSite URL'si = %2$s%1$sVeri dosyası =%3$s%1$sWidget dosyası = %4$s%1$sÖzelleştirici dosyası = %5$s"
+
+msgid "not defined!"
+msgstr "tanımlanmamış!"
+
+msgid "Widget import file could not be found."
+msgstr "Widget içe aktarma dosyası bulunamadı."
+
+msgid "Widget import data could not be read. Please try a different file."
+msgstr "Widget içe aktarma verileri okunamadı. Lütfen farklı bir dosya deneyin."
+
+msgid "Sidebar does not exist in theme (moving widget to Inactive)"
+msgstr "Temada kenar çubuğu yok (moving widget to Inactive)"
+
+msgid "Site does not support widget"
+msgstr "Site widget'ı desteklemiyor"
+
+msgid "Widget already exists"
+msgstr "Widget zaten var"
+
+msgid "Imported"
+msgstr "İçe aktarma"
+
+msgid "Imported to Inactive"
+msgstr "İçe aktarma devredışı"
+
+msgid "No Title"
+msgstr "Başlık Yok"
+
+msgid "No results for widget import!"
+msgstr "Widget içe aktarma için sonuç yok!"
+
+msgid "Demo Import"
+msgstr "Demo Yükle"
+
+msgid "Demo data has been successfully uninstalled"
+msgstr "Demo verileri başarıyla kaldırıldı"
+
+msgid "Importing demo data (post, pages, images, theme settings, ...) is the easiest way to setup your theme. It will allow you to quickly edit everything instead of creating content from scratch. When you import the data, the following things might happen:"
+msgstr "Demo verilerini içe aktarma (yazı, sayfa, resim, tema ayarları, ...) temanızı kurmanın en kolay yoludur. Sıfırdan içerik oluşturmak yerine her şeyi hızlı bir şekilde düzenlemenize olanak tanır. Verileri içe aktardığınızda, aşağıdaki şeyler olabilir:"
+
+msgid "No existing posts, pages, categories, images, custom post types or any other data will be deleted or modified."
+msgstr "Mevcut yazılar, sayfalar, kategoriler, resimler, özel posta türleri veya diğer veriler silinmez veya değiştirilmez."
+
+msgid "Posts, pages, images, widgets and menus will get imported."
+msgstr "Yazılar, sayfalar, resimler, widget'lar ve menüler içe aktarılacaktır."
+
+msgid "Please click \"Import Demo Data\" button only once and wait, it can take a couple of minutes."
+msgstr "Lütfen \"Demo Verileri Al\" düğmesine tıklayın, sadece biraz bekleyin, birkaç dakika sürebilir."
+
+msgid "Before you begin, make sure all the required plugins are activated."
+msgstr "Başlamadan önce, gerekli tüm eklentilerin etkinleştirildiğinden emin olun."
+
+msgid "Live Demo"
+msgstr "Canlı Demo"
+
+msgid "Important Notes:"
+msgstr "Önemli notlar:"
+
+msgid "We recommend to run Demo Import on a clean WordPress installation."
+msgstr "Temiz bir WordPress kurulumunda Demo Almayı çalıştırmanızı öneririz."
+
+msgid "The Demo Import will not import the images we have used in our live demos, due to copyright / license reasons."
+msgstr "Demo İçe Aktarım, telif hakkı / lisans nedenleriyle canlı demolarımızda kullandığımız resimleri içe aktarmayacaktır."
+
+msgid "Do not run the Demo Import multiple times one after another, it will result in double content."
+msgstr "Demo İçe Aktarımını birbiri ardına defalarca çalıştırmayın, çift içerikli olarak sonuçlanır."
+
+msgid "Visit Site"
+msgstr "Siteyi Ziyaret Et"
+
+msgid "Importing Demo Content..."
+msgstr "Demo İçeriği İçe Aktarılıyor ..."
+
+msgid "Please be patient and do not navigate away from this page while the import is in progress. This can take a while if your server is slow."
+msgstr "Lütfen sabırlı olun ve içe aktarma devam ederken bu sayfadan ayrılmayın. Sunucunuz yavaşsa bu biraz zaman alabilir."
+
+msgid "Please be patient and do not navigate away from this page while the import is in progress.\tThis can take a while if your server is slow."
+msgstr "Please be patient and do not navigate away from this page while the import is in progress.\tThis can take a while if your server is slow."
+
+msgid "You will be notified via this page when the import is completed."
+msgstr "İçe aktarım tamamlandığında bu sayfadan bilgilendirileceksiniz."
+
+msgid "No preview image defined for this import."
+msgstr "Bu içe aktarma için tanımlanmış önizleme resmi yok."
+
+msgid "Manually uploaded files"
+msgstr "Manuel olarak yüklenen dosyalar"
+
+msgid "Downloaded files"
+msgstr "İndirilen dosyalar"
+
+msgid "No import files specified!"
+msgstr "Hiçbir içe aktar dosyası belirtilmedi!"
+
+msgid "Completed"
+msgstr "Tamamlandı"
+
+msgid "That's it, all done!"
+msgstr "Hepsi bu kadar!"
+
+#, php-format
+msgid "The demo import has finished. Now you can see the result at %1$syour site%2$s or start customize via %3$sTheme Options%2$s."
+msgstr "Demo içe aktarma bitti. Artık, %1$s Siteniz%2$s adresindeki sonucu görebilir veya %3$s Tema Ayarları%2$s ile özelleştirmeye başlayabilirsiniz."
+
+#, php-format
+msgid "%1$sThe demo import has finished, but there were some import errors.%2$sMore details about the errors can be found in this %3$s%5$slog file%6$s%4$s%7$s"
+msgstr "%1$s Geçerli demo aktarma işlemi tamamlandı, ancak hatalar vardı. %2$s Daha fazla detay için bakın %3$s%5$s kayıt dosyası %6$s%4$s%7$s"
+
+msgid "Importing content"
+msgstr "İçeriği içe aktarma"
+
+msgid "Importing widgets"
+msgstr "Widget'ları içe aktarma"
+
+msgid "Importing customizer settings"
+msgstr "Özelleştirici ayarlarını içe aktarma"
+
+msgid "Could not open the file for parsing"
+msgstr "Dosya ayrıştırma için açılamadı"
+
+#, php-format
+msgid "This WXR file (version %s) is newer than the importer (version %s) and may not be supported. Please consider updating."
+msgstr "Bu WXR dosyası (%s sürümü), içe aktarıcıdan (sürüm %s) daha yenidir ve desteklenmeyebilir. Lütfen güncellenmeyi düşünün."
+
+msgid "The file does not exist, please try again."
+msgstr "Dosya mevcut değil, lütfen tekrar deneyin."
+
+msgid "Invalid author mapping"
+msgstr "Geçersiz yazar eşlemesi"
+
+msgid "Cannot import auto-draft posts"
+msgstr "Otomatik taslak yayınları içe aktarılamıyor"
+
+#, php-format
+msgid "Failed to import \"%s\": Invalid post type %s"
+msgstr "\"%s\" içe aktarılamadı: Geçersiz yazı türü %s"
+
+#, php-format
+msgid "%s \"%s\" already exists."
+msgstr "%s \"%s\" zaten var."
+
+#, php-format
+msgid "Skipping attachment \"%s\", fetching attachments disabled"
+msgstr "Ekler atlanıyor \"%s\", ekleri getirme devre dışı"
+
+#, php-format
+msgid "Failed to import \"%s\" (%s)"
+msgstr "İçe Aktarılamadı \"%s\" (%s)"
+
+#, php-format
+msgid "Imported \"%s\" (%s)"
+msgstr "İçe Aktarıldı \"%s\" (%s)"
+
+#, php-format
+msgid "Post %d remapped to %d"
+msgstr "Yazı %d olarak değiştirildi %d"
+
+msgid "Invalid file type"
+msgstr "Geçersiz dosya türü"
+
+#, php-format
+msgid "Failed to import user \"%s\""
+msgstr "\"%s\" kullanıcısı içe aktarılamadı"
+
+#, php-format
+msgid "Imported user \"%s\""
+msgstr "İçe aktarılan \"%s\" kullanıcısı"
+
+#, php-format
+msgid "User %d remapped to %d"
+msgstr "kullanıcı %d olarak değiştirildi %d"
+
+#, php-format
+msgid "Failed to import %s %s"
+msgstr "İçe Aktarılamadı %s %s"
+
+#, php-format
+msgid "Term %d remapped to %d"
+msgstr "terim %d olarak değiştirildi %d"
+
+#, php-format
+msgid "Remote server returned %1$d %2$s for %3$s"
+msgstr "Uzak sunucu döndü %1$d %2$s için %3$s"
+
+msgid "Remote file is incorrect size"
+msgstr "Uzak dosya yanlış boyutta"
+
+msgid "Zero size file downloaded"
+msgstr "Sıfır boyutlu dosya indirildi"
+
+#, php-format
+msgid "Remote file is too large, limit is %s"
+msgstr "Uzak dosya çok büyük, limit %s"
+
+#, php-format
+msgid "Running post-processing for post %d"
+msgstr "Gönderi sonrası için yayınlanıyor %d"
+
+#, php-format
+msgid "Could not find the post parent for \"%s\" (post #%d)"
+msgstr "Gönderi üst bilgisi bulunamadı \"%s\" (post #%d)"
+
+#, php-format
+msgid "Post %d was imported with parent %d, but could not be found"
+msgstr "Yazı ebeveynlerle %diçe aktarıldı%d, ancak bulunamadı"
+
+#, php-format
+msgid "Could not find the author for \"%s\" (post #%d)"
+msgstr "\"%s için yazar bulunamadı (post #%d)"
+
+#, php-format
+msgid "Post %d was imported with author \"%s\", but could not be found"
+msgstr "Post %d, \"%s\" yazarıyla içe aktarıldı, ancak bulunamadı"
+
+#, php-format
+msgid "Post %d was marked for post-processing, but none was required."
+msgstr "Post %d post-processing için işaretlendi, ancak hiçbiri gerekli değildi."
+
+#, php-format
+msgid "Could not update \"%s\" (post #%d) with mapped data"
+msgstr "Eşlenen verilerle \"%s\" (post #%d güncellenemedi"
+
+#, php-format
+msgid "Could not find the menu object for \"%s\" (post #%d)"
+msgstr "\"%s\" için menü nesnesi bulunamadı (post #%d)"
+
+#, php-format
+msgid "Post %d was imported with object \"%d\" of type \"%s\", but could not be found"
+msgstr ""
+
+#, php-format
+msgid "Could not find the comment parent for comment #%d"
+msgstr "Yorum için yorum bulunamadı ebeveyn #%d"
+
+#, php-format
+msgid "Comment %d was imported with parent %d, but could not be found"
+msgstr "yorum ebeveynlerle %d içe aktarıldı %d, ancak bulunamadı"
+
+#, php-format
+msgid "Could not find the author for comment #%d"
+msgstr "Yorum yazarı bulunamadı #%d"
+
+#, php-format
+msgid "Comment %d was imported with author %d, but could not be found"
+msgstr "yorum ebeveynlerle %d içe aktarıldı %d, ancak bulunamadı"
+
+#, php-format
+msgid "Could not update comment #%d with mapped data"
+msgstr "Eşlenen verilerle #%d yorumu güncellenemedi"
+
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Eklentinin Yükleniyor: %s"
+
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr "Eklenti Güncelleniyor: %s"
+
+msgid "Something went wrong with the plugin API."
+msgstr "Eklenti API'sında bir sorun oluştu."
+
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "Bu tema aşağıdaki eklentiyi gerektirir: %1$s"
+msgstr[1] "Bu tema aşağıdaki eklentileri gerektirir: %1$s"
+
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] "Bu tema aşağıdaki eklentiyi önermektedir: %1$s."
+msgstr[1] "Bu tema aşağıdaki eklentileri önermektedir: %1$s."
+
+#, php-format
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+msgstr[0] "Aşağıdaki eklentinin bu temayla en yüksek uyumluluğu sağlamak için en son sürümüne güncellenmesi gerekiyor: %1$s."
+msgstr[1] "Aşağıdaki eklentilrin bu temayla en yüksek uyumluluğu sağlamak için en son sürümüne güncellenmesi gerekiyor: %1$s."
+
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] "%1$s için bir güncelleme var."
+msgstr[1] "Aşağıdaki eklentiler için güncellemeler mevcut: %1$s"
+
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] "Zorunlu eklenti şu anda etkin değil: %1$s."
+msgstr[1] "Zorunlu eklentiler şu anda etkin değil: %1$s."
+
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] "Önerilen eklenti şu anda etkin değil:%1$s"
+msgstr[1] "Önerilen eklentiler şu anda etkin değil:%1$s"
+
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "Eklentiyi yüklemeye başla"
+msgstr[1] "Eklentileri yüklemeye başla"
+
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] "Eklentiyi güncellemeye başla"
+msgstr[1] "Eklentileri güncellemeye başla"
+
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] "Eklentiyi etkinleştir"
+msgstr[1] "Eklentileri etkinleştir"
+
+msgid "Return to Required Plugins Installer"
+msgstr "Gerekli Eklentiler Yükleyicisine Geri Dön"
+
+msgid "Return to the Dashboard"
+msgstr "Gösterge Paneline Dön"
+
+msgid "Plugin activated successfully."
+msgstr "Eklenti başarıyla etkinleştirildi."
+
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] "Aşağıdaki eklenti başarıyla etkinleştirildi:"
+msgstr[1] "Aşağıdaki eklentiler başarıyla etkinleştirildi:"
+
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "Hiçbir işlem yapılmadı. %1$s eklentisi zaten aktif."
+
+#, php-format
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr "Eklenti aktif değil. Bu tema için %s daha yüksek bir sürüme ihtiyaç vardır. Lütfen eklentiyi güncelleyin."
+
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Tüm eklentiler başarıyla yüklendi ve etkinleştirildi. %1$s"
+
+msgid "Dismiss this notice"
+msgstr "Bu bildirimi gösterme"
+
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr "Yüklemek, güncellemek veya etkinleştirmek için bir veya daha fazla gerekli veya önerilen eklenti vardır."
+
+msgid "Please contact the administrator of this site for help."
+msgstr "Yardım için lütfen bu sitenin yöneticisine başvurun."
+
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr "Bu eklentinin, temanızla uyumlu olacak şekilde güncellenmesi gerekiyor."
+
+msgid "Update Required"
+msgstr "Güncelleştirme gerekli"
+
+msgid "Tested and Recommended Plugins"
+msgstr "Test edilmiş ve Önerilen Eklentiler"
+
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr "Uzaktan eklenti paketi istenen doğru bir klasör içermiyor veyeniden adlandırma çalışmıyordu."
+
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr "Lütfen eklenti sağlayıcısına başvurun ve eklentilerini WordPress yönergelerine göre paketlemelerini isteyin."
+
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr "Uzak eklenti paketi birden fazla dosyadan oluşur, ancak dosyalar bir klasörde paketlenmez."
+
+#, php-format
+msgid "TGMPA v%s"
+msgstr "TGMPA v%s"
+
+msgid "Required"
+msgstr "Gereklidir"
+
+msgid "WordPress Repository"
+msgstr "WordPress Deposu"
+
+msgid "External Source"
+msgstr "Dış kaynak"
+
+msgid "Pre-Packaged"
+msgstr "Önceden Paketlenmiş"
+
+msgid "Not Installed"
+msgstr "Yüklü değil"
+
+msgid "Installed But Not Activated"
+msgstr "Yüklü Ama Aktif Değil"
+
+msgid "Active"
+msgstr "Aktif"
+
+msgid "Required Update not Available"
+msgstr "Gerekli Güncelleme Mevcut Değil"
+
+msgid "Requires Update"
+msgstr "Güncelleme gerektirir"
+
+msgid "Update recommended"
+msgstr "Tavsiye edilen güncelleme"
+
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+#, php-format
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "Tümü <span class=\"count\">(%s)</span>"
+msgstr[1] "Tümü <span class=\"count\">(%s)</span>"
+
+#, php-format
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "Tümü <span class=\"count\">(%s)</span>"
+msgstr[1] "Tümü <span class=\"count\">(%s)</span>"
+
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] "Yükle <span class=\"count\">(%s)</span>"
+msgstr[1] "Yükle <span class=\"count\">(%s)</span>"
+
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] "Güncellemeye Uygun <span class=\"count\">(%s)</span>"
+msgstr[1] "Güncellemeye Uygun <span class=\"count\">(%s)</span>"
+
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] "Aktif <span class=\"count\">(%s)</span>"
+msgstr[1] "Aktif <span class=\"count\">(%s)</span>"
+
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr "Bilinmeyen"
+
+msgid "unknown"
+msgstr "Bilinmeyen"
+
+msgid "Installed version:"
+msgstr "Yüklü sürümü:"
+
+msgid "Minimum required version:"
+msgstr "Gerekli minimum sürüm:"
+
+msgid "Available version:"
+msgstr "Mevcut sürümü:"
+
+msgid "No plugins to install, update or activate."
+msgstr "Yüklemek, güncellemek veya etkinleştirmek için eklenti yok."
+
+msgid "Plugin"
+msgstr "Eklenti"
+
+msgid "Status"
+msgstr "Durum"
+
+#, php-format
+msgid "Install %2$s"
+msgstr "Yükle %2$s"
+
+#, php-format
+msgid "Update %2$s"
+msgstr "Güncelle %2$s"
+
+#, php-format
+msgid "Activate %2$s"
+msgstr "Aktifleştir %2$s"
+
+msgid "Upgrade message from the plugin author:"
+msgstr "Eklenti yazarından geliştirme mesajı:"
+
+msgid "Install"
+msgstr "Yükle"
+
+msgid "Activate"
+msgstr "Aktif"
+
+msgid "No plugins were selected to be installed. No action taken."
+msgstr "Yüklenecek hiçbir eklenti seçilmedi. Hiçbir işlem yapılmadı."
+
+msgid "No plugins were selected to be updated. No action taken."
+msgstr "Güncellenecek hiçbir eklenti seçilmedi. Hiçbir işlem yapılmadı."
+
+msgid "No plugins are available to be installed at this time."
+msgstr "Şu anda yüklenecek eklenti yok."
+
+msgid "No plugins are available to be updated at this time."
+msgstr "Şu anda güncellenecek hiçbir eklenti mevcut değildir."
+
+msgid "No plugins were selected to be activated. No action taken."
+msgstr "Etkinleştirilecek hiçbir eklenti seçilmedi. Hiçbir işlem yapılmadı."
+
+msgid "No plugins are available to be activated at this time."
+msgstr "Şu anda etkinleştirilecek hiçbir eklenti mevcut değildir."
+
+msgid "Plugin activation failed."
+msgstr "Eklenti aktivasyonu başarısız oldu."
+
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "Eklenti Güncelleniyor %1$s(%2$d/%3$d)"
+
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "Yükleme sırasında bir hata oluştu %1$s:<strong>%2$s</strong>"
+
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "%1$s kurulumu başarısız oldu."
+
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "Kurulum ve aktivasyon süreci başlıyor. Bu işlem bazı ana bilgisayarlarda biraz zaman alabilir, lütfen sabırlı olun."
+
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s başarıyla kuruldu ve etkinleştirildi."
+
+msgid "All installations and activations have been completed."
+msgstr "Tüm kurulumlar ve etkinleştirmeler tamamlandı."
+
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "Yükleme işlemi başlıyor. Bu işlem bazı ana bilgisayarlarda biraz zaman alabilir, lütfen sabırlı olun."
+
+#, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s Başarıyla yüklendi."
+
+msgid "All installations have been completed."
+msgstr "Tüm kurulumlar tamamlandı."
+
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Eklentiyi Kurma %1$s (%2$d/%3$d)"
+
+msgid "Show Details"
+msgstr "Detayları Göster"
+
+msgid "Hide Details"
+msgstr "Detayları Gizle"
+
+msgid "Image URL"
+msgstr "Görsel Linki"
+
+msgid "Image Width"
+msgstr "Görsel Genişliği"
+
+msgid "Image Height"
+msgstr "Görsel Yüksekliği"
+
+msgid "Image Margin Top"
+msgstr "Görsel Üst Kenar Uzaklığı"
+
+msgid "Image Margin Bottom"
+msgstr "Görsel Alt Kenar Uzaklığı"
+
+msgid "Circle Shape?"
+msgstr "Çember şeklinde?"
+
+msgid "Text"
+msgstr "Metin"
+
+msgid "Center the content?"
+msgstr "İçeriği ortalayın?"
+
+msgid "Show Social Icons?"
+msgstr "Sosyal simgeleri göster?"
+
+msgid "Ads 125 x 125"
+msgstr "Reklam 125 x 125"
+
+msgid "Show the ads only?"
+msgstr "Sadece reklamları göster?"
+
+msgid "Open links in a new window?"
+msgstr "Bağlantıları yeni pencerede açılsın mı?"
+
+#, php-format
+msgid "Ad #%s"
+msgstr "Reklam #%s"
+
+msgid "Image path:"
+msgstr "Görüntü yolu:"
+
+msgid "Code:"
+msgstr "Kod:"
+
+msgid "About the post&rsquo;s author"
+msgstr "Yazın&rsquo;ın Yazarı Hakkında"
+
+msgid "This Widget appears in the single post page only."
+msgstr "Bu Widget sadece tek gönderi sayfasında görünür."
+
+msgid "Posts By Post's Author"
+msgstr "Yazının Yazarı"
+
+msgid "Display (All) link:"
+msgstr "Linkleri Görüntüle (Tümü)"
+
+msgid "Custom Author Content"
+msgstr "Özel Yazar İçeriği"
+
+msgid "Center content:"
+msgstr "Merkezi içeriği:"
+
+msgid "Show child categories?"
+msgstr "Çocuk kategorilerini göster?"
+
+msgid "Recent Comments with avatar"
+msgstr "Avatar ile son Yorumlar"
+
+msgid "Recent Comments"
+msgstr "Son Eklenen Yorumlar"
+
+msgid "Number of comments to show:"
+msgstr "Gösterilecek yorum sayısı:"
+
+msgid "Find us on Facebook"
+msgstr "bizi Facebookta bulun"
+
+msgid "Page URL:"
+msgstr "Sayfa URL'si:"
+
+msgid "Hide cover Photo?"
+msgstr "Kapak fotoğrafını gizlemek istiyor musun?"
+
+msgid "Show Faces?"
+msgstr "Yüzleri Göster?"
+
+msgid "Show Stream?"
+msgstr "Yayın göster?"
+
+msgid "Flickr ID:"
+msgstr "Flickr Kimliği:"
+
+msgid "Find your ID at idGettr"
+msgstr "IDGettr'de kimliğinizi bulun"
+
+msgid "Photos Order:"
+msgstr "Fotoğrafları Sırala:"
+
+msgid "Most recent"
+msgstr "En yeni"
+
+msgid "Random"
+msgstr "Rastgele"
+
+msgid "Number of photos to show:"
+msgstr "Gösterilecek fotoğraf sayısı:"
+
+msgid "Google+ page"
+msgstr "Google+ Sayfası"
+
+msgid "Follow us on Google+"
+msgstr "Bizi Google+ ile Takip Edin"
+
+msgid "Show the Bio and counters?"
+msgstr "Bio ve sayaçlar gösterilsin mi?"
+
+msgid "Go to the InstaNow Settings page to connect your account to the Instagram API."
+msgstr "Hesabınızı Instagram API'sine bağlamak için InstaNow Ayarları sayfasına gidin."
+
+msgid "Number of Media Items"
+msgstr "Medya Öğelerinin Sayısı"
+
+msgid "Show the icon?"
+msgstr "Simgeleri göster?"
+
+msgid "Posts list"
+msgstr "Yazı listesi"
+
+msgid "Jetpack - Most Viewed for 7 days"
+msgstr "Jetpack - 7 gün için en çok görüntülenen"
+
+msgid "Jetpack - Most Viewed for 30 days"
+msgstr "Jetpack - 30 gün için en çok görüntülenen"
+
+msgid "Related Posts by Categories"
+msgstr "Kategorilere Göre İlgili Yazılar"
+
+msgid "Related Posts by Tags"
+msgstr "Etiketlere Göre İlgili Yazılar"
+
+msgid "Related Posts by Author"
+msgstr "Yazarın İlgili Yazıları"
+
+msgid "Posts order:"
+msgstr "Mesajlar sırası:"
+
+msgid "You need to install the Jetpack plugin. in order to use the show the most viewed for 7 or 30 days."
+msgstr "Jetpack eklentisini yüklemeniz gerekir. Gösteriyi en fazla 7 veya 30 gün boyunca görüntüleyebilmek için."
+
+msgid "Please Note that for Jetpack - Most Viewed posts it may take a few hours before views are counted. It will fallback to comments sorting type until then."
+msgstr "Lütfen, Jetpack - En Çok Görüntülenen yayınlar için, görüntülemelerin sayılmasının birkaç saat sürebileceğini unutmayın. O zamana kadar yorum sıralama türüne geri dönecek."
+
+msgid "Exclude Current Post in the single post page."
+msgstr "Geçerli Yazıyı tek yazı sayfasından hariç tut."
+
+msgid "Featured Posts"
+msgstr "Öne Çıkan Yazılar"
+
+msgid "Show the Slider only?"
+msgstr "Sadece Slider'ı göster?"
+
+msgid "Social Counters"
+msgstr "Sosyal Sayıcılar"
+
+msgid "This widget requries the Arqam Lite Plugin, You can install it from the Theme settings menu > Install Plugins."
+msgstr "Bu widget Arqam Lite Plugin gerektirir, bunu Tema ayarları menüsünden> Eklentileri Yükle'den yükleyebilirsiniz."
+
+msgid "Go to the Arqam options page to set your social accounts."
+msgstr "Sosyal hesaplarınızı ayarlamak için Arqam seçenekler sayfasına gidin."
+
+msgid "Show the social icons only?"
+msgstr "Sadece sosyal simgeleri göster?"
+
+msgid "Autoplay?"
+msgstr "Otomatik oynatma?"
+
+msgid "Tabs"
+msgstr "Sekmeler"
+
+msgid "Number of items to show:"
+msgstr "Gösterilecek öğe sayısı:"
+
+msgid "Order of tabs:"
+msgstr "Sekme sırası:"
+
+msgid "Popular tab order"
+msgstr "Popüler sekme sırası"
+
+msgid "Most Commented"
+msgstr "En Çok Yorumlanan"
+
+msgid "Most Viewed"
+msgstr "En Çok Görüntülenen"
+
+msgid "Disable the Popular tab?"
+msgstr "Popüler sekmesi devre dışı bırakılsın mı?"
+
+msgid "Disable the Recent tab?"
+msgstr "Son sekmesi devre dışı bırakılsın mı?"
+
+msgid "Disable the Comments tab?"
+msgstr "Yorumlar sekmesi devre dışı bırakılsın mı?"
+
+msgid "Text or HTML"
+msgstr "Yazı veya HTML"
+
+msgid "Text, Shortcodes or HTML code"
+msgstr "Metin, Kısa Kodlar veya HTML kodu"
+
+msgid "Error Can not Get Tweets, Incorrect account info."
+msgstr "Hata Tweets, Yanlış hesap bilgisi alınamıyor."
+
+msgid "Consumer key:"
+msgstr "Tüketici anahtarı:"
+
+msgid "Consumer secret:"
+msgstr "Tüketici mahremiyeti:"
+
+msgid "Number of Tweets to show:"
+msgstr "Gösterilecek Tweet Sayısı:"
+
+msgid "Slider Layout?"
+msgstr "Slider Düzeni?"
+
+msgid "Find Your Location"
+msgstr "Bulunduğunuz yeri bulun"
+
+msgid "F"
+msgstr "F"
+
+msgid "C"
+msgstr "C"
+
+msgid "Forecast"
+msgstr "Hava Tahmini"
+
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d gün"
+msgstr[1] "%d günler"
+
+msgid "Subscribe to our channel"
+msgstr "Kanalımıza abone olun"
+
+msgid "Channel Name or ID:"
+msgstr "Kanal Adı veya Kimliği:"
+
+msgid "Get it from your account advanced page."
+msgstr "Hesabınızı gelişmiş sayfasından edinin."
+
+msgid "Jannah"
+msgstr "Jannah"
+
+msgid "Secondry Nav Menu"
+msgstr "İkincil Nav Menüsü"
+
+msgid "404 Page menu"
+msgstr "404 Sayfa Menüsü"
+
+msgid "Footer Navigation"
+msgstr "Alt Kısım Menüsü"
+
+msgid "Primary Widget Area"
+msgstr "Birincil Bileşen Alanı"
+
+msgid "Slide Widget Area"
+msgstr "Slayt Bileşen Alanı"
+
+msgid "Shop - For WooCommerce Pages"
+msgstr "Mağaza - WooCommerce Sayfaları İçin"
+
+msgid "This widget area uses in the WooCommerce pages."
+msgstr "Bu bileşen alanı, WooCommerce sayfalarında kullanılır."
+
+#, php-format
+msgid "Section #%s"
+msgstr "Bölüm #%s"
+
+msgid "Secondary Sidebar"
+msgstr "İkincil Kenar Çubuğu"
+
+msgid "Close"
+msgstr "Kapalı"
+
+msgid "Primary Navigation"
+msgstr "Birincil Menü"
+
+msgid "Secondary Navigation"
+msgstr "İkincil Menü"
+
+#, php-format
+msgid "Ready to publish your first post? %1$sGet started here%2$s."
+msgstr "İlk iletinizi yayınlamak için hazır mısınız? %1$sHemen başlayın%2$s."

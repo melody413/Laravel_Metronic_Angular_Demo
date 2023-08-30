@@ -1,0 +1,81 @@
+<div class="card">
+    <div class="card-body">
+      <div class="card-body">
+        <form
+          novalidate
+          class="form"
+          (ngSubmit)="create()"
+          enctype="multipart/form-data"
+        >
+            <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
+                Role Data
+            </h1>
+            <div class="card-body border-top">
+                <div class="row col-lg-12">
+                    <div class="col-lg-6 fv-col">
+                        <h2 class="fs-2">*Name :</h2>
+                        <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="name" name="name" type="text" value="">
+                        <div *ngIf="errorMessage1" class="error-message fs-6" style="color: red;">{{errorMessage1}}</div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="fs-2">*Lable :</h2>
+                        <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="label" name="label" type="text" value="">
+                        <div *ngIf="errorMessage2" class="error-message fs-6" style="color: red;">{{errorMessage2}}</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
+                Permission
+            </h1>
+            <div class="card-body">
+                <div class="row col-lg-12">
+                    <div *ngFor="let page of permission_data; let i = index" class="col-lg-4 mt-5"> 
+                        <h1 class="fs-2">{{page.group}}</h1> 
+                        <div *ngFor="let permission of page.permissions; let j = index" > 
+                            <div *ngIf="!permission.hidden || permission.hidden === undefined" >
+                                <input  
+                                type="checkbox" 
+                                [id]="'permission-' + i + '-' + j" 
+                                [value] = "'permission-' + i + '-' + j"
+                                class="form-check-input" 
+                                name="roles_premissions[]"
+                                (change)="handleCheckboxChange(permission, i, j)"
+                                /> 
+                                <label 
+                                    [for]="'permission-' + i + '-' + j" 
+                                    class="card-title fw-bolder text-muted  fs-3 ml-2" 
+                                    style="margin-left: 10px;">
+                                    {{permission.label}}
+                                </label> 
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                
+            </div>
+
+          <div class="col d-flex gap-2 align-items-center">
+            <button class="btn btn-md btn-secondary">Reset</button>
+            <button class="btn btn-md btn-success" type="submit">Save</button>
+            <button class="btn btn-md btn-primary">Save & create new</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+    <script
+      src="https://cdn.tiny.cloud/1/your-api-key/tinymce/6/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script>
+  
+    <script>
+      tinymce.init({
+        selector: "#editor",
+        plugins:
+          "a11ychecker advcode advlist advtable anchor autocorrect autolink autoresize autosave casechange charmap checklist code codesample directionality editimage emoticons export footnotes formatpainter fullscreen help image importcss inlinecss insertdatetime link linkchecker lists media mediaembed mentions mergetags nonbreaking pagebreak pageembed permanentpen powerpaste preview quickbars save searchreplace table tableofcontents template tinycomments tinydrive tinymcespellchecker typography visualblocks visualchars wordcount",
+      });
+    </script>
+  </div>
+  

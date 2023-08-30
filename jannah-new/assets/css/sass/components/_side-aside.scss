@@ -1,0 +1,133 @@
+#tie-wrapper:after{
+	position: absolute;
+	z-index: 1000;
+	top: -10%;
+	left: -50%;
+	width: 0;
+	height: 0;
+	background: rgba(0, 0, 0, 0.2);
+	content: '';
+	opacity: 0;
+	cursor: pointer;
+	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+}
+
+.side-aside{
+	position: fixed;
+	top: 0;
+	z-index: 111;
+	visibility: hidden;
+	width: 350px;
+	max-width: 100%;
+	height: 100%;
+	background: $darker-bg-more;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	transition: 0.5s cubic-bezier(.55,0,.1,1) 0s;
+	overflow-y: auto;
+
+	@include breakpoint(md){
+		right: 0;
+		transform: translate(350px, 0);
+
+		&:not(.slide-sidebar-desktop){
+			display: none;
+		}
+	}
+
+	.dark-skin &{
+		background: darken($darker-bg-more, 2%);
+	}
+
+	@include breakpoint(max_min_md){
+		&.appear-from-left{
+			left: 0;
+			transform: translate(-100%, 0);
+		}
+
+		&.appear-from-right{
+			right: 0;
+			transform: translate(100%, 0);
+		}
+
+		&.is-fullwidth{
+			width: 100%;
+		}
+	}
+
+	.is-mobile & .side-aside-wrapper,
+	.is-desktop & .has-custom-scroll{
+		padding: 50px 0 0;
+	}
+
+	.admin-bar.is-desktop & .has-custom-scroll,
+	.is-mobile.admin-bar & .side-aside-wrapper{
+		padding-top: 72px;
+	}
+
+	.widget-content-only{
+		&:first-child{
+			margin-top: 20px;
+		}
+	}
+
+	&.dark-skin .container-wrapper {
+		border-radius: 0;
+		border: 0;
+		background: transparent;
+	}
+
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.2);
+		content: '';
+		opacity: 1;
+		transition: opacity 0.5s;
+	}
+
+	.tie-slider-widget{
+		position: relative;
+		z-index: 1;
+	}
+
+	.container-wrapper {
+		padding: 30px !important;
+	}
+
+	.widget-content-only{
+		padding: 0 !important;
+	}
+}
+
+.side-aside-open{
+	#tie-wrapper{
+		&:after{
+			width: 200%;
+			height: 110%;
+			opacity: 1;
+			transition: opacity 0.5s;
+
+			.border-layout &{
+				opacity: 0;
+			}
+		}
+	}
+
+	.side-aside {
+		visibility: visible !important;
+		transform: translate(0, 0) !important;
+
+		&:after {
+			display: none;
+			width: 0;
+			height: 0;
+			opacity: 0;
+			transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+		}
+	}
+}

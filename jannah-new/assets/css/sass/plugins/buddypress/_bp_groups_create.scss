@@ -1,0 +1,29 @@
+// Group Creation Steps - Screens
+// @version 3.0.0
+
+.bp-subhead{
+	display: none;
+}
+
+#group-create-body {
+	padding: 0 $pad-sml $pad-sml;
+	margin-top: 0;
+
+	.creation-step-name {
+		// text-align: center;
+	}
+
+	.avatar-nav-items {
+		margin-top: $marg-med;
+	}
+
+	fieldset{
+		margin-top: 20px;
+	}
+
+	#header-cover-image{
+		position: static;
+		height: 200px;
+		margin-bottom: $marg-med;
+	}
+}

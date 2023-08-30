@@ -1,0 +1,101 @@
+// Vars
+$prime_color: #FFF04B;
+$body_color: #F0F7F6;
+$review_color: #E0D339;
+
+// Fonts
+@font-face {
+  font-family: 'icomoon_doctorak';
+  src:  url('../fonts/doctorak/icomoon_doctorak.eot?2jimei');
+  src:  url('../fonts/doctorak/icomoon_doctorak.eot?2jimei#iefix') format('embedded-opentype'),
+  url('../fonts/doctorak/icomoon_doctorak.ttf?2jimei') format('truetype'),
+  url('../fonts/doctorak/icomoon_doctorak.woff?2jimei') format('woff'),
+  url('../fonts/doctorak/icomoon_doctorak.svg?2jimei#icomoon_doctorak') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon_doctorak' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-booking:before {
+  content: "\e900";
+}
+.icon-directories:before {
+  content: "\e901";
+}
+.icon-doctor:before {
+  content: "\e902";
+}
+.icon-hospital:before {
+  content: "\e903";
+}
+.icon-insurance:before {
+  content: "\e904";
+}
+.icon-lab:before {
+  content: "\e905";
+}
+.icon-pharmacey:before {
+  content: "\e906";
+}
+.icon-free:before {
+  content: "\e907";
+}
+
+// HTML
+html { margin-left: calc(100vw - 100%); }
+
+// Body
+body {
+  font-size: 17px;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+  &.responsive_nav_opened {
+    overflow-y: hidden;
+  }
+}
+
+
+// Defaults
+select {
+  //border: 0 !important;  /*Removes border*/
+  //-webkit-appearance: none;  /*Removes default chrome and safari style*/
+  //-moz-appearance: none; /* Removes Default Firefox style*/
+  //background: url('../images/general/select_arrow.png') no-repeat;  /*Adds background-image*/
+  //background-position: 120px 24px;  /*Position of the background-image*/
+  //width: 100%; /*Width of select dropdown to give space for arrow image*/
+  //text-indent: 0.01px; /* Removes default arrow from firefox*/
+  //text-overflow: "";  /*Removes default arrow from firefox*/
+  color: #4A4A4A;
+  &:focus {
+    outline: none;
+  }
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
+}
+
+p {
+  font-size: 16px;
+  color: #4A4A4A;
+  font-weight: 400;
+}
+
+.btn-link {
+  color: #3C60A0;
+}

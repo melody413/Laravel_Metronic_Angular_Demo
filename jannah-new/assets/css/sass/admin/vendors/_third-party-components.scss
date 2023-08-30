@@ -1,0 +1,328 @@
+
+/* ---------------------------------------------
+ Icon Picker
+------------------------------------------------ */
+.preview-menu-item-icon{
+	font-size: 12pt;
+}
+
+.icon-picker-container {
+
+	&,*{
+		box-sizing: border-box;
+	}
+
+	position: absolute;
+	width: 370px;
+	background-color: #fff;
+	overflow: hidden;
+	margin: 1px;
+	top: 50px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+	box-sizing: border-box;
+	z-index: 9991;
+	padding: 0;
+
+	.icon-picker-list-wrap{
+		overflow: auto;
+		height: 300px;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		padding: 10px;
+
+		li {
+			display: inline-block;
+			margin: 4px;
+			float: left;
+
+			&[data-icon*="blank"] a{
+				border-color: #f75c51;
+			}
+
+			a {
+				display: block;
+				text-decoration: none;
+				color: #373737;
+				padding: 10px;
+				border: 1px solid #eee;
+
+				span {
+					width: 20px;
+					height: 20px;
+					font-size: 18px;
+					line-height: 20px;
+					display: block;
+					text-align: center;
+				}
+
+				&:hover {
+					border-color: #999;
+					background: #efefef;
+				}
+			}
+		}
+	}
+}
+
+.icon-picker-control {
+	background: #fafafa;
+	border-bottom: 1px solid #ddd;
+	color: #23282d;
+	padding: 10px 15px;
+
+	input[type=text] {
+		width: 100%;
+		max-width: 100%;
+		padding: 3px 10px;
+	}
+}
+
+.icon-picker-wrapper {
+	display: inline-block;
+	position: relative;
+	float: left;
+	margin-right: 5px;
+}
+
+input.edit-menu-item-megamenu-icon{
+	max-width: 130px;
+	clear: none;
+	padding: 3px 10px;
+}
+
+div.button.icon-picker {
+	font-size: 15px;
+	height: 35px;
+	width: 35px;
+	margin: 1px;
+	padding: 0;
+	line-height: 35px;
+	text-align: center;
+	display: inline-block;
+	clear: both;
+}
+
+/* Custom Select */
+.tie-custom-select {
+	position: relative;
+	display: inline-block;
+	border: 1px solid #bbb;
+	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+	background: #ffffff;
+	border-radius: 3px;
+	width: calc(100% - 275px);
+	max-width: 300px;
+
+	@include breakpoint_max(670px){
+		width: 100%;
+	}
+
+	&:after {
+		width: 0;
+		height: 0;
+		border-left: 4px solid transparent;
+		border-right: 4px solid transparent;
+		border-top: 7px solid #666;
+		margin-top: -3px;
+		content: " ";
+		position: absolute;
+		top: 50%;
+		right: 1em;
+		z-index: 2;
+		pointer-events: none;
+		display: none;
+	}
+
+	&:hover {
+		border-color: #888;
+	}
+
+	option {
+		font-weight:normal;
+	}
+
+	select {
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+		outline: none;
+		// padding: .6em .8em .5em .8em;
+		padding: 0 .8em 0 .8em;
+		box-sizing: border-box;
+		height: auto;
+		line-height: 33px;
+		background: transparent;
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 1px 3px rgba(180,222,250, 1);
+			color: #222; /* Match-02 focus color */
+		}
+	}
+}
+
+@supports ( -webkit-appearance: none ) or ( appearance: none )
+	or ( ( -moz-appearance: none ) and ( mask-type: alpha ) ) {
+
+	.tie-custom-select{
+		&:after {
+			display: block;
+		}
+
+		select {
+			padding-right: 2em;
+			border: 1px solid transparent;
+			appearance: none;
+
+			&:focus {
+				border-color: #aaa;
+			}
+		}
+	}
+}
+
+@-moz-document url-prefix() {
+	.tie-custom-select {
+		overflow: hidden;
+
+		&:after {
+			display: block;
+		}
+
+		select {
+			overflow: -moz-hidden-unscrollable;
+			padding-right: .4em;
+			background: none;
+			border: 1px solid transparent;
+			min-width: 6em;
+			width: 130%;
+			min-width: calc(0em);
+			width: calc(100% + 2.4em);
+		}
+	}
+
+	@supports ( mask-type: alpha ) {
+		.tie-custom-select {
+			overflow: visible;
+
+			select {
+				-moz-appearance: none;
+				width: 100%;
+				padding-right: 2em;
+			}
+		}
+	}
+}
+
+.tie-custom-select select:-moz-focusring {
+	color: transparent;
+	text-shadow: 0 0 0 #000;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.tie-custom-select {
+		select {
+			&::-ms-expand {
+				display: none;
+			}
+
+			&:focus {
+				border-color: #aaa;
+
+				&::-ms-value {
+					background: transparent;
+					color: #222;
+				}
+			}
+
+			padding-right: 2em;
+			background: none;
+			border: 1px solid transparent;
+		}
+
+		&:after {
+			display: block;
+		}
+	}
+}
+
+
+/* ---------------------------------------------
+ Color Picker
+------------------------------------------------ */
+.tie-alpha-container {
+	box-sizing: padding-box;
+	display:none;
+	border:1px solid #dfdfdf;
+	border-top:none;
+	background: #ffffff;
+	padding:0 11px 6px;
+	width: 233px;
+	bottom: -266px;
+	position: absolute;
+	z-index: 15;
+
+	.rtl &{
+		right: 0;
+	}
+
+	.transparency {
+		height: 24px;
+		width: 100%;
+		background-color: #ffffff;
+		background-image: url(images/transparency-grid.png);
+		box-shadow: 0 0 5px rgba(0,0,0,0.4) inset;
+		border-radius: 3px;
+		padding: 0;
+	}
+
+	.ui-slider-handle {
+		color: #777;
+		background-color: #ffffff;
+		text-shadow: 0 1px 0 #FFF;
+		text-decoration: none;
+		position: absolute;
+		z-index: 2;
+		box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+		border: 1px solid #aaa;
+		border-radius: 4px;
+		opacity: 0.9;
+		margin-top: -2px;
+		height: 20px;
+		cursor: ew-resize;
+		font-size: 12px;
+		padding: 3px;
+	}
+
+	.ui-slider {
+		position: relative !important;
+		text-align: center !important;
+		width: 88% !important;
+		border: 0 none !important;
+		background: transparent !important;
+		border-radius: 0 !important;
+	}
+}
+
+.wp-picker-container .wp-picker-open ~ div.tie-alpha-container {
+	display:block;
+}
+
+.tie-custom-color-picker{
+	position: relative;
+	float: left;
+
+	.widget-content &{
+		float: none !important;
+	}
+}
+
+.tie-panel .option-item .wp-picker-container .iris-picker,
+.weather-color .wp-picker-container .iris-picker {
+	border-bottom: none;
+	margin-top: 6px;
+}
+

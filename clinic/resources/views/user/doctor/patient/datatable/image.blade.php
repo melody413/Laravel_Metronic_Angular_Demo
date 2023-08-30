@@ -1,0 +1,1 @@
+<img src="{{url($image != null ? $image : url('/dashboard/images/image_placeholder.jpg'))}}" width="120px" alt="">
