@@ -65,6 +65,11 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/doctor/branch/delete/{id}', 'ADoctorBranchController@delete');
     Route::get('/doctor/branch/toggleActive/{id}', 'ADoctorBranchController@toggleActive');
 
+    //Doctor Rate API
+    Route::get('/doctor/rate/{id}', 'ADoctorRateController@index' );
+    Route::get('/doctor/rate/delete/{id}', 'ADoctorRateController@delete' );
+    Route::get('/doctor/rate/toggleActive/{id}',  'ADoctorRateController@toggleActive' );
+
     //Reservation API
     Route::get('/reservation/list', 'AReservationController@index')->name('reservation');  
     Route::get('/reservation/edit/{id}','AReservationController@edit' );
@@ -253,7 +258,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/city/copy/{id}', 'ACityController@copy');
     Route::post('/city/store', 'ACityController@store' );
     Route::post('/city/table', 'ACityController@table');
-
+    Route::get('/city/getAllArea/{id}', 'ACityController@getAllArea');
     //Area API
     Route::get('/area/list', 'AAreaController@index' );
     Route::get('/area/create', 'AAreaController@create'  );

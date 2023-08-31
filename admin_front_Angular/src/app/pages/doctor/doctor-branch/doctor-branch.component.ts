@@ -2,29 +2,45 @@ import { Component, OnInit, OnChanges, Input, ChangeDetectorRef, ViewChild, Afte
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { MatPaginator,PageEvent } from '@angular/material/paginator';
-
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
-  selector: 'app-doctor-list',
-  templateUrl: './doctor-list.component.html',
-  styleUrls: ['./doctor-list.component.scss']
+  selector: 'app-doctor-branch',
+  templateUrl: './doctor-branch.component.html',
+  styleUrls: ['./doctor-branch.component.scss']
 })
-export class DoctorListComponent implements OnInit {
+export class DoctorBranchComponent {
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @Input() tableData: any[];
   pageSize : number ;
   search_result: any[];
   search_index: string = "";
-  
-  constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
+  doctor_id: number;
+  weekend: string[] = ['San','Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  workdays: string;
+  work_days: boolean[] = [];
+  filteredWeekend: string[] ; 
+  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
 
   ngOnInit(): void {
-    this.http.get<any>(environment.apiUrl + "doctor/list").
-      subscribe((response) => {        
-        this.tableData = response.doctors["data"];
-        this.paginator.pageSize = response.doctors["per_page"];
-        this.paginator.length = response.doctors["total"];
-        this.paginator.pageIndex = 0;
-        this.cdr.detectChanges(); // Manually trigger change detection
+    this.route.params.subscribe(params => {
+      this.doctor_id = params['id'];
+    });
+    this.http.get<any>(environment.apiUrl + "doctor/branch/" + this.doctor_id).
+      subscribe((response) => {       
+        if(response.result){
+          this.tableData = response.result.data;
+          this.paginator.pageSize = response.result["recordsTotal"];
+          this.paginator.length = response.result["recordsTotal"];
+          this.workdays = this.tableData[0][3];
+          this.work_days = this.workdays.split("").map(char => char === "1");
+
+          this.filteredWeekend = this.weekend.filter((day, index) => this.work_days[index]);
+          this.paginator.pageIndex = 0;
+          this.crd.detectChanges(); // Manually trigger change detection
+        } 
+        console.log(this.tableData);
+        
       });
   }
 
@@ -50,7 +66,7 @@ export class DoctorListComponent implements OnInit {
             this.paginator.pageSize = response.search_result.length;
             this.paginator.length = response.search_result.length;
             this.paginator.pageIndex = response.search_result["current_page"]-1;
-            this.cdr.detectChanges(); // Manually trigger change detection
+            this.crd.detectChanges(); // Manually trigger change detection
             
           })   
     }
@@ -69,8 +85,7 @@ export class DoctorListComponent implements OnInit {
         this.paginator.pageSize = response.search_result["per_page"];
         this.paginator.length = response.search_result["total"];
         this.paginator.pageIndex = response.search_result["current_page"]-1;
-        this.cdr.detectChanges(); // Manually trigger change detection
-        this.cdr.detectChanges(); // Manually trigger change detection
+        this.crd.detectChanges(); // Manually trigger change detection
       })
     }
   }
@@ -78,7 +93,7 @@ export class DoctorListComponent implements OnInit {
   //delete the data
   delete(id: number){
     if(confirm("Are your really delete this data?")){
-      this.http.get<any>(environment.apiUrl+ "doctor/delete/" + id)
+      this.http.get<any>(environment.apiUrl+ "doctor/branch/delete/" + id)
       .subscribe((response)=>{
         this.ngOnInit();
       })

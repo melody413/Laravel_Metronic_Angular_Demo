@@ -2,7 +2,7 @@
 <div class="card">
   <div class="card-body">
     <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
-      Create Doctor
+      Edit Doctor
     </h1>
     <hr />
     <div class="card-body">
@@ -120,9 +120,9 @@
                     menubar: false
                   }"
                   toolbar="
-                    undo redo | formatselect | bold italic backcolor | \
-                    alignleft aligncenter alignright alignjustify | \
-                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                      undo redo | formatselect | bold italic backcolor | \
+                      alignleft aligncenter alignright alignjustify | \
+                      bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
                 ></editor>
               </div>
             </div>
@@ -147,6 +147,13 @@
             <img
               id="image"
               style="display: none; border-radius: 10%"
+              width="200"
+              height="200"
+            />
+            <img
+              *ngIf="image_name"
+              [src]="image_name"
+              style="border-radius: 10%"
               width="200"
               height="200"
             />
@@ -238,11 +245,11 @@
                 name="parentBodyIds[]"
                 class="filled-in chk-col-brown form-check-input subcp"
                 type="checkbox"
-                [checked]="specialty.includes(item[0])"
-                (change)="toggleCheckbox_specialty(item[0])"
+                [checked]="specialty.includes(item.id)"
+                (change)="toggleCheckbox_specialty(item.id)"
               />
               <label for="subcp_1" class="fs-2" style="padding-left: 8px">{{
-                item[1]
+                item.name
               }}</label>
             </div>
           </div>
@@ -426,8 +433,8 @@
                   type="checkbox"
                   class="filled-in chk-col-brown form-check-input subcp"
                   name="work_days[]"
-                  value="0"
-                  [(ngModel)]="work_days[0]"
+                  [checked]="work_days[0]"
+                  (change)="toggleCheckbox_work_day(0)"
                 />
                 <label for="work_days" class="">Sunday</label>
               </div>
@@ -436,8 +443,8 @@
                   type="checkbox"
                   class="filled-in chk-col-brown form-check-input subcp"
                   name="work_days[]"
-                  value="1"
-                  [(ngModel)]="work_days[1]"
+                  [checked]="work_days[1] === true"
+                  (change)="toggleCheckbox_work_day(1)"
                 />
                 <label for="work_days" class="">Monday</label>
               </div>
@@ -446,8 +453,8 @@
                   type="checkbox"
                   class="filled-in chk-col-brown form-check-input subcp"
                   name="work_days[]"
-                  value="2"
-                  [(ngModel)]="work_days[2]"
+                  [checked]="work_days[2]"
+                  (change)="toggleCheckbox_work_day(2)"
                 />
                 <label for="work_days" class="">Tuesday</label>
               </div>
@@ -456,8 +463,8 @@
                   type="checkbox"
                   class="filled-in chk-col-brown form-check-input subcp"
                   name="work_days[]"
-                  value="3"
-                  [(ngModel)]="work_days[3]"
+                  [checked]="work_days[3]"
+                  (change)="toggleCheckbox_work_day(3)"
                 />
                 <label for="work_days" class="">Wednesday</label>
               </div>
@@ -466,8 +473,8 @@
                   type="checkbox"
                   class="filled-in chk-col-brown form-check-input subcp"
                   name="work_days[]"
-                  value="4"
-                  [(ngModel)]="work_days[4]"
+                  [checked]="work_days[4]"
+                  (change)="toggleCheckbox_work_day(4)"
                 />
                 <label for="work_days" class="">Thuresday</label>
               </div>
@@ -476,8 +483,8 @@
                   type="checkbox"
                   class="filled-in chk-col-brown form-check-input subcp"
                   name="work_days[]"
-                  value="5"
-                  [(ngModel)]="work_days[5]"
+                  [checked]="work_days[5]"
+                  (change)="toggleCheckbox_work_day(5)"
                 />
                 <label for="work_days" class="">Friday</label>
               </div>
@@ -486,8 +493,8 @@
                   type="checkbox"
                   class="filled-in chk-col-brown form-check-input subcp"
                   name="work_days[]"
-                  value="6"
-                  [(ngModel)]="work_days[6]"
+                  [checked]="work_days[6]"
+                  (change)="toggleCheckbox_work_day(6)"
                 />
                 <label for="work_days" class="">Saturday</label>
               </div>
@@ -600,9 +607,9 @@
                 <option value="-1">Select the City</option>
                 <option
                   *ngFor="let item of cities; let i = index"
-                  [value]="item.city_id"
+                  [value]="item[0]"
                 >
-                  {{ item.name }}
+                  {{ item[1] }}
                 </option>
               </select>
             </div>
@@ -616,9 +623,9 @@
                 <option value="-1">Selecte the area</option>
                 <option
                   *ngFor="let item of areas; let i = index"
-                  [value]="item.area_id"
+                  [value]="item[0]"
                 >
-                  {{ item.name }}
+                  {{ item[1] }}
                 </option>
               </select>
             </div>
@@ -664,8 +671,8 @@
                 <label for="tags" class="form-label">Tags:</label>
               </div>
               <!-- <div class="col-auto">
-                <input name="tags" class="form-control" type="text" />
-              </div> -->
+                  <input name="tags" class="form-control" type="text" />
+                </div> -->
             </div>
           </div>
           <div class="col p-y-30 border-bottom" style="padding-bottom: 80px">
@@ -674,8 +681,8 @@
                 <label for="tags" class="form-label">Subcatigory:</label>
               </div>
               <!-- <div class="col-auto">
-                <input name="tags" class="form-control" type="text" />
-              </div> -->
+                  <input name="tags" class="form-control" type="text" />
+                </div> -->
             </div>
           </div>
         </div>
@@ -684,10 +691,7 @@
         <button class="btn btn-md btn-secondary" (reset)="reset()">
           Reset
         </button>
-        <button class="btn btn-md btn-success" (click)="create()">Save</button>
-        <button class="btn btn-md btn-primary" (click)="savenew()">
-          Save & create new
-        </button>
+        <button class="btn btn-md btn-success" (click)="edit()">Edit</button>
       </div>
     </div>
   </div>

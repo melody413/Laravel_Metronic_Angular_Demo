@@ -7,6 +7,7 @@ use App\Models\DoctorBranch;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Admin\BaseController;
+use App\Models\Specialty;
 
 
 class ADoctorBranchController extends BaseController
@@ -62,14 +63,12 @@ class ADoctorBranchController extends BaseController
         // return view($this->getTemplatePath('index'), compact(['id']));
     }
 
-    public function create($id)
+    public function create()
     {
-        $doctor = Doctor::findOrFail($id);
-
+        $specialty = Specialty::all();
         view()->share(['action_title' => 'Add New']);
-        return response(['doctor' => $doctor], 200);
+        return response(['doctor' => $doctor, "specialities"=> $specialty, ], 200);
 
-        // return view($this->getTemplatePath('create'), ['doctor' => $doctor]);
     }
 
     public function edit($id)

@@ -137,6 +137,23 @@ class ACityController extends BaseController
     {
         return 'city';
     }
+
+    public function getAllArea($id){
+        
+        $query = "SELECT area_id, name 
+                  FROM (SELECT * FROM area_trans WHERE locale='ar' ) as area_name 
+                  INNER JOIN  ( SELECT id FROM areas WHERE city_id = :id AND is_active = 1 ) as area_id 
+                  ON area_name.area_id = area_id.id";
+
+        $queryParams = array('id' => $id);
+          
+        // Execute the query and retrieve the cities
+        $areas = DB::select($query, $queryParams);
+        return response(["area" => $areas]);
+
+        // Return the cities
+    }
+
     public function table(Request $request){
         if($request->has("search_index")){
             $searchIndex = $request->search_index;

@@ -13,6 +13,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Models\Specialty;
+use App\Models\Country;
+use App\Models\City;
+use App\Models\Area;
 
 class ADoctorController extends BaseController
 {
@@ -31,9 +35,10 @@ class ADoctorController extends BaseController
 
     public function create(Request $request)
     {
+        $speciality = Specialty::where('is_active' , 1)->listsTranslations('name')->pluck('name', 'id');
+        $countries = Country::where('is_active' , 1)->listsTranslations('name')->pluck('name','id');
         view()->share(['action_title' => 'Create']);
-        return response(['action_title' => 'create'], 200);
-        // return view($this->getTemplatePath('create'));
+        return response(["speciality" => $speciality, "country"=> $countries], 200);
     }
 
     public function edit($id)
@@ -41,7 +46,10 @@ class ADoctorController extends BaseController
         view()->share(['action_title' => 'Edit']);
 
         $item = Doctor::where('id',$id)->first();
-
+        $speciality = Specialty::all();
+        $countries = Country::where('is_active' , 1)->listsTranslations('name')->pluck('name','id');
+        $cities = City::where('is_active' , 1)->listsTranslations('name')->pluck('name','id');
+        $areas = Area::where('is_active' , 1)->listsTranslations('name')->pluck('name','id');
         $specialityIds = $item->specialties()->pluck('specialty_id')->toArray();
 
         $hospitals = $item->hospitals()->listsTranslations('name')->pluck('name','id')->toArray();
@@ -54,7 +62,7 @@ class ADoctorController extends BaseController
         //dd($item->description);
         $tags_ar=''; $tags_en='';
         
-        return response(['item' => $item, 'branch'=>$branch,
+        return response(['item' => $item, 'branch'=>$branch, 'speciality'=> $speciality, 'country'=> $countries, 'city'=>$cities, 'area'=>$areas,
         'specialityIds' => $specialityIds, 'hospitals'=> $hospitals, 'insuranceCompanies'=> $insuranceCompanies, 
         'tags'=> $tags, 'centers' => $centers], 200);
         // return view($this->getTemplatePath('edit'), ['item' => $item, 'branch'=>$branch,
@@ -88,6 +96,11 @@ class ADoctorController extends BaseController
 
         if($id)
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            }
             $row = Doctor::findOrFail($id);
             $row->update($postData);
         }

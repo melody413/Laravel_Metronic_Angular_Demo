@@ -51,47 +51,28 @@
       <!-- begin::Table head -->
       <thead>
         <tr class="fw-bolder text-muted">
-          <th class="min-w-240px">ID#</th>
-          <th class="min-w-250px">IMAGE</th>
-          <th class="min-w-240px">NAME</th>
-          <th class="min-w-220px">LAST UPDATED</th>
-          <th class="min-w-220px">BY</th>
-          <th class="min-w-200px text-align">Actions</th>
+          <th class="min-w-240px">ID</th>
+          <th class="min-w-250px">USERNAME</th>
+          <th class="min-w-240px">RATE</th>
+          <th class="min-w-220px">COMMENT</th>
+          <th class="min-w-220px">DATE</th>
+          <th class="min-w-200px text-align">ACTIONS</th>
         </tr>
       </thead>
       <!-- end::Table head -->
       <!-- begin::Table body -->
       <tbody>
         <tr *ngFor="let data of tableData; let i = index">
-          <td>{{ data["id"] }}</td>
-          <td>
-            <img
-              [src]="
-                data['image']
-                  ? 'http://89.107.10.187:8000/uploads/doctors/' + data['image']
-                  : 'http://89.107.10.187:8000/assets/frontend/images/general/doctorak_default_logo_img.png'
-              "
-              alt="Image"
-              style="width: 100px; height: 100px"
-            />
-          </td>
-
-          <td>{{ data["name"] }}</td>
-          <td>{{ data["updated_at"] | date : "M:dd:yyyy" }}</td>
+          <td>{{ data[0] }}</td>
+          <td>{{ data[1] }}</td>
+          <td>{{ data[2] }}</td>
+          <td>{{ data[3] }}</td>
           <td>{{ data[4] }}</td>
           <td>
-            <a
-              class="btn btn-sm btn-primary"
-              style="margin: 5px"
-              routerLinkActive="active"
-              routerLink="/doctor/edit/{{ data.id }}"
-            >
-              EDIT
-            </a>
             <button
               class="btn btn-sm red"
               style="background-color: rgb(226, 17, 17); margin: 5px"
-              (click)="delete(data.id)"
+              (click)="delete(data[0])"
             >
               DELETE
             </button>
@@ -101,27 +82,11 @@
               routerLinkActive="active"
               routerLink="/doctor/rate/{{ data.id }}"
             >
-              Doctor Rate
-            </a>
-            <a
-              class="btn btn-sm red btn-primary"
-              style="margin: 5px"
-              routerLinkActive="active"
-              routerLink="/doctor/branch/{{ data.id }}"
-            >
-              Doctor Branch
-            </a>
-            <a
-              class="btn btn-sm red btn-pink btn-success"
-              style="margin: 5px"
-              routerLinkActive="active"
-              routerLink="/doctor/reservation"
-            >
-              Reservation
+              Disable
             </a>
           </td>
         </tr>
-        <tr *ngIf="tableData && tableData.length === 0">
+        <tr *ngIf="tableData == null">
           <td colspan="6">
             <h1
               class="error-message mt-20"

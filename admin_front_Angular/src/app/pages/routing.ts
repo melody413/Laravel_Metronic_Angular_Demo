@@ -53,6 +53,9 @@ import { UserListComponent } from './user/user-list/user-list.component';
 import { CreateUserComponent } from './user/create-user/create-user.component';
 import { EditBodyPartComponent } from './bodyPart/edit-body-part/edit-body-part.component';
 import { EditDiseaseComponent } from './disease/edit-disease/edit-disease.component';
+import { EditDoctorComponent } from './doctor/edit-doctor/edit-doctor.component';
+import { DoctorRateComponent } from './doctor/doctor-rate/doctor-rate.component';
+import { DoctorBranchComponent } from './doctor/doctor-branch/doctor-branch.component';
 
 const Routing: Routes = [
 
@@ -101,7 +104,18 @@ const Routing: Routes = [
     path: 'doctor/reservation',
     component : DoctorReservationComponent
   },
-
+  {
+    path: `doctor/edit/:id`,
+    component : EditDoctorComponent
+  },
+  {
+    path: `doctor/rate/:id`,
+    component : DoctorRateComponent
+  },
+  {
+    path: `doctor/branch/:id`,
+    component : DoctorBranchComponent
+  },
   //pharmecy router
   {
     path: 'pharmecy/create',

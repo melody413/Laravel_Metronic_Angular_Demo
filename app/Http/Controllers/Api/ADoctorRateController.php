@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Admin\BaseController;
 use App\Models\Doctor;
 use App\Models\DoctorRating;
 use Illuminate\Http\Request;
 
 
-class DoctorRateController extends BaseController
+class ADoctorRateController extends BaseController
 {
     public function init()
     {
@@ -51,22 +52,32 @@ class DoctorRateController extends BaseController
             ->rows()
         ;
 
-        if($request->ajax()  )
-            return $data;
+        return response(["data" => $data]);
 
-        return view($this->getTemplatePath('index'), compact(['id']));
+        // return view($this->getTemplatePath('index'), compact(['id']));
     }
 
+
+    public function delete($id, Request $request){
+        $row = DoctorRating::findOrFail($id);
+        $row->delete();
+        return response(['flash_message' => trans('admin.delete_success_message') ,
+        'flash_type' => 'success'], 200);
+    }
     public function toggleActive($id, Request $request)
     {
         $row = DoctorRating::findOrFail($id);
         $row->is_active = $row->is_active != 1?1:0;
         $row->save();
 
-        return redirect(route('admin.doctor_rate.index', ['id' => $row->doctor_id ]))->with([
+        // return redirect(route('admin.doctor_rate.index', ['id' => $row->doctor_id ]))->with([
+        //     'flash_message' => trans('admin.save.success') ,
+        //     'flash_type' => 'success' ,
+        // ]);
+        return response([
             'flash_message' => trans('admin.save.success') ,
             'flash_type' => 'success' ,
-        ]);
+        ], 200);
     }
 
     public function getTemplateFolder()
