@@ -14,6 +14,8 @@ export class DoctorListComponent implements OnInit {
   pageSize : number ;
   search_result: any[];
   search_index: string = "";
+  src: string = environment.url + "uploads/doctors/";
+  default: string = environment.url + "assets/frontend/images/general/doctorak_default_logo_img.png";
   
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
 

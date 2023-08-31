@@ -13,6 +13,8 @@ export class PharmecyCompanyListComponent {
   @Input() tableData: any[];
   pageSize : number ;
   search_index: string;
+  src: string = environment.url + "uploads/pharmacy_companies/";
+  default_src: string = environment.url + "assets/frontend/images/general/doctorak_default_logo_img.png";
 
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
   ngOnInit(): void {
@@ -59,6 +61,15 @@ export class PharmecyCompanyListComponent {
             this.cdr.detectChanges(); // Manually trigger change detection
             
           })   
+    }
+  }
+
+  delete(id: number){
+    if(confirm("Do you really delete this data?")){
+      this.http.get<any>(environment.apiUrl+ "pharmacy_company/delete/" + id)
+        .subscribe((response)=>{
+          this.ngOnInit();
+        })
     }
   }
 }

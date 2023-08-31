@@ -56,6 +56,9 @@ import { EditDiseaseComponent } from './disease/edit-disease/edit-disease.compon
 import { EditDoctorComponent } from './doctor/edit-doctor/edit-doctor.component';
 import { DoctorRateComponent } from './doctor/doctor-rate/doctor-rate.component';
 import { DoctorBranchComponent } from './doctor/doctor-branch/doctor-branch.component';
+import { EditPharmacyComponent } from './pharmecies/edit-pharmacy/edit-pharmacy.component';
+import { EditPharmacyCompanyComponent } from './pharmecies/edit-pharmacy-company/edit-pharmacy-company.component';
+import { CreatePharmacyCompanyComponent } from './pharmecies/create-pharmacy-company/create-pharmacy-company.component';
 
 const Routing: Routes = [
 
@@ -130,6 +133,20 @@ const Routing: Routes = [
     component : PharmecyCompanyListComponent
   },
 
+  {
+    path: 'pharmecy/company/create',
+    component : CreatePharmacyCompanyComponent
+  },
+
+  {
+    path: 'pharmecy/company/edit/:id',
+    component : EditPharmacyCompanyComponent
+  },
+
+  {
+    path: 'pharmecy/edit/:id',
+    component : EditPharmacyComponent
+  },
   //lab router
   {
     path: 'lab/create_labservice',

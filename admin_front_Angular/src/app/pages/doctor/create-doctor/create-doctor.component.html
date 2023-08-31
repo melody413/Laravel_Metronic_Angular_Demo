@@ -20,7 +20,15 @@
                   type="text"
                   [(ngModel)]="arName"
                   name="ar[name]"
+                  (ngModelChange)="onInputChange1($event)"
                 />
+                <div
+                  *ngIf="errorMessage1"
+                  class="error-message fs-6"
+                  style="color: red"
+                >
+                  {{ errorMessage1 }}
+                </div>
               </div>
               <div class="col-lg-6">
                 <h2 class="fs-2">Name English :</h2>
@@ -29,7 +37,15 @@
                   type="text"
                   [(ngModel)]="enName"
                   name="en[name]"
+                  (ngModelChange)="onInputChange2($event)"
                 />
+                <div
+                  *ngIf="errorMessage2"
+                  class="error-message fs-6"
+                  style="color: red"
+                >
+                  {{ errorMessage2 }}
+                </div>
               </div>
             </div>
           </div>

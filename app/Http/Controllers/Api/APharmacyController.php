@@ -7,9 +7,13 @@ use App\Http\Controllers\Admin\BaseController;
 use App\Mangers\DataTableManger;
 use App\Models\Pharmacy;
 use App\Models\Country;
+use App\Models\City;
+use App\Models\Area;
+
 use Okipa\LaravelBootstrapTableList\TableList;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use App\Models\pharmacyCompany;
 
 class APharmacyController extends BaseController
 {
@@ -28,8 +32,9 @@ class APharmacyController extends BaseController
     {
         view()->share(['action_title' => 'Create']);
         $this->formData();
-        return response(['action_tilte' => 'create']);
-        // return view($this->getTemplatePath('create'));
+        $countries = Country::where('is_active' , 1)->listsTranslations('name')->pluck('name','id');
+        $pharmacyCos = pharmacyCompany::all();
+        return response(['country' => $countries, 'pharmacyCo'=> $pharmacyCos,]);
     }
 
     public function edit($id)
@@ -55,15 +60,28 @@ class APharmacyController extends BaseController
             'country_id' => 'required',
         ]);
 
-        if($postData['parent_id'] == 0)
+        if($postData['parent_id'] < 0)
             $postData['parent_id'] = null;
+
         if($id)
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            }
             $row = Pharmacy::findOrFail($id);
             $row->update($postData);
         }
         else
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            }else{
+                $postData['image'] = '';
+            }
             $row = Pharmacy::create($postData);
         }
 

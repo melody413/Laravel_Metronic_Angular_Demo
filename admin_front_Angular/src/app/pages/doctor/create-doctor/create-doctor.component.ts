@@ -11,6 +11,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class CreateDoctorComponent implements OnInit{
 
   //reference valuable
+  errorMessage1: string ="";
+  errorMessage2: string ="";
+
   arName: string = "";
   enName: string = "";
   arTitle: string = "";
@@ -62,7 +65,6 @@ export class CreateDoctorComponent implements OnInit{
   countries: any[] = [];
   cities: any[] = [];
   areas: any[] = [];
-
   constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
 
   ngOnInit(): void{
@@ -78,6 +80,25 @@ export class CreateDoctorComponent implements OnInit{
         })
   }
 
+  onInputChange1(event : any){
+    
+    const string = event;
+    if(string){
+      this.errorMessage1 = "";
+    }else{
+      this.errorMessage1 = "*Please input the ar Name";
+    }
+    this.crd.detectChanges(); // Manually trigger change detection
+  }
+  onInputChange2(event : any){
+    const string = event;
+    if(string){
+      this.errorMessage2 = "";
+    }else{
+      this.errorMessage2 = "*Please input the en Name";
+    }
+    this.crd.detectChanges(); // Manually trigger change detection
+  }
   onCountryChange() {
     this.http.get<any>(environment.apiUrl + "country/getAllCity/" + this.country_id)
         .subscribe((response)=>{
@@ -155,6 +176,15 @@ export class CreateDoctorComponent implements OnInit{
 
 
   create(){
+  
+    //validation process
+    if(this.arName == "" || this.enName == ""){
+      if(this.arName == "") this.errorMessage1 = "Please input the ar Name";
+      if(this.enName == "") this.errorMessage2 = "Please input the en Name";
+      this.crd.detectChanges();
+      return;
+    }
+
     if(this.is_active == undefined){
       this.is_active = false;
     }
@@ -226,6 +256,13 @@ export class CreateDoctorComponent implements OnInit{
 
   reset(){}
   savenew(){
+    //validation process
+    if(this.arName == "" || this.enName == ""){
+      if(this.arName == "") this.errorMessage1 = "Please input the ar Name";
+      if(this.enName == "") this.errorMessage2 = "Please input the en Name";
+      this.crd.detectChanges();
+      return;
+    }
     if(this.is_active == undefined){
       this.is_active = false;
     }

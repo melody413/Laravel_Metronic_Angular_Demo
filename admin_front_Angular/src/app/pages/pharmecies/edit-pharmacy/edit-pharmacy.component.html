@@ -2,7 +2,7 @@
 <div class="card">
   <div class="card-body">
     <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
-      Create Pharmecies
+      Edit Pharmecies
     </h1>
     <hr />
     <div class="card-body">
@@ -104,7 +104,7 @@
 
           <div
             *ngFor="let desItem of desItems; let i = index"
-            class="col-lg-12 p-y-30 mt-10"
+            class="col-lg-12 p-y-30"
           >
             <div class="row">
               <div class="col-lg-6 fv-row">
@@ -260,6 +260,13 @@
               width="200"
               height="200"
             />
+            <img
+              *ngIf="image_name"
+              [src]="image_name"
+              style="border-radius: 10%"
+              width="200"
+              height="200"
+            />
             <!-- <div>No Choose File</div> -->
           </div>
 
@@ -340,7 +347,7 @@
               </select>
             </div>
             <div class="col-lg-4">
-              <h2 for="price" class="fs-3">City :</h2>
+              <h2 class="fs-3">City :</h2>
               <select
                 [(ngModel)]="city"
                 name="address_city"
@@ -422,10 +429,7 @@
         <button class="btn btn-md btn-secondary" (click)="reset()">
           Reset
         </button>
-        <button class="btn btn-md btn-success" (click)="create()">Save</button>
-        <button class="btn btn-md btn-primary" (click)="savenew()">
-          Save & create new
-        </button>
+        <button class="btn btn-md btn-success" (click)="edit()">Edit</button>
       </div>
     </div>
   </div>

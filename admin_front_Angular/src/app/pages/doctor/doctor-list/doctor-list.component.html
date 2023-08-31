@@ -66,11 +66,7 @@
           <td>{{ data["id"] }}</td>
           <td>
             <img
-              [src]="
-                data['image']
-                  ? 'http://89.107.10.187:8000/uploads/doctors/' + data['image']
-                  : 'http://89.107.10.187:8000/assets/frontend/images/general/doctorak_default_logo_img.png'
-              "
+              [src]="data['image'] ? src + data['image'] : default"
               alt="Image"
               style="width: 100px; height: 100px"
             />

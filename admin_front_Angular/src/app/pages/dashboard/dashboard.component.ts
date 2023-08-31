@@ -60,7 +60,7 @@ export class DashboardComponent implements OnInit{
     closeButtonLabel: 'Cancel'
   };
 
-  src: string = environment.url + "/images/imageslider/";
+  src: string = environment.url + "images/imageslider/";
   imageUrls: string[] = ['1.jpg', '2.jpg', '3.jpg']; // Replace these with your image URLs
   currentImageIndex = 0;
   

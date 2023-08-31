@@ -14,6 +14,8 @@ export class PharmecyListComponent {
   pageSize : number ;
   search_result: any[];
   search_index: string = "";
+  scr : string = environment.url + "uploads/pharmacies/";
+  default: string = environment.url+ "assets/frontend/images/general/doctorak_default_logo_img.png";
 
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
   ngOnInit(): void {
@@ -73,9 +75,11 @@ export class PharmecyListComponent {
 
   //delete the data
   delete(id: number){
-    this.http.get<any>(environment.apiUrl+ "pharmacy/delete/" + id)
-      .subscribe((response)=>{
-        this.ngOnInit();
-      })
+    if(confirm("Do you really delete this data?")){
+      this.http.get<any>(environment.apiUrl+ "pharmacy/delete/" + id)
+        .subscribe((response)=>{
+          this.ngOnInit();
+        })
+    }
   }
 }
