@@ -185,8 +185,8 @@ export class CreatehospitalComponent {
     formdata.append("website", this.website);
     formdata.append("phone", this.phone);
     formdata.append("country_id", this.country_id.toString());
-    formdata.append("city", this.city.toString());
-    formdata.append("area", this.area.toString());
+    formdata.append("city_id", this.city.toString());
+    formdata.append("area_id", this.area.toString());
     formdata.append("lat_lng", this.lat_lng);
 
     for(let i = 0 ; i < this.specialty.length ; i++){
@@ -206,8 +206,79 @@ export class CreatehospitalComponent {
 
     this.http.post<any>(environment.apiUrl + "hospital/store", formdata).subscribe(
       (response) => {
-        this.router.navigate(['/hospital/list']);
+        if(response.id){
+          alert("success");
+          this.router.navigate(['/hospital/list']);
+        }else{
+          alert("error");
+        }
       }
     )
+  }
+  savenew(){
+    if(this.is_active == undefined){
+      this.is_active = false;
+    }
+
+    const formdata = new FormData();
+
+    //language data
+    formdata.append("parent_id", this.parent_id.toString());
+    formdata.append("ar[name]", this.arName);
+    formdata.append("en[name]", this.enName);
+    formdata.append("ar[excerpt]", this.arExcerpt);
+    formdata.append("en[excerpt]", this.enExcerpt);
+    formdata.append("ar[description]", this.arDescription);
+    formdata.append("en[description]", this.enDescription);
+    formdata.append("ar[address]", this.arAddress);
+    formdata.append("en[address]", this.enAddress);
+
+    //other data
+    formdata.append("image", this.image);
+    formdata.append("image_gallery_count", this.image_gallery_count.toString());
+    for (let i = 0; i < this.image_gallery_names.length; i++) {
+      formdata.append('image_gallery[]', this.image_gallery_names[i]);
+    }
+
+    formdata.append("insurance_company", this.insuranceCompany);
+    formdata.append("facebook", this.facebook);
+    formdata.append("twitter", this.twitter);
+    formdata.append("instagram", this.instagram);
+    formdata.append("youtube", this.youtube);
+    formdata.append("website", this.website);
+    formdata.append("phone", this.phone);
+    formdata.append("country_id", this.country_id.toString());
+    formdata.append("city_id", this.city.toString());
+    formdata.append("area_id", this.area.toString());
+    formdata.append("lat_lng", this.lat_lng);
+
+    for(let i = 0 ; i < this.specialty.length ; i++){
+      if(this.specialty[i]) {
+        formdata.append("specialties[]", this.specialty[i].toString());
+      }
+    }
+
+    for(let i = 0 ; i < this.hospital_types.length ; i++){
+      if(this.hospital_types[i]) {
+        formdata.append("hospital_types[]", this.hospital_types[i].toString());
+      }
+    }
+    formdata.append("map_link", this.maplink);
+    formdata.append("is_active", this.is_active.toString());
+
+
+    this.http.post<any>(environment.apiUrl + "hospital/store", formdata).subscribe(
+      (response) => {
+        if(response.id){
+          alert("success");
+          this.reset();
+        }else{
+          alert("error");
+        }
+      }
+    )
+  }
+  reset(){
+    
   }
 }

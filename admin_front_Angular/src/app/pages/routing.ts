@@ -68,6 +68,14 @@ import { EditLabCategoryComponent } from './labs/edit-lab-category/edit-lab-cate
 import { EditInsuranceCompanyComponent } from './insurance_Company/edit-insurance-company/edit-insurance-company.component';
 import { EditHospitalComponent } from './hospital/edit-hospital/edit-hospital.component';
 import { EditHospitalTypeComponent } from './hospital/edit-hospital-type/edit-hospital-type.component';
+import { EditCenterComponent } from './center/edit-center/edit-center.component';
+import { EditMedicineComponent } from './Medicine/edit-medicine/edit-medicine.component';
+import { CreateMedicineCompanyComponent } from './Medicine/create-medicine-company/create-medicine-company.component';
+import { EditMedicineCompanyComponent } from './Medicine/edit-medicine-company/edit-medicine-company.component';
+import { CreateMedicineNameComponent } from './Medicine/create-medicine-name/create-medicine-name.component';
+import { EditMedicineNameComponent } from './Medicine/edit-medicine-name/edit-medicine-name.component';
+import { CreateMedicineCategoryComponent } from './Medicine/create-medicine-category/create-medicine-category.component';
+import { EditMedicineCategoryComponent } from './Medicine/edit-medicine-category/edit-medicine-category.component';
 
 const Routing: Routes = [
 
@@ -268,6 +276,11 @@ const Routing: Routes = [
     component : CenterListComponent
   },
 
+  {
+    path: 'center/edit/:id',
+    component : EditCenterComponent
+  },
+
   //Medicine router
   {
     path: 'medicines/create',
@@ -277,17 +290,55 @@ const Routing: Routes = [
     path: 'medicines/list',
     component : MedicineListComponent
   },
+
+  {
+    path: 'medicines/edit/:id',
+    component : EditMedicineComponent
+  },
+
   {
     path: 'medicines/company_list',
     component : MedicineCompanyListComponent
   },
+
+  {
+    path: 'medicines/company_create',
+    component : CreateMedicineCompanyComponent
+  },
+
+  {
+    path: 'medicines/company_edit/:id',
+    component : EditMedicineCompanyComponent
+  },
+
   {
     path: 'medicines/sname_list',
     component : MedicineNameListComponent
   },
+
+  {
+    path: 'medicines/sname_create',
+    component : CreateMedicineNameComponent
+  },
+
+  {
+    path: 'medicines/sname_edit/:id',
+    component : EditMedicineNameComponent
+  },
+
   {
     path: 'medicines/category_list',
     component : MedicineCategoryListComponent
+  },
+
+  {
+    path: 'medicines/category_create',
+    component : CreateMedicineCategoryComponent
+  },
+
+  {
+    path: 'medicines/category_edit/:id',
+    component : EditMedicineCategoryComponent
   },
 
   //Tag router

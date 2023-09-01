@@ -72,9 +72,11 @@ export class MedicineNameListComponent implements OnInit {
 
   //delete the data
   delete(id: number){
-    this.http.get<any>(environment.apiUrl+ "medicines_sc_name/delete/" + id)
-      .subscribe((response)=>{
-        this.ngOnInit();
-      })
+    if(confirm("Do you really delete the data?")){
+      this.http.get<any>(environment.apiUrl+ "medicines_sc_name/delete/" + id)
+        .subscribe((response)=>{
+          this.ngOnInit();
+        })
+    }
   }
 }

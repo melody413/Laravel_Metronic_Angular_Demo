@@ -55,18 +55,10 @@ class AMedicineController extends BaseController
         if($item->symptom_ids)
             $symps_parent = array_map('intval', json_decode($item->symptom_ids, true));
 
-        // $insuranceCompanies = $item->insuranceCompanies->pluck('name', 'id');
-        $companies = MedicinesCompany::all();
-        $categories = MedicinesCategory::all();
-        $categories_parent = (explode(",",$item->category));
-        // dd($categories_parent);
-        // dd($categories_parent);module_name
-        $medicines_sc_names = MedicinesScName::all();
-        $drug_classes =  MedicinesCategory::all();
-        $available_strengthes = MedicinesCategory::all();
+        // $drug_classes =  MedicinesCategory::all();
+        // $available_strengthes = MedicinesCategory::all();
         //dd($companies[0]->translate('ar')->name);
-        return response(["result" => compact('item', 'bps_parent', 'symps_parent', 'drug_classes', 
-        'available_strengthes','companies', 'medicines_sc_names', 'categories', 'categories_parent')], 200);
+        return response(["result" => compact('item')], 200);
     }
 
     public function store(Request $request)
@@ -88,11 +80,23 @@ class AMedicineController extends BaseController
 
         if($id)
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            }
             $row = Medicine::findOrFail($id);
             $row->update($postData);
         }
         else
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            } else {
+                $postData['image'] = '';
+            }
             $row = Medicine::create($postData);
         }
 

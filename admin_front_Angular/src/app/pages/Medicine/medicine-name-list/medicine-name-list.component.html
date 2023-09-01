@@ -1,81 +1,103 @@
 <!-- begin::Header -->
-<div class="card-header border-0 pt-5 row" style="display: flex; justify-content: space-between;">
-    <div class="col-md-2">
-      <a class="btn btn-sm btn-primary" routerLinkActive="active" routerLink="/medicines/create"> + Create New</a>
-    </div>
-    <div class="col-md-5 row">
-      <div class="col-lg-7">
-        <input class="form-control" type="text" placeholder=":search index" [(ngModel)]="search_index"/>
-      </div>
-      <button class="btn btn-primary col-lg-2" (click)="search()">Search</button>
-    </div>
-    <div class="col-md-2"  style="display: flex; align-items: center;">
-      <span style="margin-right: 5px; width: 70%;">Page size</span>
-      <select class="form-control"  #mySelect (change)="onSelectChange($event)">
-        <option value="10">10 : </option>
-        <option value="25">25 : </option>
-        <option value="50">50 : </option>
-        <option value="100">100 : </option>
-      </select>
-    </div>
+<div
+  class="card-header border-0 pt-5 row"
+  style="display: flex; justify-content: space-between"
+>
+  <div class="col-md-2">
+    <a
+      class="btn btn-sm btn-primary"
+      routerLinkActive="active"
+      routerLink="/medicines/sname_create"
+    >
+      + Create New</a
+    >
   </div>
-  <!-- end::Header -->
-  <!-- begin::Body -->
-  <div class="card-body py-3">
-    <!-- begin::Table container -->
-    <div class="table-responsive">
-      <mat-paginator 
-        [length]="100"
-        [showFirstLastButtons]="true"
-        (page)="onPageChange($event)">
-      </mat-paginator>  
-      <!-- begin::Table -->
-      <table
-        class="table table-row-dashed table-row-gray-300 align-middle gs-0 gy-4"
-      >
-        <!-- begin::Table head -->
-        <thead>
-          <tr class="fw-bolder text-muted">
-            <th class="min-w-240px">ID</th>
-            <th class="min-w-240px">NAME AR</th>
-            <th class="min-w-250px">NAME EN</th>
-            <th class="min-w-220px">LAST UPDATED</th>
-            <th class="min-w-200px text-align">Actions</th>
-          </tr>
-        </thead>
-        <!-- end::Table head -->
-        <!-- begin::Table body -->
-        <tbody>
-          <tr *ngFor="let data of tableData; let i = index">
-            <td>{{data[0]}}</td>
-            <td>{{ data[1] }}</td>
-            <td>{{ data[2] }}</td>
-            <td>{{ data[3]}}</td>
-            <td>
-              <button class="btn btn-sm btn-primary" style="margin: 5px">
-                EDIT
-              </button>
-              <button
-                class="btn btn-sm red"
-                style="background-color: rgb(226, 17, 17); margin: 5px"
-                (click)="delete(data.id)"
-
-              >
-                DELETE
-              </button>
-            </td>
-          </tr>
-          <tr *ngIf="tableData && tableData.length === 0">
-            <td colspan="6">
-              <h1 class="error-message mt-20" style="color: rgb(158, 58, 58); text-align: center; ">No data available.</h1>
-            </td>
-          </tr>
-        </tbody>
-        <!-- end::Table body -->
-      </table>
-      <!-- end::Table -->
+  <div class="col-md-5 row">
+    <div class="col-lg-7">
+      <input
+        class="form-control"
+        type="text"
+        placeholder=":search index"
+        [(ngModel)]="search_index"
+      />
     </div>
-    <!-- end::Table container -->
+    <button class="btn btn-primary col-lg-2" (click)="search()">Search</button>
   </div>
-  <!-- begin::Body -->
-  
+  <div class="col-md-2" style="display: flex; align-items: center">
+    <span style="margin-right: 5px; width: 70%">Page size</span>
+    <select class="form-control" #mySelect (change)="onSelectChange($event)">
+      <option value="10">10 :</option>
+      <option value="25">25 :</option>
+      <option value="50">50 :</option>
+      <option value="100">100 :</option>
+    </select>
+  </div>
+</div>
+<!-- end::Header -->
+<!-- begin::Body -->
+<div class="card-body py-3">
+  <!-- begin::Table container -->
+  <div class="table-responsive">
+    <mat-paginator
+      [length]="100"
+      [showFirstLastButtons]="true"
+      (page)="onPageChange($event)"
+    >
+    </mat-paginator>
+    <!-- begin::Table -->
+    <table
+      class="table table-row-dashed table-row-gray-300 align-middle gs-0 gy-4"
+    >
+      <!-- begin::Table head -->
+      <thead>
+        <tr class="fw-bolder text-muted">
+          <th class="min-w-240px">ID</th>
+          <th class="min-w-240px">NAME AR</th>
+          <th class="min-w-250px">NAME EN</th>
+          <th class="min-w-220px">LAST UPDATED</th>
+          <th class="min-w-200px text-align">Actions</th>
+        </tr>
+      </thead>
+      <!-- end::Table head -->
+      <!-- begin::Table body -->
+      <tbody>
+        <tr *ngFor="let data of tableData; let i = index">
+          <td>{{ data[0] }}</td>
+          <td>{{ data[1] }}</td>
+          <td>{{ data[2] }}</td>
+          <td>{{ data[3] }}</td>
+          <td>
+            <a
+              class="btn btn-sm btn-primary"
+              style="margin: 5px"
+              routerLink="/medicines/sname_edit/{{ data[0] }}"
+            >
+              EDIT
+            </a>
+            <button
+              class="btn btn-sm red"
+              style="background-color: rgb(226, 17, 17); margin: 5px"
+              (click)="delete(data.id)"
+            >
+              DELETE
+            </button>
+          </td>
+        </tr>
+        <tr *ngIf="tableData && tableData.length === 0">
+          <td colspan="6">
+            <h1
+              class="error-message mt-20"
+              style="color: rgb(158, 58, 58); text-align: center"
+            >
+              No data available.
+            </h1>
+          </td>
+        </tr>
+      </tbody>
+      <!-- end::Table body -->
+    </table>
+    <!-- end::Table -->
+  </div>
+  <!-- end::Table container -->
+</div>
+<!-- begin::Body -->

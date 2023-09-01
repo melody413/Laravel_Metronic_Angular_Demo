@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Mangers\DataTableManger;
 use App\Models\MedicinesCategory;
+use App\Models\SubCategory;
+use App\Models\Country;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Admin\BaseController;
@@ -27,7 +29,9 @@ class AMedicinesCategoryController extends BaseController
     public function create()
     {
         view()->share(['action_title' => 'Create']);
-        return response(['action_title' => 'Create'], 200);
+        $sub_categories = SubCategory::where('is_active' , 1)->listsTranslations('name')->pluck('name','id');
+        $countries = Country::where('is_active' , 1)->listsTranslations('name')->pluck('name','id');
+        return response(['country' => $countries, 'sub_category'=> $sub_categories], 200);
 
     }
     public function edit($id)
@@ -44,9 +48,11 @@ class AMedicinesCategoryController extends BaseController
 
         $item = MedicinesCategory::findOrFail($id);
         $categories_parent = (explode(",",$item->parent));
+        $sub_categories = SubCategory::where('is_active' , 1)->listsTranslations('name')->pluck('name','id');
+        $countries = Country::where('is_active' , 1)->listsTranslations('name')->pluck('name','id');
 // dd($categories_parent);
         //$medicineTypeIds = $item->medicine_types()->pluck('medicine_type_id')->toArray();
-        return response(['item' => $item, 'categories_parent'=> $categories_parent], 200);
+        return response(['item' => $item, 'categories_parent'=> $categories_parent, 'country' => $countries, 'sub_category'=> $sub_categories], 200);
     }
 
     public function store(Request $request)
@@ -55,7 +61,7 @@ class AMedicinesCategoryController extends BaseController
         $postData = $request->except('_token');
 // dd($request->parent);
         if($request->parent)
-            $postData['parent'] = (implode(",", $request->parent));
+            $postData['parent'] = ($request->parent);
 
         $request->validate([
             'ar.name' => 'required|max:255',
@@ -88,9 +94,6 @@ class AMedicinesCategoryController extends BaseController
             'flash_message' => trans('admin.save_success_message') ,
             'flash_type' => 'success' ,
         ];
-
-        if($request->input('saveNew'))
-            return response(['next' => "savenew"]);
 
         return response(['id' => $row->id], 200);
     }

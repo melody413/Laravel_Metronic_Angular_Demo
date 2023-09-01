@@ -55,7 +55,6 @@ export class EditLabComponent {
       this.route.params.subscribe(params => {
         this.lab_id = params['id'];
       });
-      console.log(this.lab_id);
      this.http.get<any>(environment.apiUrl + "lab/create")
          .subscribe((response)=>{
           this.labCos = response.lab_company;

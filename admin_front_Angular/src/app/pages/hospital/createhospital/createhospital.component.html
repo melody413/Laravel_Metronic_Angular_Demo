@@ -5,12 +5,7 @@
     </h1>
     <hr />
     <div class="card-body">
-      <form
-        novalidate
-        class="form"
-        (ngSubmit)="create()"
-        enctype="multipart/form-data"
-      >
+      <form novalidate class="form" enctype="multipart/form-data">
         <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
           Language Data
         </h1>
@@ -506,13 +501,16 @@
             </div>
           </div>
         </div>
-
-        <div class="col d-flex gap-2 align-items-end" style="float: right">
-          <button class="btn btn-md btn-secondary">Reset</button>
-          <button class="btn btn-md btn-success" type="submit">Save</button>
-          <button class="btn btn-md btn-primary">Save & create new</button>
-        </div>
       </form>
+      <div class="col d-flex gap-2 align-items-end" style="float: right">
+        <button class="btn btn-md btn-secondary" (click)="reset()">
+          Reset
+        </button>
+        <button class="btn btn-md btn-success" (click)="create()">Save</button>
+        <button class="btn btn-md btn-primary" (click)="savenew()">
+          Save & create new
+        </button>
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,262 @@
+<div class="card">
+  <div class="card-body">
+    <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
+      Create Medicine Comapany
+    </h1>
+    <hr />
+    <div class="card-body">
+      <form
+        novalidate
+        class="form"
+        method="post"
+        action="http://localhost:8000/admin/body_part/store"
+      >
+        <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+          Language Data
+        </h1>
+        <div class="card-body border-top">
+          <div class="col-lg-12 mt-10">
+            <div class="row">
+              <div class="col-lg-6 fv-col">
+                <h2 class="fs-3">Name Arabic :</h2>
+                <input
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  [(ngModel)]="arName"
+                  name="ar[name]"
+                  (ngModelChange)="onInputChange1($event)"
+                />
+                <div
+                  *ngIf="errorMessage1"
+                  class="error-message fs-6"
+                  style="color: red"
+                >
+                  {{ errorMessage1 }}
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <h2 class="fs-3">Name English :</h2>
+                <input
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  [(ngModel)]="enName"
+                  name="en[name]"
+                  (ngModelChange)="onInputChange2($event)"
+                />
+                <div
+                  *ngIf="errorMessage2"
+                  class="error-message fs-6"
+                  style="color: red"
+                >
+                  {{ errorMessage2 }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+          Other Data
+        </h1>
+        <div class="card-body border-top p-9">
+          <div class="col-lg-12 row">
+            <h2
+              for="doctor_facebook"
+              class="fs-3 col-lg-1"
+              style="padding-top: 10px"
+            >
+              Phone :
+            </h2>
+            <div class="col-lg-8">
+              <input
+                type="text"
+                [(ngModel)]="phone"
+                name="phone"
+                class="form-control form-control-solid"
+              />
+              <span>seperate between numbers using "/"</span>
+            </div>
+          </div>
+          <div class="col-lg-12 row">
+            <h2
+              for="doctor_facebook"
+              class="fs-3 col-lg-1"
+              style="padding-top: 10px"
+            >
+              Facebook :
+            </h2>
+            <div class="col-lg-8">
+              <input
+                type="text"
+                [(ngModel)]="facebook"
+                name="facebook"
+                class="form-control form-control-solid"
+              />
+            </div>
+          </div>
+          <div class="col-lg-12 row mt-10">
+            <h2 class="fs-3 col-lg-1" style="padding-top: 10px">Twitter :</h2>
+            <div class="col-lg-8">
+              <input
+                type="text"
+                [(ngModel)]="twitter"
+                name="twitter"
+                class="form-control form-control-solid"
+              />
+            </div>
+          </div>
+          <div class="col-lg-12 row mt-10">
+            <h2 class="fs-3 col-lg-1" style="padding-top: 10px">Instagram :</h2>
+            <div class="col-lg-8">
+              <input
+                type="text"
+                [(ngModel)]="instagram"
+                name="instagram"
+                class="form-control form-control-solid"
+              />
+            </div>
+          </div>
+          <div class="col-lg-12 row mt-10">
+            <h2 class="fs-3 col-lg-1" style="padding-top: 10px">Youtube :</h2>
+            <div class="col-lg-8">
+              <input
+                type="text"
+                [(ngModel)]="youtube"
+                name="youtube"
+                class="form-control form-control-solid"
+              />
+            </div>
+          </div>
+          <div class="col-lg-12 row mt-10">
+            <h2 class="fs-3 col-lg-1" style="padding-top: 10px">Website :</h2>
+            <div class="col-lg-8">
+              <input
+                type="text"
+                [(ngModel)]="website"
+                name="website"
+                class="form-control form-control-solid"
+              />
+            </div>
+          </div>
+
+          <div
+            class="input-group input-group-lg col-lg-12 d-flex gap-5 align-items-center mt-10"
+          >
+            <h2 class="fs-3 col-lg-2">Image :</h2>
+            <!-- <div class="p-5 border rounded-lg">Choose File</div> -->
+            <input
+              name="image"
+              type="file"
+              class="form-control-lg form-control-solid mb-3 mb-lg-0"
+              name="doctor_image"
+              (change)="onFileSelected($event)"
+            />
+            <img
+              id="image"
+              style="display: none; border-radius: 10%"
+              width="200"
+              height="200"
+            />
+            <!-- <div>No Choose File</div> -->
+          </div>
+
+          <div class="col-lg-12 row mt-10">
+            <div class="col-lg-4">
+              <h2 for="price" class="fs-3">Country :</h2>
+              <select
+                class="form-control"
+                [(ngModel)]="country_id"
+                name="country_id"
+                (change)="onCountryChange()"
+              >
+                <option value="-1">select the country</option>
+                <option
+                  *ngFor="let country of countries; let i = index"
+                  [value]="country[0]"
+                >
+                  {{ country[1] }}
+                </option>
+              </select>
+            </div>
+            <div class="col-lg-4">
+              <h2 for="price" class="fs-3">City :</h2>
+              <select
+                [(ngModel)]="city"
+                name="address_city"
+                class="form-control form-control-solid"
+                (change)="onCityChange()"
+              >
+                <option value="-1">Select the City</option>
+                <option
+                  *ngFor="let item of cities; let i = index"
+                  [value]="item.city_id"
+                >
+                  {{ item.name }}
+                </option>
+              </select>
+            </div>
+            <div class="col-lg-4">
+              <h2 for="price" class="fs-3">Area :</h2>
+              <select
+                [(ngModel)]="area"
+                name="adress_area"
+                class="form-control form-control-solid"
+              >
+                <option value="-1">Selecte the area</option>
+                <option
+                  *ngFor="let item of areas; let i = index"
+                  [value]="item.area_id"
+                >
+                  {{ item.name }}
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <!-- is Active -->
+          <div
+            class="input-group p-y-30 col-lg-15 d-flex gap-5 align-items-center mt-10"
+          >
+            <h2 class="card-title fw-bolder col-auto" for="is_active">
+              Is Active :
+            </h2>
+            <span>OFF</span>
+            <div
+              class="form-check form-check-custom form-check-solid form-check-success form-switch"
+            >
+              <input
+                [(ngModel)]="is_active"
+                class="form-check-input"
+                type="checkbox"
+                name="is_active"
+              />
+            </div>
+            <span>ON</span>
+          </div>
+        </div>
+      </form>
+      <div class="col d-flex gap-2 align-items-center">
+        <button class="btn btn-md btn-secondary" (click)="reset()">
+          Reset
+        </button>
+        <button class="btn btn-md btn-success" (click)="create()">Save</button>
+        <button class="btn btn-md btn-primary" (click)="savenew()">
+          Save & create new
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script
+    src="https://cdn.tiny.cloud/1/your-api-key/tinymce/6/tinymce.min.js"
+    referrerpolicy="origin"
+  ></script>
+
+  <script>
+    tinymce.init({
+      selector: "#editor",
+      plugins:
+        "a11ychecker advcode advlist advtable anchor autocorrect autolink autoresize autosave casechange charmap checklist code codesample directionality editimage emoticons export footnotes formatpainter fullscreen help image importcss inlinecss insertdatetime link linkchecker lists media mediaembed mentions mergetags nonbreaking pagebreak pageembed permanentpen powerpaste preview quickbars save searchreplace table tableofcontents template tinycomments tinydrive tinymcespellchecker typography visualblocks visualchars wordcount",
+    });
+  </script>
+</div>

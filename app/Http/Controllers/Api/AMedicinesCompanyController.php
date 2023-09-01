@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Admin\BaseController;
 use Illuminate\Support\Facades\DB;
+use App\Models\Country;
 
 class AMedicinesCompanyController extends BaseController
 {
@@ -43,8 +44,9 @@ class AMedicinesCompanyController extends BaseController
     public function create()
     {
         view()->share(['action_title' => 'Create']);
+        $countries = Country::where('is_active' , 1)->listsTranslations('name')->pluck('name','id');
 
-        return response(['action_title' => 'Create'], 200);
+        return response(['country' => $countries]);
     }
 
     public function edit($id)
@@ -53,7 +55,9 @@ class AMedicinesCompanyController extends BaseController
 
         $item = MedicinesCompany::findOrFail($id);
         //$medicineTypeIds = $item->medicine_types()->pluck('medicine_type_id')->toArray();
-        return response(['item' => $item], 200);
+        $countries = Country::where('is_active' , 1)->listsTranslations('name')->pluck('name','id');
+
+        return response(['item' => $item, 'country' => $countries,], 200);
     }
 
     public function store(Request $request)
@@ -68,11 +72,23 @@ class AMedicinesCompanyController extends BaseController
 
         if($id)
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            }
             $row = MedicinesCompany::findOrFail($id);
             $row->update($postData);
         }
         else
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            } else {
+                $postData['image'] = '';
+            }
             $row = MedicinesCompany::create($postData);
         }
 
@@ -104,7 +120,7 @@ class AMedicinesCompanyController extends BaseController
         $row = MedicinesCompany::findOrFail($id);
         $row->delete();
 
-        return reponse(['flash_message' => trans('admin.delete_success_message') ,
+        return response(['flash_message' => trans('admin.delete_success_message') ,
         'flash_type' => 'success'], 200);
     }
 

@@ -240,8 +240,8 @@ export class EditHospitalComponent {
     formdata.append("website", this.website);
     formdata.append("phone", this.phone);
     formdata.append("country_id", this.country_id.toString());
-    if(this.city) formdata.append("city", this.city.toString());
-    if(this.area) formdata.append("area", this.area.toString());
+    if(this.city) formdata.append("city_id", this.city.toString());
+    if(this.area) formdata.append("area_id", this.area.toString());
     formdata.append("lat_lng", this.lat_lng);
 
     for(let i = 0 ; i < this.specialty.length ; i++){

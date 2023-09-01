@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-center',
@@ -9,128 +10,68 @@ import { environment } from 'src/environments/environment';
 })
 export class CreateCenterComponent {
   //reference valuables
-  arName: string;
-  enName: string;
-  arExcerpt: string;
-  enExcerpt: string;
-  arDescription: string;
-  enDescription: string;
-  arAddress: string;
-  enAddress: string;
+  arName: string = "";
+  enName: string = "";
+  arExcerpt: string = "";
+  enExcerpt: string = "";
+  arDescription: string = "";
+  enDescription: string = "";
+  arAddress: string = "";
+  enAddress: string = "";
   image: File;
   image_gallery_count: number;
   image_gallery: File[] = []; 
   image_gallery_names: string[] = [];
-  insuranceCompany: string;
-  facebook: string;
-  twitter: string;
-  instagram : string;
-  youtube: string;
-  website: string;
-  phone: string;
-  country_id: number;
-  city: number;
-  area: number;
-  lat_lng: string;
+  insuranceCompany: string = "";
+  phone: string = "";
+  country_id: number = -1;
+  city: number = -1;
+  area: number = -1;
+  lat_lng: string = "";
   maplink: string = "";
   is_active : boolean;
-  entags: string;
-  artags: string;
-  enSubCats: string;
-  arSubCats: string;
+  entags: string = "";
+  artags: string = "";
+  enSubCats: string = "";
+  arSubCats: string = "";
   specialty: number[] = [];
   hospital_types: number[] = [];
 
-  hospital_types_items = [
-    { name : 'children'},
-    { name : 'adults'}
-  ]
-  items = [
-    { name: 'الجهاز الدوري' },
-    { name: 'الأوعية الدموية' },
-    { name: 'القلب' },
-    { name: 'الشرايين' },
-    { name: 'الأوردة' },
-    { name: 'الشعيرات الدموية' },
-    { name: 'الجهاز العضلي الهيكلي' },
-    { name: 'العظام' },
-    { name: 'المفاصل' },
-    { name: 'العضلات' },
-    { name: 'الأوتار' },
-    { name: 'الأربطة' },
-    { name: 'الغضاريف' },
-    { name: 'الجهاز الهضمي' },
-    { name: 'المريء' },
-    { name: 'الفم' },
-    { name: 'البلعوم' },
-    { name: 'الغدد اللعابية' },
-    { name: 'المعدة' },
-    { name: 'الكبد' },
-    { name: 'الأمعاء الدقيقة' },
-    { name: 'الأمعاء الغليظة' },
-    { name: 'المرارة' },
-    { name: 'المستقيم' },
-    { name: 'فتحة الشرج' },
-    { name: 'الزائدة الدودية' },
-    { name: 'اللسان' },
-    { name: 'الجهاز التنفسي' },
-    { name: 'الرئتين' },
-    { name: 'القصبة الهوائية' },
-    { name: 'الأنف' },
-    { name: 'الجيوب الأنفية' },
-    { name: 'الحنجرة' },
-    { name: 'الحجاب الحاجز' },
-    { name: 'الشعب الهوائية' },
-    { name: 'الجهاز البولي' },
-    { name: 'الكلى' },
-    { name: 'الحالب' },
-    { name: 'المثانة' },
-    { name: 'الجهاز التناسلي' },
-    { name: 'الجهاز التناسلي الانثوي' },
-    { name: 'المهبل' },
-    { name: 'الرحم' },
-    { name: 'عنق الرحم' },
-    { name: 'المبيض' },
-    { name: 'قناة فالوب' },
-    { name: 'الجهاز التناسلي الذكري' },
-    { name: 'البروستاتا' },
-    { name: 'القضيب' },
-    { name: 'الخصية' },
-    { name: 'كيس الصفن' },
-    { name: 'الأسهر' },
-    { name: 'الإحليل' },
-    { name: 'الحويصلات المنوية' },
-    { name: 'الجهاز اللمفاوي' },
-    { name: 'الأوعية اللمفاوية' },
-    { name: 'العقد اللمفاوية' },
-    { name: 'نخاع العظم' },
-    { name: 'الطحال' },
-    { name: 'الجهاز العصبي' },
-    { name: 'الدماغ' },
-    { name: 'الحبل الشوكي' },
-    { name: 'الأعصاب' },
-    { name: 'العيون' },
-    { name: 'الأذن' },
-    { name: 'جهاز الغدد الصماء' },
-    { name: 'البنكرياس' },
-    { name: 'الغدة النخامية' },
-    { name: 'الغدة الدرقية' },
-    { name: 'الغدة الكظرية' },
-    { name: 'الغدد جارات الدرقية' },
-    { name: 'الغدة الصنوبرية' },
-    { name: 'الجهاز اللحافي' },
-    { name: 'الجلد' },
-    { name: 'الأظافر' },
-    { name: 'الشعر' },
-    { name: 'الغدد العرقية' },
-  ];
 
-  constructor(private http: HttpClient,) {}
+  //reponse data
+  countries: any[] = [];
+  cities: any[] = [];
+  areas: any[] = [];
+  specialities: any[] = [];
+
+  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
 
   ngOnInit(): void{
     this.image_gallery_count = 0;
+    this.http.get<any>(environment.apiUrl + "hospital/create")
+         .subscribe((response)=>{
+          this.specialities = Object.entries(response.specialty);
+          this.countries = Object.entries(response.country);
+          this.crd.detectChanges();
+         })
+    
   }
 
+  onCountryChange() {
+    this.http.get<any>(environment.apiUrl + "country/getAllCity/" + this.country_id)
+        .subscribe((response)=>{
+          this.cities = response.city;
+          this.crd.detectChanges();
+        })
+  } 
+
+  onCityChange(){
+    this.http.get<any>(environment.apiUrl + "city/getAllArea/" + this.city)
+        .subscribe((response)=>{
+          this.areas = response.area;
+          this.crd.detectChanges();
+        })
+  }
   toggleCheckbox_specialty(item: number){
     const index = this.specialty.indexOf(item);
     if (index === -1) {
@@ -201,7 +142,6 @@ export class CreateCenterComponent {
 
 
   create(){
-    
     if(this.is_active == undefined){
       this.is_active = false;
     }
@@ -227,15 +167,64 @@ export class CreateCenterComponent {
     }
 
     formdata.append("insurance_company", this.insuranceCompany);
-    formdata.append("facebook", this.facebook);
-    formdata.append("twitter", this.twitter);
-    formdata.append("instagram", this.instagram);
-    formdata.append("youtube", this.youtube);
-    formdata.append("website", this.website);
     formdata.append("phone", this.phone);
-    formdata.append("country_id", this.country_id.toString());
-    formdata.append("country_id", this.city.toString());
-    formdata.append("country_id", this.area.toString());
+    if(this.country_id)  formdata.append("country_id", this.country_id.toString());
+    if(this.city) formdata.append("city_id", this.city.toString());
+    if(this.area) formdata.append("area_id", this.area.toString());
+    formdata.append("lat_lng", this.lat_lng);
+
+    for(let i = 0 ; i < this.specialty.length ; i++){
+      if(this.specialty[i]) {
+        formdata.append("specialties[]", this.specialty[i].toString());
+      }
+    }
+
+    formdata.append("map_link", this.maplink);
+    formdata.append("is_active", this.is_active? "1" : "0");
+
+
+    this.http.post<any>(environment.apiUrl + "center/store", formdata).subscribe(
+      (response) => {
+        if(response.id){
+          alert("success");
+          this.router.navigate(['/center/list']);
+        }else{
+          alert("error");
+        }
+      }
+    )
+  }
+
+  savenew(){
+    if(this.is_active == undefined){
+      this.is_active = false;
+    }
+
+    const formdata = new FormData();
+
+    //language data
+    formdata.append("parent_id", "0");
+    formdata.append("ar[name]", this.arName);
+    formdata.append("en[name]", this.enName);
+    formdata.append("ar[excerpt]", this.arExcerpt);
+    formdata.append("en[excerpt]", this.enExcerpt);
+    formdata.append("ar[description]", this.arDescription);
+    formdata.append("en[description]", this.enDescription);
+    formdata.append("ar[address]", this.arAddress);
+    formdata.append("en[address]", this.enAddress);
+
+    //other data
+    formdata.append("image", this.image);
+    formdata.append("image_gallery_count", this.image_gallery_count.toString());
+    for (let i = 0; i < this.image_gallery_names.length; i++) {
+      formdata.append('image_gallery[]', this.image_gallery_names[i]);
+    }
+
+    formdata.append("insurance_company", this.insuranceCompany);
+    formdata.append("phone", this.phone);
+    if(this.country_id)  formdata.append("country_id", this.country_id.toString());
+    if(this.city) formdata.append("city_id", this.city.toString());
+    if(this.area) formdata.append("area_id", this.area.toString());
     formdata.append("lat_lng", this.lat_lng);
 
     for(let i = 0 ; i < this.specialty.length ; i++){
@@ -247,10 +236,18 @@ export class CreateCenterComponent {
     formdata.append("map_link", this.maplink);
     formdata.append("is_active", this.is_active.toString());
 
+
     this.http.post<any>(environment.apiUrl + "center/store", formdata).subscribe(
       (response) => {
-        console.log(response);
+        if(response.id){
+          alert("success");
+          this.reset();
+        }else{
+          alert("error");
+        }
       }
     )
   }
+  reset(){}
+
 }
