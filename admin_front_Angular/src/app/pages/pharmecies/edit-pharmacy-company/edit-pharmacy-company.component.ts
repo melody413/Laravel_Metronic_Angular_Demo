@@ -93,7 +93,16 @@ export class EditPharmacyCompanyComponent implements OnInit {
   }
 
   reset(){
-
+    this.arName = "";
+    this.enName = "";
+    this.arExcerpt = "";
+    this.enExcerpt = "";
+    this.arDescription ="";
+    this.enDescription = "";
+    let image_tmp: any = document.getElementById('image') as HTMLElement;
+    image_tmp.style.display="none";
+    this.image_name = "";
+    this.is_active = false;
   }
   edit(){
     //validation process

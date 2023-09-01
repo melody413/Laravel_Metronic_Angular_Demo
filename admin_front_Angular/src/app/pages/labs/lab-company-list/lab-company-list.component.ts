@@ -14,6 +14,8 @@ export class LabCompanyListComponent {
   pageSize : number ;
   search_result: any[];
   search_index: string = "";
+  src: string = environment.url + "uploads/lab_companies/";
+  default_src: string = environment.url + "assets/frontend/images/general/doctorak_default_logo_img.png";
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
   ngOnInit(): void {
     this.http.get<any>(environment.apiUrl + "lab_company/list").
@@ -73,10 +75,13 @@ export class LabCompanyListComponent {
 
   //delete the data
   delete(id: number){
-    this.http.get<any>(environment.apiUrl+ "lab_company/delete/" + id)
+    if(confirm("Do you delete this data?")){
+      this.http.get<any>(environment.apiUrl+ "lab_company/delete/" + id)
       .subscribe((response)=>{
         this.ngOnInit();
       })
+    }
+    
   }
 }
 

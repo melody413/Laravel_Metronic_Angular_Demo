@@ -85,6 +85,12 @@ import { DoctorBranchComponent } from './pages/doctor/doctor-branch/doctor-branc
 import { EditPharmacyComponent } from './pages/pharmecies/edit-pharmacy/edit-pharmacy.component';
 import { CreatePharmacyCompanyComponent } from './pages/pharmecies/create-pharmacy-company/create-pharmacy-company.component';
 import { EditPharmacyCompanyComponent } from './pages/pharmecies/edit-pharmacy-company/edit-pharmacy-company.component';
+import { EditLabServiceComponent } from './pages/labs/edit-lab-service/edit-lab-service.component';
+import { EditLabComponent } from './pages/labs/edit-lab/edit-lab.component';
+import { EditLabCompanyComponent } from './pages/labs/edit-lab-company/edit-lab-company.component';
+import { CreateLabCompanyComponent } from './pages/labs/create-lab-company/create-lab-company.component';
+import { CreateLabCategoryComponent } from './pages/labs/create-lab-category/create-lab-category.component';
+import { EditLabCategoryComponent } from './pages/labs/edit-lab-category/edit-lab-category.component';
 
 // import { BodypartListModule } from './pages/bodyPart/bodypart-list/bodypart-list.module';
 // #fake-end#
@@ -127,7 +133,7 @@ function appInitializer(authService: AuthService) {
     CreateCenterComponent, 
     CenterListComponent, 
     ToggleSwitchComponent, 
-    ZeroConfigComponentComponent, MedicineListComponent, CreateMedicineComponent, MedicineCompanyListComponent, MedicineNameListComponent, MedicineCategoryListComponent, CreateTagComponent, TagListComponent, CreateSubCategoryComponent, SubCategoryListComponent, CreateQuestionAnswerComponent, QuestionAnswerListComponent, CreateCountryComponent, CountryListComponent, CityListComponent, CreateCityComponent, CreateAreaComponent, AreaListComponent, SpecialityListComponent, CreateSpecialityComponent, CreatePageComponent, PageListComponent, CreateFaqComponent, FaqListComponent, CreateRoleComponent, RoleListComponent, CreateUserComponent, UserListComponent, EditBodyPartComponent, EditDiseaseComponent, EditDoctorComponent, DoctorRateComponent, DoctorBranchComponent, EditPharmacyComponent, CreatePharmacyCompanyComponent, EditPharmacyCompanyComponent,
+    ZeroConfigComponentComponent, MedicineListComponent, CreateMedicineComponent, MedicineCompanyListComponent, MedicineNameListComponent, MedicineCategoryListComponent, CreateTagComponent, TagListComponent, CreateSubCategoryComponent, SubCategoryListComponent, CreateQuestionAnswerComponent, QuestionAnswerListComponent, CreateCountryComponent, CountryListComponent, CityListComponent, CreateCityComponent, CreateAreaComponent, AreaListComponent, SpecialityListComponent, CreateSpecialityComponent, CreatePageComponent, PageListComponent, CreateFaqComponent, FaqListComponent, CreateRoleComponent, RoleListComponent, CreateUserComponent, UserListComponent, EditBodyPartComponent, EditDiseaseComponent, EditDoctorComponent, DoctorRateComponent, DoctorBranchComponent, EditPharmacyComponent, CreatePharmacyCompanyComponent, EditPharmacyCompanyComponent, EditLabServiceComponent, EditLabComponent, EditLabCompanyComponent, CreateLabCompanyComponent, CreateLabCategoryComponent, EditLabCategoryComponent,
   ],
   imports: [
     MatFormFieldModule,

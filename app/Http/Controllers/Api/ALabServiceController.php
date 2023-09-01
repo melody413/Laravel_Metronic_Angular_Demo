@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Mangers\DataTableManger;
 use App\Models\LabService;
+use App\Models\LabCategory;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Admin\BaseController;
@@ -24,9 +26,9 @@ class ALabServiceController extends BaseController
 
     public function create()
     {
+        $labcategories = LabCategory::all();
         view()->share(['action_title' => 'Create']);
-        return response(['action_title' => 'Create'], 200);
-        // return view($this->getTemplatePath('create'));
+        return response(["categories" => $labcategories], 200);
     }
 
     public function edit($id)
@@ -35,7 +37,7 @@ class ALabServiceController extends BaseController
 
         $item = LabService::findOrFail($id);
         $categories_parent = (explode(",",$item->lab_category));
-        return response(['result' => compact('item', 'categories_parent')], 200);
+        return response(["result" => compact('item', 'categories_parent')], 200);
         // return view($this->getTemplatePath('edit'), ['item' => $item]);
         // return view($this->getTemplatePath('edit'), compact('item', 'categories_parent'));
 
@@ -55,11 +57,23 @@ class ALabServiceController extends BaseController
 
         if($id)
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            }
             $row = LabService::findOrFail($id);
             $row->update($postData);
         }
         else
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            }else{
+                $postData['image'] = '';
+            }
             $row = LabService::create($postData);
         }
 

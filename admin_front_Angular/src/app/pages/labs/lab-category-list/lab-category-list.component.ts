@@ -13,13 +13,16 @@ export class LabCategoryListComponent {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @Input() tableData: any[];
   pageSize : number ;
-
+  src: string = environment.url + "uploads/lab_categories/";
+  default_src: string = environment.url + "assets/frontend/images/general/doctorak_default_logo_img.png";
+  
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
   ngOnInit(): void {
     this.http.get<any>(environment.apiUrl + "lab_category/list").
       subscribe((response) => {        
         this.tableData = response.lab_categories["data"];
-        this.paginator.pageSize = 15;
+        this.paginator.pageSize = 10;
+        this.pageSize = 10;
         this.paginator.length = response.lab_categories["total"];
       });
   }
@@ -42,5 +45,14 @@ export class LabCategoryListComponent {
 
   ngAfterViewInit() {
     this.paginator.pageSize = this.pageSize;
+  }
+
+  delete(id: number){
+    if(confirm("Do you delete this data?")){
+      this.http.get<any>(environment.apiUrl+ "lab_category/delete/" + id)
+      .subscribe((response)=>{
+        this.ngOnInit();
+      })
+    }
   }
 }

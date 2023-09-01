@@ -1,0 +1,189 @@
+<p>create-disease works!</p>
+<div class="card">
+  <div class="card-body">
+    <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
+      Create Lab Category
+    </h1>
+    <hr />
+    <div class="card-body">
+      <form novalidate class="form">
+        <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+          Language Data
+        </h1>
+        <div class="card-body border-top">
+          <div class="col-lg-12 mt-10">
+            <div class="row">
+              <div class="col-lg-6 fv-col">
+                <h2 class="fs-3">Name Arabic :</h2>
+                <input
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  [(ngModel)]="arName"
+                  name="ar[name]"
+                  (ngModelChange)="onInputChange1($event)"
+                />
+                <div
+                  *ngIf="errorMessage1"
+                  class="error-message fs-6"
+                  style="color: red"
+                >
+                  {{ errorMessage1 }}
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <h2 class="fs-3">Name English :</h2>
+                <input
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  [(ngModel)]="enName"
+                  name="en[name]"
+                  (ngModelChange)="onInputChange2($event)"
+                />
+                <div
+                  *ngIf="errorMessage2"
+                  class="error-message fs-6"
+                  style="color: red"
+                >
+                  {{ errorMessage2 }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 form-group p-y-30 mt-10">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 fv-row">
+                <h2 class="fs-3">Excerpt Ar :</h2>
+                <textarea
+                  cols="50"
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  [(ngModel)]="arExcerpt"
+                  name="ar[Excerpt]"
+                  placeholder="Arabic[expert]"
+                ></textarea>
+                <small>display in list not show in unit</small>
+              </div>
+              <div class="col-lg-6 col-sm-12 fv-row">
+                <h2 class="fs-3">Excerpt En :</h2>
+                <textarea
+                  cols="50"
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  [(ngModel)]="enExcerpt"
+                  name="en[Excerpt]"
+                  placeholder="English[expert]"
+                ></textarea>
+                <small>display in list not show in unit</small>
+              </div>
+            </div>
+          </div>
+
+          <div
+            *ngFor="let desItem of desItems; let i = index"
+            class="col-lg-12 p-y-30 mt-10"
+          >
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <h2 class="fs-3">Description Ar :</h2>
+                <!-- <textarea class="form-control tinymce" placeholder="Description" [(ngModel)]="enDescription" name="en[description]" cols="50" rows="10"></textarea> -->
+                <editor
+                  id="{{ desItem.title }}"
+                  cols="50"
+                  rows="10"
+                  [(ngModel)]="arDescription"
+                  name="ar[Description]"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                ></editor>
+              </div>
+              <div class="col-lg-6 fv-row">
+                <h2 class="fs-3" for="descriptionar">
+                  {{ desItem.title }} En :
+                </h2>
+                <editor
+                  [(ngModel)]="enDescription"
+                  name="en[Description]"
+                  placeholder="Description"
+                  cols="50"
+                  rows="10"
+                  apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                  [init]="{
+                    height: 500,
+                    menubar: false
+                  }"
+                  toolbar="
+                    undo redo | formatselect | bold italic backcolor | \
+                    alignleft aligncenter alignright alignjustify | \
+                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                ></editor>
+              </div>
+            </div>
+          </div>
+          <div
+            class="input-group input-group-lg col-lg-12 d-flex gap-5 align-items-center mt-10"
+          >
+            <h2 class="fs-3 col-lg-1">Logo :</h2>
+            <!-- <div class="p-5 border rounded-lg">Choose File</div> -->
+            <input
+              name="image"
+              type="file"
+              class="form-control-lg form-control-solid mb-3 mb-lg-0"
+              name="doctor_image"
+              (change)="onFileSelected($event)"
+            />
+            <img
+              id="image"
+              style="display: none; border-radius: 10%"
+              width="200"
+              height="200"
+            />
+            <!-- <div>No Choose File</div> -->
+          </div>
+          <!-- is Active -->
+          <div
+            class="input-group p-y-30 col-lg-15 d-flex gap-5 align-items-center mt-10"
+          >
+            <h2 class="fs-3" for="is_active">Is Active :</h2>
+            <span>OFF</span>
+            <div
+              class="form-check form-check-custom form-check-solid form-check-success form-switch"
+            >
+              <input
+                [(ngModel)]="is_active"
+                class="form-check-input"
+                type="checkbox"
+                name="is_active"
+              />
+            </div>
+            <span>ON</span>
+          </div>
+        </div>
+      </form>
+      <div class="col d-flex gap-2 align-items-center">
+        <button class="btn btn-md btn-secondary" (click)="reset()">
+          Reset
+        </button>
+        <button class="btn btn-md btn-success" (click)="create()">Save</button>
+        <button class="btn btn-md btn-primary" (click)="savenew()">
+          Save & create new
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script
+    src="https://cdn.tiny.cloud/1/your-api-key/tinymce/6/tinymce.min.js"
+    referrerpolicy="origin"
+  ></script>
+
+  <script>
+    tinymce.init({
+      selector: "#editor",
+      plugins:
+        "a11ychecker advcode advlist advtable anchor autocorrect autolink autoresize autosave casechange charmap checklist code codesample directionality editimage emoticons export footnotes formatpainter fullscreen help image importcss inlinecss insertdatetime link linkchecker lists media mediaembed mentions mergetags nonbreaking pagebreak pageembed permanentpen powerpaste preview quickbars save searchreplace table tableofcontents template tinycomments tinydrive tinymcespellchecker typography visualblocks visualchars wordcount",
+    });
+  </script>
+</div>

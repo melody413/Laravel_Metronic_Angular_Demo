@@ -59,6 +59,12 @@ import { DoctorBranchComponent } from './doctor/doctor-branch/doctor-branch.comp
 import { EditPharmacyComponent } from './pharmecies/edit-pharmacy/edit-pharmacy.component';
 import { EditPharmacyCompanyComponent } from './pharmecies/edit-pharmacy-company/edit-pharmacy-company.component';
 import { CreatePharmacyCompanyComponent } from './pharmecies/create-pharmacy-company/create-pharmacy-company.component';
+import { EditLabServiceComponent } from './labs/edit-lab-service/edit-lab-service.component';
+import { EditLabComponent } from './labs/edit-lab/edit-lab.component';
+import { CreateLabCompanyComponent } from './labs/create-lab-company/create-lab-company.component';
+import { EditLabCompanyComponent } from './labs/edit-lab-company/edit-lab-company.component';
+import { CreateLabCategoryComponent } from './labs/create-lab-category/create-lab-category.component';
+import { EditLabCategoryComponent } from './labs/edit-lab-category/edit-lab-category.component';
 
 const Routing: Routes = [
 
@@ -156,6 +162,12 @@ const Routing: Routes = [
     path: 'lab/labservice_list',
     component : LabServiceListComponent
   },
+
+  {
+    path: 'lab/labservice_edit/:id',
+    component : EditLabServiceComponent
+  },
+
   {
     path: 'lab/create_lab',
     component : CreateLabComponent
@@ -164,15 +176,41 @@ const Routing: Routes = [
     path: 'lab/lab_list',
     component : LabListComponent
   },
+
+  {
+    path: 'lab/edit_lab/:id',
+    component : EditLabComponent
+  },
+
   {
     path: 'lab/labCompany_list',
     component : LabCompanyListComponent
   },
+
+  {
+    path: 'lab/labCompany_create',
+    component : CreateLabCompanyComponent
+  },
+
+  {
+    path: 'lab/labCompany_edit/:id',
+    component : EditLabCompanyComponent
+  },
+
   {
     path: 'lab/labCategory_list',
     component : LabCategoryListComponent
   },
 
+  {
+    path: 'lab/labCategory_create',
+    component : CreateLabCategoryComponent
+  },
+
+  {
+    path: 'lab/labCategory_edit/:id',
+    component : EditLabCategoryComponent
+  },
   //insurance router
   {
     path: 'insurance/create',

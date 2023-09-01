@@ -5,102 +5,111 @@
     </h1>
     <hr />
     <div class="card-body">
-      <form
-        novalidate
-        class="form"
-        method="post"
-        action="http://localhost:8000/admin/body_part/store"
-      >
+      <form novalidate class="form">
         <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
           Language Data
         </h1>
         <div class="card-body border-top">
-          <br />
-          <h2 class="card-title fw-bolder text-hover-primary fs-2">
-            Lab Company:
-          </h2>
-          <div
-            class="col-lg-12 row"
-            style="text-align: center; padding: 0px 50px"
-          >
-            <div class="col-lg-6 fv-row">
-              <input
-                class="filled-in chk-col-brown form-check-input subcp"
-                type="checkbox"
-              />
-              <label for="subcp_1" class="fs-2" style="padding-left: 8px"
-                >المختبر</label
+          <div class="col-lg-12 row mt-10 align-items-center">
+            <h2 for="price" class="fs-3 col-lg-2">Lab Company :</h2>
+            <div class="col-lg-4">
+              <select
+                class="form-control"
+                [(ngModel)]="lab_co_id"
+                name="lab_co_id"
               >
-            </div>
-            <div class="col-lg-6 fv-row">
-              <input
-                class="filled-in chk-col-brown form-check-input subcp"
-                type="checkbox"
-              />
-              <label for="subcp_1" class="fs-2" style="padding-left: 8px"
-                >البرج</label
-              >
-            </div>
-          </div>
-          <br />
-          <div class="col-lg-12">
-            <div class="row">
-              <div class="col-lg-6 fv-col">
-                <h2 class="fs-2">Name Arabic :</h2>
-                <input
-                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
-                  type="text"
-                  name=""
-                />
-              </div>
-              <div class="col-lg-6">
-                <h2 class="fs-2">Name English :</h2>
-                <input
-                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
-                  type="text"
-                  name=""
-                />
-              </div>
+                <option value="-1">select the Lab company</option>
+                <option
+                  *ngFor="let item of labCos; let i = index"
+                  [value]="item['id']"
+                >
+                  {{ item["name"] }}
+                </option>
+              </select>
             </div>
           </div>
 
-          <br />
-          <div class="col-lg-12 form-group p-y-30">
+          <div class="col-lg-12 mt-10">
+            <div class="row">
+              <div class="col-lg-6 fv-col">
+                <h2 class="fs-3">Name Arabic :</h2>
+                <input
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  [(ngModel)]="arName"
+                  name="ar[name]"
+                  (ngModelChange)="onInputChange1($event)"
+                />
+                <div
+                  *ngIf="errorMessage1"
+                  class="error-message fs-6"
+                  style="color: red"
+                >
+                  {{ errorMessage1 }}
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <h2 class="fs-3">Name English :</h2>
+                <input
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  type="text"
+                  [(ngModel)]="enName"
+                  name="en[name]"
+                  (ngModelChange)="onInputChange2($event)"
+                />
+                <div
+                  *ngIf="errorMessage2"
+                  class="error-message fs-6"
+                  style="color: red"
+                >
+                  {{ errorMessage2 }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 form-group p-y-30 mt-10">
             <div class="row">
               <div class="col-lg-6 col-sm-12 fv-row">
-                <h2 class="fs-2">Excerpt Ar :</h2>
+                <h2 class="fs-3">Excerpt Ar :</h2>
                 <textarea
                   cols="50"
                   class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
                   type="text"
-                  name=""
+                  [(ngModel)]="arExcerpt"
+                  name="ar[Excerpt]"
                   placeholder="Arabic[expert]"
                 ></textarea>
                 <small>display in list not show in unit</small>
               </div>
               <div class="col-lg-6 col-sm-12 fv-row">
-                <h2 class="fs-2">Excerpt En :</h2>
+                <h2 class="fs-3">Excerpt En :</h2>
                 <textarea
                   cols="50"
                   class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
                   type="text"
-                  name=""
+                  [(ngModel)]="enExcerpt"
+                  name="en[Excerpt]"
                   placeholder="English[expert]"
                 ></textarea>
                 <small>display in list not show in unit</small>
               </div>
             </div>
           </div>
-          <br />
-          <div class="col-lg-12 p-y-30">
+
+          <div
+            *ngFor="let desItem of desItems; let i = index"
+            class="col-lg-12 p-y-30 mt-10"
+          >
             <div class="row">
               <div class="col-lg-6 fv-row">
-                <label for="descriptionar">Description Ar :</label>
+                <h2 class="fs-3">Description Ar :</h2>
                 <!-- <textarea class="form-control tinymce" placeholder="Description" [(ngModel)]="enDescription" name="en[description]" cols="50" rows="10"></textarea> -->
                 <editor
-                  placeholder="Description"
+                  id="{{ desItem.title }}"
                   cols="50"
                   rows="10"
+                  [(ngModel)]="arDescription"
+                  name="ar[Description]"
                   apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
                   [init]="{
                     height: 500,
@@ -109,8 +118,12 @@
                 ></editor>
               </div>
               <div class="col-lg-6 fv-row">
-                <label for="descriptionar">Description En :</label>
+                <h2 class="fs-3" for="descriptionar">
+                  {{ desItem.title }} En :
+                </h2>
                 <editor
+                  [(ngModel)]="enDescription"
+                  name="en[Description]"
                   placeholder="Description"
                   cols="50"
                   rows="10"
@@ -120,128 +133,157 @@
                     menubar: false
                   }"
                   toolbar="
-                                        undo redo | formatselect | bold italic backcolor | \
-                                        alignleft aligncenter alignright alignjustify | \
-                                        bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                    undo redo | formatselect | bold italic backcolor | \
+                    alignleft aligncenter alignright alignjustify | \
+                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
                 ></editor>
               </div>
             </div>
           </div>
-          <br />
-          <div class="col-lg-12 form-group p-y-30">
-            <div class="row">
-              <div class="col-lg-6 col-sm-12 fv-row">
-                <h2 class="fs-2">Address Ar :</h2>
-                <textarea
-                  cols="50"
-                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+          <!-- Address -->
+          <div class="row mt-10 col-lg-12">
+            <div class="col-lg-6">
+              <h2 class="fs-3">Address Ar:</h2>
+              <div>
+                <input
+                  [(ngModel)]="arAddress"
                   type="text"
-                  name=""
-                  placeholder="Arabic[expert]"
-                ></textarea>
-                <small>display in list not show in unit</small>
+                  maxlength="50"
+                  class="form-control form-control-lg form-control-solid"
+                  name="address_ar"
+                />
               </div>
-              <div class="col-lg-6 col-sm-12 fv-row">
-                <h2 class="fs-2">Address En :</h2>
-                <textarea
-                  cols="50"
-                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+            </div>
+            <div class="col-lg-6">
+              <h2 class="fs-3">Address En:</h2>
+              <div>
+                <input
                   type="text"
-                  name=""
-                  placeholder="English[expert]"
-                ></textarea>
-                <small>display in list not show in unit</small>
+                  [(ngModel)]="enAddress"
+                  type="text"
+                  maxlength="50"
+                  class="form-control form-control-lg form-control-solid"
+                  name="address_en"
+                />
               </div>
             </div>
           </div>
-          <br />
-          <br />
         </div>
 
         <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
           Other Data
         </h1>
-        <div class="card-body border-top">
+        <div class="card-body border-top p-9">
           <div
-            class="input-group input-group-lg col-lg-15 d-flex gap-5 align-items-center"
+            class="input-group input-group-lg col-lg-12 d-flex gap-5 align-items-center mt-10"
           >
-            <h2 for="doctor_image" class="card-title fw-bolder">Image :</h2>
+            <h2 class="fs-3 col-lg-2">Logo :</h2>
             <!-- <div class="p-5 border rounded-lg">Choose File</div> -->
             <input
+              name="image"
               type="file"
               class="form-control-lg form-control-solid mb-3 mb-lg-0"
               name="doctor_image"
+              (change)="onFileSelected($event)"
+            />
+            <img
+              id="image"
+              style="display: none; border-radius: 10%"
+              width="200"
+              height="200"
             />
             <!-- <div>No Choose File</div> -->
           </div>
-          <br />
-          <div class="row p-y-30">
-            <h3 for="doctor_hospital">Insurance Company</h3>
-            <input
-              name="insurance_company"
-              value=""
-              class="form-control form-control-solid"
-            />
-          </div>
-          <br />
 
-          <div class="row p-y-30">
-            <h3 for="doctor_hospital">Phone</h3>
-            <input
-              name="phone number"
-              value=""
-              placeholder=""
-              class="form-control form-control-solid"
-            />
-            <small>separate between numbers using "/"</small>
-          </div>
-          <br />
-
-          <!-- country -->
-          <div class="row p-y-30">
-            <h4 for="country_name">Country:</h4>
-            <select
-              address="address_country"
-              class="form-control form-control-solid"
+          <div class="col-lg-12 row mt-10">
+            <h2
+              for="doctor_facebook"
+              class="fs-3 col-lg-1"
+              style="padding-top: 10px"
             >
-              <option value="">Nothing Selected</option>
-              <option value="ar">Ar</option>
-              <option value="uk">UK</option>
-              <option value="ca">CA</option>
-              <option value="ga">GA</option>
-            </select>
+              Phone :
+            </h2>
+            <div class="col-lg-8">
+              <input
+                type="text"
+                [(ngModel)]="phone"
+                name="phone"
+                class="form-control form-control-solid"
+              />
+              <span>seperate between numbers using "/"</span>
+            </div>
           </div>
-          <br />
 
-          <!-- city -->
-          <div class="row p-y-30">
-            <h4 for="country_name">City:</h4>
-            <select name="address_city" class="form-control form-control-solid">
-              <option value="">Nothing selected</option>
-              <option value="ar">Ar</option>
-              <option value="uk">UK</option>
-              <option value="ca">CA</option>
-              <option value="ga">GA</option>
-            </select>
+          <div class="col-lg-12 row mt-10">
+            <h2 class="fs-3 col-lg-1" style="padding-top: 10px">
+              Insurance Co:
+            </h2>
+            <div class="col-lg-8">
+              <input
+                type="text"
+                [(ngModel)]="insuranceCompany"
+                maxlength="50"
+                class="form-control form-control-lg form-control-solid"
+                name="insurance_company"
+              />
+              <span>seperate between numbers using "/"</span>
+            </div>
           </div>
-          <br />
 
-          <!-- area -->
-          <div class="row p-y-30">
-            <h4 for="country_name">Area:</h4>
-            <select name="adress_area" class="form-control form-control-solid">
-              <option value=""></option>
-              <option value="ar">Ar</option>
-              <option value="uk">UK</option>
-              <option value="ca">CA</option>
-              <option value="ga">GA</option>
-            </select>
+          <div class="col-lg-12 row mt-10">
+            <div class="col-lg-4">
+              <h2 for="price" class="fs-3">Country :</h2>
+              <select
+                class="form-control"
+                [(ngModel)]="country_id"
+                name="country_id"
+                (change)="onCountryChange()"
+              >
+                <option value="-1">select the country</option>
+                <option
+                  *ngFor="let country of countries; let i = index"
+                  [value]="country[0]"
+                >
+                  {{ country[1] }}
+                </option>
+              </select>
+            </div>
+            <div class="col-lg-4">
+              <h2 for="price" class="fs-3">City :</h2>
+              <select
+                [(ngModel)]="city"
+                name="address_city"
+                class="form-control form-control-solid"
+                (change)="onCityChange()"
+              >
+                <option value="-1">Select the City</option>
+                <option
+                  *ngFor="let item of cities; let i = index"
+                  [value]="item.city_id"
+                >
+                  {{ item.name }}
+                </option>
+              </select>
+            </div>
+            <div class="col-lg-4">
+              <h2 for="price" class="fs-3">Area :</h2>
+              <select
+                [(ngModel)]="area"
+                name="adress_area"
+                class="form-control form-control-solid"
+              >
+                <option value="-1">Selecte the area</option>
+                <option
+                  *ngFor="let item of areas; let i = index"
+                  [value]="item.area_id"
+                >
+                  {{ item.name }}
+                </option>
+              </select>
+            </div>
           </div>
-          <br />
-          <br />
-
-          <div class="d-flex align-items-center gap-5 p-y-30">
-            <h5 for="gmap">GMAP</h5>
+          <div class="col-lg-12 mt-10 row">
+            <h2 class="fs-3" for="gmap">GMAP</h2>
             <div class="col">
               <div class="bg-primary" style="width: 100%; height: 300px"></div>
               <div
@@ -251,50 +293,100 @@
                 <div class="d-flex gap-5 align-items-center">
                   <h4>LatLang:</h4>
                   <div class="border-bottom">
-                    <input class="form-control" name="latlang" />
+                    <input
+                      [(ngModel)]="lat_lng"
+                      class="form-control"
+                      name="latlang"
+                      value="29.971142, 31.242678"
+                    />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <br />
-          <div class="row g-2 align-items-center">
-            <div class="col-auto">
-              <h5 for="map_link">Map Link:</h5>
-            </div>
-            <div class="col-auto">
-              <input class="form-control border-none" name="map_link" />
+
+          <div>
+            <h2 class="fs-3 mt-10">Lab Service :</h2>
+          </div>
+          <div class="col-lg-12 row mt-10">
+            <div
+              *ngFor="let item of lab_services; let i = index"
+              class="col-lg-4 fv-row"
+            >
+              <input
+                [value]="item[0]"
+                name="labService[]"
+                class="filled-in chk-col-brown form-check-input subcp"
+                type="checkbox"
+                [checked]="lab_service_ids.includes(item[0])"
+                (change)="toggleCheckbox_lab_service_ids(item[0])"
+              />
+              <label for="subcp_1" class="fs-4" style="padding-left: 8px">{{
+                item[1]
+              }}</label>
             </div>
           </div>
-          <br />
-          <div
-            class="input-group input-group-lg col-lg-15 d-flex gap-5 align-items-center"
-          >
-            <h1
-              class="card-title fw-bolder text-muted fs-4"
-              style="display: block; text-align: center; padding: 10px"
+          <div class="col-lg-12 row mt-10">
+            <h2
+              for="doctor_facebook"
+              class="fs-3 col-lg-1"
+              style="padding-top: 10px"
             >
-              Is Active :
-            </h1>
+              Map Link:
+            </h2>
+            <div class="col-lg-8">
+              <input
+                type="text"
+                [(ngModel)]="maplink"
+                maxlength="50"
+                class="form-control form-control-lg form-control-solid"
+                name="maplink"
+              />
+            </div>
+          </div>
+
+          <!-- is Active -->
+          <div
+            class="input-group p-y-30 col-lg-15 d-flex gap-5 align-items-center mt-10"
+          >
+            <h2 class="fs-3 col-lg-1" for="is_active">Is Active :</h2>
             <span>OFF</span>
             <div
               class="form-check form-check-custom form-check-solid form-check-success form-switch"
             >
               <input
+                [(ngModel)]="is_active"
                 class="form-check-input"
                 type="checkbox"
-                name="model.app.sidebar.default.minimize.desktop.enabled"
+                name="is_active"
               />
             </div>
             <span>ON</span>
           </div>
         </div>
       </form>
-      <div class="col d-flex gap-2 align-items-end" style="float: right">
-        <button class="btn btn-md btn-secondary">Reset</button>
-        <button class="btn btn-md btn-success">Save</button>
-        <button class="btn btn-md btn-primary">Save & create new</button>
+      <div class="col d-flex gap-2 align-items-center">
+        <button class="btn btn-md btn-secondary" (click)="reset()">
+          Reset
+        </button>
+        <button class="btn btn-md btn-success" (click)="create()">Save</button>
+        <button class="btn btn-md btn-primary" (click)="savenew()">
+          Save & create new
+        </button>
       </div>
     </div>
   </div>
+
+  <script
+    src="https://cdn.tiny.cloud/1/your-api-key/tinymce/6/tinymce.min.js"
+    referrerpolicy="origin"
+  ></script>
+
+  <script>
+    tinymce.init({
+      selector: "#editor",
+      plugins:
+        "a11ychecker advcode advlist advtable anchor autocorrect autolink autoresize autosave casechange charmap checklist code codesample directionality editimage emoticons export footnotes formatpainter fullscreen help image importcss inlinecss insertdatetime link linkchecker lists media mediaembed mentions mergetags nonbreaking pagebreak pageembed permanentpen powerpaste preview quickbars save searchreplace table tableofcontents template tinycomments tinydrive tinymcespellchecker typography visualblocks visualchars wordcount",
+    });
+  </script>
 </div>

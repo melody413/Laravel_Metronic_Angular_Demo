@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Lab;
+use App\Models\LabCompany;
+use App\Models\LabService;
 use App\Models\Country;
 use Okipa\LaravelBootstrapTableList\TableList;
 use Illuminate\Http\Request;
@@ -27,9 +29,11 @@ class ALabController extends BaseController
     public function create()
     {
         view()->share(['action_title' => 'Create']);
-
+        $lab_companies = LabCompany::all();
+        $countries = Country::where('is_active' , 1)->listsTranslations('name')->pluck('name','id');
         $this->formData();
-        return response(['action_title' => 'Create']);
+        $lab_services = LabService::where('is_active' , 1)->listsTranslations('name')->pluck('name','id');
+        return response(["lab_company"=> $lab_companies, "country"=>$countries, "lab_service"=>$lab_services]);
         // return view($this->getTemplatePath('create'));
     }
 
@@ -63,11 +67,23 @@ class ALabController extends BaseController
 
         if($id)
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            }
             $row = Lab::findOrFail($id);
             $row->update($postData);
         }
         else
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            }else{
+                $postData['image'] = "";
+            }
             $row = Lab::create($postData);
         }
 

@@ -73,9 +73,11 @@ export class LabServiceListComponent {
 
   //delete the data
   delete(id: number){
-    this.http.get<any>(environment.apiUrl+ "lab_services/delete/" + id)
+    if(confirm("Do you really delete the data?1")){
+      this.http.get<any>(environment.apiUrl+ "lab_services/delete/" + id)
       .subscribe((response)=>{
         this.ngOnInit();
       })
+    }
   }
 }

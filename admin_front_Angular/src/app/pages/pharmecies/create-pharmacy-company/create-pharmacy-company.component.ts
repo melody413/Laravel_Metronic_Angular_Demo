@@ -104,7 +104,15 @@ export class CreatePharmacyCompanyComponent {
     )
   }
   reset(){
-
+    this.arName = "";
+    this.enName = "";
+    this.arExcerpt = "";
+    this.enExcerpt = "";
+    this.arDescription ="";
+    this.enDescription = "";
+    let image_tmp: any = document.getElementById('image') as HTMLElement;
+    image_tmp.style.display="none";
+    this.is_active = false;
   }
   savenew(){
     //validation process
@@ -132,7 +140,7 @@ export class CreatePharmacyCompanyComponent {
       (response) => {
         if(response.next) {
           alert("success");
-          this.router.navigate(["pharmecy/companylist"]);
+          this.reset();
         }
         else alert("error");
       }

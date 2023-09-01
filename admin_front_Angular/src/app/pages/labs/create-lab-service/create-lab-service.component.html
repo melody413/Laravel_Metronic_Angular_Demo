@@ -5,70 +5,66 @@
     </h1>
     <hr />
     <div class="card-body">
-      <form
-        novalidate
-        class="form"
-        method="post"
-        action="http://localhost:8000/admin/body_part/store"
-      >
+      <form novalidate class="form">
         <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
           Informatio Data
         </h1>
         <div class="card-body border-top">
-          <h2 class="card-title fw-bolder text-hover-primary fs-2">
-            Lab Category:
-          </h2>
-          <br />
-          <div
-            class="col-lg-12 row"
-            style="text-align: center; padding: 0px 50px"
-          >
-            <div class="col-lg-4 fv-row">
-              <input
-                class="filled-in chk-col-brown form-check-input subcp"
-                type="checkbox"
-              />
-              <label for="subcp_1" class="fs-2" style="padding-left: 8px"
-                >Select Parent</label
+          <div class="col-lg-12 row align-items-center">
+            <h2 class="fs-3 col-lg-2">Lab Category:</h2>
+            <div class="col-lg-4">
+              <select
+                class="form-control"
+                [(ngModel)]="lab_category_id"
+                name="lab_category_id"
               >
-            </div>
-            <div class="col-lg-4 fv-row">
-              <input
-                class="filled-in chk-col-brown form-check-input subcp"
-                type="checkbox"
-              />
-              <label for="subcp_1" class="fs-2" style="padding-left: 8px"
-                >تحاليل السكري</label
-              >
-            </div>
-            <div class="col-lg-4 fv-row">
-              <input
-                class="filled-in chk-col-brown form-check-input subcp"
-                type="checkbox"
-              />
-              <label for="subcp_1" class="fs-2" style="padding-left: 8px"
-                >تحليلات الكبد</label
-              >
+                <option class="fs-3" value="-1">Select the Category</option>
+                <option
+                  class="fs-3"
+                  *ngFor="let category of lab_categories"
+                  [value]="category.id"
+                >
+                  {{ category.name }}
+                </option>
+              </select>
             </div>
           </div>
           <br />
           <div class="col-lg-12">
             <div class="row">
               <div class="col-lg-6 fv-col">
-                <h2 class="fs-2">Name Arabic :</h2>
+                <h2 class="fs-3">Name Arabic :</h2>
                 <input
                   class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
                   type="text"
-                  name=""
+                  [(ngModel)]="arName"
+                  name="ar[name]"
+                  (ngModelChange)="onInputChange1($event)"
                 />
+                <div
+                  *ngIf="errorMessage1"
+                  class="error-message fs-6"
+                  style="color: red"
+                >
+                  {{ errorMessage1 }}
+                </div>
               </div>
               <div class="col-lg-6">
-                <h2 class="fs-2">Name English :</h2>
+                <h2 class="fs-3">Name English :</h2>
                 <input
                   class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
                   type="text"
-                  name=""
+                  [(ngModel)]="enName"
+                  name="en[name]"
+                  (ngModelChange)="onInputChange2($event)"
                 />
+                <div
+                  *ngIf="errorMessage2"
+                  class="error-message fs-6"
+                  style="color: red"
+                >
+                  {{ errorMessage2 }}
+                </div>
               </div>
             </div>
           </div>
@@ -78,35 +74,39 @@
           <div class="col-lg-12">
             <div class="row">
               <div class="col-lg-3 fv-col">
-                <h2 class="fs-2">Sample Ar :</h2>
+                <h2 class="fs-3">Sample Ar :</h2>
                 <input
                   class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
                   type="text"
-                  name=""
+                  [(ngModel)]="arSample"
+                  name="ar[Sample]"
                 />
               </div>
               <div class="col-lg-3">
-                <h2 class="fs-2">Normal Range Male Ar :</h2>
+                <h2 class="fs-3">Normal Range Male Ar :</h2>
                 <input
                   class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
                   type="text"
-                  name=""
+                  [(ngModel)]="arRangeM"
+                  name="ar[normal_range_Male]"
                 />
               </div>
               <div class="col-lg-3 fv-col">
-                <h2 class="fs-2">Normal Range Female Ar :</h2>
+                <h2 class="fs-3">Normal Range Female Ar :</h2>
                 <input
                   class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
                   type="text"
-                  name=""
+                  [(ngModel)]="arRangeF"
+                  name="ar[normal_range_Femail]"
                 />
               </div>
               <div class="col-lg-3">
-                <h2 class="fs-2">Measruing Unit Ar :</h2>
+                <h2 class="fs-3">Measruing Unit Ar :</h2>
                 <input
                   class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
                   type="text"
-                  name=""
+                  [(ngModel)]="arMeasruing_unit"
+                  name="ar[measruing_unit]"
                 />
               </div>
             </div>
@@ -115,35 +115,39 @@
           <div class="col-lg-12">
             <div class="row">
               <div class="col-lg-3 fv-col">
-                <h2 class="fs-2">Sample En :</h2>
+                <h2 class="fs-3">Sample En :</h2>
                 <input
                   class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
                   type="text"
-                  name=""
+                  [(ngModel)]="enSample"
+                  name="en[Sample]"
                 />
               </div>
               <div class="col-lg-3">
-                <h2 class="fs-2">Normal Range Male En :</h2>
+                <h2 class="fs-3">Normal Range Male En :</h2>
                 <input
                   class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
                   type="text"
-                  name=""
+                  [(ngModel)]="enRangeM"
+                  name="en[normal_range_Mail]"
                 />
               </div>
               <div class="col-lg-3 fv-col">
-                <h2 class="fs-2">Normal Range Female En :</h2>
+                <h2 class="fs-3">Normal Range Female En :</h2>
                 <input
                   class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
                   type="text"
-                  name=""
+                  [(ngModel)]="enRangeF"
+                  name="en[normal_range_Femail]"
                 />
               </div>
               <div class="col-lg-3">
-                <h2 class="fs-2">Measruing Unit En :</h2>
+                <h2 class="fs-3">Measruing Unit En :</h2>
                 <input
                   class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
                   type="text"
-                  name=""
+                  [(ngModel)]="enMeasruing_unit"
+                  name="en[measruing_unit]"
                 />
               </div>
             </div>
@@ -155,6 +159,8 @@
               <div class="col-lg-6 fv-row">
                 <h2>About Test Ar :</h2>
                 <editor
+                  name="ar[about_test]"
+                  [(ngModel)]="arAboutTest"
                   cols="50"
                   rows="10"
                   apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
@@ -167,6 +173,8 @@
               <div class="col-lg-6 fv-row">
                 <h2 for="descriptionar">About Test En :</h2>
                 <editor
+                  name="en[about_test]"
+                  [(ngModel)]="enAboutTest"
                   placeholder="Description"
                   cols="50"
                   rows="10"
@@ -187,6 +195,8 @@
               <div class="col-lg-6 fv-row">
                 <h2>Used To Ar :</h2>
                 <editor
+                  name="ar[used_to]"
+                  [(ngModel)]="arUseTo"
                   cols="50"
                   rows="10"
                   apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
@@ -199,6 +209,8 @@
               <div class="col-lg-6 fv-row">
                 <h2 for="descriptionar">Used To En :</h2>
                 <editor
+                  name="en[used_to]"
+                  [(ngModel)]="enUseTo"
                   placeholder="Description"
                   cols="50"
                   rows="10"
@@ -219,6 +231,8 @@
               <div class="col-lg-6 fv-row">
                 <h2>Reasons For Ar :</h2>
                 <editor
+                  name="ar[reasons_for]"
+                  [(ngModel)]="arReasonFor"
                   cols="50"
                   rows="10"
                   apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
@@ -231,6 +245,8 @@
               <div class="col-lg-6 fv-row">
                 <h2 for="descriptionar">Reasons For En :</h2>
                 <editor
+                  name="en[reasons_for]"
+                  [(ngModel)]="enReasonFor"
                   placeholder="Description"
                   cols="50"
                   rows="10"
@@ -251,6 +267,8 @@
               <div class="col-lg-6 fv-row">
                 <h2>How Is Ar :</h2>
                 <editor
+                  name="ar[how_is]"
+                  [(ngModel)]="arHowIs"
                   cols="50"
                   rows="10"
                   apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
@@ -263,6 +281,8 @@
               <div class="col-lg-6 fv-row">
                 <h2 for="descriptionar">How IS En :</h2>
                 <editor
+                  name="en[how_is]"
+                  [(ngModel)]="enHowIs"
                   placeholder="Description"
                   cols="50"
                   rows="10"
@@ -283,6 +303,8 @@
               <div class="col-lg-6 fv-row">
                 <h2>How Prepare Ar :</h2>
                 <editor
+                  name="ar[how_prepare]"
+                  [(ngModel)]="arHowPrepare"
                   cols="50"
                   rows="10"
                   apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
@@ -295,6 +317,8 @@
               <div class="col-lg-6 fv-row">
                 <h2 for="descriptionar">How Prepare En :</h2>
                 <editor
+                  name="en[how_prepare]"
+                  [(ngModel)]="enHowPrepare"
                   placeholder="Description"
                   cols="50"
                   rows="10"
@@ -315,6 +339,8 @@
               <div class="col-lg-6 fv-row">
                 <h2>Risk Ar :</h2>
                 <editor
+                  name="ar[risks]"
+                  [(ngModel)]="arRisk"
                   cols="50"
                   rows="10"
                   apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
@@ -327,6 +353,8 @@
               <div class="col-lg-6 fv-row">
                 <h2 for="descriptionar">Risk En :</h2>
                 <editor
+                  name="en[risks]"
+                  [(ngModel)]="enRisk"
                   placeholder="Description"
                   cols="50"
                   rows="10"
@@ -347,6 +375,8 @@
               <div class="col-lg-6 fv-row">
                 <h2>Interpretation Result Ar :</h2>
                 <editor
+                  name="ar[interpretation_result]"
+                  [(ngModel)]="arInterpretationResult"
                   cols="50"
                   rows="10"
                   apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
@@ -359,6 +389,8 @@
               <div class="col-lg-6 fv-row">
                 <h2 for="descriptionar">Interpretation Result En :</h2>
                 <editor
+                  name="en[interpretation_result]"
+                  [(ngModel)]="enInterpretationResult"
                   placeholder="Description"
                   cols="50"
                   rows="10"
@@ -379,6 +411,8 @@
               <div class="col-lg-6 fv-row">
                 <h2>Reasons High Reading Ar :</h2>
                 <editor
+                  name="ar[reasons_high_reading]"
+                  [(ngModel)]="arReasonReading"
                   cols="50"
                   rows="10"
                   apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
@@ -391,6 +425,8 @@
               <div class="col-lg-6 fv-row">
                 <h2 for="descriptionar">easons High Reading En :</h2>
                 <editor
+                  name="en[reasons_high_reading]"
+                  [(ngModel)]="enReasonReading"
                   placeholder="Description"
                   cols="50"
                   rows="10"
@@ -411,6 +447,8 @@
               <div class="col-lg-6 fv-row">
                 <h2>Refrences Ar :</h2>
                 <editor
+                  name="ar[references]"
+                  [(ngModel)]="arReference"
                   cols="50"
                   rows="10"
                   apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
@@ -423,6 +461,8 @@
               <div class="col-lg-6 fv-row">
                 <h2 for="descriptionar">Refrences En :</h2>
                 <editor
+                  name="en[references]"
+                  [(ngModel)]="enReference"
                   placeholder="Description"
                   cols="50"
                   rows="10"
@@ -448,16 +488,28 @@
             <input
               type="file"
               class="form-control-lg form-control-solid mb-3 mb-lg-0"
-              name="doctor_image"
+              name="image"
+              [(ngModel)]="image"
+              (change)="onFileSelected($event)"
+            />
+            <img
+              id="image"
+              style="display: none; border-radius: 10%"
+              width="200"
+              height="200"
             />
             <!-- <div>No Choose File</div> -->
           </div>
         </div>
       </form>
       <div class="col d-flex gap-2 align-items-end" style="float: right">
-        <button class="btn btn-md btn-secondary">Reset</button>
-        <button class="btn btn-md btn-success">Save</button>
-        <button class="btn btn-md btn-primary">Save & create new</button>
+        <button class="btn btn-md btn-secondary" (click)="reset()">
+          Reset
+        </button>
+        <button class="btn btn-md btn-success" (click)="create()">Save</button>
+        <button class="btn btn-md btn-primary" (click)="savenew()">
+          Save & create new
+        </button>
       </div>
     </div>
   </div>

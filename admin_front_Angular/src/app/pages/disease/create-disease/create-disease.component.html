@@ -430,12 +430,12 @@
               class="col-lg-3 fv-row"
             >
               <input
-                [value]="i + 1"
+                [value]="item.id"
                 name="parentBodyIds[]"
                 class="filled-in chk-col-brown form-check-input subcp"
                 type="checkbox"
-                [checked]="body_part_ids.includes(i + 1)"
-                (change)="toggleCheckbox_body_part_ids(i + 1)"
+                [checked]="body_part_ids.includes(item.id)"
+                (change)="toggleCheckbox_body_part_ids(item.id)"
               />
               <label for="subcp_1" class="fs-2" style="padding-left: 8px">{{
                 item.name

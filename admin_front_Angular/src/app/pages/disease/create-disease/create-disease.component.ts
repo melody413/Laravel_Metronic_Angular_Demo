@@ -190,8 +190,6 @@ export class CreateDiseaseComponent implements OnInit {
     formData.append('parent_ids', JSON.stringify(this.parent_ids));
     formData.append('body_part_ids', JSON.stringify(this.body_part_ids));
     if(this.image) formData.append('image', this.image);
-    // this.parent_ids.forEach(id => formData.append('parent_ids', id.toString()));
-    // this.body_part_ids.forEach(id => formData.append('body_part_ids', id.toString()));
     formData.append('is_active', this.is_active ? '1' : '0');
 
     this.http
@@ -246,8 +244,6 @@ export class CreateDiseaseComponent implements OnInit {
     formData.append('parent_ids', JSON.stringify(this.parent_ids));
     formData.append('body_part_ids', JSON.stringify(this.body_part_ids));
     if(this.image) formData.append('image', this.image);
-    // this.parent_ids.forEach(id => formData.append('parent_ids', id.toString()));
-    // this.body_part_ids.forEach(id => formData.append('body_part_ids', id.toString()));
     formData.append('is_active', this.is_active ? '1' : '0');
 
     this.http
@@ -255,7 +251,7 @@ export class CreateDiseaseComponent implements OnInit {
     .subscribe((response) => {
       if(response.result){ 
         alert("success"); 
-        this.reset();
+        this.router.navigate(["disease/list"]);
       }
       else {alert("error"); }
     });

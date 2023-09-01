@@ -67,12 +67,24 @@ class ALabCompanyController extends BaseController
 
         if($id)
         {
-    // dd($postData);
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            }
             $row = LabCompany::findOrFail($id);
             $row->update($postData);
         }
         else
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            }
+            else{
+                $postData['image'] = "";
+            }
             $row = LabCompany::create($postData);
         }
 
