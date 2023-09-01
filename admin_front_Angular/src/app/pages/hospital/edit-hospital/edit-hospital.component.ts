@@ -4,13 +4,13 @@ import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-createhospital',
-  templateUrl: './createhospital.component.html',
-  styleUrls: ['./createhospital.component.scss']
+  selector: 'app-edit-hospital',
+  templateUrl: './edit-hospital.component.html',
+  styleUrls: ['./edit-hospital.component.scss']
 })
-export class CreatehospitalComponent {
+export class EditHospitalComponent {
 
-  //reference valuables
+//reference valuables
   parent_id: number = -1;
   arName: string = "";
   enName: string = "";
@@ -52,10 +52,15 @@ export class CreatehospitalComponent {
   areas: any[] = [];
   specialities: any[] = [];
   hospital_types_items : any[] = [];
-
+  hospital: any;
+  hospital_id : number;
+  image_name: string = "";
   constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
 
   ngOnInit(): void{
+    this.route.params.subscribe(params => {
+      this.hospital_id = params['id'];
+    });
     this.image_gallery_count = 0;
     this.http.get<any>(environment.apiUrl + "hospital/create")
          .subscribe((response)=>{
@@ -65,7 +70,54 @@ export class CreatehospitalComponent {
           this.hospital_types_items = response.hospital_type;
           this.crd.detectChanges();
          })
-    
+
+    this.http.get<any>(environment.apiUrl + "hospital/edit/" + this.hospital_id)
+    .subscribe((response)=>{
+      this.hospital = response.item;
+      this.specialty = response.specialityIds;
+      this.hospital_types = response.hospitalTypeIds;
+      this.insuranceCompany = response.insuranceCompanies.toString();
+      this.parent_id = this.hospital.parent_id;
+      this.arName = this.hospital['translations'][0]['name'];
+      this.enName = this.hospital['translations'][1]['name'];
+      this.arExcerpt = this.hospital['translations'][0]['excerpt'];
+      this.enExcerpt = this.hospital['translations'][1]['excerpt'];
+      this.arDescription = this.hospital['translations'][0]['description'];
+      this.enDescription = this.hospital['translations'][1]['description'];
+      if(this.hospital['image']) this.image_name = environment.url + "uploads/hospitals/" + this.hospital['image'];
+
+
+      this.is_active = this.hospital.is_active === "1" ? true: false;
+      this.insuranceCompany = response.insuranceCompanies.toString();
+      this.facebook = this.hospital.facebook;
+      this.twitter = this.hospital.twitter;
+      this.instagram = this.hospital.instagram;
+      this.website = this.hospital.website;
+      this.youtube = this.hospital.youtube;
+      this.phone = this.hospital.phone;
+     
+      this.enAddress = this.hospital.translations[1]['address'];
+      this.arAddress = this.hospital.translations[0]['address'];
+      
+      this.country_id = this.hospital.country_id;
+      this.http.get<any>(environment.apiUrl + "country/getAllCity/" + this.country_id)
+        .subscribe((response)=>{
+          this.cities = response.city;
+          this.crd.detectChanges();
+        })
+
+      this.city = this.hospital.city_id;
+      this.http.get<any>(environment.apiUrl + "city/getAllArea/" + this.city)
+        .subscribe((response)=>{
+          this.areas = response.area;
+          this.crd.detectChanges();
+        })
+      this.area = this.hospital.area_id;
+      this.lat_lng = this.hospital.lat_lng;
+      this.maplink = this.hospital.map_link;
+
+      this.crd.detectChanges();
+    })    
   }
 
   onCountryChange() {
@@ -104,6 +156,7 @@ export class CreatehospitalComponent {
   //doctor image process
   onFileSelected(event: any) {
     this.image = event.target.files[0];
+    this.image_name = "";
     this.showImage();
   }
 
@@ -152,7 +205,8 @@ export class CreatehospitalComponent {
   }
 
 
-  create(){
+  edit(){
+    console.log("edit btn clicked");
     if(this.is_active == undefined){
       this.is_active = false;
     }
@@ -160,6 +214,7 @@ export class CreatehospitalComponent {
     const formdata = new FormData();
 
     //language data
+    formdata.append("item_id", this.hospital_id.toString());
     formdata.append("parent_id", this.parent_id.toString());
     formdata.append("ar[name]", this.arName);
     formdata.append("en[name]", this.enName);
@@ -171,7 +226,7 @@ export class CreatehospitalComponent {
     formdata.append("en[address]", this.enAddress);
 
     //other data
-    formdata.append("image", this.image);
+    if(this.image) formdata.append("image", this.image);
     formdata.append("image_gallery_count", this.image_gallery_count.toString());
     for (let i = 0; i < this.image_gallery_names.length; i++) {
       formdata.append('image_gallery[]', this.image_gallery_names[i]);
@@ -185,8 +240,8 @@ export class CreatehospitalComponent {
     formdata.append("website", this.website);
     formdata.append("phone", this.phone);
     formdata.append("country_id", this.country_id.toString());
-    formdata.append("city", this.city.toString());
-    formdata.append("area", this.area.toString());
+    if(this.city) formdata.append("city", this.city.toString());
+    if(this.area) formdata.append("area", this.area.toString());
     formdata.append("lat_lng", this.lat_lng);
 
     for(let i = 0 ; i < this.specialty.length ; i++){
@@ -210,4 +265,8 @@ export class CreatehospitalComponent {
       }
     )
   }
+  reset(){
+
+  }
 }
+

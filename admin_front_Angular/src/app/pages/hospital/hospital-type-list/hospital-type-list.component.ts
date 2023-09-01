@@ -42,4 +42,15 @@ export class HospitalTypeListComponent {
   ngAfterViewInit() {
     this.paginator.pageSize = this.pageSize;
   }
+
+  //delete the data
+    delete(id: number){
+      if(confirm("Are your really delete this data?")){
+        this.http.get<any>(environment.apiUrl+ "hospital_type/delete/" + id)
+        .subscribe((response)=>{
+          this.ngOnInit();
+        })
+      }
+      
+    }
 }

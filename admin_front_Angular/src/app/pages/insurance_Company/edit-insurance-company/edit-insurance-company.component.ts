@@ -2,13 +2,12 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
-
 @Component({
-  selector: 'app-create-insurance-company',
-  templateUrl: './create-insurance-company.component.html',
-  styleUrls: ['./create-insurance-company.component.scss']
+  selector: 'app-edit-insurance-company',
+  templateUrl: './edit-insurance-company.component.html',
+  styleUrls: ['./edit-insurance-company.component.scss']
 })
-export class CreateInsuranceCompanyComponent {
+export class EditInsuranceCompanyComponent {
   desItems = [{ title: 'Description' }];
    //reference valuable
    errorMessage1: string ="";
@@ -45,15 +44,54 @@ export class CreateInsuranceCompanyComponent {
    countries: any[] = [];
    cities: any[] = [];
    areas: any[] = [];
+
+   insurance_co_id: number ;
+   insurance_co : any ;
+   image_name: string;
    constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
  
    ngOnInit(): void{
+    this.route.params.subscribe((params)=>{
+      this.insurance_co_id = params['id'];
+    })
      this.http.get<any>(environment.apiUrl + "insurance_company/create")
          .subscribe((response)=>{
           this.parent_branches = Object.entries(response.parent_branches);
           this.countries = Object.entries(response.country);
           this.crd.detectChanges();
          })
+    this.http.get<any>(environment.apiUrl + "insurance_company/edit/" + this.insurance_co_id)
+          .subscribe((response)=>{
+            this.insurance_co = response.item;
+            console.log(this.insurance_co);
+            this.parent_branch_id = this.insurance_co.parent_id;
+            this.arName = this.insurance_co.translations[0]['name'];
+            this.enName = this.insurance_co.translations[1]['name'];
+            this.arExcerpt = this.insurance_co.translations[0]['excerpt'];
+            this.enExcerpt = this.insurance_co.translations[1]['excerpt'];
+            this.arDescription = this.insurance_co.translations[0]['description'];
+            this.enDescription = this.insurance_co.translations[1]['description'];
+            this.arAddress = this.insurance_co.translations[0]['address'];
+            this.enAddress = this.insurance_co.translations[1]['address'];
+            if(this.insurance_co.image) this.image_name = environment.url + "uploads/insurance_companies/" +  this.insurance_co.image;
+            this.phone = this.insurance_co.phone;
+            this.country_id = this.insurance_co.country_id;
+            this.http.get<any>(environment.apiUrl + "country/getAllCity/" + this.country_id)
+              .subscribe((response)=>{
+                this.cities = response.city;
+                this.crd.detectChanges();
+              })
+            this.city = this.insurance_co.city_id;
+            this.http.get<any>(environment.apiUrl + "city/getAllArea/" + this.city)
+            .subscribe((response)=>{
+              this.areas = response.area;
+              this.crd.detectChanges();
+            })
+            this.area = this.insurance_co.area_id;
+            this.lat_lng = this.insurance_co.lat_lng;
+            this.is_active = this.insurance_co.is_active == "1" ? true: false;
+
+          })
    }
  
 
@@ -96,6 +134,7 @@ export class CreateInsuranceCompanyComponent {
    //doctor image process
    onFileSelected(event: any) {
      this.image = event.target.files[0];
+     this.image_name = "";
      this.showImage();
  
    }
@@ -118,9 +157,9 @@ export class CreateInsuranceCompanyComponent {
      return URL.createObjectURL(file);
    }
  
-
  
-   create(){
+ 
+   Edit(){
     //validation process
     if(this.arName == "" || this.enName == ""){
       if(this.arName == "") this.errorMessage1 = "Please input the ar Name";
@@ -133,6 +172,7 @@ export class CreateInsuranceCompanyComponent {
      }
 
      const formdata = new FormData();
+     formdata.append("item_id", this.insurance_co_id.toString());
      formdata.append("parent_id", this.parent_branch_id.toString());
      formdata.append("ar[name]", this.arName);
      formdata.append("en[name]", this.enName);
@@ -188,50 +228,5 @@ export class CreateInsuranceCompanyComponent {
     this.is_active = true;
     this.maplink = "";
    }
-   savenew(){
-    //validation process
-    if(this.arName == "" || this.enName == ""){
-      if(this.arName == "") this.errorMessage1 = "Please input the ar Name";
-      if(this.enName == "") this.errorMessage2 = "Please input the en Name";
-      this.crd.detectChanges();
-      return;
-    }
-     if(this.is_active == undefined){
-       this.is_active = false;
-     }
-
- 
-     const formdata = new FormData();
-     formdata.append("parent_id", this.parent_branch_id.toString());
-     formdata.append("ar[name]", this.arName);
-     formdata.append("en[name]", this.enName);
-
-     formdata.append("ar[excerpt]", this.arExcerpt);
-     formdata.append("en[excerpt]", this.enExcerpt);
-
-     formdata.append("ar[description]", this.arDescription);
-     formdata.append("en[description]", this.enDescription);
-
-     formdata.append("ar[address]", this.arAddress);
-     formdata.append("en[address]", this.enAddress);
-
-     formdata.append("image", this.image);
-
-     formdata.append("country_id", this.country_id.toString());
-     formdata.append("city_id", this.city.toString());
-     formdata.append("area_id", this.area.toString());
-     formdata.append("lat_lng", this.lat_lng);
-     formdata.append("phone", this.phone);
-     formdata.append("map_link", this.maplink);
-     formdata.append("is_active", this.is_active? "1" : "0");
-     this.http.post<any>(environment.apiUrl + "insurance_company/store", formdata).subscribe(
-       (response) => {
-         if(response.id) {
-           alert("success");
-           this.reset();
-         }
-         else alert("error");
-       }
-     )
-   }
+   
  }

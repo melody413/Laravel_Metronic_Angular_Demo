@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Mangers\DataTableManger;
+use App\Mangers\DataForm;
 use App\Models\InsuranceCompany;
+use App\Models\Country;
 use Okipa\LaravelBootstrapTableList\TableList;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -27,19 +28,17 @@ class AInsuranceCompanyController extends BaseController
     public function create()
     {
         view()->share(['action_title' => 'Create']);
-        return response(['action_title' => 'Create'], 200);
-
-        // return view($this->getTemplatePath('create'));
+        $parent_branches = DataForm::getParentLab();
+        $countries = Country::where('is_active' , 1)->listsTranslations('name')->pluck('name','id');
+        return response(['parent_branches' => $parent_branches, "country"=> $countries], 200);
     }
 
     public function edit($id)
     {
         view()->share(['action_title' => 'Edit']);
-
         $item = InsuranceCompany::findOrFail($id);
-        return response(['result' => compact('item', 'categories_parent')], 200);
+        return response(compact('item'), 200);
 
-        // return view($this->getTemplatePath('edit'), ['item' => $item]);
     }
 
     public function store(Request $request)
@@ -57,11 +56,23 @@ class AInsuranceCompanyController extends BaseController
 
         if($id)
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            }
             $row = InsuranceCompany::findOrFail($id);
             $row->update($postData);
         }
         else
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            }else{
+                $postData['image'] = '';
+            }
             $row = InsuranceCompany::create($postData);
         }
 

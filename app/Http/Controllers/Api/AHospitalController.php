@@ -4,12 +4,17 @@ namespace App\Http\Controllers\Api;
 
 use App\Mangers\DataTableManger;
 use App\Models\Hospital;
+use App\Models\HospitalType;
+
 use Okipa\LaravelBootstrapTableList\TableList;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\BaseController;
 use Illuminate\Support\Facades\DB;
+use App\Mangers\DataForm;
+use App\Models\Country;
+use App\Models\Specialty;
 
 class AHospitalController extends BaseController
 {
@@ -113,7 +118,11 @@ class AHospitalController extends BaseController
     public function create()
     {
         view()->share(['action_title' => 'Create']);
-        return response(['action_title' => 'Create'], 200);
+        $parent_branches = DataForm::getParentLab();
+        $countries = Country::where('is_active' , 1)->listsTranslations('name')->pluck('name','id');
+        $speciality = Specialty::where('is_active' , 1)->listsTranslations('name')->pluck('name', 'id');
+        $hospital_types = HospitalType::all();
+        return response(['parent_branches'=> $parent_branches, "country"=> $countries, 'specialty'=> $speciality, "hospital_type"=> $hospital_types], 200);
 
         // return view($this->getTemplatePath('create'));
     }
@@ -152,6 +161,11 @@ class AHospitalController extends BaseController
 
         if($id)
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            }
             $row = Hospital::findOrFail($id);
             $row->update($postData);
         }

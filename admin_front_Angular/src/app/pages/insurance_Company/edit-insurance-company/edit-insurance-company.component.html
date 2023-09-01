@@ -1,7 +1,7 @@
 <div class="card">
   <div class="card-body">
     <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
-      Create Insurance Company
+      Edit Insurance Company
     </h1>
     <hr />
     <div class="card-body">
@@ -136,9 +136,9 @@
                     menubar: false
                   }"
                   toolbar="
-                    undo redo | formatselect | bold italic backcolor | \
-                    alignleft aligncenter alignright alignjustify | \
-                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                      undo redo | formatselect | bold italic backcolor | \
+                      alignleft aligncenter alignright alignjustify | \
+                      bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
                 ></editor>
               </div>
             </div>
@@ -192,6 +192,13 @@
             <img
               id="image"
               style="display: none; border-radius: 10%"
+              width="200"
+              height="200"
+            />
+            <img
+              *ngIf="image_name"
+              [src]="image_name"
+              style="border-radius: 10%"
               width="200"
               height="200"
             />
@@ -292,25 +299,6 @@
             </div>
           </div>
 
-          <div class="col-lg-12 row mt-10">
-            <h2
-              for="doctor_facebook"
-              class="fs-3 col-lg-1"
-              style="padding-top: 10px"
-            >
-              Map Link:
-            </h2>
-            <div class="col-lg-8">
-              <input
-                type="text"
-                [(ngModel)]="maplink"
-                maxlength="50"
-                class="form-control form-control-lg form-control-solid"
-                name="maplink"
-              />
-            </div>
-          </div>
-
           <!-- is Active -->
           <div
             class="input-group p-y-30 col-lg-15 d-flex gap-5 align-items-center mt-10"
@@ -335,10 +323,7 @@
         <button class="btn btn-md btn-secondary" (click)="reset()">
           Reset
         </button>
-        <button class="btn btn-md btn-success" (click)="create()">Save</button>
-        <button class="btn btn-md btn-primary" (click)="savenew()">
-          Save & create new
-        </button>
+        <button class="btn btn-md btn-success" (click)="Edit()">Edit</button>
       </div>
     </div>
   </div>

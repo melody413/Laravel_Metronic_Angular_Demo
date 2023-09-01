@@ -65,6 +65,9 @@ import { CreateLabCompanyComponent } from './labs/create-lab-company/create-lab-
 import { EditLabCompanyComponent } from './labs/edit-lab-company/edit-lab-company.component';
 import { CreateLabCategoryComponent } from './labs/create-lab-category/create-lab-category.component';
 import { EditLabCategoryComponent } from './labs/edit-lab-category/edit-lab-category.component';
+import { EditInsuranceCompanyComponent } from './insurance_Company/edit-insurance-company/edit-insurance-company.component';
+import { EditHospitalComponent } from './hospital/edit-hospital/edit-hospital.component';
+import { EditHospitalTypeComponent } from './hospital/edit-hospital-type/edit-hospital-type.component';
 
 const Routing: Routes = [
 
@@ -221,6 +224,11 @@ const Routing: Routes = [
     component : InsuranceCompanyListComponent
   },
 
+  {
+    path: 'insurance/edit/:id',
+    component : EditInsuranceCompanyComponent
+  },
+
   //hospital router
   {
     path: 'hospital/create',
@@ -230,6 +238,12 @@ const Routing: Routes = [
     path: 'hospital/list',
     component : HospitalListComponent
   },
+
+  {
+    path: 'hospital/edit/:id',
+    component : EditHospitalComponent
+  },
+
   {
     path: 'hospital/create_hospitaltype',
     component : CreateHospitalTypeComponent
@@ -237,6 +251,11 @@ const Routing: Routes = [
   {
     path: 'hospital/hospitaltype_list',
     component : HospitalTypeListComponent
+  },
+
+  {
+    path: 'hospital/edit_hospitaltype/:id',
+    component : EditHospitalTypeComponent
   },
 
   //center router

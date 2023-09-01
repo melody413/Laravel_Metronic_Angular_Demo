@@ -15,7 +15,8 @@ export class InsuranceCompanyListComponent {
   pageSize : number ;
   search_result: any[];
   search_index: string = "";
-
+  src: string = environment.url + "uploads/insurance_companies/";
+  default_src: string =  environment.url + "/assets/frontend/images/general/doctorak_default_logo_img.png";
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
   ngOnInit(): void {
     this.http.get<any>(environment.apiUrl + "insurance_company/list").

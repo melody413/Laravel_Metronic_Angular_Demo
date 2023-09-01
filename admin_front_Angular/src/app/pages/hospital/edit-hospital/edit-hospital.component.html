@@ -5,12 +5,7 @@
     </h1>
     <hr />
     <div class="card-body">
-      <form
-        novalidate
-        class="form"
-        (ngSubmit)="create()"
-        enctype="multipart/form-data"
-      >
+      <form novalidate class="form" enctype="multipart/form-data">
         <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
           Language Data
         </h1>
@@ -118,9 +113,9 @@
                     menubar: false
                   }"
                   toolbar="
-                    undo redo | formatselect | bold italic backcolor | \
-                    alignleft aligncenter alignright alignjustify | \
-                    bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+                      undo redo | formatselect | bold italic backcolor | \
+                      alignleft aligncenter alignright alignjustify | \
+                      bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
                 ></editor>
               </div>
             </div>
@@ -173,6 +168,13 @@
             <img
               id="image"
               style="display: none; border-radius: 10%"
+              width="200"
+              height="200"
+            />
+            <img
+              *ngIf="image_name"
+              [src]="image_name"
+              style="border-radius: 10%"
               width="200"
               height="200"
             />
@@ -412,7 +414,7 @@
                 name="parentBodyIds[]"
                 class="filled-in chk-col-brown form-check-input subcp"
                 type="checkbox"
-                [checked]="specialty.includes(item[0])"
+                [checked]="specialty.includes(+item[0])"
                 (change)="toggleCheckbox_specialty(item[0])"
               />
               <label for="subcp_1" class="fs-2" style="padding-left: 8px">{{
@@ -490,8 +492,8 @@
                 <label for="tags" class="form-label">Tags:</label>
               </div>
               <!-- <div class="col-auto">
-                <input name="tags" class="form-control" type="text" />
-              </div> -->
+                  <input name="tags" class="form-control" type="text" />
+                </div> -->
             </div>
           </div>
 
@@ -501,18 +503,18 @@
                 <label for="tags" class="form-label">Subcatigory:</label>
               </div>
               <!-- <div class="col-auto">
-                <input name="tags" class="form-control" type="text" />
-              </div> -->
+                  <input name="tags" class="form-control" type="text" />
+                </div> -->
             </div>
           </div>
         </div>
-
-        <div class="col d-flex gap-2 align-items-end" style="float: right">
-          <button class="btn btn-md btn-secondary">Reset</button>
-          <button class="btn btn-md btn-success" type="submit">Save</button>
-          <button class="btn btn-md btn-primary">Save & create new</button>
-        </div>
       </form>
+      <div class="col d-flex gap-2 align-items-end" style="float: right">
+        <button class="btn btn-md btn-secondary" (click)="reset()">
+          Reset
+        </button>
+        <button class="btn btn-md btn-success" (click)="edit()">Edit</button>
+      </div>
     </div>
   </div>
 </div>

@@ -19,7 +19,7 @@ class AHospitalTypeController extends BaseController
     {
 
         $data = dataTable()
-            ->of( HospitalType::query() )
+            ->of( HospitalType::query()->orderByRaw('created_at DESC') )
             ->filterColumns(['id', 'slug'])
             ->each(function ($row) {
                 return [
@@ -72,11 +72,23 @@ class AHospitalTypeController extends BaseController
 
         if($id)
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            }
             $row = HospitalType::findOrFail($id);
             $row->update($postData);
         }
         else
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            } else {
+                $postData['image'] = '';
+            }
             $row = HospitalType::create($postData);
         }
 
