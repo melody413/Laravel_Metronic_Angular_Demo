@@ -72,7 +72,10 @@ export class CreateRoleComponent implements OnInit {
     this.http.post<any>(environment.apiUrl + "role/store", formData)
         .subscribe((response)=>{
           if(response.id){
+            alert("success");
             this.router.navigate(['role/list']);
+          }else{
+            alert("error");
           }
         });
   }

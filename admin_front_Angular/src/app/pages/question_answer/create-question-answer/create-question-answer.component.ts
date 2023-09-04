@@ -57,7 +57,6 @@ export class CreateQuestionAnswerComponent {
     this.http.get<any>(environment.apiUrl + "country/getall")
         .subscribe((response)=>{
           this.response_countries = Object.entries(response.countries);
-          console.log(this.response_countries);
           this.country_id = this.response_countries[0][0];
           this.cdr.detectChanges();
         });
@@ -78,7 +77,6 @@ export class CreateQuestionAnswerComponent {
   }
 
   create(){
-    console.log("create btn clicked-----");
     if(this.question_ar === "" || this.question_en === "" ){
       if(this.question_ar === "") this.errorMessage1 = "*Please input the ar question";
       if(this.question_en === "") this.errorMessage2 = "*Please input the en question";
@@ -92,22 +90,29 @@ export class CreateQuestionAnswerComponent {
     formData.append("en[excerpt]", "");
     formData.append("ar[description]", this.answer_ar);
     formData.append("en[description]", this.answer_en);
-    formData.append("country_id", this.country_id.toString());
+    if(this.country_id) formData.append("country_id", this.country_id.toString());
 
-    if(this.model === "medicine"){
-      for(let i = 0 ; this.category.length ; i++)
-        if (this.category[i] !== undefined) 
+    if(this.model == "medicine"){
+      console.log(this.category.length + ":" + this.specialty.length);
+      for(let i = 0 ; i < this.category.length ; i++)
+        if (this.category[i]) 
           formData.append("medicine_categories[]", this.category[i].toString());
     }else{
+      console.log(this.response_categories.length + ":" + this.specialty.length);
       for (let j = 0; j < this.specialty.length; j++) {
-        if (this.specialty[j] !== undefined) 
-          formData.append("speciality[]", this.specialty[j].toString());
+        if (this.specialty[j]) 
+          formData.append("specialties[]", this.specialty[j].toString());
       }
     }
-    formData.append("is_Active", this.is_active? "1" : "0");
+    formData.append("is_active", this.is_active? "1" : "0");
     this.http.post<any>(environment.apiUrl + "qanswer/store", formData)
         .subscribe((response)=>{
-          
+          if(response.id){
+            alert("success");
+            this.router.navigate(["/question_answer/list"]);
+          }else{
+            alert("error");
+          }
         });
     
 

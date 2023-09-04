@@ -64,8 +64,10 @@ class AAreaController extends BaseController
         $this->formData();
 
         $item = Area::findOrFail($id);
+        $country = City::where('id', $item->city_id)->get();
 
-        return response(['item' => $item], 200);
+        // $country =Country::where('city_id', $item->city_id)->get();
+        return response(['item' => $item, 'country'=> $country], 200);
     }
 
     public function store(Request $request)

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -27,7 +28,7 @@ export class CreateFaqComponent {
   is_active: boolean = true;
 
 
-  constructor(private http: HttpClient){}
+  constructor(private http: HttpClient, private cdr: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
   //image process
   onFileSelected(event: any) {
     this.image = event.target.files[0];
@@ -70,7 +71,12 @@ export class CreateFaqComponent {
 
     this.http.post<any>(environment.apiUrl + "faqs/store", formData)
         .subscribe((response)=>{
-
+            if(response.id){
+              alert("success");
+              this.router.navigate(['/faq/list']);
+            }else{
+              alert("error");
+            }
         })
 
 

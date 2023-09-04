@@ -130,7 +130,9 @@ export class CreateUserComponent implements OnInit{
     this.http.post<any>(environment.apiUrl+"user/store", formData)
         .subscribe((response)=>{
           if(response.id){
-
+            this.router.navigate(['/user/list']);
+          }else{
+            alert("error");
           }
         })
 

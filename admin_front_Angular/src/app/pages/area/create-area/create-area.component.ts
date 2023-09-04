@@ -69,7 +69,12 @@ export class CreateAreaComponent {
 
     this.http.post<any>(environment.apiUrl+"area/store", formData)
         .subscribe((response)=>{
-          console.log(response);
+          if(response.id){
+            alert("success");
+            this.router.navigate(["/area/list"]);
+          }else{
+            alert("error");
+          }
         });
   }
 }

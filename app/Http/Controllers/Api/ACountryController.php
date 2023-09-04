@@ -73,6 +73,11 @@ class ACountryController extends BaseController
 
         if($id)
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            }
             $row = Country::findOrFail($id);
             $row->update($postData);
         }

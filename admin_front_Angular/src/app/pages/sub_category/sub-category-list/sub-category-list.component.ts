@@ -70,9 +70,11 @@ export class SubCategoryListComponent implements OnInit{
 
   //delete the data
   delete(id: number){
-    this.http.get<any>(environment.apiUrl+ "sub_category/delete/" + id)
-      .subscribe((response)=>{
-        this.ngOnInit();
+    if(confirm("do you really delete the data?")){
+      this.http.get<any>(environment.apiUrl+ "sub_category/delete/" + id)
+        .subscribe((response)=>{
+          this.ngOnInit();
       })
+    }
   }
 }

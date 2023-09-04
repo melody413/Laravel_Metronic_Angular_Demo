@@ -19,7 +19,7 @@ class APageController extends BaseController
     {
    
         $data = dataTable()
-            ->of( Page::query() )
+            ->of( Page::query()->orderByRaw('created_at DESC') )
             ->filterColumns(['id', 'slug'])
             ->each(function ($row) {
                 return [
@@ -66,6 +66,11 @@ class APageController extends BaseController
 
         if($id)
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            }
             $row = Page::findOrFail($id);
             $row->update($postData);
         }

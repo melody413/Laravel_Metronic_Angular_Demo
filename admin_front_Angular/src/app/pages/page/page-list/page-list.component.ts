@@ -66,9 +66,11 @@ export class PageListComponent implements OnInit{
 
   //delete the data
   delete(id: number){
-    this.http.get<any>(environment.apiUrl+ "pages/delete/" + id)
-      .subscribe((response)=>{
-        this.ngOnInit();
-      })
+    if(confirm("Do you really delete data?")){
+      this.http.get<any>(environment.apiUrl+ "pages/delete/" + id)
+        .subscribe((response)=>{
+          this.ngOnInit();
+        })
+    }
   }
 }

@@ -19,7 +19,7 @@ class AFaqController extends BaseController
     {
         
         $data = dataTable()
-            ->of( Faq::query() )
+            ->of( Faq::query()->orderByRaw('created_at DESC') )
             ->filterColumns(['id', 'slug'])
             ->each(function ($row) {
                 return [
@@ -73,6 +73,11 @@ class AFaqController extends BaseController
 
         if($id)
         {
+            if($request->hasFile('image')) {
+                $file = $request->file('image');
+                $imageName = $file->getClientOriginalName();
+                $postData['image'] = $imageName;
+            }
             $row = Faq::findOrFail($id);
             $row->update($postData);
         }

@@ -69,9 +69,11 @@ export class SpecialityListComponent implements OnInit{
 
   //delete the data
   delete(id: number){
-    this.http.get<any>(environment.apiUrl+ "specialty/delete/" + id)
-      .subscribe((response)=>{
-        this.ngOnInit();
-      })
+    if(confirm("do you really delete data?")){
+      this.http.get<any>(environment.apiUrl+ "specialty/delete/" + id)
+        .subscribe((response)=>{
+          this.ngOnInit();
+        })
+    }
   }
 }

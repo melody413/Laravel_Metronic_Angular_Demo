@@ -1,0 +1,211 @@
+<div class="card">
+  <div class="card-body">
+    <form
+      novalidate
+      class="form"
+      enctype="multipart/form-data"
+      (ngSubmit)="create()"
+    >
+      <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+        Language Data
+      </h1>
+      <div class="card-body border-top">
+        <div class="col-lg-12 row">
+          <div class="col-lg-2">
+            <h2 class="fs-3" style="display: block; padding-top: 10px">
+              Model :
+            </h2>
+          </div>
+          <div class="col-lg-7">
+            <select
+              name="module_name"
+              [(ngModel)]="model"
+              name="model"
+              class="form-control"
+            >
+              <option value="default">Select Module</option>
+              <option value="doctor">Doctor</option>
+              <option value="hospital">Hospital</option>
+              <option value="center">Center</option>
+              <option value="medicine">Medicine</option>
+              <option value="bodypart">Body part</option>
+              <option value="labservice">lab service</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-12 mt-10">
+          <div class="row">
+            <div class="col-lg-6 fv-col">
+              <h2 class="fs-3">*Question Arabic :</h2>
+              <input
+                class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                [(ngModel)]="question_ar"
+                name="question_ar"
+                type="text"
+                value=""
+              />
+              <div
+                *ngIf="errorMessage1"
+                class="error-message fs-6"
+                style="color: red"
+              >
+                {{ errorMessage1 }}
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h2 class="fs-3">*Question English :</h2>
+              <input
+                class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                [(ngModel)]="question_en"
+                name="question_en"
+                type="text"
+                value=""
+              />
+              <div
+                *ngIf="errorMessage2"
+                class="error-message fs-6"
+                style="color: red"
+              >
+                {{ errorMessage2 }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-12 mt-10">
+          <div class="row">
+            <div class="col-lg-6 fv-row">
+              <h2 class="fs-3">Answer Arabic :</h2>
+              <!-- <textarea class="form-control tinymce" placeholder="Description" [(ngModel)]="enDescription" name="en[description]" cols="50" rows="10"></textarea> -->
+              <editor
+                [(ngModel)]="answer_ar"
+                name="answer_ar"
+                placeholder="Answer Arabic"
+                cols="50"
+                rows="10"
+                apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                [init]="{
+                  height: 500,
+                  menubar: false
+                }"
+              ></editor>
+            </div>
+            <div class="col-lg-6 fv-row">
+              <h2 class="fs-3">Answer English :</h2>
+              <editor
+                [(ngModel)]="answer_en"
+                name="answer_en"
+                placeholder="Answer English"
+                cols="50"
+                rows="10"
+                apiKey="1xg87i6whyk8ide6q0xf8bdxlhl23bmgnsf5l34mfqh10s2q"
+                [init]="{
+                  height: 500,
+                  menubar: false
+                }"
+                toolbar="
+                            undo redo | formatselect | bold italic backcolor | \
+                            alignleft aligncenter alignright alignjustify | \
+                            bullist numlist outdent indent | removeformat | help | undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | indent outdent | wordcount"
+              ></editor>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+        Other Data
+      </h1>
+      <div class="card-body border-top">
+        <div class="col-lg-12 row">
+          <h2 class="fs-4 col-lg-1" style="display: block; padding-top: 10px">
+            *Country :
+          </h2>
+          <div class="col-lg-6">
+            <select
+              class="form-control fs-3"
+              [(ngModel)]="country_id"
+              name="country_id"
+            >
+              <option
+                *ngFor="let country of response_countries; let i = index"
+                [value]="country[0]"
+              >
+                {{ country[1] }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-12 mt-10" *ngIf="model != 'medicine'">
+          <h2 class="fs-4">Speciality :</h2>
+          <div class="col-lg-12 row mt-5">
+            <div
+              *ngFor="let item of response_specialities; let i = index"
+              class="col-lg-4 fv-row"
+            >
+              <input
+                value="{{ item.id }}"
+                class="filled-in chk-col-brown form-check-input subcp"
+                name="specialties[]"
+                type="checkbox"
+                [checked]="specialty.includes(+item.id)"
+                (change)="toggleCheckbox_specialty($event)"
+              />
+              <label for="subcp_1" class="fs-3" style="padding-left: 8px">
+                {{ item.name }}
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-12 mt-10" *ngIf="model == 'medicine'">
+          <h2 class="fs-4">Category :</h2>
+          <div class="col-lg-12 row mt-5">
+            <div
+              *ngFor="let item of response_categories; let i = index"
+              class="col-lg-4 fv-row"
+            >
+              <input
+                value="{{ item.id }}"
+                [checked]="category.includes(+item.id)"
+                class="filled-in chk-col-brown form-check-input subcp"
+                name="categories[]"
+                type="checkbox"
+                (change)="toggleCheckbox_category($event)"
+              />
+              <label for="subcp_1" class="fs-3" style="padding-left: 8px">
+                {{ item.name }}
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="input-group p-y-30 col-lg-15 d-flex gap-5 align-items-center mt-10"
+        >
+          <h2 class="fw-bolder col-auto" for="is_active">Is Active :</h2>
+          <span>OFF</span>
+          <div
+            class="form-check form-check-custom form-check-solid form-check-success form-switch"
+          >
+            <input
+              [(ngModel)]="is_active"
+              class="form-check-input"
+              type="checkbox"
+              name="is_active"
+            />
+          </div>
+          <span>ON</span>
+        </div>
+      </div>
+
+      <div
+        class="col d-flex gap-2 align-items-center mt-15"
+        style="flex-wrap: wrap; flex-direction: row-reverse"
+      >
+        <button class="btn btn-md btn-secondary">Reset</button>
+        <button class="btn btn-md btn-success" type="submit">Edit</button>
+      </div>
+    </form>
+  </div>
+</div>

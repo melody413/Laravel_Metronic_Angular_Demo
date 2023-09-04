@@ -1,61 +1,85 @@
 <div class="card">
+  <div class="card-body">
+    <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
+      Create Specialty
+    </h1>
+    <hr />
     <div class="card-body">
-        <h1 class="card-title fw-bolder text-muted text-hover-primary fs-2">
-            Create Specialty
+      <form novalidate class="form" enctype="multipart/form-data">
+        <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+          Language Data
         </h1>
-        <hr />
-        <div class="card-body">
-            <form
-                novalidate
-                class="form"
-                enctype="multipart/form-data"
-                (ngSubmit) = "create()"
-            >
-                <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
-                    Language Data
-                </h1>
-                <div class="card-body border-top">
-                    <div class="col-lg-12">
-                        <div class="row">
-                            <div class="col-lg-6 fv-col">
-                                <h2 class="fs-2">Name Arabic :</h2>
-                                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="name_ar" name="name_ar" type="text">
-                                <div *ngIf="errorMessage1" class="error-message fs-6" style="color: red;">{{errorMessage1}}</div>        
-                            </div>
-                            <div class="col-lg-6">
-                                <h2 class="fs-2">Name English :</h2>
-                                <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="name_en" name="name_en" type="text">
-                                <div *ngIf="errorMessage2" class="error-message fs-6" style="color: red;">{{errorMessage2}}</div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="card-body border-top">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-6 fv-col">
+                <h2 class="fs-2">Name Arabic :</h2>
+                <input
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  [(ngModel)]="name_ar"
+                  name="name_ar"
+                  type="text"
+                />
+                <div
+                  *ngIf="errorMessage1"
+                  class="error-message fs-6"
+                  style="color: red"
+                >
+                  {{ errorMessage1 }}
                 </div>
-
-                <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
-                    Language Data
-                </h1>
-                <div class="card-body border-top">
-                    <div class="input-group p-y-30 col-lg-15 d-flex gap-5 align-items-center mt-10">
-                        <h2 class="fs-3 fw-bolder col-auto" for="is_active">Is Active :</h2>
-                        <span>OFF</span>
-                        <div class="form-check form-check-custom form-check-solid form-check-success form-switch">
-                            <input
-                                [(ngModel)] = "is_active"
-                                class="form-check-input"
-                                type="checkbox"
-                                name="is_actives"
-                            />
-                        </div>
-                        <span>ON</span>
-                    </div> 
+              </div>
+              <div class="col-lg-6">
+                <h2 class="fs-2">Name English :</h2>
+                <input
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                  [(ngModel)]="name_en"
+                  name="name_en"
+                  type="text"
+                />
+                <div
+                  *ngIf="errorMessage2"
+                  class="error-message fs-6"
+                  style="color: red"
+                >
+                  {{ errorMessage2 }}
                 </div>
-
-                <div class="col d-flex gap-2 align-items-center mt-10 mb-10">
-                    <button class="btn btn-md btn-secondary">Reset</button>
-                    <button class="btn btn-md btn-success" type="submit">Save</button>
-                    <button class="btn btn-md btn-primary">Save & create new</button>
-                </div>
-            </form>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+          Language Data
+        </h1>
+        <div class="card-body border-top">
+          <div
+            class="input-group p-y-30 col-lg-15 d-flex gap-5 align-items-center mt-10"
+          >
+            <h2 class="fs-3 fw-bolder col-auto" for="is_active">Is Active :</h2>
+            <span>OFF</span>
+            <div
+              class="form-check form-check-custom form-check-solid form-check-success form-switch"
+            >
+              <input
+                [(ngModel)]="is_active"
+                class="form-check-input"
+                type="checkbox"
+                name="is_actives"
+              />
+            </div>
+            <span>ON</span>
+          </div>
+        </div>
+      </form>
+      <div class="col d-flex gap-2 align-items-center mt-10 mb-10">
+        <button class="btn btn-md btn-secondary" (click)="reset()">
+          Reset
+        </button>
+        <button class="btn btn-md btn-success" (click)="create()">Save</button>
+        <button class="btn btn-md btn-primary" (click)="savenew()">
+          Save & create new
+        </button>
+      </div>
     </div>
+  </div>
 </div>

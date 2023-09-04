@@ -91,10 +91,12 @@ export class UserListComponent implements OnInit{
 
   //delete the data
   delete(id: number){
-    this.http.get<any>(environment.apiUrl+ "user/delete/" + id)
-      .subscribe((response)=>{
-        this.ngOnInit();
-      })
+    if(confirm("Do you really delete this data?")){
+      this.http.get<any>(environment.apiUrl+ "user/delete/" + id)
+        .subscribe((response)=>{
+          this.ngOnInit();
+        })
+    }
   }
 }
 

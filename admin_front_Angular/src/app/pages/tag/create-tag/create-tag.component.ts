@@ -80,7 +80,6 @@ export class CreateTagComponent {
   }
 
   create(){
-    console.log("create btn clicked-----");
     if(this.name_ar === "" || this.name_en === "" ){
       if(this.name_ar === "") this.errorMessage1 = "*Please input the ar name";
       if(this.name_en === "") this.errorMessage2 = "*Please input the en name";
@@ -108,7 +107,47 @@ export class CreateTagComponent {
     formData.append("is_Active", this.is_active? "1" : "0");
     this.http.post<any>(environment.apiUrl + "tag/store", formData)
         .subscribe((response)=>{
-          
+          if(response.id){
+            alert("success");
+            this.router.navigate(["/tag/list"]);
+          }
+        });
+    
+
+  }
+
+  savenew(){
+    if(this.name_ar === "" || this.name_en === "" ){
+      if(this.name_ar === "") this.errorMessage1 = "*Please input the ar name";
+      if(this.name_en === "") this.errorMessage2 = "*Please input the en name";
+      return;
+    }
+    const formData = new FormData();
+    formData.append("module_name", this.model);
+    formData.append("ar[name]", this.name_ar);
+    formData.append("en[name]", this.name_en);
+    formData.append("ar[excerpt]", this.excerpt_ar);
+    formData.append("en[excerpt]", this.excerpt_en);
+    formData.append("ar[description]", this.answer_ar);
+    formData.append("en[description]", this.answer_en);
+    if(this.country_id) formData.append("country_id", this.country_id.toString());
+
+    if(this.model === "medicine"){
+      for(let i = 0 ; this.category.length ; i++)
+        if (this.category[i] !== undefined) 
+          formData.append("medicine_categories[]", this.category[i].toString());
+    }else{
+      for (let j = 0; j < this.specialty.length; j++) {
+        if (this.specialty[j] !== undefined) 
+          formData.append("specialties[]", this.specialty[j].toString());
+      }
+    }
+    formData.append("is_active", this.is_active? "1" : "0");
+    this.http.post<any>(environment.apiUrl + "tag/store", formData)
+        .subscribe((response)=>{
+          if(response.id){
+            alert("success");
+          }
         });
     
 

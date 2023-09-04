@@ -54,7 +54,12 @@ export class CreateCityComponent implements OnInit{
 
     this.http.post<any>(environment.apiUrl+"city/store", formData)
         .subscribe((response)=>{
-          console.log(response);
+          if(response.id){
+            alert("success");
+            this.router.navigate(["/city/list"]);
+          }else{
+            alert("error");
+          }
         });
   }
 

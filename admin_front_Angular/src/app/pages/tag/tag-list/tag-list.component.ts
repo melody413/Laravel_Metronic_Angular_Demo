@@ -14,7 +14,8 @@ export class TagListComponent implements OnInit{
   pageSize : number ;
   search_result: any[];
   search_index: string = "";
-
+  src: string = environment.url + 'uploads/tags/';
+  default_src: string = environment.url + "assets/frontend/images/general/doctorak_default_logo_img.png";
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
   ngOnInit(): void {
     this.http.get<any>(environment.apiUrl + "tag/list").
@@ -69,9 +70,12 @@ export class TagListComponent implements OnInit{
 
   //delete the data
   delete(id: number){
-    this.http.get<any>(environment.apiUrl+ "tag/delete/" + id)
-      .subscribe((response)=>{
-        this.ngOnInit();
-      })
+    if(confirm("Do you really delete the data?")){
+      this.http.get<any>(environment.apiUrl+ "tag/delete/" + id)
+        .subscribe((response)=>{
+          this.ngOnInit();
+        })
+      
+    }
   }
 }

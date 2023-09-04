@@ -35,8 +35,8 @@ import { CreateSubCategoryComponent } from './sub_category/create-sub-category/c
 import { SubCategoryListComponent } from './sub_category/sub-category-list/sub-category-list.component';
 import { CreateQuestionAnswerComponent } from './question_answer/create-question-answer/create-question-answer.component';
 import { QuestionAnswerListComponent } from './question_answer/question-answer-list/question-answer-list.component';
-import { CreateCountryComponent } from './create-country/create-country.component';
-import { CountryListComponent } from './country-list/country-list.component';
+import { CreateCountryComponent } from './country/create-country/create-country.component';
+import { CountryListComponent } from './country/country-list/country-list.component';
 import { CreateCityComponent } from './city/create-city/create-city.component';
 import { CityListComponent } from './city/city-list/city-list.component';
 import { AreaListComponent } from './area/area-list/area-list.component';
@@ -76,6 +76,17 @@ import { CreateMedicineNameComponent } from './Medicine/create-medicine-name/cre
 import { EditMedicineNameComponent } from './Medicine/edit-medicine-name/edit-medicine-name.component';
 import { CreateMedicineCategoryComponent } from './Medicine/create-medicine-category/create-medicine-category.component';
 import { EditMedicineCategoryComponent } from './Medicine/edit-medicine-category/edit-medicine-category.component';
+import { EditTagComponent } from './tag/edit-tag/edit-tag.component';
+import { EditSubCategoryComponent } from './sub_category/edit-sub-category/edit-sub-category.component';
+import { EditQuestionAnswerComponent } from './question_answer/edit-question-answer/edit-question-answer.component';
+import { EditCountryComponent } from './country/edit-country/edit-country.component';
+import { EditCityComponent } from './city/edit-city/edit-city.component';
+import { EditAreaComponent } from './area/edit-area/edit-area.component';
+import { EditSpecialtyComponent } from './speciality/edit-specialty/edit-specialty.component';
+import { EditPageComponent } from './page/edit-page/edit-page.component';
+import { EditFaqComponent } from './faq/edit-faq/edit-faq.component';
+import { EditRoleComponent } from './role/edit-role/edit-role.component';
+import { EditUserComponent } from './user/edit-user/edit-user.component';
 
 const Routing: Routes = [
 
@@ -351,7 +362,12 @@ const Routing: Routes = [
     component : TagListComponent
   },
 
-  //Tag router
+  {
+    path: 'tag/edit/:id',
+    component : EditTagComponent
+  },
+
+  //sub_category router
   {
     path: 'sub_category/create',
     component : CreateSubCategoryComponent
@@ -360,12 +376,22 @@ const Routing: Routes = [
     path: 'sub_category/list',
     component : SubCategoryListComponent
   },
+  {
+    path: 'sub_category/edit/:id',
+    component : EditSubCategoryComponent
+  },
 
   //Question&Answer router
   {
     path: 'question_answer/create',
     component : CreateQuestionAnswerComponent
   },
+
+  {
+    path: 'question_answer/edit/:id',
+    component : EditQuestionAnswerComponent
+  },
+
   {
     path: 'question_answer/list',
     component : QuestionAnswerListComponent
@@ -376,6 +402,12 @@ const Routing: Routes = [
     path: 'country/create',
     component : CreateCountryComponent
   },
+
+  {
+    path: 'country/edit/:id',
+    component : EditCountryComponent
+  },
+
   {
     path: 'country/list',
     component : CountryListComponent
@@ -391,6 +423,11 @@ const Routing: Routes = [
     component : CityListComponent
   },
 
+  {
+    path: 'city/edit/:id',
+    component : EditCityComponent
+  },
+
   //Area router
   {
     path: 'area/create',
@@ -399,6 +436,11 @@ const Routing: Routes = [
   {
     path: 'area/list',
     component : AreaListComponent
+  },
+
+  {
+    path: 'area/edit/:id',
+    component : EditAreaComponent
   },
 
   //Speicality router
@@ -411,6 +453,11 @@ const Routing: Routes = [
     component : SpecialityListComponent
   },
 
+  {
+    path: 'speciality/edit/:id',
+    component : EditSpecialtyComponent
+  },
+
   //Page router
   {
     path: 'page/create',
@@ -421,6 +468,11 @@ const Routing: Routes = [
     component : PageListComponent
   },
 
+  {
+    path: 'page/edit/:id',
+    component : EditPageComponent
+  },
+
   //Faq router
   {
     path: 'faq/create',
@@ -429,6 +481,10 @@ const Routing: Routes = [
   {
     path: 'faq/list',
     component : FaqListComponent
+  },
+  {
+    path: 'faq/edit/:id',
+    component : EditFaqComponent
   },
 
   //Role router
@@ -441,6 +497,11 @@ const Routing: Routes = [
     component : RoleListComponent
   },
 
+  {
+    path: 'role/edit/:id',
+    component : EditRoleComponent
+  },
+
   //User router
   {
     path: 'user/create',
@@ -449,6 +510,11 @@ const Routing: Routes = [
   {
     path: 'user/list',
     component : UserListComponent
+  },
+
+  {
+    path: 'user/edit/:id',
+    component : EditUserComponent
   },
 
 

@@ -1,81 +1,128 @@
 <div class="card">
-    <div class="card-body">
-        <form
-            novalidate
-            class="form"
-            enctype="multipart/form-data"
-            (ngSubmit)="create()"
+  <div class="card-body">
+    <form
+      novalidate
+      class="form"
+      enctype="multipart/form-data"
+      (ngSubmit)="create()"
+    >
+      <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+        Language Data
+      </h1>
+      <div class="card-body border-top">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 fv-col">
+              <h2 class="fs-3">*Name Arabic :</h2>
+              <input
+                class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                [(ngModel)]="ar_name"
+                name="ar_name"
+                type="text"
+                value=""
+              />
+              <div
+                *ngIf="errorMessage1"
+                class="error-message fs-6"
+                style="color: red"
+              >
+                {{ errorMessage1 }}
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h2 class="fs-3">*Name English :</h2>
+              <input
+                class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                [(ngModel)]="en_name"
+                name="en_name"
+                type="text"
+                value=""
+              />
+              <div
+                *ngIf="errorMessage2"
+                class="error-message fs-6"
+                style="color: red"
+              >
+                {{ errorMessage2 }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
+        Other Data
+      </h1>
+      <div class="card-body border-top">
+        <div class="col-lg-12 mt-10">
+          <h2 class="fs-4">Speciality :</h2>
+          <div class="col-lg-12 row mt-5">
+            <div
+              *ngFor="let item of response_specialities; let i = index"
+              class="col-lg-4 fv-row"
             >
-            <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
-                Language Data
-            </h1>
-            <div class="card-body border-top">
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-lg-6 fv-col">
-                            <h2 class="fs-3">*Name Arabic :</h2>
-                            <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="ar_name" name="ar_name" type="text" value="">
-                            <div *ngIf="errorMessage1" class="error-message fs-6" style="color: red;">{{errorMessage1}}</div>        
-                        </div>  
-                        <div class="col-lg-6">
-                            <h2 class="fs-3">*Name English :</h2>
-                            <input class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" [(ngModel)]="en_name" name="en_name" type="text" value="">
-                            <div *ngIf="errorMessage2" class="error-message fs-6" style="color: red;">{{errorMessage2}}</div>
-                        </div>
-                    </div>
-                </div>
+              <input
+                value="{{ item.id }}"
+                class="filled-in chk-col-brown form-check-input subcp"
+                name="specialties[]"
+                type="checkbox"
+                (change)="toggleCheckbox_specialty($event)"
+              />
+              <label for="subcp_1" class="fs-3" style="padding-left: 8px">
+                {{ item.name }}
+              </label>
             </div>
+          </div>
+        </div>
 
-            <h1 class="card-title fw-bolder text-muted text-hover-primary fs-4">
-                Other Data
-            </h1>
-            <div class="card-body border-top">
-                <div class="col-lg-12 mt-10">
-                    <h2 class="fs-4" >Speciality :</h2>
-                    <div class="col-lg-12 row mt-5">
-                        <div
-                            *ngFor="let item of response_specialities; let i = index"
-                            class="col-lg-4 fv-row"
-                        >
-                            <input
-                                value={{item.id}}
-                                class="filled-in chk-col-brown form-check-input subcp"
-                                name="specialties[]"
-                                type="checkbox"
-                                (change)="toggleCheckbox_specialty($event)"
-                            />
-                            <label for="subcp_1" class="fs-3" style="padding-left: 8px">
-                                {{item.name}}
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-12 mt-10">
-                    <h2 class="fs-4" >Parent Sub Category :</h2>
-                </div>
-                
-
-                <div class="input-group p-y-30 col-lg-15 d-flex gap-5 align-items-center mt-10">
-                    <h2 class="fw-bolder col-auto" for="is_active">Is Active :</h2>
-                    <span>OFF</span>
-                    <div class="form-check form-check-custom form-check-solid form-check-success form-switch">
-                        <input
-                            [(ngModel)] = "is_active"
-                            class="form-check-input"
-                            type="checkbox"
-                            name="is_active"
-                        />
-                    </div>
-                    <span>ON</span>
-                </div>                
+        <div class="col-lg-12 mt-10">
+          <h2 class="fs-4">Parent Category :</h2>
+          <div class="col-lg-12 row mt-5">
+            <div
+              *ngFor="let item of parent_categories; let i = index"
+              class="col-lg-4 fv-row"
+            >
+              <input
+                value="{{ item.id }}"
+                class="filled-in chk-col-brown form-check-input subcp"
+                name="parent_categories[]"
+                type="checkbox"
+                (change)="toggleCheckbox_parent_category($event)"
+              />
+              <label for="subcp_1" class="fs-3" style="padding-left: 8px">
+                {{ item.name }}
+              </label>
             </div>
+          </div>
+        </div>
 
-            <div class="col d-flex gap-2 align-items-center mt-15" style="flex-wrap:wrap; flex-direction: row-reverse;">
-                <button class="btn btn-md btn-secondary">Reset</button>
-                <button class="btn btn-md btn-success" type="submit">Save</button>
-                <button class="btn btn-md btn-primary">Save & create new</button>
-            </div>
-        </form>
-    </div>
+        <div
+          class="input-group p-y-30 col-lg-15 d-flex gap-5 align-items-center mt-10"
+        >
+          <h2 class="fw-bolder col-auto" for="is_active">Is Active :</h2>
+          <span>OFF</span>
+          <div
+            class="form-check form-check-custom form-check-solid form-check-success form-switch"
+          >
+            <input
+              [(ngModel)]="is_active"
+              class="form-check-input"
+              type="checkbox"
+              name="is_active"
+            />
+          </div>
+          <span>ON</span>
+        </div>
+      </div>
+
+      <div
+        class="col d-flex gap-2 align-items-center mt-15"
+        style="flex-wrap: wrap; flex-direction: row-reverse"
+      >
+        <button class="btn btn-md btn-secondary">Reset</button>
+        <button class="btn btn-md btn-success" type="submit">Save</button>
+        <button class="btn btn-md btn-primary">Save & create new</button>
+      </div>
+    </form>
+  </div>
 </div>
