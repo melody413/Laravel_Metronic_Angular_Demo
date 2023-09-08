@@ -164,7 +164,7 @@ export class CreatePharmacyComponent {
      formdata.append("lat_lng", this.lat_lng);
      formdata.append("phone", this.phone);
      formdata.append("is_active", this.is_active? "1" : "0");
-     this.http.post<any>(environment.apiUrl + "pharmecy/store", formdata).subscribe(
+     this.http.post<any>(environment.apiUrl + "pharmacy/store", formdata).subscribe(
        (response) => {
          if(response.next) {
            alert("success");
@@ -214,7 +214,7 @@ export class CreatePharmacyComponent {
      formdata.append("lat_lng", this.lat_lng);
      formdata.append("phone", this.phone);
      formdata.append("is_active", this.is_active? "1" : "0");
-     this.http.post<any>(environment.apiUrl + "pharmecy/store", formdata).subscribe(
+     this.http.post<any>(environment.apiUrl + "pharmacy/store", formdata).subscribe(
        (response) => {
          if(response.next) {
            alert("success");
