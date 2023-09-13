@@ -56,6 +56,7 @@ Route::group(['namespace' => 'Api', 'prefix' => env('API_PREFIX')], function () 
     Route::get('/doctor/delete/{id}', 'ADoctorController@delete' );
     Route::post('/doctor/store', 'ADoctorController@store' );
     Route::post('/doctor/table', 'ADoctorController@table');
+    Route::post('/doctor/getTag','ADoctorController@getTag' );
 
     //Doctor branch API
     Route::get('/doctor/branch/{id}', 'ADoctorBranchController@index' );

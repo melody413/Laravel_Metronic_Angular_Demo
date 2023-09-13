@@ -12,15 +12,7 @@
       + Create New</a
     >
   </div>
-  <div class="col-md-1">
-    <select class="form-control" onchange="categoryChange()">
-      <option value="0">Category :</option>
-      <option value="1">Users</option>
-      <option value="2">Doctors</option>
-      <option value="3">Admin</option>
-      <option value="4">Moderator</option>
-    </select>
-  </div>
+
   <div class="col-md-5 row">
     <div class="col-lg-7">
       <input
@@ -32,7 +24,20 @@
     </div>
     <button class="btn btn-primary col-lg-2" (click)="search()">Search</button>
   </div>
-  <div class="col-md-2" style="display: flex; align-items: center">
+  <div class="col-md-1">
+    <select
+      class="form-control"
+      [(ngModel)]="category_type"
+      (ngModelChange)="categoryChange()"
+    >
+      <option value="0">All :</option>
+      <option value="1">Users</option>
+      <option value="2">Doctors</option>
+      <option value="3">Admin</option>
+      <option value="4">Moderator</option>
+    </select>
+  </div>
+  <!-- <div class="col-md-2" style="display: flex; align-items: center">
     <span style="margin-right: 5px; width: 70%">Page size</span>
     <select
       class="form-control"
@@ -45,7 +50,7 @@
       <option value="50">50 :</option>
       <option value="100">100 :</option>
     </select>
-  </div>
+  </div> -->
 </div>
 <!-- end::Header -->
 <!-- begin::Body -->

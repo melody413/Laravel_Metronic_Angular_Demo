@@ -23,6 +23,8 @@ image_gallery: File[] = [];
 image_gallery_names: string[] = [];
 gender : number;
 specialty: number[] = [];
+sepcialty_tag: number[] = [];
+specialty_subc: number[] = [];
 wait_time : number;
 useremail: string ="";
 is_reserve: boolean = true;
@@ -60,6 +62,8 @@ specialities: any[] = [];
 countries: any[] = [];
 cities: any[] = [];
 areas: any[] = [];
+specialty_tags: any[] = [];
+specialty_subs: any[] = [];
 
 doctor_id: number;
 doctor: any;
@@ -75,6 +79,11 @@ ngOnInit(): void{
       .subscribe((response)=>{
         this.doctor = response.item;
         this.specialty = response.specialityIds;
+        if(this.doctor.tags_en)
+          this.sepcialty_tag = this.doctor.tags_en.split(',').map(Number);
+        if(this.doctor.sub_cats_en)
+          this.specialty_subc = this.doctor.sub_cats_en.split(',').map(Number);
+        this.updateTag_category();
         this.arName = this.doctor['translations'][0]['name'];
         this.enName = this.doctor['translations'][1]['name'];
         this.arExcerpt = this.doctor['translations'][0]['excerpt'];
@@ -91,8 +100,8 @@ ngOnInit(): void{
 
         this.wait_time = this.doctor.wait_time;
         this.useremail = this.doctor.user_id;
-        this.is_active = this.doctor.is_active === "1" ? true: false;
-        this.is_reserve = this.doctor.is_reserve === "1" ? true: false;
+        this.is_active = this.doctor.is_active == "1" ? true: false;
+        this.is_reserve = this.doctor.is_reserve == "1" ? true: false;
         this.hospital = response.hospitals.toString();
         this.center= response.centers.toString();
         this.insuranceCompany = response.insuranceCompanies.toString();
@@ -154,6 +163,37 @@ toggleCheckbox_specialty(item: number){
   } else {
     this.specialty.splice(index, 1);
   }
+  this.updateTag_category();
+}
+
+toggleCheckbox_specialty_tag(item: number){
+  const index = this.sepcialty_tag.indexOf(item);
+  if (index === -1) {
+    this.sepcialty_tag.push(item);
+  } else {
+    this.sepcialty_tag.splice(index, 1);
+  }
+  console.log(this.sepcialty_tag.toString());
+}
+
+toggleCheckbox_specialty_subc(item: number){
+  const index = this.specialty_subc.indexOf(item);
+  if (index === -1) {
+    this.specialty_subc.push(item);
+  } else {
+    this.specialty_subc.splice(index, 1);
+  }
+  console.log(this.specialty_subc.toString());
+}
+
+
+updateTag_category(){
+  this.http.post<any>(environment.apiUrl + "doctor/getTag", this.specialty)
+      .subscribe((response)=>{
+        this.specialty_tags = response.tags;
+        this.specialty_subs = response.sub_categories;
+        this.crd.detectChanges();
+      });
 }
 
 toggleCheckbox_work_day(id: number){
@@ -265,10 +305,23 @@ edit(){
   formdata.append("phone", this.phone);
   formdata.append("map_link", this.maplink);
   formdata.append("branch", this.branch);
-  formdata.append("tags_en", "");
-  formdata.append("sub_cats_en", "");
-  formdata.append("tags_ar", "");
-  formdata.append("sub_cats_ar", "");
+
+  for(let i = 0 ; i < this.sepcialty_tag.length ; i++){
+    if(this.sepcialty_tag[i]) {
+      formdata.append("tag_sp", this.sepcialty_tag[i].toString());
+    }
+  }
+
+  for(let i = 0 ; i < this.specialty_subc.length ; i++){
+    if(this.specialty_subc[i]) {
+      formdata.append("subcp", this.specialty_subc[i].toString());
+    }
+  }
+
+  formdata.append("tags_en", this.sepcialty_tag.toString());
+  formdata.append("sub_cats_en", this.specialty_subc.toString());
+  formdata.append("tags_ar", this.sepcialty_tag.toString());
+  formdata.append("sub_cats_ar", this.specialty_subc.toString());
   formdata.append("is_active", this.is_active? "1" : "0");
   formdata.append("is_reserve", this.is_reserve? "1" : "0");
   this.http.post<any>(environment.apiUrl + "doctor/store", formdata).subscribe(

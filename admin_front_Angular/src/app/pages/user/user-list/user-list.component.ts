@@ -14,7 +14,8 @@ export class UserListComponent implements OnInit{
   pageSize : number ;
   search_result: any[];
   search_index: string = "";  
-  
+  category_type: number = 0;
+
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
   ngOnInit(): void {
     this.http.get<any>(environment.apiUrl + "user/list").
@@ -31,9 +32,9 @@ export class UserListComponent implements OnInit{
       case 1:
         return "user";
       case 2:
-        return "admin";
-      case 3:
         return "doctor";
+      case 3:
+        return "admin";
       case 4:
         return "moderator";
       default:
@@ -65,30 +66,77 @@ export class UserListComponent implements OnInit{
             this.paginator.length = response.search_result.length;
             this.paginator.pageIndex = response.search_result["current_page"]-1;
             this.cdr.detectChanges(); // Manually trigger change detection
-            
           })   
     }
   }
   pageChange(){
-    if(this.paginator.pageIndex == 0 && this.paginator.pageSize == 10){
-      this.pageSize = 10;
-      this.ngOnInit();
+    if(this.category_type == 0){
+      if(this.paginator.pageIndex == 0 && this.paginator.pageSize == 10){
+        this.pageSize = 10;
+        this.ngOnInit();
+      }else{
+        this.http.post<any>(environment.apiUrl + "user/table", {
+          params: new HttpParams()
+            .set('pageSize', this.paginator.pageSize.toString())
+            .set('pageIndex', this.paginator.pageIndex.toString())
+        }).subscribe((response)=>{
+          this.tableData = response.search_result["data"];
+          this.paginator.pageSize = response.search_result["per_page"];
+          this.paginator.length = response.search_result["total"];
+          this.paginator.pageIndex = response.search_result["current_page"]-1;
+          this.cdr.detectChanges(); // Manually trigger change detection
+        })
+      }
     }else{
-      this.http.post<any>(environment.apiUrl + "user/table", {
-        params: new HttpParams()
-          .set('pageSize', this.paginator.pageSize.toString())
-          .set('pageIndex', this.paginator.pageIndex.toString())
-      }).subscribe((response)=>{
-        this.tableData = response.search_result["data"];
-        this.paginator.pageSize = response.search_result["per_page"];
-        this.paginator.length = response.search_result["total"];
-        this.paginator.pageIndex = response.search_result["current_page"]-1;
+      this.categoryChange();
+    }
+    
+  }
+  categoryChange(){
+    if(this.category_type == 1){
+      this.http.get<any>(environment.apiUrl + "user/index_users?page=" + (this.paginator.pageIndex+1) + "#users")
+      .subscribe((response)=>{
+        this.tableData = response.dr_users["data"];
+        this.paginator.pageSize = response.dr_users["per_page"];
+        this.paginator.length = response.dr_users["total"];
+        this.paginator.pageIndex = response.dr_users["current_page"]-1;
         this.cdr.detectChanges(); // Manually trigger change detection
+      });
+    }
+    else if(this.category_type == 2){
+      this.http.get<any>(environment.apiUrl + "user/index_doctors?page=" + (this.paginator.pageIndex+1) + "#users")
+      .subscribe((response)=>{
+        this.tableData = response.dr_users["data"];
+        this.paginator.pageSize = response.dr_users["per_page"];
+        this.paginator.length = response.dr_users["total"];
+        this.paginator.pageIndex = response.dr_users["current_page"]-1;
         this.cdr.detectChanges(); // Manually trigger change detection
-      })
+      });
+    }
+    else if(this.category_type == 3){
+      this.http.get<any>(environment.apiUrl + "user/index_admin?page=" + (this.paginator.pageIndex+1) + "#users")
+      .subscribe((response)=>{
+        this.tableData = response.dr_users["data"];
+        this.paginator.pageSize = response.dr_users["per_page"];
+        this.paginator.length = response.dr_users["total"];
+        this.paginator.pageIndex = response.dr_users["current_page"]-1;
+        this.cdr.detectChanges(); // Manually trigger change detection
+      });
+    }
+    else if(this.category_type == 4){
+      this.http.get<any>(environment.apiUrl + "user/index_moderator?page=" + (this.paginator.pageIndex+1) + "#users")
+      .subscribe((response)=>{
+        this.tableData = response.dr_users["data"];
+        this.paginator.pageSize = response.dr_users["per_page"];
+        this.paginator.length = response.dr_users["total"];
+        this.paginator.pageIndex = response.dr_users["current_page"]-1;
+        this.cdr.detectChanges(); // Manually trigger change detection
+      });
+    }
+    else if(this.category_type == 0) {
+      this.ngOnInit();
     }
   }
-
   //delete the data
   delete(id: number){
     if(confirm("Do you really delete this data?")){

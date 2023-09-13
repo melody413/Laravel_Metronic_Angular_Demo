@@ -28,6 +28,8 @@ export class CreateDoctorComponent implements OnInit{
   image_gallery_names: string[] = [];
   gender : number;
   specialty: number[] = [];
+  sepcialty_tag: number[] = [];
+  specialty_subc: number[] = [];
   wait_time : number;
   useremail: string ="";
   is_reserve: boolean = true;
@@ -55,16 +57,19 @@ export class CreateDoctorComponent implements OnInit{
   lat_lng: string = "";
   maplink: string = "";
   branch: string = "1";
-  entags: string;
-  artags: string;
-  enSubCats: string;
-  arSubCats: string;
+  entags: string = "";
+  artags: string = "";
+  enSubCats: string = "";
+  arSubCats: string = "";
 
   //reponse data
   specialities: any[] = [];
   countries: any[] = [];
   cities: any[] = [];
   areas: any[] = [];
+
+  specialty_tags: any[] = [];
+  specialty_subs: any[] = [];
   constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
 
   ngOnInit(): void{
@@ -73,10 +78,7 @@ export class CreateDoctorComponent implements OnInit{
         .subscribe((response)=>{
           this.specialities = Object.entries(response.speciality);
           this.countries = Object.entries(response.country);
-          // this.cities = Object.entries(response.city);
-          this.areas = Object.entries(response.area);
           this.crd.detectChanges();
-          console.log(this.specialities);
         })
   }
 
@@ -121,8 +123,39 @@ export class CreateDoctorComponent implements OnInit{
     } else {
       this.specialty.splice(index, 1);
     }
-  }
+    this.updateTag_category();
+}
 
+toggleCheckbox_specialty_tag(item: number){
+  const index = this.sepcialty_tag.indexOf(item);
+  if (index === -1) {
+    this.sepcialty_tag.push(item);
+  } else {
+    this.sepcialty_tag.splice(index, 1);
+  }
+  console.log(this.sepcialty_tag.toString());
+}
+
+
+toggleCheckbox_specialty_subc(item: number){
+  const index = this.specialty_subc.indexOf(item);
+  if (index === -1) {
+    this.specialty_subc.push(item);
+  } else {
+    this.specialty_subc.splice(index, 1);
+  }
+  console.log(this.specialty_subc.toString());
+}
+
+
+updateTag_category(){
+  this.http.post<any>(environment.apiUrl + "doctor/getTag", this.specialty)
+      .subscribe((response)=>{
+        this.specialty_tags = response.tags;
+        this.specialty_subs = response.sub_categories;
+        this.crd.detectChanges();
+      });
+}
   //doctor image process
   onFileSelected(event: any) {
     this.image = event.target.files[0];
@@ -168,7 +201,6 @@ export class CreateDoctorComponent implements OnInit{
   getPreviewImage(file: File): string {
     const reader = new FileReader();
     reader.readAsDataURL(file);
-    
     return URL.createObjectURL(file);
   }
 
@@ -243,13 +275,30 @@ export class CreateDoctorComponent implements OnInit{
     formdata.append("sub_cats_ar", "");
     formdata.append("is_active", this.is_active? "1" : "0");
     formdata.append("is_reserve", this.is_reserve? "1" : "0");
+    for(let i = 0 ; i < this.sepcialty_tag.length ; i++){
+      if(this.sepcialty_tag[i]) {
+        formdata.append("tag_sp", this.sepcialty_tag[i].toString());
+      }
+    }
+  
+    for(let i = 0 ; i < this.specialty_subc.length ; i++){
+      if(this.specialty_subc[i]) {
+        formdata.append("subcp", this.specialty_subc[i].toString());
+      }
+    }
+
+    formdata.append("tags_en", this.sepcialty_tag.toString());
+    formdata.append("sub_cats_en", this.specialty_subc.toString());
+    formdata.append("tags_ar", this.sepcialty_tag.toString());
+    formdata.append("sub_cats_ar", this.specialty_subc.toString());
+    
     this.http.post<any>(environment.apiUrl + "doctor/store", formdata).subscribe(
       (response) => {
         if(response.id) {
           alert("success");
           this.router.navigate(["doctor/list"]);
         }
-        else alert("error");
+        else alert("error: input the parameter correctly! name, phone number, address, title");
       }
     )
   }

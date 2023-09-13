@@ -32,7 +32,7 @@ class AUserController extends BaseController
 
     public function index_users(Request $request){
         $users_count = User::search($request->q)->where("type", 1)->search($request->tel)->search($request->email)->count();
-        $dr_users = User::search($request->q)->where("type", 1)->search($request->tel)->search($request->email)->orderByRaw('created_at DESC')->paginate(15)->fragment('users');
+        $dr_users = User::search($request->q)->where("type", 1)->search($request->tel)->search($request->email)->orderByRaw('created_at DESC')->paginate(10)->fragment('users');
         // return view($this->getTemplatePath('index_users'), ['dr_users' => $dr_users, 'users_count' => $users_count]);
         return response( ['dr_users' => $dr_users, 'users_count' => $users_count], 200);
 
@@ -40,7 +40,7 @@ class AUserController extends BaseController
 
     public function index_admin(Request $request){
         $users_count = User::search($request->q)->where("type", 4)->search($request->tel)->search($request->email)->count();
-        $dr_users = User::search($request->q)->where("type", 4)->search($request->tel)->search($request->email)->orderByRaw('created_at DESC')->paginate(15)->fragment('users');
+        $dr_users = User::search($request->q)->where("type", 4)->search($request->tel)->search($request->email)->orderByRaw('created_at DESC')->paginate(10)->fragment('users');
         // return view($this->getTemplatePath('index_users'), ['dr_users' => $dr_users, 'users_count' => $users_count]);
         return response(['dr_users' => $dr_users, 'users_count' => $users_count], 200);
 
@@ -48,8 +48,8 @@ class AUserController extends BaseController
 
     public function index_moderator(Request $request){
         $users_count = User::search($request->q)->where("type", 3)->search($request->tel)->search($request->email)->count();
-        $dr_users = User::search($request->q)->where("type", 3)->search($request->tel)->search($request->email)->orderByRaw('created_at DESC')->paginate(15)->fragment('users');
-        return view($this->getTemplatePath('index_users'), ['dr_users' => $dr_users, 'users_count' => $users_count]);
+        $dr_users = User::search($request->q)->where("type", 3)->search($request->tel)->search($request->email)->orderByRaw('created_at DESC')->paginate(10)->fragment('users');
+        // return view($this->getTemplatePath('index_users'), ['dr_users' => $dr_users, 'users_count' => $users_count]);
         return response(['dr_users' => $dr_users, 'users_count' => $users_count], 200);
 
     }

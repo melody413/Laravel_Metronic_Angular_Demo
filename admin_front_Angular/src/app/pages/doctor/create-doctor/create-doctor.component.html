@@ -674,24 +674,45 @@
             </div>
           </div>
 
-          <div class="col p-y-30 border-bottom" style="padding-bottom: 80px">
-            <div class="row g-2 align-items-center">
-              <div class="col-auto">
-                <label for="tags" class="form-label">Tags:</label>
-              </div>
-              <!-- <div class="col-auto">
-                <input name="tags" class="form-control" type="text" />
-              </div> -->
+          <div class="col-lg-12 row mt-10">
+            <h2 class="card-title fw-bolder text-hover-primary fs-2">Tags:</h2>
+            <div
+              *ngFor="let item of specialty_tags; let i = index"
+              class="col-lg-3 fv-row"
+            >
+              <input
+                [value]="item.tag_id"
+                name="specialty_tags[{{ item.tag_id }}]"
+                class="filled-in chk-col-brown form-check-input subcp"
+                type="checkbox"
+                [checked]="sepcialty_tag.includes(item.tag_id)"
+                (change)="toggleCheckbox_specialty_tag(item.tag_id)"
+              />
+              <label for="subcp_1" class="fs-2" style="padding-left: 8px">{{
+                item.name
+              }}</label>
             </div>
           </div>
-          <div class="col p-y-30 border-bottom" style="padding-bottom: 80px">
-            <div class="row g-2 align-items-center">
-              <div class="col-auto">
-                <label for="tags" class="form-label">Subcatigory:</label>
-              </div>
-              <!-- <div class="col-auto">
-                <input name="tags" class="form-control" type="text" />
-              </div> -->
+
+          <div class="col-lg-12 row mt-10">
+            <h2 class="card-title fw-bolder text-hover-primary fs-2">
+              Sub Category:
+            </h2>
+            <div
+              *ngFor="let item of specialty_subs; let i = index"
+              class="col-lg-3 fv-row"
+            >
+              <input
+                [value]="item.sub_category_id"
+                name="specialty_tags[]"
+                class="filled-in chk-col-brown form-check-input subcp"
+                type="checkbox"
+                [checked]="specialty_subc.includes(item.sub_category_id)"
+                (change)="toggleCheckbox_specialty_subc(item.sub_category_id)"
+              />
+              <label for="subcp_1" class="fs-2" style="padding-left: 8px">{{
+                item.name
+              }}</label>
             </div>
           </div>
         </div>

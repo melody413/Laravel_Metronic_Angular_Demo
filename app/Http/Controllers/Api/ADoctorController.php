@@ -7,6 +7,7 @@ use App\Mangers\DataTableManger;
 use App\Models\Doctor;
 use App\Models\Qanswer;
 use App\Models\Tag;
+use App\Models\SubCategory;
 use App\Models\DoctorBranch;
 use Okipa\LaravelBootstrapTableList\TableList;
 use Illuminate\Http\Request;
@@ -259,10 +260,32 @@ class ADoctorController extends BaseController
             ->orderBy('created_at', 'DESC')
             ->paginate($pageSize, ['*'], 'page', $pageIndex)
             ->fragment('doctors');
-            
             return response(['search_result' => $doctors], 200);
-
-            
         }
+    }
+    public function getTag(Request $request){
+        //get tag
+        $query = DB::table('specialty_tag');
+        foreach ($request->input() as $key => $value) {
+            $query->orWhere('specialty_id', $value);
+        }
+        $tags = $query->get();
+        foreach($tags as $tag){
+            $tag_data = Tag::where('id', $tag->tag_id)->get();
+            $tag->name = $tag_data[0]->name;
+        }
+
+
+
+        $query1 = DB::table('specialty_sub_category');
+        foreach ($request->input() as $key => $value) {
+            $query1->orWhere('specialty_id', $value);
+        }
+        $sub_categorys = $query1->get();
+        foreach($sub_categorys as $sub_category){
+            $subcategory_data = SubCategory::where('id', $sub_category->sub_category_id)->get();
+            $sub_category->name = $subcategory_data[0]->name;
+        }
+        return response(['tags'=>$tags, 'sub_categories'=>$sub_categorys]);
     }
 }
