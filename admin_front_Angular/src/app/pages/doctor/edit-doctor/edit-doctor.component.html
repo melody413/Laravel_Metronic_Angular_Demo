@@ -607,9 +607,9 @@
                 <option value="-1">Select the City</option>
                 <option
                   *ngFor="let item of cities; let i = index"
-                  [value]="item[0]"
+                  [value]="item.city_id"
                 >
-                  {{ item[1] }}
+                  {{ item.name }}
                 </option>
               </select>
             </div>
@@ -623,9 +623,9 @@
                 <option value="-1">Selecte the area</option>
                 <option
                   *ngFor="let item of areas; let i = index"
-                  [value]="item[0]"
+                  [value]="item.area_id"
                 >
-                  {{ item[1] }}
+                  {{ item.name }}
                 </option>
               </select>
             </div>

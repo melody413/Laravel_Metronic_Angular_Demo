@@ -7,7 +7,7 @@
     <a
       class="btn btn-sm btn-primary"
       routerLinkActive="active"
-      routerLink="/doctor/create"
+      routerLink="/doctor/branch_create/{{ doctor_id }}"
     >
       + Create New</a
     >
@@ -69,7 +69,7 @@
           <td>{{ data[0] }}</td>
           <td>{{ data[1] }}</td>
           <td>{{ data[2] }}</td>
-          <td>{{ filteredWeekend }}</td>
+          <td>{{ convertString(data[3]) }}</td>
           <td>{{ data[4] }}</td>
           <td>{{ data[5] }}</td>
           <td>{{ data[6] }}</td>
@@ -83,6 +83,13 @@
             >
               DELETE
             </button>
+            <a
+              class="btn btn-sm btn-primary"
+              routerLinkActive="active"
+              routerLink="/doctor/branch_edit/{{ data[0] }}"
+            >
+              Edit
+            </a>
           </td>
         </tr>
       </tbody>

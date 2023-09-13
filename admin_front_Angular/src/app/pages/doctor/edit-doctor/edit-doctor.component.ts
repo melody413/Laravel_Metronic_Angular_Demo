@@ -87,8 +87,7 @@ ngOnInit(): void{
         this.gender = this.doctor.gender === "male"? 0 : 1;
         this.specialities = response.speciality;
         this.countries = Object.entries(response.country);
-        this.cities = Object.entries(response.city);
-        this.areas = Object.entries(response.area);
+
 
         this.wait_time = this.doctor.wait_time;
         this.useremail = this.doctor.user_id;
@@ -113,7 +112,18 @@ ngOnInit(): void{
         this.enAddress = response.branch.translations[1]['address'];
         this.arAddress = response.branch.translations[0]['address'];
         this.country_id = this.doctor.country_id;
+        this.http.get<any>(environment.apiUrl + "country/getAllCity/" + this.country_id)
+          .subscribe((response)=>{
+            this.cities = response.city;
+            this.crd.detectChanges();
+          })
+
         this.city = this.doctor.city_id;
+        this.http.get<any>(environment.apiUrl + "city/getAllArea/" + this.city)
+          .subscribe((response)=>{
+            this.areas = response.area;
+            this.crd.detectChanges();
+          })
         this.area = this.doctor.area_id;
         this.lat_lng = response.branch.lat_lng;
         this.maplink = this.doctor.map_link;

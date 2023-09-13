@@ -40,7 +40,7 @@ export class UserListComponent implements OnInit{
         return "";
     }
   }
-
+  
 
   onPageChange(event: any) {
     this.pageChange();

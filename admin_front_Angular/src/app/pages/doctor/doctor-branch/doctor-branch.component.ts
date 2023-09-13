@@ -17,9 +17,7 @@ export class DoctorBranchComponent {
   search_index: string = "";
   doctor_id: number;
   weekend: string[] = ['San','Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  workdays: string;
   work_days: boolean[] = [];
-  filteredWeekend: string[] ; 
   constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
 
   ngOnInit(): void {
@@ -32,10 +30,6 @@ export class DoctorBranchComponent {
           this.tableData = response.result.data;
           this.paginator.pageSize = response.result["recordsTotal"];
           this.paginator.length = response.result["recordsTotal"];
-          this.workdays = this.tableData[0][3];
-          this.work_days = this.workdays.split("").map(char => char === "1");
-
-          this.filteredWeekend = this.weekend.filter((day, index) => this.work_days[index]);
           this.paginator.pageIndex = 0;
           this.crd.detectChanges(); // Manually trigger change detection
         } 
@@ -90,6 +84,19 @@ export class DoctorBranchComponent {
     }
   }
 
+  convertString(tmp: string){
+    let result = "" ; 
+    this.work_days = tmp.split("").map(char => char === "1");
+    for(let i = 0 ; i < 7 ; i++){
+      if(this.work_days[i]){
+        result += this.weekend[i] + ",";
+      }
+    }
+    if(result == ""){
+      result = "No available";
+    }
+    return result;
+  }
   //delete the data
   delete(id: number){
     if(confirm("Are your really delete this data?")){

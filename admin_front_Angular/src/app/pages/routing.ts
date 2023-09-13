@@ -87,6 +87,8 @@ import { EditPageComponent } from './page/edit-page/edit-page.component';
 import { EditFaqComponent } from './faq/edit-faq/edit-faq.component';
 import { EditRoleComponent } from './role/edit-role/edit-role.component';
 import { EditUserComponent } from './user/edit-user/edit-user.component';
+import { CreateDoctorBranchComponent } from './doctor/create-doctor-branch/create-doctor-branch.component';
+import { EditDoctorBranchComponent } from './doctor/edit-doctor-branch/edit-doctor-branch.component';
 
 const Routing: Routes = [
 
@@ -146,6 +148,14 @@ const Routing: Routes = [
   {
     path: `doctor/branch/:id`,
     component : DoctorBranchComponent
+  },
+  {
+    path: `doctor/branch_create/:id`,
+    component : CreateDoctorBranchComponent
+  },
+  {
+    path: `doctor/branch_edit/:id`,
+    component : EditDoctorBranchComponent
   },
   //pharmecy router
   {

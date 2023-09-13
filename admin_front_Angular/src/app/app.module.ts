@@ -113,7 +113,8 @@ import { EditPageComponent } from './pages/page/edit-page/edit-page.component';
 import { EditFaqComponent } from './pages/faq/edit-faq/edit-faq.component';
 import { EditRoleComponent } from './pages/role/edit-role/edit-role.component';
 import { EditUserComponent } from './pages/user/edit-user/edit-user.component';
-
+import { CreateDoctorBranchComponent } from './pages/doctor/create-doctor-branch/create-doctor-branch.component';
+import { EditDoctorBranchComponent } from './pages/doctor/edit-doctor-branch/edit-doctor-branch.component';
 // import { BodypartListModule } from './pages/bodyPart/bodypart-list/bodypart-list.module';
 // #fake-end#
 
@@ -130,6 +131,8 @@ function appInitializer(authService: AuthService) {
   declarations: [
     AppComponent, 
     DoctorListComponent, 
+    CreateDoctorBranchComponent,
+    EditDoctorBranchComponent,
     CreateDoctorComponent, 
     DoctorReservationComponent, 
     CreateBodyPartComponent, 
