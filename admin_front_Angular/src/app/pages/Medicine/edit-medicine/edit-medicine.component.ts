@@ -136,8 +136,8 @@ export class EditMedicineComponent {
           this.ingredient3 = this.medicine.scientific_name_3;
 
           this.concentration = this.medicine.concentration;
-          this.concentration2 = this.medicine.concentration2;
-          this.concentration3 = this.medicine.concentration3;
+          this.concentration2 = this.medicine.concentration_2;
+          this.concentration3 = this.medicine.concentration_3;
 
           this.activeIngredient = this.medicine.activeIngredient;
           this.maximumIntake = this.medicine.maximumIntake;
