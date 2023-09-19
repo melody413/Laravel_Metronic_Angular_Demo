@@ -2,10 +2,15 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Router, ActivatedRoute  } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
+
 @Component({
   selector: 'app-edit-body-part',
   templateUrl: './edit-body-part.component.html',
-  styleUrls: ['./edit-body-part.component.scss']
+  styleUrls: ['./edit-body-part.component.scss'],
+  providers: [MessageService]
+
 })
 export class EditBodyPartComponent {
   arName: string = "";
@@ -29,7 +34,7 @@ export class EditBodyPartComponent {
   //response data
   bodypart_parent : any[] = [];
   bodypart: any;
-  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute) {}
+  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
 
   ngOnInit(): void {
     this.http.get<any>(environment.apiUrl+'bodypart/create')
@@ -101,8 +106,6 @@ export class EditBodyPartComponent {
 
   //save btn 
   create(){
-    console.log("create btn clicked!~");
-
     //validation process
     if(this.arName == "" || this.enName == ""){
       if(this.arName == "") this.errorMessage1 = "Please input the ar Name";
@@ -133,10 +136,10 @@ export class EditBodyPartComponent {
     .post<any>(environment.apiUrl+'bodypart/store', formData)
     .subscribe((response) => {
       if(response.result['flash_type'] === "success"){
-        alert("Success!");
+        this.showSuccess();
         this.router.navigate(["/bodypart/list"]);
       }else{
-        alert("Error!");
+        this.showError();
       }
     });
   }
@@ -185,11 +188,23 @@ export class EditBodyPartComponent {
     .post<any>(environment.apiUrl+'bodypart/store', formData)
     .subscribe((response) => {
       if(response.result['flash_type'] === "success"){
-        alert("Success!");
+        this.showSuccess();
         this.reset();
       }else{
-        alert("Error!");
+        this.showError();
       }
     });
   }
+
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
+  }
 }
+

@@ -2,11 +2,14 @@ import { Component, OnInit, OnChanges, Input, ChangeDetectorRef, ViewChild, Afte
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { MatPaginator,PageEvent } from '@angular/material/paginator';
-
+import { ConfirmationService, MessageService, ConfirmEventType } from 'primeng/api';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-doctor-reservation',
   templateUrl: './doctor-reservation.component.html',
-  styleUrls: ['./doctor-reservation.component.scss']
+  styleUrls: ['./doctor-reservation.component.scss'],
+  providers: [ConfirmationService, MessageService]
+
 })
 export class DoctorReservationComponent {
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -14,7 +17,7 @@ export class DoctorReservationComponent {
   pageSize : number ;
   search_result: any[];
   search_index: string = "";
-  constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
+  constructor(private http: HttpClient, private cdr: ChangeDetectorRef,private router: Router,private confirmationService: ConfirmationService, private messageService: MessageService) {}
 
   ngOnInit(): void {
     this.http.get<any>(environment.apiUrl + "reservation/list").
@@ -72,10 +75,33 @@ export class DoctorReservationComponent {
   }
 
   //delete the data
+
   delete(id: number){
-    this.http.get<any>(environment.apiUrl+ "doctor/delete/" + id)
-      .subscribe((response)=>{
-        this.ngOnInit();
-      })
+    this.confirmationService.confirm({
+        message: 'Are you sure to delete?"',
+        header: 'Delete Confirmation',
+        icon: 'pi pi-info-circle',
+        accept: () => {
+          this.http.get<any>(environment.apiUrl+ "reservation/delete/" + id)
+          .subscribe((response)=>{
+            if(response.flash_type == "success"){
+              this.messageService.add({ severity: 'info', summary: 'Confirmed', detail: 'Record deleted' });
+              this.ngOnInit();
+            }else{
+              this.messageService.add({ severity: 'error', summary: 'Error', detail: 'server Error' });
+            }
+          })
+        },
+        reject: (type:any) => {
+            switch (type) {
+                case ConfirmEventType.REJECT:
+                  this.messageService.add({ severity: 'error', summary: 'Rejected', detail: 'You have rejected' });
+                  break;
+                case ConfirmEventType.CANCEL:
+                    this.messageService.add({ severity: 'warn', summary: 'Cancelled', detail: 'You have cancelled' });
+                    break;
+            }
+        }
+    });
   }
 }

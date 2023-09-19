@@ -2,10 +2,16 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
+
+
 @Component({
   selector: 'app-create-disease',
   templateUrl: './create-disease.component.html',
   styleUrls: ['./create-disease.component.scss'],
+  providers: [MessageService]
+
 })
 export class CreateDiseaseComponent implements OnInit {
 
@@ -55,7 +61,7 @@ export class CreateDiseaseComponent implements OnInit {
   //response data
   bodyparts : any [] = [];
   parent_disease: any[] = [];
-  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute) {}
+  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,  private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
   ngOnInit(): void {
     this.http.get<any>(environment.apiUrl + "disease/create")
         .subscribe((response)=>{
@@ -154,6 +160,7 @@ export class CreateDiseaseComponent implements OnInit {
     if(this.arName=="" || this.enName==""){
       if(this.arName == "") this.errorMessage1 = "Please input the ar Name";
       if(this.enName == "") this.errorMessage2 = "Please input the en Name";
+      this.showWarn();
       this.crd.detectChanges();
       return;
     }
@@ -196,10 +203,10 @@ export class CreateDiseaseComponent implements OnInit {
     .post<any>(environment.apiUrl + 'disease/store', formData)
     .subscribe((response) => {
       if(response.result){ 
-        alert("success"); 
+        this.showSuccess(); 
         this.router.navigate(["disease/list"]);
       }
-      else {alert("error"); }
+      else {this.showError(); }
     });
   }
 
@@ -209,6 +216,7 @@ export class CreateDiseaseComponent implements OnInit {
       if(this.arName == "") this.errorMessage1 = "Please input the ar Name";
       if(this.enName == "") this.errorMessage2 = "Please input the en Name";
       this.crd.detectChanges();
+      this.showWarn();
       return;
     }
 
@@ -250,10 +258,21 @@ export class CreateDiseaseComponent implements OnInit {
     .post<any>(environment.apiUrl + 'disease/store', formData)
     .subscribe((response) => {
       if(response.result){ 
-        alert("success"); 
+        this.showSuccess();
         this.router.navigate(["disease/list"]);
       }
-      else {alert("error"); }
+      else {this.showError(); }
     });
+  }
+
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
   }
 }

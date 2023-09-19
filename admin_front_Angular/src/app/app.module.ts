@@ -19,6 +19,13 @@ import {MatTableModule} from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import {MatTabsModule} from '@angular/material/tabs';
+import { ButtonModule } from 'primeng/button';
+import { ToastModule } from 'primeng/toast';
+import { RippleModule } from 'primeng/ripple';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+
+
+
 
 import { FakeAPIService } from './_fake/fake-api.service';
 import { DoctorListComponent } from './pages/doctor/doctor-list/doctor-list.component';
@@ -115,6 +122,7 @@ import { EditRoleComponent } from './pages/role/edit-role/edit-role.component';
 import { EditUserComponent } from './pages/user/edit-user/edit-user.component';
 import { CreateDoctorBranchComponent } from './pages/doctor/create-doctor-branch/create-doctor-branch.component';
 import { EditDoctorBranchComponent } from './pages/doctor/edit-doctor-branch/edit-doctor-branch.component';
+
 // import { BodypartListModule } from './pages/bodyPart/bodypart-list/bodypart-list.module';
 // #fake-end#
 
@@ -161,6 +169,10 @@ function appInitializer(authService: AuthService) {
     ZeroConfigComponentComponent, MedicineListComponent, CreateMedicineComponent, MedicineCompanyListComponent, MedicineNameListComponent, MedicineCategoryListComponent, CreateTagComponent, TagListComponent, CreateSubCategoryComponent, SubCategoryListComponent, CreateQuestionAnswerComponent, QuestionAnswerListComponent, CreateCountryComponent, CountryListComponent, CityListComponent, CreateCityComponent, CreateAreaComponent, AreaListComponent, SpecialityListComponent, CreateSpecialityComponent, CreatePageComponent, PageListComponent, CreateFaqComponent, FaqListComponent, CreateRoleComponent, RoleListComponent, CreateUserComponent, UserListComponent, EditBodyPartComponent, EditDiseaseComponent, EditDoctorComponent, DoctorRateComponent, DoctorBranchComponent, EditPharmacyComponent, CreatePharmacyCompanyComponent, EditPharmacyCompanyComponent, EditLabServiceComponent, EditLabComponent, EditLabCompanyComponent, CreateLabCompanyComponent, CreateLabCategoryComponent, EditLabCategoryComponent, EditInsuranceCompanyComponent, EditHospitalComponent, EditHospitalTypeComponent, EditCenterComponent, EditMedicineComponent, EditMedicineCompanyComponent, CreateMedicineCompanyComponent, CreateMedicineNameComponent, EditMedicineNameComponent, EditMedicineCategoryComponent, CreateMedicineCategoryComponent, EditTagComponent, EditSubCategoryComponent, EditQuestionAnswerComponent, EditCountryComponent, EditCityComponent, EditAreaComponent, EditSpecialtyComponent, EditPageComponent, EditFaqComponent, EditRoleComponent, EditUserComponent,
   ],
   imports: [
+    ConfirmDialogModule,
+    ToastModule,
+    RippleModule,
+    ButtonModule,
     MatFormFieldModule,
     MatTabsModule,
     MatSelectModule,

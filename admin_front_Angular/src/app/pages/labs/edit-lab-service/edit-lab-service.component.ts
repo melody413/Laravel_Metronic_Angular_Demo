@@ -2,11 +2,15 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-edit-lab-service',
   templateUrl: './edit-lab-service.component.html',
-  styleUrls: ['./edit-lab-service.component.scss']
+  styleUrls: ['./edit-lab-service.component.scss'],
+  providers: [MessageService]
+
 })
 export class EditLabServiceComponent {
   //reference valuable
@@ -55,7 +59,7 @@ export class EditLabServiceComponent {
   lab_service_id: number ;
   lab_service : any;
   image_name: string;
-  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
+  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.lab_service_id = params['id'];
@@ -166,6 +170,7 @@ export class EditLabServiceComponent {
       if(this.arName == "") this.errorMessage1 = "Please input the ar Name";
       if(this.enName == "") this.errorMessage2 = "Please input the en Name";
       this.crd.detectChanges();
+      this.showWarn();
       return;
     }
     const formdata = new FormData();
@@ -205,11 +210,12 @@ export class EditLabServiceComponent {
     this.http.post<any>(environment.apiUrl + "lab_services/store", formdata)
             .subscribe((response)=>{
               if(response){
-                alert("success!");
                 this.router.navigate(["lab/labservice_list"]);
               }else{
-                alert("error");
+                this.showError();
               }
+            }, (error)=>{
+              this.showError();
             })
   }
   reset(){
@@ -262,5 +268,15 @@ export class EditLabServiceComponent {
     this.image_name = "";
   }
 
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
+  }
 }
 

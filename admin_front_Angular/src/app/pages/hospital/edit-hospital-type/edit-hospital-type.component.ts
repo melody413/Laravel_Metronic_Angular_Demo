@@ -3,11 +3,15 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { param } from 'jquery';
 import { environment } from 'src/environments/environment';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-edit-hospital-type',
   templateUrl: './edit-hospital-type.component.html',
-  styleUrls: ['./edit-hospital-type.component.scss']
+  styleUrls: ['./edit-hospital-type.component.scss'],
+  providers: [MessageService]
+
 })
 export class EditHospitalTypeComponent implements OnInit{
 
@@ -22,7 +26,7 @@ export class EditHospitalTypeComponent implements OnInit{
   hospital_type_id: number ;
   hospital_type: any;
 
-  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
+  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
 
   ngOnInit(): void {
     this.route.params.subscribe(
@@ -80,12 +84,24 @@ export class EditHospitalTypeComponent implements OnInit{
     this.http.post<any>(environment.apiUrl + "hospital_type/store", formData)
               .subscribe((response)=>{
                 if(response.id){
-                  alert("success!");
                   this.router.navigate(["/hospital/hospitaltype_list"]);
                 }else{
-                  alert("error");
+                  this.showError();
                 }
+              }, (error)=>{
+                this.showError();
               })
     
+  }
+
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
   }
 }

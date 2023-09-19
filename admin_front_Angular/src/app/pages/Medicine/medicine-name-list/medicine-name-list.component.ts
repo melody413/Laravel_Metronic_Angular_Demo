@@ -2,10 +2,16 @@ import { Component, OnInit, OnChanges, Input, ChangeDetectorRef, ViewChild, Afte
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { MatPaginator,PageEvent } from '@angular/material/paginator';
+import { Router } from '@angular/router';
+import { ConfirmationService, MessageService, ConfirmEventType } from 'primeng/api';
+
+
 @Component({
   selector: 'app-medicine-name-list',
   templateUrl: './medicine-name-list.component.html',
-  styleUrls: ['./medicine-name-list.component.scss']
+  styleUrls: ['./medicine-name-list.component.scss'],
+  providers: [ConfirmationService, MessageService]
+
 })
 export class MedicineNameListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -15,7 +21,7 @@ export class MedicineNameListComponent implements OnInit {
   search_index: string = "";
   
 
-  constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
+  constructor(private http: HttpClient, private cdr: ChangeDetectorRef, private confirmationService: ConfirmationService, private messageService: MessageService) {}
   ngOnInit(): void {
     this.http.get<any>(environment.apiUrl + "medicines_sc_name/list").
       subscribe((response) => {        
@@ -71,12 +77,35 @@ export class MedicineNameListComponent implements OnInit {
   }
 
   //delete the data
+
   delete(id: number){
-    if(confirm("Do you really delete the data?")){
-      this.http.get<any>(environment.apiUrl+ "medicines_sc_name/delete/" + id)
-        .subscribe((response)=>{
-          this.ngOnInit();
-        })
-    }
+    this.confirmationService.confirm({
+        message: 'Are you sure to delete?"',
+        header: 'Delete Confirmation',
+        icon: 'pi pi-info-circle',
+        accept: () => {
+          this.http.get<any>(environment.apiUrl+ "medicines_sc_name/delete/" + id)
+          .subscribe((response)=>{
+            if(response.flash_type == "success"){
+              this.messageService.add({ severity: 'info', summary: 'Confirmed', detail: 'Record deleted' });
+              this.ngOnInit();
+            }else{
+              this.messageService.add({ severity: 'error', summary: 'Error', detail: 'server Error' });
+            }
+          }, (error)=>{
+            this.messageService.add({ severity: 'error', summary: 'Error', detail: 'server Error' });
+          })
+        },
+        reject: (type:any) => {
+            switch (type) {
+                case ConfirmEventType.REJECT:
+                  this.messageService.add({ severity: 'error', summary: 'Rejected', detail: 'You have rejected' });
+                  break;
+                case ConfirmEventType.CANCEL:
+                    this.messageService.add({ severity: 'warn', summary: 'Cancelled', detail: 'You have cancelled' });
+                    break;
+            }
+        }
+    });
   }
 }

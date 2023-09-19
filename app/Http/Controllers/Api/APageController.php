@@ -127,7 +127,7 @@ class APageController extends BaseController
 
         $new = $row->replicateWithTranslations();
         $new->save();
-        return reponse(['flash_message' => trans('admin.delete_success_message') ,
+        return response(['flash_message' => trans('admin.delete_success_message') ,
         'flash_type' => 'success'], 200);
     }
 

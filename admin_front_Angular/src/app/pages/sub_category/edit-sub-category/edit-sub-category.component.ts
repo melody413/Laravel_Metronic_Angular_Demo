@@ -2,11 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-edit-sub-category',
   templateUrl: './edit-sub-category.component.html',
-  styleUrls: ['./edit-sub-category.component.scss']
+  styleUrls: ['./edit-sub-category.component.scss'],
+  providers: [MessageService]
+
 })
 export class EditSubCategoryComponent {
   //directive valuable
@@ -23,7 +27,7 @@ export class EditSubCategoryComponent {
   parent_categories: any[] = [];
   sub_category: any;
   sub_category_id: number;
-  constructor(private http: HttpClient, private cdr: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
+  constructor(private http: HttpClient, private route: ActivatedRoute, private cdr: ChangeDetectorRef,private router: Router,  private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
 
 
   toggleCheckbox_specialty(event : any){
@@ -77,6 +81,8 @@ export class EditSubCategoryComponent {
     if(this.ar_name === "" || this.en_name === "" ){
       if(this.ar_name === "") this.errorMessage1 = "*Please input the ar name";
       if(this.en_name === "") this.errorMessage2 = "*Please input the en name";
+      this.cdr.detectChanges();
+      this.showWarn();
       return;
     }
     const formData = new FormData();
@@ -99,13 +105,26 @@ export class EditSubCategoryComponent {
     this.http.post<any>(environment.apiUrl + "sub_category/store", formData)
         .subscribe((response)=>{
           if(response.id){
-            alert("success");
+            
             this.router.navigate(["/sub_category/list"]);
           }else{
-            alert("error");
+            this.showError();
           }
+        }, (error)=>{
+          this.showError();
         });
     
 
+  }
+
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
   }
 }

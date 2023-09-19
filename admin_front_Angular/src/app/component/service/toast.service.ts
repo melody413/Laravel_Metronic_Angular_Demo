@@ -8,17 +8,17 @@ import { Toast } from "./toast.interface";
   providedIn: "root"
 })
 export class ToastService {
-  subject: BehaviorSubject<Toast>;
-  toast$: Observable<Toast>;
+  subject: BehaviorSubject<Toast | null>;
+  toast$: Observable<Toast | null>;
 
-//   constructor() {
-//     this.subject = new BehaviorSubject<Toast>(null);
-//     this.toast$ = this.subject
-//       .asObservable()
-//       .pipe(filter((toast) => toast !== null));
-//   }
+  constructor() {
+    this.subject = new BehaviorSubject<Toast | null>(null); // Update the initialization
+    this.toast$ = this.subject
+      .asObservable()
+      .pipe(filter((toast) => toast !== null));
+  }
 
-//   show(type: ToastType, title?: string, body?: string, delay?: number) {
-//     this.subject.next({ type, title, body, delay });
-//   }
+  show(type: ToastType, title: string, body: string, delay: number) {
+    this.subject.next({ type, title, body, delay });
+  }
 }

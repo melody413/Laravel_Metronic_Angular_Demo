@@ -2,10 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
+
 @Component({
   selector: 'app-create-area',
   templateUrl: './create-area.component.html',
-  styleUrls: ['./create-area.component.scss']
+  styleUrls: ['./create-area.component.scss'],
+  providers: [MessageService]
+
 })
 export class CreateAreaComponent {
   arName: string = "";
@@ -24,6 +29,7 @@ export class CreateAreaComponent {
     private http: HttpClient, 
     private cdr: ChangeDetectorRef,
     private router: Router,
+    private messageService: MessageService, private primengConfig: PrimeNGConfig
   ) {}
 
   ngOnInit(): void {
@@ -57,6 +63,8 @@ export class CreateAreaComponent {
       if(this.enName === ""){
         this.errorMessage2 = "*please enther the en name";
       }
+      this.cdr.detectChanges();
+      this.showWarn();
       return;
     }
 
@@ -70,11 +78,21 @@ export class CreateAreaComponent {
     this.http.post<any>(environment.apiUrl+"area/store", formData)
         .subscribe((response)=>{
           if(response.id){
-            alert("success");
             this.router.navigate(["/area/list"]);
-          }else{
-            alert("error");
           }
+        }, (error)=>{
+          this.showError();
         });
+  }
+
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
   }
 }

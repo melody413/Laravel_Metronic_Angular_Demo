@@ -2,11 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
-
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 @Component({
   selector: 'app-edit-faq',
   templateUrl: './edit-faq.component.html',
-  styleUrls: ['./edit-faq.component.scss']
+  styleUrls: ['./edit-faq.component.scss'],
+  providers: [MessageService]
+
 })
 export class EditFaqComponent implements OnInit{
   //directive component
@@ -29,7 +32,7 @@ export class EditFaqComponent implements OnInit{
 faq: any;
 faq_id: number;
 image_name: string;
-constructor(private http: HttpClient, private cdr: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
+constructor(private http: HttpClient, private cdr: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
 ngOnInit(): void {
   this.route.params.subscribe(params => {
     this.faq_id = params['id'];
@@ -81,6 +84,7 @@ ngOnInit(): void {
     if(this.title_ar === "" || this.title_en === "" ){
       if(this.title_ar === "") this.errorMessage1 = "*Please input the ar name";
       if(this.title_en === "") this.errorMessage2 = "*Please input the en name";
+      this.showWarn();
       return;
     }
     const formData = new FormData();
@@ -102,14 +106,23 @@ ngOnInit(): void {
     this.http.post<any>(environment.apiUrl + "faqs/store", formData)
         .subscribe((response)=>{
           if(response.id){
-            alert("success");
             this.router.navigate(['/faq/list']);
-          }else{
-            alert("error");
           }
+        }, (error)=>{
+          this.showError();
         })
 
 
+  }
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
   }
 }
 

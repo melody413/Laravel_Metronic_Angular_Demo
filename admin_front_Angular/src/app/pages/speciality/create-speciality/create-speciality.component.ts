@@ -2,11 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
-
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 @Component({
   selector: 'app-create-speciality',
   templateUrl: './create-speciality.component.html',
-  styleUrls: ['./create-speciality.component.scss']
+  styleUrls: ['./create-speciality.component.scss'],
+  providers: [MessageService]
+
 })
 export class CreateSpecialityComponent {
 
@@ -18,13 +21,14 @@ export class CreateSpecialityComponent {
   errorMessage2: string= "";
 
 
-  constructor(private http: HttpClient, private cdr: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
+  constructor(private http: HttpClient, private cdr: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
 
 
   create(){
     if(this.name_ar === "" || this.name_en === "" ){
       if(this.name_ar === "") this.errorMessage1 = "*Please input the ar name";
       if(this.name_en === "") this.errorMessage2 = "*Please input the en name";
+      this.showWarn();
       return;
     }
     const formData = new FormData();
@@ -35,11 +39,10 @@ export class CreateSpecialityComponent {
     this.http.post<any>(environment.apiUrl + "specialty/store", formData)
               .subscribe((response)=>{
                 if(response.id){
-                  alert('success');
                   this.router.navigate(["/speciality/list"])
-                }else{
-                  alert('error');
                 }
+              }, (error)=>{
+                this.showError();
               })
     
   }
@@ -47,6 +50,7 @@ export class CreateSpecialityComponent {
     if(this.name_ar === "" || this.name_en === "" ){
       if(this.name_ar === "") this.errorMessage1 = "*Please input the ar name";
       if(this.name_en === "") this.errorMessage2 = "*Please input the en name";
+      this.showWarn();
       return;
     }
     const formData = new FormData();
@@ -57,14 +61,25 @@ export class CreateSpecialityComponent {
     this.http.post<any>(environment.apiUrl + "specialty/store", formData)
               .subscribe((response)=>{
                 if(response.id){
-                  alert('success');
-                }else{
-                  alert('error');
+                  this.showSuccess();
                 }
+              }, (error)=>{
+                this.showError();
               })
     
   }
   reset(){
   
+  }
+
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
   }
 }

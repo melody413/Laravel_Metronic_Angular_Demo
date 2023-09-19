@@ -2,11 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-edit-area',
   templateUrl: './edit-area.component.html',
-  styleUrls: ['./edit-area.component.scss']
+  styleUrls: ['./edit-area.component.scss'],
+  providers: [MessageService]
+
 })
 export class EditAreaComponent {
   arName: string = "";
@@ -25,7 +29,7 @@ export class EditAreaComponent {
   area: any;
   area_id: number;
 
-  constructor(private http: HttpClient, private cdr: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
+  constructor(private http: HttpClient, private cdr: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
 
 
   ngOnInit(): void {
@@ -68,13 +72,14 @@ export class EditAreaComponent {
   } 
 
   create(){
-    console.log("btn clicked!");
     if(this.arName === "" || this.enName === "" ){
       if(this.arName === "")
         this.errorMessage1 = "*please enter the ar name";
       if(this.enName === ""){
         this.errorMessage2 = "*please enther the en name";
       }
+      this.showWarn();
+      this.cdr.detectChanges();
       return;
     }
 
@@ -88,12 +93,22 @@ export class EditAreaComponent {
     this.http.post<any>(environment.apiUrl+"area/store", formData)
         .subscribe((response)=>{
           if(response.id){
-            alert("success");
             this.router.navigate(['/area/list']);
-          }else{
-            alert("error");
           }
+        }, (error)=>{
+          this.showError();
         });
+  }
+
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
   }
 }
 

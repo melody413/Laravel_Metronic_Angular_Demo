@@ -2,10 +2,15 @@ import { Component,  OnInit, ChangeDetectorRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
+
 @Component({
   selector: 'app-create-role',
   templateUrl: './create-role.component.html',
-  styleUrls: ['./create-role.component.scss']
+  styleUrls: ['./create-role.component.scss'],
+  providers: [MessageService]
+
 })
 export class CreateRoleComponent implements OnInit {
   //binding valuable
@@ -24,6 +29,7 @@ export class CreateRoleComponent implements OnInit {
     private http: HttpClient, 
     private cdr: ChangeDetectorRef,
     private router: Router,
+    private messageService: MessageService, private primengConfig: PrimeNGConfig
   ) {}
   ngOnInit(): void {
     this.http.get<any>(environment.apiUrl+"permission-config")
@@ -48,12 +54,13 @@ export class CreateRoleComponent implements OnInit {
   }
 
   create(){
-    if(this.name === "" || this.label === ""){
-      if(this.name === "")
+    if(this.name == "" || this.label == ""){
+      if(this.name == "")
         this.errorMessage1 = "*please enter the name";
-      if(this.label === ""){
+      if(this.label == ""){
         this.errorMessage2 = "*please enther the label";
       }
+      this.showWarn();
       return;
     }
     const formData =new FormData();
@@ -72,12 +79,20 @@ export class CreateRoleComponent implements OnInit {
     this.http.post<any>(environment.apiUrl + "role/store", formData)
         .subscribe((response)=>{
           if(response.id){
-            alert("success");
             this.router.navigate(['role/list']);
-          }else{
-            alert("error");
           }
+        }, (error)=>{
+          this.showError();
         });
   }
-
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
+  }
 }

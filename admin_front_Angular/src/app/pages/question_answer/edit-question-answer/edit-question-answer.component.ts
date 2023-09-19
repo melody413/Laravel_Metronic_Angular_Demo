@@ -2,11 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-edit-question-answer',
   templateUrl: './edit-question-answer.component.html',
-  styleUrls: ['./edit-question-answer.component.scss']
+  styleUrls: ['./edit-question-answer.component.scss'],
+  providers: [MessageService]
+
 })
 export class EditQuestionAnswerComponent {
   //directive valuable
@@ -29,7 +33,7 @@ export class EditQuestionAnswerComponent {
   qanswer: any;
   qanswer_id: number;
 
-  constructor(private http: HttpClient, private cdr: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
+  constructor(private http: HttpClient, private cdr: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.qanswer_id = params['id'];
@@ -90,7 +94,6 @@ export class EditQuestionAnswerComponent {
     } else {
       this.category.splice(index, 1);
     }
-    console.log(this.category.toString());
   }
   
   
@@ -99,6 +102,8 @@ export class EditQuestionAnswerComponent {
     if(this.question_ar === "" || this.question_en === "" ){
       if(this.question_ar === "") this.errorMessage1 = "*Please input the ar question";
       if(this.question_en === "") this.errorMessage2 = "*Please input the en question";
+      this.cdr.detectChanges();
+      this.showWarn();
       return;
     }
     const formData = new FormData();
@@ -128,15 +133,23 @@ export class EditQuestionAnswerComponent {
     this.http.post<any>(environment.apiUrl + "qanswer/store", formData)
         .subscribe((response)=>{
           if(response.id){
-            alert("success");
             this.router.navigate(["/question_answer/list"]);
-          }else{
-            alert("error");
           }
+        }, (error)=>{
+          this.showError();
         });
     
 
   }
-
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
+  }
 }
 

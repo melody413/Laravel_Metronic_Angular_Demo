@@ -2,11 +2,15 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-edit-hospital',
   templateUrl: './edit-hospital.component.html',
-  styleUrls: ['./edit-hospital.component.scss']
+  styleUrls: ['./edit-hospital.component.scss'],
+  providers: [MessageService]
+
 })
 export class EditHospitalComponent {
 
@@ -55,7 +59,7 @@ export class EditHospitalComponent {
   hospital: any;
   hospital_id : number;
   image_name: string = "";
-  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
+  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
 
   ngOnInit(): void{
     this.route.params.subscribe(params => {
@@ -206,7 +210,6 @@ export class EditHospitalComponent {
 
 
   edit(){
-    console.log("edit btn clicked");
     if(this.is_active == undefined){
       this.is_active = false;
     }
@@ -262,11 +265,24 @@ export class EditHospitalComponent {
     this.http.post<any>(environment.apiUrl + "hospital/store", formdata).subscribe(
       (response) => {
         this.router.navigate(['/hospital/list']);
+      }, (error)=>{
+        this.showError();
       }
     )
   }
   reset(){
 
+  }
+
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
   }
 }
 

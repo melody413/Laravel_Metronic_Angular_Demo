@@ -2,11 +2,15 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-create-center',
   templateUrl: './create-center.component.html',
-  styleUrls: ['./create-center.component.scss']
+  styleUrls: ['./create-center.component.scss'],
+  providers: [MessageService]
+
 })
 export class CreateCenterComponent {
   //reference valuables
@@ -44,7 +48,7 @@ export class CreateCenterComponent {
   areas: any[] = [];
   specialities: any[] = [];
 
-  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
+  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
 
   ngOnInit(): void{
     this.image_gallery_count = 0;
@@ -186,11 +190,12 @@ export class CreateCenterComponent {
     this.http.post<any>(environment.apiUrl + "center/store", formdata).subscribe(
       (response) => {
         if(response.id){
-          alert("success");
           this.router.navigate(['/center/list']);
         }else{
-          alert("error");
+          this.showError();
         }
+      }, (error)=>{
+        this.showError();
       }
     )
   }
@@ -240,14 +245,24 @@ export class CreateCenterComponent {
     this.http.post<any>(environment.apiUrl + "center/store", formdata).subscribe(
       (response) => {
         if(response.id){
-          alert("success");
           this.reset();
         }else{
-          alert("error");
+          this.showError();
         }
+      },(error)=>{
+        this.showError();
       }
     )
   }
   reset(){}
-
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
+  }
 }

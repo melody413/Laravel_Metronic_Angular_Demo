@@ -77,7 +77,7 @@
             <button
               class="btn btn-sm red"
               style="background-color: rgb(226, 17, 17); margin: 5px"
-              (click)="delete(data.id)"
+              (click)="delete(data[0])"
             >
               DELETE
             </button>
@@ -101,3 +101,5 @@
   <!-- end::Table container -->
 </div>
 <!-- begin::Body -->
+<p-toast></p-toast>
+<p-confirmDialog [style]="{ width: '50vw' }"></p-confirmDialog>

@@ -2,10 +2,15 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
+
 @Component({
   selector: 'app-create-lab',
   templateUrl: './create-lab.component.html',
-  styleUrls: ['./create-lab.component.scss']
+  styleUrls: ['./create-lab.component.scss'],
+  providers: [MessageService]
+
 })
 export class CreateLabComponent {
   desItems = [{ title: 'Description' }];
@@ -46,7 +51,7 @@ export class CreateLabComponent {
    cities: any[] = [];
    areas: any[] = [];
     lab_services : any[] = [];
-   constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
+   constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
  
    ngOnInit(): void{
      this.http.get<any>(environment.apiUrl + "lab/create")
@@ -135,6 +140,7 @@ export class CreateLabComponent {
       if(this.arName == "") this.errorMessage1 = "Please input the ar Name";
       if(this.enName == "") this.errorMessage2 = "Please input the en Name";
       this.crd.detectChanges();
+      this.showWarn();
       return;
     }
      if(this.is_active == undefined){
@@ -172,10 +178,9 @@ export class CreateLabComponent {
      this.http.post<any>(environment.apiUrl + "lab/store", formdata).subscribe(
        (response) => {
          if(response.next) {
-           alert("success");
            this.router.navigate(["lab/lab_list"]);
          }
-         else alert("error");
+         else this.showError();
        }
      )
    }
@@ -208,6 +213,7 @@ export class CreateLabComponent {
       if(this.arName == "") this.errorMessage1 = "Please input the ar Name";
       if(this.enName == "") this.errorMessage2 = "Please input the en Name";
       this.crd.detectChanges();
+      this.showWarn();
       return;
     }
      if(this.is_active == undefined){
@@ -246,12 +252,22 @@ export class CreateLabComponent {
      this.http.post<any>(environment.apiUrl + "lab/store", formdata).subscribe(
        (response) => {
          if(response.next) {
-           alert("success");
+           this.showSuccess();
            this.reset();
          }
-         else alert("error");
+         else this.showError();
        }
      )
    }
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
+  }
  }
  

@@ -2,11 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-edit-country',
   templateUrl: './edit-country.component.html',
-  styleUrls: ['./edit-country.component.scss']
+  styleUrls: ['./edit-country.component.scss'],
+  providers: [MessageService]
+
 })
 export class EditCountryComponent implements OnInit{
 
@@ -24,7 +28,7 @@ export class EditCountryComponent implements OnInit{
   country: any;
   country_id: number;
   image_name: string;
-  constructor(private http: HttpClient, private cdr: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
+  constructor(private http: HttpClient, private cdr: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.country_id = params['id'];
@@ -64,7 +68,6 @@ export class EditCountryComponent implements OnInit{
   }
 
   create(){
-    console.log("btn clicked!");
     if(this.arName === "" || this.enName === "" || this.countryCode === "" || this.currencyCode === ""){
       if(this.arName === "")
         this.errorMessage1 = "*please enter the ar name";
@@ -77,6 +80,8 @@ export class EditCountryComponent implements OnInit{
       if(this.currencyCode === ""){
         this.errorMessage4 = "*please enther the currency code";
       }
+      this.cdr.detectChanges();
+      this.showWarn();
       return;
     }
     const formData = new FormData();
@@ -89,10 +94,23 @@ export class EditCountryComponent implements OnInit{
     this.http.post<any>(environment.apiUrl+"country/store", formData)
         .subscribe((response)=>{
           if(response.id){
-            alert("success");
             this.router.navigate(["/country/list"]);
           }
+        }, (error)=>{
+          this.showError();
         });
+  }
+
+
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
   }
 }
 

@@ -2,11 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-create-tag',
   templateUrl: './create-tag.component.html',
-  styleUrls: ['./create-tag.component.scss']
+  styleUrls: ['./create-tag.component.scss'],
+  providers: [MessageService]
+
 })
 export class CreateTagComponent {
   //directive valuable
@@ -32,6 +36,7 @@ export class CreateTagComponent {
     private http: HttpClient, 
     private cdr: ChangeDetectorRef,
     private router: Router,
+    private messageService: MessageService, private primengConfig: PrimeNGConfig
   ) {}
 
   toggleCheckbox_specialty(event : any){
@@ -83,6 +88,8 @@ export class CreateTagComponent {
     if(this.name_ar === "" || this.name_en === "" ){
       if(this.name_ar === "") this.errorMessage1 = "*Please input the ar name";
       if(this.name_en === "") this.errorMessage2 = "*Please input the en name";
+      this.cdr.detectChanges();
+      this.showWarn();
       return;
     }
     const formData = new FormData();
@@ -108,9 +115,10 @@ export class CreateTagComponent {
     this.http.post<any>(environment.apiUrl + "tag/store", formData)
         .subscribe((response)=>{
           if(response.id){
-            alert("success");
             this.router.navigate(["/tag/list"]);
           }
+        }, (error)=>{
+          this.showError();
         });
     
 
@@ -120,6 +128,8 @@ export class CreateTagComponent {
     if(this.name_ar === "" || this.name_en === "" ){
       if(this.name_ar === "") this.errorMessage1 = "*Please input the ar name";
       if(this.name_en === "") this.errorMessage2 = "*Please input the en name";
+      this.cdr.detectChanges();
+      this.showWarn();
       return;
     }
     const formData = new FormData();
@@ -146,10 +156,22 @@ export class CreateTagComponent {
     this.http.post<any>(environment.apiUrl + "tag/store", formData)
         .subscribe((response)=>{
           if(response.id){
-            alert("success");
+            this.showSuccess();
           }
+        }, (error)=>{
+          this.showError();
         });
     
 
+  }
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
   }
 }

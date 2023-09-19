@@ -2,12 +2,15 @@ import { Component, OnInit, OnChanges, Input, ChangeDetectorRef, ViewChild, Afte
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { MatPaginator,PageEvent } from '@angular/material/paginator';
-
+import { ConfirmationService, MessageService, ConfirmEventType } from 'primeng/api';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-insurance-company-list',
   templateUrl: './insurance-company-list.component.html',
-  styleUrls: ['./insurance-company-list.component.scss']
+  styleUrls: ['./insurance-company-list.component.scss'],
+  providers: [ConfirmationService, MessageService]
+
 })
 export class InsuranceCompanyListComponent {
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -17,7 +20,7 @@ export class InsuranceCompanyListComponent {
   search_index: string = "";
   src: string = environment.url + "uploads/insurance_companies/";
   default_src: string =  environment.url + "/assets/frontend/images/general/doctorak_default_logo_img.png";
-  constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
+  constructor(private http: HttpClient, private cdr: ChangeDetectorRef, private confirmationService: ConfirmationService, private messageService: MessageService) {}
   ngOnInit(): void {
     this.http.get<any>(environment.apiUrl + "insurance_company/list").
       subscribe((response) => {        
@@ -75,9 +78,31 @@ export class InsuranceCompanyListComponent {
 
   //delete the data
   delete(id: number){
-    this.http.get<any>(environment.apiUrl+ "insurance_company/delete/" + id)
-      .subscribe((response)=>{
-        this.ngOnInit();
-      })
+    this.confirmationService.confirm({
+        message: 'Are you sure to delete?"',
+        header: 'Delete Confirmation',
+        icon: 'pi pi-info-circle',
+        accept: () => {
+          this.http.get<any>(environment.apiUrl+ "insurance_company/delete/" + id)
+          .subscribe((response)=>{
+            if(response.flash_type == "success"){
+              this.messageService.add({ severity: 'info', summary: 'Confirmed', detail: 'Record deleted' });
+              this.ngOnInit();
+            }else{
+              this.messageService.add({ severity: 'error', summary: 'Error', detail: 'server Error' });
+            }
+          })
+        },
+        reject: (type:any) => {
+            switch (type) {
+                case ConfirmEventType.REJECT:
+                  this.messageService.add({ severity: 'error', summary: 'Rejected', detail: 'You have rejected' });
+                  break;
+                case ConfirmEventType.CANCEL:
+                    this.messageService.add({ severity: 'warn', summary: 'Cancelled', detail: 'You have cancelled' });
+                    break;
+            }
+        }
+    });
   }
 }

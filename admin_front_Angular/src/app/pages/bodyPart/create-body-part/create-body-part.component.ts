@@ -2,11 +2,15 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
-  selector: 'app-create-body-part',
+  selector: 'app-create-body-part', 
   templateUrl: './create-body-part.component.html',
   styleUrls: ['./create-body-part.component.scss'],
+  providers: [MessageService]
+
 })
 
 export class CreateBodyPartComponent implements OnInit {
@@ -19,7 +23,7 @@ export class CreateBodyPartComponent implements OnInit {
   countryId: number = 1;
   parent: string = "";
   image: File;
-  isActive: boolean ;
+  isActive: boolean = true;
   hasError : boolean = false;
   errorMessage1 : String = "";
   errorMessage2 : String = "";
@@ -27,7 +31,7 @@ export class CreateBodyPartComponent implements OnInit {
 
   //response data
   bodyparts: any[] = [];
-  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router,) {}
+  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
 
   ngOnInit(): void {
     this.http.get<any>(environment.apiUrl+'bodypart/create')
@@ -35,6 +39,8 @@ export class CreateBodyPartComponent implements OnInit {
       this.bodyparts = response.body_parts;
       this.crd.detectChanges();
     })
+    this.primengConfig.ripple = true;
+
   }
 
   save() {
@@ -65,7 +71,6 @@ export class CreateBodyPartComponent implements OnInit {
   onFileSelected(event: any) {
     this.image = event.target.files[0];
     this.showImage();
-
   }
 
   showImage() {
@@ -80,10 +85,9 @@ export class CreateBodyPartComponent implements OnInit {
 
   //save btn 
   create(){
-    console.log("create btn clicked!~");
-
     //validation process
     if(this.arName == "" || this.enName == ""){
+      this.showWarn();
       if(this.arName == "") this.errorMessage1 = "Please input the ar Name";
       if(this.enName == "") this.errorMessage2 = "Please input the en Name";
       this.crd.detectChanges();
@@ -111,10 +115,10 @@ export class CreateBodyPartComponent implements OnInit {
     .post<any>(environment.apiUrl+'bodypart/store', formData)
     .subscribe((response) => {
       if(response.result['flash_type'] === "success"){
-        alert("Success!");
-        this.router.navigate(["/bodypart/list"]);
+        this.showSuccess();
+        this.router.navigate(["/bodypart/list"])
       }else{
-        alert("Error!");
+        this.showError();
       }
     });
   }
@@ -133,9 +137,9 @@ export class CreateBodyPartComponent implements OnInit {
     this.crd.detectChanges();
   }
   savenew(){
-    console.log("savenew btn clicked!~");
     //validation process
     if(this.arName == "" || this.enName == ""){
+      this.showWarn();
       if(this.arName == "") this.errorMessage1 = "Please input the ar Name";
       if(this.enName == "") this.errorMessage2 = "Please input the en Name";
       this.crd.detectChanges();
@@ -163,11 +167,22 @@ export class CreateBodyPartComponent implements OnInit {
     .post<any>(environment.apiUrl+'bodypart/store', formData)
     .subscribe((response) => {
       if(response.result['flash_type'] === "success"){
-        alert("Success!");
+        this.showSuccess();
         this.reset();
       }else{
-        alert("Error!");
+        this.showError();
       }
     });
+  }
+
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
   }
 }

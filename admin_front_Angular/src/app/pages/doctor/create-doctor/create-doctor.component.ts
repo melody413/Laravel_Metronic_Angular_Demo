@@ -2,15 +2,23 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 
+declare var google: any;
 @Component({
   selector: 'app-create-doctor',
   templateUrl: './create-doctor.component.html',
   styleUrls: ['./create-doctor.component.scss'],
+  providers: [MessageService]
+
 })
 export class CreateDoctorComponent implements OnInit{
 
   //reference valuable
+  options: any;
+  
+  overlays: any[];
   errorMessage1: string ="";
   errorMessage2: string ="";
 
@@ -70,7 +78,7 @@ export class CreateDoctorComponent implements OnInit{
 
   specialty_tags: any[] = [];
   specialty_subs: any[] = [];
-  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
+  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
 
   ngOnInit(): void{
     this.image_gallery_count = 0;
@@ -80,6 +88,11 @@ export class CreateDoctorComponent implements OnInit{
           this.countries = Object.entries(response.country);
           this.crd.detectChanges();
         })
+
+      this.options = {
+        center: { lat: 22.72105, lng: 88.373459 },
+        zoom: 12,
+      };
   }
 
   onInputChange1(event : any){
@@ -213,6 +226,7 @@ updateTag_category(){
     if(this.arName == "" || this.enName == ""){
       if(this.arName == "") this.errorMessage1 = "Please input the ar Name";
       if(this.enName == "") this.errorMessage2 = "Please input the en Name";
+      this.showWarn();
       this.crd.detectChanges();
       return;
     }
@@ -295,10 +309,10 @@ updateTag_category(){
     this.http.post<any>(environment.apiUrl + "doctor/store", formdata).subscribe(
       (response) => {
         if(response.id) {
-          alert("success");
+          this.showSuccess();
           this.router.navigate(["doctor/list"]);
         }
-        else alert("error: input the parameter correctly! name, phone number, address, title");
+        else this.showError();
       }
     )
   }
@@ -310,6 +324,7 @@ updateTag_category(){
       if(this.arName == "") this.errorMessage1 = "Please input the ar Name";
       if(this.enName == "") this.errorMessage2 = "Please input the en Name";
       this.crd.detectChanges();
+      this.showWarn();
       return;
     }
     if(this.is_active == undefined){
@@ -373,14 +388,26 @@ updateTag_category(){
     this.http.post<any>(environment.apiUrl + "doctor/store", formdata).subscribe(
       (response) => {
         if(response.id) {
-          alert("success");
+          this.showSuccess();
           this.router.navigate(["doctor/list"]);
         }
-        else alert("error");
+        else this.showError();
       },
       (error)=>{
-        alert("error: input the parameter correctly!");
+        this.showError();
       }
     )
+  }
+
+  
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
   }
 }

@@ -132,7 +132,7 @@ class ADoctorBranchController extends BaseController
         $doctorId = $row->doctor_id;
         $row->delete();
 
-        return reponse(['flash_message' => trans('admin.delete_success_message') ,
+        return response(['flash_message' => trans('admin.delete_success_message') ,
         'flash_type' => 'success'], 200);
     }
 

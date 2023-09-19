@@ -2,11 +2,15 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-edit-lab-category',
   templateUrl: './edit-lab-category.component.html',
-  styleUrls: ['./edit-lab-category.component.scss']
+  styleUrls: ['./edit-lab-category.component.scss'],
+  providers: [MessageService]
+
 })
 export class EditLabCategoryComponent {
   desItems = [{ title: 'Description' }];
@@ -26,7 +30,7 @@ export class EditLabCategoryComponent {
    category_id: number;
    lab_category: any;
    image_name: string = "";
-   constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
+   constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
 
     ngOnInit(): void {
       this.route.params.subscribe(params => {
@@ -112,6 +116,7 @@ export class EditLabCategoryComponent {
       if(this.arName == "") this.errorMessage1 = "Please input the ar Name";
       if(this.enName == "") this.errorMessage2 = "Please input the en Name";
       this.crd.detectChanges();
+      this.showWarn();
       return;
     }
     if(this.is_active == undefined){
@@ -131,12 +136,22 @@ export class EditLabCategoryComponent {
     this.http.post<any>(environment.apiUrl + "lab_category/store", formdata).subscribe(
       (response) => {
         if(response.id) {
-          alert("success");
           this.router.navigate(["lab/labCategory_list"]);
         }
-        else alert("error");
+        else this.showError();
+      }, (error)=>{
+        this.showError();
       }
     )
   }
-
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
+  }
 }

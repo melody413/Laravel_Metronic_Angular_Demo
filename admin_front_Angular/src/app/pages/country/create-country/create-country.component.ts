@@ -2,11 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-create-country',
   templateUrl: './create-country.component.html',
-  styleUrls: ['./create-country.component.scss']
+  styleUrls: ['./create-country.component.scss'],
+  providers: [MessageService]
+
 })
 export class CreateCountryComponent {
 
@@ -21,11 +25,8 @@ export class CreateCountryComponent {
   countryCode: string = "";
   currencyCode: string = "";
 
-  constructor(
-    private http: HttpClient, 
-    private cdr: ChangeDetectorRef,
-    private router: Router,
-  ) {}
+  constructor(private http: HttpClient, private cdr: ChangeDetectorRef,private router: Router, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
+
 
 
   //doctor image process
@@ -46,7 +47,6 @@ export class CreateCountryComponent {
   }
 
   create(){
-    console.log("btn clicked!");
     if(this.arName === "" || this.enName === "" || this.countryCode === "" || this.currencyCode === ""){
       if(this.arName === "")
         this.errorMessage1 = "*please enter the ar name";
@@ -59,6 +59,7 @@ export class CreateCountryComponent {
       if(this.currencyCode === ""){
         this.errorMessage4 = "*please enther the currency code";
       }
+      this.showWarn();
       return;
     }
     const formData = new FormData();
@@ -69,7 +70,21 @@ export class CreateCountryComponent {
     formData.append("image", this.image);
     this.http.post<any>(environment.apiUrl+"country/store", formData)
         .subscribe((response)=>{
-          console.log(response);
+          this.showSuccess();
+          this.router.navigate(["country/list"]);
+        }, (error)=>{
+          this.showError();
         });
+  }
+
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
   }
 }

@@ -2,11 +2,15 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-create-pharmacy-company',
   templateUrl: './create-pharmacy-company.component.html',
-  styleUrls: ['./create-pharmacy-company.component.scss']
+  styleUrls: ['./create-pharmacy-company.component.scss'],
+  providers: [MessageService]
+
 })
 export class CreatePharmacyCompanyComponent {
 
@@ -25,7 +29,7 @@ export class CreatePharmacyCompanyComponent {
    enDescription: string = "";
    image :File;
    is_active : boolean = true;
-   constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
+   constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
    onInputChange1(event : any){
     
     const string = event;
@@ -76,6 +80,7 @@ export class CreatePharmacyCompanyComponent {
       if(this.arName == "") this.errorMessage1 = "Please input the ar Name";
       if(this.enName == "") this.errorMessage2 = "Please input the en Name";
       this.crd.detectChanges();
+      this.showWarn();
       return;
     }
     if(this.is_active == undefined){
@@ -96,10 +101,10 @@ export class CreatePharmacyCompanyComponent {
     this.http.post<any>(environment.apiUrl + "pharmacy_company/store", formdata).subscribe(
       (response) => {
         if(response.next) {
-          alert("success");
+          this.showSuccess();
           this.router.navigate(["pharmecy/companylist"]);
         }
-        else alert("error");
+        else this.showError();
       }
     )
   }
@@ -120,6 +125,7 @@ export class CreatePharmacyCompanyComponent {
       if(this.arName == "") this.errorMessage1 = "Please input the ar Name";
       if(this.enName == "") this.errorMessage2 = "Please input the en Name";
       this.crd.detectChanges();
+      this.showWarn();
       return;
     }
     if(this.is_active == undefined){
@@ -139,12 +145,21 @@ export class CreatePharmacyCompanyComponent {
     this.http.post<any>(environment.apiUrl + "pharmecy_company/store", formdata).subscribe(
       (response) => {
         if(response.next) {
-          alert("success");
+          this.showSuccess();
           this.reset();
         }
-        else alert("error");
+        else this.showError();
       }
     )
   }
-
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
+  }
 }

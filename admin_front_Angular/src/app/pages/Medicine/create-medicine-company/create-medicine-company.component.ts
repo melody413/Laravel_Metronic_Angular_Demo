@@ -2,11 +2,15 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-create-medicine-company',
   templateUrl: './create-medicine-company.component.html',
-  styleUrls: ['./create-medicine-company.component.scss']
+  styleUrls: ['./create-medicine-company.component.scss'],
+  providers: [MessageService]
+
 })
 export class CreateMedicineCompanyComponent {
    //reference valuable
@@ -36,7 +40,7 @@ export class CreateMedicineCompanyComponent {
    cities: any[] = [];
    areas: any[] = [];
  
-   constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
+   constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
  
    ngOnInit(): void{
      this.http.get<any>(environment.apiUrl + "pharmacy/create")
@@ -115,6 +119,7 @@ export class CreateMedicineCompanyComponent {
       if(this.arName == "") this.errorMessage1 = "Please input the ar Name";
       if(this.enName == "") this.errorMessage2 = "Please input the en Name";
       this.crd.detectChanges();
+      this.showWarn();
       return;
     }
      if(this.is_active == undefined){
@@ -141,10 +146,11 @@ export class CreateMedicineCompanyComponent {
      this.http.post<any>(environment.apiUrl + "medicines_company/store", formdata).subscribe(
        (response) => {
          if(response.id) {
-           alert("success");
            this.router.navigate(["medicines/company_list"]);
          }
-         else alert("error");
+         else this.showError();
+       }, (error)=>{
+        this.showError();
        }
      )
    }
@@ -156,6 +162,7 @@ export class CreateMedicineCompanyComponent {
       if(this.arName == "") this.errorMessage1 = "Please input the ar Name";
       if(this.enName == "") this.errorMessage2 = "Please input the en Name";
       this.crd.detectChanges();
+      this.showWarn();
       return;
     }
      if(this.is_active == undefined){
@@ -183,14 +190,24 @@ export class CreateMedicineCompanyComponent {
      this.http.post<any>(environment.apiUrl + "medicines_company/store", formdata).subscribe(
        (response) => {
          if(response.id) {
-           alert("success");
            this.reset();
          }
-         else alert("error");
+         else this.showError();
        },
        (error)=>{
-         alert("error: input the parameter correctly!");
+         this.showError();
        }
      )
    }
+
+   showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
+  }
  }

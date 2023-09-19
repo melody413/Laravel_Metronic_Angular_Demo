@@ -2,11 +2,14 @@ import { Component,  OnInit, ChangeDetectorRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 @Component({
   selector: 'app-edit-role',
   templateUrl: './edit-role.component.html',
-  styleUrls: ['./edit-role.component.scss']
+  styleUrls: ['./edit-role.component.scss'],
+  providers: [MessageService]
+
 })
 export class EditRoleComponent {
   //binding valuable
@@ -25,7 +28,7 @@ export class EditRoleComponent {
   role: any;
   role_id: number;
   permissions: string[] = [];
-  constructor(private http: HttpClient, private cdr: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
+  constructor(private http: HttpClient, private cdr: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -71,6 +74,7 @@ export class EditRoleComponent {
       if(this.label === ""){
         this.errorMessage2 = "*please enther the label";
       }
+      this.showWarn();
       return;
     }
     const formData =new FormData();
@@ -96,10 +100,19 @@ export class EditRoleComponent {
         .subscribe((response)=>{
           if(response.id){
             this.router.navigate(['role/list']);
-          }else{
-            alert("error");
           }
+        }, (error)=>{
+          this.showError();
         });
   }
-
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
+  }
 }

@@ -2,11 +2,16 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
+
 
 @Component({
   selector: 'app-create-doctor-branch',
   templateUrl: './create-doctor-branch.component.html',
-  styleUrls: ['./create-doctor-branch.component.scss']
+  styleUrls: ['./create-doctor-branch.component.scss'],
+  providers: [MessageService]
+
 })
 export class CreateDoctorBranchComponent implements OnInit{
   //reference valuable
@@ -37,7 +42,7 @@ export class CreateDoctorBranchComponent implements OnInit{
   areas: any[] = [];
 
   doctor_id: number;
-  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
+  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
 
   ngOnInit(): void{
     this.route.params.subscribe(params => {
@@ -50,7 +55,6 @@ export class CreateDoctorBranchComponent implements OnInit{
           // this.cities = Object.entries(response.city);
           this.areas = Object.entries(response.area);
           this.crd.detectChanges();
-          console.log(this.specialities);
         })
   }
 
@@ -98,10 +102,14 @@ export class CreateDoctorBranchComponent implements OnInit{
     this.http.post<any>(environment.apiUrl + "doctor/branch/store", formdata).subscribe(
       (response) => {
         if(response.id) {
-          alert("success");
+          this.showSuccess();
           this.router.navigate(["doctor/list"]);
         }
-        else alert("error");
+        else this.showError();
+      }
+      ,
+      (error)=>{
+        this.showWarn();
       }
     )
   }
@@ -136,15 +144,25 @@ export class CreateDoctorBranchComponent implements OnInit{
     this.http.post<any>(environment.apiUrl + "doctor/branch/store", formdata).subscribe(
       (response) => {
         if(response.id) {
-          alert("success");
+          this.showSuccess();
           this.router.navigate(["doctor/list"]);
         }
-        else alert("error");
+        else this.showError();
       },
       (error)=>{
-        alert("error: input the parameter correctly!");
+        this.showWarn();
       }
     )
+  }
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
   }
 }
 

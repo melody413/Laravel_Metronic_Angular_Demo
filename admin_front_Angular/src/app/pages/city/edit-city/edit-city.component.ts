@@ -2,11 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-edit-city',
   templateUrl: './edit-city.component.html',
-  styleUrls: ['./edit-city.component.scss']
+  styleUrls: ['./edit-city.component.scss'],
+  providers: [MessageService]
+
 })
 export class EditCityComponent {
   arName: string = "";
@@ -23,7 +27,7 @@ export class EditCityComponent {
   city: any;
   city_id: number;
 
-  constructor(private http: HttpClient, private cdr: ChangeDetectorRef,private router: Router, private route: ActivatedRoute,) {}
+  constructor(private http: HttpClient, private cdr: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
 
 
   ngOnInit(): void {
@@ -55,6 +59,8 @@ export class EditCityComponent {
       if(this.enName === ""){
         this.errorMessage2 = "*please enther the en name";
       }
+      this.showWarn();
+      this.cdr.detectChanges();
       return;
     }
 
@@ -68,13 +74,21 @@ export class EditCityComponent {
     this.http.post<any>(environment.apiUrl+"city/store", formData)
         .subscribe((response)=>{
           if(response.id){
-            alert("success");
             this.router.navigate(["/city/list"]);
-          }else{
-            alert("error");
           }
+        }, (error)=>{
+          this.showError();
         });
   }
-
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
+  }
 }
 

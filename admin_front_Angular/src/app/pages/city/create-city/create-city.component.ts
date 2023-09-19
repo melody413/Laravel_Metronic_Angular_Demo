@@ -2,11 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { MessageService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-create-city',
   templateUrl: './create-city.component.html',
-  styleUrls: ['./create-city.component.scss']
+  styleUrls: ['./create-city.component.scss'],
+  providers: [MessageService]
+
 })
 export class CreateCityComponent implements OnInit{
   arName: string = "";
@@ -20,11 +24,8 @@ export class CreateCityComponent implements OnInit{
   //response data
   response_countries : any[] = [];
 
-  constructor(
-    private http: HttpClient, 
-    private cdr: ChangeDetectorRef,
-    private router: Router,
-  ) {}
+  constructor(private http: HttpClient, private cdr: ChangeDetectorRef,private router: Router,private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
+
 
   ngOnInit(): void {
     this.http.get<any>(environment.apiUrl + "country/getall")
@@ -43,6 +44,8 @@ export class CreateCityComponent implements OnInit{
       if(this.enName === ""){
         this.errorMessage2 = "*please enther the en name";
       }
+      this.cdr.detectChanges();
+      this.showWarn();
       return;
     }
 
@@ -55,12 +58,20 @@ export class CreateCityComponent implements OnInit{
     this.http.post<any>(environment.apiUrl+"city/store", formData)
         .subscribe((response)=>{
           if(response.id){
-            alert("success");
             this.router.navigate(["/city/list"]);
-          }else{
-            alert("error");
           }
+        }, (error)=>{
+          this.showError();
         });
   }
-
+  showWarn() {
+    this.messageService.clear();
+    this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please input the parameter correctly!' });
+  }
+  showError() {
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Inserting Data, Error!' });
+  }
+  showSuccess() {
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Success' });
+  }
 }
