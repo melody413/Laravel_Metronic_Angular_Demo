@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { PrimeNGConfig } from 'primeng/api';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-edit-insurance-company',
@@ -44,6 +45,7 @@ export class EditInsuranceCompanyComponent {
    enSubCats: string;
    arSubCats: string;
    parent_branch_id: number = -1; 
+   mapURL: any;
    //reponse data
    parent_branches: any[] = [];
    countries: any[] = [];
@@ -53,7 +55,7 @@ export class EditInsuranceCompanyComponent {
    insurance_co_id: number ;
    insurance_co : any ;
    image_name: string;
-   constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
+   constructor(private sanitizer: DomSanitizer, private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
  
    ngOnInit(): void{
     this.route.params.subscribe((params)=>{
@@ -94,11 +96,18 @@ export class EditInsuranceCompanyComponent {
             })
             this.area = this.insurance_co.area_id;
             this.lat_lng = this.insurance_co.lat_lng;
+            const url = `http://maps.google.com/maps?q=${this.lat_lng}&z=16&output=embed`;
+            this.mapURL = this.sanitizer.bypassSecurityTrustResourceUrl(url);
             this.is_active = this.insurance_co.is_active == "1" ? true: false;
 
           })
    }
- 
+   onChange_map(event: any){
+    const lat_lang = event;
+    const url = `http://maps.google.com/maps?q=${lat_lang}&z=16&output=embed`;
+    this.mapURL = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    this.crd.detectChanges();
+  }
 
    
    onInputChange1(event : any){
@@ -192,7 +201,7 @@ export class EditInsuranceCompanyComponent {
      formdata.append("ar[address]", this.arAddress);
      formdata.append("en[address]", this.enAddress);
 
-     formdata.append("image", this.image);
+     if(this.image) formdata.append("image", this.image);
 
      formdata.append("country_id", this.country_id.toString());
      formdata.append("city_id", this.city.toString());

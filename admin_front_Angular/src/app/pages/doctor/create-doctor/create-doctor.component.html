@@ -604,7 +604,7 @@
                 name="country_id"
                 (change)="onCountryChange()"
               >
-                <option value="-1">select the country</option>
+                <option value="0">select the country</option>
                 <option
                   *ngFor="let country of countries; let i = index"
                   [value]="country[0]"
@@ -621,7 +621,7 @@
                 class="form-control form-control-solid"
                 (change)="onCityChange()"
               >
-                <option value="-1">Select the City</option>
+                <option value="0">Select the City</option>
                 <option
                   *ngFor="let item of cities; let i = index"
                   [value]="item.city_id"
@@ -637,7 +637,7 @@
                 name="adress_area"
                 class="form-control form-control-solid"
               >
-                <option value="-1">Selecte the area</option>
+                <option value="0">Selecte the area</option>
                 <option
                   *ngFor="let item of areas; let i = index"
                   [value]="item.area_id"
@@ -655,6 +655,7 @@
                 class="border-bottom"
                 style="margin-top: 16px; padding-bottom: 50px"
               >
+                <iframe [src]="mapURL" height="450" width="100%"></iframe>
                 <div class="d-flex gap-5 align-items-center">
                   <h4>LatLang:</h4>
                   <div class="border-bottom">
@@ -662,7 +663,7 @@
                       [(ngModel)]="lat_lng"
                       class="form-control"
                       name="latlang"
-                      value="29.971142, 31.242678"
+                      (ngModelChange)="onChange_map($event)"
                     />
                   </div>
                 </div>

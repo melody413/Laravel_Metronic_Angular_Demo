@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { PrimeNGConfig } from 'primeng/api';
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 @Component({
@@ -37,7 +38,6 @@ export class CreatePharmacyComponent {
    instagram : string = "";
    youtube: string = "";
    website: string = "";
-
    phone: string = "";
    open_hours: string ;
    country_id: number = -1;
@@ -50,15 +50,18 @@ export class CreatePharmacyComponent {
    enSubCats: string;
    arSubCats: string;
    Pharmacy_co_id: number = -1; 
+   mapURL : any;
+
    //reponse data
    pharmacyCos: any[] = [];
    countries: any[] = [];
    cities: any[] = [];
    areas: any[] = [];
  
-   constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
+   constructor(private sanitizer: DomSanitizer, private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
  
    ngOnInit(): void{
+    this.mapURL = this.sanitizer.bypassSecurityTrustResourceUrl('http://maps.google.com/maps?q=25.3076008, 51.4803216&z=16&output=embed');
      this.http.get<any>(environment.apiUrl + "pharmacy/create")
          .subscribe((response)=>{
           this.pharmacyCos = response.pharmacyCo;
@@ -89,6 +92,14 @@ export class CreatePharmacyComponent {
     }
     this.crd.detectChanges(); // Manually trigger change detection
   }
+
+  onChange_map(event: any){
+    const lat_lang = event;
+    const url = `http://maps.google.com/maps?q=${lat_lang}&z=16&output=embed`;
+    this.mapURL = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    this.crd.detectChanges();
+  }
+
    onCountryChange() {
      this.http.get<any>(environment.apiUrl + "country/getAllCity/" + this.country_id)
          .subscribe((response)=>{

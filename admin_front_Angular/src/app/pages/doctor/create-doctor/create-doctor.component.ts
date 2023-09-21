@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { PrimeNGConfig } from 'primeng/api';
+import { DomSanitizer } from '@angular/platform-browser';
 
 declare var google: any;
 @Component({
@@ -59,9 +60,9 @@ export class CreateDoctorComponent implements OnInit{
   phone: string = "";
   arAddress: string = "";
   enAddress: string = "";
-  country_id: number = -1;
-  city: number = -1;
-  area: number = -1;
+  country_id: number = 0;
+  city: number = 0;
+  area: number = 0;
   lat_lng: string = "";
   maplink: string = "";
   branch: string = "1";
@@ -69,6 +70,8 @@ export class CreateDoctorComponent implements OnInit{
   artags: string = "";
   enSubCats: string = "";
   arSubCats: string = "";
+
+  mapURL: any;
 
   //reponse data
   specialities: any[] = [];
@@ -78,9 +81,12 @@ export class CreateDoctorComponent implements OnInit{
 
   specialty_tags: any[] = [];
   specialty_subs: any[] = [];
-  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
+  constructor(private sanitizer: DomSanitizer, private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private messageService: MessageService, private primengConfig: PrimeNGConfig) {
+  }
 
   ngOnInit(): void{
+    this.mapURL = this.sanitizer.bypassSecurityTrustResourceUrl('http://maps.google.com/maps?q=25.3076008, 51.4803216&z=16&output=embed');
+
     this.image_gallery_count = 0;
     this.http.get<any>(environment.apiUrl + "doctor/create")
         .subscribe((response)=>{
@@ -89,10 +95,6 @@ export class CreateDoctorComponent implements OnInit{
           this.crd.detectChanges();
         })
 
-      this.options = {
-        center: { lat: 22.72105, lng: 88.373459 },
-        zoom: 12,
-      };
   }
 
   onInputChange1(event : any){
@@ -113,6 +115,13 @@ export class CreateDoctorComponent implements OnInit{
       this.errorMessage2 = "*Please input the en Name";
     }
     this.crd.detectChanges(); // Manually trigger change detection
+  }
+
+  onChange_map(event: any){
+    const lat_lang = event;
+    const url = `http://maps.google.com/maps?q=${lat_lang}&z=16&output=embed`;
+    this.mapURL = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    this.crd.detectChanges();
   }
   onCountryChange() {
     this.http.get<any>(environment.apiUrl + "country/getAllCity/" + this.country_id)
@@ -283,10 +292,6 @@ updateTag_category(){
     formdata.append("phone", this.phone);
     formdata.append("map_link", this.maplink);
     formdata.append("branch", this.branch);
-    formdata.append("tags_en", "");
-    formdata.append("sub_cats_en", "");
-    formdata.append("tags_ar", "");
-    formdata.append("sub_cats_ar", "");
     formdata.append("is_active", this.is_active? "1" : "0");
     formdata.append("is_reserve", this.is_reserve? "1" : "0");
     for(let i = 0 ; i < this.sepcialty_tag.length ; i++){
@@ -313,6 +318,8 @@ updateTag_category(){
           this.router.navigate(["doctor/list"]);
         }
         else this.showError();
+      }, (error)=>{
+        this.showWarn();
       }
     )
   }
@@ -354,6 +361,10 @@ updateTag_category(){
         formdata.append("specialties[]", this.specialty[i].toString());
       }
     }
+    formdata.append("tags_en", this.sepcialty_tag.toString());
+    formdata.append("sub_cats_en", this.specialty_subc.toString());
+    formdata.append("tags_ar", this.sepcialty_tag.toString());
+    formdata.append("sub_cats_ar", this.specialty_subc.toString());
     formdata.append("facebook", this.facebook);
     formdata.append("twitter", this.twitter);
     formdata.append("instagram", this.instagram);
@@ -379,10 +390,6 @@ updateTag_category(){
     formdata.append("phone", this.phone);
     formdata.append("map_link", this.maplink);
     formdata.append("branch", this.branch);
-    formdata.append("tags_en", "");
-    formdata.append("sub_cats_en", "");
-    formdata.append("tags_ar", "");
-    formdata.append("sub_cats_ar", "");
     formdata.append("is_active", this.is_active? "1" : "0");
     formdata.append("is_reserve", this.is_reserve? "1" : "0");
     this.http.post<any>(environment.apiUrl + "doctor/store", formdata).subscribe(
@@ -394,7 +401,7 @@ updateTag_category(){
         else this.showError();
       },
       (error)=>{
-        this.showError();
+        this.showWarn();
       }
     )
   }

@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { PrimeNGConfig } from 'primeng/api';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-edit-pharmacy',
@@ -53,13 +54,14 @@ export class EditPharmacyComponent {
   image_name: string="";
   pharmacy_id: number;
   pharmacy: any;
+  mapURL: any;
   //reponse data
   pharmacyCos: any[] = [];
   countries: any[] = [];
   cities: any[] = [];
   areas: any[] = [];
 
-  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
+  constructor(private sanitizer: DomSanitizer, private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
 
   ngOnInit(): void{
     this.route.params.subscribe(params => {
@@ -109,13 +111,20 @@ export class EditPharmacyComponent {
           })
           this.area = this.pharmacy.area_id;
           this.lat_lng = this.pharmacy.lat_lng;
+          const url = `http://maps.google.com/maps?q=${this.lat_lng}&z=16&output=embed`;
+          this.mapURL = this.sanitizer.bypassSecurityTrustResourceUrl(url);
           this.is_active = this.pharmacy.is_active == "1" ? true: false;
           this.crd.detectChanges();
 
         })
 
   }
-
+  onChange_map(event: any){
+    const lat_lang = event;
+    const url = `http://maps.google.com/maps?q=${lat_lang}&z=16&output=embed`;
+    this.mapURL = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    this.crd.detectChanges();
+  }
 
   onInputChange1(event : any){
     const string = event;

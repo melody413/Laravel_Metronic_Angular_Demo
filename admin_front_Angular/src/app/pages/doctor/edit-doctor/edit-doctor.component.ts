@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { MessageService } from 'primeng/api';
 import { PrimeNGConfig } from 'primeng/api';
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 @Component({
@@ -62,7 +63,7 @@ export class EditDoctorComponent {
   artags: string;
   enSubCats: string;
   arSubCats: string;
-
+  mapURL: any;
   //reponse data
   specialities: any[] = [];
   countries: any[] = [];
@@ -75,9 +76,10 @@ export class EditDoctorComponent {
   doctor: any;
   image_name: string;
   workdays: string;
-  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
+  constructor(private sanitizer: DomSanitizer, private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
 
   ngOnInit(): void{
+
     this.route.params.subscribe(params => {
       this.doctor_id = params['id'];
     });
@@ -92,12 +94,12 @@ export class EditDoctorComponent {
           this.updateTag_category();
           this.arName = this.doctor['translations'][0]['name'];
           this.enName = this.doctor['translations'][1]['name'];
-          this.arExcerpt = this.doctor['translations'][0]['excerpt'];
-          this.enExcerpt = this.doctor['translations'][1]['excerpt'];
-          this.arDescription = this.doctor['translations'][0]['description'];
-          this.enDescription = this.doctor['translations'][1]['description'];
-          this.arTitle = this.doctor['translations'][0]['title'];
-          this.enTitle = this.doctor['translations'][1]['title'];
+          this.arExcerpt = this.doctor['translations'][0]['excerpt'] ? this.doctor['translations'][0]['excerpt']: "";
+          this.enExcerpt = this.doctor['translations'][1]['excerpt'] ? this.doctor['translations'][1]['excerpt']: "";
+          this.arDescription = this.doctor['translations'][0]['description'] ? this.doctor['translations'][0]['description']: "";
+          this.enDescription = this.doctor['translations'][1]['description'] ? this.doctor['translations'][1]['description']: "";
+          this.arTitle = this.doctor['translations'][0]['title'] ? this.doctor['translations'][0]['title'] : "";
+          this.enTitle = this.doctor['translations'][1]['title'] ? this.doctor['translations'][1]['title'] : "";
           if(this.doctor['image']) this.image_name = environment.url + "uploads/doctors/" + this.doctor['image'];
           this.gender = this.doctor.gender === "male"? 0 : 1;
           this.specialities = response.speciality;
@@ -111,11 +113,11 @@ export class EditDoctorComponent {
           this.hospital = response.hospitals.toString();
           this.center= response.centers.toString();
           this.insuranceCompany = response.insuranceCompanies.toString();
-          this.facebook = this.doctor.facebook;
-          this.twitter = this.doctor.twitter;
-          this.instagram = this.doctor.instagram;
-          this.website = this.doctor.website;
-          this.youtube = this.doctor.youtube;
+          this.facebook = this.doctor.facebook? this.doctor.facebook : "";
+          this.twitter = this.doctor.twitter ? this.doctor.twitter : "";
+          this.instagram = this.doctor.instagram ? this.doctor.instagram: "";
+          this.website = this.doctor.website ? this.doctor.website: "";
+          this.youtube = this.doctor.youtube? this.doctor.youtube : "";
           this.user_entry_id = this.doctor.user_entry_id;
           this.price = this.doctor.price;
           this.phone = this.doctor.phone;
@@ -141,6 +143,8 @@ export class EditDoctorComponent {
             })
           this.area = this.doctor.area_id;
           this.lat_lng = response.branch.lat_lng;
+          const url = `http://maps.google.com/maps?q=${this.lat_lng}&z=16&output=embed`;
+          this.mapURL = this.sanitizer.bypassSecurityTrustResourceUrl(url);
           this.maplink = this.doctor.map_link;
 
           this.crd.detectChanges();
@@ -192,7 +196,12 @@ export class EditDoctorComponent {
     console.log(this.specialty_subc.toString());
   }
 
-
+  onChange_map(event: any){
+    const lat_lang = event;
+    const url = `http://maps.google.com/maps?q=${lat_lang}&z=16&output=embed`;
+    this.mapURL = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    this.crd.detectChanges();
+  }
   updateTag_category(){
     this.http.post<any>(environment.apiUrl + "doctor/getTag", this.specialty)
         .subscribe((response)=>{

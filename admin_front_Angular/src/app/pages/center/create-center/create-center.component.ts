@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { PrimeNGConfig } from 'primeng/api';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-create-center',
@@ -40,7 +41,7 @@ export class CreateCenterComponent {
   arSubCats: string = "";
   specialty: number[] = [];
   hospital_types: number[] = [];
-
+  mapURL: any;
 
   //reponse data
   countries: any[] = [];
@@ -48,9 +49,11 @@ export class CreateCenterComponent {
   areas: any[] = [];
   specialities: any[] = [];
 
-  constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
+  constructor(private sanitizer: DomSanitizer, private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
 
   ngOnInit(): void{
+    this.mapURL = this.sanitizer.bypassSecurityTrustResourceUrl('http://maps.google.com/maps?q=25.3076008, 51.4803216&z=16&output=embed');
+    this.lat_lng = "25.3076008, 51.4803216";
     this.image_gallery_count = 0;
     this.http.get<any>(environment.apiUrl + "hospital/create")
          .subscribe((response)=>{
@@ -60,7 +63,12 @@ export class CreateCenterComponent {
          })
     
   }
-
+  onChange_map(event: any){
+    const lat_lang = event;
+    const url = `http://maps.google.com/maps?q=${lat_lang}&z=16&output=embed`;
+    this.mapURL = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    this.crd.detectChanges();
+  }
   onCountryChange() {
     this.http.get<any>(environment.apiUrl + "country/getAllCity/" + this.country_id)
         .subscribe((response)=>{

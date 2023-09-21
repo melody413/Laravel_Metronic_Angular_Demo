@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { PrimeNGConfig } from 'primeng/api';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-create-insurance-company',
@@ -44,14 +45,17 @@ export class CreateInsuranceCompanyComponent {
    enSubCats: string;
    arSubCats: string;
    parent_branch_id: number = -1; 
+   mapURL: any;
    //reponse data
    parent_branches: any[] = [];
    countries: any[] = [];
    cities: any[] = [];
    areas: any[] = [];
-   constructor(private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
+   constructor(private sanitizer: DomSanitizer, private http: HttpClient, private crd: ChangeDetectorRef,private router: Router, private route: ActivatedRoute, private messageService: MessageService, private primengConfig: PrimeNGConfig) {}
  
    ngOnInit(): void{
+    this.mapURL = this.sanitizer.bypassSecurityTrustResourceUrl('http://maps.google.com/maps?q=25.3076008, 51.4803216&z=16&output=embed');
+    this.lat_lng = "25.3076008, 51.4803216";
      this.http.get<any>(environment.apiUrl + "insurance_company/create")
          .subscribe((response)=>{
           this.parent_branches = Object.entries(response.parent_branches);
@@ -59,7 +63,12 @@ export class CreateInsuranceCompanyComponent {
           this.crd.detectChanges();
          })
    }
- 
+   onChange_map(event: any){
+    const lat_lang = event;
+    const url = `http://maps.google.com/maps?q=${lat_lang}&z=16&output=embed`;
+    this.mapURL = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    this.crd.detectChanges();
+  }
 
    
    onInputChange1(event : any){
