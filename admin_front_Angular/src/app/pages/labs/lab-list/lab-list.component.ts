@@ -21,13 +21,19 @@ export class LabListComponent {
   search_index: string = "";
   src: string = environment.url + "uploads/labs/";
   default_src = environment.url + "assets/frontend/images/general/doctorak_default_logo_img.png";
+  loading_flag : boolean;
+
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef, private confirmationService: ConfirmationService, private messageService: MessageService) {}
   ngOnInit(): void {
+    this.loading_flag = true;
+    this.cdr.detectChanges();
     this.http.get<any>(environment.apiUrl + "lab/list").
       subscribe((response) => {        
         this.tableData = response.labs["data"];
         this.paginator.pageSize = 15;
         this.paginator.length = response.labs["total"];     
+        this.loading_flag = false;
+        this.cdr.detectChanges(); // Manually trigger change detection
        });
   }
   
@@ -47,12 +53,15 @@ export class LabListComponent {
     if(this.search_index == ""){
       this.ngOnInit();
     }else{
+      this.loading_flag = true;
+      this.cdr.detectChanges();
       this.http.post<any>(environment.apiUrl + "lab/table", {"search_index": this.search_index.toString()})   
           .subscribe((response)=>{
             this.tableData = response.search_result;
             this.paginator.pageSize = response.search_result.length;
             this.paginator.length = response.search_result.length;
             this.paginator.pageIndex = response.search_result["current_page"]-1;
+            this.loading_flag = false;
             this.cdr.detectChanges(); // Manually trigger change detection
           })   
     }
@@ -63,6 +72,8 @@ export class LabListComponent {
       this.pageSize = 10;
       this.ngOnInit();
     }else{
+      this.loading_flag = true;
+      this.cdr.detectChanges();
       this.http.post<any>(environment.apiUrl + "lab/table", {
         params: new HttpParams()
           .set('pageSize', this.paginator.pageSize.toString())
@@ -72,7 +83,7 @@ export class LabListComponent {
         this.paginator.pageSize = response.search_result["per_page"];
         this.paginator.length = response.search_result["total"];
         this.paginator.pageIndex = response.search_result["current_page"]-1;
-        this.cdr.detectChanges(); // Manually trigger change detection
+        this.loading_flag  = false;
         this.cdr.detectChanges(); // Manually trigger change detection
       })
     }

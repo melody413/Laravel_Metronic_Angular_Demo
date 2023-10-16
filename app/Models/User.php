@@ -33,8 +33,7 @@ class User extends Authenticatable
         'gender',
         'phone',
         'specialties',
-        'specialty_in'
-        ,
+        'specialty_in',
         'address',
         'facebook',
         'twitter',
@@ -64,7 +63,7 @@ class User extends Authenticatable
     public function scopeSearch($query, $search)
     {
         $query->select('*');
-        return $query->where('name', 'LIKE', "%$search%")->orWhere('email', 'LIKE', "%$search%")->orWhere('dr_phone', 'LIKE', "%$search%")->orWhere('type', 'LIKE', "%$search%");
+        return $query->where('name', 'LIKE', "%$search%")->orWhere('specialty_in', 'LIKE', "%$search%")->orWhere('email', 'LIKE', "%$search%")->orWhere('address', 'LIKE', "%$search%")->orWhere('dr_phone', 'LIKE', "%$search%")->orWhere('type', 'LIKE', "%$search%");
     }
     public function isSuperAdmin()
     {

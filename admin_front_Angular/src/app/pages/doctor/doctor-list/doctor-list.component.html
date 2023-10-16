@@ -62,71 +62,80 @@
       <!-- end::Table head -->
       <!-- begin::Table body -->
       <tbody>
-        <tr *ngFor="let data of tableData; let i = index">
-          <td>{{ data["id"] }}</td>
-          <td>
-            <img
-              [src]="data['image'] ? src + data['image'] : default"
-              alt="Image"
-              style="width: 100px; height: 100px"
-            />
+        <tr *ngIf="loading_flag">
+          <td colspan="6" class="mt-20" style="text-align: center">
+            <img src="/assets/custom/img/hzk6C.gif" alt="123" />
           </td>
+        </tr>
+        <ng-container *ngIf="loading_flag !== true">
+          <tr *ngFor="let data of tableData; let i = index">
+            <td>{{ data["id"] }}</td>
+            <td>
+              <img
+                [src]="data['image'] ? src + data['image'] : default"
+                alt="Image"
+                style="width: 100px; height: 100px"
+              />
+            </td>
 
-          <td>{{ data["name"] }}</td>
-          <td>{{ data["updated_at"] | date : "M:dd:yyyy" }}</td>
-          <td>{{ data[4] }}</td>
-          <td>
-            <a
-              class="btn btn-sm btn-primary"
-              style="margin: 5px"
-              routerLinkActive="active"
-              routerLink="/doctor/edit/{{ data.id }}"
-            >
-              EDIT
-            </a>
-            <button
-              class="btn btn-sm red"
-              style="background-color: rgb(226, 17, 17); margin: 5px"
-              (click)="delete(data.id)"
-            >
-              DELETE
-            </button>
-            <a
-              class="btn btn-sm red btn-success"
-              style="margin: 5px"
-              routerLinkActive="active"
-              routerLink="/doctor/rate/{{ data.id }}"
-            >
-              Doctor Rate
-            </a>
-            <a
-              class="btn btn-sm red btn-primary"
-              style="margin: 5px"
-              routerLinkActive="active"
-              routerLink="/doctor/branch/{{ data.id }}"
-            >
-              Doctor Branch
-            </a>
-            <a
-              class="btn btn-sm red btn-pink btn-success"
-              style="margin: 5px"
-              routerLinkActive="active"
-              routerLink="/doctor/reservation"
-            >
-              Reservation
-            </a>
-          </td>
-        </tr>
-        <tr *ngIf="tableData && tableData.length === 0">
-          <td colspan="6">
-            <h1
-              class="error-message mt-20"
-              style="color: rgb(158, 58, 58); text-align: center"
-            >
-              No data available.
-            </h1>
-          </td>
-        </tr>
+            <td>{{ data["name"] }}</td>
+            <td>{{ data["updated_at"] | date : "M:dd:yyyy" }}</td>
+            <td>{{ data[4] }}</td>
+            <td>
+              <a
+                class="btn btn-sm btn-primary"
+                style="margin: 5px"
+                routerLinkActive="active"
+                routerLink="/doctor/edit/{{ data.id }}"
+              >
+                EDIT
+              </a>
+              <button
+                class="btn btn-sm red"
+                style="background-color: rgb(226, 17, 17); margin: 5px"
+                (click)="delete(data.id)"
+              >
+                DELETE
+              </button>
+              <a
+                class="btn btn-sm red btn-success"
+                style="margin: 5px"
+                routerLinkActive="active"
+                routerLink="/doctor/rate/{{ data.id }}"
+              >
+                Doctor Rate
+              </a>
+              <a
+                class="btn btn-sm red btn-primary"
+                style="margin: 5px"
+                routerLinkActive="active"
+                routerLink="/doctor/branch/{{ data.id }}"
+              >
+                Doctor Branch
+              </a>
+              <a
+                class="btn btn-sm red btn-pink btn-success"
+                style="margin: 5px"
+                routerLinkActive="active"
+                routerLink="/doctor/reservation"
+              >
+                Reservation
+              </a>
+            </td>
+          </tr>
+        </ng-container>
+        <ng-container *ngIf="loading_flag !== true">
+          <tr *ngIf="tableData && tableData.length === 0">
+            <td colspan="6">
+              <h1
+                class="error-message mt-20"
+                style="color: rgb(158, 58, 58); text-align: center"
+              >
+                No data available.
+              </h1>
+            </td>
+          </tr>
+        </ng-container>
       </tbody>
       <!-- end::Table body -->
     </table>

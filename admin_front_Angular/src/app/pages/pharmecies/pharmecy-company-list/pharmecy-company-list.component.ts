@@ -17,14 +17,19 @@ export class PharmecyCompanyListComponent {
   search_index: string;
   src: string = environment.url + "uploads/pharmacy_companies/";
   default_src: string = environment.url + "assets/frontend/images/general/doctorak_default_logo_img.png";
+  loading_flag : boolean;
 
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef, private confirmationService: ConfirmationService, private messageService: MessageService) {}
   ngOnInit(): void {
+    this.loading_flag = true;
+    this.cdr.detectChanges();
     this.http.get<any>(environment.apiUrl + "pharmacy_company/list").
       subscribe((response) => {        
         this.tableData = response.pharmacy_companies["data"];
         this.paginator.pageSize = response.pharmacy_companies["per_page"];
         this.paginator.length = response.pharmacy_companies["total"]; 
+        this.loading_flag = false;
+        this.cdr.detectChanges();
       });
   }
 
@@ -54,14 +59,16 @@ export class PharmecyCompanyListComponent {
     if(this.search_index == ""){
       this.ngOnInit();
     }else{
+      this.loading_flag = true;
+      this.cdr.detectChanges();
       this.http.post<any>(environment.apiUrl + "pharmacy_company/table", {"search_index": this.search_index.toString()})   
           .subscribe((response)=>{
             this.tableData = response.search_result;
             this.paginator.pageSize = response.search_result.length;
             this.paginator.length = response.search_result.length;
             this.paginator.pageIndex = response.search_result["current_page"]-1;
+            this.loading_flag = false;
             this.cdr.detectChanges(); // Manually trigger change detection
-            
           })   
     }
   }

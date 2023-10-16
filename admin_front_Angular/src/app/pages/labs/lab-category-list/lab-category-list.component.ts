@@ -18,15 +18,20 @@ export class LabCategoryListComponent {
   pageSize : number ;
   src: string = environment.url + "uploads/lab_categories/";
   default_src: string = environment.url + "assets/frontend/images/general/doctorak_default_logo_img.png";
+  loading_flag : boolean;
   
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef, private confirmationService: ConfirmationService, private messageService: MessageService) {}
   ngOnInit(): void {
+    this.loading_flag = true;
+    this.cdr.detectChanges();
     this.http.get<any>(environment.apiUrl + "lab_category/list").
       subscribe((response) => {        
         this.tableData = response.lab_categories["data"];
         this.paginator.pageSize = 10;
         this.pageSize = 10;
         this.paginator.length = response.lab_categories["total"];
+        this.loading_flag = false;
+        this.cdr.detectChanges();
       });
   }
   onPageChange(event: any) {

@@ -62,40 +62,49 @@
       <!-- end::Table head -->
       <!-- begin::Table body -->
       <tbody>
-        <tr *ngFor="let data of tableData; let i = index">
-          <td>{{ data[0] }}</td>
-          <td [innerHTML]="data[1]"></td>
-          <td>{{ data[2] }}</td>
-          <td>{{ data[3] }}</td>
-          <td>{{ data[4] }}</td>
-          <td>
-            <a
-              class="btn btn-sm btn-primary"
-              style="margin: 5px"
-              routerLinkActive="active"
-              routerLink="/disease/edit/{{ data[0] }}"
-            >
-              EDIT
-            </a>
-            <button
-              class="btn btn-sm red"
-              style="background-color: rgb(226, 17, 17); margin: 5px"
-              (click)="delete(data[0])"
-            >
-              DELETE
-            </button>
+        <tr *ngIf="loading_flag">
+          <td colspan="6" class="mt-20" style="text-align: center">
+            <img src="/assets/custom/img/hzk6C.gif" alt="123" />
           </td>
         </tr>
-        <tr *ngIf="tableData && tableData.length === 0">
-          <td colspan="6">
-            <h1
-              class="error-message mt-20"
-              style="color: rgb(158, 58, 58); text-align: center"
-            >
-              No data available.
-            </h1>
-          </td>
-        </tr>
+        <ng-container *ngIf="loading_flag !== true">
+          <tr *ngFor="let data of tableData; let i = index">
+            <td>{{ data[0] }}</td>
+            <td [innerHTML]="data[1]"></td>
+            <td>{{ data[2] }}</td>
+            <td>{{ data[3] }}</td>
+            <td>{{ data[4] }}</td>
+            <td>
+              <a
+                class="btn btn-sm btn-primary"
+                style="margin: 5px"
+                routerLinkActive="active"
+                routerLink="/disease/edit/{{ data[0] }}"
+              >
+                EDIT
+              </a>
+              <button
+                class="btn btn-sm red"
+                style="background-color: rgb(226, 17, 17); margin: 5px"
+                (click)="delete(data[0])"
+              >
+                DELETE
+              </button>
+            </td>
+          </tr>
+        </ng-container>
+        <ng-container *ngIf="loading_flag !== true">
+          <tr *ngIf="tableData && tableData.length === 0">
+            <td colspan="6">
+              <h1
+                class="error-message mt-20"
+                style="color: rgb(158, 58, 58); text-align: center"
+              >
+                No data available.
+              </h1>
+            </td>
+          </tr>
+        </ng-container>
       </tbody>
       <!-- end::Table body -->
     </table>

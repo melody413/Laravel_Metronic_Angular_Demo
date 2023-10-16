@@ -20,9 +20,12 @@ export class MedicineCategoryListComponent implements OnInit{
   pageSize : number ;
   search_result: any[];
   search_index: string = "";
+  loading_flag : boolean;
 
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef, private confirmationService: ConfirmationService, private messageService: MessageService) {}
   ngOnInit(): void {
+    this.loading_flag = true;
+    this.cdr.detectChanges();
     this.http.get<any>(environment.apiUrl + "medicines_category/list").
       subscribe((response) => {        
         this.tableData = response.medicines["data"];
@@ -30,6 +33,7 @@ export class MedicineCategoryListComponent implements OnInit{
         this.paginator.length = response.medicines["total"];
         this.paginator.pageIndex = 0;
         this.pageSize = response.medicines["per_page"];
+        this.loading_flag = false;
         this.cdr.detectChanges(); // Manually trigger change detection
       });
   }
@@ -51,12 +55,15 @@ export class MedicineCategoryListComponent implements OnInit{
 
       this.ngOnInit();
     }else{
+      this.loading_flag = true;
+      this.cdr.detectChanges();
       this.http.post<any>(environment.apiUrl + "medicines_category/table", {"search_index": this.search_index.toString()})   
           .subscribe((response)=>{
             this.tableData = response.search_result;
             this.paginator.pageSize = response.search_result.length;
             this.paginator.length = response.search_result.length;
             this.paginator.pageIndex = response.search_result["current_page"]-1;
+            this.loading_flag = false;
             this.cdr.detectChanges(); // Manually trigger change detection
             
           })   
@@ -67,6 +74,8 @@ export class MedicineCategoryListComponent implements OnInit{
       this.pageSize = 10;
       this.ngOnInit();
     }else{
+      this.loading_flag = true;
+      this.cdr.detectChanges();
       this.http.post<any>(environment.apiUrl + "medicines_category/table", {
         params: new HttpParams()
           .set('pageSize', this.paginator.pageSize.toString())
@@ -76,7 +85,7 @@ export class MedicineCategoryListComponent implements OnInit{
         this.paginator.pageSize = response.search_result["per_page"];
         this.paginator.length = response.search_result["total"];
         this.paginator.pageIndex = response.search_result["current_page"]-1;
-        this.cdr.detectChanges(); // Manually trigger change detection
+        this.loading_flag = false;
         this.cdr.detectChanges(); // Manually trigger change detection
       })
     }

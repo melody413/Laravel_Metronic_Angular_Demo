@@ -19,10 +19,13 @@ export class MedicineNameListComponent implements OnInit {
   pageSize : number ;
   search_result: any[];
   search_index: string = "";
+  loading_flag : boolean;
   
 
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef, private confirmationService: ConfirmationService, private messageService: MessageService) {}
   ngOnInit(): void {
+    this.loading_flag = true;
+    this.cdr.detectChanges();
     this.http.get<any>(environment.apiUrl + "medicines_sc_name/list").
       subscribe((response) => {        
         this.tableData = response.result["data"];
@@ -30,6 +33,7 @@ export class MedicineNameListComponent implements OnInit {
         this.pageSize = 10;
         this.paginator.pageIndex = 0;
         this.paginator.length = response.result["recordsTotal"]; 
+        this.loading_flag = false;
         this.cdr.detectChanges(); // Manually trigger change detection
       });
   }
@@ -49,12 +53,15 @@ export class MedicineNameListComponent implements OnInit {
     if(this.search_index == ""){
       this.ngOnInit();
     }else{
+      this.loading_flag = true;
+      this.cdr.detectChanges();
       this.http.post<any>(environment.apiUrl + "medicines_sc_name/table", {"search_index": this.search_index.toString()})   
           .subscribe((response)=>{
             this.tableData = response.search_result;
             this.paginator.pageSize = response.search_result.length;
             this.paginator.length = response.search_result.length;
             this.paginator.pageIndex = response.search_result["current_page"]-1;
+            this.loading_flag = false;
             this.cdr.detectChanges(); // Manually trigger change detection
             
           })   
@@ -65,12 +72,15 @@ export class MedicineNameListComponent implements OnInit {
       this.pageSize = 10;
       this.ngOnInit();
     }else{
+      this.loading_flag = true;
+      this.cdr.detectChanges();
       this.http.post<any>(environment.apiUrl + "medicines_sc_name/table", {
         params: new HttpParams()
           .set('pageSize', this.paginator.pageSize.toString())
           .set('pageIndex', this.paginator.pageIndex.toString())
       }).subscribe((response)=>{
         this.tableData = response.search_result;
+        this.loading_flag = false;
         this.cdr.detectChanges(); // Manually trigger change detection
       })
     }

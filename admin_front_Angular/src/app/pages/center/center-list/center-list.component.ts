@@ -20,15 +20,22 @@ export class CenterListComponent {
   search_index: string = "";
   src: string = environment.url + "uploads/centers/";
   default_src: string = environment.url + "assets/frontend/images/general/doctorak_default_logo_img.png";
+  loading_flag : boolean;
+
+
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef, private confirmationService: ConfirmationService, private messageService: MessageService) {}
 
   ngOnInit(): void {
+    this.loading_flag = true;
+    this.cdr.detectChanges();
     this.http.get<any>(environment.apiUrl + "center/list").
       subscribe((response) => {        
         this.tableData = response.centers["data"];
         this.paginator.pageSize = response.centers["per_page"];
         this.pageSize = response.centers["per_page"];
         this.paginator.length = response.centers["total"];
+        this.loading_flag = false;
+        this.cdr.detectChanges(); // Manually trigger change detection
       });
   }
   onPageChange(event: any) {
@@ -47,12 +54,15 @@ export class CenterListComponent {
     if(this.search_index == ""){
       this.ngOnInit();
     }else{
+      this.loading_flag = true;
+      this.cdr.detectChanges();
       this.http.post<any>(environment.apiUrl + "center/table", {"search_index": this.search_index.toString()})   
           .subscribe((response)=>{
             this.tableData = response.search_result;
             this.paginator.pageSize = response.search_result.length;
             this.paginator.length = response.search_result.length;
             this.paginator.pageIndex = response.search_result["current_page"]-1;
+            this.loading_flag = false;
             this.cdr.detectChanges(); // Manually trigger change detection
             
           })   
@@ -63,6 +73,8 @@ export class CenterListComponent {
       this.pageSize = 10;
       this.ngOnInit();
     }else{
+      this.loading_flag = true;
+      this.cdr.detectChanges();
       this.http.post<any>(environment.apiUrl + "center/table", {
         params: new HttpParams()
           .set('pageSize', this.paginator.pageSize.toString())
@@ -72,7 +84,7 @@ export class CenterListComponent {
         this.paginator.pageSize = response.search_result["per_page"];
         this.paginator.length = response.search_result["total"];
         this.paginator.pageIndex = response.search_result["current_page"]-1;
-        this.cdr.detectChanges(); // Manually trigger change detection
+        this.loading_flag = false;
         this.cdr.detectChanges(); // Manually trigger change detection
       })
     }

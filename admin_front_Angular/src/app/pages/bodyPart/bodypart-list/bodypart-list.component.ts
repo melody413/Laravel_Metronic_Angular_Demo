@@ -17,9 +17,12 @@ export class BodypartListComponent implements OnInit, AfterViewInit{
   search_result: any[];
   pageSize : number = 10;
   search_index: string = "";
+  loading_flag : boolean;
 
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef, private router: Router, private confirmationService: ConfirmationService, private messageService: MessageService) {}
   ngOnInit(){
+    this.loading_flag = true;
+    this.cdr.detectChanges();
     this.http.get<any>(environment.apiUrl + "bodypart/list").
       subscribe((response) => {        
         this.tableData = response.data;
@@ -27,6 +30,7 @@ export class BodypartListComponent implements OnInit, AfterViewInit{
         this.paginator.length = response.recordsTotal;
         this.paginator.pageIndex = 0;
         this.pageSize = 10;
+        this.loading_flag = false;
         this.cdr.detectChanges(); // Manually trigger change detection
       });
   }
@@ -52,11 +56,15 @@ export class BodypartListComponent implements OnInit, AfterViewInit{
     if(this.search_index == ""){
       this.ngOnInit();
     }else{
+      this.loading_flag = true;
+      this.cdr.detectChanges();
       this.http.post<any>(environment.apiUrl + "bodypart/table", {"search_index": this.search_index.toString()})   
           .subscribe((response)=>{
             this.tableData = response.search_result;
             this.paginator.length = response.search_result.length;
             this.paginator.pageSize = response.search_result.length;
+            this.loading_flag = false;
+
             this.cdr.detectChanges(); // Manually trigger change detection
             
           })   
@@ -68,12 +76,15 @@ export class BodypartListComponent implements OnInit, AfterViewInit{
       this.pageSize = 10;
       this.ngOnInit();
     }else{
+      this.loading_flag = true;
+      this.cdr.detectChanges();
       this.http.post<any>(environment.apiUrl + "bodypart/table", {
         params: new HttpParams()
           .set('pageSize', this.paginator.pageSize.toString())
           .set('pageIndex', this.paginator.pageIndex.toString())
       }).subscribe((response)=>{
         this.tableData = response.search_result;
+        this.loading_flag = false;
         this.cdr.detectChanges(); // Manually trigger change detection
       })
     }

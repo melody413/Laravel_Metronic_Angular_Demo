@@ -20,16 +20,19 @@ export class DoctorListComponent implements OnInit {
   search_index: string = "";
   src: string = environment.url + "uploads/doctors/";
   default: string = environment.url + "assets/frontend/images/general/doctorak_default_logo_img.png";
-  
+  loading_flag : boolean;
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef,private router: Router, private confirmationService: ConfirmationService, private messageService: MessageService) {}
 
   ngOnInit(): void {
+    this.loading_flag = true;
+    this.cdr.detectChanges();
     this.http.get<any>(environment.apiUrl + "doctor/list").
       subscribe((response) => {        
         this.tableData = response.doctors["data"];
         this.paginator.pageSize = response.doctors["per_page"];
         this.paginator.length = response.doctors["total"];
         this.paginator.pageIndex = 0;
+        this.loading_flag = false;
         this.cdr.detectChanges(); // Manually trigger change detection
       });
   }
@@ -50,12 +53,16 @@ export class DoctorListComponent implements OnInit {
     if(this.search_index == ""){
       this.ngOnInit();
     }else{
+      this.loading_flag = true;
+      this.cdr.detectChanges();
       this.http.post<any>(environment.apiUrl + "doctor/table", {"search_index": this.search_index.toString()})   
           .subscribe((response)=>{
             this.tableData = response.search_result;
             this.paginator.pageSize = response.search_result.length;
             this.paginator.length = response.search_result.length;
             this.paginator.pageIndex = response.search_result["current_page"]-1;
+            this.loading_flag = false;
+
             this.cdr.detectChanges(); // Manually trigger change detection
             
           })   
@@ -66,6 +73,8 @@ export class DoctorListComponent implements OnInit {
       this.pageSize = 10;
       this.ngOnInit();
     }else{
+      this.loading_flag = true;
+      this.cdr.detectChanges();
       this.http.post<any>(environment.apiUrl + "doctor/table", {
         params: new HttpParams()
           .set('pageSize', this.paginator.pageSize.toString())
@@ -75,7 +84,7 @@ export class DoctorListComponent implements OnInit {
         this.paginator.pageSize = response.search_result["per_page"];
         this.paginator.length = response.search_result["total"];
         this.paginator.pageIndex = response.search_result["current_page"]-1;
-        this.cdr.detectChanges(); // Manually trigger change detection
+        this.loading_flag = false;
         this.cdr.detectChanges(); // Manually trigger change detection
       })
     }

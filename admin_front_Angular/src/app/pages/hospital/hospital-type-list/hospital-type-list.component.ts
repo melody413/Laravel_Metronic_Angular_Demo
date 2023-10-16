@@ -16,14 +16,19 @@ export class HospitalTypeListComponent {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @Input() tableData: any[];
   pageSize : number ;
+  loading_flag : boolean;
 
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef, private confirmationService: ConfirmationService, private messageService: MessageService) {}
   ngOnInit(): void {
+    this.loading_flag = true;
+    this.cdr.detectChanges();
     this.http.get<any>(environment.apiUrl + "hospital_type/list").
       subscribe((response) => {        
         this.tableData = response.data["data"];
         this.paginator.pageSize = 15;
         this.paginator.length = response.data["recordsTotal"];
+        this.loading_flag = false;
+        this.cdr.detectChanges(); // Manually trigger change detection
       });
   }
   onPageChange(event: any) {
